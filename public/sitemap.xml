@@ -169,16 +169,6 @@
     
     <url>
     
-      <loc>https://guyabel.netlify.com/</loc>
-      <lastmod>2017-10-15T00:00:00+08:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
       <loc>https://guyabel.netlify.com/categories/</loc>
       <priority>0</priority>
     </url>
@@ -200,6 +190,16 @@
     
       <loc>https://guyabel.netlify.com/tags/demo/</loc>
       <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://guyabel.netlify.com/</loc>
+      <lastmod>2017-10-15T00:00:00+08:00</lastmod>
       <priority>0</priority>
     </url>
     
