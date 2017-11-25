@@ -1,6 +1,6 @@
-baseurl = "https://guyabel.netlify.com/"  
+baseurl = "/"  # End your URL with a `/` trailing slash, e.g. `https://example.com/`.
 title = "Academic"
-copyright = "&copy; 2017 Guy Abel"
+copyright = "&copy; 2017 Your Name"
 theme = "hugo-academic"
 enableEmoji = true
 footnotereturnlinkcontents = "<sup>^</sup>"
@@ -9,7 +9,7 @@ preserveTaxonomyNames = true
 paginate = 10
 
 # Enable comments by entering your Disqus shortname
-disqusShortname = "guyabelguyabel"
+disqusShortname = ""
 
 # Enable analytics by entering your Google Analytics tracking ID
 googleAnalytics = ""
@@ -39,26 +39,28 @@ defaultContentLanguageInSubdir = false
   font = "default"
 
   # Your details.
-  name = "Guy Abel"
-  role = "Professor"
+  name = "Lena Smith"
+  role = "Professor of Artificial Intelligence"
 
   # Organizations/Affiliations.
   #   Separate multiple entries with a comma, using the form: `[ {name="Org1", url=""}, {name="Org2", url=""} ]`.
-  organizations = [ { name = "Shanghai University", url = "" } ]
+  organizations = [ { name = "Stanford University", url = "" } ]
 
   gravatar = false  # Get your avatar from Gravatar.com? (true/false)
   avatar = "portrait.jpg"  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
-  email = "guy.abel@shu.edu.cn"
-  address = "上海市宝山区上大路99号上海大学东区社会学院大楼543"
-  office_hours = "By Appointment"
-  phone = "+86 021 6613 3271"
+  email = "test@example.org"
+  address = "Building 1 Room 1, Stanford University, California, 90210, USA"
+  office_hours = "Monday 10:00 to 13:00 or email for appointment"
+  phone = "888 888 88 88"
+  skype = "echo123"
+  telegram = ""
 
   # Enable Keybase in Contact widget by entering your keybase.io username.
   keybase = ""
 
   # Discussion link (e.g. link to a forum, mailing list, or chat).
   #   Uncomment line below to use.
-  discussion = { name = "Discuss", url = "https://discourse.gohugo.io" }
+  #   discussion = { name = "Discuss", url = "https://discourse.gohugo.io" }
 
   # Diplay a logo in navigation bar rather than title (optional).
   #   To enable, place an image in `static/img/` and reference its filename below. To disable, set the value to "".
@@ -79,17 +81,17 @@ defaultContentLanguageInSubdir = false
   #   1: Google Maps
   #   2: OpenStreetMap (Mapnik)
   #   3: OpenStreetMap (Mapbox)
-  map = 3
+  map = 0
   map_api_key = ""
-  latitude = "31.31544"
-  longitude = "121.39544"
+  latitude = "37.4275"
+  longitude = "-122.1697"
   zoom = 15
 
   # Date and time format (refer to Go's date format: http://fuckinggodateformat.com )
   #   Examples: "Mon, Jan 2, 2006" or "2006-01-02"
-  date_format = "Mon, Jan 2, 2006"
+  date_format = "Jan 2, 2006"
   #   Examples: "3:04 pm" or "15:04"
-  time_format = "15:04 PM"
+  time_format = "3:04 PM"
 
   # Show estimated reading time for posts?
   reading_time = true
@@ -203,27 +205,22 @@ defaultContentLanguageInSubdir = false
   [[params.social]]
     icon = "envelope"
     icon_pack = "fa"
-    link = "mailto:guy.abel@shu.edu.cn"
+    link = "mailto:test@example.org"
 
   [[params.social]]
     icon = "twitter"
     icon_pack = "fa"
-    link = "//twitter.com/guyabelguyabel"
+    link = "//twitter.com/GeorgeCushen"
 
   [[params.social]]
     icon = "google-scholar"
     icon_pack = "ai"
-    link = "https://scholar.google.co.uk/citations?user=MqztgqsAAAAJ"
+    link = "https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ"
 
   [[params.social]]
     icon = "github"
     icon_pack = "fa"
-    link = "//github.com/gjbael"
-    
-  [[params.social]]
-    icon = "mendeley"
-    icon_pack = "fa"
-    link = "https://www.mendeley.com/profiles/guy-abel/"
+    link = "//github.com/gcushen"
 
 
 # Navigation Links
@@ -275,4 +272,4 @@ defaultContentLanguageInSubdir = false
 
 # Configure the English version of the website.
 [Languages.en]
-  languageCode = "en-uk"
+  languageCode = "en-us"
