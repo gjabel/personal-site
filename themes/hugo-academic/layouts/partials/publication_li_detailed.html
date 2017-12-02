@@ -32,9 +32,9 @@
 
       <div class="pub-abstract" itemprop="text">
         {{ if .Params.abstract_short }}
-        {{ .Params.abstract_short | markdownify }}
+        {{ .Params.abstract_short }}
         {{ else }}
-        {{ .Params.abstract | markdownify}}
+        {{ .Params.abstract }}
         {{ end }}
       </div>
 
@@ -46,11 +46,10 @@
 
       <div class="pub-publication">
         {{ if .Params.publication_short }}
-        {{- .Params.publication_short | markdownify -}}
+        {{ .Params.publication_short | markdownify }}
         {{ else }}
-        {{- .Params.publication | markdownify -}}
-        {{- end -}},&nbsp;
-        {{- .Date.Format "2006" -}}.
+        {{ .Params.publication | markdownify }}
+        {{ end }}
       </div>
 
       <div class="pub-links">

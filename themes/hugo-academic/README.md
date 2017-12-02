@@ -13,72 +13,42 @@ Key features:
 - Social/academic network linking, [Google Analytics](https://analytics.google.com), and [Disqus](https://disqus.com) comments
 - Responsive and mobile friendly
 - Simple and refreshing one page design
-- Multilingual and easy to customize
-
-## Color Themes
-
-Academic is available in different color themes and font themes.
-
-| `default` | `ocean` |
-| --- | --- |
-| ![default theme](https://raw.githubusercontent.com/gcushen/hugo-academic/master/images/theme-default.png) | ![ocean theme](https://raw.githubusercontent.com/gcushen/hugo-academic/master/images/theme-ocean.png) |
-
-| `forest` | `coffee` + `playfair` font |
-| --- | --- |
-| ![forest theme](https://raw.githubusercontent.com/gcushen/hugo-academic/master/images/theme-forest.png) | ![coffee theme](https://raw.githubusercontent.com/gcushen/hugo-academic/master/images/theme-coffee-playfair.png) |
-
-| `dark` |
-| --- |
-| ![dark theme](https://raw.githubusercontent.com/gcushen/hugo-academic/master/images/theme-dark.png) |
+- Easy to customize
 
 ## Getting Started
 
-The following two methods describe how to install in the cloud using your web browser and how to install on your PC using the Command Prompt/Terminal app.
+1. [Install Hugo](https://georgecushen.com/create-your-website-with-hugo/#installing-hugo) and create a new website by typing the following commands in your *Terminal* or *Command Prompt* app:
 
-### Quick install using your web browser
+        hugo new site my_website
+        cd my_website
 
-1. [Fork](https://github.com/sourcethemes/academic-kickstart#fork-destination-box) the *Academic Kickstart* repository on GitHub
+2. Install Academic with [git](https://help.github.com/articles/set-up-git/):
 
-2. [Login to Netlify using your GitHub account](https://app.netlify.com)
-    * Click *Create a new site*
-    * Follow the steps to connect to GitHub, select your new `academic-kickstart` repository, keep the default options and click *Deploy Site*
-    * Netlify will automatically provide you with a URL to access your new site
+        git clone https://github.com/gcushen/hugo-academic.git themes/academic
 
-3. On GitHub, go to your `academic-kickstart` repository and edit `config.toml` to personalize your site. Shortly after saving the file, your site will automatically update
+    Or alternatively, [download Academic](https://github.com/gcushen/hugo-academic/archive/master.zip) and extract it into a `themes/academic` folder within your Hugo website.
 
-4. Read the [Quick Start Guide](https://sourcethemes.com/academic/docs/) to learn how to add Markdown content. For inspiration, refer to the [Markdown content](https://github.com/gcushen/hugo-academic/tree/master/exampleSite) which powers the [Demo](https://themes.gohugo.io/theme/academic/)
+3. If you are creating a new website, copy the contents of the `exampleSite` folder to your website root folder, overwriting existing files if necessary. The `exampleSite` folder contains an example config file and content to help you get started.
 
-### Install on your PC
+        cp -av themes/academic/exampleSite/* .
 
-Prerequisites:
+4. Start the Hugo server from your website root folder:
 
-* [Download and install Git](https://git-scm.com/downloads)
-* [Download and install Hugo](https://gohugo.io/getting-started/installing/#quick-install)
-
-1. Clone (or [Fork](https://github.com/sourcethemes/academic-kickstart#fork-destination-box) or [download](https://github.com/sourcethemes/academic-kickstart/archive/master.zip)) the *Academic Kickstart* repository with Git: 
-
-       git clone https://github.com/sourcethemes/academic-kickstart.git My_Website
-    
-    *Note that if you already forked Academic Kickstart, the above command should be changed to clone your fork.*
-     
-2. View your new website:
-
-       cd My_Website
-       hugo server
+        hugo server --watch
 
     Now you can go to [localhost:1313](http://localhost:1313) and your new Academic powered website should appear.
-           
-3. Read the [Quick Start Guide](https://sourcethemes.com/academic/docs/) to learn how to add Markdown content, customize your site, and deploy it. For inspiration, refer to the [Markdown content](https://github.com/gcushen/hugo-academic/tree/master/exampleSite) which powers the [Demo](https://themes.gohugo.io/theme/academic/)
 
-4. Build your site by running the `hugo` command. Then [host it for free using Github Pages](https://georgecushen.com/create-your-website-with-hugo/) or Netlify (refer to above section). Alternatively, copy the generated `public/` directory (by FTP, Rsync, etc.) to your production web server (such as your university's hosting service).
+5. [Customize your website](https://sourcethemes.com/academic/post/getting-started/#getting-started) and [add your content](https://sourcethemes.com/academic/post/managing-content/) by referring to the Academic documentation
 
-## Updating
+6. Build your site by running the `hugo` command. Then [host it for free using Github Pages](https://georgecushen.com/create-your-website-with-hugo/). Or alternatively, copy the generated `public/` directory (by FTP, Rsync, etc.) to your production web server (such as your university's hosting service).
 
-Feel free to *star* the project on [Github](https://github.com/gcushen/hugo-academic/) to help keep track of updates and check out the [release notes](https://sourcethemes.com/academic/tags/updates) prior to updating your site.
+## Upgrading
 
-Before updating Academic, it is recommended to make a backup of your entire website directory, or at least your `themes/academic` directory.
+Feel free to *star* the project on [Github](https://github.com/gcushen/hugo-academic/) and monitor the [commits](https://github.com/gcushen/hugo-academic/commits/master) for updates. [Release notes](https://github.com/gcushen/hugo-academic/wiki/Release-Notes) for notable updates are also available to aid upgrading your site.
 
-Before updating for the first time, the remote *origin* repository should be renamed to *upstream*:
+Before upgrading Academic, it is recommended to make a backup of your entire website directory, or at least your `themes/academic` directory.
+
+Before upgrading for the first time, the remote *origin* repository should be renamed to *upstream*:
 
     $ cd themes/academic
     $ git remote rename origin upstream
@@ -89,13 +59,13 @@ To list available updates:
     $ git fetch upstream
     $ git log --pretty=oneline --abbrev-commit --decorate HEAD..upstream/master
 
-Then, update by running:
+Then, upgrade by running:
 
     $ git pull upstream
 
 If you have modified files in `themes/academic`, git will attempt to auto-merge changes. If conflicts are reported, you will need to manually edit the files with conflicts and add them back (`git add <filename>`).
 
-If there are any issues after updating, you may wish to compare your site with the latest [example site](https://github.com/gcushen/hugo-academic/tree/master/exampleSite) to check if any settings changed in `config.toml` or the `+++` frontmatter of content files.
+If there are any issues after upgrading, you may wish to compare your site with the latest [example site](https://github.com/gcushen/hugo-academic/tree/master/exampleSite) to check if any settings changed.
 
 ## Feedback & Contributing
 

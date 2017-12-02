@@ -1,0 +1,51 @@
+---
+title: Chatfield's Plots in S-Plus
+author: Guy
+date: '2010-07-10'
+slug: chatfields-plots-in-s-plus
+categories: [R]
+tags: [R]
+---
+
+I have recently finished reading the sixth edition of The Analysis of Time Series: An Introduction by Chatfield in our Statistics reading group. Whilst enjoying most of the book I got a little confused when looking at <em>Appendix D: Some MINITAB and S-PLUS Commands</em>. In the S-Plus section the author gives the code below to replicate his Figure 1.2.
+
+```{r eval=FALSE}
+postscript(file="1.2.ps")
+recife<-scan("Recife")
+RecfS<-cts(recife, start=dates("01/01/1953"),units="months",frequency="12")
+fst_as.numeric(date("01/01/1953"),format="dd/mm/yyyy")
+mid1_as.numeric(dates("01/01/1954"),format="dd/mm/yyyy")
+mid2_as.numeric(dates("01/01/1955"),format="dd/mm/yyyy")
+mid3_as.numeric(dates("01/01/1956"),format="dd/mm/yyyy")
+mid4_as.numeric(dates("01/01/1957"),format="dd/mm/yyyy")
+mid5_as.numeric(dates("01/01/1958"),format="dd/mm/yyyy")
+mid6_as.numeric(dates("01/01/1959"),format="dd/mm/yyyy")
+mid7_as.numeric(dates("01/01/1960"),format="dd/mm/yyyy")
+mid8_as.numeric(dates("01/01/1961"),format="dd/mm/yyyy")
+lst_as.numeric(dates("01/01/1962"),format="dd/mm/yyyy")
+ts.plot(RecfS,xaxt="n",ylab="Temperature (deg C)", xlab="Year", type="l")
+axis(side=1, at = c(fst,mid1,mid2,mid3,mid4,mid5,mid6,mid7,mid8,lst),
+labels=c("Jan 53", "Jan 54", "Jan 55", "Jan 56", "Jan 57", "Jan 58",
+"Jan 59", "Jan 60", "Jan 61", "Jan 62"),
+ticks=T)
+dev.off()
+```
+
+I was not too sure what was going on with the code, which gave a tonne of error messages, some of which might well have been typo's by the publisher (<code>_</code> instead of <code><-</code>)? In addition, the author stresses the effort required to construct nice plots in S-Plus. This got me thinking that 1) his code was excessive (not just because it does not work) and 2) he could have saved a lot of his effort by using R. The R code below proves my point
+```{r eval=FALSE}
+> png("...:/1.2.png", width=650, height=460, units="px")
+> recife <- scan("http://people.bath.ac.uk/mascc/Recife.TS", sep="", skip=3)
+> n <- length(recife)
+> times <- seq(as.Date("1953/1/1"), by="month", length.out=n)
+> plot(recife, xaxt="n", type= "l",ylab="Temperature (deg C)", xlab="Year")
+> axis(1, at = seq(1,n,12), labels = format(times, "%b %Y")[seq(1,n,12)])
+> dev.off()
+```
+Much Tidier! Here is the plot..
+
+<a href="http://gjabel.files.wordpress.com/2014/03/1-2.png"><img src="http://gjabel.files.wordpress.com/2014/03/1-2.png" alt="1.2" width="640" height="453" class="aligncenter size-full wp-image-1174" /></a>
+
+If you only wanted labels every other January, as in p.2 of the book (but not in the S-Plus code), then you can use..</p>
+```{r eval=FALSE}
+> axis(1, at = seq(1,n,24), labels = format(times, "%b %y")[seq(1,n,24)])
+```

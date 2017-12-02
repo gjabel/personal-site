@@ -2,39 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Projects on Guy Abel</title>
-    <link>https://guyabel.netlify.com/project/</link>
+    <link>/project/</link>
     <description>Recent content in Projects on Guy Abel</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>en-uk</language>
     <copyright>&amp;copy; 2017 Guy Abel</copyright>
-    <lastBuildDate>Wed, 27 Apr 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 01 Feb 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="/project/" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Deep Learning</title>
-      <link>https://guyabel.netlify.com/project/deep-learning/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <title>Combining Traditional and Emerging Big Data Sources to Model Population Movement Patterns</title>
+      <link>/project/combining-big-data/</link>
+      <pubDate>Mon, 01 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://guyabel.netlify.com/project/deep-learning/</guid>
-      <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
+      <guid>/project/combining-big-data/</guid>
+      <description>&lt;p&gt;People move for many different reasons, related to their surrounding conditions at their origin and the potential gains at their chosen destination. In order to fully understand the causes and consequences of population movements, and how they evolve over time, researchers and policy makers require timely data. Traditionally movement data is obtained from censuses, administrative records or surveys, which tend to only give a brief picture of movement patterns prior to the data collection period.&lt;/p&gt;
 
-&lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
-
-&lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
-
-&lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
-
-&lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
+&lt;p&gt;The development of new technology in recent decades has created new big data sets, based on the mobile phone call detail records and geolocated social media activates, with the potential to derive timely estimates of movements based on the analyst defined temporal and spatial scales.  At present, there has been little research to either compare or combine these big data sources. In this project we seeking to address this issue by firstly investigating movement patterns found in big data sources, and secondly, by applying a Bayesian statistical framework to combine them with traditional data sources. When combining data explicit adjustments can be made to correct for data problems such as undercount or biases, to provide synthetic databases of the true estimated movements, with measures of uncertainty&lt;/p&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>External Project</title>
-      <link>https://guyabel.netlify.com/project/example-external-project/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://guyabel.netlify.com/project/example-external-project/</guid>
-      <description></description>
     </item>
     
   </channel>

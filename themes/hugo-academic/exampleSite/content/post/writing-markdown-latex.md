@@ -1,5 +1,5 @@
 +++
-date = 2016-04-17
+date = "2016-04-20T10:00:00"
 draft = false
 tags = []
 title = "Writing content with Markdown, LaTeX, and Shortcodes"
@@ -7,8 +7,6 @@ math = true
 +++
 
 Content can be written using [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet), [LaTeX math](https://en.wikibooks.org/wiki/LaTeX/Mathematics), and [Hugo Shortcodes](http://gohugo.io/extras/shortcodes/). Additionally, HTML may be used for advanced formatting.<!--more--> This article gives an overview of the most common formatting options.
-
-{{% toc %}}
 
 ## Sub-headings
 
@@ -57,12 +55,6 @@ A numbered figure with caption:
     [A publication]({{</* ref "publication/hi.md" */>}})
     [A project]({{</* ref "project/hi.md" */>}})
     [Another section]({{</* relref "hi.md#who" */>}})
-    
-To enable linking to a file, such as a PDF, first place the file in your `static/files/` folder and then link to it using the following form:
-
-    {{%/* staticref "files/cv.pdf" "newtab" */%}}Download my CV{{%/* /staticref */%}}
-
-The optional `"newtab"` argument for `staticref` will cause the link to be opened in a new tab.
 
 ## Emojis
 
@@ -115,6 +107,7 @@ option                | type    | description                     | config.toml 
 `highlight`           | boolean | enable/disable highlighting     | yes         | yes
 `highlight_languages` | slice   | choose additional languages     | yes         | yes
 `highlight_style`     | string  | choose a highlighting style     | yes         | no
+`highlight_version`   | string  | choose the highlight.js version | yes         | no
 
 
 #### Option `highlight`
@@ -158,6 +151,10 @@ If you don't want to change the default style that ships with Academic but you d
 
 The `highlight_style` option is only recognized when set in `config.toml`. Setting `highlight_style` in your page's preamble has no effect.
 
+#### Option `highlight_version`
+
+The `highlight_version` option, as the name implies, allows you to select the version of highlight.js you want to use. The default value is "9.9.0". The `highlight_version` option is only recognized when set in `config.toml`. Setting `highlight_version` in your page's preamble has no effect.
+
 ## Twitter tweet
 
 To include a single tweet, pass the tweet’s ID from the tweet's URL as parameter to the shortcode:
@@ -193,29 +190,6 @@ Alternatively, inline math can be written by wrapping the formula with only a si
     This is inline: $\mathbf{y} = \mathbf{X}\boldsymbol\beta + \boldsymbol\varepsilon$
 
 This is inline: $\mathbf{y} = \mathbf{X}\boldsymbol\beta + \boldsymbol\varepsilon$
-
-Note that Markdown special characters need to be escaped with a backslash so they are treated as math rather than Markdown. For example, `*` and `_` become `\*` and `\_` respectively.
-
-### Multiline equations
-
-The standard LaTeX line break consisting of 2 backslashes needs to be replaced with 6 backslashes:
-
-```TeX
-$$f(k;p\_0^\*) = \begin{cases} p\_0^\* & \text{if }k=1, \\\\\\
-1-p\_0^\* & \text {if }k=0.\end{cases}$$
-```
-
-$$f(k;p\_0^\*) = \begin{cases} p\_0^\* & \text{if }k=1, \\\\\\
-1-p\_0^\* & \text {if }k=0.\end{cases}$$
-
-### Publication abstracts
-
-As Hugo and Academic attempt to parse TOML, Markdown, and LaTeX content in the abstract, the following guidelines should be followed just for the publication `abstract` and `abstract_short` fields:
-
-- escape each LaTeX backslash (`\`) with an extra backslash, yielding `\\`
-- escape each LaTeX underscore (`_`) with two backslashes, yielding `\\_`
-
-Hence, `abstract = "${O(d_{\max})}$"` becomes `abstract = "${O(d\\_{\\max})}$"`.
 
 ## Table
 
@@ -259,7 +233,3 @@ This will display the following *warning* block:
 {{% alert warning %}}
 Here's some important information...
 {{% /alert %}}
-
-## Table of Contents
-
-A table of contents may be particularly useful for long posts or tutorial/documentation type content. Use the `{{%/* toc */%}}` shortcode anywhere you wish within your Markdown content to automatically generate a table of contents.

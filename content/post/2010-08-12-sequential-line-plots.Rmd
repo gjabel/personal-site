@@ -1,0 +1,36 @@
+---
+title: Sequential Line Plots in R
+author: Guy
+date: '2010-08-12'
+slug: sequential-line-plots
+categories: [R]
+tags: [R]
+---
+
+
+I was trying to create some sequential plots today in R to analyse some MCMC simulations. I found the <code>par(ask=TRUE)</code> command very useful for looking at iterations of individual parameter values. Setting the ask graphical parameter to <code>TRUE</code> (before a for loop) allows you to update plots by clicking on the plotting device (in windows). Here is some example code to show how <code>par(ask=TRUE)</code> works.
+```{r eval=FALSE}
+xx <- rnorm(1000)
+xx <- matrix(xx,10,100)
+par(ask = TRUE)
+plot(xx[1,], type="n", ylim=range(xx), ylab="")
+for(i in 1:10){
+   plot(xx[i,], ylim=range(xx), ylab="", type="l")
+}
+```
+This will give the following output after each click:
+<a href="http://gjabel.files.wordpress.com/2014/03/ask1.png"><img src="http://gjabel.files.wordpress.com/2014/03/ask1.png" alt="ask1" width="650" height="460" class="aligncenter size-full wp-image-1167" /></a>
+
+If you want to keep previous plotted lines on the plot you can adapt the for loop in such a manner:
+```{r eval=FALSE}
+par(ask=TRUE)
+plot(xx[1,], type="n", ylim=range(xx), ylab="")
+for(i in 1:10){
+   plot(xx[1,], ylim=range(xx), ylab="", type="l")
+   for(j in 1:i){
+      lines(xx[j,])
+   }
+}
+```
+This will give the following output after each click:
+<a href="http://gjabel.files.wordpress.com/2014/03/ask2.png"><img src="http://gjabel.files.wordpress.com/2014/03/ask2.png" alt="ask2" width="650" height="460" class="aligncenter size-full wp-image-1168" /></a>

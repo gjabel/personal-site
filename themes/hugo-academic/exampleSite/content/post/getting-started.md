@@ -1,6 +1,5 @@
 +++
-date = 2016-04-20
-lastmod = 2017-09-03
+date = "2016-04-20T12:00:00"
 draft = false
 tags = ["academic", "hugo"]
 title = "Getting started with the Academic framework for Hugo"
@@ -26,9 +25,7 @@ Key features:
 - Social/academic network linking, [Google Analytics](https://analytics.google.com), and [Disqus](https://disqus.com) comments
 - Responsive and mobile friendly
 - Simple and refreshing one page design
-- Multilingual and easy to customize
-
-{{% toc %}}
+- Easy to customize
 
 ## Installation
 
@@ -49,7 +46,7 @@ Key features:
 
 4. Start the Hugo server from your website root folder:
 
-        hugo server
+        hugo server --watch
 
     Now you can go to [localhost:1313](http://localhost:1313) and your new Academic powered website should appear.
 
@@ -70,7 +67,7 @@ The core parameters for the website can be edited in the `config.toml` configura
 - Set `title` to your desired website title such as your name
 - The example Disqus commenting variable should be cleared (e.g. `disqusShortname = ""`) or set to your own [Disqus](https://disqus.com/) shortname to enable commenting
 - Edit your details under `[params]`; these will be displayed mainly in the homepage *about* and *contact* widgets (if used). To disable a contact field, simply clear the value to `""`. 
-- Place a square cropped portrait photo named `portrait.jpg` into the `static/img/` folder, overwriting any defaults. Note that you can edit the `avatar` filepath to point to a different image name or clear the value to disable the avatar feature. Alternatively, set `gravatar` to `true` to use the Gravatar/Wordpress avatar associated with your `email` address.
+- Place a square cropped portrait photo named `portrait.jpg` into the `static/img/` folder, overwriting any defaults. Alternatively, you can edit the `avatar` filepath to point to a different image name or clear the value to disable the avatar feature.
 - To enable LaTeX math for your site, set `math = true`
 - Social/academic networking links are defined as multiples of `[[params.social]]`. They can be created or deleted as necessary.
 
@@ -90,37 +87,14 @@ Refer to our guide on [managing content]({{< ref "post/managing-content.md" >}})
 
 [How to remove unused widgets and content pages]({{< ref "post/managing-content.md#removing-content" >}}).
 
-### Themes
-
-The following color themes are available and can be set by the `color_theme` option in `config.toml`:
-
-| `default` | `ocean` |
-| --- | --- |
-| ![default theme](https://raw.githubusercontent.com/gcushen/hugo-academic/master/images/theme-default.png)| ![ocean theme](https://raw.githubusercontent.com/gcushen/hugo-academic/master/images/theme-ocean.png) |
-
-| `forest` | `coffee`  + `playfair` font |
-| --- | --- |
-| ![forest theme](https://raw.githubusercontent.com/gcushen/hugo-academic/master/images/theme-forest.png) | ![coffee theme](https://raw.githubusercontent.com/gcushen/hugo-academic/master/images/theme-coffee-playfair.png) |
-
-| `dark` |
-| --- |
-| ![dark theme](https://raw.githubusercontent.com/gcushen/hugo-academic/master/images/theme-dark.png) |
-
-The following font styles are available and can be set by the `font` option in `config.toml`:
-
-- default (modern)
-- classic (original Academic v1 style)
-- playfair (serif)
-
-
-### Customization & updating
+### Customization & Upgrading
 
 Continue reading below for advanced customization tips and instructions for keeping the framework up-to-date with any improvements that become available.
 
 
 ## Advanced customization
 
-It is possible to carry out many customizations without touching any files in `themes/academic`, making it easier to update the framework in the future.
+It is possible to carry out many customizations without touching any files in `themes/academic`, making it easier to upgrade the framework in the future.
 
 ### Navigation menu
 
@@ -131,6 +105,12 @@ To create a dropdown sub-menu, add `identifier = "something"` to the parent item
 ### Website icon
 
 Save your main icon and mobile icon as square PNG images named `icon.png` and `apple-touch-icon.png`, respectively. Place them in your root `static/img/` folder.
+
+### Theme color (CSS)
+
+You can link custom CSS assets (relative to your root `static/css`) from your `config.toml` using `custom_css = ["custom.css"]`.
+
+For example, lets make a green theme. First, define `custom_css = ["green.css"]` in `config.toml`. Then we can download the example [green theme](https://gist.github.com/gcushen/d5525a4506b9ccf83f2bce592a895495) and save it as `static/css/green.css`, relative to your website root (i.e. **not** in the `themes` directory).
 
 ### Analytics
 
@@ -150,7 +130,7 @@ To edit the interface text, copy `themes/academic/i18n/en.yaml` to `i18n/en.yaml
 
 To translate the interface text to another language, follow the above instructions, but name the new file in the form `i18n/X.yaml` where `X` is the appropriate [ISO/RFC5646 language identifier](http://www.w3schools.com/tags/ref_language_codes.asp) for the translation. Then follow the brief instructions in the *Language* section at the bottom of your `config.toml`. To change the default language used by Academic, set `defaultContentLanguage` to the desired language identifier in your configuration file.
 
-To translate the navigation bar, you can edit the default `[[menu.main]]` instances in `config.toml`. However, for a multilingual site, you will need to duplicate all of the `[[menu.main]]` instances and rename the new instances from `[[menu.main]]` to `[[Languages.X.menu.main]]`, where `X` is the language identifier (e.g. `[[Languages.zh.menu.main]]` for Simplified Chinese). Thus, the navigation bar can be displayed in multiple languages.
+To translate the navigation bar, you can edit the default `[[menu.main]]` instances in `config.toml`. However, for a multilingual site, you will need to duplicate all of the `[[menu.main]]` instances and rename the new instances from `[[menu.main]]` to `[[languages.X.menu.main]]`, where `X` is the language identifier (e.g. `[[languages.zh.menu.main]]` for Simplified Chinese). Thus, the navigation bar can be displayed in multiple languages.
 
 To translate a content file in your `content/` folder into another language, copy the file to `filename.X.md` where `filename` is your existing filename and `X` is the appropriate [ISO/RFC5646 language identifier](http://www.w3schools.com/tags/ref_language_codes.asp) for the translation. Then translate the content in the new file to the specified language.
 
@@ -165,27 +145,14 @@ For further details on Hugo's internationalization and multilingual features, re
 
 Where `:slug` defaults to the filename of the post, excluding the file extension. However, slug may be overridden on a per post basis if desired, simply by setting `slug = "my-short-post-title"` in your post preamble.
 
-**Example 2:** let's consider changing the URL path of posts from `post/` to `blog/`. First, add the following parameters right above the `[params]` section of your `config.toml`:
-```
-[permalinks]
-    post = "/blog/:slug"
-```
-Then add `aliases = ["/blog/"]` to your post archive page `post/_index.md` so that it can be accessed from the */blog/* URL.
 
-### Advanced style customization (CSS)
+## Upgrading
 
-For advanced customization of the style, you can link custom CSS assets (relative to your root `static/css`) from your `config.toml` using `custom_css = ["custom.css"]`.
+Feel free to *star* the project on [Github](https://github.com/gcushen/hugo-academic/) and monitor the [commits](https://github.com/gcushen/hugo-academic/commits/master) for updates.
 
-For example, let's override some of Academic's default styles. First, define `custom_css = ["override.css"]` in `config.toml`. Then we can create the file `static/css/override.css`, relative to your website root (i.e. **not** in the `themes` directory). Add your custom CSS to this file.
+Before upgrading the framework, it is recommended to make a backup of your entire website directory, or at least your `themes/academic` directory. You can also read about the [most recent milestones](https://github.com/gcushen/hugo-academic/releases) (but this doesn't necessarily reflect the latest *master* release).
 
-
-## Updating
-
-Feel free to *star* the project on [Github](https://github.com/gcushen/hugo-academic/) to help keep track of updates and check out the [release notes](https://sourcethemes.com/academic/tags/updates) prior to updating your site.
-
-Before updating the framework, it is recommended to make a backup of your entire website directory, or at least your `themes/academic` directory.
-
-Before updating for the first time, the remote *origin* repository should be renamed to *upstream*:
+Before upgrading for the first time, the remote *origin* repository should be renamed to *upstream*:
 
     $ cd themes/academic
     $ git remote rename origin upstream
@@ -196,13 +163,13 @@ To list available updates:
     $ git fetch upstream
     $ git log --pretty=oneline --abbrev-commit --decorate HEAD..upstream/master
 
-Then, update by running:
+Then, upgrade by running:
 
     $ git pull upstream
 
 If you have modified files in `themes/academic`, git will attempt to auto-merge changes. If conflicts are reported, you will need to manually edit the files with conflicts and add them back (`git add <filename>`).
 
-If there are any issues after updating, you may wish to compare your site with the latest [example site](https://github.com/gcushen/hugo-academic/tree/master/exampleSite) to check if any settings changed in `config.toml` or the `+++` frontmatter of content files.
+If there are any issues after upgrading, you may wish to compare your site with the latest [example site](https://github.com/gcushen/hugo-academic/tree/master/exampleSite) to check if any settings changed.
 
 
 ## Feedback & Contributing
@@ -214,6 +181,6 @@ For general questions about Hugo, there is a [Hugo discussion forum](http://disc
 
 ## License
 
-Copyright 2017 [George Cushen](https://georgecushen.com).
+Copyright 2016 [George Cushen](https://georgecushen.com).
 
 Released under the [MIT](https://github.com/gcushen/hugo-academic/blob/master/LICENSE.md) license.

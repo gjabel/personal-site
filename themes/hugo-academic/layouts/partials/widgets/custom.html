@@ -2,7 +2,6 @@
 
 <!-- Custom widget -->
 <div class="row">
-  {{ if $page.Title }}
   <div class="col-xs-12 col-md-4 section-heading">
     <h1>{{ with $page.Title }}{{ . | markdownify }}{{ end }}</h1>
     {{ with $page.Params.subtitle }}<p>{{ . | markdownify }}</p>{{ end }}
@@ -10,9 +9,4 @@
   <div class="col-xs-12 col-md-8">
     {{ $page.Content }}
   </div>
-  {{ else }}
-  <div class="col-md-12">
-    {{ $page.Content }}
-  </div>
-  {{ end }}
 </div>

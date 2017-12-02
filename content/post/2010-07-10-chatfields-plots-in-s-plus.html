@@ -1,0 +1,44 @@
+---
+title: Chatfield's Plots in S-Plus
+author: Guy
+date: '2010-07-10'
+slug: chatfields-plots-in-s-plus
+categories: [R]
+tags: [R]
+---
+
+
+
+<p>I have recently finished reading the sixth edition of The Analysis of Time Series: An Introduction by Chatfield in our Statistics reading group. Whilst enjoying most of the book I got a little confused when looking at <em>Appendix D: Some MINITAB and S-PLUS Commands</em>. In the S-Plus section the author gives the code below to replicate his Figure 1.2.</p>
+<pre class="r"><code>postscript(file=&quot;1.2.ps&quot;)
+recife&lt;-scan(&quot;Recife&quot;)
+RecfS&lt;-cts(recife, start=dates(&quot;01/01/1953&quot;),units=&quot;months&quot;,frequency=&quot;12&quot;)
+fst_as.numeric(date(&quot;01/01/1953&quot;),format=&quot;dd/mm/yyyy&quot;)
+mid1_as.numeric(dates(&quot;01/01/1954&quot;),format=&quot;dd/mm/yyyy&quot;)
+mid2_as.numeric(dates(&quot;01/01/1955&quot;),format=&quot;dd/mm/yyyy&quot;)
+mid3_as.numeric(dates(&quot;01/01/1956&quot;),format=&quot;dd/mm/yyyy&quot;)
+mid4_as.numeric(dates(&quot;01/01/1957&quot;),format=&quot;dd/mm/yyyy&quot;)
+mid5_as.numeric(dates(&quot;01/01/1958&quot;),format=&quot;dd/mm/yyyy&quot;)
+mid6_as.numeric(dates(&quot;01/01/1959&quot;),format=&quot;dd/mm/yyyy&quot;)
+mid7_as.numeric(dates(&quot;01/01/1960&quot;),format=&quot;dd/mm/yyyy&quot;)
+mid8_as.numeric(dates(&quot;01/01/1961&quot;),format=&quot;dd/mm/yyyy&quot;)
+lst_as.numeric(dates(&quot;01/01/1962&quot;),format=&quot;dd/mm/yyyy&quot;)
+ts.plot(RecfS,xaxt=&quot;n&quot;,ylab=&quot;Temperature (deg C)&quot;, xlab=&quot;Year&quot;, type=&quot;l&quot;)
+axis(side=1, at = c(fst,mid1,mid2,mid3,mid4,mid5,mid6,mid7,mid8,lst),
+labels=c(&quot;Jan 53&quot;, &quot;Jan 54&quot;, &quot;Jan 55&quot;, &quot;Jan 56&quot;, &quot;Jan 57&quot;, &quot;Jan 58&quot;,
+&quot;Jan 59&quot;, &quot;Jan 60&quot;, &quot;Jan 61&quot;, &quot;Jan 62&quot;),
+ticks=T)
+dev.off()</code></pre>
+<p>I was not too sure what was going on with the code, which gave a tonne of error messages, some of which might well have been typo’s by the publisher (<code>_</code> instead of <code>&lt;-</code>)? In addition, the author stresses the effort required to construct nice plots in S-Plus. This got me thinking that 1) his code was excessive (not just because it does not work) and 2) he could have saved a lot of his effort by using R. The R code below proves my point</p>
+<pre class="r"><code>&gt; png(&quot;...:/1.2.png&quot;, width=650, height=460, units=&quot;px&quot;)
+&gt; recife &lt;- scan(&quot;http://people.bath.ac.uk/mascc/Recife.TS&quot;, sep=&quot;&quot;, skip=3)
+&gt; n &lt;- length(recife)
+&gt; times &lt;- seq(as.Date(&quot;1953/1/1&quot;), by=&quot;month&quot;, length.out=n)
+&gt; plot(recife, xaxt=&quot;n&quot;, type= &quot;l&quot;,ylab=&quot;Temperature (deg C)&quot;, xlab=&quot;Year&quot;)
+&gt; axis(1, at = seq(1,n,12), labels = format(times, &quot;%b %Y&quot;)[seq(1,n,12)])
+&gt; dev.off()</code></pre>
+<p>Much Tidier! Here is the plot..</p>
+<p><a href="http://gjabel.files.wordpress.com/2014/03/1-2.png"><img src="http://gjabel.files.wordpress.com/2014/03/1-2.png" alt="1.2" width="640" height="453" class="aligncenter size-full wp-image-1174" /></a></p>
+If you only wanted labels every other January, as in p.2 of the book (but not in the S-Plus code), then you can use..
+</p>
+<pre class="r"><code>&gt; axis(1, at = seq(1,n,24), labels = format(times, &quot;%b %y&quot;)[seq(1,n,24)])</code></pre>
