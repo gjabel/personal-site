@@ -3,10 +3,10 @@
 
 # The URL of your website.
 # End your URL with a `/` trailing slash, e.g. `https://example.com/`.
-baseurl = "https://guyabel.com/"
+baseurl = "/"
 
 # Title of your site
-title = "Guy Abel"
+title = "Academic"
 
 # Your copyright notice - appears in site footer.
 # To display a copyright symbol, type `&copy;`.
@@ -23,7 +23,7 @@ paginate = 10
 disqusShortname = ""
 
 # Enable analytics by entering your Google Analytics tracking ID
-googleAnalytics = "UA-5118819-14"
+googleAnalytics = ""
 
 # Default language to use (if you setup multilingual support)
 defaultContentLanguage = "en"
@@ -50,20 +50,20 @@ defaultContentLanguageInSubdir = false
   font = "default"
 
   # Your details.
-  name = "Guy Abel"
-  role = "Professor"
+  name = "Lena Smith"
+  role = "Professor of Artificial Intelligence"
 
   # Organizations/Affiliations.
   #   Separate multiple entries with a comma, using the form: `[ {name="Org1", url=""}, {name="Org2", url=""} ]`.
-  organizations = [ { name = "Shanghai University", url = "http://adri.shu.edu.cn/" } , { name = "IIASA World Population Program", url = "http://www.iiasa.ac.at/web/home/research/researchPrograms/WorldPopulation/Introduction.html" } ]
+  organizations = [ { name = "Stanford University", url = "" } ]
 
   gravatar = false  # Get your avatar from Gravatar.com? (true/false)
   avatar = "portrait.jpg"  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
-  email = "guy.abel@shu.edu.cn"
-  address = "Room 543, School of Sociology and Political Science, Shanghai University East Campus, 99 Shangda Road, Baoshan District, Shanghai. 上海市宝山区上大路99号上海大学东区社会学院大楼543"
-  office_hours = "By Appointment"
-  phone = "+86 021 6613 3271"
-  skype = ""
+  email = "test@example.org"
+  address = "Building 1 Room 1, Stanford University, California, 90210, USA"
+  office_hours = "Monday 10:00 to 13:00 or email for appointment"
+  phone = "888 888 88 88"
+  skype = "echo123"
   telegram = ""
 
   # Enable Keybase in Contact widget by entering your keybase.io username.
@@ -94,13 +94,13 @@ defaultContentLanguageInSubdir = false
   #   3: OpenStreetMap (Mapbox)
   map = 2
   map_api_key = ""
-  latitude = "31.31544"
-  longitude = "121.39544"
+  latitude = "37.4275"
+  longitude = "-122.1697"
   zoom = 15
 
   # Date and time format (refer to Go's date format: http://fuckinggodateformat.com )
   #   Examples: "Mon, Jan 2, 2006" or "2006-01-02"
-  date_format = "02 January 2006"
+  date_format = "Jan 2, 2006"
   #   Examples: "3:04 pm" or "15:04"
   time_format = "3:04 PM"
 
@@ -165,8 +165,8 @@ defaultContentLanguageInSubdir = false
   #   translated.
   publication_types = [
     'Uncategorized',  # 0
-    'Journal Article',  # 1
-    'Conference Paper',  # 2
+    'Conference paper',  # 1
+    'Journal article',  # 2
     'Manuscript',  # 3
     'Report',  # 4
     'Book',  # 5
@@ -217,37 +217,22 @@ defaultContentLanguageInSubdir = false
   [[params.social]]
     icon = "envelope"
     icon_pack = "fa"
-    link = "mailto:guy.abel@shu.edu.cn"
+    link = "mailto:test@example.org"
 
   [[params.social]]
     icon = "twitter"
     icon_pack = "fa"
-    link = "//twitter.com/guyabelguyabel"
-    
-#  [[params.social]]
-#    icon = "weixin"
-#    icon_pack = "fa"
-#    link = "//weixin//dl/add?{gjabel}"
+    link = "//twitter.com/GeorgeCushen"
 
   [[params.social]]
     icon = "google-scholar"
     icon_pack = "ai"
-    link = "https://scholar.google.co.uk/citations?user=MqztgqsAAAAJ"
+    link = "https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ"
 
-#  [[params.social]]
-#    icon = "mendeley"
-#    icon_pack = "ai"
-#    link = "https://www.mendeley.com/profiles/guy-abel/"
-    
   [[params.social]]
     icon = "github"
     icon_pack = "fa"
-    link = "//github.com/gjabel"
-
-#  [[params.social]]
-#    icon = "stack-overflow"
-#    icon_pack = "fa"
-#    link = "//stackexchange.com/users/242144/gjabel"
+    link = "//github.com/gcushen"
 
 
 # Navigation Links
@@ -289,10 +274,10 @@ defaultContentLanguageInSubdir = false
   weight = 6
 
 # Taxonomies.
-#[taxonomies]
-#  tag = "tags"
-#  category = "categories"
-#  publication_type = "publication_types"
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+  publication_type = "publication_types"
 
 # Languages
 #   Create a [languages.X] block for each language you want, where X is the language ID.
