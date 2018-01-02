@@ -1,16 +1,15 @@
 +++
 # Projects widget.
 # This widget displays all projects from `content/project/`.
-
-date = "2017-12-01T00:00:00"
-draft = false
+widget = "projects"
+active = true
+date = "2016-04-20T00:00:00"
 
 title = "Projects"
 subtitle = ""
-widget = "projects"
 
 # Order that this section will appear in.
-weight = 3
+weight = 50
 
 # View.
 # Customize how projects are displayed.
@@ -18,6 +17,10 @@ weight = 3
 view = 1
 
 # Filter toolbar.
+
+# Default filter index (e.g. 0 corresponds to the first `[[filter]]` instance below).
+filter_default = 0
+
 # Add or remove as many filters (`[[filter]]` instances) as you like.
 # Use "*" tag to show all projects or an existing tag prefixed with "." to filter by specific tag.
 # To remove toolbar, delete/comment all instances of `[[filter]]` below.
@@ -26,12 +29,12 @@ view = 1
   tag = "*"
   
 [[filter]]
-  name = "Current"
-  tag = ".current"
+  name = "Deep Learning"
+  tag = ".deep-learning"
 
 [[filter]]
-  name = "Past"
-  tag = ".past"
+  name = "Other"
+  tag = ".demo"
 
 +++
 

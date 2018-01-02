@@ -5,8 +5,8 @@
     
     <url>
     
-      <loc>/project/combining-big-data/</loc>
-      <lastmod>2016-02-01T00:00:00+00:00</lastmod>
+      <loc>/tags/academic/</loc>
+      <lastmod>2017-01-01T00:00:00+00:00</lastmod>
     </url>
     
   
@@ -14,8 +14,8 @@
     
     <url>
     
-      <loc>/2012/07/01/latex-baposter-hello-world/</loc>
-      <lastmod>2012-07-01T00:00:00+00:00</lastmod>
+      <loc>/publication/</loc>
+      <lastmod>2017-01-01T00:00:00+00:00</lastmod>
     </url>
     
   
@@ -23,8 +23,8 @@
     
     <url>
     
-      <loc>/2012/05/20/bayesian-population-forecasts/</loc>
-      <lastmod>2012-05-20T00:00:00+00:00</lastmod>
+      <loc>/talk/</loc>
+      <lastmod>2017-01-01T00:00:00+00:00</lastmod>
     </url>
     
   
@@ -32,8 +32,8 @@
     
     <url>
     
-      <loc>/2011/08/25/international-migration-flow-table-in-europe/</loc>
-      <lastmod>2011-08-25T00:00:00+00:00</lastmod>
+      <loc>/talk/example-talk/</loc>
+      <lastmod>2017-01-01T00:00:00+08:00</lastmod>
     </url>
     
   
@@ -41,8 +41,8 @@
     
     <url>
     
-      <loc>/2011/08/24/international-migration-flow-table-estimation/</loc>
-      <lastmod>2011-08-24T00:00:00+00:00</lastmod>
+      <loc>/post/</loc>
+      <lastmod>2017-01-01T00:00:00+08:00</lastmod>
     </url>
     
   
@@ -50,8 +50,8 @@
     
     <url>
     
-      <loc>/2010/08/12/sequential-line-plots/</loc>
-      <lastmod>2010-08-12T00:00:00+00:00</lastmod>
+      <loc>/project/deep-learning/</loc>
+      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
     </url>
     
   
@@ -59,8 +59,8 @@
     
     <url>
     
-      <loc>/2010/08/06/combining-census-and-registration-migration-data/</loc>
-      <lastmod>2010-08-06T00:00:00+00:00</lastmod>
+      <loc>/project/example-external-project/</loc>
+      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
     </url>
     
   
@@ -68,8 +68,8 @@
     
     <url>
     
-      <loc>/2010/08/06/popfest-slides/</loc>
-      <lastmod>2010-08-06T00:00:00+00:00</lastmod>
+      <loc>/post/getting-started/</loc>
+      <lastmod>2017-09-03T00:00:00+08:00</lastmod>
     </url>
     
   
@@ -77,8 +77,8 @@
     
     <url>
     
-      <loc>/2010/07/10/chatfields-plots-in-s-plus/</loc>
-      <lastmod>2010-07-10T00:00:00+00:00</lastmod>
+      <loc>/post/widgets/</loc>
+      <lastmod>2016-04-19T00:00:00+08:00</lastmod>
     </url>
     
   
@@ -86,8 +86,8 @@
     
     <url>
     
-      <loc>/2010/05/09/soton-socscience-phd-latex-template/</loc>
-      <lastmod>2010-05-09T00:00:00+00:00</lastmod>
+      <loc>/post/managing-content/</loc>
+      <lastmod>2016-04-18T00:00:00+08:00</lastmod>
     </url>
     
   
@@ -95,8 +95,8 @@
     
     <url>
     
-      <loc>/2008/05/08/home-buyers-will-be-hurt-by-aid-plan/</loc>
-      <lastmod>2008-05-08T00:00:00+00:00</lastmod>
+      <loc>/post/writing-markdown-latex/</loc>
+      <lastmod>2016-04-17T00:00:00+08:00</lastmod>
     </url>
     
   
@@ -104,8 +104,44 @@
     
     <url>
     
-      <loc>/tags/bacluster/</loc>
-      <lastmod>2012-07-01T00:00:00+00:00</lastmod>
+      <loc>/post/faq/</loc>
+      <lastmod>2016-04-10T00:00:00+08:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/publication/person-re-identification/</loc>
+      <lastmod>2015-09-01T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/post/migrate-from-jekyll/</loc>
+      <lastmod>2014-03-10T00:00:00+08:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/publication/clothing-search/</loc>
+      <lastmod>2013-07-01T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/publication_types/1/</loc>
+      <lastmod>2013-07-01T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -114,58 +150,8 @@
     
     <url>
     
-      <loc>/categories/bugs/</loc>
-      <lastmod>2012-05-20T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/tags/bugs/</loc>
-      <lastmod>2012-05-20T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/categories/</loc>
-      <lastmod>2012-05-20T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/tags/current/</loc>
-      <lastmod>2016-02-01T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/categories/forecast/</loc>
-      <lastmod>2012-05-20T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/tags/forecastr/</loc>
-      <lastmod>2012-05-20T00:00:00+00:00</lastmod>
+      <loc>/publication_types/2/</loc>
+      <lastmod>2015-09-01T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -175,7 +161,7 @@
     <url>
     
       <loc>/</loc>
-      <lastmod>2017-12-01T00:00:00+00:00</lastmod>
+      <lastmod>2017-10-15T00:00:00+08:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -184,8 +170,7 @@
     
     <url>
     
-      <loc>/categories/latex/</loc>
-      <lastmod>2012-07-01T00:00:00+00:00</lastmod>
+      <loc>/categories/</loc>
       <priority>0</priority>
     </url>
     
@@ -194,8 +179,8 @@
     
     <url>
     
-      <loc>/tags/latex/</loc>
-      <lastmod>2010-05-09T00:00:00+00:00</lastmod>
+      <loc>/tags/deep-learning/</loc>
+      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -204,8 +189,8 @@
     
     <url>
     
-      <loc>/categories/migration/</loc>
-      <lastmod>2011-08-25T00:00:00+00:00</lastmod>
+      <loc>/tags/demo/</loc>
+      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -214,8 +199,8 @@
     
     <url>
     
-      <loc>/tags/migration/</loc>
-      <lastmod>2011-08-25T00:00:00+00:00</lastmod>
+      <loc>/tags/hugo/</loc>
+      <lastmod>2017-09-03T00:00:00+08:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -224,18 +209,8 @@
     
     <url>
     
-      <loc>/tags/poster/</loc>
-      <lastmod>2012-07-01T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/post/</loc>
-      <lastmod>2012-07-01T00:00:00+00:00</lastmod>
+      <loc>/tags/jekyll/</loc>
+      <lastmod>2014-03-10T00:00:00+08:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -245,7 +220,7 @@
     <url>
     
       <loc>/project/</loc>
-      <lastmod>2016-02-01T00:00:00+00:00</lastmod>
+      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -255,26 +230,7 @@
     <url>
     
       <loc>/publication_types/</loc>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/categories/r/</loc>
-      <lastmod>2012-05-20T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/tags/r/</loc>
-      <lastmod>2010-08-12T00:00:00+00:00</lastmod>
+      <lastmod>2013-07-01T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -284,7 +240,7 @@
     <url>
     
       <loc>/tags/</loc>
-      <lastmod>2012-07-01T00:00:00+00:00</lastmod>
+      <lastmod>2017-01-01T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     

@@ -16,23 +16,33 @@
 
       <div class="portrait-title">
         <h2 itemprop="name">{{ $.Site.Params.name }}</h2>
-        <h3 itemprop="jobTitle">{{ $.Site.Params.role }}</h3>
+        {{ with $.Site.Params.role }}<h3 itemprop="jobTitle">{{ . }}</h3>{{ end }}
+
+        {{/* Support legacy `organization` option. */}}
         {{ if $.Site.Params.organization }}
         <h3 itemprop="worksFor" itemscope itemtype="http://schema.org/Organization">
-          {{ with $.Site.Params.organization_url }}<a href="{{ . }}" target="_blank" itemprop="url">{{ end }}
+          {{ with $.Site.Params.organization_url }}<a href="{{ . }}" target="_blank" itemprop="url" rel="noopener">{{ end }}
             <span itemprop="name">{{ $.Site.Params.organization }}</span>
           {{ if $.Site.Params.organization_url }}</a>{{ end }}
+        </h3>
+        {{ end }}
+
+        {{ range $.Site.Params.organizations }}
+        <h3 itemprop="worksFor" itemscope itemtype="http://schema.org/Organization">
+          {{ with .url }}<a href="{{ . }}" target="_blank" itemprop="url" rel="noopener">{{ end }}
+          <span itemprop="name">{{ .name }}</span>
+          {{ if .url }}</a>{{ end }}
         </h3>
         {{ end }}
       </div>
 
       <link itemprop="url" href="{{ $.Site.BaseURL }}">
 
-      <ul class="social-icon" aria-hidden="true">
+      <ul class="network-icon" aria-hidden="true">
         {{ range $.Site.Params.social }}
         {{ $pack := or .icon_pack "fa" }}
         <li>
-          <a itemprop="sameAs" href="{{ .link | safeURL }}" target="_blank">
+          <a itemprop="sameAs" href="{{ .link | safeURL }}" target="_blank" rel="noopener">
             <i class="{{ $pack }} {{ $pack }}-{{ .icon }} big-icon"></i>
           </a>
         </li>
@@ -52,7 +62,7 @@
         <h3>{{ i18n "interests" | markdownify }}</h3>
         <ul class="ul-interests">
           {{ range .interests }}
-          <li>{{ . }}</li>
+          <li>{{ . | markdownify }}</li>
           {{ end }}
         </ul>
       </div>

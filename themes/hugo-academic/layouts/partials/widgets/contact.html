@@ -22,11 +22,20 @@
       </li>
       {{ end }}
 
+      {{ with $.Site.Params.discussion }}
+      <li>
+        <i class="fa-li fa fa-comments-o fa-2x" aria-hidden="true"></i>
+        <span>
+          <a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a>
+        </span>
+      </li>
+      {{ end }}
+
       {{ with $.Site.Params.keybase }}
       <li>
         <i class="fa-li fa fa-lock fa-2x" aria-hidden="true"></i>
         <span>
-          <a href="https://keybase.io/{{ . }}" target="_blank">@{{ . }}</a> on Keybase.
+          <a href="https://keybase.io/{{ . }}" target="_blank" rel="noopener">@{{ . }}</a> on Keybase.
         </span>
       </li>
       {{ end }}
@@ -53,7 +62,7 @@
       <li>
         <i class="fa-li fa fa-telegram fa-2x" aria-hidden="true"></i>
         <span>
-        {{- if $autolink }}<a href="https://telegram.me/{{ . }}" target="_blank">@{{ . }}</a>{{ else }}@{{ . }}{{ end -}}
+        {{- if $autolink }}<a href="https://telegram.me/{{ . }}" target="_blank" rel="noopener">@{{ . }}</a>{{ else }}@{{ . }}{{ end -}}
         </span>
       </li>
       {{ end }}
@@ -61,7 +70,7 @@
       {{ with $.Site.Params.address }}
       <li>
         <i class="fa-li fa fa-map-marker fa-2x" aria-hidden="true"></i>
-        <span id="person-address" itemprop="address">{{ . }}</span>
+        <span id="person-address" itemprop="address">{{ replace . "\n" "<br>" | safeHTML }}</span>
       </li>
       {{ end }}
 
@@ -73,6 +82,18 @@
       {{ end }}
 
     </ul>
+
+    {{ if $.Site.Params.map }}
+    <div class="hidden">
+      <input id="map-provider" value="{{ $.Site.Params.map }}">
+      <input id="map-lat" value="{{ $.Site.Params.latitude }}">
+      <input id="map-lng" value="{{ $.Site.Params.longitude }}">
+      <input id="map-dir" value="{{ $.Site.Params.address }}">
+      <input id="map-zoom" value="{{ $.Site.Params.zoom | default "15" }}">
+      <input id="map-api-key" value="{{ $.Site.Params.map_api_key }}">
+    </div>
+    <div id="map"></div>
+    {{ end }}
 
   </div>
 </div>
