@@ -5,7 +5,7 @@
     
     <url>
     
-      <loc>https://guyabel.com/tags/academic/</loc>
+      <loc>/tags/academic/</loc>
       <lastmod>2017-01-01T00:00:00+00:00</lastmod>
     </url>
     
@@ -14,7 +14,7 @@
     
     <url>
     
-      <loc>https://guyabel.com/publication/</loc>
+      <loc>/publication/</loc>
       <lastmod>2017-01-01T00:00:00+00:00</lastmod>
     </url>
     
@@ -23,7 +23,7 @@
     
     <url>
     
-      <loc>https://guyabel.com/talk/</loc>
+      <loc>/talk/</loc>
       <lastmod>2017-01-01T00:00:00+00:00</lastmod>
     </url>
     
@@ -32,7 +32,7 @@
     
     <url>
     
-      <loc>https://guyabel.com/talk/example-talk/</loc>
+      <loc>/talk/example-talk/</loc>
       <lastmod>2017-01-01T00:00:00+08:00</lastmod>
     </url>
     
@@ -41,7 +41,7 @@
     
     <url>
     
-      <loc>https://guyabel.com/post/</loc>
+      <loc>/post/</loc>
       <lastmod>2017-01-01T00:00:00+08:00</lastmod>
     </url>
     
@@ -50,7 +50,7 @@
     
     <url>
     
-      <loc>https://guyabel.com/project/deep-learning/</loc>
+      <loc>/project/deep-learning/</loc>
       <lastmod>2016-04-27T00:00:00+00:00</lastmod>
     </url>
     
@@ -59,7 +59,7 @@
     
     <url>
     
-      <loc>https://guyabel.com/project/example-external-project/</loc>
+      <loc>/project/example-external-project/</loc>
       <lastmod>2016-04-27T00:00:00+00:00</lastmod>
     </url>
     
@@ -68,7 +68,7 @@
     
     <url>
     
-      <loc>https://guyabel.com/post/getting-started/</loc>
+      <loc>/post/getting-started/</loc>
       <lastmod>2017-09-03T00:00:00+08:00</lastmod>
     </url>
     
@@ -77,7 +77,7 @@
     
     <url>
     
-      <loc>https://guyabel.com/post/widgets/</loc>
+      <loc>/post/widgets/</loc>
       <lastmod>2016-04-19T00:00:00+08:00</lastmod>
     </url>
     
@@ -86,7 +86,7 @@
     
     <url>
     
-      <loc>https://guyabel.com/post/managing-content/</loc>
+      <loc>/post/managing-content/</loc>
       <lastmod>2016-04-18T00:00:00+08:00</lastmod>
     </url>
     
@@ -95,7 +95,7 @@
     
     <url>
     
-      <loc>https://guyabel.com/post/writing-markdown-latex/</loc>
+      <loc>/post/writing-markdown-latex/</loc>
       <lastmod>2016-04-17T00:00:00+08:00</lastmod>
     </url>
     
@@ -104,7 +104,7 @@
     
     <url>
     
-      <loc>https://guyabel.com/post/faq/</loc>
+      <loc>/post/faq/</loc>
       <lastmod>2016-04-10T00:00:00+08:00</lastmod>
     </url>
     
@@ -113,7 +113,7 @@
     
     <url>
     
-      <loc>https://guyabel.com/publication/person-re-identification/</loc>
+      <loc>/publication/person-re-identification/</loc>
       <lastmod>2015-09-01T00:00:00+00:00</lastmod>
     </url>
     
@@ -122,7 +122,7 @@
     
     <url>
     
-      <loc>https://guyabel.com/post/2015-07-23-r-rmarkdown/</loc>
+      <loc>/post/2015-07-23-r-rmarkdown/</loc>
       <lastmod>2015-07-23T21:13:14-05:00</lastmod>
     </url>
     
@@ -131,7 +131,7 @@
     
     <url>
     
-      <loc>https://guyabel.com/post/migrate-from-jekyll/</loc>
+      <loc>/post/migrate-from-jekyll/</loc>
       <lastmod>2014-03-10T00:00:00+08:00</lastmod>
     </url>
     
@@ -140,7 +140,7 @@
     
     <url>
     
-      <loc>https://guyabel.com/publication/clothing-search/</loc>
+      <loc>/publication/clothing-search/</loc>
       <lastmod>2013-07-01T00:00:00+00:00</lastmod>
     </url>
     
@@ -149,7 +149,8 @@
     
     <url>
     
-      <loc>https://guyabel.com/categories/</loc>
+      <loc>/publication_types/1/</loc>
+      <lastmod>2013-07-01T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -158,7 +159,36 @@
     
     <url>
     
-      <loc>https://guyabel.com/tags/deep-learning/</loc>
+      <loc>/publication_types/2/</loc>
+      <lastmod>2015-09-01T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/</loc>
+      <lastmod>2017-10-15T00:00:00+08:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/categories/</loc>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/tags/deep-learning/</loc>
       <lastmod>2016-04-27T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -168,7 +198,7 @@
     
     <url>
     
-      <loc>https://guyabel.com/tags/demo/</loc>
+      <loc>/tags/demo/</loc>
       <lastmod>2016-04-27T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -178,17 +208,7 @@
     
     <url>
     
-      <loc>https://guyabel.com/</loc>
-      <lastmod>2016-04-20T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://guyabel.com/tags/hugo/</loc>
+      <loc>/tags/hugo/</loc>
       <lastmod>2017-09-03T00:00:00+08:00</lastmod>
       <priority>0</priority>
     </url>
@@ -198,7 +218,7 @@
     
     <url>
     
-      <loc>https://guyabel.com/tags/jekyll/</loc>
+      <loc>/tags/jekyll/</loc>
       <lastmod>2014-03-10T00:00:00+08:00</lastmod>
       <priority>0</priority>
     </url>
@@ -208,7 +228,7 @@
     
     <url>
     
-      <loc>https://guyabel.com/tags/plot/</loc>
+      <loc>/tags/plot/</loc>
       <lastmod>2015-07-23T21:13:14-05:00</lastmod>
       <priority>0</priority>
     </url>
@@ -218,7 +238,7 @@
     
     <url>
     
-      <loc>https://guyabel.com/project/</loc>
+      <loc>/project/</loc>
       <lastmod>2016-04-27T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -228,7 +248,17 @@
     
     <url>
     
-      <loc>https://guyabel.com/categories/r/</loc>
+      <loc>/publication_types/</loc>
+      <lastmod>2013-07-01T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/categories/r/</loc>
       <lastmod>2015-07-23T21:13:14-05:00</lastmod>
       <priority>0</priority>
     </url>
@@ -238,7 +268,7 @@
     
     <url>
     
-      <loc>https://guyabel.com/tags/r-markdown/</loc>
+      <loc>/tags/r-markdown/</loc>
       <lastmod>2015-07-23T21:13:14-05:00</lastmod>
       <priority>0</priority>
     </url>
@@ -248,7 +278,7 @@
     
     <url>
     
-      <loc>https://guyabel.com/tags/regression/</loc>
+      <loc>/tags/regression/</loc>
       <lastmod>2015-07-23T21:13:14-05:00</lastmod>
       <priority>0</priority>
     </url>
@@ -258,7 +288,7 @@
     
     <url>
     
-      <loc>https://guyabel.com/tags/</loc>
+      <loc>/tags/</loc>
       <lastmod>2017-01-01T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
