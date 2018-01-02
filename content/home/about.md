@@ -18,19 +18,19 @@ weight = 1
 
 # List your qualifications (such as academic degrees).
 [[education.courses]]
-  course = "PhD"
-  institution = "Division of Social Statistics and Demography, University of Southampton"
+  course = "PhD in Artificial Intelligence"
+  institution = "Stanford University"
+  year = 2012
+
+[[education.courses]]
+  course = "MEng in Artificial Intelligence"
+  institution = "Massachusetts Institute of Technology"
   year = 2009
 
 [[education.courses]]
-  course = "MSc Social Statistics - Statistics Pathway (with Distinction)"
-  institution = "Division of Division of Social Statistics and Demography, University of Southampton"
-  year =  2005
-
-[[education.courses]]
-  course = "MSc Statistics (with Distinction)"
-  institution = "School of Mathematics, Statistics & Actuarial Science, University of Kent"
-  year = 2003
+  course = "BSc in Artificial Intelligence"
+  institution = "Massachusetts Institute of Technology"
+  year = 2008
  
 +++
 
