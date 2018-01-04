@@ -61,7 +61,7 @@ defaultContentLanguageInSubdir = false
   avatar = "portrait.jpg"  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
   email = "guy.abel@shu.edu.cn"
   address = "Room 543, School of Sociology and Political Science, Shanghai University East Campus, 99 Shangda Road, Baoshan District, Shanghai. 上海市宝山区上大路99号上海大学东区社会学院大楼543"
-  office_hours = "By Appointment"
+  office_hours = "Office Hours by Appointment"
   phone = "+86 021 6613 3271"
   skype = ""
   telegram = ""
@@ -165,12 +165,12 @@ defaultContentLanguageInSubdir = false
   #   translated.
   publication_types = [
     'Uncategorized',  # 0
-    'Journal Article',  # 1
-    'Conference Paper',  # 2
-    'Manuscript',  # 3
-    'Report',  # 4
+    'Conference Proceedings',  # 1
+    'Journal',  # 2
+    'Work in progress',  # 3
+    'Technical report',  # 4
     'Book',  # 5
-    'Book section'  # 6
+    'Book chapter'  # 6
   ]
 
   # Configuration of talk pages.

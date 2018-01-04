@@ -10,10 +10,11 @@ weight = 1
 # List your academic interests.
 [interests]
   interests = [
+    "Statistical Demography",
     "Migration",
-    "Statistics",
-    "Statistical Computing",
-    "Demography"
+    "Population",
+    "Demography",
+    "Statistics"
   ]
 
 # List your qualifications (such as academic degrees).

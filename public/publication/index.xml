@@ -7,27 +7,46 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 01 Jan 2018 00:00:00 +0000</lastBuildDate>
     <atom:link href="/publication/" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>A Person Re-Identification System For Mobile Devices</title>
-      <link>/publication/person-re-identification/</link>
-      <pubDate>Tue, 01 Sep 2015 00:00:00 +0000</pubDate>
+      <title>Estimates of Global Bilateral Migration Flows by Gender between 1960 and 2015</title>
+      <link>/publication/global-migration-estimates-by-gender/</link>
+      <pubDate>Fri, 24 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>/publication/person-re-identification/</guid>
-      <description>&lt;p&gt;More detail can easily be written here using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
+      <guid>/publication/global-migration-estimates-by-gender/</guid>
+      <description>
+
+&lt;h2 id=&#34;further-notes&#34;&gt;Further Notes&lt;/h2&gt;
+
+&lt;p&gt;Please contact me if cannot access the full paper and would like a copy.&lt;/p&gt;
 </description>
     </item>
     
     <item>
-      <title>Mobile visual clothing search</title>
-      <link>/publication/clothing-search/</link>
-      <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
+      <title>Chinese Internal Migration Flows 2010–2015 </title>
+      <link>/publication/china-internal-migration-2010-15/</link>
+      <pubDate>Fri, 07 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>/publication/clothing-search/</guid>
-      <description>&lt;p&gt;More detail can easily be written here using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
+      <guid>/publication/china-internal-migration-2010-15/</guid>
+      <description>
+
+&lt;h2 id=&#34;further-notes&#34;&gt;Further Notes&lt;/h2&gt;
+
+&lt;p&gt;Please contact me if you would like the R code to produce the plot (bot the English and Chinese version).&lt;/p&gt;
+
+&lt;p&gt;Here is an additional WeChat &lt;a href=&#34;http://mp.weixin.qq.com/s/gmv5iiJ5L-uNyI6vlGOhQA&#34; target=&#34;_blank&#34;&gt;post&lt;/a&gt; on the paper (in Chinese) written by Qi Wei.&lt;/p&gt;
 </description>
+    </item>
+    
+    <item>
+      <title>Climate Vulnerability and Human Migration in Global Perspective</title>
+      <link>/publication/global-climate-vulnerability-and-migration/</link>
+      <pubDate>Sun, 30 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/global-climate-vulnerability-and-migration/</guid>
+      <description></description>
     </item>
     
   </channel>

@@ -1,0 +1,63 @@
++++
+title = "Climate Vulnerability and Human Migration in Global Perspective"
+date = "2017-04-30"
+
+# Authors. Comma separated list, e.g. `["Bob Smith", "David Jones"]`.
+authors = ["Martina Grecequet 1","Jack DeWaard","Jessica J. Hellmann","Guy J. Abel"]
+
+# Publication type.
+# Legend:
+# 0 = Uncategorized
+# 1 = Conference proceedings
+# 2 = Journal
+# 3 = Work in progress
+# 4 = Technical report
+# 5 = Book
+# 6 = Book chapter
+publication_types = ["2"]
+
+# Publication name and optional abbreviated version.
+publication = "In *Sustainability*, 9(5), 720"
+publication_short = ""
+
+# Abstract and optional shortened version.
+abstract = "The relationship between climate change and human migration is not homogenous and depends critically on the differential vulnerability of population and places. If places and populations are not vulnerable, or susceptible, to climate change, then the climate-migration relationship may not materialize. The key to understanding and, from a policy perspective, planning for whether and how climate change will impact future migration patterns is therefore knowledge of the link between climate vulnerability and migration. However, beyond specific case studies, little is known about this association in global perspective. We therefore provide a descriptive, country-level portrait of this relationship. We show that the negative association between climate vulnerability and international migration holds only for countries least vulnerable to climate change, which suggests the potential for trapped populations in more vulnerable countries. However, when analyzed separately by life supporting sector (food, water, health, ecosystem services, human habitat, and infrastructure) and vulnerability dimension (exposure, sensitivity, and adaptive capacity), we detect evidence of a relationship among more, but not the most, vulnerable countries. The bilateral (i.e., country-to-country) migration show that, on average, people move from countries of higher vulnerability to lower vulnerability, reducing global risk by 15%. This finding is consistent with the idea that migration is a climate adaptation strategy. Still, ~6% of bilateral migration is maladaptive with respect to climate change, with some movement toward countries with greater climate change vulnerability."
+abstract_short = ""
+
+# Featured image thumbnail (optional)
+image_preview = ""
+
+# Is this a selected publication? (true/false)
+selected = false
+
+# Projects (optional).
+#   Associate this publication with one or more of your projects.
+#   Simply enter the filename (excluding '.md') of your project file in `content/project/`.
+# projects = ["deep-learning"]
+
+# Links (optional).
+url_pdf = "http://www.mdpi.com/2071-1050/9/5/720"
+url_preprint = ""
+url_code = ""
+url_dataset = ""
+url_project = ""
+url_slides = ""
+url_video = ""
+url_poster = ""
+url_source = ""
+
+# Does the content use math formatting?
+math = true
+
+# Does the content use source code highlighting?
+highlight = true
+
+# Featured image
+# Place your image in the `static/img/` folder and reference its filename below, e.g. `image = "example.jpg"`.
+# [header]
+# image = ""
+# caption = ""
+
++++
+
+
