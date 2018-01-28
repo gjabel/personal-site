@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.31" />
+  <meta name="author" content="Guy Abel">
+  <meta name="description" content="Professor">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/post/getting-started-rmd/">
+
+  
+  
+
+
+  
+
+  
+  
+  <meta name="theme-color" content="#0095eb">
+  
+  
+  
+  
+    
+  
+  
+    
+    
+      
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+      
+    
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.1/css/academicons.min.css" integrity="sha512-NThgw3XKQ1absAahW6to7Ey42uycrVvfNfyjqcFNgCmOCQ5AR4AO0SiXrN+8ZtYeappp56lk1WtvjVmEa+VR6A==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin="anonymous">
+  
+  
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700%7cRoboto:400,400italic,700%7cRoboto&#43;Mono">
+  
+  <link rel="stylesheet" href="/styles.css">
+  
+
+  
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-5118819-14', 'auto');
+      ga('require', 'eventTracker');
+      ga('require', 'outboundLinkTracker');
+      ga('require', 'urlChangeTracker');
+      ga('send', 'pageview');
+    </script>
+    <script async src="//www.google-analytics.com/analytics.js"></script>
+    
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
+    
+  
+
+  
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="Guy Abel">
+  <link rel="feed" href="/index.xml" type="application/rss+xml" title="Guy Abel">
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="/post/getting-started-rmd/">
+
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@guyabelguyabel">
+  <meta property="twitter:creator" content="@guyabelguyabel">
+  
+  <meta property="og:site_name" content="Guy Abel">
+  <meta property="og:url" content="/post/getting-started-rmd/">
+  <meta property="og:title" content="Animated Directional Chord Diagrams | Guy Abel">
+  <meta property="og:description" content="">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2018-01-10T00:00:00&#43;00:00">
+  
+  <meta property="article:modified_time" content="2018-01-10T00:00:00&#43;00:00">
+  
+
+  
+
+  <title>Animated Directional Chord Diagrams | Guy Abel</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#toc" data-offset="71" >
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+      <a class="navbar-brand" href="/">Guy Abel</a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#about">
+            
+            <span>Home</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#publications_selected">
+            
+            <span>Publications</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#posts">
+            
+            <span>Posts</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#projects">
+            
+            <span>Projects</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#teaching">
+            
+            <span>Teaching</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#contact">
+            
+            <span>Contact</span>
+            
+          </a>
+        </li>
+
+        
+        
+      
+
+      
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+  <div class="article-container">
+    <div class="article-inner">
+      <h1 itemprop="name">Animated Directional Chord Diagrams</h1>
+
+      
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    
+    <time datetime="2018-01-10 00:00:00 &#43;0000 UTC" itemprop="datePublished dateModified">
+      10 January 2018
+    </time>
+  </span>
+  <span itemscope itemprop="author publisher" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Guy Abel">
+  </span>
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    6 min read
+  </span>
+  
+
+  
+  
+
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=Animated%20Directional%20Chord%20Diagrams&amp;url=%2fpost%2fgetting-started-rmd%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=%2fpost%2fgetting-started-rmd%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fpost%2fgetting-started-rmd%2f&amp;title=Animated%20Directional%20Chord%20Diagrams"
+         target="_blank" rel="noopener">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=%2fpost%2fgetting-started-rmd%2f&amp;title=Animated%20Directional%20Chord%20Diagrams"
+         target="_blank" rel="noopener">
+        <i class="fa fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=Animated%20Directional%20Chord%20Diagrams&amp;body=%2fpost%2fgetting-started-rmd%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+
+      <div class="article-style" itemprop="articleBody">
+        <div id="background" class="section level2">
+<h2>Background</h2>
+<p>A little while ago my paper in International Migraiotn Review on global migration flow estimates came out online. The paper includes a number of directional chord diagrams to visualise the estimates *See my old Wordpress site on how to make these plots in R using the circlize package*</p>
+<p>Recently I have been playing around tweenr and the magick packages for animated population pyramids. In this post I attempt to use these packages to produce animated directional chord diagrams of global migration flow estimates</p>
+</div>
+<div id="data-prep" class="section level2">
+<h2>Data Prep</h2>
+<p>The first step is to read into R two data frames.</p>
+<ol style="list-style-type: decimal">
+<li>Time series of migration flows for animation (<code>d0</code> below)</li>
+</ol>
+<pre class="r"><code>library(tidyverse)
+
+
+# cahnge to migest when up on github
+
+
+d0 &lt;- read_csv(&quot;C:\\Users\\Guy\\Documents\\GitHub\\migest\\inst\\imr\\reg_flow.csv&quot;)
+d0 </code></pre>
+<pre><code>## # A tibble: 891 x 4
+##    year0     orig_reg                      dest_reg    flow
+##    &lt;int&gt;        &lt;chr&gt;                         &lt;chr&gt;   &lt;dbl&gt;
+##  1  1960       Africa                        Africa 1377791
+##  2  1960       Africa                  Eastern Asia    5952
+##  3  1960       Africa Eastern Europe &amp; Central Asia    7303
+##  4  1960       Africa                        Europe  919252
+##  5  1960       Africa     Latin America &amp; Caribbean   15796
+##  6  1960       Africa              Northern America   82463
+##  7  1960       Africa                       Oceania   32825
+##  8  1960       Africa                 Southern Asia   35603
+##  9  1960       Africa                  Western Asia  106580
+## 10  1960 Eastern Asia                        Africa   37301
+## # ... with 881 more rows</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>Some meta data for chord diagram plots (<code>d1</code> below)</li>
+</ol>
+<pre class="r"><code>d1 &lt;- read_csv(system.file(&quot;vidwp&quot;, &quot;reg_plot.csv&quot;, package = &quot;migest&quot;))
+d1</code></pre>
+<pre><code>## # A tibble: 9 x 5
+##                          region order1    col1           reg1
+##                           &lt;chr&gt;  &lt;int&gt;   &lt;chr&gt;          &lt;chr&gt;
+## 1              Northern America      1 #40A4D8       Northern
+## 2                        Africa      2 #33BEB7         Africa
+## 3                        Europe      3 #B2C224         Europe
+## 4 Eastern Europe &amp; Central Asia      4 #FECC2F Eastern Europe
+## 5                  Western Asia      5 #FBA127        Western
+## 6                 Southern Asia      6 #F66320       Southern
+## 7                  Eastern Asia      7 #DB3937        Eastern
+## 8                       Oceania      8 #A463D7        Oceania
+## 9     Latin America &amp; Caribbean      9 #0C5BCE  Latin America
+## # ... with 1 more variables: reg2 &lt;chr&gt;</code></pre>
+</div>
+<div id="tween-data" class="section level2">
+<h2>Tween Data</h2>
+<p>The next step is to tween the data by migration corridor.</p>
+<pre class="r"><code>library(tweenr)
+d2 &lt;- d0 %&gt;%
+  mutate(corridor = paste(orig_reg, dest_reg, sep = &quot; -&gt; &quot;)) %&gt;%
+  select(corridor, flow, year0) %&gt;%
+  mutate(ease = &quot;linear&quot;) %&gt;%
+  tween_elements(time = &quot;year0&quot;, group = &quot;corridor&quot;, ease = &quot;ease&quot;, nframes = 100) %&gt;%
+  tbl_df()
+d2</code></pre>
+<pre><code>## # A tibble: 8,181 x 4
+##       flow year0 .frame                                  .group
+##  *   &lt;dbl&gt; &lt;dbl&gt;  &lt;int&gt;                                  &lt;fctr&gt;
+##  1 1377791  1960      0                        Africa -&gt; Africa
+##  2    5952  1960      0                  Africa -&gt; Eastern Asia
+##  3    7303  1960      0 Africa -&gt; Eastern Europe &amp; Central Asia
+##  4  919252  1960      0                        Africa -&gt; Europe
+##  5   15796  1960      0     Africa -&gt; Latin America &amp; Caribbean
+##  6   82463  1960      0              Africa -&gt; Northern America
+##  7   32825  1960      0                       Africa -&gt; Oceania
+##  8   35603  1960      0                 Africa -&gt; Southern Asia
+##  9  106580  1960      0                  Africa -&gt; Western Asia
+## 10   37301  1960      0                  Eastern Asia -&gt; Africa
+## # ... with 8,171 more rows</code></pre>
+<p>Then some further data work to ready the data for plotting, including</p>
+<ol style="list-style-type: lower-alpha">
+<li>colour information from <code>d1</code> to specify chord specifc colours in the plot later</li>
+<li>ensure that the first three columns correspond to the origin, destination and flow; the format required by the <code>chordDiagram</code> function when using a data frame</li>
+</ol>
+<pre class="r"><code>d2 &lt;- d2 %&gt;%
+  separate(col = .group, into = c(&quot;orig_reg&quot;, &quot;dest_reg&quot;), sep = &quot; -&gt; &quot;) %&gt;%
+  left_join(select(d1, region, col1), by = c(&quot;orig_reg&quot; = &quot;region&quot;)) %&gt;%
+  rename(chord_col = col1) %&gt;%
+  select(orig_reg, dest_reg, flow, everything()) %&gt;%
+  mutate(flow = flow/1e06)
+d2</code></pre>
+<pre><code>## # A tibble: 8,181 x 6
+##        orig_reg                      dest_reg     flow year0 .frame
+##           &lt;chr&gt;                         &lt;chr&gt;    &lt;dbl&gt; &lt;dbl&gt;  &lt;int&gt;
+##  1       Africa                        Africa 1.377791  1960      0
+##  2       Africa                  Eastern Asia 0.005952  1960      0
+##  3       Africa Eastern Europe &amp; Central Asia 0.007303  1960      0
+##  4       Africa                        Europe 0.919252  1960      0
+##  5       Africa     Latin America &amp; Caribbean 0.015796  1960      0
+##  6       Africa              Northern America 0.082463  1960      0
+##  7       Africa                       Oceania 0.032825  1960      0
+##  8       Africa                 Southern Asia 0.035603  1960      0
+##  9       Africa                  Western Asia 0.106580  1960      0
+## 10 Eastern Asia                        Africa 0.037301  1960      0
+## # ... with 8,171 more rows, and 1 more variables: chord_col &lt;chr&gt;</code></pre>
+</div>
+<div id="plots-for-each-frame" class="section level2">
+<h2>Plots for Each Frame</h2>
+<p>Now the data is in the correct format, you can use a <code>for</code> loop to cycle through the tweened data to produce a chord diagram plot for each frame. The arguments I used here followed pretty much the same as those explained in the migest demo that provides some more information on each of the chosen options.</p>
+<pre class="r"><code># create a directory to store the individual plots
+dir.create(&quot;./plot-gif/&quot;)
+
+library(circlize)
+for(f in unique(d2$.frame)){
+  # open a PNG plotting device
+  png(file = paste0(&quot;./plot-gif/cf&quot;, f, &quot;.png&quot;), height = 7, width = 7, units = &quot;in&quot;, res = 500)
+  
+  # intialise the circos plot
+  circos.clear()
+  par(mar = rep(0, 4), cex=1)
+  circos.par(start.degree = 90, gap.degree = 4, track.margin=c(-0.1, 0.1), points.overflow.warning = FALSE)
+
+  # plot the chord diagram
+  chordDiagram(x = filter(d2, .frame == f), directional = 1, order = d1$region,
+               grid.col = d1$col1, annotationTrack = &quot;grid&quot;,
+               transparency = 0.25,  annotationTrackHeight = c(0.05, 0.1),
+               direction.type = c(&quot;diffHeight&quot;, &quot;arrows&quot;), link.arr.type = &quot;big.arrow&quot;,
+               diffHeight  = -0.04, link.sort = TRUE, link.largest.ontop = TRUE,
+               col = filter(d2, .frame == f)$chord_col)
+  
+  # add labels and axis
+  circos.trackPlotRegion(track.index = 1, bg.border = NA, panel.fun = function(x, y) {
+    xlim = get.cell.meta.data(&quot;xlim&quot;)
+    sector.index = get.cell.meta.data(&quot;sector.index&quot;)
+    reg1 = d1 %&gt;% filter(region == sector.index) %&gt;% pull(reg1)
+    reg2 = d1 %&gt;% filter(region == sector.index) %&gt;% pull(reg2)
+    
+    circos.text(x = mean(xlim), y = ifelse(reg2==&quot;&quot;, 5.75, 7), labels = reg1, facing = &quot;bending&quot;, cex = 1.1)
+    circos.text(x = mean(xlim), y = 4.75, labels = reg2, facing = &quot;bending&quot;, cex = 1.1)
+    circos.axis(h = &quot;top&quot;, labels.away.percentage = 0.2, labels.niceFacing = FALSE, labels.cex = 0.8,
+                minor.ticks = 1, major.at = seq(from = 0, to = xlim[2], by = ifelse(xlim[2]&gt;15, 4, 2)))
+  })
+  
+  # close plotting device
+  dev.off()
+}</code></pre>
+</div>
+<div id="creating-a-gif" class="section level2">
+<h2>Creating a GIF</h2>
+<p>Using the magick package a GIF can be created by using the code below to</p>
+<ol style="list-style-type: decimal">
+<li>Read in an inital plot and then combine together all other images created above</li>
+<li>Scale the combined images</li>
+<li>Animate the combined images and save as a <code>.gif</code></li>
+</ol>
+<pre class="r"><code>library(magick)
+
+img &lt;- image_read(path = &quot;./plot_gif/cf0.png&quot;)
+for(f in unique(d2$.frame)[-1]){
+  img0 &lt;- image_read(path = paste0(&quot;./plot_gif/cf&quot;,y,&quot;.png&quot;))
+  img &lt;- c(img, img0)
+  message(f)
+}
+
+img1 &lt;- image_scale(image = img, geometry = &quot;800x800&quot;)
+
+ani0 &lt;- image_animate(image = img1, fps = 10)
+image_write(image = ani0, path = &quot;./plot_gif/ani1.gif&quot;)</code></pre>
+<p>This gives an output much like this (minus the information around the sides)</p>
+<div class="figure">
+<img src="./static/img/ani1.gif" alt="alt text" />
+<p class="caption">alt text</p>
+</div>
+</div>
+
+      </div>
+
+      
+
+
+<div class="article-tags">
+  
+  <a class="btn btn-primary btn-outline" href="/tags/r">R</a>
+  
+</div>
+
+
+
+    </div>
+  </div>
+
+</article>
+
+
+
+<div class="article-container article-widget">
+  <div class="hr-light"></div>
+  <h3>Related</h3>
+  <ul>
+    
+    <li><a href="/post/animated-directional-chord-diagrams/">Animated Directional Chord Diagrams</a></li>
+    
+  </ul>
+</div>
+
+
+
+
+<div class="article-container">
+  
+
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      &copy; 2018 &middot; 
+
+      Powered by the
+      <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+      <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close btn-large" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Cite</h4>
+      </div>
+      <div>
+        <pre><code class="modal-body tex"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-primary btn-outline js-copy-cite" href="#" target="_blank">
+          <i class="fa fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-primary btn-outline js-download-cite" href="#" target="_blank">
+          <i class="fa fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin="anonymous"></script>
+    
+    
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    
+      
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+      
+
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+
+  </body>
+</html>
+

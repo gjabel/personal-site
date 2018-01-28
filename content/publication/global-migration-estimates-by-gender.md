@@ -21,7 +21,7 @@ publication = "In *International Migration Review, Forthcoming*."
 publication_short = ""
 
 # Abstract and optional shortened version.
-abstract = "An indirect estimation method is used to derive country to country migration flows from changes in global bilateral stock data. Estimates are obtained over five- and 10-year periods between 1960 and 2015 by gender, providing a comprehensive picture of past migration pat- terns. The estimated total of global international migrant flows gener- ally increases over the 55-year time frame. The global rate of migration over five- and 10-year periods fluctuate at around 0.65 and 1.25 percent of the population, respectively. The sensitivity of esti- mates to alternative input stock and demographic data are explored."
+abstract = "An indirect estimation method is used to derive country to country migration flows from changes in global bilateral stock data. Estimates are obtained over five- and 10-year periods between 1960 and 2015 by gender, providing a comprehensive picture of past migration patterns. The estimated total of global international migrant flows gener- ally increases over the 55-year time frame. The global rate of migration over five- and 10-year periods fluctuate at around 0.65 and 1.25 percent of the population, respectively. The sensitivity of estimates to alternative input stock and demographic data are explored."
 
 # Featured image thumbnail (optional)
 image_preview = ""

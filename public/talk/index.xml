@@ -11,13 +11,12 @@
     <atom:link href="/talk/" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Example Talk</title>
-      <link>/talk/example-talk/</link>
-      <pubDate>Sun, 01 Jan 2017 00:00:00 +0800</pubDate>
+      <title>Gender, Education and Marital Status Differentials in Migration</title>
+      <link>/talk/anu-2018/</link>
+      <pubDate>Thu, 01 Feb 2018 00:00:00 +0800</pubDate>
       
-      <guid>/talk/example-talk/</guid>
-      <description>&lt;p&gt;Embed your slides or video here using &lt;a href=&#34;https://sourcethemes.com/academic/post/writing-markdown-latex/&#34; target=&#34;_blank&#34;&gt;shortcodes&lt;/a&gt;. Further details can easily be added using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
-</description>
+      <guid>/talk/anu-2018/</guid>
+      <description></description>
     </item>
     
   </channel>

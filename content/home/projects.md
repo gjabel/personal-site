@@ -3,7 +3,7 @@
 # This widget displays all projects from `content/project/`.
 widget = "projects"
 active = true
-date = "2016-04-20T00:00:00"
+date = "2018-02-01T00:00:00"
 
 title = "Projects"
 subtitle = ""
@@ -14,7 +14,7 @@ weight = 50
 # View.
 # Customize how projects are displayed.
 # Legend: 0 = list, 1 = cards.
-view = 1
+view = 0
 
 # Filter toolbar.
 
@@ -29,12 +29,12 @@ filter_default = 0
   tag = "*"
   
 [[filter]]
-  name = "Deep Learning"
-  tag = ".deep-learning"
+  name = "Estimation"
+  tag = ".estimation"
 
 [[filter]]
-  name = "Other"
-  tag = ".demo"
+  name = "Projection"
+  tag = ".projection"
 
 +++
 
