@@ -139,10 +139,11 @@ image_write(image = ani0, path = "./plot_gif/ani1.gif")
 
 This gives an output much like this minus the information around the sides:
 ![ ](/img/abel-ani10-gf.gif)
+(might take a few seconds to fully load)
 
 ## Fixing Scales in Chord Diagrams
 
-Whilst the plot above allows comparisons of the distributions of flows overtime it is more difficult to compare volumes. For such comparisons, Zuguang [recommends](http://zuguang.de/circlize_book/book/advanced-usage-of-chorddiagram.html#compare-two-chord-diagrams) scaling the gaps between the sectors on the outside of the chord diagram. I wrote a little function that can do this;
+Whilst the plot above allows comparisons of the distributions of flows overtime it is more difficult to compare volumes. For such comparisons, Zuguang [recommends](http://zuguang.de/circlize_book/book/advanced-usage-of-chorddiagram.html#compare-two-chord-diagrams) scaling the gaps between the sectors on the outside of the chord diagram. I wrote a little function that can do this for flow data arranged in a tidy format;
 
 ```{r}
 scale_gap <- function(flow_m, flow_max, gap_at_max = 1, gaps = NULL) {
@@ -163,7 +164,7 @@ where
 * `gaps` is the number of gaps in the chord diagram (i.e. the number of regions).
   
   
-This function can then be used to derive the size of gaps in each frame for a new animated GIF.
+The function can be used to derive the size of gaps in each frame for a new animated GIF.
 ```{r}
 d3 <- d2 %>%
   group_by(.frame) %>%

@@ -170,11 +170,11 @@ img1 &lt;- image_scale(image = img, geometry = &quot;800x800&quot;)
 
 ani0 &lt;- image_animate(image = img1, fps = 10)
 image_write(image = ani0, path = &quot;./plot_gif/ani1.gif&quot;)</code></pre>
-<p>This gives an output much like this minus the information around the sides: <img src="/img/abel-ani10-gf.gif" /></p>
+<p>This gives an output much like this minus the information around the sides: <img src="/img/abel-ani10-gf.gif" /> (might take a few seconds to fully load)</p>
 </div>
 <div id="fixing-scales-in-chord-diagrams" class="section level2">
 <h2>Fixing Scales in Chord Diagrams</h2>
-<p>Whilst the plot above allows comparisons of the distributions of flows overtime it is more difficult to compare volumes. For such comparisons, Zuguang <a href="http://zuguang.de/circlize_book/book/advanced-usage-of-chorddiagram.html#compare-two-chord-diagrams">recommends</a> scaling the gaps between the sectors on the outside of the chord diagram. I wrote a little function that can do this;</p>
+<p>Whilst the plot above allows comparisons of the distributions of flows overtime it is more difficult to compare volumes. For such comparisons, Zuguang <a href="http://zuguang.de/circlize_book/book/advanced-usage-of-chorddiagram.html#compare-two-chord-diagrams">recommends</a> scaling the gaps between the sectors on the outside of the chord diagram. I wrote a little function that can do this for flow data arranged in a tidy format;</p>
 <pre class="r"><code>scale_gap &lt;- function(flow_m, flow_max, gap_at_max = 1, gaps = NULL) {
   p &lt;- flow_m / flow_max
   if(length(gap_at_max) == 1 &amp; !is.null(gaps)) {
@@ -191,7 +191,7 @@ image_write(image = ani0, path = &quot;./plot_gif/ani1.gif&quot;)</code></pre>
 <li><code>gap_at_max</code> is the size in degrees of the gaps in the flow matrix in the year where the flows are at their all time maximum.</li>
 <li><code>gaps</code> is the number of gaps in the chord diagram (i.e. the number of regions).</li>
 </ul>
-<p>This function can then be used to derive the size of gaps in each frame for a new animated GIF.</p>
+<p>The function can be used to derive the size of gaps in each frame for a new animated GIF.</p>
 <pre class="r"><code>d3 &lt;- d2 %&gt;%
   group_by(.frame) %&gt;%
   summarise(flow = sum(flow)) %&gt;%

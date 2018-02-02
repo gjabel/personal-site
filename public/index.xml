@@ -215,11 +215,11 @@ img1 &amp;lt;- image_scale(image = img, geometry = &amp;quot;800x800&amp;quot;)
 
 ani0 &amp;lt;- image_animate(image = img1, fps = 10)
 image_write(image = ani0, path = &amp;quot;./plot_gif/ani1.gif&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;This gives an output much like this minus the information around the sides: &lt;img src=&#34;/img/abel-ani10-gf.gif&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;This gives an output much like this minus the information around the sides: &lt;img src=&#34;/img/abel-ani10-gf.gif&#34; /&gt; (might take a few seconds to fully load)&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;fixing-scales-in-chord-diagrams&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Fixing Scales in Chord Diagrams&lt;/h2&gt;
-&lt;p&gt;Whilst the plot above allows comparisons of the distributions of flows overtime it is more difficult to compare volumes. For such comparisons, Zuguang &lt;a href=&#34;http://zuguang.de/circlize_book/book/advanced-usage-of-chorddiagram.html#compare-two-chord-diagrams&#34;&gt;recommends&lt;/a&gt; scaling the gaps between the sectors on the outside of the chord diagram. I wrote a little function that can do this;&lt;/p&gt;
+&lt;p&gt;Whilst the plot above allows comparisons of the distributions of flows overtime it is more difficult to compare volumes. For such comparisons, Zuguang &lt;a href=&#34;http://zuguang.de/circlize_book/book/advanced-usage-of-chorddiagram.html#compare-two-chord-diagrams&#34;&gt;recommends&lt;/a&gt; scaling the gaps between the sectors on the outside of the chord diagram. I wrote a little function that can do this for flow data arranged in a tidy format;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;scale_gap &amp;lt;- function(flow_m, flow_max, gap_at_max = 1, gaps = NULL) {
   p &amp;lt;- flow_m / flow_max
   if(length(gap_at_max) == 1 &amp;amp; !is.null(gaps)) {
@@ -236,7 +236,7 @@ image_write(image = ani0, path = &amp;quot;./plot_gif/ani1.gif&amp;quot;)&lt;/co
 &lt;li&gt;&lt;code&gt;gap_at_max&lt;/code&gt; is the size in degrees of the gaps in the flow matrix in the year where the flows are at their all time maximum.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;gaps&lt;/code&gt; is the number of gaps in the chord diagram (i.e. the number of regions).&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;This function can then be used to derive the size of gaps in each frame for a new animated GIF.&lt;/p&gt;
+&lt;p&gt;The function can be used to derive the size of gaps in each frame for a new animated GIF.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;d3 &amp;lt;- d2 %&amp;gt;%
   group_by(.frame) %&amp;gt;%
   summarise(flow = sum(flow)) %&amp;gt;%

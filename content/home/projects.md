@@ -33,8 +33,8 @@ filter_default = 0
   tag = ".estimation"
 
 [[filter]]
-  name = "Projection"
-  tag = ".projection"
+  name = "Prediction"
+  tag = ".prediction"
 
 +++
 
