@@ -170,7 +170,8 @@ img1 &lt;- image_scale(image = img, geometry = &quot;800x800&quot;)
 
 ani0 &lt;- image_animate(image = img1, fps = 10)
 image_write(image = ani0, path = &quot;./plot_gif/ani1.gif&quot;)</code></pre>
-<p>This gives an output much like this minus the information around the sides: <img src="/img/abel-ani10-gf.gif" /> (might take a few seconds to fully load)</p>
+<p>This gives an output much like this minus the information around the sides: <img src="/img/abel-ani10-gf.gif" /></p>
+<p>(might take a few seconds to fully load)</p>
 </div>
 <div id="fixing-scales-in-chord-diagrams" class="section level2">
 <h2>Fixing Scales in Chord Diagrams</h2>
@@ -217,6 +218,10 @@ d3</code></pre>
 <pre class="r"><code>circos.par(start.degree = 90, track.margin = c(-0.1, 0.1),
            gap.degree = filter(d3, .frame == f)$gaps, 
            points.overflow.warning = FALSE)</code></pre>
-<p>Once the for loop has produced a new set of images, the same code to produce the GIF file that illustrates the changes in migration flows where the gaps between the regions change to enable the scales on the axis to remained fixed over time… <img src="/img/abel-ani10-gf-fix.gif" /></p>
+<p>Once the for loop has produced a new set of images, the same code to produce the GIF file that illustrates the changes in migration flows where the gaps between the regions change to enable the scales on the axis to remained fixed over time…</p>
+<div class="figure">
+<img src="/img/abel-ani10-gf-fix.gif" />
+
+</div>
 <p>I am not 100% convinced this is the ultimate way to animate these data; the sectors of all regions - bar North America - are changing places making it hard to focus on the changes over time in one of them. A better visual might have the the sector axes fixed at their all time maximum throughout the animation, only allowing the chords to appear to be animated over the period. However, at the moment there is no option in the <code>chordDiagram</code> to set the sector axis maximum values.</p>
 </div>

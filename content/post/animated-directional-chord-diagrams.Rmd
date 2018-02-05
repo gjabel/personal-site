@@ -139,6 +139,7 @@ image_write(image = ani0, path = "./plot_gif/ani1.gif")
 
 This gives an output much like this minus the information around the sides:
 ![ ](/img/abel-ani10-gf.gif)
+
 (might take a few seconds to fully load)
 
 ## Fixing Scales in Chord Diagrams
@@ -184,6 +185,7 @@ circos.par(start.degree = 90, track.margin = c(-0.1, 0.1),
 ```
 
 Once the for loop has produced a new set of images, the same code to produce the GIF file that illustrates the changes in migration flows where the gaps between the regions change to enable the scales on the axis to remained fixed over time...
+
 ![ ](/img/abel-ani10-gf-fix.gif)
 
 I am not 100% convinced this is the ultimate way to animate these data; the sectors of all regions - bar North America - are changing places making it hard to focus on the changes over time in one of them. A better visual might have the the sector axes fixed at their all time maximum throughout the animation, only allowing the chords to appear to be animated over the period. However, at the moment there is no option in the `chordDiagram` to set the sector axis maximum values.

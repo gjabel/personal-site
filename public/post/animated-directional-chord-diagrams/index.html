@@ -11,7 +11,7 @@
   <meta name="description" content="Professor">
 
   
-  <link rel="alternate" hreflang="en-us" href="/post/animated-directional-chord-diagrams/">
+  <link rel="alternate" hreflang="en-us" href="https://guyabel.com/post/animated-directional-chord-diagrams/">
 
   
   
@@ -67,15 +67,15 @@
   
 
   
-  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="Guy Abel">
-  <link rel="feed" href="/index.xml" type="application/rss+xml" title="Guy Abel">
+  <link rel="alternate" href="https://guyabel.com/index.xml" type="application/rss+xml" title="Guy Abel">
+  <link rel="feed" href="https://guyabel.com/index.xml" type="application/rss+xml" title="Guy Abel">
   
 
   <link rel="manifest" href="/site.webmanifest">
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="/post/animated-directional-chord-diagrams/">
+  <link rel="canonical" href="https://guyabel.com/post/animated-directional-chord-diagrams/">
 
   <meta property="twitter:card" content="summary_large_image">
   
@@ -83,7 +83,7 @@
   <meta property="twitter:creator" content="@guyabelguyabel">
   
   <meta property="og:site_name" content="Guy Abel">
-  <meta property="og:url" content="/post/animated-directional-chord-diagrams/">
+  <meta property="og:url" content="https://guyabel.com/post/animated-directional-chord-diagrams/">
   <meta property="og:title" content="Animated Directional Chord Diagrams | Guy Abel">
   <meta property="og:description" content="">
   <meta property="og:locale" content="en-us">
@@ -269,7 +269,7 @@
   
   
   <span class="middot-divider"></span>
-  <a href="/post/animated-directional-chord-diagrams/#disqus_thread"></a>
+  <a href="https://guyabel.com/post/animated-directional-chord-diagrams/#disqus_thread"></a>
   
 
   
@@ -280,35 +280,35 @@
   <ul class="share">
     <li>
       <a class="twitter"
-         href="https://twitter.com/intent/tweet?text=Animated%20Directional%20Chord%20Diagrams&amp;url=%2fpost%2fanimated-directional-chord-diagrams%2f"
+         href="https://twitter.com/intent/tweet?text=Animated%20Directional%20Chord%20Diagrams&amp;url=https%3a%2f%2fguyabel.com%2fpost%2fanimated-directional-chord-diagrams%2f"
          target="_blank" rel="noopener">
         <i class="fa fa-twitter"></i>
       </a>
     </li>
     <li>
       <a class="facebook"
-         href="https://www.facebook.com/sharer.php?u=%2fpost%2fanimated-directional-chord-diagrams%2f"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fguyabel.com%2fpost%2fanimated-directional-chord-diagrams%2f"
          target="_blank" rel="noopener">
         <i class="fa fa-facebook"></i>
       </a>
     </li>
     <li>
       <a class="linkedin"
-         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fpost%2fanimated-directional-chord-diagrams%2f&amp;title=Animated%20Directional%20Chord%20Diagrams"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fguyabel.com%2fpost%2fanimated-directional-chord-diagrams%2f&amp;title=Animated%20Directional%20Chord%20Diagrams"
          target="_blank" rel="noopener">
         <i class="fa fa-linkedin"></i>
       </a>
     </li>
     <li>
       <a class="weibo"
-         href="http://service.weibo.com/share/share.php?url=%2fpost%2fanimated-directional-chord-diagrams%2f&amp;title=Animated%20Directional%20Chord%20Diagrams"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fguyabel.com%2fpost%2fanimated-directional-chord-diagrams%2f&amp;title=Animated%20Directional%20Chord%20Diagrams"
          target="_blank" rel="noopener">
         <i class="fa fa-weibo"></i>
       </a>
     </li>
     <li>
       <a class="email"
-         href="mailto:?subject=Animated%20Directional%20Chord%20Diagrams&amp;body=%2fpost%2fanimated-directional-chord-diagrams%2f">
+         href="mailto:?subject=Animated%20Directional%20Chord%20Diagrams&amp;body=https%3a%2f%2fguyabel.com%2fpost%2fanimated-directional-chord-diagrams%2f">
         <i class="fa fa-envelope"></i>
       </a>
     </li>
@@ -485,7 +485,8 @@ img1 &lt;- image_scale(image = img, geometry = &quot;800x800&quot;)
 
 ani0 &lt;- image_animate(image = img1, fps = 10)
 image_write(image = ani0, path = &quot;./plot_gif/ani1.gif&quot;)</code></pre>
-<p>This gives an output much like this minus the information around the sides: <img src="/img/abel-ani10-gf.gif" /> (might take a few seconds to fully load)</p>
+<p>This gives an output much like this minus the information around the sides: <img src="/img/abel-ani10-gf.gif" /></p>
+<p>(might take a few seconds to fully load)</p>
 </div>
 <div id="fixing-scales-in-chord-diagrams" class="section level2">
 <h2>Fixing Scales in Chord Diagrams</h2>
@@ -532,7 +533,11 @@ d3</code></pre>
 <pre class="r"><code>circos.par(start.degree = 90, track.margin = c(-0.1, 0.1),
            gap.degree = filter(d3, .frame == f)$gaps, 
            points.overflow.warning = FALSE)</code></pre>
-<p>Once the for loop has produced a new set of images, the same code to produce the GIF file that illustrates the changes in migration flows where the gaps between the regions change to enable the scales on the axis to remained fixed over time… <img src="/img/abel-ani10-gf-fix.gif" /></p>
+<p>Once the for loop has produced a new set of images, the same code to produce the GIF file that illustrates the changes in migration flows where the gaps between the regions change to enable the scales on the axis to remained fixed over time…</p>
+<div class="figure">
+<img src="/img/abel-ani10-gf-fix.gif" />
+
+</div>
 <p>I am not 100% convinced this is the ultimate way to animate these data; the sectors of all regions - bar North America - are changing places making it hard to focus on the changes over time in one of them. A better visual might have the the sector axes fixed at their all time maximum throughout the animation, only allowing the chords to appear to be animated over the period. However, at the moment there is no option in the <code>chordDiagram</code> to set the sector axis maximum values.</p>
 </div>
 
@@ -575,7 +580,7 @@ d3</code></pre>
             return;
         }
         var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "gjabel" + '.disqus.com/embed.js';
+        s.src = '//' + "guyabel" + '.disqus.com/embed.js';
         s.setAttribute('data-timestamp', +new Date());
         (d.head || d.body).appendChild(s);
     })();
@@ -637,7 +642,7 @@ d3</code></pre>
 
     
     
-    <script id="dsq-count-scr" src="//gjabel.disqus.com/count.js" async></script>
+    <script id="dsq-count-scr" src="//guyabel.disqus.com/count.js" async></script>
     
 
     

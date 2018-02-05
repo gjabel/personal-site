@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Guy Abel on Guy Abel</title>
-    <link>/</link>
+    <link>https://guyabel.com/</link>
     <description>Recent content in Guy Abel on Guy Abel</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -12,46 +12,46 @@
     
     <item>
       <title>ARDI International Migration Pillar</title>
-      <link>/project/adri-pillar/</link>
+      <link>https://guyabel.com/project/adri-pillar/</link>
       <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>/project/adri-pillar/</guid>
+      <guid>https://guyabel.com/project/adri-pillar/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Combining Migration Data</title>
-      <link>/project/combining-migration-data/</link>
+      <link>https://guyabel.com/project/combining-migration-data/</link>
       <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>/project/combining-migration-data/</guid>
+      <guid>https://guyabel.com/project/combining-migration-data/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Global Migration Predictions</title>
-      <link>/project/global-migration-prediction/</link>
+      <link>https://guyabel.com/project/global-migration-prediction/</link>
       <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>/project/global-migration-prediction/</guid>
+      <guid>https://guyabel.com/project/global-migration-prediction/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Gender, Education and Marital Status Differentials in Migration</title>
-      <link>/talk/anu-2018/</link>
+      <link>https://guyabel.com/talk/anu-2018/</link>
       <pubDate>Thu, 01 Feb 2018 00:00:00 +0800</pubDate>
       
-      <guid>/talk/anu-2018/</guid>
+      <guid>https://guyabel.com/talk/anu-2018/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Animated Directional Chord Diagrams</title>
-      <link>/post/animated-directional-chord-diagrams/</link>
+      <link>https://guyabel.com/post/animated-directional-chord-diagrams/</link>
       <pubDate>Wed, 10 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/animated-directional-chord-diagrams/</guid>
+      <guid>https://guyabel.com/post/animated-directional-chord-diagrams/</guid>
       <description>&lt;div id=&#34;background&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Background&lt;/h2&gt;
 &lt;p&gt;A little while ago my paper in &lt;em&gt;International Migration Review&lt;/em&gt; on global migration flow estimates came out &lt;a href=&#34;http://guyabel.com/publication/global-migration-estimates-by-gender/&#34;&gt;online&lt;/a&gt;. The paper includes a number of directional chord diagrams to visualize the estimates.&lt;/p&gt;
@@ -215,7 +215,8 @@ img1 &amp;lt;- image_scale(image = img, geometry = &amp;quot;800x800&amp;quot;)
 
 ani0 &amp;lt;- image_animate(image = img1, fps = 10)
 image_write(image = ani0, path = &amp;quot;./plot_gif/ani1.gif&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;This gives an output much like this minus the information around the sides: &lt;img src=&#34;/img/abel-ani10-gf.gif&#34; /&gt; (might take a few seconds to fully load)&lt;/p&gt;
+&lt;p&gt;This gives an output much like this minus the information around the sides: &lt;img src=&#34;https://guyabel.com/img/abel-ani10-gf.gif&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;(might take a few seconds to fully load)&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;fixing-scales-in-chord-diagrams&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Fixing Scales in Chord Diagrams&lt;/h2&gt;
@@ -262,7 +263,11 @@ d3&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;circos.par(start.degree = 90, track.margin = c(-0.1, 0.1),
            gap.degree = filter(d3, .frame == f)$gaps, 
            points.overflow.warning = FALSE)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Once the for loop has produced a new set of images, the same code to produce the GIF file that illustrates the changes in migration flows where the gaps between the regions change to enable the scales on the axis to remained fixed over time… &lt;img src=&#34;/img/abel-ani10-gf-fix.gif&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Once the for loop has produced a new set of images, the same code to produce the GIF file that illustrates the changes in migration flows where the gaps between the regions change to enable the scales on the axis to remained fixed over time…&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;https://guyabel.com/img/abel-ani10-gf-fix.gif&#34; /&gt;
+
+&lt;/div&gt;
 &lt;p&gt;I am not 100% convinced this is the ultimate way to animate these data; the sectors of all regions - bar North America - are changing places making it hard to focus on the changes over time in one of them. A better visual might have the the sector axes fixed at their all time maximum throughout the animation, only allowing the chords to appear to be animated over the period. However, at the moment there is no option in the &lt;code&gt;chordDiagram&lt;/code&gt; to set the sector axis maximum values.&lt;/p&gt;
 &lt;/div&gt;
 </description>
@@ -270,10 +275,10 @@ d3&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Estimates of Global Bilateral Migration Flows by Gender between 1960 and 2015</title>
-      <link>/publication/global-migration-estimates-by-gender/</link>
+      <link>https://guyabel.com/publication/global-migration-estimates-by-gender/</link>
       <pubDate>Fri, 24 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>/publication/global-migration-estimates-by-gender/</guid>
+      <guid>https://guyabel.com/publication/global-migration-estimates-by-gender/</guid>
       <description>
 
 &lt;h2 id=&#34;further-notes&#34;&gt;Further Notes&lt;/h2&gt;
@@ -284,10 +289,10 @@ d3&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Chinese Internal Migration Flows 2010–2015 </title>
-      <link>/publication/china-internal-migration-2010-15/</link>
+      <link>https://guyabel.com/publication/china-internal-migration-2010-15/</link>
       <pubDate>Fri, 07 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>/publication/china-internal-migration-2010-15/</guid>
+      <guid>https://guyabel.com/publication/china-internal-migration-2010-15/</guid>
       <description>
 
 &lt;h2 id=&#34;further-notes&#34;&gt;Further Notes&lt;/h2&gt;
@@ -300,10 +305,10 @@ d3&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Climate Vulnerability and Human Migration in Global Perspective</title>
-      <link>/publication/global-climate-vulnerability-and-migration/</link>
+      <link>https://guyabel.com/publication/global-climate-vulnerability-and-migration/</link>
       <pubDate>Sun, 30 Apr 2017 00:00:00 +0000</pubDate>
       
-      <guid>/publication/global-climate-vulnerability-and-migration/</guid>
+      <guid>https://guyabel.com/publication/global-climate-vulnerability-and-migration/</guid>
       <description></description>
     </item>
     
