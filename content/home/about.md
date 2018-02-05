@@ -41,5 +41,5 @@ I am an applied statistician based at the [Asian Demographic Research Institute]
 
 Previously I worked at the [Vienna Institute of Demography](http://www.oeaw.ac.at/vid/), the [ESRC Centre for Population Change](http://www.cpc.ac.uk/) and [S3RI](http://www.southampton.ac.uk/s3ri/) at the University of Southampton.
 
-My day-to-day research covers estimating migration and applying statistical methods to better forecast components of population change. This website contains posts mainly related to my research using [R](./tags/r/), [BUGS and JAGS](./tags/bayesian/), as well as some information on my [publications](./publication). It is a successor to my [WordPress](http://gjabel.wordpress.com/) website which was blocked in China - all wordpress.com sites are blocked in China. 
+My day-to-day research covers estimating migration and applying statistical methods to better forecast components of population change. This website contains posts mainly related to my research using [R](./tags/r/), [BUGS and JAGS](./tags/bayesian/), as well as some information on my [publications](./publication). It is a successor to my [WordPress](http://gjabel.wordpress.com/) website which was sporadically blocked in China - something that happens to many wordpress.com sites in China. 
 
