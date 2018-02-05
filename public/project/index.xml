@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Projects on Guy Abel</title>
-    <link>https://guyabel.com/project/</link>
+    <link>/project/</link>
     <description>Recent content in Projects on Guy Abel</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -12,28 +12,28 @@
     
     <item>
       <title>ARDI International Migration Pillar</title>
-      <link>https://guyabel.com/project/adri-pillar/</link>
+      <link>/project/adri-pillar/</link>
       <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://guyabel.com/project/adri-pillar/</guid>
+      <guid>/project/adri-pillar/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Combining Migration Data</title>
-      <link>https://guyabel.com/project/combining-migration-data/</link>
+      <link>/project/combining-migration-data/</link>
       <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://guyabel.com/project/combining-migration-data/</guid>
+      <guid>/project/combining-migration-data/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Global Migration Predictions</title>
-      <link>https://guyabel.com/project/global-migration-prediction/</link>
+      <link>/project/global-migration-prediction/</link>
       <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://guyabel.com/project/global-migration-prediction/</guid>
+      <guid>/project/global-migration-prediction/</guid>
       <description></description>
     </item>
     

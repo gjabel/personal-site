@@ -5,7 +5,7 @@
     
     <url>
     
-      <loc>https://guyabel.com/project/adri-pillar/</loc>
+      <loc>/project/adri-pillar/</loc>
       <lastmod>2018-02-01T00:00:00+00:00</lastmod>
     </url>
     
@@ -14,7 +14,7 @@
     
     <url>
     
-      <loc>https://guyabel.com/project/combining-migration-data/</loc>
+      <loc>/project/combining-migration-data/</loc>
       <lastmod>2018-02-01T00:00:00+00:00</lastmod>
     </url>
     
@@ -23,7 +23,7 @@
     
     <url>
     
-      <loc>https://guyabel.com/project/global-migration-prediction/</loc>
+      <loc>/project/global-migration-prediction/</loc>
       <lastmod>2018-02-01T00:00:00+00:00</lastmod>
     </url>
     
@@ -32,7 +32,7 @@
     
     <url>
     
-      <loc>https://guyabel.com/talk/anu-2018/</loc>
+      <loc>/talk/anu-2018/</loc>
       <lastmod>2018-02-01T00:00:00+08:00</lastmod>
     </url>
     
@@ -41,7 +41,16 @@
     
     <url>
     
-      <loc>https://guyabel.com/publication/</loc>
+      <loc>/post/animated-directional-chord-diagrams/</loc>
+      <lastmod>2018-01-10T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/publication/</loc>
       <lastmod>2018-01-01T00:00:00+00:00</lastmod>
     </url>
     
@@ -50,7 +59,7 @@
     
     <url>
     
-      <loc>https://guyabel.com/publication/global-migration-estimates-by-gender/</loc>
+      <loc>/publication/global-migration-estimates-by-gender/</loc>
       <lastmod>2017-11-24T00:00:00+00:00</lastmod>
     </url>
     
@@ -59,7 +68,7 @@
     
     <url>
     
-      <loc>https://guyabel.com/publication/china-internal-migration-2010-15/</loc>
+      <loc>/publication/china-internal-migration-2010-15/</loc>
       <lastmod>2017-07-07T00:00:00+00:00</lastmod>
     </url>
     
@@ -68,7 +77,7 @@
     
     <url>
     
-      <loc>https://guyabel.com/publication/global-climate-vulnerability-and-migration/</loc>
+      <loc>/publication/global-climate-vulnerability-and-migration/</loc>
       <lastmod>2017-04-30T00:00:00+00:00</lastmod>
     </url>
     
@@ -77,7 +86,7 @@
     
     <url>
     
-      <loc>https://guyabel.com/tags/academic/</loc>
+      <loc>/tags/academic/</loc>
       <lastmod>2017-01-01T00:00:00+00:00</lastmod>
     </url>
     
@@ -86,7 +95,7 @@
     
     <url>
     
-      <loc>https://guyabel.com/talk/</loc>
+      <loc>/talk/</loc>
       <lastmod>2017-01-01T00:00:00+00:00</lastmod>
     </url>
     
@@ -95,7 +104,7 @@
     
     <url>
     
-      <loc>https://guyabel.com/post/</loc>
+      <loc>/post/</loc>
       <lastmod>2017-01-01T00:00:00+08:00</lastmod>
     </url>
     
@@ -104,7 +113,7 @@
     
     <url>
     
-      <loc>https://guyabel.com/publication_types/2/</loc>
+      <loc>/publication_types/2/</loc>
       <lastmod>2017-11-24T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -114,7 +123,7 @@
     
     <url>
     
-      <loc>https://guyabel.com/tags/bayesian/</loc>
+      <loc>/tags/bayesian/</loc>
       <lastmod>2018-02-01T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -124,7 +133,7 @@
     
     <url>
     
-      <loc>https://guyabel.com/categories/</loc>
+      <loc>/categories/</loc>
       <priority>0</priority>
     </url>
     
@@ -133,7 +142,7 @@
     
     <url>
     
-      <loc>https://guyabel.com/tags/estimation/</loc>
+      <loc>/tags/estimation/</loc>
       <lastmod>2018-02-01T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -143,7 +152,7 @@
     
     <url>
     
-      <loc>https://guyabel.com/</loc>
+      <loc>/</loc>
       <lastmod>2018-01-01T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -153,7 +162,7 @@
     
     <url>
     
-      <loc>https://guyabel.com/tags/migration/</loc>
+      <loc>/tags/migration/</loc>
       <lastmod>2018-02-01T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -163,7 +172,7 @@
     
     <url>
     
-      <loc>https://guyabel.com/tags/prediction/</loc>
+      <loc>/tags/prediction/</loc>
       <lastmod>2018-02-01T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -173,7 +182,7 @@
     
     <url>
     
-      <loc>https://guyabel.com/project/</loc>
+      <loc>/project/</loc>
       <lastmod>2018-02-01T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -183,7 +192,7 @@
     
     <url>
     
-      <loc>https://guyabel.com/publication_types/</loc>
+      <loc>/publication_types/</loc>
       <lastmod>2017-11-24T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -193,7 +202,17 @@
     
     <url>
     
-      <loc>https://guyabel.com/tags/</loc>
+      <loc>/tags/r/</loc>
+      <lastmod>2018-01-10T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/tags/</loc>
       <lastmod>2017-01-01T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>

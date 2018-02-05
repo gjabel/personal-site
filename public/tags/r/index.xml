@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>R on Guy Abel</title>
-    <link>https://guyabel.com/tags/r/</link>
+    <link>/tags/r/</link>
     <description>Recent content in R on Guy Abel</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -12,10 +12,10 @@
     
     <item>
       <title>Animated Directional Chord Diagrams</title>
-      <link>https://guyabel.com/post/animated-directional-chord-diagrams/</link>
+      <link>/post/animated-directional-chord-diagrams/</link>
       <pubDate>Wed, 10 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://guyabel.com/post/animated-directional-chord-diagrams/</guid>
+      <guid>/post/animated-directional-chord-diagrams/</guid>
       <description>&lt;div id=&#34;background&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Background&lt;/h2&gt;
 &lt;p&gt;A little while ago my paper in &lt;em&gt;International Migration Review&lt;/em&gt; on global migration flow estimates came out &lt;a href=&#34;http://guyabel.com/publication/global-migration-estimates-by-gender/&#34;&gt;online&lt;/a&gt;. The paper includes a number of directional chord diagrams to visualize the estimates.&lt;/p&gt;
@@ -179,7 +179,7 @@ img1 &amp;lt;- image_scale(image = img, geometry = &amp;quot;800x800&amp;quot;)
 
 ani0 &amp;lt;- image_animate(image = img1, fps = 10)
 image_write(image = ani0, path = &amp;quot;./plot_gif/ani1.gif&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;This gives an output much like this minus the information around the sides: &lt;img src=&#34;https://guyabel.com/img/abel-ani10-gf.gif&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;This gives an output much like this minus the information around the sides: &lt;img src=&#34;/img/abel-ani10-gf.gif&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;(might take a few seconds to fully load)&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;fixing-scales-in-chord-diagrams&#34; class=&#34;section level2&#34;&gt;
@@ -229,7 +229,7 @@ d3&lt;/code&gt;&lt;/pre&gt;
            points.overflow.warning = FALSE)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Once the for loop has produced a new set of images, the same code to produce the GIF file that illustrates the changes in migration flows where the gaps between the regions change to enable the scales on the axis to remained fixed over time…&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;https://guyabel.com/img/abel-ani10-gf-fix.gif&#34; /&gt;
+&lt;img src=&#34;/img/abel-ani10-gf-fix.gif&#34; /&gt;
 
 &lt;/div&gt;
 &lt;p&gt;I am not 100% convinced this is the ultimate way to animate these data; the sectors of all regions - bar North America - are changing places making it hard to focus on the changes over time in one of them. A better visual might have the the sector axes fixed at their all time maximum throughout the animation, only allowing the chords to appear to be animated over the period. However, at the moment there is no option in the &lt;code&gt;chordDiagram&lt;/code&gt; to set the sector axis maximum values.&lt;/p&gt;
