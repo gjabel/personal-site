@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Recent &amp; Upcoming Talks on Guy Abel</title>
-    <link>https://guyabel.com/talk/</link>
+    <link>/talk/</link>
     <description>Recent content in Recent &amp; Upcoming Talks on Guy Abel</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -12,10 +12,10 @@
     
     <item>
       <title>Gender, Education and Marital Status Differentials in Migration</title>
-      <link>https://guyabel.com/talk/anu-2018/</link>
+      <link>/talk/anu-2018/</link>
       <pubDate>Thu, 01 Feb 2018 00:00:00 +0800</pubDate>
       
-      <guid>https://guyabel.com/talk/anu-2018/</guid>
+      <guid>/talk/anu-2018/</guid>
       <description></description>
     </item>
     
