@@ -11,45 +11,9 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>ARDI International Migration Pillar</title>
-      <link>/project/adri-pillar/</link>
-      <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/project/adri-pillar/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Combining Migration Data</title>
-      <link>/project/combining-migration-data/</link>
-      <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/project/combining-migration-data/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Global Migration Predictions</title>
-      <link>/project/global-migration-prediction/</link>
-      <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/project/global-migration-prediction/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Gender, Education and Marital Status Differentials in Migration</title>
-      <link>/talk/anu-2018/</link>
-      <pubDate>Thu, 01 Feb 2018 00:00:00 +0800</pubDate>
-      
-      <guid>/talk/anu-2018/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Animated Directional Chord Diagrams</title>
       <link>/post/animated-directional-chord-diagrams/</link>
-      <pubDate>Wed, 10 Jan 2018 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 10 Feb 2018 00:00:00 +0000</pubDate>
       
       <guid>/post/animated-directional-chord-diagrams/</guid>
       <description>&lt;div id=&#34;background&#34; class=&#34;section level2&#34;&gt;
@@ -271,6 +235,42 @@ d3&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;I am not 100% convinced this is the ultimate way to animate these data; the sectors of all regions - bar North America - are changing places making it hard to focus on the changes over time in one of them. A better visual might have the the sector axes fixed at their all time maximum throughout the animation, only allowing the chords to appear to be animated over the period. However, at the moment there is no option in the &lt;code&gt;chordDiagram&lt;/code&gt; to set the sector axis maximum values.&lt;/p&gt;
 &lt;/div&gt;
 </description>
+    </item>
+    
+    <item>
+      <title>ARDI International Migration Pillar</title>
+      <link>/project/adri-pillar/</link>
+      <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/project/adri-pillar/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Combining Migration Data</title>
+      <link>/project/combining-migration-data/</link>
+      <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/project/combining-migration-data/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Global Migration Predictions</title>
+      <link>/project/global-migration-prediction/</link>
+      <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/project/global-migration-prediction/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gender, Education and Marital Status Differentials in Migration</title>
+      <link>/talk/anu-2018/</link>
+      <pubDate>Thu, 01 Feb 2018 00:00:00 +0800</pubDate>
+      
+      <guid>/talk/anu-2018/</guid>
+      <description></description>
     </item>
     
     <item>
