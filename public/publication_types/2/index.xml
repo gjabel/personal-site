@@ -8,7 +8,9 @@
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
     <lastBuildDate>Fri, 24 Nov 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/publication_types/2/" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="/publication_types/2/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Estimates of Global Bilateral Migration Flows by Gender between 1960 and 2015</title>
@@ -16,12 +18,7 @@
       <pubDate>Fri, 24 Nov 2017 00:00:00 +0000</pubDate>
       
       <guid>/publication/global-migration-estimates-by-gender/</guid>
-      <description>
-
-&lt;h2 id=&#34;further-notes&#34;&gt;Further Notes&lt;/h2&gt;
-
-&lt;p&gt;Please contact me if cannot access the full paper and would like a copy.&lt;/p&gt;
-</description>
+      <description>Further Notes Please contact me if cannot access the full paper and would like a copy.</description>
     </item>
     
     <item>
@@ -30,14 +27,8 @@
       <pubDate>Fri, 07 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>/publication/china-internal-migration-2010-15/</guid>
-      <description>
-
-&lt;h2 id=&#34;further-notes&#34;&gt;Further Notes&lt;/h2&gt;
-
-&lt;p&gt;Please contact me if you would like the R code to produce the plot (bot the English and Chinese version).&lt;/p&gt;
-
-&lt;p&gt;Here is an additional WeChat &lt;a href=&#34;http://mp.weixin.qq.com/s/gmv5iiJ5L-uNyI6vlGOhQA&#34; target=&#34;_blank&#34;&gt;post&lt;/a&gt; on the paper (in Chinese) written by Qi Wei.&lt;/p&gt;
-</description>
+      <description>Further Notes Please contact me if you would like the R code to produce the plot (bot the English and Chinese version).
+Here is an additional WeChat post on the paper (in Chinese) written by Qi Wei.</description>
     </item>
     
     <item>
