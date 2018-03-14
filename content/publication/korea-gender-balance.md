@@ -1,9 +1,9 @@
 +++
-title = "Chinese Internal Migration Flows 2010–2015 "
-date = "2017-07-07"
+title = "Subnational gender balances in South Korea"
+date = "2018-02-06"
 
 # Authors. Comma separated list, e.g. `["Bob Smith", "David Jones"]`.
-authors = ["Qi Wei", "Guy J. Abel", "Raya Muttarak", "Shenghe Liu"]
+authors = ["Guy J. Abel", "Nayoung Heo"]
 
 # Publication type.
 # Legend:
@@ -17,17 +17,17 @@ authors = ["Qi Wei", "Guy J. Abel", "Raya Muttarak", "Shenghe Liu"]
 publication_types = ["2"]
 
 # Publication name and optional abbreviated version.
-publication = "In *Environment and Planning A*, 49(11)."
+publication = "In *Environment and Planning A: Economy and Space*, Forthcoming."
 publication_short = ""
 
 # Abstract and optional shortened version.
-abstract = "We adapted the chord diagram plot to visualize China’s recent inter-provincial migration during 2010–2015. The arrowheads were added to present the direction of the flows. This method allows us to show the complete migration flows between 31 provinces in China including the direction and volume of the flows. The spatial component was also clearly depicted in the plot using four color palates representing four regions in China (i.e. East, Center, West, Northeast) and arranging the 31 provinces in an approximate geographic order. Besides that, we extend the chord diagram plot to describe China’s bilateral net migration during 2010–2015."
+abstract = "Within one generation, the South Korean economy developed from one of the poorest countries in the world during the 1950s to a developed, high-income country by the end of the 1990s. During the latter part of this period, South Korea (hereafter called Korea) experienced rapid demographic change characterized by a steep decline in fertility levels and abnormally high sex ratios at birth. Unlike other East and South-East Asian countries that underwent similar economic and demographic changes, Korea has witnessed a steady decline in the sex ratios at birth since the end of 1990s through 2000s. In this paper, we visualize the current spatial distribution of population born during the peak years of sex ratios at birth."
 
 # Featured image thumbnail (optional)
 image_preview = ""
 
 # Is this a selected publication? (true/false)
-selected = true
+selected = false
 
 # Projects (optional).
 #   Associate this publication with one or more of your projects.
@@ -35,7 +35,7 @@ selected = true
 # projects = ["example-external-project"]
 
 # Links (optional).
-url_pdf = "http://journals.sagepub.com/eprint/tp9NT8fX7QAfnm4NUcGM/full"
+url_pdf = "http://journals.sagepub.com/doi/pdf/10.1177/0308518X18756640"
 url_preprint = ""
 url_code = ""
 url_dataset = ""
@@ -58,13 +58,8 @@ highlight = true
 # Featured image
 # Place your image in the `static/img/` folder and reference its filename below, e.g. `image = "example.jpg"`.
 [header]
-image = "headers/chinamigvis1.png"
-caption = "2010-15 Migration Flows"
+# image = "headers/koreamigvis1.png"
+# caption = "2016 Migration Flows"
 
 +++
 
-## Further Notes
-
-Please contact me if you would like the R code to produce the plot (both the English and Chinese version).
-
-Here is an additional WeChat [post](http://mp.weixin.qq.com/s/gmv5iiJ5L-uNyI6vlGOhQA) on the paper (in Chinese) written by Qi Wei.

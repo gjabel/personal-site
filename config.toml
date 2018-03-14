@@ -61,7 +61,7 @@ defaultContentLanguageInSubdir = false
   organizations = [ { name = "Shanghai University", url = "http://adri.shu.edu.cn/" } , { name = "IIASA World Population Program", url = "http://www.iiasa.ac.at/web/home/research/researchPrograms/WorldPopulation/Introduction.html" } ]
 
   gravatar = false  # Get your avatar from Gravatar.com? (true/false)
-  avatar = "portrait.jpg"  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
+  #avatar = "portrait.jpg"  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
   email = "guy.abel@shu.edu.cn"
   address = "Office 543, School of Sociology and Political Science, Shanghai University, 99 Shangda Road, Baoshan District, Shanghai. 上海市宝山区上大路99号上海大学东区社会学院大楼543"
   office_hours = "Office Hours by Appointment"
