@@ -421,7 +421,7 @@ d2</code></pre>
 </div>
 <div id="plots-for-each-frame" class="section level2">
 <h2>Plots for Each Frame</h2>
-<p>Now the data is in the correct format, you can use a <code>for</code> loop to cycle through the tweend data to produce chord diagram plots for each frame. The arguments I used here followed pretty much the same as those explained in the <code>migest</code> <a href="https://github.com/gjabel/migest/blob/master/demo/cfplot_reg2.R">demo</a> where I give lots of details for argument settings.</p>
+<p>Now the data is in the correct format, you can use a <code>for</code> loop to cycle through the tweend data to produce chord diagram plots for each frame. The argument settings I used here followed pretty much the same as those explained in the comments of the <code>migest</code> <a href="https://github.com/gjabel/migest/blob/master/demo/cfplot_reg2.R">demo</a>.</p>
 <pre class="r"><code># create a directory to store the individual plots
 dir.create(&quot;./plot-gif/&quot;)
 
@@ -442,8 +442,7 @@ for(f in unique(d2$.frame)){
                grid.col = d1$col1, annotationTrack = &quot;grid&quot;,
                transparency = 0.25,  annotationTrackHeight = c(0.05, 0.1),
                direction.type = c(&quot;diffHeight&quot;, &quot;arrows&quot;), link.arr.type = &quot;big.arrow&quot;,
-               diffHeight  = -0.04, link.sort = TRUE, link.largest.ontop = TRUE,
-               col = filter(d2, .frame == f)$chord_col)
+               diffHeight  = -0.04, link.sort = TRUE, link.largest.ontop = TRUE)
   
   # add labels and axis
   circos.trackPlotRegion(track.index = 1, bg.border = NA, panel.fun = function(x, y) {
@@ -481,16 +480,16 @@ for(f in unique(d2$.frame)[-1]){
   message(f)
 }
 
-img1 &lt;- image_scale(image = img, geometry = &quot;800x800&quot;)
+img1 &lt;- image_scale(image = img, geometry = &quot;720x720&quot;)
 
 ani0 &lt;- image_animate(image = img1, fps = 10)
 image_write(image = ani0, path = &quot;./plot_gif/ani1.gif&quot;)</code></pre>
-<p>This gives an output much like this minus the information around the sides: <img src="/img/abel-ani10-gf.gif" /></p>
+<p>This gives an output much like this minus the additional details in the corners: <img src="/img/abel-ani10-gf-dist.gif" /></p>
 <p>(might take a few seconds to fully load)</p>
 </div>
 <div id="fixing-scales-in-chord-diagrams" class="section level2">
 <h2>Fixing Scales in Chord Diagrams</h2>
-<p>Whilst the plot above allows comparisons of the distributions of flows overtime it is more difficult to compare volumes. For such comparisons, Zuguang <a href="http://zuguang.de/circlize_book/book/advanced-usage-of-chorddiagram.html#compare-two-chord-diagrams">recommends</a> scaling the gaps between the sectors on the outside of the chord diagram. I wrote a little function that can do this for flow data arranged in a tidy format;</p>
+<p>Whilst the plot above allows comparisons of the distributions of flows overtime it is more difficult to compare volumes. For such comparisons, Zuguang <a href="http://zuguang.de/circlize_book/book/advanced-usage-of-chorddiagram.html#compare-two-chord-diagrams">suggests</a> scaling the gaps between the sectors on the outside of the chord diagram. I wrote a little function that can do this for flow data arranged in a tidy format;</p>
 <pre class="r"><code>scale_gap &lt;- function(flow_m, flow_max, gap_at_max = 1, gaps = NULL) {
   p &lt;- flow_m / flow_max
   if(length(gap_at_max) == 1 &amp; !is.null(gaps)) {
@@ -533,12 +532,50 @@ d3</code></pre>
 <pre class="r"><code>circos.par(start.degree = 90, track.margin = c(-0.1, 0.1),
            gap.degree = filter(d3, .frame == f)$gaps, 
            points.overflow.warning = FALSE)</code></pre>
-<p>Once the for loop has produced a new set of images, the same code to produce the GIF file that illustrates the changes in migration flows where the gaps between the regions change to enable the scales on the axis to remained fixed over time…</p>
+<p>Once the for loop has produced a new set of images, the same code to produce the GIF file can be run to obtain the animated chord diagrams with changing gaps;</p>
+<div class="figure">
+<img src="/img/abel-ani10-gf-gap.gif" />
+
+</div>
+<p>I am not convinced that this is the best way to compare volumes of chord diagrams when using animations. The sectors of all regions - bar North America - are changing places making it hard follow their changes over time.</p>
+<p>Fortunately there is new <code>xlim</code> option in <code>chordDiagram</code> that can be used to fix then lengths of the x-axis for each sector using a named vector. In the context of producing an animation, the historic maximum migration flows (of combined immigration and emigration flows) in each region could be used. These can be calculated as</p>
+<pre class="r"><code>library(magrittr)
+
+reg_max &lt;- d2 %&gt;%
+  group_by(.frame, orig_reg) %&gt;%
+  mutate(tot_out = sum(flow)) %&gt;%
+  group_by(.frame, dest_reg) %&gt;%
+  mutate(tot_in = sum(flow)) %&gt;%
+  filter(orig_reg == dest_reg) %&gt;%
+  mutate(tot = tot_in + tot_out) %&gt;%
+  mutate(reg = orig_reg) %&gt;%
+  group_by(reg) %&gt;%
+  summarise(tot_max = max(tot)) %$%
+  &#39;names&lt;-&#39;(tot_max, reg)
+
+reg_max</code></pre>
+<pre><code>##                        Africa                  Eastern Asia 
+##                     17.429942                     14.805479 
+## Eastern Europe &amp; Central Asia                        Europe 
+##                      8.361300                     15.536978 
+##     Latin America &amp; Caribbean              Northern America 
+##                      7.697638                     10.416927 
+##                       Oceania                 Southern Asia 
+##                      2.968412                     15.067631 
+##                  Western Asia 
+##                     15.072561</code></pre>
+<p>The <code>reg_max</code> object can then be used in the <code>chordDiagram</code> function call in the <code>for</code> loop above, replacing the original call with</p>
+<pre class="r"><code>chordDiagram(x = filter(d2, .frame == f), directional = 1, order = d1$region,
+             grid.col = d1$col1, annotationTrack = &quot;grid&quot;,
+             transparency = 0.25,  annotationTrackHeight = c(0.05, 0.1),
+             direction.type = c(&quot;diffHeight&quot;, &quot;arrows&quot;), link.arr.type = &quot;big.arrow&quot;,
+             diffHeight  = -0.04, link.sort = TRUE, link.largest.ontop = TRUE, 
+             xlim = reg_max)</code></pre>
+<p>Running the complete code - the adapted <code>for</code> loop to produce the images and then the <code>magick</code> functions to compile the GIF - results in the following animation:</p>
 <div class="figure">
 <img src="/img/abel-ani10-gf-fix.gif" />
 
 </div>
-<p>I am not 100% convinced this is the ultimate way to animate these data; the sectors of all regions - bar North America - are changing places making it hard to focus on the changes over time in one of them. A better visual might have the the sector axes fixed at their all time maximum throughout the animation, only allowing the chords to appear to be animated over the period. However, at the moment there is no option in the <code>chordDiagram</code> to set the sector axis maximum values.</p>
 </div>
 
       </div>

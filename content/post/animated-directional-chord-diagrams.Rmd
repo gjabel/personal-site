@@ -68,7 +68,7 @@ d2
 
 ## Plots for Each Frame
 
-Now the data is in the correct format, you can use a `for` loop to cycle through the tweend data to produce chord diagram plots for each frame. The arguments I used here followed pretty much the same as those explained in the `migest` [demo](https://github.com/gjabel/migest/blob/master/demo/cfplot_reg2.R) where I give lots of details for argument settings.
+Now the data is in the correct format, you can use a `for` loop to cycle through the tweend data to produce chord diagram plots for each frame. The argument settings I used here followed pretty much the same as those explained in the comments of the `migest` [demo](https://github.com/gjabel/migest/blob/master/demo/cfplot_reg2.R).
 
 ```{r, message=FALSE, eval=FALSE}
 # create a directory to store the individual plots
@@ -91,8 +91,7 @@ for(f in unique(d2$.frame)){
                grid.col = d1$col1, annotationTrack = "grid",
                transparency = 0.25,  annotationTrackHeight = c(0.05, 0.1),
                direction.type = c("diffHeight", "arrows"), link.arr.type = "big.arrow",
-               diffHeight  = -0.04, link.sort = TRUE, link.largest.ontop = TRUE,
-               col = filter(d2, .frame == f)$chord_col)
+               diffHeight  = -0.04, link.sort = TRUE, link.largest.ontop = TRUE)
   
   # add labels and axis
   circos.trackPlotRegion(track.index = 1, bg.border = NA, panel.fun = function(x, y) {
@@ -132,20 +131,20 @@ for(f in unique(d2$.frame)[-1]){
   message(f)
 }
 
-img1 <- image_scale(image = img, geometry = "800x800")
+img1 <- image_scale(image = img, geometry = "720x720")
 
 ani0 <- image_animate(image = img1, fps = 10)
 image_write(image = ani0, path = "./plot_gif/ani1.gif")
 ```
 
-This gives an output much like this minus the information around the sides:
-![ ](/img/abel-ani10-gf.gif)
+This gives an output much like this minus the additional details in the corners:
+![ ](/img/abel-ani10-gf-dist.gif)
 
 (might take a few seconds to fully load)
 
 ## Fixing Scales in Chord Diagrams
 
-Whilst the plot above allows comparisons of the distributions of flows overtime it is more difficult to compare volumes. For such comparisons, Zuguang [recommends](http://zuguang.de/circlize_book/book/advanced-usage-of-chorddiagram.html#compare-two-chord-diagrams) scaling the gaps between the sectors on the outside of the chord diagram. I wrote a little function that can do this for flow data arranged in a tidy format;
+Whilst the plot above allows comparisons of the distributions of flows overtime it is more difficult to compare volumes. For such comparisons, Zuguang [suggests](http://zuguang.de/circlize_book/book/advanced-usage-of-chorddiagram.html#compare-two-chord-diagrams) scaling the gaps between the sectors on the outside of the chord diagram. I wrote a little function that can do this for flow data arranged in a tidy format;
 
 ```{r}
 scale_gap <- function(flow_m, flow_max, gap_at_max = 1, gaps = NULL) {
@@ -185,8 +184,45 @@ circos.par(start.degree = 90, track.margin = c(-0.1, 0.1),
            points.overflow.warning = FALSE)
 ```
 
-Once the for loop has produced a new set of images, the same code to produce the GIF file that illustrates the changes in migration flows where the gaps between the regions change to enable the scales on the axis to remained fixed over time...
+Once the for loop has produced a new set of images, the same code to produce the GIF file can be run to obtain the animated chord diagrams with changing gaps;
+
+![ ](/img/abel-ani10-gf-gap.gif)
+
+I am not convinced that this is the best way to compare volumes of chord diagrams when using animations. The sectors of all regions - bar North America - are changing places making it hard follow their changes over time. 
+
+Fortunately there is new `xlim` option in `chordDiagram` that can be used to fix then lengths of the x-axis for each sector using a named vector. In the context of producing an animation, the historic maximum migration flows (of combined immigration and emigration flows) in each region could be used. These can be calculated as 
+
+```{r, message=FALSE}
+library(magrittr)
+
+reg_max <- d2 %>%
+  group_by(.frame, orig_reg) %>%
+  mutate(tot_out = sum(flow)) %>%
+  group_by(.frame, dest_reg) %>%
+  mutate(tot_in = sum(flow)) %>%
+  filter(orig_reg == dest_reg) %>%
+  mutate(tot = tot_in + tot_out) %>%
+  mutate(reg = orig_reg) %>%
+  group_by(reg) %>%
+  summarise(tot_max = max(tot)) %$%
+  'names<-'(tot_max, reg)
+
+reg_max
+```
+
+The `reg_max` object can then be used in the `chordDiagram` function call in the `for` loop above, replacing the original call with 
+
+```{r, message=FALSE, eval=FALSE}
+chordDiagram(x = filter(d2, .frame == f), directional = 1, order = d1$region,
+             grid.col = d1$col1, annotationTrack = "grid",
+             transparency = 0.25,  annotationTrackHeight = c(0.05, 0.1),
+             direction.type = c("diffHeight", "arrows"), link.arr.type = "big.arrow",
+             diffHeight  = -0.04, link.sort = TRUE, link.largest.ontop = TRUE, 
+             xlim = reg_max)
+
+```
+
+Running the complete code - the adapted `for` loop to produce the images and then the `magick` functions to compile the GIF - results in the following animation:
 
 ![ ](/img/abel-ani10-gf-fix.gif)
 
-I am not 100% convinced this is the ultimate way to animate these data; the sectors of all regions - bar North America - are changing places making it hard to focus on the changes over time in one of them. A better visual might have the the sector axes fixed at their all time maximum throughout the animation, only allowing the chords to appear to be animated over the period. However, at the moment there is no option in the `chordDiagram` to set the sector axis maximum values.
