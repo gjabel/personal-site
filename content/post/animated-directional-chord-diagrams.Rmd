@@ -186,7 +186,7 @@ Once the for loop has produced a new set of images, the same code to produce the
 
 ![ ](/img/abel-ani10-gf-gap.gif)
 
-Whilst the x-axis scales in each sector are now using fixed units I am not convinced that this is the best way to compare volumes for animated chord diagrams. The sectors of all regions - bar Northern America - are changing places making it hard follow their changes over time. 
+Whilst the sector axes are now fixed, I am not convinced that changing the relative gaps is the best way to compare volumes when using animated chord diagrams. The sectors of all regions - bar Northern America - are rotating making it hard follow their changes over time. 
 
 Fortunately there is new `xlim` option in `chordDiagram` that can be used to fix the lengths of the x-axis for each sector using a named vector. In the context of producing an animation, the historic maximum migration flows (of combined immigration and emigration flows) in each region can be used, calculated from the original data `d0`
 
@@ -202,8 +202,8 @@ reg_max <- d0 %>%
   mutate(tot = tot_in + tot_out) %>%
   mutate(reg = orig_reg) %>%
   group_by(reg) %>%
-  summarise(tot_max = max(tot)/1e06) %>%
-  {'names<-'(.$tot_max, .$reg)}
+  summarise(tot_max = max(tot)/1e06) %$%
+  'names<-'(tot_max, reg)
 
 reg_max
 ```

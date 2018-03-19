@@ -536,7 +536,7 @@ d3</code></pre>
 <img src="/img/abel-ani10-gf-gap.gif" />
 
 </div>
-<p>Whilst the x-axis scales in each sector are now using fixed units I am not convinced that this is the best way to compare volumes for animated chord diagrams. The sectors of all regions - bar Northern America - are changing places making it hard follow their changes over time.</p>
+<p>Whilst the sector axes are now fixed, I am not convinced that changing the relative gaps is the best way to compare volumes when using animated chord diagrams. The sectors of all regions - bar Northern America - are rotating making it hard follow their changes over time.</p>
 <p>Fortunately there is new <code>xlim</code> option in <code>chordDiagram</code> that can be used to fix the lengths of the x-axis for each sector using a named vector. In the context of producing an animation, the historic maximum migration flows (of combined immigration and emigration flows) in each region can be used, calculated from the original data <code>d0</code></p>
 <pre class="r"><code>library(magrittr)
 
@@ -549,8 +549,8 @@ reg_max &lt;- d0 %&gt;%
   mutate(tot = tot_in + tot_out) %&gt;%
   mutate(reg = orig_reg) %&gt;%
   group_by(reg) %&gt;%
-  summarise(tot_max = max(tot)/1e06) %&gt;%
-  {&#39;names&lt;-&#39;(.$tot_max, .$reg)}
+  summarise(tot_max = max(tot)/1e06) %$%
+  &#39;names&lt;-&#39;(tot_max, reg)
 
 reg_max</code></pre>
 <pre><code>##                        Africa                  Eastern Asia 
