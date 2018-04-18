@@ -8,7 +8,9 @@
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
     <lastBuildDate>Tue, 06 Feb 2018 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/publication_types/2/" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://guyabel.com/publication_types/2/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Subnational gender balances in South Korea</title>
@@ -25,12 +27,7 @@
       <pubDate>Thu, 18 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>https://guyabel.com/publication/korea-internal-migration-1970-2016/</guid>
-      <description>
-
-&lt;h2 id=&#34;further-notes&#34;&gt;Further Notes&lt;/h2&gt;
-
-&lt;p&gt;Please contact me if you would like the R code to produce the plot.&lt;/p&gt;
-</description>
+      <description>Further Notes Please contact me if you would like the R code to produce the plot.</description>
     </item>
     
     <item>
@@ -39,12 +36,7 @@
       <pubDate>Fri, 24 Nov 2017 00:00:00 +0000</pubDate>
       
       <guid>https://guyabel.com/publication/global-migration-estimates-by-gender/</guid>
-      <description>
-
-&lt;h2 id=&#34;further-notes&#34;&gt;Further Notes&lt;/h2&gt;
-
-&lt;p&gt;Please contact me if cannot access the full paper and would like a copy.&lt;/p&gt;
-</description>
+      <description>Further Notes Please contact me if cannot access the full paper and would like a copy.</description>
     </item>
     
     <item>
@@ -53,14 +45,8 @@
       <pubDate>Fri, 07 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>https://guyabel.com/publication/china-internal-migration-2010-15/</guid>
-      <description>
-
-&lt;h2 id=&#34;further-notes&#34;&gt;Further Notes&lt;/h2&gt;
-
-&lt;p&gt;Please contact me if you would like the R code to produce the plot (both the English and Chinese version).&lt;/p&gt;
-
-&lt;p&gt;Here is an additional WeChat &lt;a href=&#34;http://mp.weixin.qq.com/s/gmv5iiJ5L-uNyI6vlGOhQA&#34; target=&#34;_blank&#34;&gt;post&lt;/a&gt; on the paper (in Chinese) written by Qi Wei.&lt;/p&gt;
-</description>
+      <description>Further Notes Please contact me if you would like the R code to produce the plot (both the English and Chinese version).
+Here is an additional WeChat post on the paper (in Chinese) written by Qi Wei.</description>
     </item>
     
     <item>

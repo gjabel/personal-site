@@ -7,8 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0800</lastBuildDate>
-    <atom:link href="/post/" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0100</lastBuildDate>
+    
+	<atom:link href="https://guyabel.com/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Animated Directional Chord Diagrams</title>
+      <link>https://guyabel.com/post/animated-directional-chord-diagrams/</link>
+      <pubDate>Wed, 18 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://guyabel.com/post/animated-directional-chord-diagrams/</guid>
+      <description>BackgroundA little while ago my paper in International Migration Review on global migration flow estimates came out online. The paper includes a number of directional chord diagrams to visualize the estimates.
+Recently I have been playing around tweenr and the magick packages for animated population pyramids. In this post I attempt to show how to use these packages to produce animated directional chord diagrams of global migration flow estimates</description>
+    </item>
     
   </channel>
 </rss>

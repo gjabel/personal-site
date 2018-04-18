@@ -8,7 +8,9 @@
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
     <lastBuildDate>Thu, 01 Feb 2018 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/tags/migration/" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://guyabel.com/tags/migration/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>ARDI International Migration Pillar</title>

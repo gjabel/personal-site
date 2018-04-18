@@ -1,9 +1,9 @@
 ---
 title: "Animated Directional Chord Diagrams"
 author: "Guy Abel"
-date: "2018-02-10"
+date: "2018-04-18"
 tags: ["R"]
-draft: true
+draft: false
 ---
 
 ```{r setup, include=FALSE}
@@ -142,7 +142,7 @@ This gives an output much like this minus the additional details in the corners:
 
 ## Fixing Scales in Chord Diagrams
 
-Whilst the plot above allows comparisons of the distributions of flows overtime it is more difficult to compare volumes. For such comparisons, Zuguang [suggests](http://zuguang.de/circlize_book/book/advanced-usage-of-chorddiagram.html#compare-two-chord-diagrams) scaling the gaps between the sectors on the outside of the chord diagram. I wrote a little function that can do this for flow data arranged in a tidy format;
+Whilst the plot above allows comparisons of the distributions of flows overtime it is more difficult to compare volumes. For such comparisons, Zuguang Gu [suggests](http://zuguang.de/circlize_book/book/advanced-usage-of-chorddiagram.html#compare-two-chord-diagrams) scaling the gaps between the sectors on the outside of the chord diagram. I wrote a little function that can do this for flow data arranged in a tidy format;
 
 ```{r}
 scale_gap <- function(flow_m, flow_max, gap_at_max = 1, gaps = NULL) {
@@ -188,7 +188,7 @@ Once the for loop has produced a new set of images, the same code to produce the
 
 Whilst the sector axes are now fixed, I am not convinced that changing the relative gaps is the best way to compare volumes when using animated chord diagrams. The sectors of all regions - bar Northern America - are rotating making it hard follow their changes over time. 
 
-Fortunately there is new `xlim` option in `chordDiagram` that can be used to fix the lengths of the x-axis for each sector using a named vector. In the context of producing an animation, the historic maximum migration flows (of combined immigration and emigration flows) in each region can be used, calculated from the original data `d0`
+Fortunately there is new `xmax` option in `chordDiagram` that can be used to fix the lengths of the x-axis for each sector using a named vector. In the context of producing an animation, the historic maximum migration flows (of combined immigration and emigration flows) in each region can be used, calculated from the original data `d0`
 
 ```{r, message=FALSE}
 library(magrittr)
@@ -216,7 +216,7 @@ chordDiagram(x = filter(d2, .frame == f), directional = 1, order = d1$region,
              transparency = 0.25,  annotationTrackHeight = c(0.05, 0.1),
              direction.type = c("diffHeight", "arrows"), link.arr.type = "big.arrow",
              diffHeight  = -0.04, link.sort = TRUE, link.largest.ontop = TRUE, 
-             xlim = reg_max)
+             xmax = reg_max)
 
 ```
 
