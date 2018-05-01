@@ -3,6 +3,8 @@ title: "Animated Directional Chord Diagrams"
 author: "Guy Abel"
 date: "2018-04-18"
 tags: ["R"]
+categories: 
+  - "r-bloggers"
 draft: false
 ---
 
@@ -105,7 +107,7 @@ d2</code></pre>
 </div>
 <div id="plots-for-each-frame" class="section level2">
 <h2>Plots for Each Frame</h2>
-<p>Now the data is in the correct format, chord diagrams can be produced for each frame of the eventual GIF. To do this, I used a <code>for</code> loop to cycle through the tweend data. The arguments I used in the <code>circos.par</code>, <code>chordDiagram</code> and <code>circos.trackPlotRegion</code> functions to produce each plot are explained in more detail in the comments of the <code>migest</code> <a href="https://github.com/gjabel/migest/blob/master/demo/cfplot_reg2.R">demo</a>.</p>
+<p>Now the data is in the correct format, chord diagrams can be produced for each frame of the eventual GIF. To do this, I used a <code>for</code> loop to cycle through the tweend data. The arguments I used in the <code>circos.par</code>, <code>chordDiagram</code> and <code>circos.track</code> functions to produce each plot are explained in more detail in the comments of the <code>migest</code> <a href="https://github.com/gjabel/migest/blob/master/demo/cfplot_reg2.R">demo</a>.</p>
 <pre class="r"><code># create a directory to store the individual plots
 dir.create(&quot;./plot-gif/&quot;)
 
@@ -129,7 +131,7 @@ for(f in unique(d2$.frame)){
                diffHeight  = -0.04, link.sort = TRUE, link.largest.ontop = TRUE)
   
   # add labels and axis
-  circos.trackPlotRegion(track.index = 1, bg.border = NA, panel.fun = function(x, y) {
+  circos.track(track.index = 1, bg.border = NA, panel.fun = function(x, y) {
     xlim = get.cell.meta.data(&quot;xlim&quot;)
     sector.index = get.cell.meta.data(&quot;sector.index&quot;)
     reg1 = d1 %&gt;% filter(region == sector.index) %&gt;% pull(reg1)
@@ -138,9 +140,8 @@ for(f in unique(d2$.frame)){
     circos.text(x = mean(xlim), y = ifelse(is.na(reg2), 3, 4),
                 labels = reg1, facing = &quot;bending&quot;, cex = 1.1)
     circos.text(x = mean(xlim), y = 2.75, labels = reg2, facing = &quot;bending&quot;, cex = 1.1)
-    circos.axis(h = &quot;top&quot;, labels.away.percentage = 0.2, labels.niceFacing = FALSE, 
-                labels.cex = 0.8, minor.ticks = 1, 
-                major.at = seq(from = 0, to = xlim[2], by = ifelse(xlim[2]&gt;15, 4, 2)))
+    circos.axis(h = &quot;top&quot;, labels.cex = 0.8
+                labels.niceFacing = FALSE, labels.pos.adjust = FALSE)
   })
   
   # close plotting device
