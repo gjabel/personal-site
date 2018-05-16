@@ -440,7 +440,7 @@ for(i in 2:length(kits$img)){
   filter(str_detect(string = img_url, pattern = &quot;/Reading&quot;),
          !str_detect(string = img_url, pattern = &quot;unknown&quot;)) %&gt;%
   mutate(label = str_replace_all(string = label, pattern = &quot;[:alpha:]|\\s&quot;, replacement = &quot;&quot;))</code></pre>
-<p>I could then run the same code as above to srape the images, annotate the year and copyright information and build the GIF. I did have trouble creating a GIF’s when I more frames for morphing images between successive kits, such as <code>frames = 10</code>. I think the higher frame size might have been a problem with creating a GIF with too many frames or perhaps it was something to do with my PC. In any case, this is final output.</p>
+<p>I could then run the same code as above to srape the images, annotate the year and copyright information and build the GIF. I did have trouble creating a GIF’s when I more frames for morphing images between successive kits, such as <code>frames = 10</code>. I think the higher number of frames might have been a problem or perhaps it was something to do with my PC. In any case, this is final output.</p>
 <div class="figure">
 <img src="/img/abel-reading.gif" />
 

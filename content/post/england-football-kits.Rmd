@@ -157,7 +157,7 @@ d1 <- read_html("http://www.historicalkits.co.uk/Reading/Reading.htm") %>%
   mutate(label = str_replace_all(string = label, pattern = "[:alpha:]|\\s", replacement = ""))
 ```
 
-I could then run the same code as above to srape the images, annotate the year and copyright information and build the GIF. I did have trouble creating a GIF's when I more frames for morphing images between successive kits, such as `frames = 10`. I think the higher frame size might have been a problem with creating a GIF with too many frames or perhaps it was something to do with my PC. In any case, this is final output. 
+I could then run the same code as above to srape the images, annotate the year and copyright information and build the GIF. I did have trouble creating a GIF's when I more frames for morphing images between successive kits, such as `frames = 10`. I think the higher number of frames might have been a problem or perhaps it was something to do with my PC. In any case, this is final output. 
 
 ![ ](/img/abel-reading.gif)
 
