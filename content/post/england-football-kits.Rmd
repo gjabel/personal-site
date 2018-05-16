@@ -1,0 +1,164 @@
+---
+title: "Animating England Footbal Kits over Time using R"
+author: "Guy Abel"
+date: '2018-06-01'
+tags:
+- R
+draft: TRUE
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Background
+
+I am really loving the [magick](https://cran.r-project.org/web/packages/magick/) package at the moment. Reading through the [vignette](https://cran.r-project.org/web/packages/magick/vignettes/intro.html) I spotted the `image_morph()` function. In this post I experiment with the function to build the GIF below that shows the changes in the England football first kit over time, using images from the excellent [Historical Football Kits](http://www.historicalkits.co.uk/) website.
+
+![ ](/img/abel-england.gif)
+
+## Scarping
+
+The Historical Football Kits website has a detailled section on England kits spread over six pages, starting from the first outfits used in [1872](http://www.historicalkits.co.uk/international/england/england-1872-1939.html). Each pages includes some intersting discussion - and importantly for this post - images of the kits.
+
+We can use the `read_html()` from the xml2 package and `map()` from purrr to read and save the source code of each page.
+```{r, eval=FALSE}
+library(rvest)
+library(tidyverse)
+
+htmls <- c( 
+  "http://www.historicalkits.co.uk/international/england/england-1872-1939.html",
+  "http://www.historicalkits.co.uk/international/england/england-1946-1960.html",
+  "http://www.historicalkits.co.uk/international/england/england-1960-1983.html",
+  "http://www.historicalkits.co.uk/international/england/england-1984-1997.html",
+  "http://www.historicalkits.co.uk/international/england/england-1997-2010.html",
+  "http://www.historicalkits.co.uk/international/england/england-2010-2019.html"
+) %>%
+  map(read_html)
+```
+
+Given the source code we can then find the URL's of each kit image files using `html_nodes()` and `html_attr()` from rvest. I used purrr's `map_dfr()` to store the links in a tibble and then dropped rows that do not contain kit image links or are images of away kits, kits used in single game or links to shops to buy replicas. This filtering was based on strings from the image label or image URL and the `str_detect()` function from stringr.
+
+```{r, eval=FALSE}
+library(stringr)
+
+scrape_img_url <- function(html){
+  html %>%
+    html_nodes(".float p , .float img") %>%
+    html_attr("src") %>%
+    tbl_df() %>%
+    set_names("img_url") %>%
+    mutate(label = html %>% 
+             html_nodes(".float p , .float img") %>%
+             html_text() %>%
+             c(., NA) %>%
+             .[-1])
+}
+
+d1 <- htmls %>% 
+  map_dfr(scrape_img_url) %>%
+  filter(str_detect(string = img_url, pattern = "/international/england"),
+         !str_detect(string = label, pattern = "change|alternate|Alternate|Change"),
+         !str_detect(string = label, pattern = " v |Third"),
+         !str_detect(string = img_url, pattern = "lithuania|italy|yellow|red"))
+```
+
+```{r, echo=FALSE}
+load(file = "england-football-kits.RData")
+```
+
+```{r}
+head(d1)
+```
+
+Given these URL's I then downloaded each of the images which are stored in a single R object `kits`
+
+```{r, eval=FALSE}
+library(magick)
+
+kits <- d1 %>%
+  mutate(img_url = paste0("http://www.historicalkits.co.uk", img_url),
+         img_url = str_replace(string = img_url, pattern = " ", replacement = "%20")) %>%
+  select(img_url) %>%
+  map(image_read) %>%
+  set_names("img")
+```
+
+Typing `kits` into R will display each kit in the RStudio viewer (it will quickly run through each image). In consele displays summary information for each image in the `kits` object.
+
+```{r, eval=FALSE}
+> kits
+$img
+   format width height colorspace filesize
+1     GIF   170    338       sRGB        0
+2     GIF   170    338       sRGB        0
+3     GIF   170    338       sRGB        0
+4     GIF   170    338       sRGB        0
+5     GIF   170    338       sRGB        0
+6     GIF   170    338       sRGB        0
+7     GIF   170    338       sRGB        0
+8     GIF   170    338       sRGB        0
+9     GIF   170    338       sRGB        0
+10    GIF   170    338       sRGB        0
+
+```
+
+## Annotating Images
+
+Before creating any GIF I wanted add some annotations for the year of the kit and the copyright information. To do this I first add a border using `image_border()` in magick and then `image_annotate()` to add the text. I wrapped these edits into an `add_text()` function and then applied each to the kit images.
+
+```{r, eval=FALSE}
+add_text <- function(img, label){
+  img %>%
+    image_border(geometry = "10x60", color = "white") %>%
+    image_chop("0x45") %>%
+    image_annotate(text = label, gravity = "north") %>%
+    image_annotate(text = "Animation by @guyabelguyabel", gravity = "south", location = "+0+45") %>%
+    image_annotate(text = "Images are Copyright of Historical\nFootball Kits and reproduced by\nkind permission.",
+                   gravity = "south")
+}
+
+for(i in 1:length(kits$img)){
+  kits$img[i] <- add_text(img = kits$img[i], label = d1$label[i])
+}
+```
+
+## Creating a GIF
+
+The final step was to animate together the set of images. I use the `image_morph()` twice for each images. First to repeat the same image so that the GIF would remain stable for a few frames. Second to created a set of morphing images between successive kits. 
+
+```{r, eval=FALSE}
+kits_morph <- image_morph(c(kits$img[1], kits$img[1]), frames = 5)
+for(i in 2:length(kits$img)){
+  kits_morph0 <- image_morph(c(kits$img[i-1], kits$img[i]), frames = 5)
+  kits_morph1 <- image_morph(c(kits$img[i], kits$img[i]), frames = 5)
+  kits_morph <- c(kits_morph, kits_morph0)
+  kits_morph <- c(kits_morph, kits_morph1)
+}
+```
+
+To create an animation I passed the set of frames in the `kits_morph` object to the `image_animate()` and `image_write()` functions to give the image above. 
+
+```{r, eval=FALSE}
+kits_morph %>%
+  image_animate(fps = 10) %>%
+  image_write(path = "england.gif")
+```
+
+## Club Teams
+
+Similar code as above can be used to create images for club teams. I wanted to build a similar GIF for the mighty Reading. As the Reading kits on [Historical Football Kits](http://www.historicalkits.co.uk/Reading/Reading.htm) are on only one page and includes only home kits, the scraping was much easier.
+
+```{r, eval=FALSE}
+d1 <- read_html("http://www.historicalkits.co.uk/Reading/Reading.htm") %>%
+  scrape_img_url() %>%
+  filter(str_detect(string = img_url, pattern = "/Reading"),
+         !str_detect(string = img_url, pattern = "unknown")) %>%
+  mutate(label = str_replace_all(string = label, pattern = "[:alpha:]|\\s", replacement = ""))
+```
+
+I could then run the same code as above to srape the images, annotate the year and copyright information and build the GIF. I did have trouble creating a GIF's when I more frames for morphing images between successive kits, such as `frames = 10`. I think the higher frame size might have been a problem with creating a GIF with too many frames or perhaps it was something to do with my PC. In any case, this is final output. 
+
+![ ](/img/abel-reading.gif)
+
+Ian Holloway - take note of 1871 - [we had hoops first](https://www.getreading.co.uk/news/reading-berkshire-news/sky-sports-pundit-ian-holloway-12023342)!

@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>R-bloggers on Guy Abel</title>
-    <link>/categories/r-bloggers/</link>
+    <link>https://guyabel.com/categories/r-bloggers/</link>
     <description>Recent content in R-bloggers on Guy Abel</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
@@ -12,10 +12,10 @@
     
     <item>
       <title>Animated Directional Chord Diagrams</title>
-      <link>/post/animated-directional-chord-diagrams/</link>
+      <link>https://guyabel.com/post/animated-directional-chord-diagrams/</link>
       <pubDate>Wed, 18 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/animated-directional-chord-diagrams/</guid>
+      <guid>https://guyabel.com/post/animated-directional-chord-diagrams/</guid>
       <description>&lt;div id=&#34;background&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Background&lt;/h2&gt;
 &lt;p&gt;A little while ago my paper in &lt;em&gt;International Migration Review&lt;/em&gt; on global migration flow estimates came out &lt;a href=&#34;http://guyabel.com/publication/global-migration-estimates-by-gender/&#34;&gt;online&lt;/a&gt;. The paper includes a number of directional chord diagrams to visualize the estimates.&lt;/p&gt;
@@ -32,18 +32,18 @@ library(tidyverse)
 d0 &amp;lt;- read_csv(system.file(&amp;quot;imr&amp;quot;, &amp;quot;reg_flow.csv&amp;quot;, package = &amp;quot;migest&amp;quot;))
 d0 &lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 891 x 4
-##    year0 orig_reg     dest_reg                          flow
-##    &amp;lt;int&amp;gt; &amp;lt;chr&amp;gt;        &amp;lt;chr&amp;gt;                            &amp;lt;dbl&amp;gt;
-##  1  1960 Africa       Africa                        1377791.
-##  2  1960 Africa       Eastern Asia                     5952.
-##  3  1960 Africa       Eastern Europe &amp;amp; Central Asia    7303.
-##  4  1960 Africa       Europe                         919252.
-##  5  1960 Africa       Latin America &amp;amp; Caribbean       15796.
-##  6  1960 Africa       Northern America                82463.
-##  7  1960 Africa       Oceania                         32825.
-##  8  1960 Africa       Southern Asia                   35603.
-##  9  1960 Africa       Western Asia                   106580.
-## 10  1960 Eastern Asia Africa                          37301.
+##    year0     orig_reg                      dest_reg    flow
+##    &amp;lt;int&amp;gt;        &amp;lt;chr&amp;gt;                         &amp;lt;chr&amp;gt;   &amp;lt;dbl&amp;gt;
+##  1  1960       Africa                        Africa 1377791
+##  2  1960       Africa                  Eastern Asia    5952
+##  3  1960       Africa Eastern Europe &amp;amp; Central Asia    7303
+##  4  1960       Africa                        Europe  919252
+##  5  1960       Africa     Latin America &amp;amp; Caribbean   15796
+##  6  1960       Africa              Northern America   82463
+##  7  1960       Africa                       Oceania   32825
+##  8  1960       Africa                 Southern Asia   35603
+##  9  1960       Africa                  Western Asia  106580
+## 10  1960 Eastern Asia                        Africa   37301
 ## # ... with 881 more rows&lt;/code&gt;&lt;/pre&gt;
 &lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;Some regional meta data for chord diagram plots:&lt;/li&gt;
@@ -51,17 +51,18 @@ d0 &lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;d1 &amp;lt;- read_csv(system.file(&amp;quot;vidwp&amp;quot;, &amp;quot;reg_plot.csv&amp;quot;, package = &amp;quot;migest&amp;quot;))
 d1&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 9 x 5
-##   region                        order1 col1    reg1           reg2        
-##   &amp;lt;chr&amp;gt;                          &amp;lt;int&amp;gt; &amp;lt;chr&amp;gt;   &amp;lt;chr&amp;gt;          &amp;lt;chr&amp;gt;       
-## 1 Northern America                   1 #40A4D8 Northern       America     
-## 2 Africa                             2 #33BEB7 Africa         &amp;lt;NA&amp;gt;        
-## 3 Europe                             3 #B2C224 Europe         &amp;lt;NA&amp;gt;        
-## 4 Eastern Europe &amp;amp; Central Asia      4 #FECC2F Eastern Europe &amp;amp; Central A~
-## 5 Western Asia                       5 #FBA127 Western        Asia        
-## 6 Southern Asia                      6 #F66320 Southern       Asia        
-## 7 Eastern Asia                       7 #DB3937 Eastern        Asia        
-## 8 Oceania                            8 #A463D7 Oceania        &amp;lt;NA&amp;gt;        
-## 9 Latin America &amp;amp; Caribbean          9 #0C5BCE Latin America  &amp;amp; Caribbean&lt;/code&gt;&lt;/pre&gt;
+##                          region order1    col1           reg1
+##                           &amp;lt;chr&amp;gt;  &amp;lt;int&amp;gt;   &amp;lt;chr&amp;gt;          &amp;lt;chr&amp;gt;
+## 1              Northern America      1 #40A4D8       Northern
+## 2                        Africa      2 #33BEB7         Africa
+## 3                        Europe      3 #B2C224         Europe
+## 4 Eastern Europe &amp;amp; Central Asia      4 #FECC2F Eastern Europe
+## 5                  Western Asia      5 #FBA127        Western
+## 6                 Southern Asia      6 #F66320       Southern
+## 7                  Eastern Asia      7 #DB3937        Eastern
+## 8                       Oceania      8 #A463D7        Oceania
+## 9     Latin America &amp;amp; Caribbean      9 #0C5BCE  Latin America
+## # ... with 1 more variables: reg2 &amp;lt;chr&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;tween-data&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Tween Data&lt;/h2&gt;
@@ -76,18 +77,18 @@ d2 &amp;lt;- d0 %&amp;gt;%
   tbl_df()
 d2&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 8,181 x 4
-##    year0     flow .frame .group                                 
-##  * &amp;lt;dbl&amp;gt;    &amp;lt;dbl&amp;gt;  &amp;lt;int&amp;gt; &amp;lt;fct&amp;gt;                                  
-##  1 1960. 1377791.      0 Africa -&amp;gt; Africa                       
-##  2 1960.    5952.      0 Africa -&amp;gt; Eastern Asia                 
-##  3 1960.    7303.      0 Africa -&amp;gt; Eastern Europe &amp;amp; Central Asia
-##  4 1960.  919252.      0 Africa -&amp;gt; Europe                       
-##  5 1960.   15796.      0 Africa -&amp;gt; Latin America &amp;amp; Caribbean    
-##  6 1960.   82463.      0 Africa -&amp;gt; Northern America             
-##  7 1960.   32825.      0 Africa -&amp;gt; Oceania                      
-##  8 1960.   35603.      0 Africa -&amp;gt; Southern Asia                
-##  9 1960.  106580.      0 Africa -&amp;gt; Western Asia                 
-## 10 1960.   37301.      0 Eastern Asia -&amp;gt; Africa                 
+##    year0    flow .frame                                  .group
+##  * &amp;lt;dbl&amp;gt;   &amp;lt;dbl&amp;gt;  &amp;lt;int&amp;gt;                                  &amp;lt;fctr&amp;gt;
+##  1  1960 1377791      0                        Africa -&amp;gt; Africa
+##  2  1960    5952      0                  Africa -&amp;gt; Eastern Asia
+##  3  1960    7303      0 Africa -&amp;gt; Eastern Europe &amp;amp; Central Asia
+##  4  1960  919252      0                        Africa -&amp;gt; Europe
+##  5  1960   15796      0     Africa -&amp;gt; Latin America &amp;amp; Caribbean
+##  6  1960   82463      0              Africa -&amp;gt; Northern America
+##  7  1960   32825      0                       Africa -&amp;gt; Oceania
+##  8  1960   35603      0                 Africa -&amp;gt; Southern Asia
+##  9  1960  106580      0                  Africa -&amp;gt; Western Asia
+## 10  1960   37301      0                  Eastern Asia -&amp;gt; Africa
 ## # ... with 8,171 more rows&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;This creates larger data frame &lt;code&gt;d2&lt;/code&gt;, with 100 observations for each corridor, one for each frame in the animation. In the original data &lt;code&gt;d0&lt;/code&gt; there are only 11 observations for each corridor, one for each five-year period.&lt;/p&gt;
 &lt;p&gt;Then some further minor data wrangling is required to ready the data for plotting using the &lt;code&gt;chordDiagram&lt;/code&gt; function; namely the first three columns in the data must correspond to the origin, destination and flow.&lt;/p&gt;
@@ -97,18 +98,18 @@ d2&lt;/code&gt;&lt;/pre&gt;
   mutate(flow = flow/1e06)
 d2&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 8,181 x 5
-##    orig_reg     dest_reg                         flow year0 .frame
-##    &amp;lt;chr&amp;gt;        &amp;lt;chr&amp;gt;                           &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;  &amp;lt;int&amp;gt;
-##  1 Africa       Africa                        1.38    1960.      0
-##  2 Africa       Eastern Asia                  0.00595 1960.      0
-##  3 Africa       Eastern Europe &amp;amp; Central Asia 0.00730 1960.      0
-##  4 Africa       Europe                        0.919   1960.      0
-##  5 Africa       Latin America &amp;amp; Caribbean     0.0158  1960.      0
-##  6 Africa       Northern America              0.0825  1960.      0
-##  7 Africa       Oceania                       0.0328  1960.      0
-##  8 Africa       Southern Asia                 0.0356  1960.      0
-##  9 Africa       Western Asia                  0.107   1960.      0
-## 10 Eastern Asia Africa                        0.0373  1960.      0
+##        orig_reg                      dest_reg     flow year0 .frame
+##           &amp;lt;chr&amp;gt;                         &amp;lt;chr&amp;gt;    &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;  &amp;lt;int&amp;gt;
+##  1       Africa                        Africa 1.377791  1960      0
+##  2       Africa                  Eastern Asia 0.005952  1960      0
+##  3       Africa Eastern Europe &amp;amp; Central Asia 0.007303  1960      0
+##  4       Africa                        Europe 0.919252  1960      0
+##  5       Africa     Latin America &amp;amp; Caribbean 0.015796  1960      0
+##  6       Africa              Northern America 0.082463  1960      0
+##  7       Africa                       Oceania 0.032825  1960      0
+##  8       Africa                 Southern Asia 0.035603  1960      0
+##  9       Africa                  Western Asia 0.106580  1960      0
+## 10 Eastern Asia                        Africa 0.037301  1960      0
 ## # ... with 8,171 more rows&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;plots-for-each-frame&#34; class=&#34;section level2&#34;&gt;
@@ -175,7 +176,7 @@ img1 &amp;lt;- image_scale(image = img, geometry = &amp;quot;720x720&amp;quot;)
 
 ani0 &amp;lt;- image_animate(image = img1, fps = 10)
 image_write(image = ani0, path = &amp;quot;./plot-gif/globalchord.gif&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;This gives an output much like this minus the additional details in the corners: &lt;img src=&#34;/img/abel-ani10-gf-dist.gif&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;This gives an output much like this minus the additional details in the corners: &lt;img src=&#34;https://guyabel.com/img/abel-ani10-gf-dist.gif&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;(might take a few seconds to fully load)&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;fixing-scales-in-chord-diagrams&#34; class=&#34;section level2&#34;&gt;
@@ -206,18 +207,18 @@ image_write(image = ani0, path = &amp;quot;./plot-gif/globalchord.gif&amp;quot;)
 
 d3&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 101 x 3
-##    .frame  flow  gaps
-##     &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;
-##  1      0  17.6  25.9
-##  2      1  17.8  25.7
-##  3      2  18.1  25.6
-##  4      3  18.3  25.4
-##  5      4  18.5  25.2
-##  6      5  18.7  25.1
-##  7      6  18.9  24.9
-##  8      7  19.1  24.7
-##  9      8  19.3  24.6
-## 10      9  19.6  24.4
+##    .frame     flow     gaps
+##     &amp;lt;int&amp;gt;    &amp;lt;dbl&amp;gt;    &amp;lt;dbl&amp;gt;
+##  1      0 17.63682 25.91515
+##  2      1 17.84989 25.74499
+##  3      2 18.06297 25.57483
+##  4      3 18.27604 25.40467
+##  5      4 18.48911 25.23451
+##  6      5 18.70219 25.06435
+##  7      6 18.91526 24.89418
+##  8      7 19.12834 24.72402
+##  9      8 19.34141 24.55386
+## 10      9 19.55448 24.38370
 ## # ... with 91 more rows&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;The calculations in &lt;code&gt;d3&lt;/code&gt; can then be plugged into the &lt;code&gt;for&lt;/code&gt; loop above, where the &lt;code&gt;circos.par()&lt;/code&gt; function is replaced by&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;circos.par(start.degree = 90, track.margin = c(-0.1, 0.1),
@@ -225,7 +226,7 @@ d3&lt;/code&gt;&lt;/pre&gt;
            points.overflow.warning = FALSE)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Once the for loop has produced a new set of images, the same code to produce the GIF file can be run to obtain the animated chord diagrams with changing gaps;&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/img/abel-ani10-gf-gap.gif&#34; /&gt;
+&lt;img src=&#34;https://guyabel.com/img/abel-ani10-gf-gap.gif&#34; /&gt;
 
 &lt;/div&gt;
 &lt;p&gt;Whilst the sector axes are now fixed, I am not convinced that changing the relative gaps is the best way to compare volumes when using animated chord diagrams. The sectors of all regions - bar Northern America - are rotating making it hard follow their changes over time.&lt;/p&gt;
@@ -264,7 +265,7 @@ reg_max&lt;/code&gt;&lt;/pre&gt;
              xmax = reg_max)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Running the complete code - the adapted &lt;code&gt;for&lt;/code&gt; loop to produce the images and then the &lt;code&gt;magick&lt;/code&gt; functions to compile the GIF - results in the following animation:&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/img/abel-ani10-gf-fix.gif&#34; /&gt;
+&lt;img src=&#34;https://guyabel.com/img/abel-ani10-gf-fix.gif&#34; /&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
