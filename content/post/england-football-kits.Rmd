@@ -1,5 +1,5 @@
 ---
-title: "Animating England Footbal Kits over Time using R"
+title: "Animating England Footbal Kits using R"
 author: "Guy Abel"
 date: '2018-06-01'
 tags:
@@ -19,7 +19,7 @@ I am really loving the [magick](https://cran.r-project.org/web/packages/magick/)
 
 ## Scarping
 
-The Historical Football Kits website has a detailled section on England kits spread over six pages, starting from the first outfits used in [1872](http://www.historicalkits.co.uk/international/england/england-1872-1939.html). Each pages includes some intersting discussion - and importantly for this post - images of the kits.
+The Historical Football Kits website has a detailed section on England kits spread over six pages, starting from the first outfits used in [1872](http://www.historicalkits.co.uk/international/england/england-1872-1939.html). Each pages includes some interesting discussion - and importantly for this post - images of the kits.
 
 We can use the `read_html()` from the xml2 package and `map()` from purrr to read and save the source code of each page.
 ```{r, eval=FALSE}
@@ -37,7 +37,7 @@ htmls <- c(
   map(read_html)
 ```
 
-Given the source code we can then find the URL's of each kit image files using `html_nodes()` and `html_attr()` from rvest. I used purrr's `map_dfr()` to store the links in a tibble and then dropped rows that do not contain kit image links or are images of away kits, kits used in single game or links to shops to buy replicas. This filtering was based on strings from the image label or image URL and the `str_detect()` function from stringr.
+Given the source code we can then find the URLs of each kit image files using `html_nodes()` and `html_attr()` from rvest. I used purrr's `map_dfr()` to store the links in a tibble and then dropped rows that do not contain kit image links or are images of away kits, kits used in single game or links to shops to buy replicas. This filtering was based on strings from the image label or image URL and the `str_detect()` function from stringr.
 
 ```{r, eval=FALSE}
 library(stringr)
@@ -71,7 +71,7 @@ load(file = "england-football-kits.RData")
 head(d1)
 ```
 
-Given these URL's I then downloaded each of the images which are stored in a single R object `kits`
+Given these URLs I then downloaded each of the images which are stored in a single R object `kits`
 
 ```{r, eval=FALSE}
 library(magick)
@@ -84,7 +84,7 @@ kits <- d1 %>%
   set_names("img")
 ```
 
-Typing `kits` into R will display each kit in the RStudio viewer (it will quickly run through each image). In consele displays summary information for each image in the `kits` object.
+Typing `kits` into R will display each kit in the RStudio viewer (it will quickly run through each image). In console displays summary information for each image in the `kits` object.
 
 ```{r, eval=FALSE}
 > kits
@@ -157,7 +157,7 @@ d1 <- read_html("http://www.historicalkits.co.uk/Reading/Reading.htm") %>%
   mutate(label = str_replace_all(string = label, pattern = "[:alpha:]|\\s", replacement = ""))
 ```
 
-I could then run the same code as above to srape the images, annotate the year and copyright information and build the GIF. I did have trouble creating a GIF's when I more frames for morphing images between successive kits, such as `frames = 10`. I think the higher number of frames might have been a problem or perhaps it was something to do with my PC. In any case, this is final output. 
+I could then run the same code as above to scrape the images, annotate the year and copyright information and build the GIF. I did have trouble creating a GIF's when I more frames for morphing images between successive kits, such as `frames = 10`. I think the higher number of frames might have been a problem or perhaps it was something to do with my PC. In any case, this is final output. 
 
 ![ ](/img/abel-reading.gif)
 
