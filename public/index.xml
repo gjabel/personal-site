@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Guy Abel on Guy Abel</title>
-    <link>https://guyabel.com/</link>
+    <link>/</link>
     <description>Recent content in Guy Abel on Guy Abel</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
@@ -11,41 +11,11 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Driving Factors of Asian International Migration Flows</title>
-      <link>https://guyabel.com/talk/paa-2018/</link>
-      <pubDate>Wed, 18 Apr 2018 00:00:00 -0700</pubDate>
-      
-      <guid>https://guyabel.com/talk/paa-2018/</guid>
-      <description>&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;I will be talking at &lt;a href=&#34;https://twitter.com/hashtag/PAA2018?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#PAA2018&lt;/a&gt; today (8:30 AM Plaza Ballroom A) on the drivers of international &lt;a href=&#34;https://twitter.com/hashtag/migration?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#migration&lt;/a&gt; flows in &lt;a href=&#34;https://twitter.com/hashtag/Asia?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Asia&lt;/a&gt; - work with &lt;a href=&#34;https://twitter.com/Jamesraymeranu?ref_src=twsrc%5Etfw&#34;&gt;@Jamesraymeranu&lt;/a&gt; - using estimates from &lt;a href=&#34;https://t.co/a2rXr7lJxb&#34;&gt;https://t.co/a2rXr7lJxb&lt;/a&gt; &lt;a href=&#34;https://t.co/dIqV8tfrg8&#34;&gt;pic.twitter.com/dIqV8tfrg8&lt;/a&gt;&lt;/p&gt;&amp;mdash; Guy Abel 鄭蓋堡 (@guyabelguyabel) &lt;a href=&#34;https://twitter.com/guyabelguyabel/status/989470885475008512?ref_src=twsrc%5Etfw&#34;&gt;April 26, 2018&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-
-</description>
-    </item>
-    
-    <item>
-      <title>Probabilistic Method for Combining Internal Migration Data</title>
-      <link>https://guyabel.com/talk/uw2-2018/</link>
-      <pubDate>Wed, 18 Apr 2018 00:00:00 -0700</pubDate>
-      
-      <guid>https://guyabel.com/talk/uw2-2018/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Visualizing Migration Flows: How to Design and Produce Animated Directional Chord Diagrams in R</title>
-      <link>https://guyabel.com/talk/uw1-2018/</link>
-      <pubDate>Wed, 18 Apr 2018 00:00:00 -0700</pubDate>
-      
-      <guid>https://guyabel.com/talk/uw1-2018/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Animated Directional Chord Diagrams</title>
-      <link>https://guyabel.com/post/animated-directional-chord-diagrams/</link>
+      <link>/post/animated-directional-chord-diagrams/</link>
       <pubDate>Wed, 18 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://guyabel.com/post/animated-directional-chord-diagrams/</guid>
+      <guid>/post/animated-directional-chord-diagrams/</guid>
       <description>&lt;div id=&#34;background&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Background&lt;/h2&gt;
 &lt;p&gt;A little while ago my paper in &lt;em&gt;International Migration Review&lt;/em&gt; on global migration flow estimates came out &lt;a href=&#34;http://guyabel.com/publication/global-migration-estimates-by-gender/&#34;&gt;online&lt;/a&gt;. The paper includes a number of directional chord diagrams to visualize the estimates.&lt;/p&gt;
@@ -205,7 +175,7 @@ img1 &amp;lt;- image_scale(image = img, geometry = &amp;quot;720x720&amp;quot;)
 
 ani0 &amp;lt;- image_animate(image = img1, fps = 10)
 image_write(image = ani0, path = &amp;quot;./plot-gif/globalchord.gif&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;This gives an output much like this minus the additional details in the corners: &lt;img src=&#34;https://guyabel.com/img/abel-ani10-gf-dist.gif&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;This gives an output much like this minus the additional details in the corners: &lt;img src=&#34;/img/abel-ani10-gf-dist.gif&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;(might take a few seconds to fully load)&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;fixing-scales-in-chord-diagrams&#34; class=&#34;section level2&#34;&gt;
@@ -255,7 +225,7 @@ d3&lt;/code&gt;&lt;/pre&gt;
            points.overflow.warning = FALSE)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Once the for loop has produced a new set of images, the same code to produce the GIF file can be run to obtain the animated chord diagrams with changing gaps;&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;https://guyabel.com/img/abel-ani10-gf-gap.gif&#34; /&gt;
+&lt;img src=&#34;/img/abel-ani10-gf-gap.gif&#34; /&gt;
 
 &lt;/div&gt;
 &lt;p&gt;Whilst the sector axes are now fixed, I am not convinced that changing the relative gaps is the best way to compare volumes when using animated chord diagrams. The sectors of all regions - bar Northern America - are rotating making it hard follow their changes over time.&lt;/p&gt;
@@ -294,7 +264,7 @@ reg_max&lt;/code&gt;&lt;/pre&gt;
              xmax = reg_max)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Running the complete code - the adapted &lt;code&gt;for&lt;/code&gt; loop to produce the images and then the &lt;code&gt;magick&lt;/code&gt; functions to compile the GIF - results in the following animation:&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;https://guyabel.com/img/abel-ani10-gf-fix.gif&#34; /&gt;
+&lt;img src=&#34;/img/abel-ani10-gf-fix.gif&#34; /&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
@@ -302,65 +272,135 @@ reg_max&lt;/code&gt;&lt;/pre&gt;
     </item>
     
     <item>
+      <title>Migrant Stock Chord Digrams</title>
+      <link>/post/migrant-stock-chord-digrams/</link>
+      <pubDate>Wed, 18 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/migrant-stock-chord-digrams/</guid>
+      <description>&lt;div id=&#34;background&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Background&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;asia&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Asia&lt;/h2&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;/img/abel-asia-ani10.gif&#34; /&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;africa&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Africa&lt;/h2&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;/img/abel-africa-ani10.gif&#34; /&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;north-central-south-america-and-the-carribean&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;North, Central, South America and the Carribean&lt;/h2&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;/img/abel-americas-ani10.gif&#34; /&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;europe&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Europe&lt;/h2&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;/img/abel-europe-ani10.gif&#34; /&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Driving Factors of Asian International Migration Flows</title>
+      <link>/talk/paa-2018/</link>
+      <pubDate>Wed, 18 Apr 2018 00:00:00 +0800</pubDate>
+      
+      <guid>/talk/paa-2018/</guid>
+      <description>&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;I will be talking at &lt;a href=&#34;https://twitter.com/hashtag/PAA2018?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#PAA2018&lt;/a&gt; today (8:30 AM Plaza Ballroom A) on the drivers of international &lt;a href=&#34;https://twitter.com/hashtag/migration?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#migration&lt;/a&gt; flows in &lt;a href=&#34;https://twitter.com/hashtag/Asia?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Asia&lt;/a&gt; - work with &lt;a href=&#34;https://twitter.com/Jamesraymeranu?ref_src=twsrc%5Etfw&#34;&gt;@Jamesraymeranu&lt;/a&gt; - using estimates from &lt;a href=&#34;https://t.co/a2rXr7lJxb&#34;&gt;https://t.co/a2rXr7lJxb&lt;/a&gt; &lt;a href=&#34;https://t.co/dIqV8tfrg8&#34;&gt;pic.twitter.com/dIqV8tfrg8&lt;/a&gt;&lt;/p&gt;&amp;mdash; Guy Abel 鄭蓋堡 (@guyabelguyabel) &lt;a href=&#34;https://twitter.com/guyabelguyabel/status/989470885475008512?ref_src=twsrc%5Etfw&#34;&gt;April 26, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+</description>
+    </item>
+    
+    <item>
+      <title>Probabilistic Method for Combining Internal Migration Data</title>
+      <link>/talk/uw2-2018/</link>
+      <pubDate>Wed, 18 Apr 2018 00:00:00 +0800</pubDate>
+      
+      <guid>/talk/uw2-2018/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Visualizing Migration Flows: How to Design and Produce Animated Directional Chord Diagrams in R</title>
+      <link>/talk/uw1-2018/</link>
+      <pubDate>Wed, 18 Apr 2018 00:00:00 +0800</pubDate>
+      
+      <guid>/talk/uw1-2018/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Subnational gender balances in South Korea</title>
-      <link>https://guyabel.com/publication/korea-gender-balance/</link>
+      <link>/publication/korea-gender-balance/</link>
       <pubDate>Tue, 06 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://guyabel.com/publication/korea-gender-balance/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Gender, Education and Marital Status Differentials in Migration</title>
-      <link>https://guyabel.com/talk/anu-2018/</link>
-      <pubDate>Thu, 01 Feb 2018 00:00:00 -0800</pubDate>
-      
-      <guid>https://guyabel.com/talk/anu-2018/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Gender, Education and Marital Status Differentials in Migration</title>
-      <link>https://guyabel.com/talk/uq-2018/</link>
-      <pubDate>Thu, 01 Feb 2018 00:00:00 -0800</pubDate>
-      
-      <guid>https://guyabel.com/talk/uq-2018/</guid>
+      <guid>/publication/korea-gender-balance/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ARDI International Migration Pillar</title>
-      <link>https://guyabel.com/project/adri-pillar/</link>
+      <link>/project/adri-pillar/</link>
       <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://guyabel.com/project/adri-pillar/</guid>
+      <guid>/project/adri-pillar/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Combining Migration Data</title>
-      <link>https://guyabel.com/project/combining-migration-data/</link>
+      <link>/project/combining-migration-data/</link>
       <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://guyabel.com/project/combining-migration-data/</guid>
+      <guid>/project/combining-migration-data/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Global Migration Predictions</title>
-      <link>https://guyabel.com/project/global-migration-prediction/</link>
+      <link>/project/global-migration-prediction/</link>
       <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://guyabel.com/project/global-migration-prediction/</guid>
+      <guid>/project/global-migration-prediction/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gender, Education and Marital Status Differentials in Migration</title>
+      <link>/talk/anu-2018/</link>
+      <pubDate>Thu, 01 Feb 2018 00:00:00 +0800</pubDate>
+      
+      <guid>/talk/anu-2018/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gender, Education and Marital Status Differentials in Migration</title>
+      <link>/talk/uq-2018/</link>
+      <pubDate>Thu, 01 Feb 2018 00:00:00 +0800</pubDate>
+      
+      <guid>/talk/uq-2018/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Changing internal migration flows patterns in South Korea</title>
-      <link>https://guyabel.com/publication/korea-internal-migration-1970-2016/</link>
+      <link>/publication/korea-internal-migration-1970-2016/</link>
       <pubDate>Thu, 18 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://guyabel.com/publication/korea-internal-migration-1970-2016/</guid>
+      <guid>/publication/korea-internal-migration-1970-2016/</guid>
       <description>
 
 &lt;h2 id=&#34;further-notes&#34;&gt;Further Notes&lt;/h2&gt;
@@ -371,10 +411,10 @@ reg_max&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Estimates of Global Bilateral Migration Flows by Gender between 1960 and 2015</title>
-      <link>https://guyabel.com/publication/global-migration-estimates-by-gender/</link>
+      <link>/publication/global-migration-estimates-by-gender/</link>
       <pubDate>Fri, 24 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://guyabel.com/publication/global-migration-estimates-by-gender/</guid>
+      <guid>/publication/global-migration-estimates-by-gender/</guid>
       <description>
 
 &lt;h2 id=&#34;further-notes&#34;&gt;Further Notes&lt;/h2&gt;
@@ -385,10 +425,10 @@ reg_max&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Chinese Internal Migration Flows 2010–2015 </title>
-      <link>https://guyabel.com/publication/china-internal-migration-2010-15/</link>
+      <link>/publication/china-internal-migration-2010-15/</link>
       <pubDate>Fri, 07 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://guyabel.com/publication/china-internal-migration-2010-15/</guid>
+      <guid>/publication/china-internal-migration-2010-15/</guid>
       <description>
 
 &lt;h2 id=&#34;further-notes&#34;&gt;Further Notes&lt;/h2&gt;
@@ -401,10 +441,10 @@ reg_max&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Climate Vulnerability and Human Migration in Global Perspective</title>
-      <link>https://guyabel.com/publication/global-climate-vulnerability-and-migration/</link>
+      <link>/publication/global-climate-vulnerability-and-migration/</link>
       <pubDate>Sun, 30 Apr 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://guyabel.com/publication/global-climate-vulnerability-and-migration/</guid>
+      <guid>/publication/global-climate-vulnerability-and-migration/</guid>
       <description></description>
     </item>
     

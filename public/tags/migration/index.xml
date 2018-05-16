@@ -2,38 +2,78 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Migration on Guy Abel</title>
-    <link>https://guyabel.com/tags/migration/</link>
+    <link>/tags/migration/</link>
     <description>Recent content in Migration on Guy Abel</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Thu, 01 Feb 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 18 Apr 2018 00:00:00 +0000</lastBuildDate>
     <atom:link href="/tags/migration/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Migrant Stock Chord Digrams</title>
+      <link>/post/migrant-stock-chord-digrams/</link>
+      <pubDate>Wed, 18 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/migrant-stock-chord-digrams/</guid>
+      <description>&lt;div id=&#34;background&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Background&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;asia&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Asia&lt;/h2&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;/img/abel-asia-ani10.gif&#34; /&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;africa&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Africa&lt;/h2&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;/img/abel-africa-ani10.gif&#34; /&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;north-central-south-america-and-the-carribean&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;North, Central, South America and the Carribean&lt;/h2&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;/img/abel-americas-ani10.gif&#34; /&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;europe&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Europe&lt;/h2&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;/img/abel-europe-ani10.gif&#34; /&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>ARDI International Migration Pillar</title>
-      <link>https://guyabel.com/project/adri-pillar/</link>
+      <link>/project/adri-pillar/</link>
       <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://guyabel.com/project/adri-pillar/</guid>
+      <guid>/project/adri-pillar/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Combining Migration Data</title>
-      <link>https://guyabel.com/project/combining-migration-data/</link>
+      <link>/project/combining-migration-data/</link>
       <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://guyabel.com/project/combining-migration-data/</guid>
+      <guid>/project/combining-migration-data/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Global Migration Predictions</title>
-      <link>https://guyabel.com/project/global-migration-prediction/</link>
+      <link>/project/global-migration-prediction/</link>
       <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://guyabel.com/project/global-migration-prediction/</guid>
+      <guid>/project/global-migration-prediction/</guid>
       <description></description>
     </item>
     

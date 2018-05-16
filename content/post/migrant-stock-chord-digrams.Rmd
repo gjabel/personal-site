@@ -1,0 +1,36 @@
+---
+title: "Migrant Stock Chord Digrams"
+author: "Guy Abel"
+date: '2018-04-18'
+tags:
+- R
+- migration
+draft: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Background
+
+## Asia 
+
+![ ](/img/abel-asia-ani10.gif)
+
+
+## Africa
+
+
+![ ](/img/abel-africa-ani10.gif)
+
+## North, Central, South America and the Carribean
+
+![ ](/img/abel-americas-ani10.gif)
+
+## Europe
+
+![ ](/img/abel-europe-ani10.gif)
+
+
+
