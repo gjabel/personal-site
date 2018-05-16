@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Prediction on Guy Abel</title>
+    <link>https://guyabel.com/tags/prediction/</link>
+    <description>Recent content in Prediction on Guy Abel</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-uk</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Thu, 01 Feb 2018 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/prediction/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>ARDI International Migration Pillar</title>
+      <link>https://guyabel.com/project/adri-pillar/</link>
+      <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://guyabel.com/project/adri-pillar/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Global Migration Predictions</title>
+      <link>https://guyabel.com/project/global-migration-prediction/</link>
+      <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://guyabel.com/project/global-migration-prediction/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
