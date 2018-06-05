@@ -14,7 +14,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Background
 
-I am loving the [magick](https://cran.r-project.org/web/packages/magick/) package at the moment. Reading through the [vignette](https://cran.r-project.org/web/packages/magick/vignettes/intro.html) I spotted the `image_morph()` function. In this post I experiment with the function to build the GIF below that shows the changes in the England football first kit over time, using images from the excellent [Historical Football Kits](http://www.historicalkits.co.uk/) website.
+I am enjoying the [magick](https://cran.r-project.org/web/packages/magick/) package at the moment. Reading through the [vignette](https://cran.r-project.org/web/packages/magick/vignettes/intro.html) I spotted the `image_morph()` function. In this post I experiment with the function to build the GIF below that shows the changes in the England football first kit over time, using images from the excellent [Historical Football Kits](http://www.historicalkits.co.uk/) website.
 
 ![ ](/img/abel-england.gif)
 
