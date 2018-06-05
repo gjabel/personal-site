@@ -13,7 +13,7 @@
   <meta name="description" content="Professor">
 
   
-  <link rel="alternate" hreflang="en-uk" href="https://guyabel.com/tags/r/">
+  <link rel="alternate" hreflang="en-uk" href="/tags/r/">
 
   
   
@@ -69,15 +69,15 @@
   
 
   
-  <link rel="alternate" href="https://guyabel.com/tags/r/index.xml" type="application/rss+xml" title="Guy Abel">
-  <link rel="feed" href="https://guyabel.com/tags/r/index.xml" type="application/rss+xml" title="Guy Abel">
+  <link rel="alternate" href="/tags/r/index.xml" type="application/rss+xml" title="Guy Abel">
+  <link rel="feed" href="/tags/r/index.xml" type="application/rss+xml" title="Guy Abel">
   
 
   <link rel="manifest" href="/site.webmanifest">
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="https://guyabel.com/tags/r/">
+  <link rel="canonical" href="/tags/r/">
 
   <meta property="twitter:card" content="summary_large_image">
   
@@ -85,12 +85,12 @@
   <meta property="twitter:creator" content="@guyabelguyabel">
   
   <meta property="og:site_name" content="Guy Abel">
-  <meta property="og:url" content="https://guyabel.com/tags/r/">
+  <meta property="og:url" content="/tags/r/">
   <meta property="og:title" content="R | Guy Abel">
   <meta property="og:description" content="Professor">
   <meta property="og:locale" content="en-uk">
   
-  <meta property="og:updated_time" content="2018-04-18T00:00:00&#43;00:00">
+  <meta property="og:updated_time" content="2018-09-01T00:00:00&#43;00:00">
   
 
   
@@ -248,7 +248,45 @@
   
   
   <div>
-    <h2><a href="https://guyabel.com/post/animated-directional-chord-diagrams/">Animated Directional Chord Diagrams</a></h2>
+    <h2><a href="/post/european-bilateral-migration-flows/">European Bilateral Migration Flows</a></h2>
+    <div class="article-style">
+      
+      <p>Background
+<a href="https://twitter.com/jburnmurdoch/status/998971273773432833" target="_blank">https://twitter.com/jburnmurdoch/status/998971273773432833</a>
+Agreed. Generally I struggle with chord diagrams even when not animated.
+— Mara Averick (@dataandme) May 2, 2018</p>
+
+<p>library(tidyverse) library(eurostat) library(scales)
+d0 &lt;- get_eurostat(id = “migr_imm5prv”) d1 &lt;- get_eurostat(id = “migr_emi3nxt”)
+d2 &lt;- d0 %&gt;% filter(age == “TOTAL”, agedef == “COMPLET”, sex == “T”) %&gt;% rename(orig = partner, dest = geo, recieve = values) %&gt;% filter(orig %in% eu_countries(code, dest %in% eu_countries)code) %&gt;% select(orig, dest, time, recieve)</p>
+
+      
+    </div>
+  </div>
+  
+  <div>
+    <h2><a href="/post/migrant-stock-chord-digrams/">Migrant Stock Chord Diagrams</a></h2>
+    <div class="article-style">
+      
+    </div>
+  </div>
+  
+  <div>
+    <h2><a href="/post/football-kits/">Animating Changes in Football Kits using R</a></h2>
+    <div class="article-style">
+      
+      <p>Background
+I am loving the magick package at the moment. Reading through the vignette I spotted the image_morph() function. In this post I experiment with the function to build the GIF below that shows the changes in the England football first kit over time, using images from the excellent Historical Football Kits website.</p>
+
+<p>Scraping
+The Historical Football Kits website has a detailed section on England kits spread over six pages, starting from the first outfits used in 1872.</p>
+
+      
+    </div>
+  </div>
+  
+  <div>
+    <h2><a href="/post/animated-directional-chord-diagrams/">Animated Directional Chord Diagrams</a></h2>
     <div class="article-style">
       
       Background

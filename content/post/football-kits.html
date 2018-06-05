@@ -1,10 +1,11 @@
 ---
-title: "Animating England Footbal Kits using R"
+title: "Animating Changes in Football Kits using R"
 author: "Guy Abel"
-date: '2018-06-01'
-tags:
-- R
-draft: TRUE
+date: '2018-06-05'
+tags: ["R"]
+categories: 
+  - "r-bloggers"
+draft: false
 ---
 
 
@@ -17,10 +18,10 @@ draft: TRUE
 
 </div>
 </div>
-<div id="scarping" class="section level2">
-<h2>Scarping</h2>
+<div id="scraping" class="section level2">
+<h2>Scraping</h2>
 <p>The Historical Football Kits website has a detailed section on England kits spread over six pages, starting from the first outfits used in <a href="http://www.historicalkits.co.uk/international/england/england-1872-1939.html">1872</a>. Each pages includes some interesting discussion - and importantly for this post - images of the kits.</p>
-<p>We can use the <code>read_html()</code> from the xml2 package and <code>map()</code> from purrr to read and save the source code of each page.</p>
+<p>We can use the <code>read_html()</code> from the <a href="https://cran.r-project.org/web/packages/xml2/">xml2</a> package and <code>map()</code> from <a href="https://cran.r-project.org/web/packages/purrr">purrr</a> to read and save the source code of each page.</p>
 <pre class="r"><code>library(rvest)
 library(tidyverse)
 
@@ -33,7 +34,7 @@ htmls &lt;- c(
   &quot;http://www.historicalkits.co.uk/international/england/england-2010-2019.html&quot;
 ) %&gt;%
   map(read_html)</code></pre>
-<p>From the source code we can then find the URLs of each kit image files using <code>html_nodes()</code> and <code>html_attr()</code> from rvest. I used purrr’s <code>map_dfr()</code> to store the links in a tibble and then dropped rows that do not contain kit image links or are images of away kits, kits used in single game or links to shops to buy replicas. This filtering was based on strings from the image label or image URL and the <code>str_detect()</code> function from stringr.</p>
+<p>From the source code we can then find the URLs of each kit image files using <code>html_nodes()</code> and <code>html_attr()</code> from <a href="https://cran.r-project.org/web/packages/rvest/">rvest</a>. I used purrr’s <code>map_dfr()</code> to store the links in a tibble and then dropped rows that do not contain kit image links or are images of away kits, kits used in single game or links to shops to buy replicas. This filtering was based on the image label or image URL and performed with the aid of the <code>str_detect()</code> function from <a href="https://cran.r-project.org/web/packages/stringr/">stringr</a>.</p>
 <pre class="r"><code>library(stringr)
 
 scrape_img_url &lt;- function(html){
@@ -95,9 +96,13 @@ $img
     image_border(geometry = &quot;10x60&quot;, color = &quot;white&quot;) %&gt;%
     image_chop(&quot;0x45&quot;) %&gt;%
     image_annotate(text = label, gravity = &quot;north&quot;) %&gt;%
-    image_annotate(text = &quot;Animation by @guyabelguyabel&quot;, gravity = &quot;south&quot;, location = &quot;+0+45&quot;) %&gt;%
-    image_annotate(text = &quot;Images are Copyright of Historical\nFootball Kits and reproduced by\nkind permission.&quot;,
-                   gravity = &quot;south&quot;)
+    image_annotate(
+      text = &quot;Animation by @guyabelguyabel&quot;, gravity = &quot;south&quot;, location = &quot;+0+45&quot;
+    ) %&gt;%
+    image_annotate(
+      text = &quot;Images are Copyright of Historical\nFootball Kits and reproduced by\nkind permission.&quot;,
+      gravity = &quot;south&quot;
+    )
 }
 
 for(i in 1:length(kits$img)){
@@ -106,7 +111,7 @@ for(i in 1:length(kits$img)){
 </div>
 <div id="creating-a-gif" class="section level2">
 <h2>Creating a GIF</h2>
-<p>The final step was to bind together the set of images in an animated GIF with smooth transition images between each frame. To do this I used the <code>image_morph()</code> twice. First to repeat the same image so that the GIF would remain stable for a few frames (<code>kits_morph1</code> below). Then second to create a set of morphing images between successive kits (<code>kits_morph0</code> below). The full set of frames were stored in <code>kits_ani</code></p>
+<p>The final step was to bind together the set of images in an animated GIF with smooth transition images between each frame. To do this I used the <code>image_morph()</code> twice. First to repeat the same image so that the GIF would remain stable for a few frames (<code>kits_morph1</code> below). Then again to create a set of morphing images between successive kits (<code>kits_morph0</code> below). The full set of frames were stored in <code>kits_ani</code></p>
 <pre class="r"><code>kits_ani &lt;- image_morph(c(kits$img[1], kits$img[1]), frames = 5)
 for(i in 2:length(kits$img)){
   kits_morph0 &lt;- image_morph(c(kits$img[i-1], kits$img[i]), frames = 5)
@@ -126,12 +131,16 @@ for(i in 2:length(kits$img)){
   scrape_img_url() %&gt;%
   filter(str_detect(string = img_url, pattern = &quot;/Reading&quot;),
          !str_detect(string = img_url, pattern = &quot;unknown&quot;)) %&gt;%
-  mutate(label = str_replace_all(string = label, pattern = &quot;[:alpha:]|\\s&quot;, replacement = &quot;&quot;))</code></pre>
+  mutate(
+    label = str_replace_all(string = label,
+                            pattern = &quot;[:alpha:]|\\s&quot;, 
+                            replacement = &quot;&quot;)
+  )</code></pre>
 <p>I could then run the same code as above to scrape the images, annotate the year and copyright information and build the GIF.</p>
 <div class="figure">
 <img src="/img/abel-reading.gif" />
 
 </div>
-<p>Ian Holloway - take note of 1871 - <a href="https://www.getreading.co.uk/news/reading-berkshire-news/sky-sports-pundit-ian-holloway-12023342">we had hoops first</a>!</p>
-<p>I did have trouble creating a GIF’s when I more frames for morphing images between successive kits, such as <code>frames = 10</code>. I could not consitently replicate the error, but I suspect it is something related to the memory size - my R session would freeze when either using <code>image_animate()</code> or <code>image_write()</code> on my <code>kits_ani</code> R object when it contained a large number of images.</p>
+<p>Ian Holloway - <a href="https://www.getreading.co.uk/news/reading-berkshire-news/sky-sports-pundit-ian-holloway-12023342">we had hoops first</a>.</p>
+<p>I did have trouble creating a GIF’s when I used more frames to morph images between successive kits, for example when using <code>frames = 10</code>. I could not consistently replicate the error, but I suspect it is something related to the memory size - my R session would freeze when passing <code>image_animate()</code> or <code>image_write()</code> on the <code>kits_ani</code> R object when it contained a large number of images.</p>
 </div>

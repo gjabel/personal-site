@@ -11,7 +11,7 @@
   <meta name="description" content="Professor">
 
   
-  <link rel="alternate" hreflang="en-uk" href="/post/migrant-stock-chord-digrams/">
+  <link rel="alternate" hreflang="en-uk" href="/post/european-bilateral-migration-flows/">
 
   
   
@@ -75,7 +75,7 @@
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="/post/migrant-stock-chord-digrams/">
+  <link rel="canonical" href="/post/european-bilateral-migration-flows/">
 
   <meta property="twitter:card" content="summary_large_image">
   
@@ -83,19 +83,19 @@
   <meta property="twitter:creator" content="@guyabelguyabel">
   
   <meta property="og:site_name" content="Guy Abel">
-  <meta property="og:url" content="/post/migrant-stock-chord-digrams/">
-  <meta property="og:title" content="Migrant Stock Chord Diagrams | Guy Abel">
+  <meta property="og:url" content="/post/european-bilateral-migration-flows/">
+  <meta property="og:title" content="European Bilateral Migration Flows | Guy Abel">
   <meta property="og:description" content="">
   <meta property="og:locale" content="en-uk">
   
-  <meta property="article:published_time" content="2018-07-01T00:00:00&#43;00:00">
+  <meta property="article:published_time" content="2018-09-01T00:00:00&#43;00:00">
   
-  <meta property="article:modified_time" content="2018-07-01T00:00:00&#43;00:00">
-  
-
+  <meta property="article:modified_time" content="2018-09-01T00:00:00&#43;00:00">
   
 
-  <title>Migrant Stock Chord Diagrams | Guy Abel</title>
+  
+
+  <title>European Bilateral Migration Flows | Guy Abel</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#toc" data-offset="71" >
@@ -243,7 +243,7 @@
 
   <div class="article-container">
     <div class="article-inner">
-      <h1 itemprop="name">Migrant Stock Chord Diagrams</h1>
+      <h1 itemprop="name">European Bilateral Migration Flows</h1>
 
       
 
@@ -251,8 +251,8 @@
 
   <span class="article-date">
     
-    <time datetime="2018-07-01 00:00:00 &#43;0000 UTC" itemprop="datePublished dateModified">
-      01 July 2018
+    <time datetime="2018-09-01 00:00:00 &#43;0000 UTC" itemprop="datePublished dateModified">
+      01 September 2018
     </time>
   </span>
   <span itemscope itemprop="author publisher" itemtype="http://schema.org/Person">
@@ -262,14 +262,14 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    1 min read
+    3 min read
   </span>
   
 
   
   
   <span class="middot-divider"></span>
-  <a href="/post/migrant-stock-chord-digrams/#disqus_thread"></a>
+  <a href="/post/european-bilateral-migration-flows/#disqus_thread"></a>
   
 
   
@@ -280,35 +280,35 @@
   <ul class="share">
     <li>
       <a class="twitter"
-         href="https://twitter.com/intent/tweet?text=Migrant%20Stock%20Chord%20Diagrams&amp;url=%2fpost%2fmigrant-stock-chord-digrams%2f"
+         href="https://twitter.com/intent/tweet?text=European%20Bilateral%20Migration%20Flows&amp;url=%2fpost%2feuropean-bilateral-migration-flows%2f"
          target="_blank" rel="noopener">
         <i class="fa fa-twitter"></i>
       </a>
     </li>
     <li>
       <a class="facebook"
-         href="https://www.facebook.com/sharer.php?u=%2fpost%2fmigrant-stock-chord-digrams%2f"
+         href="https://www.facebook.com/sharer.php?u=%2fpost%2feuropean-bilateral-migration-flows%2f"
          target="_blank" rel="noopener">
         <i class="fa fa-facebook"></i>
       </a>
     </li>
     <li>
       <a class="linkedin"
-         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fpost%2fmigrant-stock-chord-digrams%2f&amp;title=Migrant%20Stock%20Chord%20Diagrams"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fpost%2feuropean-bilateral-migration-flows%2f&amp;title=European%20Bilateral%20Migration%20Flows"
          target="_blank" rel="noopener">
         <i class="fa fa-linkedin"></i>
       </a>
     </li>
     <li>
       <a class="weibo"
-         href="http://service.weibo.com/share/share.php?url=%2fpost%2fmigrant-stock-chord-digrams%2f&amp;title=Migrant%20Stock%20Chord%20Diagrams"
+         href="http://service.weibo.com/share/share.php?url=%2fpost%2feuropean-bilateral-migration-flows%2f&amp;title=European%20Bilateral%20Migration%20Flows"
          target="_blank" rel="noopener">
         <i class="fa fa-weibo"></i>
       </a>
     </li>
     <li>
       <a class="email"
-         href="mailto:?subject=Migrant%20Stock%20Chord%20Diagrams&amp;body=%2fpost%2fmigrant-stock-chord-digrams%2f">
+         href="mailto:?subject=European%20Bilateral%20Migration%20Flows&amp;body=%2fpost%2feuropean-bilateral-migration-flows%2f">
         <i class="fa fa-envelope"></i>
       </a>
     </li>
@@ -332,22 +332,105 @@ Agreed. Generally I struggle with chord diagrams even when not animated.
 — Mara Averick (<span class="citation">@dataandme</span>) <a href="https://twitter.com/dataandme/status/991545526909890561?ref_src=twsrc%5Etfw">May 2, 2018</a>
 </blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>library(tidyverse) library(eurostat) library(scales)</p>
+<p>d0 &lt;- get_eurostat(id = “migr_imm5prv”) d1 &lt;- get_eurostat(id = “migr_emi3nxt”)</p>
+<p>d2 &lt;- d0 %&gt;% filter(age == “TOTAL”, agedef == “COMPLET”, sex == “T”) %&gt;% rename(orig = partner, dest = geo, recieve = values) %&gt;% filter(orig %in% eu_countries<span class="math inline">\(code,  dest %in% eu_countries\)</span>code) %&gt;% select(orig, dest, time, recieve)</p>
+<p>d3 &lt;- d1 %&gt;% filter(age == “TOTAL”, agedef == “COMPLET”, sex == “T”) %&gt;% rename(orig = geo, dest = partner, send = values) %&gt;% filter(orig %in% eu_countries<span class="math inline">\(code,  dest %in% eu_countries\)</span>code) %&gt;% select(orig, dest, time, send)</p>
+<p>d4 &lt;- left_join(d2, d3)</p>
 </div>
-<div id="asia" class="section level2">
-<h2>Asia</h2>
-<!-- ![ ](/img/abel-asia-ani10.gif) -->
+<div id="summary-stats" class="section level1">
+<h1>summary stats</h1>
 </div>
-<div id="africa" class="section level2">
-<h2>Africa</h2>
-<!-- ![ ](/img/abel-africa-ani10.gif) -->
+<div id="d5a---d4" class="section level1">
+<h1>d5a &lt;- d4 %&gt;%</h1>
 </div>
-<div id="north-central-south-america-and-the-carribean" class="section level2">
-<h2>North, Central, South America and the Carribean</h2>
-<!-- ![ ](/img/abel-americas-ani10.gif) -->
+<div id="group_bytime" class="section level1">
+<h1>group_by(time) %&gt;%</h1>
 </div>
-<div id="europe" class="section level2">
-<h2>Europe</h2>
-<!-- ![ ](/img/abel-europe-ani10.gif) -->
+<div id="summarisecor-correcieve-send-use-complete.obs" class="section level1">
+<h1>summarise(cor = cor(recieve, send, use = “complete.obs”),</h1>
+</div>
+<div id="cor_log-corlog1precieve-log1psend-use-complete.obs" class="section level1">
+<h1>cor_log = cor(log1p(recieve), log1p(send), use = “complete.obs”),</h1>
+</div>
+<div id="n_send-sumis.nasend" class="section level1">
+<h1>n_send = sum(!is.na(send)),</h1>
+</div>
+<div id="n_recieve-sumis.narecieve" class="section level1">
+<h1>n_recieve = sum(!is.na(recieve)),</h1>
+</div>
+<div id="n_pairs-sumis.narecieve-send" class="section level1">
+<h1>n_pairs = sum(!is.na(recieve + send)))</h1>
+</div>
+<div id="section" class="section level1">
+<h1></h1>
+</div>
+<div id="d5b---d4" class="section level1">
+<h1>d5b &lt;- d4 %&gt;%</h1>
+</div>
+<div id="group_bytime-orig" class="section level1">
+<h1>group_by(time, orig) %&gt;%</h1>
+</div>
+<div id="summarisen_data-sumis.nasend" class="section level1">
+<h1>summarise(n_data = sum(!is.na(send))) %&gt;%</h1>
+</div>
+<div id="group_bytime-1" class="section level1">
+<h1>group_by(time) %&gt;%</h1>
+</div>
+<div id="summarisen-n_distinctorig" class="section level1">
+<h1>summarise(n = n_distinct(orig),</h1>
+</div>
+<div id="report_send-sumn_data-0" class="section level1">
+<h1>report_send = sum(n_data &gt; 0))</h1>
+</div>
+<div id="section-1" class="section level1">
+<h1></h1>
+</div>
+<div id="d5c---d4" class="section level1">
+<h1>d5c &lt;- d4 %&gt;%</h1>
+</div>
+<div id="group_bytime-dest" class="section level1">
+<h1>group_by(time, dest) %&gt;%</h1>
+</div>
+<div id="summarisen_data-sumis.narecieve" class="section level1">
+<h1>summarise(n_data = sum(!is.na(recieve))) %&gt;%</h1>
+</div>
+<div id="group_bytime-2" class="section level1">
+<h1>group_by(time) %&gt;%</h1>
+</div>
+<div id="summarisereport_recieve-sumn_data-0" class="section level1">
+<h1>summarise(report_recieve = sum(n_data &gt; 0))</h1>
+</div>
+<div id="section-2" class="section level1">
+<h1></h1>
+</div>
+<div id="d5---d5a" class="section level1">
+<h1>d5 &lt;- d5a %&gt;%</h1>
+</div>
+<div id="left_joind5b" class="section level1">
+<h1>left_join(d5b) %&gt;%</h1>
+</div>
+<div id="left_joind5c" class="section level1">
+<h1>left_join(d5c)</h1>
+</div>
+<div id="d5" class="section level1">
+<h1>d5</h1>
+<p>ggplot(data = d4 %&gt;% mutate(post2008 = time &gt; “2008-01-01”), mapping = aes(x = send, y = recieve, col = as.factor(time))) + geom_point(alpha = 0.25) + coord_trans(x = “log1p”, y = “log1p”) + facet_wrap(facets = “post2008”)</p>
+<p>library(circlize) library(tweenr)</p>
+<div id="do-not-tween-data-where-not-double-reported-set-colour-to-transparent-and-use-image_morph.-then" class="section level3">
+<h3>do not tween data where not double reported… set colour to transparent and use image_morph. then</h3>
+</div>
+<div id="in-second-stage-of-gif-show-differences-in-double-reported-using-tweened-data." class="section level3">
+<h3>in second stage of gif show differences in double reported using tweened data.</h3>
+<p>d5 &lt;- d4 %&gt;% filter(time == unique(d4$time)[2]) %&gt;% select(-time) %&gt;% gather(key = “type”, value = “flow”, recieve:send) %&gt;% mutate( corridor = paste(orig, dest, sep = &quot; -&gt; “), type = case_when( type ==”recieve&quot; ~ 1, type == “send” ~ 2 ), ease = “linear” ) %&gt;% select(corridor, type, flow, ease) %&gt;% # replace_na(list(flow = 0)) %&gt;% tween_elements(time = “type”, group = “corridor”, ease = “ease”, nframes = 50) %&gt;% tbl_df() %&gt;% separate(col = .group, into = c(“orig”, “dest”), sep = &quot; -&gt; “) %&gt;% select(orig, dest, flow, everything()) %&gt;% mutate(flow = flow/1e03)</p>
+<p>library(circlize) library(magrittr)</p>
+<p>c_max &lt;- d5 %&gt;% group_by(.frame) %&gt;% complete(orig = unique(c(orig, dest)), dest = unique(c(orig, dest))) %&gt;% # filter(orig == dest, .frame ==0) %&gt;% replace_na(list(flow = 0)) %&gt;% group_by(orig, .frame) %&gt;% mutate(tot_out = sum(flow)) %&gt;% group_by(dest, .frame) %&gt;% mutate(tot_in = sum(flow)) %&gt;% filter(orig == dest) %&gt;% mutate(tot = tot_in + tot_out) %&gt;% mutate(alpha2 = orig) %&gt;% group_by(alpha2) %&gt;% summarise(tot_max = max(tot)) %$% ‘names&lt;-’(tot_max, alpha2)</p>
+<p>c_max</p>
+<p>eu_countries</p>
+<p>f = 49 circos.clear() par(mar = rep(0, 4), cex=1) circos.par(start.degree = 90, track.margin=c(-0.1, 0.1), gap.degree = 2, points.overflow.warning = FALSE)</p>
+<p>chordDiagram(x = filter(d5, .frame == f), directional = 1, # order = d1<span class="math inline">\(region,  # grid.col = d1\)</span>col1, # annotationTrack = “grid”, transparency = 0.25, annotationTrackHeight = c(0.05, 0.1), direction.type = c(“diffHeight”, “arrows”), link.arr.type = “big.arrow”, diffHeight = -0.04, link.sort = TRUE, link.largest.ontop = TRUE, xmax = c_max)</p>
+<p>chordDiagram(d5 %&gt;% filter(.frame == 0)) chordDiagram(d5 %&gt;% filter(.frame == 50))</p>
+</div>
 </div>
 
       </div>
@@ -377,6 +460,8 @@ Agreed. Generally I struggle with chord diagrams even when not animated.
   <h3>Related</h3>
   <ul>
     
+    <li><a href="/post/migrant-stock-chord-digrams/">Migrant Stock Chord Diagrams</a></li>
+    
     <li><a href="/post/football-kits/">Animating Changes in Football Kits using R</a></li>
     
     <li><a href="/post/animated-directional-chord-diagrams/">Animated Directional Chord Diagrams</a></li>
@@ -384,8 +469,6 @@ Agreed. Generally I struggle with chord diagrams even when not animated.
     <li><a href="/project/combining-migration-data/">Combining Migration Data</a></li>
     
     <li><a href="/project/adri-pillar/">ARDI International Migration Pillar</a></li>
-    
-    <li><a href="/project/global-migration-prediction/">Global Migration Predictions</a></li>
     
   </ul>
 </div>

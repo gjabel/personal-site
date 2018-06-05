@@ -1,10 +1,11 @@
 ---
-title: "Animating England Footbal Kits using R"
+title: "Animating Changes in Football Kits using R"
 author: "Guy Abel"
-date: '2018-06-01'
-tags:
-- R
-draft: TRUE
+date: '2018-06-05'
+tags: ["R"]
+categories: 
+  - "r-bloggers"
+draft: false
 ---
 
 ```{r setup, include=FALSE}
@@ -17,11 +18,11 @@ I am loving the [magick](https://cran.r-project.org/web/packages/magick/) packag
 
 ![ ](/img/abel-england.gif)
 
-## Scarping
+## Scraping
 
 The Historical Football Kits website has a detailed section on England kits spread over six pages, starting from the first outfits used in [1872](http://www.historicalkits.co.uk/international/england/england-1872-1939.html). Each pages includes some interesting discussion - and importantly for this post - images of the kits.
 
-We can use the `read_html()` from the xml2 package and `map()` from purrr to read and save the source code of each page.
+We can use the `read_html()` from the [xml2](https://cran.r-project.org/web/packages/xml2/) package and `map()` from [purrr](https://cran.r-project.org/web/packages/purrr) to read and save the source code of each page.
 ```{r, eval=FALSE}
 library(rvest)
 library(tidyverse)
@@ -37,7 +38,7 @@ htmls <- c(
   map(read_html)
 ```
 
-From the source code we can then find the URLs of each kit image files using `html_nodes()` and `html_attr()` from rvest. I used purrr's `map_dfr()` to store the links in a tibble and then dropped rows that do not contain kit image links or are images of away kits, kits used in single game or links to shops to buy replicas. This filtering was based on strings from the image label or image URL and the `str_detect()` function from stringr.
+From the source code we can then find the URLs of each kit image files using `html_nodes()` and `html_attr()` from [rvest](https://cran.r-project.org/web/packages/rvest/). I used purrr's `map_dfr()` to store the links in a tibble and then dropped rows that do not contain kit image links or are images of away kits, kits used in single game or links to shops to buy replicas. This filtering was based on the image label or image URL and performed with the aid of the `str_detect()` function from [stringr](https://cran.r-project.org/web/packages/stringr/).
 
 ```{r, eval=FALSE}
 library(stringr)
@@ -64,7 +65,7 @@ d1 <- htmls %>%
 ```
 
 ```{r, echo=FALSE}
-load(file = "england-football-kits.RData")
+load(file = "football-kits.RData")
 ```
 
 ```{r}
@@ -113,9 +114,13 @@ add_text <- function(img, label){
     image_border(geometry = "10x60", color = "white") %>%
     image_chop("0x45") %>%
     image_annotate(text = label, gravity = "north") %>%
-    image_annotate(text = "Animation by @guyabelguyabel", gravity = "south", location = "+0+45") %>%
-    image_annotate(text = "Images are Copyright of Historical\nFootball Kits and reproduced by\nkind permission.",
-                   gravity = "south")
+    image_annotate(
+      text = "Animation by @guyabelguyabel", gravity = "south", location = "+0+45"
+    ) %>%
+    image_annotate(
+      text = "Images are Copyright of Historical\nFootball Kits and reproduced by\nkind permission.",
+      gravity = "south"
+    )
 }
 
 for(i in 1:length(kits$img)){
@@ -125,7 +130,7 @@ for(i in 1:length(kits$img)){
 
 ## Creating a GIF
 
-The final step was to bind together the set of images in an animated GIF with smooth transition images between each frame. To do this I used the `image_morph()` twice. First to repeat the same image so that the GIF would remain stable for a few frames (`kits_morph1` below). Then second to create a set of morphing images between successive kits (`kits_morph0` below). The full set of frames were stored in `kits_ani`
+The final step was to bind together the set of images in an animated GIF with smooth transition images between each frame. To do this I used the `image_morph()` twice. First to repeat the same image so that the GIF would remain stable for a few frames (`kits_morph1` below). Then again to create a set of morphing images between successive kits (`kits_morph0` below). The full set of frames were stored in `kits_ani`
 
 ```{r, eval=FALSE}
 kits_ani <- image_morph(c(kits$img[1], kits$img[1]), frames = 5)
@@ -154,13 +159,17 @@ d1 <- read_html("http://www.historicalkits.co.uk/Reading/Reading.htm") %>%
   scrape_img_url() %>%
   filter(str_detect(string = img_url, pattern = "/Reading"),
          !str_detect(string = img_url, pattern = "unknown")) %>%
-  mutate(label = str_replace_all(string = label, pattern = "[:alpha:]|\\s", replacement = ""))
+  mutate(
+    label = str_replace_all(string = label,
+                            pattern = "[:alpha:]|\\s", 
+                            replacement = "")
+  )
 ```
 
 I could then run the same code as above to scrape the images, annotate the year and copyright information and build the GIF. 
 
 ![ ](/img/abel-reading.gif)
 
-Ian Holloway - take note of 1871 - [we had hoops first](https://www.getreading.co.uk/news/reading-berkshire-news/sky-sports-pundit-ian-holloway-12023342)!
+Ian Holloway - [we had hoops first](https://www.getreading.co.uk/news/reading-berkshire-news/sky-sports-pundit-ian-holloway-12023342).
 
-I did have trouble creating a GIF's when I more frames for morphing images between successive kits, such as `frames = 10`. I could not consitently replicate the error, but I suspect it is something related to the memory size - my R session would freeze when either using `image_animate()` or `image_write()` on my `kits_ani` R object when it contained a large number of images.
+I did have trouble creating a GIF's when I used more frames to morph images between successive kits, for example when using `frames = 10`. I could not consistently replicate the error, but I suspect it is something related to the memory size - my R session would freeze when passing `image_animate()` or `image_write()` on the `kits_ani` R object when it contained a large number of images.
