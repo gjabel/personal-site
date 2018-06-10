@@ -14,7 +14,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Background
 
-I am enjoying the [magick](https://cran.r-project.org/web/packages/magick/) package at the moment. Reading through the [vignette](https://cran.r-project.org/web/packages/magick/vignettes/intro.html) I spotted the `image_morph()` function. In this post I experiment with the function to build the GIF below that shows the changes in the England football first kit over time, using images from the excellent [Historical Football Kits](http://www.historicalkits.co.uk/) website.
+I'm loving the [magick](https://cran.r-project.org/web/packages/magick/) package at the moment. Reading through the [vignette](https://cran.r-project.org/web/packages/magick/vignettes/intro.html) I spotted the `image_morph()` function. In this post I experiment with the function to build the GIF below that shows the changes in the England football first kit over time, using images from the excellent [Historical Football Kits](http://www.historicalkits.co.uk/) website.
 
 ![ ](/img/abel-england.gif)
 
@@ -125,6 +125,8 @@ add_text <- function(img, label){
 
 for(i in 1:length(kits$img)){
   kits$img[i] <- add_text(img = kits$img[i], label = d1$label[i])
+  # add extra border to make final images square
+  kits$img[i] <- image_border(image = kits$img[i], geometry = "85x1", color = "white")
 }
 ```
 
@@ -150,6 +152,8 @@ kits_ani %>%
   image_write(path = "england.gif")
 ```
 
+This bit of code can take a while to execute if the are many frames (see my comments towards the end of the post).
+
 ## Club Teams
 
 Similar code as above can be used to create images for club teams. I tried this out for the mighty Reading. As the Reading kits on [Historical Football Kits](http://www.historicalkits.co.uk/Reading/Reading.htm) are on only one page and includes only home kits, finding the image URLs was much easier...
@@ -172,4 +176,4 @@ I could then run the same code as above to scrape the images, annotate the year 
 
 Ian Holloway - [we had hoops first](https://www.getreading.co.uk/news/reading-berkshire-news/sky-sports-pundit-ian-holloway-12023342).
 
-I did have trouble creating a GIF's when I used more frames to morph images between successive kits, for example when using `frames = 10`. I could not consistently replicate the error, but I suspect it is something related to the memory size - my R session would freeze when passing `image_animate()` or `image_write()` on the `kits_ani` R object when it contained a large number of images.
+I did have trouble creating a GIF's when I used more frames to morph images between successive kits, for example when using `frames = 10` in `image_morphi()`. I could not consistently replicate the error, but I suspect it is something related to the memory size - my R session would freeze when passing `image_animate()` or `image_write()` on the `kits_ani` R object when it contained a large number of images.
