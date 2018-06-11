@@ -114,10 +114,10 @@ for(i in 1:length(kits$img)){
 <div id="creating-a-gif" class="section level2">
 <h2>Creating a GIF</h2>
 <p>The final step was to bind together the set of images in an animated GIF with smooth transition images between each frame. To do this I used the <code>image_morph()</code> twice. First to repeat the same image so that the GIF would remain stable for a few frames (<code>kits_morph1</code> below). Then again to create a set of morphing images between successive kits (<code>kits_morph0</code> below). The full set of frames were stored in <code>kits_ani</code></p>
-<pre class="r"><code>kits_ani &lt;- image_morph(c(kits$img[1], kits$img[1]), frames = 5)
+<pre class="r"><code>kits_ani &lt;- image_morph(c(kits$img[1], kits$img[1]), frames = 4)
 for(i in 2:length(kits$img)){
-  kits_morph0 &lt;- image_morph(c(kits$img[i-1], kits$img[i]), frames = 5)
-  kits_morph1 &lt;- image_morph(c(kits$img[i], kits$img[i]), frames = 5)
+  kits_morph0 &lt;- image_morph(c(kits$img[i-1], kits$img[i]), frames = 4)
+  kits_morph1 &lt;- image_morph(c(kits$img[i], kits$img[i]), frames = 4)
   kits_ani &lt;- c(kits_ani, kits_morph0)
   kits_ani &lt;- c(kits_ani, kits_morph1)
 }</code></pre>
