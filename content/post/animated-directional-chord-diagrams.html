@@ -22,8 +22,12 @@ draft: false
 <li>Time series of bilateral migration flow estimates:</li>
 </ol>
 <pre class="r"><code># install.packages(&quot;migest&quot;)
-library(tidyverse)
-d0 &lt;- read_csv(system.file(&quot;imr&quot;, &quot;reg_flow.csv&quot;, package = &quot;migest&quot;))
+library(tidyverse)</code></pre>
+<pre><code>## Warning: package &#39;tidyverse&#39; was built under R version 3.4.4</code></pre>
+<pre><code>## Warning: package &#39;ggplot2&#39; was built under R version 3.4.4</code></pre>
+<pre><code>## Warning: package &#39;tibble&#39; was built under R version 3.4.4</code></pre>
+<pre><code>## Warning: package &#39;stringr&#39; was built under R version 3.4.4</code></pre>
+<pre class="r"><code>d0 &lt;- read_csv(system.file(&quot;imr&quot;, &quot;reg_flow.csv&quot;, package = &quot;migest&quot;))
 d0 </code></pre>
 <pre><code>## # A tibble: 891 x 4
 ##    year0 orig_reg     dest_reg                          flow
@@ -71,7 +75,7 @@ d2 &lt;- d0 %&gt;%
 d2</code></pre>
 <pre><code>## # A tibble: 8,181 x 4
 ##    year0     flow .frame .group                                 
-##  * &lt;dbl&gt;    &lt;dbl&gt;  &lt;int&gt; &lt;fct&gt;                                  
+##  * &lt;dbl&gt;    &lt;dbl&gt;  &lt;int&gt; &lt;chr&gt;                                  
 ##  1 1960. 1377791.      0 Africa -&gt; Africa                       
 ##  2 1960.    5952.      0 Africa -&gt; Eastern Asia                 
 ##  3 1960.    7303.      0 Africa -&gt; Eastern Europe &amp; Central Asia

@@ -6,7 +6,7 @@
     <description>Recent content in R on Guy Abel</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
-    <copyright>&amp;copy; 2018</copyright>
+    <copyright>&amp;copy; 2018 &amp;middot; Selected posts also on &lt;a href=&#34;https://r-bloggers.com/&#34;&gt;R-bloggers&lt;/a&gt;</copyright>
     <lastBuildDate>Tue, 05 Jun 2018 00:00:00 +0000</lastBuildDate>
     <atom:link href="/tags/r/" rel="self" type="application/rss+xml" />
     
@@ -174,8 +174,12 @@ for(i in 2:length(kits$img)){
 &lt;li&gt;Time series of bilateral migration flow estimates:&lt;/li&gt;
 &lt;/ol&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# install.packages(&amp;quot;migest&amp;quot;)
-library(tidyverse)
-d0 &amp;lt;- read_csv(system.file(&amp;quot;imr&amp;quot;, &amp;quot;reg_flow.csv&amp;quot;, package = &amp;quot;migest&amp;quot;))
+library(tidyverse)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning: package &amp;#39;tidyverse&amp;#39; was built under R version 3.4.4&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning: package &amp;#39;ggplot2&amp;#39; was built under R version 3.4.4&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning: package &amp;#39;tibble&amp;#39; was built under R version 3.4.4&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning: package &amp;#39;stringr&amp;#39; was built under R version 3.4.4&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;d0 &amp;lt;- read_csv(system.file(&amp;quot;imr&amp;quot;, &amp;quot;reg_flow.csv&amp;quot;, package = &amp;quot;migest&amp;quot;))
 d0 &lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 891 x 4
 ##    year0 orig_reg     dest_reg                          flow
@@ -223,7 +227,7 @@ d2 &amp;lt;- d0 %&amp;gt;%
 d2&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 8,181 x 4
 ##    year0     flow .frame .group                                 
-##  * &amp;lt;dbl&amp;gt;    &amp;lt;dbl&amp;gt;  &amp;lt;int&amp;gt; &amp;lt;fct&amp;gt;                                  
+##  * &amp;lt;dbl&amp;gt;    &amp;lt;dbl&amp;gt;  &amp;lt;int&amp;gt; &amp;lt;chr&amp;gt;                                  
 ##  1 1960. 1377791.      0 Africa -&amp;gt; Africa                       
 ##  2 1960.    5952.      0 Africa -&amp;gt; Eastern Asia                 
 ##  3 1960.    7303.      0 Africa -&amp;gt; Eastern Europe &amp;amp; Central Asia
