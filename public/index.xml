@@ -18,7 +18,7 @@
       <guid>https://guyabel.com/post/football-kits/</guid>
       <description>&lt;div id=&#34;background&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Background&lt;/h2&gt;
-&lt;p&gt;I am enjoying the &lt;a href=&#34;https://cran.r-project.org/web/packages/magick/&#34;&gt;magick&lt;/a&gt; package at the moment. Reading through the &lt;a href=&#34;https://cran.r-project.org/web/packages/magick/vignettes/intro.html&#34;&gt;vignette&lt;/a&gt; I spotted the &lt;code&gt;image_morph()&lt;/code&gt; function. In this post I experiment with the function to build the GIF below that shows the changes in the England football first kit over time, using images from the excellent &lt;a href=&#34;http://www.historicalkits.co.uk/&#34;&gt;Historical Football Kits&lt;/a&gt; website.&lt;/p&gt;
+&lt;p&gt;I’m loving the &lt;a href=&#34;https://cran.r-project.org/web/packages/magick/&#34;&gt;magick&lt;/a&gt; package at the moment. Reading through the &lt;a href=&#34;https://cran.r-project.org/web/packages/magick/vignettes/intro.html&#34;&gt;vignette&lt;/a&gt; I spotted the &lt;code&gt;image_morph()&lt;/code&gt; function. In this post I experiment with the function to build the GIF below that shows the changes in the England football first kit over time, using images from the excellent &lt;a href=&#34;http://www.historicalkits.co.uk/&#34;&gt;Historical Football Kits&lt;/a&gt; website.&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;
 &lt;img src=&#34;https://guyabel.com/img/abel-england.gif&#34; /&gt;
 
@@ -113,15 +113,17 @@ $img
 
 for(i in 1:length(kits$img)){
   kits$img[i] &amp;lt;- add_text(img = kits$img[i], label = d1$label[i])
+  # add extra border to make final images square
+  kits$img[i] &amp;lt;- image_border(image = kits$img[i], geometry = &amp;quot;85x1&amp;quot;, color = &amp;quot;white&amp;quot;)
 }&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;creating-a-gif&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Creating a GIF&lt;/h2&gt;
 &lt;p&gt;The final step was to bind together the set of images in an animated GIF with smooth transition images between each frame. To do this I used the &lt;code&gt;image_morph()&lt;/code&gt; twice. First to repeat the same image so that the GIF would remain stable for a few frames (&lt;code&gt;kits_morph1&lt;/code&gt; below). Then again to create a set of morphing images between successive kits (&lt;code&gt;kits_morph0&lt;/code&gt; below). The full set of frames were stored in &lt;code&gt;kits_ani&lt;/code&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;kits_ani &amp;lt;- image_morph(c(kits$img[1], kits$img[1]), frames = 5)
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;kits_ani &amp;lt;- image_morph(c(kits$img[1], kits$img[1]), frames = 4)
 for(i in 2:length(kits$img)){
-  kits_morph0 &amp;lt;- image_morph(c(kits$img[i-1], kits$img[i]), frames = 5)
-  kits_morph1 &amp;lt;- image_morph(c(kits$img[i], kits$img[i]), frames = 5)
+  kits_morph0 &amp;lt;- image_morph(c(kits$img[i-1], kits$img[i]), frames = 4)
+  kits_morph1 &amp;lt;- image_morph(c(kits$img[i], kits$img[i]), frames = 4)
   kits_ani &amp;lt;- c(kits_ani, kits_morph0)
   kits_ani &amp;lt;- c(kits_ani, kits_morph1)
 }&lt;/code&gt;&lt;/pre&gt;
@@ -129,6 +131,7 @@ for(i in 2:length(kits$img)){
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;kits_ani %&amp;gt;%
   image_animate(fps = 10) %&amp;gt;%
   image_write(path = &amp;quot;england.gif&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This bit of code can take a while to execute if the are many frames (see my comments towards the end of the post).&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;club-teams&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Club Teams&lt;/h2&gt;
@@ -148,7 +151,7 @@ for(i in 2:length(kits$img)){
 
 &lt;/div&gt;
 &lt;p&gt;Ian Holloway - &lt;a href=&#34;https://www.getreading.co.uk/news/reading-berkshire-news/sky-sports-pundit-ian-holloway-12023342&#34;&gt;we had hoops first&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;I did have trouble creating a GIF’s when I used more frames to morph images between successive kits, for example when using &lt;code&gt;frames = 10&lt;/code&gt;. I could not consistently replicate the error, but I suspect it is something related to the memory size - my R session would freeze when passing &lt;code&gt;image_animate()&lt;/code&gt; or &lt;code&gt;image_write()&lt;/code&gt; on the &lt;code&gt;kits_ani&lt;/code&gt; R object when it contained a large number of images.&lt;/p&gt;
+&lt;p&gt;I did have trouble creating a GIF’s when I used more frames to morph images between successive kits, for example when using &lt;code&gt;frames = 10&lt;/code&gt; in &lt;code&gt;image_morphi()&lt;/code&gt;. I could not consistently replicate the error, but I suspect it is something related to the memory size - my R session would freeze when passing &lt;code&gt;image_animate()&lt;/code&gt; or &lt;code&gt;image_write()&lt;/code&gt; on the &lt;code&gt;kits_ani&lt;/code&gt; R object when it contained a large number of images.&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -175,18 +178,18 @@ library(tidyverse)
 d0 &amp;lt;- read_csv(system.file(&amp;quot;imr&amp;quot;, &amp;quot;reg_flow.csv&amp;quot;, package = &amp;quot;migest&amp;quot;))
 d0 &lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 891 x 4
-##    year0     orig_reg                      dest_reg    flow
-##    &amp;lt;int&amp;gt;        &amp;lt;chr&amp;gt;                         &amp;lt;chr&amp;gt;   &amp;lt;dbl&amp;gt;
-##  1  1960       Africa                        Africa 1377791
-##  2  1960       Africa                  Eastern Asia    5952
-##  3  1960       Africa Eastern Europe &amp;amp; Central Asia    7303
-##  4  1960       Africa                        Europe  919252
-##  5  1960       Africa     Latin America &amp;amp; Caribbean   15796
-##  6  1960       Africa              Northern America   82463
-##  7  1960       Africa                       Oceania   32825
-##  8  1960       Africa                 Southern Asia   35603
-##  9  1960       Africa                  Western Asia  106580
-## 10  1960 Eastern Asia                        Africa   37301
+##    year0 orig_reg     dest_reg                          flow
+##    &amp;lt;int&amp;gt; &amp;lt;chr&amp;gt;        &amp;lt;chr&amp;gt;                            &amp;lt;dbl&amp;gt;
+##  1  1960 Africa       Africa                        1377791.
+##  2  1960 Africa       Eastern Asia                     5952.
+##  3  1960 Africa       Eastern Europe &amp;amp; Central Asia    7303.
+##  4  1960 Africa       Europe                         919252.
+##  5  1960 Africa       Latin America &amp;amp; Caribbean       15796.
+##  6  1960 Africa       Northern America                82463.
+##  7  1960 Africa       Oceania                         32825.
+##  8  1960 Africa       Southern Asia                   35603.
+##  9  1960 Africa       Western Asia                   106580.
+## 10  1960 Eastern Asia Africa                          37301.
 ## # ... with 881 more rows&lt;/code&gt;&lt;/pre&gt;
 &lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;Some regional meta data for chord diagram plots:&lt;/li&gt;
@@ -194,18 +197,17 @@ d0 &lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;d1 &amp;lt;- read_csv(system.file(&amp;quot;vidwp&amp;quot;, &amp;quot;reg_plot.csv&amp;quot;, package = &amp;quot;migest&amp;quot;))
 d1&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 9 x 5
-##                          region order1    col1           reg1
-##                           &amp;lt;chr&amp;gt;  &amp;lt;int&amp;gt;   &amp;lt;chr&amp;gt;          &amp;lt;chr&amp;gt;
-## 1              Northern America      1 #40A4D8       Northern
-## 2                        Africa      2 #33BEB7         Africa
-## 3                        Europe      3 #B2C224         Europe
-## 4 Eastern Europe &amp;amp; Central Asia      4 #FECC2F Eastern Europe
-## 5                  Western Asia      5 #FBA127        Western
-## 6                 Southern Asia      6 #F66320       Southern
-## 7                  Eastern Asia      7 #DB3937        Eastern
-## 8                       Oceania      8 #A463D7        Oceania
-## 9     Latin America &amp;amp; Caribbean      9 #0C5BCE  Latin America
-## # ... with 1 more variables: reg2 &amp;lt;chr&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+##   region                        order1 col1    reg1           reg2        
+##   &amp;lt;chr&amp;gt;                          &amp;lt;int&amp;gt; &amp;lt;chr&amp;gt;   &amp;lt;chr&amp;gt;          &amp;lt;chr&amp;gt;       
+## 1 Northern America                   1 #40A4D8 Northern       America     
+## 2 Africa                             2 #33BEB7 Africa         &amp;lt;NA&amp;gt;        
+## 3 Europe                             3 #B2C224 Europe         &amp;lt;NA&amp;gt;        
+## 4 Eastern Europe &amp;amp; Central Asia      4 #FECC2F Eastern Europe &amp;amp; Central A~
+## 5 Western Asia                       5 #FBA127 Western        Asia        
+## 6 Southern Asia                      6 #F66320 Southern       Asia        
+## 7 Eastern Asia                       7 #DB3937 Eastern        Asia        
+## 8 Oceania                            8 #A463D7 Oceania        &amp;lt;NA&amp;gt;        
+## 9 Latin America &amp;amp; Caribbean          9 #0C5BCE Latin America  &amp;amp; Caribbean&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;tween-data&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Tween Data&lt;/h2&gt;
@@ -220,18 +222,18 @@ d2 &amp;lt;- d0 %&amp;gt;%
   tbl_df()
 d2&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 8,181 x 4
-##    year0    flow .frame                                  .group
-##  * &amp;lt;dbl&amp;gt;   &amp;lt;dbl&amp;gt;  &amp;lt;int&amp;gt;                                  &amp;lt;fctr&amp;gt;
-##  1  1960 1377791      0                        Africa -&amp;gt; Africa
-##  2  1960    5952      0                  Africa -&amp;gt; Eastern Asia
-##  3  1960    7303      0 Africa -&amp;gt; Eastern Europe &amp;amp; Central Asia
-##  4  1960  919252      0                        Africa -&amp;gt; Europe
-##  5  1960   15796      0     Africa -&amp;gt; Latin America &amp;amp; Caribbean
-##  6  1960   82463      0              Africa -&amp;gt; Northern America
-##  7  1960   32825      0                       Africa -&amp;gt; Oceania
-##  8  1960   35603      0                 Africa -&amp;gt; Southern Asia
-##  9  1960  106580      0                  Africa -&amp;gt; Western Asia
-## 10  1960   37301      0                  Eastern Asia -&amp;gt; Africa
+##    year0     flow .frame .group                                 
+##  * &amp;lt;dbl&amp;gt;    &amp;lt;dbl&amp;gt;  &amp;lt;int&amp;gt; &amp;lt;fct&amp;gt;                                  
+##  1 1960. 1377791.      0 Africa -&amp;gt; Africa                       
+##  2 1960.    5952.      0 Africa -&amp;gt; Eastern Asia                 
+##  3 1960.    7303.      0 Africa -&amp;gt; Eastern Europe &amp;amp; Central Asia
+##  4 1960.  919252.      0 Africa -&amp;gt; Europe                       
+##  5 1960.   15796.      0 Africa -&amp;gt; Latin America &amp;amp; Caribbean    
+##  6 1960.   82463.      0 Africa -&amp;gt; Northern America             
+##  7 1960.   32825.      0 Africa -&amp;gt; Oceania                      
+##  8 1960.   35603.      0 Africa -&amp;gt; Southern Asia                
+##  9 1960.  106580.      0 Africa -&amp;gt; Western Asia                 
+## 10 1960.   37301.      0 Eastern Asia -&amp;gt; Africa                 
 ## # ... with 8,171 more rows&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;This creates larger data frame &lt;code&gt;d2&lt;/code&gt;, with 100 observations for each corridor, one for each frame in the animation. In the original data &lt;code&gt;d0&lt;/code&gt; there are only 11 observations for each corridor, one for each five-year period.&lt;/p&gt;
 &lt;p&gt;Then some further minor data wrangling is required to ready the data for plotting using the &lt;code&gt;chordDiagram&lt;/code&gt; function; namely the first three columns in the data must correspond to the origin, destination and flow.&lt;/p&gt;
@@ -241,18 +243,18 @@ d2&lt;/code&gt;&lt;/pre&gt;
   mutate(flow = flow/1e06)
 d2&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 8,181 x 5
-##        orig_reg                      dest_reg     flow year0 .frame
-##           &amp;lt;chr&amp;gt;                         &amp;lt;chr&amp;gt;    &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;  &amp;lt;int&amp;gt;
-##  1       Africa                        Africa 1.377791  1960      0
-##  2       Africa                  Eastern Asia 0.005952  1960      0
-##  3       Africa Eastern Europe &amp;amp; Central Asia 0.007303  1960      0
-##  4       Africa                        Europe 0.919252  1960      0
-##  5       Africa     Latin America &amp;amp; Caribbean 0.015796  1960      0
-##  6       Africa              Northern America 0.082463  1960      0
-##  7       Africa                       Oceania 0.032825  1960      0
-##  8       Africa                 Southern Asia 0.035603  1960      0
-##  9       Africa                  Western Asia 0.106580  1960      0
-## 10 Eastern Asia                        Africa 0.037301  1960      0
+##    orig_reg     dest_reg                         flow year0 .frame
+##    &amp;lt;chr&amp;gt;        &amp;lt;chr&amp;gt;                           &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;  &amp;lt;int&amp;gt;
+##  1 Africa       Africa                        1.38    1960.      0
+##  2 Africa       Eastern Asia                  0.00595 1960.      0
+##  3 Africa       Eastern Europe &amp;amp; Central Asia 0.00730 1960.      0
+##  4 Africa       Europe                        0.919   1960.      0
+##  5 Africa       Latin America &amp;amp; Caribbean     0.0158  1960.      0
+##  6 Africa       Northern America              0.0825  1960.      0
+##  7 Africa       Oceania                       0.0328  1960.      0
+##  8 Africa       Southern Asia                 0.0356  1960.      0
+##  9 Africa       Western Asia                  0.107   1960.      0
+## 10 Eastern Asia Africa                        0.0373  1960.      0
 ## # ... with 8,171 more rows&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;plots-for-each-frame&#34; class=&#34;section level2&#34;&gt;
@@ -350,18 +352,18 @@ image_write(image = ani0, path = &amp;quot;./plot-gif/globalchord.gif&amp;quot;)
 
 d3&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 101 x 3
-##    .frame     flow     gaps
-##     &amp;lt;int&amp;gt;    &amp;lt;dbl&amp;gt;    &amp;lt;dbl&amp;gt;
-##  1      0 17.63682 25.91515
-##  2      1 17.84989 25.74499
-##  3      2 18.06297 25.57483
-##  4      3 18.27604 25.40467
-##  5      4 18.48911 25.23451
-##  6      5 18.70219 25.06435
-##  7      6 18.91526 24.89418
-##  8      7 19.12834 24.72402
-##  9      8 19.34141 24.55386
-## 10      9 19.55448 24.38370
+##    .frame  flow  gaps
+##     &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;
+##  1      0  17.6  25.9
+##  2      1  17.8  25.7
+##  3      2  18.1  25.6
+##  4      3  18.3  25.4
+##  5      4  18.5  25.2
+##  6      5  18.7  25.1
+##  7      6  18.9  24.9
+##  8      7  19.1  24.7
+##  9      8  19.3  24.6
+## 10      9  19.6  24.4
 ## # ... with 91 more rows&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;The calculations in &lt;code&gt;d3&lt;/code&gt; can then be plugged into the &lt;code&gt;for&lt;/code&gt; loop above, where the &lt;code&gt;circos.par()&lt;/code&gt; function is replaced by&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;circos.par(start.degree = 90, track.margin = c(-0.1, 0.1),
@@ -418,7 +420,7 @@ reg_max&lt;/code&gt;&lt;/pre&gt;
     <item>
       <title>Driving Factors of Asian International Migration Flows</title>
       <link>https://guyabel.com/talk/paa-2018/</link>
-      <pubDate>Wed, 18 Apr 2018 00:00:00 +0800</pubDate>
+      <pubDate>Wed, 18 Apr 2018 00:00:00 +0100</pubDate>
       
       <guid>https://guyabel.com/talk/paa-2018/</guid>
       <description>&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;I will be talking at &lt;a href=&#34;https://twitter.com/hashtag/PAA2018?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#PAA2018&lt;/a&gt; today (8:30 AM Plaza Ballroom A) on the drivers of international &lt;a href=&#34;https://twitter.com/hashtag/migration?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#migration&lt;/a&gt; flows in &lt;a href=&#34;https://twitter.com/hashtag/Asia?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Asia&lt;/a&gt; - work with &lt;a href=&#34;https://twitter.com/Jamesraymeranu?ref_src=twsrc%5Etfw&#34;&gt;@Jamesraymeranu&lt;/a&gt; - using estimates from &lt;a href=&#34;https://t.co/a2rXr7lJxb&#34;&gt;https://t.co/a2rXr7lJxb&lt;/a&gt; &lt;a href=&#34;https://t.co/dIqV8tfrg8&#34;&gt;pic.twitter.com/dIqV8tfrg8&lt;/a&gt;&lt;/p&gt;&amp;mdash; Guy Abel 鄭蓋堡 (@guyabelguyabel) &lt;a href=&#34;https://twitter.com/guyabelguyabel/status/989470885475008512?ref_src=twsrc%5Etfw&#34;&gt;April 26, 2018&lt;/a&gt;&lt;/blockquote&gt;
@@ -430,7 +432,7 @@ reg_max&lt;/code&gt;&lt;/pre&gt;
     <item>
       <title>Probabilistic Method for Combining Internal Migration Data</title>
       <link>https://guyabel.com/talk/epc-2018/</link>
-      <pubDate>Wed, 18 Apr 2018 00:00:00 +0800</pubDate>
+      <pubDate>Wed, 18 Apr 2018 00:00:00 +0100</pubDate>
       
       <guid>https://guyabel.com/talk/epc-2018/</guid>
       <description></description>
@@ -439,7 +441,7 @@ reg_max&lt;/code&gt;&lt;/pre&gt;
     <item>
       <title>Probabilistic Method for Combining Internal Migration Data</title>
       <link>https://guyabel.com/talk/uw2-2018/</link>
-      <pubDate>Wed, 18 Apr 2018 00:00:00 +0800</pubDate>
+      <pubDate>Wed, 18 Apr 2018 00:00:00 +0100</pubDate>
       
       <guid>https://guyabel.com/talk/uw2-2018/</guid>
       <description></description>
@@ -448,7 +450,7 @@ reg_max&lt;/code&gt;&lt;/pre&gt;
     <item>
       <title>Visualizing Migration Flows: How to Design and Produce Animated Directional Chord Diagrams in R</title>
       <link>https://guyabel.com/talk/uw1-2018/</link>
-      <pubDate>Wed, 18 Apr 2018 00:00:00 +0800</pubDate>
+      <pubDate>Wed, 18 Apr 2018 00:00:00 +0100</pubDate>
       
       <guid>https://guyabel.com/talk/uw1-2018/</guid>
       <description></description>
@@ -482,18 +484,9 @@ reg_max&lt;/code&gt;&lt;/pre&gt;
     </item>
     
     <item>
-      <title>Global Migration Predictions</title>
-      <link>https://guyabel.com/project/global-migration-prediction/</link>
-      <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://guyabel.com/project/global-migration-prediction/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Gender, Education and Marital Status Differentials in Migration</title>
       <link>https://guyabel.com/talk/anu-2018/</link>
-      <pubDate>Thu, 01 Feb 2018 00:00:00 +0800</pubDate>
+      <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
       
       <guid>https://guyabel.com/talk/anu-2018/</guid>
       <description></description>
@@ -502,9 +495,18 @@ reg_max&lt;/code&gt;&lt;/pre&gt;
     <item>
       <title>Gender, Education and Marital Status Differentials in Migration</title>
       <link>https://guyabel.com/talk/uq-2018/</link>
-      <pubDate>Thu, 01 Feb 2018 00:00:00 +0800</pubDate>
+      <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
       
       <guid>https://guyabel.com/talk/uq-2018/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Global Migration Predictions</title>
+      <link>https://guyabel.com/project/global-migration-prediction/</link>
+      <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://guyabel.com/project/global-migration-prediction/</guid>
       <description></description>
     </item>
     

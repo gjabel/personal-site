@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="theme" content="hugo-academic">
-  <meta name="generator" content="Hugo 0.31" />
+  <meta name="generator" content="Hugo 0.36.1" />
   <meta name="author" content="Guy Abel">
   <meta name="description" content="Professor">
 
@@ -336,7 +336,7 @@
       <div class="article-style" itemprop="articleBody">
         <div id="background" class="section level2">
 <h2>Background</h2>
-<p>I am enjoying the <a href="https://cran.r-project.org/web/packages/magick/">magick</a> package at the moment. Reading through the <a href="https://cran.r-project.org/web/packages/magick/vignettes/intro.html">vignette</a> I spotted the <code>image_morph()</code> function. In this post I experiment with the function to build the GIF below that shows the changes in the England football first kit over time, using images from the excellent <a href="http://www.historicalkits.co.uk/">Historical Football Kits</a> website.</p>
+<p>I’m loving the <a href="https://cran.r-project.org/web/packages/magick/">magick</a> package at the moment. Reading through the <a href="https://cran.r-project.org/web/packages/magick/vignettes/intro.html">vignette</a> I spotted the <code>image_morph()</code> function. In this post I experiment with the function to build the GIF below that shows the changes in the England football first kit over time, using images from the excellent <a href="http://www.historicalkits.co.uk/">Historical Football Kits</a> website.</p>
 <div class="figure">
 <img src="/img/abel-england.gif" />
 
@@ -431,15 +431,17 @@ $img
 
 for(i in 1:length(kits$img)){
   kits$img[i] &lt;- add_text(img = kits$img[i], label = d1$label[i])
+  # add extra border to make final images square
+  kits$img[i] &lt;- image_border(image = kits$img[i], geometry = &quot;85x1&quot;, color = &quot;white&quot;)
 }</code></pre>
 </div>
 <div id="creating-a-gif" class="section level2">
 <h2>Creating a GIF</h2>
 <p>The final step was to bind together the set of images in an animated GIF with smooth transition images between each frame. To do this I used the <code>image_morph()</code> twice. First to repeat the same image so that the GIF would remain stable for a few frames (<code>kits_morph1</code> below). Then again to create a set of morphing images between successive kits (<code>kits_morph0</code> below). The full set of frames were stored in <code>kits_ani</code></p>
-<pre class="r"><code>kits_ani &lt;- image_morph(c(kits$img[1], kits$img[1]), frames = 5)
+<pre class="r"><code>kits_ani &lt;- image_morph(c(kits$img[1], kits$img[1]), frames = 4)
 for(i in 2:length(kits$img)){
-  kits_morph0 &lt;- image_morph(c(kits$img[i-1], kits$img[i]), frames = 5)
-  kits_morph1 &lt;- image_morph(c(kits$img[i], kits$img[i]), frames = 5)
+  kits_morph0 &lt;- image_morph(c(kits$img[i-1], kits$img[i]), frames = 4)
+  kits_morph1 &lt;- image_morph(c(kits$img[i], kits$img[i]), frames = 4)
   kits_ani &lt;- c(kits_ani, kits_morph0)
   kits_ani &lt;- c(kits_ani, kits_morph1)
 }</code></pre>
@@ -447,6 +449,7 @@ for(i in 2:length(kits$img)){
 <pre class="r"><code>kits_ani %&gt;%
   image_animate(fps = 10) %&gt;%
   image_write(path = &quot;england.gif&quot;)</code></pre>
+<p>This bit of code can take a while to execute if the are many frames (see my comments towards the end of the post).</p>
 </div>
 <div id="club-teams" class="section level2">
 <h2>Club Teams</h2>
@@ -466,7 +469,7 @@ for(i in 2:length(kits$img)){
 
 </div>
 <p>Ian Holloway - <a href="https://www.getreading.co.uk/news/reading-berkshire-news/sky-sports-pundit-ian-holloway-12023342">we had hoops first</a>.</p>
-<p>I did have trouble creating a GIF’s when I used more frames to morph images between successive kits, for example when using <code>frames = 10</code>. I could not consistently replicate the error, but I suspect it is something related to the memory size - my R session would freeze when passing <code>image_animate()</code> or <code>image_write()</code> on the <code>kits_ani</code> R object when it contained a large number of images.</p>
+<p>I did have trouble creating a GIF’s when I used more frames to morph images between successive kits, for example when using <code>frames = 10</code> in <code>image_morphi()</code>. I could not consistently replicate the error, but I suspect it is something related to the memory size - my R session would freeze when passing <code>image_animate()</code> or <code>image_write()</code> on the <code>kits_ani</code> R object when it contained a large number of images.</p>
 </div>
 
       </div>
