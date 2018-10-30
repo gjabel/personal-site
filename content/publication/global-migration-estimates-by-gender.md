@@ -38,7 +38,8 @@ projects = ["global-migration-prediction"]
 url_pdf = "http://journals.sagepub.com/doi/10.1111/imre.12327"
 url_preprint = "http://www.oeaw.ac.at/fileadmin/subsites/Institute/VID/PDF/Publications/Working_Papers/WP2016_02.pdf"
 url_code = "https://cran.r-project.org/web/packages/migest/index.html"
-url_dataset = "http://journals.sagepub.com/doi/suppl/10.1111/imre.12327"
+url_dataset = "https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Fimre.12327&file=imre12327-sup-0002-AppendixS2.zip"
+
 url_project = ""
 url_slides = ""
 url_video = ""
