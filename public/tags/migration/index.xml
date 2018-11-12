@@ -7,6 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
     <copyright>&amp;copy; 2018 &amp;middot; Selected posts also on &lt;a href=&#34;https://r-bloggers.com/&#34;&gt;R-bloggers&lt;/a&gt;</copyright>
+<<<<<<< HEAD
     <lastBuildDate>Mon, 15 Oct 2018 00:00:00 +0000</lastBuildDate>
     <atom:link href="/tags/migration/" rel="self" type="application/rss+xml" />
     
@@ -54,6 +55,12 @@
     </item>
     
     <item>
+=======
+    <lastBuildDate>Sat, 01 Sep 2018 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/migration/" rel="self" type="application/rss+xml" />
+    
+    <item>
+>>>>>>> 6d4fd53395cbb927f2ddfd0aba87a74e8fa231fd
       <title>European Bilateral Migration Flows</title>
       <link>/post/european-bilateral-migration-flows/</link>
       <pubDate>Sat, 01 Sep 2018 00:00:00 +0000</pubDate>
@@ -61,9 +68,20 @@
       <guid>/post/european-bilateral-migration-flows/</guid>
       <description>&lt;div id=&#34;background&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Background&lt;/h2&gt;
+<<<<<<< HEAD
 &lt;!-- https://twitter.com/jburnmurdoch/status/998971273773432833 --&gt;
 &lt;!-- &lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;en&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Agreed. Generally I struggle with chord diagrams even when not animated.&lt;/p&gt;&amp;mdash; Mara Averick (@dataandme) &lt;a href=&#34;https://twitter.com/dataandme/status/991545526909890561?ref_src=twsrc%5Etfw&#34;&gt;May 2, 2018&lt;/a&gt;&lt;/blockquote&gt; --&gt;
 &lt;!-- &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt; --&gt;
+=======
+&lt;a href=&#34;https://twitter.com/jburnmurdoch/status/998971273773432833&#34; class=&#34;uri&#34;&gt;https://twitter.com/jburnmurdoch/status/998971273773432833&lt;/a&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;en&#34;&gt;
+&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;
+Agreed. Generally I struggle with chord diagrams even when not animated.
+&lt;/p&gt;
+— Mara Averick (&lt;span class=&#34;citation&#34;&gt;@dataandme&lt;/span&gt;) &lt;a href=&#34;https://twitter.com/dataandme/status/991545526909890561?ref_src=twsrc%5Etfw&#34;&gt;May 2, 2018&lt;/a&gt;
+&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+>>>>>>> 6d4fd53395cbb927f2ddfd0aba87a74e8fa231fd
 &lt;p&gt;library(tidyverse) library(eurostat) library(scales)&lt;/p&gt;
 &lt;p&gt;d0 &amp;lt;- get_eurostat(id = “migr_imm5prv”) d1 &amp;lt;- get_eurostat(id = “migr_emi3nxt”)&lt;/p&gt;
 &lt;p&gt;d2 &amp;lt;- d0 %&amp;gt;% filter(age == “TOTAL”, agedef == “COMPLET”, sex == “T”) %&amp;gt;% rename(orig = partner, dest = geo, recieve = values) %&amp;gt;% filter(orig %in% eu_countries&lt;span class=&#34;math inline&#34;&gt;\(code,  dest %in% eu_countries\)&lt;/span&gt;code) %&amp;gt;% select(orig, dest, time, recieve)&lt;/p&gt;
@@ -168,6 +186,45 @@
     </item>
     
     <item>
+<<<<<<< HEAD
+=======
+      <title>Migrant Stock Chord Diagrams</title>
+      <link>/post/migrant-stock-chord-digrams/</link>
+      <pubDate>Sun, 01 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/migrant-stock-chord-digrams/</guid>
+      <description>&lt;div id=&#34;background&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Background&lt;/h2&gt;
+&lt;a href=&#34;https://twitter.com/jburnmurdoch/status/998971273773432833&#34; class=&#34;uri&#34;&gt;https://twitter.com/jburnmurdoch/status/998971273773432833&lt;/a&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;en&#34;&gt;
+&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;
+Agreed. Generally I struggle with chord diagrams even when not animated.
+&lt;/p&gt;
+— Mara Averick (&lt;span class=&#34;citation&#34;&gt;@dataandme&lt;/span&gt;) &lt;a href=&#34;https://twitter.com/dataandme/status/991545526909890561?ref_src=twsrc%5Etfw&#34;&gt;May 2, 2018&lt;/a&gt;
+&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+&lt;div id=&#34;asia&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Asia&lt;/h2&gt;
+&lt;!-- ![ ](/img/abel-asia-ani10.gif) --&gt;
+&lt;/div&gt;
+&lt;div id=&#34;africa&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Africa&lt;/h2&gt;
+&lt;!-- ![ ](/img/abel-africa-ani10.gif) --&gt;
+&lt;/div&gt;
+&lt;div id=&#34;north-central-south-america-and-the-carribean&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;North, Central, South America and the Carribean&lt;/h2&gt;
+&lt;!-- ![ ](/img/abel-americas-ani10.gif) --&gt;
+&lt;/div&gt;
+&lt;div id=&#34;europe&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Europe&lt;/h2&gt;
+&lt;!-- ![ ](/img/abel-europe-ani10.gif) --&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+>>>>>>> 6d4fd53395cbb927f2ddfd0aba87a74e8fa231fd
       <title>ARDI International Migration Pillar</title>
       <link>/project/adri-pillar/</link>
       <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>

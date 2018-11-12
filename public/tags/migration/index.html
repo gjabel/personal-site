@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="theme" content="hugo-academic">
-  <meta name="generator" content="Hugo 0.31" />
+  <meta name="generator" content="Hugo 0.40.3" />
   <meta name="author" content="Guy Abel">
   <meta name="description" content="Professor">
 
@@ -90,7 +90,11 @@
   <meta property="og:description" content="Professor">
   <meta property="og:locale" content="en-uk">
   
+<<<<<<< HEAD
   <meta property="og:updated_time" content="2018-10-15T00:00:00&#43;00:00">
+=======
+  <meta property="og:updated_time" content="2018-09-01T00:00:00&#43;00:00">
+>>>>>>> 6d4fd53395cbb927f2ddfd0aba87a74e8fa231fd
   
 
   
@@ -248,16 +252,32 @@
   
   
   <div>
+<<<<<<< HEAD
     <h2><a href="/post/migrant-stock-chord-digrams/">Migrant Stock Chord Diagrams</a></h2>
     <div class="article-style">
       
       Background
 During the last few months I have given some introductory talks on migration patterns in Asia and Europe. I had a couple of requests to share the animated chord diagrams that I produced for my slides for others to use in their teaching materials. I created the animations for bilateral migrant stocks in each region to give a quick indication of the relative sizes and changes in the links between each country.
+=======
+    <h2><a href="/post/european-bilateral-migration-flows/">European Bilateral Migration Flows</a></h2>
+    <div class="article-style">
+      
+      <p>Background
+<a href="https://twitter.com/jburnmurdoch/status/998971273773432833" target="_blank">https://twitter.com/jburnmurdoch/status/998971273773432833</a>
+Agreed. Generally I struggle with chord diagrams even when not animated.
+— Mara Averick (@dataandme) May 2, 2018</p>
+
+<p>library(tidyverse) library(eurostat) library(scales)
+d0 &lt;- get_eurostat(id = “migr_imm5prv”) d1 &lt;- get_eurostat(id = “migr_emi3nxt”)
+d2 &lt;- d0 %&gt;% filter(age == “TOTAL”, agedef == “COMPLET”, sex == “T”) %&gt;% rename(orig = partner, dest = geo, recieve = values) %&gt;% filter(orig %in% eu_countries(code, dest %in% eu_countries)code) %&gt;% select(orig, dest, time, recieve)</p>
+
+>>>>>>> 6d4fd53395cbb927f2ddfd0aba87a74e8fa231fd
       
     </div>
   </div>
   
   <div>
+<<<<<<< HEAD
     <h2><a href="/post/european-bilateral-migration-flows/">European Bilateral Migration Flows</a></h2>
     <div class="article-style">
       
@@ -269,6 +289,11 @@ library(tidyverse) library(eurostat) library(scales)
 d0 &lt;- get_eurostat(id = “migr_imm5prv”) d1 &lt;- get_eurostat(id = “migr_emi3nxt”)
 d2 &lt;- d0 %&gt;% filter(age == “TOTAL”, agedef == “COMPLET”, sex == “T”) %&gt;% rename(orig = partner, dest = geo, recieve = values) %&gt;% filter(orig %in% eu_countries(code, dest %in% eu_countries)code) %&gt;% select(orig, dest, time, recieve)
       
+=======
+    <h2><a href="/post/migrant-stock-chord-digrams/">Migrant Stock Chord Diagrams</a></h2>
+    <div class="article-style">
+      
+>>>>>>> 6d4fd53395cbb927f2ddfd0aba87a74e8fa231fd
     </div>
   </div>
   
