@@ -3,7 +3,6 @@ title: "European Bilateral Migration Flows"
 author: "Guy Abel"
 date: '2018-09-01'
 tags:
-- R
 - migration
 draft: TRUE
 ---
@@ -12,14 +11,9 @@ draft: TRUE
 
 <div id="background" class="section level2">
 <h2>Background</h2>
-<a href="https://twitter.com/jburnmurdoch/status/998971273773432833" class="uri">https://twitter.com/jburnmurdoch/status/998971273773432833</a>
-<blockquote class="twitter-tweet" data-lang="en">
-<p lang="en" dir="ltr">
-Agreed. Generally I struggle with chord diagrams even when not animated.
-</p>
-— Mara Averick (<span class="citation">@dataandme</span>) <a href="https://twitter.com/dataandme/status/991545526909890561?ref_src=twsrc%5Etfw">May 2, 2018</a>
-</blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<!-- https://twitter.com/jburnmurdoch/status/998971273773432833 -->
+<!-- <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Agreed. Generally I struggle with chord diagrams even when not animated.</p>&mdash; Mara Averick (@dataandme) <a href="https://twitter.com/dataandme/status/991545526909890561?ref_src=twsrc%5Etfw">May 2, 2018</a></blockquote> -->
+<!-- <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
 <p>library(tidyverse) library(eurostat) library(scales)</p>
 <p>d0 &lt;- get_eurostat(id = “migr_imm5prv”) d1 &lt;- get_eurostat(id = “migr_emi3nxt”)</p>
 <p>d2 &lt;- d0 %&gt;% filter(age == “TOTAL”, agedef == “COMPLET”, sex == “T”) %&gt;% rename(orig = partner, dest = geo, recieve = values) %&gt;% filter(orig %in% eu_countries<span class="math inline">\(code,  dest %in% eu_countries\)</span>code) %&gt;% select(orig, dest, time, recieve)</p>

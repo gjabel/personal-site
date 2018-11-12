@@ -88,7 +88,7 @@
   <meta property="og:description" content="Professor">
   <meta property="og:locale" content="en-uk">
   
-  <meta property="og:updated_time" content="2018-09-01T00:00:00&#43;00:00">
+  <meta property="og:updated_time" content="2018-10-15T00:00:00&#43;00:00">
   
 
   
@@ -252,6 +252,61 @@
   
   
   <h3 class="article-title" itemprop="headline">
+    <a href="/post/migrant-stock-chord-digrams/" itemprop="url">Migrant Stock Chord Diagrams</a>
+  </h3>
+  
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    
+    <time datetime="2018-10-15 00:00:00 &#43;0000 UTC" itemprop="datePublished dateModified">
+      15 October 2018
+    </time>
+  </span>
+  <span itemscope itemprop="author publisher" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Guy Abel">
+  </span>
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    2 min read
+  </span>
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <a href="/post/migrant-stock-chord-digrams/#disqus_thread"></a>
+  
+
+  
+
+  
+
+</div>
+
+  <div class="article-style" itemprop="articleBody">
+    
+    BackgroundDuring the last few months I have given some introductory talks on migration patterns in Asia and Europe. I had a couple of requests to share the animated chord diagrams that I produced for my slides for others to use in their teaching materials. I created the animations for bilateral migrant stocks in each region to give a quick indication of the relative sizes and changes in the links between each country.
+    
+  </div>
+  <p class="read-more" itemprop="mainEntityOfPage">
+    <a href="/post/migrant-stock-chord-digrams/" class="btn btn-primary btn-outline">
+      CONTINUE READING
+    </a>
+  </p>
+</div>
+
+  
+    
+    
+
+<div class="article-list-item" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
+  
+  
+  <h3 class="article-title" itemprop="headline">
     <a href="/post/european-bilateral-migration-flows/" itemprop="url">European Bilateral Migration Flows</a>
   </h3>
   
@@ -289,95 +344,14 @@
 
   <div class="article-style" itemprop="articleBody">
     
-    Backgroundhttps://twitter.com/jburnmurdoch/status/998971273773432833Agreed. Generally I struggle with chord diagrams even when not animated.— Mara Averick (@dataandme) May 2, 2018library(tidyverse) library(eurostat) library(scales)
+    BackgroundAgreed. Generally I struggle with chord diagrams even when not animated.
+&mdash; Mara Averick (@dataandme) May 2, 2018 -- --library(tidyverse) library(eurostat) library(scales)
 d0 &lt;- get_eurostat(id = “migr_imm5prv”) d1 &lt;- get_eurostat(id = “migr_emi3nxt”)
 d2 &lt;- d0 %&gt;% filter(age == “TOTAL”, agedef == “COMPLET”, sex == “T”) %&gt;% rename(orig = partner, dest = geo, recieve = values) %&gt;% filter(orig %in% eu_countries\(code, dest %in% eu_countries\)code) %&gt;% select(orig, dest, time, recieve)
     
   </div>
   <p class="read-more" itemprop="mainEntityOfPage">
     <a href="/post/european-bilateral-migration-flows/" class="btn btn-primary btn-outline">
-      CONTINUE READING
-    </a>
-  </p>
-</div>
-
-  
-    
-    
-
-<div class="article-list-item" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
-  
-  
-  <h3 class="article-title" itemprop="headline">
-    <a href="/post/migrant-stock-chord-digrams/" itemprop="url">Migrant Stock Chord Diagrams</a>
-  </h3>
-  
-
-<div class="article-metadata">
-
-  <span class="article-date">
-    
-    <time datetime="2018-07-01 00:00:00 &#43;0000 UTC" itemprop="datePublished dateModified">
-      01 July 2018
-    </time>
-  </span>
-  <span itemscope itemprop="author publisher" itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Guy Abel">
-  </span>
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    1 min read
-  </span>
-  
-
-  
-  
-  <span class="middot-divider"></span>
-  <a href="/post/migrant-stock-chord-digrams/#disqus_thread"></a>
-  
-
-  
-
-  
-
-</div>
-
-  <div class="article-style" itemprop="articleBody">
-    
-    <div id="background" class="section level2">
-<h2>Background</h2>
-<a href="https://twitter.com/jburnmurdoch/status/998971273773432833" class="uri">https://twitter.com/jburnmurdoch/status/998971273773432833</a>
-<blockquote class="twitter-tweet" data-lang="en">
-<p lang="en" dir="ltr">
-Agreed. Generally I struggle with chord diagrams even when not animated.
-</p>
-— Mara Averick (<span class="citation">@dataandme</span>) <a href="https://twitter.com/dataandme/status/991545526909890561?ref_src=twsrc%5Etfw">May 2, 2018</a>
-</blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-</div>
-<div id="asia" class="section level2">
-<h2>Asia</h2>
-<!-- ![ ](/img/abel-asia-ani10.gif) -->
-</div>
-<div id="africa" class="section level2">
-<h2>Africa</h2>
-<!-- ![ ](/img/abel-africa-ani10.gif) -->
-</div>
-<div id="north-central-south-america-and-the-carribean" class="section level2">
-<h2>North, Central, South America and the Carribean</h2>
-<!-- ![ ](/img/abel-americas-ani10.gif) -->
-</div>
-<div id="europe" class="section level2">
-<h2>Europe</h2>
-<!-- ![ ](/img/abel-europe-ani10.gif) -->
-</div>
-
-    
-  </div>
-  <p class="read-more" itemprop="mainEntityOfPage">
-    <a href="/post/migrant-stock-chord-digrams/" class="btn btn-primary btn-outline">
       CONTINUE READING
     </a>
   </p>
@@ -478,7 +452,7 @@ Agreed. Generally I struggle with chord diagrams even when not animated.
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    9 min read
+    8 min read
   </span>
   
 

@@ -11,6 +11,28 @@
     <atom:link href="/publication/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Non-zero trajectories for long-run net migration assumptions in global population projection models</title>
+      <link>/publication/non-zero-ssp-net-migration-projections/</link>
+      <pubDate>Wed, 16 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/non-zero-ssp-net-migration-projections/</guid>
+      <description>
+
+&lt;h2 id=&#34;further-notes&#34;&gt;Further Notes&lt;/h2&gt;
+
+&lt;p&gt;Below are a some plots that I had to drop from the paper. Some reviewers liked them, but the editor made a good point - they distracted from the main narrative of the paper. I have put them here as 1) I think they still might be of interest to some and 2) it took some effort to gather the net migration data from as many past versions of the World Population Prospects (WPP) as I could get my hands on.&lt;/p&gt;
+
+&lt;p&gt;The first plot shows estimates and future assumptions of net migration for all countries, as published by the United Nations DESA in past and current WPP.
+&lt;img src=&#34;/img/abel-wpp-net1.png&#34; alt=&#34; &#34; /&gt;
+With this plot I was trying to illustrate the differences between the voltile past estimates and the more regular future assumptions. It also shows how the assumption making has evolved to cover a longer period (up to 2100 from WPP2010 on-wards) and the use of the long run zero net migration trajectory - an assumption that seems overly complex to me.&lt;/p&gt;
+
+&lt;p&gt;The second plot slices the data and future assumption a different way - looking at revisions in the WPP for each continent. These plots are similar to those that &lt;a href=&#34;http://webarchive.nationalarchives.gov.uk/20160108034027/http://www.ons.gov.uk/ons/rel/population-trends-rd/population-trends/no--128--summer-2007/fifty-years-of-united-kingdom-national-population-projections--how-accurate-have-they-been-.pdf&#34; target=&#34;_blank&#34;&gt;Shaw (2007)&lt;/a&gt; used to illustrate assumption drift in the ONS national population projections.
+&lt;img src=&#34;/img/abel-wpp-net2.png&#34; alt=&#34; &#34; /&gt;
+The assumptions in the past WPP also exhibit some drift, with assumptions for future net migration commonly immediately turning towards lower levels - where future estimates go on to show that a persistence assumption (without the turning point) would have been more accurate - check out Africa or Europe for example.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Subnational gender balances in South Korea</title>
       <link>/publication/korea-gender-balance/</link>
       <pubDate>Tue, 06 Feb 2018 00:00:00 +0000</pubDate>

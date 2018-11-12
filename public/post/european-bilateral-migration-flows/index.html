@@ -324,14 +324,9 @@
       <div class="article-style" itemprop="articleBody">
         <div id="background" class="section level2">
 <h2>Background</h2>
-<a href="https://twitter.com/jburnmurdoch/status/998971273773432833" class="uri">https://twitter.com/jburnmurdoch/status/998971273773432833</a>
-<blockquote class="twitter-tweet" data-lang="en">
-<p lang="en" dir="ltr">
-Agreed. Generally I struggle with chord diagrams even when not animated.
-</p>
-— Mara Averick (<span class="citation">@dataandme</span>) <a href="https://twitter.com/dataandme/status/991545526909890561?ref_src=twsrc%5Etfw">May 2, 2018</a>
-</blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<!-- https://twitter.com/jburnmurdoch/status/998971273773432833 -->
+<!-- <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Agreed. Generally I struggle with chord diagrams even when not animated.</p>&mdash; Mara Averick (@dataandme) <a href="https://twitter.com/dataandme/status/991545526909890561?ref_src=twsrc%5Etfw">May 2, 2018</a></blockquote> -->
+<!-- <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
 <p>library(tidyverse) library(eurostat) library(scales)</p>
 <p>d0 &lt;- get_eurostat(id = “migr_imm5prv”) d1 &lt;- get_eurostat(id = “migr_emi3nxt”)</p>
 <p>d2 &lt;- d0 %&gt;% filter(age == “TOTAL”, agedef == “COMPLET”, sex == “T”) %&gt;% rename(orig = partner, dest = geo, recieve = values) %&gt;% filter(orig %in% eu_countries<span class="math inline">\(code,  dest %in% eu_countries\)</span>code) %&gt;% select(orig, dest, time, recieve)</p>
@@ -440,8 +435,6 @@ Agreed. Generally I struggle with chord diagrams even when not animated.
 
 <div class="article-tags">
   
-  <a class="btn btn-primary btn-outline" href="/tags/r">R</a>
-  
   <a class="btn btn-primary btn-outline" href="/tags/migration">migration</a>
   
 </div>
@@ -460,15 +453,11 @@ Agreed. Generally I struggle with chord diagrams even when not animated.
   <h3>Related</h3>
   <ul>
     
-    <li><a href="/post/migrant-stock-chord-digrams/">Migrant Stock Chord Diagrams</a></li>
+    <li><a href="/project/global-migration-prediction/">Global Migration Predictions</a></li>
     
-    <li><a href="/post/football-kits/">Animating Changes in Football Kits using R</a></li>
-    
-    <li><a href="/post/animated-directional-chord-diagrams/">Animated Directional Chord Diagrams</a></li>
+    <li><a href="/project/combining-migration-data/">Combining Migration Data</a></li>
     
     <li><a href="/project/adri-pillar/">ARDI International Migration Pillar</a></li>
-    
-    <li><a href="/project/global-migration-prediction/">Global Migration Predictions</a></li>
     
   </ul>
 </div>

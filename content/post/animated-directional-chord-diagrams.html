@@ -22,26 +22,22 @@ draft: false
 <li>Time series of bilateral migration flow estimates:</li>
 </ol>
 <pre class="r"><code># install.packages(&quot;migest&quot;)
-library(tidyverse)</code></pre>
-<pre><code>## Warning: package &#39;tidyverse&#39; was built under R version 3.4.4</code></pre>
-<pre><code>## Warning: package &#39;ggplot2&#39; was built under R version 3.4.4</code></pre>
-<pre><code>## Warning: package &#39;tibble&#39; was built under R version 3.4.4</code></pre>
-<pre><code>## Warning: package &#39;stringr&#39; was built under R version 3.4.4</code></pre>
-<pre class="r"><code>d0 &lt;- read_csv(system.file(&quot;imr&quot;, &quot;reg_flow.csv&quot;, package = &quot;migest&quot;))
+library(tidyverse)
+d0 &lt;- read_csv(system.file(&quot;imr&quot;, &quot;reg_flow.csv&quot;, package = &quot;migest&quot;))
 d0 </code></pre>
 <pre><code>## # A tibble: 891 x 4
-##    year0 orig_reg     dest_reg                          flow
-##    &lt;int&gt; &lt;chr&gt;        &lt;chr&gt;                            &lt;dbl&gt;
-##  1  1960 Africa       Africa                        1377791.
-##  2  1960 Africa       Eastern Asia                     5952.
-##  3  1960 Africa       Eastern Europe &amp; Central Asia    7303.
-##  4  1960 Africa       Europe                         919252.
-##  5  1960 Africa       Latin America &amp; Caribbean       15796.
-##  6  1960 Africa       Northern America                82463.
-##  7  1960 Africa       Oceania                         32825.
-##  8  1960 Africa       Southern Asia                   35603.
-##  9  1960 Africa       Western Asia                   106580.
-## 10  1960 Eastern Asia Africa                          37301.
+##    year0 orig_reg     dest_reg                         flow
+##    &lt;int&gt; &lt;chr&gt;        &lt;chr&gt;                           &lt;dbl&gt;
+##  1  1960 Africa       Africa                        1377791
+##  2  1960 Africa       Eastern Asia                     5952
+##  3  1960 Africa       Eastern Europe &amp; Central Asia    7303
+##  4  1960 Africa       Europe                         919252
+##  5  1960 Africa       Latin America &amp; Caribbean       15796
+##  6  1960 Africa       Northern America                82463
+##  7  1960 Africa       Oceania                         32825
+##  8  1960 Africa       Southern Asia                   35603
+##  9  1960 Africa       Western Asia                   106580
+## 10  1960 Eastern Asia Africa                          37301
 ## # ... with 881 more rows</code></pre>
 <ol start="2" style="list-style-type: decimal">
 <li>Some regional meta data for chord diagram plots:</li>
@@ -49,17 +45,17 @@ d0 </code></pre>
 <pre class="r"><code>d1 &lt;- read_csv(system.file(&quot;vidwp&quot;, &quot;reg_plot.csv&quot;, package = &quot;migest&quot;))
 d1</code></pre>
 <pre><code>## # A tibble: 9 x 5
-##   region                        order1 col1    reg1           reg2        
-##   &lt;chr&gt;                          &lt;int&gt; &lt;chr&gt;   &lt;chr&gt;          &lt;chr&gt;       
-## 1 Northern America                   1 #40A4D8 Northern       America     
-## 2 Africa                             2 #33BEB7 Africa         &lt;NA&gt;        
-## 3 Europe                             3 #B2C224 Europe         &lt;NA&gt;        
-## 4 Eastern Europe &amp; Central Asia      4 #FECC2F Eastern Europe &amp; Central A~
-## 5 Western Asia                       5 #FBA127 Western        Asia        
-## 6 Southern Asia                      6 #F66320 Southern       Asia        
-## 7 Eastern Asia                       7 #DB3937 Eastern        Asia        
-## 8 Oceania                            8 #A463D7 Oceania        &lt;NA&gt;        
-## 9 Latin America &amp; Caribbean          9 #0C5BCE Latin America  &amp; Caribbean</code></pre>
+##   region                       order1 col1    reg1           reg2         
+##   &lt;chr&gt;                         &lt;int&gt; &lt;chr&gt;   &lt;chr&gt;          &lt;chr&gt;        
+## 1 Northern America                  1 #40A4D8 Northern       America      
+## 2 Africa                            2 #33BEB7 Africa         &lt;NA&gt;         
+## 3 Europe                            3 #B2C224 Europe         &lt;NA&gt;         
+## 4 Eastern Europe &amp; Central As~      4 #FECC2F Eastern Europe &amp; Central As~
+## 5 Western Asia                      5 #FBA127 Western        Asia         
+## 6 Southern Asia                     6 #F66320 Southern       Asia         
+## 7 Eastern Asia                      7 #DB3937 Eastern        Asia         
+## 8 Oceania                           8 #A463D7 Oceania        &lt;NA&gt;         
+## 9 Latin America &amp; Caribbean         9 #0C5BCE Latin America  &amp; Caribbean</code></pre>
 </div>
 <div id="tween-data" class="section level2">
 <h2>Tween Data</h2>
@@ -74,18 +70,18 @@ d2 &lt;- d0 %&gt;%
   tbl_df()
 d2</code></pre>
 <pre><code>## # A tibble: 8,181 x 4
-##    year0     flow .frame .group                                 
-##  * &lt;dbl&gt;    &lt;dbl&gt;  &lt;int&gt; &lt;chr&gt;                                  
-##  1 1960. 1377791.      0 Africa -&gt; Africa                       
-##  2 1960.    5952.      0 Africa -&gt; Eastern Asia                 
-##  3 1960.    7303.      0 Africa -&gt; Eastern Europe &amp; Central Asia
-##  4 1960.  919252.      0 Africa -&gt; Europe                       
-##  5 1960.   15796.      0 Africa -&gt; Latin America &amp; Caribbean    
-##  6 1960.   82463.      0 Africa -&gt; Northern America             
-##  7 1960.   32825.      0 Africa -&gt; Oceania                      
-##  8 1960.   35603.      0 Africa -&gt; Southern Asia                
-##  9 1960.  106580.      0 Africa -&gt; Western Asia                 
-## 10 1960.   37301.      0 Eastern Asia -&gt; Africa                 
+##    year0    flow .frame .group                                 
+##  * &lt;dbl&gt;   &lt;dbl&gt;  &lt;int&gt; &lt;chr&gt;                                  
+##  1  1960 1377791      0 Africa -&gt; Africa                       
+##  2  1960    5952      0 Africa -&gt; Eastern Asia                 
+##  3  1960    7303      0 Africa -&gt; Eastern Europe &amp; Central Asia
+##  4  1960  919252      0 Africa -&gt; Europe                       
+##  5  1960   15796      0 Africa -&gt; Latin America &amp; Caribbean    
+##  6  1960   82463      0 Africa -&gt; Northern America             
+##  7  1960   32825      0 Africa -&gt; Oceania                      
+##  8  1960   35603      0 Africa -&gt; Southern Asia                
+##  9  1960  106580      0 Africa -&gt; Western Asia                 
+## 10  1960   37301      0 Eastern Asia -&gt; Africa                 
 ## # ... with 8,171 more rows</code></pre>
 <p>This creates larger data frame <code>d2</code>, with 100 observations for each corridor, one for each frame in the animation. In the original data <code>d0</code> there are only 11 observations for each corridor, one for each five-year period.</p>
 <p>Then some further minor data wrangling is required to ready the data for plotting using the <code>chordDiagram</code> function; namely the first three columns in the data must correspond to the origin, destination and flow.</p>
@@ -97,16 +93,16 @@ d2</code></pre>
 <pre><code>## # A tibble: 8,181 x 5
 ##    orig_reg     dest_reg                         flow year0 .frame
 ##    &lt;chr&gt;        &lt;chr&gt;                           &lt;dbl&gt; &lt;dbl&gt;  &lt;int&gt;
-##  1 Africa       Africa                        1.38    1960.      0
-##  2 Africa       Eastern Asia                  0.00595 1960.      0
-##  3 Africa       Eastern Europe &amp; Central Asia 0.00730 1960.      0
-##  4 Africa       Europe                        0.919   1960.      0
-##  5 Africa       Latin America &amp; Caribbean     0.0158  1960.      0
-##  6 Africa       Northern America              0.0825  1960.      0
-##  7 Africa       Oceania                       0.0328  1960.      0
-##  8 Africa       Southern Asia                 0.0356  1960.      0
-##  9 Africa       Western Asia                  0.107   1960.      0
-## 10 Eastern Asia Africa                        0.0373  1960.      0
+##  1 Africa       Africa                        1.38     1960      0
+##  2 Africa       Eastern Asia                  0.00595  1960      0
+##  3 Africa       Eastern Europe &amp; Central Asia 0.00730  1960      0
+##  4 Africa       Europe                        0.919    1960      0
+##  5 Africa       Latin America &amp; Caribbean     0.0158   1960      0
+##  6 Africa       Northern America              0.0825   1960      0
+##  7 Africa       Oceania                       0.0328   1960      0
+##  8 Africa       Southern Asia                 0.0356   1960      0
+##  9 Africa       Western Asia                  0.107    1960      0
+## 10 Eastern Asia Africa                        0.0373   1960      0
 ## # ... with 8,171 more rows</code></pre>
 </div>
 <div id="plots-for-each-frame" class="section level2">

@@ -24,7 +24,7 @@ Recently I have been playing around `tweenr` and the `magick` packages for anima
 The first step is to read into R two data frames (these are in my `migest` R package if you wish to replicate the code below). 
 
   1. Time series of bilateral migration flow estimates:
-```{r, message=FALSE}
+```{r, message=FALSE, warning=FALSE}
 # install.packages("migest")
 library(tidyverse)
 d0 <- read_csv(system.file("imr", "reg_flow.csv", package = "migest"))

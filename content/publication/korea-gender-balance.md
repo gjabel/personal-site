@@ -24,7 +24,7 @@ publication_short = ""
 abstract = "Within one generation, the South Korean economy developed from one of the poorest countries in the world during the 1950s to a developed, high-income country by the end of the 1990s. During the latter part of this period, South Korea (hereafter called Korea) experienced rapid demographic change characterized by a steep decline in fertility levels and abnormally high sex ratios at birth. Unlike other East and South-East Asian countries that underwent similar economic and demographic changes, Korea has witnessed a steady decline in the sex ratios at birth since the end of 1990s through 2000s. In this paper, we visualize the current spatial distribution of population born during the peak years of sex ratios at birth."
 
 # Featured image thumbnail (optional)
-image_preview = ""
+image_preview = "/img/korea_srb.gif"
 
 # Is this a selected publication? (true/false)
 selected = false
