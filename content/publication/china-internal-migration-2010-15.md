@@ -27,7 +27,7 @@ abstract = "We adapted the chord diagram plot to visualize China’s recent inte
 image_preview = ""
 
 # Is this a selected publication? (true/false)
-selected = true
+selected = false
 
 # Projects (optional).
 #   Associate this publication with one or more of your projects.

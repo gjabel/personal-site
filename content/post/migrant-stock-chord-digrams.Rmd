@@ -1,23 +1,21 @@
 ---
 title: "Migrant Stock Chord Diagrams"
 author: "Guy Abel"
-date: '2018-10-15'
+date: '2018-11-14'
 tags:
 - migration
-draft: TRUE
+- chord diagram
+header:
+  image: "stocks-ani-cd0.png"
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-During the last few months I have given some introductory talks on migration patterns in Asia and Europe. I had a couple of requests to share the animated chord diagrams that I produced for my slides for others to use in their teaching materials. I created the animations for bilateral migrant stocks in each region to give an indication of the relative sizes and changes. I thought I would put the copies in this post for anyone else who might want to use them. 
+During the last few months I have given some introductory talks on international migration in Asia and Europe. I had a couple of requests to share the animated chord diagrams that I produced for my slides for others to use in their teaching materials. These are below, along with some extra plots for Africa and the Americas (Northern, Central and Southern America as well as the Caribbean.)
 
-As in my previous post on [animated chord diagrams](http://guyabel.com/post/animated-directional-chord-diagrams/) I used the [`circlize`](https://cran.r-project.org/web/packages/circlize/index.html) package to produce each chord diagrams for each frame of the animation and [`tweenr`](https://cran.r-project.org/web/packages/tweenr/index.html) for the intermediate data and [`magick`](https://cran.r-project.org/web/packages/magick/index.html) to produce the GIFs. The country flags were added using the `circos.raster()` function in circlize. 
-
-After initially writing the code for Asia, I made a few tweaks to enable the creation of similar animations for Europe, Africa and the Americas. The data are based on the 2017 revision of the United Nations DESA [International Migrant Stock Data](http://www.un.org/en/development/desa/population/migration/data/estimates2/estimates17.shtml). The chords in the diagrams represent the connection between the places of birth (at the base of the chord) and places of residence (at the arrow head of the chord). The width of the chords at their base correspond to the size of the given migrant populations in millions. Chords are ordered relative to their size, with the largest migrant stocks plotted at the beginning of the country segments. This ordering jumps around over time as the ranking of the largest foreign born populations change.
-
-
+The chords in the diagrams represent the connection between the places of birth (at the base of the chord) and places of residence (at the arrow head of the chord). The width of based of the chords correspond to the size of the migrant population in millions. Chords are ordered relative to their size, with the largest migrant stocks plotted at the beginning of the country segments. The ordering of chords jumps around over time as the relative rankings of the largest foreign-born populations change in each country. Values for the migrant population sizes are from the 2017 revision of the United Nations DESA [International Migrant Stock Data](http://www.un.org/en/development/desa/population/migration/data/estimates2/estimates17.shtml). 
 
 ![ ](/img/abel-asia-ani10.gif)
 
@@ -27,7 +25,7 @@ After initially writing the code for Asia, I made a few tweaks to enable the cre
 
 ![ ](/img/abel-americas-ani10.gif)
 
-
+As in my previous post on [animated chord diagrams](http://guyabel.com/post/animated-directional-chord-diagrams/) I used the [`circlize`](https://cran.r-project.org/web/packages/circlize/index.html) package in R to produce each chord diagrams for each frame of the animation and [`tweenr`](https://cran.r-project.org/web/packages/tweenr/index.html) for the intermediate data and [`magick`](https://cran.r-project.org/web/packages/magick/index.html) to produce the GIFs. The country flags were added using the `circos.raster()` function in circlize. 
 
 
 

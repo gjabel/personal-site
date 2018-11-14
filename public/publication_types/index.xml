@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Publication_types on Guy Abel</title>
-    <link>/publication_types/</link>
+    <link>https://guyabel.com/publication_types/</link>
     <description>Recent content in Publication_types on Guy Abel</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
     <copyright>&amp;copy; 2018 &amp;middot; Selected posts also on &lt;a href=&#34;https://r-bloggers.com/&#34;&gt;R-bloggers&lt;/a&gt;</copyright>
-    <lastBuildDate>Tue, 06 Feb 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 16 May 2018 00:00:00 +0000</lastBuildDate>
     <atom:link href="/publication_types/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>2</title>
-      <link>/publication_types/2/</link>
-      <pubDate>Tue, 06 Feb 2018 00:00:00 +0000</pubDate>
+      <link>https://guyabel.com/publication_types/2/</link>
+      <pubDate>Wed, 16 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>/publication_types/2/</guid>
+      <guid>https://guyabel.com/publication_types/2/</guid>
       <description></description>
     </item>
     

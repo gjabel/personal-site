@@ -17,5 +17,5 @@ weight = 60
 
 Currently Teaching at Shanghai University:
 
-* **3XS371026 Data Science for Population Studies**, Semester 2, 2017-18
-* **3XS371022 Statistical Methods for Population Studies**, Semester 3, 2017-18
+* **3XS371026 Data Science for Demography**, Semester 1, 2018-19
+* **3XS371022 Statistical Methods for Demography**, Semester 2, 2018-19

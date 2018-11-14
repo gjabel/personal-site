@@ -24,10 +24,10 @@ publication_short = ""
 abstract = "Little attention is given to the role of migration in global population projection models. Most demographers set future levels of net migration on trajectories towards zero in all countries, nullifying the impact of migration on long-run projected populations. Yet as fertility and mortality rates fall, the role of migration on future population change is becoming more pronounced. In this paper we develop future long-run migration scenarios to provide a range of possible outcomes. Our alternative migration scenarios are linked to the Shared Socioeconomic Pathways (SSP), widely used in research on global environmental change. These are utilized as inputs for a global cohort component projection model to obtain population totals up until 2100 for all countries. The results illustrate the important role of migration assumptions in long run projections, especially in post demographic transition countries. Further, they provide plausible alternatives to projections based on the commonly used, but poorly justified, convergence to the zero net migration assumption"
 
 # Featured image thumbnail (optional)
-image_preview = "abel-ssp-net"
+image_preview = ""
 
 # Is this a selected publication? (true/false)
-selected = true
+selected = false
 
 # Projects (optional).
 #   Associate this publication with one or more of your projects.
@@ -58,19 +58,21 @@ highlight = true
 # Featured image
 # Place your image in the `static/img/` folder and reference its filename below, e.g. `image = "example.jpg"`.
 [header]
-image = "headers/abel-ssp-net.png"
+image = "abel-ssp-net.png"
 caption = "Non-zero trajectories for long-run net migration assumptions in global population projection models"
 
 +++
 
 ## Further Notes
 
-Below are a some plots that I had to drop from the paper. Some reviewers liked them, but the editor made a good point - they distracted from the main narrative of the paper. I have put them here as 1) I think they still might be of interest to some and 2) it took some effort to gather the net migration data from as many past versions of the World Population Prospects (WPP) as I could get my hands on. 
+Below are some plots that I had to drop from the paper. Some reviewers liked them, reviewer three didn’t. The editor sided with the later, making a good point; they distracted from the main narrative of the paper. I have put them here as 1) I think they still might be of interest to some and 2) it took some effort to gather the net migration data from as many past versions of the World Population Prospects (WPP) as I could get my hands on.
 
-The first plot shows estimates and future assumptions of net migration for all countries, as published by the United Nations DESA in past and current WPP. 
+The first plot shows estimates and future assumptions of net migration for all countries, as published by the United Nations DESA in past and current WPP.
+
 ![ ](/img/abel-wpp-net1.png)
-With this plot I was trying to illustrate the differences between the voltile past estimates and the more regular future assumptions. It also shows how the assumption making has evolved to cover a longer period (up to 2100 from WPP2010 on-wards) and the use of the long run zero net migration trajectory - an assumption that seems overly complex to me.
 
-The second plot slices the data and future assumption a different way - looking at revisions in the WPP for each continent. These plots are similar to those that [Shaw (2007)](http://webarchive.nationalarchives.gov.uk/20160108034027/http://www.ons.gov.uk/ons/rel/population-trends-rd/population-trends/no--128--summer-2007/fifty-years-of-united-kingdom-national-population-projections--how-accurate-have-they-been-.pdf) used to illustrate assumption drift in the ONS national population projections.
+With this plot I was trying to illustrate the differences between the volatile past estimates and the more regular future assumptions. It also shows how the assumption making has evolved to cover a longer period (up to 2100 from WPP2010 on-wards) and the use of the long run zero net migration trajectory, an assumption that seems to me to be overly complex given we know nothing about migration in the long run.
+
+The second plot slices the past data and future assumption a different way - looking at revisions in the WPP for each continent. These plots are similar to those that [Shaw (2007)](http://webarchive.nationalarchives.gov.uk/20160108034027/http://www.ons.gov.uk/ons/rel/population-trends-rd/population-trends/no--128--summer-2007/fifty-years-of-united-kingdom-national-population-projections--how-accurate-have-they-been-.pdf) used to illustrate assumption drift in the ONS national population projections.
 ![ ](/img/abel-wpp-net2.png)
-The assumptions in the past WPP also exhibit some drift, with assumptions for future net migration commonly immediately turning towards lower levels - where future estimates go on to show that a persistence assumption (without the turning point) would have been more accurate - check out Africa or Europe for example.  
+The assumptions in the past WPP also exhibit some drift, with assumptions for future net migration commonly immediately turning towards lower levels - where later observed estimates go on to show that a persistence assumption (without the turning point) would have been more accurate - see for example Africa or Europe.

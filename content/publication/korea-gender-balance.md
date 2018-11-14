@@ -17,14 +17,14 @@ authors = ["Guy J. Abel", "Nayoung Heo"]
 publication_types = ["2"]
 
 # Publication name and optional abbreviated version.
-publication = "In *Environment and Planning A: Economy and Space*, Forthcoming."
+publication = "In *Environment and Planning A: Economy and Space*, 50 (5), 941-944."
 publication_short = ""
 
 # Abstract and optional shortened version.
 abstract = "Within one generation, the South Korean economy developed from one of the poorest countries in the world during the 1950s to a developed, high-income country by the end of the 1990s. During the latter part of this period, South Korea (hereafter called Korea) experienced rapid demographic change characterized by a steep decline in fertility levels and abnormally high sex ratios at birth. Unlike other East and South-East Asian countries that underwent similar economic and demographic changes, Korea has witnessed a steady decline in the sex ratios at birth since the end of 1990s through 2000s. In this paper, we visualize the current spatial distribution of population born during the peak years of sex ratios at birth."
 
 # Featured image thumbnail (optional)
-image_preview = "/img/korea_srb.gif"
+image_preview = ""
 
 # Is this a selected publication? (true/false)
 selected = false
@@ -58,8 +58,16 @@ highlight = true
 # Featured image
 # Place your image in the `static/img/` folder and reference its filename below, e.g. `image = "example.jpg"`.
 [header]
-# image = "headers/koreamigvis1.png"
-# caption = "2016 Migration Flows"
+image = "plot_srm2.png"
+caption = "Sex Ratios in Marital Ages 2015"
 
 +++
+
+## Further Notes
+
+An animated version of the plot in the paper I made when playing around with [`gganimate`](https://github.com/thomasp85/gganimate)
+
+![ ](/img/korea_srb.gif)
+
+
 
