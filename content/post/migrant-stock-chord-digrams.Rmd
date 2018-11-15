@@ -43,12 +43,12 @@ The chords in the diagrams represent the connection between the places of birth 
 
 <!-- ![ ](/img/abel-americas-ani10.gif) -->
 
-Data in these plots represent migrant population totals, not migration flows, and hence the usual caveats of migrant stock data apply:
+The data in these plots represent migrant population totals, not migration flows, hence the usual caveats associated with migrant stock data apply:
 
-- Underlying migration flows might form different patterns of linkages as migrants might not be moving from their country of birth.
+- Underlying migration flows might form different patterns as migrants might not be moving from their country of birth.
 - Migrant populations can decrease from deaths as well as outward migration.
 
-As in my previous post on [animated chord diagrams](http://guyabel.com/post/animated-directional-chord-diagrams/) I used the [`circlize`](https://cran.r-project.org/web/packages/circlize/index.html) package in R to produce each chord diagrams for each frame of the animation and [`tweenr`](https://cran.r-project.org/web/packages/tweenr/index.html) for the intermediate data. The country flags were added using the `circos.raster()` function in circlize. I used [`gifski`](https://cran.r-project.org/web/packages/gifski/index.html) to produce the GIFs and converted them to `.mp4` files using [https://ezgif.com](https://ezgif.com/gif-to-mp4/). This reduces the file size to allow for quicker loading and allows for viewers to control the image. In most browsers you can right click on an image for options to pause or save the file.
+As in my previous post on [animated chord diagrams](http://guyabel.com/post/animated-directional-chord-diagrams/) I used the [`circlize`](https://cran.r-project.org/web/packages/circlize/index.html) package in R to produce each chord diagrams for each frame of the animation and [`tweenr`](https://cran.r-project.org/web/packages/tweenr/index.html) for the intermediate data. The country flags were added using the `circos.raster()` function in circlize. I used [`gifski`](https://cran.r-project.org/web/packages/gifski/index.html) to produce the GIFs and converted them to `.mp4` files using [https://ezgif.com](https://ezgif.com/gif-to-mp4/). This reduced the file size to allow for quicker loading and enables viewers to control the animation - in most browsers you can right click to control the speed or save the file.
 
 
 
