@@ -17,13 +17,20 @@ During the last few months I have given some introductory talks on international
 
 The chords in the diagrams represent the connection between the places of birth (at the base of the chord) and places of residence (at the arrow head of the chord). The width of based of the chords correspond to the size of the migrant population in millions. Chords are ordered relative to their size, with the largest migrant stocks plotted at the beginning of the country segments. The ordering of chords jumps around over time as the relative rankings of the largest foreign-born populations change in each country. Values for the migrant population sizes are from the 2017 revision of the United Nations DESA [International Migrant Stock Data](http://www.un.org/en/development/desa/population/migration/data/estimates2/estimates17.shtml). 
 
-![ ](/img/abel-asia-ani10.gif)
+<!-- ![ ](/img/anigif_original-14120-1449691023-4-2.mp4) -->
 
-![ ](/img/abel-europe-ani10.gif)
+<video autoplay="autoplay" loop="loop" width="720" height="720">
+  <source src="/img/abel-americas-ani10.mp4" type="video/mp4" />
+</video>
+  
+<!-- ![ ](/img/abel-americas-ani10.mp4) -->
+<!-- ![ ](/img/abel-asia-ani10.gif) -->
 
-![ ](/img/abel-africa-ani10.gif)
+<!-- ![ ](/img/abel-europe-ani10.gif) -->
 
-![ ](/img/abel-americas-ani10.gif)
+<!-- ![ ](/img/abel-africa-ani10.gif) -->
+
+<!-- ![ ](/img/abel-americas-ani10.gif) -->
 
 As in my previous post on [animated chord diagrams](http://guyabel.com/post/animated-directional-chord-diagrams/) I used the [`circlize`](https://cran.r-project.org/web/packages/circlize/index.html) package in R to produce each chord diagrams for each frame of the animation and [`tweenr`](https://cran.r-project.org/web/packages/tweenr/index.html) for the intermediate data and [`magick`](https://cran.r-project.org/web/packages/magick/index.html) to produce the GIFs. The country flags were added using the `circos.raster()` function in circlize. 
 

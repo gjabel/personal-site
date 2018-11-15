@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Chord diagram on Guy Abel</title>
-    <link>https://guyabel.com/tags/chord-diagram/</link>
+    <link>/tags/chord-diagram/</link>
     <description>Recent content in Chord diagram on Guy Abel</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
@@ -12,38 +12,31 @@
     
     <item>
       <title>Migrant Stock Chord Diagrams</title>
-      <link>https://guyabel.com/post/migrant-stock-chord-digrams/</link>
+      <link>/post/migrant-stock-chord-digrams/</link>
       <pubDate>Wed, 14 Nov 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://guyabel.com/post/migrant-stock-chord-digrams/</guid>
+      <guid>/post/migrant-stock-chord-digrams/</guid>
       <description>&lt;p&gt;During the last few months I have given some introductory talks on international migration in Asia and Europe. I had a couple of requests to share the animated chord diagrams that I produced for my slides for others to use in their teaching materials. These are below, along with some extra plots for Africa and the Americas (Northern, Central and Southern America as well as the Caribbean.)&lt;/p&gt;
 &lt;p&gt;The chords in the diagrams represent the connection between the places of birth (at the base of the chord) and places of residence (at the arrow head of the chord). The width of based of the chords correspond to the size of the migrant population in millions. Chords are ordered relative to their size, with the largest migrant stocks plotted at the beginning of the country segments. The ordering of chords jumps around over time as the relative rankings of the largest foreign-born populations change in each country. Values for the migrant population sizes are from the 2017 revision of the United Nations DESA &lt;a href=&#34;http://www.un.org/en/development/desa/population/migration/data/estimates2/estimates17.shtml&#34;&gt;International Migrant Stock Data&lt;/a&gt;.&lt;/p&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;../../img/abel-asia-ani10.gif&#34; /&gt;
-
-&lt;/div&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;../../img/abel-europe-ani10.gif&#34; /&gt;
-
-&lt;/div&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;../../img/abel-africa-ani10.gif&#34; /&gt;
-
-&lt;/div&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;../../img/abel-americas-ani10.gif&#34; /&gt;
-
-&lt;/div&gt;
+&lt;!-- ![ ](/img/anigif_original-14120-1449691023-4-2.mp4) --&gt;
+&lt;video autoplay=&#34;autoplay&#34; loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34;&gt;
+&lt;source src=&#34;../../img/abel-americas-ani10.mp4&#34; type=&#34;video/mp4&#34; /&gt;
+&lt;/video&gt;
+&lt;!-- ![ ](/img/abel-americas-ani10.mp4) --&gt;
+&lt;!-- ![ ](/img/abel-asia-ani10.gif) --&gt;
+&lt;!-- ![ ](/img/abel-europe-ani10.gif) --&gt;
+&lt;!-- ![ ](/img/abel-africa-ani10.gif) --&gt;
+&lt;!-- ![ ](/img/abel-americas-ani10.gif) --&gt;
 &lt;p&gt;As in my previous post on &lt;a href=&#34;http://guyabel.com/post/animated-directional-chord-diagrams/&#34;&gt;animated chord diagrams&lt;/a&gt; I used the &lt;a href=&#34;https://cran.r-project.org/web/packages/circlize/index.html&#34;&gt;&lt;code&gt;circlize&lt;/code&gt;&lt;/a&gt; package in R to produce each chord diagrams for each frame of the animation and &lt;a href=&#34;https://cran.r-project.org/web/packages/tweenr/index.html&#34;&gt;&lt;code&gt;tweenr&lt;/code&gt;&lt;/a&gt; for the intermediate data and &lt;a href=&#34;https://cran.r-project.org/web/packages/magick/index.html&#34;&gt;&lt;code&gt;magick&lt;/code&gt;&lt;/a&gt; to produce the GIFs. The country flags were added using the &lt;code&gt;circos.raster()&lt;/code&gt; function in circlize.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Animated Directional Chord Diagrams</title>
-      <link>https://guyabel.com/post/animated-directional-chord-diagrams/</link>
+      <link>/post/animated-directional-chord-diagrams/</link>
       <pubDate>Wed, 18 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://guyabel.com/post/animated-directional-chord-diagrams/</guid>
+      <guid>/post/animated-directional-chord-diagrams/</guid>
       <description>&lt;div id=&#34;background&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Background&lt;/h2&gt;
 &lt;p&gt;A little while ago my paper in &lt;em&gt;International Migration Review&lt;/em&gt; on global migration flow estimates came out &lt;a href=&#34;http://guyabel.com/publication/global-migration-estimates-by-gender/&#34;&gt;online&lt;/a&gt;. The paper includes a number of directional chord diagrams to visualize the estimates.&lt;/p&gt;
