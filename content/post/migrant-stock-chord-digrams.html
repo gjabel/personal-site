@@ -15,11 +15,24 @@ header:
 <p>The chords in the diagrams represent the connection between the places of birth (at the base of the chord) and places of residence (at the arrow head of the chord). The width of based of the chords correspond to the size of the migrant population in millions. Chords are ordered relative to their size, with the largest migrant stocks plotted at the beginning of the country segments. The ordering of chords jumps around over time as the relative rankings of the largest foreign-born populations change in each country. Values for the migrant population sizes are from the 2017 revision of the United Nations DESA <a href="http://www.un.org/en/development/desa/population/migration/data/estimates2/estimates17.shtml">International Migrant Stock Data</a>.</p>
 <!-- ![ ](/img/anigif_original-14120-1449691023-4-2.mp4) -->
 <video autoplay="autoplay" loop="loop" width="720" height="720">
+<source src="/img/abel-asia-ani10.mp4" type="video/mp4" />
+</video>
+<video autoplay="autoplay" loop="loop" width="720" height="720">
+<source src="/img/abel-europe-ani10.mp4" type="video/mp4" />
+</video>
+<video autoplay="autoplay" loop="loop" width="720" height="720">
+<source src="/img/abel-africa-ani10.mp4" type="video/mp4" />
+</video>
+<video autoplay="autoplay" loop="loop" width="720" height="720">
 <source src="/img/abel-americas-ani10.mp4" type="video/mp4" />
 </video>
-<!-- ![ ](/img/abel-americas-ani10.mp4) -->
 <!-- ![ ](/img/abel-asia-ani10.gif) -->
 <!-- ![ ](/img/abel-europe-ani10.gif) -->
 <!-- ![ ](/img/abel-africa-ani10.gif) -->
 <!-- ![ ](/img/abel-americas-ani10.gif) -->
-<p>As in my previous post on <a href="http://guyabel.com/post/animated-directional-chord-diagrams/">animated chord diagrams</a> I used the <a href="https://cran.r-project.org/web/packages/circlize/index.html"><code>circlize</code></a> package in R to produce each chord diagrams for each frame of the animation and <a href="https://cran.r-project.org/web/packages/tweenr/index.html"><code>tweenr</code></a> for the intermediate data and <a href="https://cran.r-project.org/web/packages/magick/index.html"><code>magick</code></a> to produce the GIFs. The country flags were added using the <code>circos.raster()</code> function in circlize.</p>
+<p>Data in these plots represent migrant population totals, not migration flows, and hence the usual caveats of migrant stock data apply:</p>
+<ul>
+<li>Underlying migration flows might form different patterns of linkages as migrants might not be moving from their country of birth.</li>
+<li>Migrant populations can decrease from deaths as well as outward migration.</li>
+</ul>
+<p>As in my previous post on <a href="http://guyabel.com/post/animated-directional-chord-diagrams/">animated chord diagrams</a> I used the <a href="https://cran.r-project.org/web/packages/circlize/index.html"><code>circlize</code></a> package in R to produce each chord diagrams for each frame of the animation and <a href="https://cran.r-project.org/web/packages/tweenr/index.html"><code>tweenr</code></a> for the intermediate data. The country flags were added using the <code>circos.raster()</code> function in circlize. I used <a href="https://cran.r-project.org/web/packages/gifski/index.html"><code>gifski</code></a> to produce the GIFs and converted them to <code>.mp4</code> files using <a href="https://ezgif.com/gif-to-mp4/">https://ezgif.com</a>. This reduces the file size to allow for quicker loading and allows for viewers to control the image. In most browsers you can right click on an image for options to pause or save the file.</p>

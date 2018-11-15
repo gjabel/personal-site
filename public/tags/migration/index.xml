@@ -20,14 +20,27 @@
 &lt;p&gt;The chords in the diagrams represent the connection between the places of birth (at the base of the chord) and places of residence (at the arrow head of the chord). The width of based of the chords correspond to the size of the migrant population in millions. Chords are ordered relative to their size, with the largest migrant stocks plotted at the beginning of the country segments. The ordering of chords jumps around over time as the relative rankings of the largest foreign-born populations change in each country. Values for the migrant population sizes are from the 2017 revision of the United Nations DESA &lt;a href=&#34;http://www.un.org/en/development/desa/population/migration/data/estimates2/estimates17.shtml&#34;&gt;International Migrant Stock Data&lt;/a&gt;.&lt;/p&gt;
 &lt;!-- ![ ](/img/anigif_original-14120-1449691023-4-2.mp4) --&gt;
 &lt;video autoplay=&#34;autoplay&#34; loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34;&gt;
+&lt;source src=&#34;../../img/abel-asia-ani10.mp4&#34; type=&#34;video/mp4&#34; /&gt;
+&lt;/video&gt;
+&lt;video autoplay=&#34;autoplay&#34; loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34;&gt;
+&lt;source src=&#34;../../img/abel-europe-ani10.mp4&#34; type=&#34;video/mp4&#34; /&gt;
+&lt;/video&gt;
+&lt;video autoplay=&#34;autoplay&#34; loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34;&gt;
+&lt;source src=&#34;../../img/abel-africa-ani10.mp4&#34; type=&#34;video/mp4&#34; /&gt;
+&lt;/video&gt;
+&lt;video autoplay=&#34;autoplay&#34; loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34;&gt;
 &lt;source src=&#34;../../img/abel-americas-ani10.mp4&#34; type=&#34;video/mp4&#34; /&gt;
 &lt;/video&gt;
-&lt;!-- ![ ](/img/abel-americas-ani10.mp4) --&gt;
 &lt;!-- ![ ](/img/abel-asia-ani10.gif) --&gt;
 &lt;!-- ![ ](/img/abel-europe-ani10.gif) --&gt;
 &lt;!-- ![ ](/img/abel-africa-ani10.gif) --&gt;
 &lt;!-- ![ ](/img/abel-americas-ani10.gif) --&gt;
-&lt;p&gt;As in my previous post on &lt;a href=&#34;http://guyabel.com/post/animated-directional-chord-diagrams/&#34;&gt;animated chord diagrams&lt;/a&gt; I used the &lt;a href=&#34;https://cran.r-project.org/web/packages/circlize/index.html&#34;&gt;&lt;code&gt;circlize&lt;/code&gt;&lt;/a&gt; package in R to produce each chord diagrams for each frame of the animation and &lt;a href=&#34;https://cran.r-project.org/web/packages/tweenr/index.html&#34;&gt;&lt;code&gt;tweenr&lt;/code&gt;&lt;/a&gt; for the intermediate data and &lt;a href=&#34;https://cran.r-project.org/web/packages/magick/index.html&#34;&gt;&lt;code&gt;magick&lt;/code&gt;&lt;/a&gt; to produce the GIFs. The country flags were added using the &lt;code&gt;circos.raster()&lt;/code&gt; function in circlize.&lt;/p&gt;
+&lt;p&gt;Data in these plots represent migrant population totals, not migration flows, and hence the usual caveats of migrant stock data apply:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Underlying migration flows might form different patterns of linkages as migrants might not be moving from their country of birth.&lt;/li&gt;
+&lt;li&gt;Migrant populations can decrease from deaths as well as outward migration.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;As in my previous post on &lt;a href=&#34;http://guyabel.com/post/animated-directional-chord-diagrams/&#34;&gt;animated chord diagrams&lt;/a&gt; I used the &lt;a href=&#34;https://cran.r-project.org/web/packages/circlize/index.html&#34;&gt;&lt;code&gt;circlize&lt;/code&gt;&lt;/a&gt; package in R to produce each chord diagrams for each frame of the animation and &lt;a href=&#34;https://cran.r-project.org/web/packages/tweenr/index.html&#34;&gt;&lt;code&gt;tweenr&lt;/code&gt;&lt;/a&gt; for the intermediate data. The country flags were added using the &lt;code&gt;circos.raster()&lt;/code&gt; function in circlize. I used &lt;a href=&#34;https://cran.r-project.org/web/packages/gifski/index.html&#34;&gt;&lt;code&gt;gifski&lt;/code&gt;&lt;/a&gt; to produce the GIFs and converted them to &lt;code&gt;.mp4&lt;/code&gt; files using &lt;a href=&#34;https://ezgif.com/gif-to-mp4/&#34;&gt;https://ezgif.com&lt;/a&gt;. This reduces the file size to allow for quicker loading and allows for viewers to control the image. In most browsers you can right click on an image for options to pause or save the file.&lt;/p&gt;
 </description>
     </item>
     

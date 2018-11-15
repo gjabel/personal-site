@@ -20,10 +20,21 @@ The chords in the diagrams represent the connection between the places of birth 
 <!-- ![ ](/img/anigif_original-14120-1449691023-4-2.mp4) -->
 
 <video autoplay="autoplay" loop="loop" width="720" height="720">
+  <source src="/img/abel-asia-ani10.mp4" type="video/mp4" />
+</video>
+
+<video autoplay="autoplay" loop="loop" width="720" height="720">
+  <source src="/img/abel-europe-ani10.mp4" type="video/mp4" />
+</video>
+
+<video autoplay="autoplay" loop="loop" width="720" height="720">
+  <source src="/img/abel-africa-ani10.mp4" type="video/mp4" />
+</video>
+
+<video autoplay="autoplay" loop="loop" width="720" height="720">
   <source src="/img/abel-americas-ani10.mp4" type="video/mp4" />
 </video>
   
-<!-- ![ ](/img/abel-americas-ani10.mp4) -->
 <!-- ![ ](/img/abel-asia-ani10.gif) -->
 
 <!-- ![ ](/img/abel-europe-ani10.gif) -->
@@ -32,7 +43,12 @@ The chords in the diagrams represent the connection between the places of birth 
 
 <!-- ![ ](/img/abel-americas-ani10.gif) -->
 
-As in my previous post on [animated chord diagrams](http://guyabel.com/post/animated-directional-chord-diagrams/) I used the [`circlize`](https://cran.r-project.org/web/packages/circlize/index.html) package in R to produce each chord diagrams for each frame of the animation and [`tweenr`](https://cran.r-project.org/web/packages/tweenr/index.html) for the intermediate data and [`magick`](https://cran.r-project.org/web/packages/magick/index.html) to produce the GIFs. The country flags were added using the `circos.raster()` function in circlize. 
+Data in these plots represent migrant population totals, not migration flows, and hence the usual caveats of migrant stock data apply:
+
+- Underlying migration flows might form different patterns of linkages as migrants might not be moving from their country of birth.
+- Migrant populations can decrease from deaths as well as outward migration.
+
+As in my previous post on [animated chord diagrams](http://guyabel.com/post/animated-directional-chord-diagrams/) I used the [`circlize`](https://cran.r-project.org/web/packages/circlize/index.html) package in R to produce each chord diagrams for each frame of the animation and [`tweenr`](https://cran.r-project.org/web/packages/tweenr/index.html) for the intermediate data. The country flags were added using the `circos.raster()` function in circlize. I used [`gifski`](https://cran.r-project.org/web/packages/gifski/index.html) to produce the GIFs and converted them to `.mp4` files using [https://ezgif.com](https://ezgif.com/gif-to-mp4/). This reduces the file size to allow for quicker loading and allows for viewers to control the image. In most browsers you can right click on an image for options to pause or save the file.
 
 
 
