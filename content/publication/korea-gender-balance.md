@@ -58,7 +58,7 @@ highlight = true
 # Featured image
 # Place your image in the `static/img/` folder and reference its filename below, e.g. `image = "example.jpg"`.
 [header]
-image = "plot_srm2.png"
+image = "headers/plot_srm2.png"
 caption = "Sex Ratios in Marital Ages 2015"
 
 +++
