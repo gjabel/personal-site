@@ -17,7 +17,7 @@ authors = ["Guy J. Abel"]
 publication_types = ["2"]
 
 # Publication name and optional abbreviated version.
-publication = "In *International Migration Review*, 52 (3), 809-852."
+publication = "In *International Migration Review*, Forthcoming."
 publication_short = ""
 
 # Abstract and optional shortened version.
