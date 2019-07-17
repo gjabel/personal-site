@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="theme" content="hugo-academic">
-  <meta name="generator" content="Hugo 0.31" />
+  <meta name="generator" content="Hugo 0.53" />
   <meta name="author" content="Guy Abel">
   <meta name="description" content="Professor">
 
@@ -339,7 +339,10 @@
 
 
       <div class="article-style" itemprop="articleBody">
-        <div id="background" class="section level2">
+        
+
+
+<div id="background" class="section level2">
 <h2>Background</h2>
 <p>A little while ago my paper in <em>International Migration Review</em> on global migration flow estimates came out <a href="http://guyabel.com/publication/global-migration-estimates-by-gender/">online</a>. The paper includes a number of directional chord diagrams to visualize the estimates.</p>
 <p>Recently I have been playing around <code>tweenr</code> and the <code>magick</code> packages for animated population pyramids. In this post I attempt to show how to use these packages to produce animated directional chord diagrams of global migration flow estimates</p>
@@ -356,7 +359,7 @@ d0 &lt;- read_csv(system.file(&quot;imr&quot;, &quot;reg_flow.csv&quot;, package
 d0 </code></pre>
 <pre><code>## # A tibble: 891 x 4
 ##    year0 orig_reg     dest_reg                         flow
-##    &lt;int&gt; &lt;chr&gt;        &lt;chr&gt;                           &lt;dbl&gt;
+##    &lt;dbl&gt; &lt;chr&gt;        &lt;chr&gt;                           &lt;dbl&gt;
 ##  1  1960 Africa       Africa                        1377791
 ##  2  1960 Africa       Eastern Asia                     5952
 ##  3  1960 Africa       Eastern Europe &amp; Central Asia    7303
@@ -374,17 +377,17 @@ d0 </code></pre>
 <pre class="r"><code>d1 &lt;- read_csv(system.file(&quot;vidwp&quot;, &quot;reg_plot.csv&quot;, package = &quot;migest&quot;))
 d1</code></pre>
 <pre><code>## # A tibble: 9 x 5
-##   region                       order1 col1    reg1           reg2         
-##   &lt;chr&gt;                         &lt;int&gt; &lt;chr&gt;   &lt;chr&gt;          &lt;chr&gt;        
-## 1 Northern America                  1 #40A4D8 Northern       America      
-## 2 Africa                            2 #33BEB7 Africa         &lt;NA&gt;         
-## 3 Europe                            3 #B2C224 Europe         &lt;NA&gt;         
-## 4 Eastern Europe &amp; Central As~      4 #FECC2F Eastern Europe &amp; Central As~
-## 5 Western Asia                      5 #FBA127 Western        Asia         
-## 6 Southern Asia                     6 #F66320 Southern       Asia         
-## 7 Eastern Asia                      7 #DB3937 Eastern        Asia         
-## 8 Oceania                           8 #A463D7 Oceania        &lt;NA&gt;         
-## 9 Latin America &amp; Caribbean         9 #0C5BCE Latin America  &amp; Caribbean</code></pre>
+##   region                        order1 col1    reg1           reg2         
+##   &lt;chr&gt;                          &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;          &lt;chr&gt;        
+## 1 Northern America                   1 #40A4D8 Northern       America      
+## 2 Africa                             2 #33BEB7 Africa         &lt;NA&gt;         
+## 3 Europe                             3 #B2C224 Europe         &lt;NA&gt;         
+## 4 Eastern Europe &amp; Central Asia      4 #FECC2F Eastern Europe &amp; Central As~
+## 5 Western Asia                       5 #FBA127 Western        Asia         
+## 6 Southern Asia                      6 #F66320 Southern       Asia         
+## 7 Eastern Asia                       7 #DB3937 Eastern        Asia         
+## 8 Oceania                            8 #A463D7 Oceania        &lt;NA&gt;         
+## 9 Latin America &amp; Caribbean          9 #0C5BCE Latin America  &amp; Caribbean</code></pre>
 </div>
 <div id="tween-data" class="section level2">
 <h2>Tween Data</h2>
@@ -400,7 +403,7 @@ d2 &lt;- d0 %&gt;%
 d2</code></pre>
 <pre><code>## # A tibble: 8,181 x 4
 ##    year0    flow .frame .group                                 
-##  * &lt;dbl&gt;   &lt;dbl&gt;  &lt;int&gt; &lt;chr&gt;                                  
+##    &lt;dbl&gt;   &lt;dbl&gt;  &lt;int&gt; &lt;chr&gt;                                  
 ##  1  1960 1377791      0 Africa -&gt; Africa                       
 ##  2  1960    5952      0 Africa -&gt; Eastern Asia                 
 ##  3  1960    7303      0 Africa -&gt; Eastern Europe &amp; Central Asia
@@ -498,7 +501,8 @@ img1 &lt;- image_scale(image = img, geometry = &quot;720x720&quot;)
 
 ani0 &lt;- image_animate(image = img1, fps = 10)
 image_write(image = ani0, path = &quot;./plot-gif/globalchord.gif&quot;)</code></pre>
-<p>This gives an output much like this minus the additional details in the corners: <img src="../../img/abel-ani10-gf-dist.gif" /></p>
+<p>This gives an output much like this minus the additional details in the corners:
+<img src="../../img/abel-ani10-gf-dist.gif" /></p>
 <p>(might take a few seconds to fully load)</p>
 </div>
 <div id="fixing-scales-in-chord-diagrams" class="section level2">
@@ -547,10 +551,7 @@ d3</code></pre>
            gap.degree = filter(d3, .frame == f)$gaps, 
            points.overflow.warning = FALSE)</code></pre>
 <p>Once the for loop has produced a new set of images, the same code to produce the GIF file can be run to obtain the animated chord diagrams with changing gaps;</p>
-<div class="figure">
-<img src="../../img/abel-ani10-gf-gap.gif" />
-
-</div>
+<p><img src="../../img/abel-ani10-gf-gap.gif" /></p>
 <p>Whilst the sector axes are now fixed, I am not convinced that changing the relative gaps is the best way to compare volumes when using animated chord diagrams. The sectors of all regions - bar Northern America - are rotating making it hard follow their changes over time.</p>
 <p>Fortunately there is new <code>xmax</code> option in <code>chordDiagram</code> that can be used to fix the lengths of the x-axis for each sector using a named vector. In the context of producing an animation, the historic maximum migration flows (of combined immigration and emigration flows) in each region can be used, calculated from the original data <code>d0</code></p>
 <pre class="r"><code>library(magrittr)
@@ -586,10 +587,7 @@ reg_max</code></pre>
              diffHeight  = -0.04, link.sort = TRUE, link.largest.ontop = TRUE, 
              xmax = reg_max)</code></pre>
 <p>Running the complete code - the adapted <code>for</code> loop to produce the images and then the <code>magick</code> functions to compile the GIF - results in the following animation:</p>
-<div class="figure">
-<img src="../../img/abel-ani10-gf-fix.gif" />
-
-</div>
+<p><img src="../../img/abel-ani10-gf-fix.gif" /></p>
 </div>
 
       </div>
@@ -621,9 +619,9 @@ reg_max</code></pre>
   <h3>Related</h3>
   <ul>
     
-    <li><a href="../../project/adri-pillar/">ARDI International Migration Pillar</a></li>
-    
     <li><a href="../../project/combining-migration-data/">Combining Migration Data</a></li>
+    
+    <li><a href="../../project/adri-pillar/">ARDI International Migration Pillar</a></li>
     
     <li><a href="../../project/global-migration-prediction/">Global Migration Predictions</a></li>
     
@@ -637,7 +635,7 @@ reg_max</code></pre>
   
 <section id="comments">
   <div id="disqus_thread"></div>
-<script>
+<script type="application/javascript">
     var disqus_config = function () {
     
     

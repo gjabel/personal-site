@@ -16,13 +16,13 @@
       <pubDate>Tue, 05 Jun 2018 00:00:00 +0000</pubDate>
       
       <guid>/post/football-kits/</guid>
-      <description>&lt;div id=&#34;background&#34; class=&#34;section level2&#34;&gt;
+      <description>
+
+
+&lt;div id=&#34;background&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Background&lt;/h2&gt;
 &lt;p&gt;I’m loving the &lt;a href=&#34;https://cran.r-project.org/web/packages/magick/&#34;&gt;magick&lt;/a&gt; package at the moment. Reading through the &lt;a href=&#34;https://cran.r-project.org/web/packages/magick/vignettes/intro.html&#34;&gt;vignette&lt;/a&gt; I spotted the &lt;code&gt;image_morph()&lt;/code&gt; function. In this post I experiment with the function to build the GIF below that shows the changes in the England football first kit over time, using images from the excellent &lt;a href=&#34;http://www.historicalkits.co.uk/&#34;&gt;Historical Football Kits&lt;/a&gt; website.&lt;/p&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;../../img/abel-england.gif&#34; /&gt;
-
-&lt;/div&gt;
+&lt;p&gt;&lt;img src=&#34;../../img/abel-england.gif&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;scraping&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Scraping&lt;/h2&gt;
@@ -146,10 +146,7 @@ for(i in 2:length(kits$img)){
                             replacement = &amp;quot;&amp;quot;)
   )&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;I could then run the same code as above to scrape the images, annotate the year and copyright information and build the GIF.&lt;/p&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;../../img/abel-reading.gif&#34; /&gt;
-
-&lt;/div&gt;
+&lt;p&gt;&lt;img src=&#34;../../img/abel-reading.gif&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Ian Holloway - &lt;a href=&#34;https://www.getreading.co.uk/news/reading-berkshire-news/sky-sports-pundit-ian-holloway-12023342&#34;&gt;we had hoops first&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;I did have trouble creating a GIF’s when I used more frames to morph images between successive kits, for example when using &lt;code&gt;frames = 10&lt;/code&gt; in &lt;code&gt;image_morphi()&lt;/code&gt;. I could not consistently replicate the error, but I suspect it is something related to the memory size - my R session would freeze when passing &lt;code&gt;image_animate()&lt;/code&gt; or &lt;code&gt;image_write()&lt;/code&gt; on the &lt;code&gt;kits_ani&lt;/code&gt; R object when it contained a large number of images.&lt;/p&gt;
 &lt;/div&gt;
@@ -162,7 +159,10 @@ for(i in 2:length(kits$img)){
       <pubDate>Wed, 18 Apr 2018 00:00:00 +0000</pubDate>
       
       <guid>/post/animated-directional-chord-diagrams/</guid>
-      <description>&lt;div id=&#34;background&#34; class=&#34;section level2&#34;&gt;
+      <description>
+
+
+&lt;div id=&#34;background&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Background&lt;/h2&gt;
 &lt;p&gt;A little while ago my paper in &lt;em&gt;International Migration Review&lt;/em&gt; on global migration flow estimates came out &lt;a href=&#34;http://guyabel.com/publication/global-migration-estimates-by-gender/&#34;&gt;online&lt;/a&gt;. The paper includes a number of directional chord diagrams to visualize the estimates.&lt;/p&gt;
 &lt;p&gt;Recently I have been playing around &lt;code&gt;tweenr&lt;/code&gt; and the &lt;code&gt;magick&lt;/code&gt; packages for animated population pyramids. In this post I attempt to show how to use these packages to produce animated directional chord diagrams of global migration flow estimates&lt;/p&gt;
@@ -179,7 +179,7 @@ d0 &amp;lt;- read_csv(system.file(&amp;quot;imr&amp;quot;, &amp;quot;reg_flow.cs
 d0 &lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 891 x 4
 ##    year0 orig_reg     dest_reg                         flow
-##    &amp;lt;int&amp;gt; &amp;lt;chr&amp;gt;        &amp;lt;chr&amp;gt;                           &amp;lt;dbl&amp;gt;
+##    &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;        &amp;lt;chr&amp;gt;                           &amp;lt;dbl&amp;gt;
 ##  1  1960 Africa       Africa                        1377791
 ##  2  1960 Africa       Eastern Asia                     5952
 ##  3  1960 Africa       Eastern Europe &amp;amp; Central Asia    7303
@@ -197,17 +197,17 @@ d0 &lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;d1 &amp;lt;- read_csv(system.file(&amp;quot;vidwp&amp;quot;, &amp;quot;reg_plot.csv&amp;quot;, package = &amp;quot;migest&amp;quot;))
 d1&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 9 x 5
-##   region                       order1 col1    reg1           reg2         
-##   &amp;lt;chr&amp;gt;                         &amp;lt;int&amp;gt; &amp;lt;chr&amp;gt;   &amp;lt;chr&amp;gt;          &amp;lt;chr&amp;gt;        
-## 1 Northern America                  1 #40A4D8 Northern       America      
-## 2 Africa                            2 #33BEB7 Africa         &amp;lt;NA&amp;gt;         
-## 3 Europe                            3 #B2C224 Europe         &amp;lt;NA&amp;gt;         
-## 4 Eastern Europe &amp;amp; Central As~      4 #FECC2F Eastern Europe &amp;amp; Central As~
-## 5 Western Asia                      5 #FBA127 Western        Asia         
-## 6 Southern Asia                     6 #F66320 Southern       Asia         
-## 7 Eastern Asia                      7 #DB3937 Eastern        Asia         
-## 8 Oceania                           8 #A463D7 Oceania        &amp;lt;NA&amp;gt;         
-## 9 Latin America &amp;amp; Caribbean         9 #0C5BCE Latin America  &amp;amp; Caribbean&lt;/code&gt;&lt;/pre&gt;
+##   region                        order1 col1    reg1           reg2         
+##   &amp;lt;chr&amp;gt;                          &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;   &amp;lt;chr&amp;gt;          &amp;lt;chr&amp;gt;        
+## 1 Northern America                   1 #40A4D8 Northern       America      
+## 2 Africa                             2 #33BEB7 Africa         &amp;lt;NA&amp;gt;         
+## 3 Europe                             3 #B2C224 Europe         &amp;lt;NA&amp;gt;         
+## 4 Eastern Europe &amp;amp; Central Asia      4 #FECC2F Eastern Europe &amp;amp; Central As~
+## 5 Western Asia                       5 #FBA127 Western        Asia         
+## 6 Southern Asia                      6 #F66320 Southern       Asia         
+## 7 Eastern Asia                       7 #DB3937 Eastern        Asia         
+## 8 Oceania                            8 #A463D7 Oceania        &amp;lt;NA&amp;gt;         
+## 9 Latin America &amp;amp; Caribbean          9 #0C5BCE Latin America  &amp;amp; Caribbean&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;tween-data&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Tween Data&lt;/h2&gt;
@@ -223,7 +223,7 @@ d2 &amp;lt;- d0 %&amp;gt;%
 d2&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 8,181 x 4
 ##    year0    flow .frame .group                                 
-##  * &amp;lt;dbl&amp;gt;   &amp;lt;dbl&amp;gt;  &amp;lt;int&amp;gt; &amp;lt;chr&amp;gt;                                  
+##    &amp;lt;dbl&amp;gt;   &amp;lt;dbl&amp;gt;  &amp;lt;int&amp;gt; &amp;lt;chr&amp;gt;                                  
 ##  1  1960 1377791      0 Africa -&amp;gt; Africa                       
 ##  2  1960    5952      0 Africa -&amp;gt; Eastern Asia                 
 ##  3  1960    7303      0 Africa -&amp;gt; Eastern Europe &amp;amp; Central Asia
@@ -321,7 +321,8 @@ img1 &amp;lt;- image_scale(image = img, geometry = &amp;quot;720x720&amp;quot;)
 
 ani0 &amp;lt;- image_animate(image = img1, fps = 10)
 image_write(image = ani0, path = &amp;quot;./plot-gif/globalchord.gif&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;This gives an output much like this minus the additional details in the corners: &lt;img src=&#34;../../img/abel-ani10-gf-dist.gif&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;This gives an output much like this minus the additional details in the corners:
+&lt;img src=&#34;../../img/abel-ani10-gf-dist.gif&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;(might take a few seconds to fully load)&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;fixing-scales-in-chord-diagrams&#34; class=&#34;section level2&#34;&gt;
@@ -370,10 +371,7 @@ d3&lt;/code&gt;&lt;/pre&gt;
            gap.degree = filter(d3, .frame == f)$gaps, 
            points.overflow.warning = FALSE)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Once the for loop has produced a new set of images, the same code to produce the GIF file can be run to obtain the animated chord diagrams with changing gaps;&lt;/p&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;../../img/abel-ani10-gf-gap.gif&#34; /&gt;
-
-&lt;/div&gt;
+&lt;p&gt;&lt;img src=&#34;../../img/abel-ani10-gf-gap.gif&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Whilst the sector axes are now fixed, I am not convinced that changing the relative gaps is the best way to compare volumes when using animated chord diagrams. The sectors of all regions - bar Northern America - are rotating making it hard follow their changes over time.&lt;/p&gt;
 &lt;p&gt;Fortunately there is new &lt;code&gt;xmax&lt;/code&gt; option in &lt;code&gt;chordDiagram&lt;/code&gt; that can be used to fix the lengths of the x-axis for each sector using a named vector. In the context of producing an animation, the historic maximum migration flows (of combined immigration and emigration flows) in each region can be used, calculated from the original data &lt;code&gt;d0&lt;/code&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(magrittr)
@@ -409,10 +407,7 @@ reg_max&lt;/code&gt;&lt;/pre&gt;
              diffHeight  = -0.04, link.sort = TRUE, link.largest.ontop = TRUE, 
              xmax = reg_max)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Running the complete code - the adapted &lt;code&gt;for&lt;/code&gt; loop to produce the images and then the &lt;code&gt;magick&lt;/code&gt; functions to compile the GIF - results in the following animation:&lt;/p&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;../../img/abel-ani10-gf-fix.gif&#34; /&gt;
-
-&lt;/div&gt;
+&lt;p&gt;&lt;img src=&#34;../../img/abel-ani10-gf-fix.gif&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>

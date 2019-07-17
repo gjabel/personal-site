@@ -15,10 +15,7 @@ header:
 <div id="background" class="section level2">
 <h2>Background</h2>
 <p>I’m loving the <a href="https://cran.r-project.org/web/packages/magick/">magick</a> package at the moment. Reading through the <a href="https://cran.r-project.org/web/packages/magick/vignettes/intro.html">vignette</a> I spotted the <code>image_morph()</code> function. In this post I experiment with the function to build the GIF below that shows the changes in the England football first kit over time, using images from the excellent <a href="http://www.historicalkits.co.uk/">Historical Football Kits</a> website.</p>
-<div class="figure">
-<img src="/img/abel-england.gif" />
-
-</div>
+<p><img src="/img/abel-england.gif" /></p>
 </div>
 <div id="scraping" class="section level2">
 <h2>Scraping</h2>
@@ -142,10 +139,7 @@ for(i in 2:length(kits$img)){
                             replacement = &quot;&quot;)
   )</code></pre>
 <p>I could then run the same code as above to scrape the images, annotate the year and copyright information and build the GIF.</p>
-<div class="figure">
-<img src="/img/abel-reading.gif" />
-
-</div>
+<p><img src="/img/abel-reading.gif" /></p>
 <p>Ian Holloway - <a href="https://www.getreading.co.uk/news/reading-berkshire-news/sky-sports-pundit-ian-holloway-12023342">we had hoops first</a>.</p>
 <p>I did have trouble creating a GIF’s when I used more frames to morph images between successive kits, for example when using <code>frames = 10</code> in <code>image_morphi()</code>. I could not consistently replicate the error, but I suspect it is something related to the memory size - my R session would freeze when passing <code>image_animate()</code> or <code>image_write()</code> on the <code>kits_ani</code> R object when it contained a large number of images.</p>
 </div>
