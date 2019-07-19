@@ -21,7 +21,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Update for WPP2019
 
-This paper came out a day before the United Nations Population Division updated their World Population Prospects (WPP). As all the estimates were based on WPP2017, our claim for the estimates being based on the most up to date input data true for around 24 hours.
+This paper came out a day before the United Nations Population Division updated their World Population Prospects (WPP). As all the estimates were based on WPP2017 our claim for the estimates being based on the most up to date input data true for around 24 hours.
 
 In order to keep things up to date, I have added set of estimates based on the WPP2019 to the [Figshare collection](https://figshare.com/collections/Bilateral_international_migration_flow_estimates_for_200_countries/4470464). Below is a quick summary of the changes in the updated estimates to those in the paper.
 
@@ -37,11 +37,11 @@ These difference results in revisions to the overall totals of migration flows. 
 
 ![ ](/img/sd-est_tot.gif)
 
-From this plot, it is easier to see the changes in the migration rates estimation method. I was surprised that the changes in the estimates were occurring in all periods, not just the most recent period (2010-2015). To investigate I took a look at the changes in the WPP data.
+From this plot it is easier to see the changes in the migration rates estimation method. I was surprised that the changes in the estimates were occurring in all periods, not just the most recent period (2010-2015). To investigate I took a look at the changes in the WPP data.
 
 ### Which countries are most affected?
 
-The countries where the largest changes in the estimates from the demographic accounting methods can be detected by looking at the changes in net migration between WPP2017 and WPP2019. Below are the changes in the complete time series of net migration in nine countries, where the largest absolute differences (in any period) between the two WPP versions occur. 
+The countries where the largest changes in the estimates from the closed demographic accounting methods can be detected by looking at the changes in net migration between WPP2017 and WPP2019, as their estimated net migration flows correlates perfectly with the net migration in the WPP. Below are the changes in the complete time series of net migration in nine countries, where the largest absolute differences (in any period) between the two WPP versions occur. 
 
 ![ ](/img/sd-wpp_big_changes.gif)
 
@@ -78,8 +78,8 @@ widgetframe::frameWidget(d1, height = "100%")
 
 ### Impact on validation exercise
 
-The impact of the revisions in WPP data on the validation exercise in the paper is minimal. Below is an update of [Figure 4](https://www.nature.com/articles/s41597-019-0089-3#Fig4) in the paper.
+The impact of the revision in WPP data on the validation exercise in the paper is minimal. Below is an update of [Figure 4](https://www.nature.com/articles/s41597-019-0089-3#Fig4) in the paper.
 
 ![ ](/img/sd-val_all.png)
 
-The correlations change by few hundredths of a decimal. These small changes, despite what is shown in the first plot above, are due to the limited amount of reported migration flows statistics (at the global level) to carry out our validation exercise. In these 45 countries that we used (from [United Nations Population Division](https://www.un.org/en/development/desa/population/migration/data/empirical2/migrationflows.asp) the revisions in the WPP data were relatively minor, hence only small changes in their estimates and the correlations with the reported data.
+The correlations change by few hundredths of a decimal. These small changes, despite what is shown in the first plot above, are due to the limited amount of reported migration flows statistics (at the global level) to carry out our validation exercise. In the 45 countries that we used (based on the [United Nations Population Division](https://www.un.org/en/development/desa/population/migration/data/empirical2/migrationflows.asp) collection) the revisions in the WPP data were relatively minor, hence only small changes in their estimates and the correlations with the reported data.
