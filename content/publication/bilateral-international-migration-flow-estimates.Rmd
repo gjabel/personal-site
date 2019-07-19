@@ -21,9 +21,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Update for WPP2019
 
-This paper came out a day before the United Nations Population Division updated their World Population Prospects (WPP). As all the estimates were based on WPP2017 our claim for the estimates being based on the most up to date input data true for around 24 hours.
+This paper came out a day before the United Nations Population Division updated their World Population Prospects (WPP). As all the estimates were based on WPP2017 our claim for the estimates being based on the most up to date input data was true for around 24 hours.
 
-In order to keep things up to date, I have added set of estimates based on the WPP2019 to the [Figshare collection](https://figshare.com/collections/Bilateral_international_migration_flow_estimates_for_200_countries/4470464). Below is a quick summary of the changes in the updated estimates to those in the paper.
+In order to keep the estimates a bit more current, I have added new set based on the WPP2019 to the [Figshare collection](https://figshare.com/collections/Bilateral_international_migration_flow_estimates_for_200_countries/4470464). Below is a quick summary of the changes in the updated estimates to those in the paper.
 
 ### Comparison of estimates based on WPP2017 and WPP2019
 

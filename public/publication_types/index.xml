@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Publication_types on Guy Abel</title>
-    <link>/publication_types/</link>
+    <link>https://guyabel.com/publication_types/</link>
     <description>Recent content in Publication_types on Guy Abel</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
@@ -12,10 +12,10 @@
     
     <item>
       <title>2</title>
-      <link>/publication_types/2/</link>
+      <link>https://guyabel.com/publication_types/2/</link>
       <pubDate>Mon, 17 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>/publication_types/2/</guid>
+      <guid>https://guyabel.com/publication_types/2/</guid>
       <description></description>
     </item>
     
