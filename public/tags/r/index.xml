@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>R on Guy Abel</title>
@@ -15,10 +16,7 @@
       <pubDate>Tue, 05 Jun 2018 00:00:00 +0000</pubDate>
       
       <guid>/post/football-kits/</guid>
-      <description>
-
-
-&lt;div id=&#34;background&#34; class=&#34;section level2&#34;&gt;
+      <description>&lt;div id=&#34;background&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Background&lt;/h2&gt;
 &lt;p&gt;I’m loving the &lt;a href=&#34;https://cran.r-project.org/web/packages/magick/&#34;&gt;magick&lt;/a&gt; package at the moment. Reading through the &lt;a href=&#34;https://cran.r-project.org/web/packages/magick/vignettes/intro.html&#34;&gt;vignette&lt;/a&gt; I spotted the &lt;code&gt;image_morph()&lt;/code&gt; function. In this post I experiment with the function to build the GIF below that shows the changes in the England football first kit over time, using images from the excellent &lt;a href=&#34;http://www.historicalkits.co.uk/&#34;&gt;Historical Football Kits&lt;/a&gt; website.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../../img/abel-england.gif&#34; /&gt;&lt;/p&gt;
@@ -158,10 +156,7 @@ for(i in 2:length(kits$img)){
       <pubDate>Wed, 18 Apr 2018 00:00:00 +0000</pubDate>
       
       <guid>/post/animated-directional-chord-diagrams/</guid>
-      <description>
-
-
-&lt;div id=&#34;background&#34; class=&#34;section level2&#34;&gt;
+      <description>&lt;div id=&#34;background&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Background&lt;/h2&gt;
 &lt;p&gt;A little while ago my paper in &lt;em&gt;International Migration Review&lt;/em&gt; on global migration flow estimates came out &lt;a href=&#34;http://guyabel.com/publication/global-migration-estimates-by-gender/&#34;&gt;online&lt;/a&gt;. The paper includes a number of directional chord diagrams to visualize the estimates.&lt;/p&gt;
 &lt;p&gt;Recently I have been playing around &lt;code&gt;tweenr&lt;/code&gt; and the &lt;code&gt;magick&lt;/code&gt; packages for animated population pyramids. In this post I attempt to show how to use these packages to produce animated directional chord diagrams of global migration flow estimates&lt;/p&gt;
