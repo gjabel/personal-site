@@ -1,8 +1,7 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Guy Abel</title>
-    <link>https://guyabel.com/post/</link>
+    <link>/post/</link>
     <description>Recent content in Posts on Guy Abel</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
@@ -12,11 +11,14 @@
     
     <item>
       <title>Migrant Stock Chord Diagrams</title>
-      <link>https://guyabel.com/post/migrant-stock-chord-digrams/</link>
+      <link>/post/migrant-stock-chord-digrams/</link>
       <pubDate>Wed, 14 Nov 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://guyabel.com/post/migrant-stock-chord-digrams/</guid>
-      <description>&lt;p&gt;During the last few months I have given some introductory talks on international migration in Asia and Europe. I had a couple of requests to share the animated chord diagrams that I created for others to use in their teaching materials. These are below, along with some extra plots for Africa and the Americas (Northern, Central and Southern America as well as the Caribbean.)&lt;/p&gt;
+      <guid>/post/migrant-stock-chord-digrams/</guid>
+      <description>
+
+
+&lt;p&gt;During the last few months I have given some introductory talks on international migration in Asia and Europe. I had a couple of requests to share the animated chord diagrams that I created for others to use in their teaching materials. These are below, along with some extra plots for Africa and the Americas (Northern, Central and Southern America as well as the Caribbean.)&lt;/p&gt;
 &lt;p&gt;The chords in the diagrams represent the connection between the places of birth (at the base of the chord) and places of residence (at the arrow head of the chord). The width of based of the chords correspond to the size of the migrant population in millions. Chords are ordered relative to their size, with the largest migrant stocks plotted at the beginning of the country segments. The ordering of chords jumps around over time as the relative rankings of the largest foreign-born populations change in each country. Values for the migrant population sizes are from the 2017 revision of the United Nations DESA &lt;a href=&#34;http://www.un.org/en/development/desa/population/migration/data/estimates2/estimates17.shtml&#34;&gt;International Migrant Stock Data&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Note: you might have to right click, select show controls and hit play to start the animations if you are using some browsers (e.g. Chrome).&lt;/p&gt;
 &lt;!-- ![ ](/img/anigif_original-14120-1449691023-4-2.mp4) --&gt;
@@ -47,11 +49,14 @@
     
     <item>
       <title>Animating Changes in Football Kits using R</title>
-      <link>https://guyabel.com/post/football-kits/</link>
+      <link>/post/football-kits/</link>
       <pubDate>Tue, 05 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://guyabel.com/post/football-kits/</guid>
-      <description>&lt;div id=&#34;background&#34; class=&#34;section level2&#34;&gt;
+      <guid>/post/football-kits/</guid>
+      <description>
+
+
+&lt;div id=&#34;background&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Background&lt;/h2&gt;
 &lt;p&gt;I’m loving the &lt;a href=&#34;https://cran.r-project.org/web/packages/magick/&#34;&gt;magick&lt;/a&gt; package at the moment. Reading through the &lt;a href=&#34;https://cran.r-project.org/web/packages/magick/vignettes/intro.html&#34;&gt;vignette&lt;/a&gt; I spotted the &lt;code&gt;image_morph()&lt;/code&gt; function. In this post I experiment with the function to build the GIF below that shows the changes in the England football first kit over time, using images from the excellent &lt;a href=&#34;http://www.historicalkits.co.uk/&#34;&gt;Historical Football Kits&lt;/a&gt; website.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../img/abel-england.gif&#34; /&gt;&lt;/p&gt;
@@ -187,11 +192,14 @@ for(i in 2:length(kits$img)){
     
     <item>
       <title>Animated Directional Chord Diagrams</title>
-      <link>https://guyabel.com/post/animated-directional-chord-diagrams/</link>
+      <link>/post/animated-directional-chord-diagrams/</link>
       <pubDate>Wed, 18 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://guyabel.com/post/animated-directional-chord-diagrams/</guid>
-      <description>&lt;div id=&#34;background&#34; class=&#34;section level2&#34;&gt;
+      <guid>/post/animated-directional-chord-diagrams/</guid>
+      <description>
+
+
+&lt;div id=&#34;background&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Background&lt;/h2&gt;
 &lt;p&gt;A little while ago my paper in &lt;em&gt;International Migration Review&lt;/em&gt; on global migration flow estimates came out &lt;a href=&#34;http://guyabel.com/publication/global-migration-estimates-by-gender/&#34;&gt;online&lt;/a&gt;. The paper includes a number of directional chord diagrams to visualize the estimates.&lt;/p&gt;
 &lt;p&gt;Recently I have been playing around &lt;code&gt;tweenr&lt;/code&gt; and the &lt;code&gt;magick&lt;/code&gt; packages for animated population pyramids. In this post I attempt to show how to use these packages to produce animated directional chord diagrams of global migration flow estimates&lt;/p&gt;
