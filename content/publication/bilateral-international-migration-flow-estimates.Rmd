@@ -45,7 +45,7 @@ The countries where the largest changes in the estimates from the closed demogra
 
 ![ ](/img/sd-wpp_big_changes.gif)
 
-I was a bit surprised by the scale of the changes. In some period’s revisions to net migration are greater than a million. I dug a little deeper into net migration in previous WPP revisions to find that similar revisions are not unusual. Below are the revisions of absolute net migration between past WPP versions that exceed one million (back to WPP2000, the earliest WPP data I can get my hands on).
+I was a bit surprised by the scale of the changes. In some periods the revisions to net migration are greater than a million. I dug a little deeper into net migration in previous WPP revisions to find that similar revisions are not unusual. Below are the revisions of absolute net migration between past WPP versions that exceed one million (back to WPP2000, the earliest WPP data I can get my hands on).
 
 ```{r, message=FALSE, warning=FALSE, include=FALSE}
 # , message=FALSE, warning=FALSE, include=FALSE,  echo = FALSE}
