@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Guy Abel</title>
@@ -7,36 +6,8 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
     <copyright>&amp;copy; 2018 &amp;middot; Selected posts also on &lt;a href=&#34;https://r-bloggers.com/&#34;&gt;R-bloggers&lt;/a&gt;</copyright>
-    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 14 Nov 2018 00:00:00 +0000</lastBuildDate>
     <atom:link href="/tags/" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Content tagged as &#39;Academic&#39;</title>
-      <link>/tags/academic/</link>
-      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/academic/</guid>
-      <description>&lt;p&gt;Here is a list of all the content that has been tagged as &lt;em&gt;academic&lt;/em&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Bayesian</title>
-      <link>/tags/bayesian/</link>
-      <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/bayesian/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>R</title>
-      <link>/tags/r/</link>
-      <pubDate>Tue, 05 Jun 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/r/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>chord diagram</title>
@@ -44,15 +15,6 @@
       <pubDate>Wed, 14 Nov 2018 00:00:00 +0000</pubDate>
       
       <guid>/tags/chord-diagram/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>estimation</title>
-      <link>/tags/estimation/</link>
-      <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/estimation/</guid>
       <description></description>
     </item>
     
@@ -66,12 +28,49 @@
     </item>
     
     <item>
+      <title>R</title>
+      <link>/tags/r/</link>
+      <pubDate>Tue, 05 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bayesian</title>
+      <link>/tags/bayesian/</link>
+      <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/bayesian/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>estimation</title>
+      <link>/tags/estimation/</link>
+      <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/estimation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>prediction</title>
       <link>/tags/prediction/</link>
       <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
       
       <guid>/tags/prediction/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>Content tagged as &#39;Academic&#39;</title>
+      <link>/tags/academic/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/academic/</guid>
+      <description>&lt;p&gt;Here is a list of all the content that has been tagged as &lt;em&gt;academic&lt;/em&gt;.&lt;/p&gt;
+</description>
     </item>
     
   </channel>
