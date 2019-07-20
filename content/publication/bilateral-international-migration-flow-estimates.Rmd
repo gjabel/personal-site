@@ -67,7 +67,7 @@ d1 <- d0 %>%
     "$('body').css({'font-family': 'Calibri'});",
     "}"
   ))) %>% 
-  formatRound(columns=3:6, digits=3)
+  formatRound(columns=3:6, digits=2)
 
 ```
 
