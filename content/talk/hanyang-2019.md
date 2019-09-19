@@ -1,14 +1,14 @@
 +++
-date = 2018-04-18T00:00:00  # Schedule page publish date.
+date = 2018-02-01T00:00:00  # Schedule page publish date.
 
-title = "Driving Factors of Asian International Migration Flows"
-time_start = 2018-04-26T08:30:00
-time_end = 2018-04-26T08:50:00
+title = "Bilateral International Migration Flow Estimates for 200 Countries"
+time_start = 2019-07-27T15:00:00
+time_end = 2019-07-27T16:00:00
 abstract = ""
 abstract_short = ""
-event = "2018 Annual Meeting - Population Association of America"
-event_url = "https://paa.confex.com/paa/2018/meetingapp.cgi/Paper/22137"
-location = "Denver, USA"
+event = "한양대 SSK 다문화연구센터제115회 콜로키움"
+event_url = "http://socio.hanyang.ac.kr/blog/2019/07/25/%ed%95%9c%ec%96%91%eb%8c%80-ssk-%eb%8b%a4%eb%ac%b8%ed%99%94%ec%97%b0%ea%b5%ac%ec%84%bc%ed%84%b0%ec%9d%98-%ec%a0%9c115%ed%9a%8c-%ec%bd%9c%eb%a1%9c%ed%82%a4%ec%9b%80/"
+location = "Seoul, South Korea"
 
 # Is this a selected talk? (true/false)
 selected = true
@@ -16,7 +16,7 @@ selected = true
 # Projects (optional).
 #   Associate this talk with one or more of your projects.
 #   Simply enter the filename (excluding '.md') of your project file in `content/project/`.
-# projects = ["adri-pillar"]
+# projects = ["deep-learning"]
 
 # Links (optional).
 url_pdf = ""
@@ -36,6 +36,7 @@ highlight = true
 # image = "headers/edu-gender-tile.png"
 # caption = "Internal Migration by Education and Gender"
 
+
 +++
 
-# {{< tweet 989470885475008512 >}}
+

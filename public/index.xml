@@ -1,7 +1,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Guy Abel on Guy Abel</title>
-    <link>/</link>
+    <link>https://guyabel.com/</link>
     <description>Recent content in Guy Abel on Guy Abel</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
@@ -11,10 +11,10 @@
     
     <item>
       <title>Bilateral international migration flow estimates for 200 countries</title>
-      <link>/publication/bilateral-international-migration-flow-estimates/</link>
+      <link>https://guyabel.com/publication/bilateral-international-migration-flow-estimates/</link>
       <pubDate>Mon, 17 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>/publication/bilateral-international-migration-flow-estimates/</guid>
+      <guid>https://guyabel.com/publication/bilateral-international-migration-flow-estimates/</guid>
       <description>
 &lt;script src=&#34;./rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;./rmarkdown-libs/pymjs/pym.v1.js&#34;&gt;&lt;/script&gt;
@@ -54,19 +54,19 @@
     
     <item>
       <title>Climate, Conflict and Forced Migration</title>
-      <link>/publication/climate-conflict-and-forced-migration/</link>
+      <link>https://guyabel.com/publication/climate-conflict-and-forced-migration/</link>
       <pubDate>Mon, 21 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>/publication/climate-conflict-and-forced-migration/</guid>
+      <guid>https://guyabel.com/publication/climate-conflict-and-forced-migration/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Migrant Stock Chord Diagrams</title>
-      <link>/post/migrant-stock-chord-digrams/</link>
+      <link>https://guyabel.com/post/migrant-stock-chord-digrams/</link>
       <pubDate>Wed, 14 Nov 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/migrant-stock-chord-digrams/</guid>
+      <guid>https://guyabel.com/post/migrant-stock-chord-digrams/</guid>
       <description>
 
 
@@ -101,28 +101,28 @@
     
     <item>
       <title>Driving Factors of Asian International Migration Flows</title>
-      <link>/talk/apac1-2018/</link>
-      <pubDate>Sun, 01 Jul 2018 00:00:00 +0900</pubDate>
+      <link>https://guyabel.com/talk/apac1-2018/</link>
+      <pubDate>Sun, 01 Jul 2018 00:00:00 +0800</pubDate>
       
-      <guid>/talk/apac1-2018/</guid>
+      <guid>https://guyabel.com/talk/apac1-2018/</guid>
       <description></description>
     </item>
     
     <item>
       <title>European International Migration Patterns</title>
-      <link>/talk/apac2-2018/</link>
-      <pubDate>Sun, 01 Jul 2018 00:00:00 +0900</pubDate>
+      <link>https://guyabel.com/talk/apac2-2018/</link>
+      <pubDate>Sun, 01 Jul 2018 00:00:00 +0800</pubDate>
       
-      <guid>/talk/apac2-2018/</guid>
+      <guid>https://guyabel.com/talk/apac2-2018/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Animating Changes in Football Kits using R</title>
-      <link>/post/football-kits/</link>
+      <link>https://guyabel.com/post/football-kits/</link>
       <pubDate>Tue, 05 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/football-kits/</guid>
+      <guid>https://guyabel.com/post/football-kits/</guid>
       <description>
 
 
@@ -262,10 +262,10 @@ for(i in 2:length(kits$img)){
     
     <item>
       <title>Non-zero trajectories for long-run net migration assumptions in global population projection models</title>
-      <link>/publication/non-zero-ssp-net-migration-projections/</link>
+      <link>https://guyabel.com/publication/non-zero-ssp-net-migration-projections/</link>
       <pubDate>Wed, 16 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>/publication/non-zero-ssp-net-migration-projections/</guid>
+      <guid>https://guyabel.com/publication/non-zero-ssp-net-migration-projections/</guid>
       <description>
 
 &lt;h2 id=&#34;further-notes&#34;&gt;Further Notes&lt;/h2&gt;
@@ -286,10 +286,10 @@ The assumptions in the past WPP also exhibit some drift, with assumptions for fu
     
     <item>
       <title>Animated Directional Chord Diagrams</title>
-      <link>/post/animated-directional-chord-diagrams/</link>
+      <link>https://guyabel.com/post/animated-directional-chord-diagrams/</link>
       <pubDate>Wed, 18 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/animated-directional-chord-diagrams/</guid>
+      <guid>https://guyabel.com/post/animated-directional-chord-diagrams/</guid>
       <description>
 
 
@@ -544,50 +544,38 @@ reg_max&lt;/code&gt;&lt;/pre&gt;
     </item>
     
     <item>
-      <title>Driving Factors of Asian International Migration Flows</title>
-      <link>/talk/paa-2018/</link>
-      <pubDate>Wed, 18 Apr 2018 00:00:00 +0900</pubDate>
-      
-      <guid>/talk/paa-2018/</guid>
-      <description>&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;I will be talking at &lt;a href=&#34;https://twitter.com/hashtag/PAA2018?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#PAA2018&lt;/a&gt; today (8:30 AM Plaza Ballroom A) on the drivers of international &lt;a href=&#34;https://twitter.com/hashtag/migration?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#migration&lt;/a&gt; flows in &lt;a href=&#34;https://twitter.com/hashtag/Asia?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Asia&lt;/a&gt; - work with &lt;a href=&#34;https://twitter.com/Jamesraymeranu?ref_src=twsrc%5Etfw&#34;&gt;@Jamesraymeranu&lt;/a&gt; - using estimates from &lt;a href=&#34;https://t.co/a2rXr7lJxb&#34;&gt;https://t.co/a2rXr7lJxb&lt;/a&gt; &lt;a href=&#34;https://t.co/dIqV8tfrg8&#34;&gt;pic.twitter.com/dIqV8tfrg8&lt;/a&gt;&lt;/p&gt;&amp;mdash; Guy Abel 鄭蓋堡 (@guyabelguyabel) &lt;a href=&#34;https://twitter.com/guyabelguyabel/status/989470885475008512?ref_src=twsrc%5Etfw&#34;&gt;April 26, 2018&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-
-</description>
-    </item>
-    
-    <item>
       <title>Probabilistic Method for Combining Internal Migration Data</title>
-      <link>/talk/epc-2018/</link>
-      <pubDate>Wed, 18 Apr 2018 00:00:00 +0900</pubDate>
+      <link>https://guyabel.com/talk/epc-2018/</link>
+      <pubDate>Wed, 18 Apr 2018 00:00:00 +0800</pubDate>
       
-      <guid>/talk/epc-2018/</guid>
+      <guid>https://guyabel.com/talk/epc-2018/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Probabilistic Method for Combining Internal Migration Data</title>
-      <link>/talk/uw2-2018/</link>
-      <pubDate>Wed, 18 Apr 2018 00:00:00 +0900</pubDate>
+      <link>https://guyabel.com/talk/uw2-2018/</link>
+      <pubDate>Wed, 18 Apr 2018 00:00:00 +0800</pubDate>
       
-      <guid>/talk/uw2-2018/</guid>
+      <guid>https://guyabel.com/talk/uw2-2018/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Visualizing Migration Flows: How to Design and Produce Animated Directional Chord Diagrams in R</title>
-      <link>/talk/uw1-2018/</link>
-      <pubDate>Wed, 18 Apr 2018 00:00:00 +0900</pubDate>
+      <link>https://guyabel.com/talk/uw1-2018/</link>
+      <pubDate>Wed, 18 Apr 2018 00:00:00 +0800</pubDate>
       
-      <guid>/talk/uw1-2018/</guid>
+      <guid>https://guyabel.com/talk/uw1-2018/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Subnational gender balances in South Korea</title>
-      <link>/publication/korea-gender-balance/</link>
+      <link>https://guyabel.com/publication/korea-gender-balance/</link>
       <pubDate>Tue, 06 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>/publication/korea-gender-balance/</guid>
+      <guid>https://guyabel.com/publication/korea-gender-balance/</guid>
       <description>
 
 &lt;h2 id=&#34;further-notes&#34;&gt;Further Notes&lt;/h2&gt;
@@ -600,19 +588,28 @@ reg_max&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>ARDI International Migration Pillar</title>
-      <link>/project/adri-pillar/</link>
+      <link>https://guyabel.com/project/adri-pillar/</link>
       <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>/project/adri-pillar/</guid>
+      <guid>https://guyabel.com/project/adri-pillar/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Combining Migration Data</title>
-      <link>/project/combining-migration-data/</link>
+      <link>https://guyabel.com/project/combining-migration-data/</link>
       <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>/project/combining-migration-data/</guid>
+      <guid>https://guyabel.com/project/combining-migration-data/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Global Migration Predictions</title>
+      <link>https://guyabel.com/project/global-migration-prediction/</link>
+      <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://guyabel.com/project/global-migration-prediction/</guid>
       <description></description>
     </item>
     
