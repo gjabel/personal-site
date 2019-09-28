@@ -1,7 +1,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Bayesian on Guy Abel</title>
-    <link>https://guyabel.com/tags/bayesian/</link>
+    <link>/tags/bayesian/</link>
     <description>Recent content in Bayesian on Guy Abel</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
@@ -11,10 +11,10 @@
     
     <item>
       <title>Combining Migration Data</title>
-      <link>https://guyabel.com/project/combining-migration-data/</link>
+      <link>/project/combining-migration-data/</link>
       <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://guyabel.com/project/combining-migration-data/</guid>
+      <guid>/project/combining-migration-data/</guid>
       <description></description>
     </item>
     

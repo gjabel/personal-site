@@ -19,7 +19,10 @@ header:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Update for WPP2019
+Since the paper has published I have produced two updates; one for new [UN demographic data](./#WPP2019) and one for new [UN migrant stock data](./#IMS2019).
+
+
+## <a id="WPP2019"></a>Update for WPP2019
 
 This paper came out a day before the United Nations Population Division updated their [World Population Prospects](https://population.un.org/wpp/) (WPP). As all the estimates were based on WPP2017 our claim for the estimates being based on the most up to date input data was only true for around 24 hours.
 
@@ -83,3 +86,66 @@ The impact of the revision in WPP data on the validation exercise in the paper i
 ![ ](/img/sd-val_all.png)
 
 The correlations change by few hundredths of a decimal. These small changes, despite what is shown in the first plot above, are due to the limited amount of reported migration flows statistics (at the global level) to carry out our validation exercise. In the 45 countries that we used (based on the United Nations Population Division [collection](https://www.un.org/en/development/desa/population/migration/data/empirical2/migrationflows.asp)) the revisions in the WPP data were relatively minor, hence only small changes in their estimates and the correlations with the reported data.
+
+
+## <a id="IMS2019"></a>Update for IMS2019
+
+Another month, another update in the input data - this time the UN [International Migrant Stock](https://www.un.org/en/development/desa/population/migration/data/estimates2/estimates19.asp) (IMS) data. I have added another set of flow estimates based on the IMS2019 and WPP2019 to the [Figshare collection](https://figshare.com/collections/Bilateral_international_migration_flow_estimates_for_200_countries/4470464) (the original flow estimates in the paper were based on IMS2017). I do not expect there will not be a need to update the estimates again until at least 2021. 
+
+I have added a few more plots below to once again give some summaries of the changes in the updated estimates to those in the paper and from the last update.
+
+### Comparison of estimates
+
+The plot below shows the relationship between the bilateral flow estimates based on IMS2017 and WPP2017 (as in the paper) and IMS2019 - WPP2019 (this update) from each period and estimation method.
+
+![ ](/img/sd-compare1b.png)
+
+In all methods (columns) there are changes some the estimates, which tend to be larger in more recent periods (lower rows) and estimation methods based on demographic accounting (columns to the right). These patterns are likely due to larger revisions in the most recent stock data and the use of updated demographic data in the demographic accounting methods - not required in the stock differencing approaches. 
+
+The revisions to the overall totals of migration flows, shown in [Figure 2](https://www.nature.com/articles/s41597-019-0089-3#Fig2) in the paper, are animated below, transitioning from 1) the estimates in the paper to 2) the first update of the estimates from changes in the demographic data to 3) the most recent update for changes in the stock data. 
+
+![ ](/img/sd-est_tot2.gif)
+
+The 2010-2015 estimates are, on the whole, suggesting that the total global flows remained at similar levels to 2005-2010. Earlier versions of the estimates had suggested a decline. As a result the crude global migration rate falls by only a small margin for most estimation methods during 2010-2015, except for Pseudo-Bayesian estimation of flows where the rate increases a touch.
+
+### Which countries are most affected?
+
+The largest changes in the bilateral flow estimates can be partially detected by looking at the revisions in migrant stock data between IMS2017 and IMS2019. In the stock differencing methods these changes are directly related to the change in the estimated flow sizes between the bilateral country pair. In the demogrpahic accounting approaches the impact of the revision is less direct on the estimated flows, as the method allows for return and onwards migration to match changes in migrant stock data. Below is scatter plot of the changes in the IMS data by continent. 
+
+![ ](/img/sd-tims_change.png)
+
+There are a few features to note. First, and unsuprisingly, the largest revisions are occuring in the most recent data (2015). Second, the biggest changes are in North American data sources. Below is a table of the bilateral pairs where the absoulte revision to the migrant stocks are greater than 100,000. Third, in some areas there are noticable patterns to the changes - the diagonal lines parrallel to the $y=x$ line - which I guess is related to updates in the data used to imputation missing bilateral stocks. 
+
+```{r, message=FALSE, warning=FALSE, include=FALSE}
+# , message=FALSE, warning=FALSE, include=FALSE,  echo = FALSE}
+load("sd2.Rdata")
+d3 <- d2 %>%
+  ungroup() %>%
+  mutate_if(is.numeric, ~ round(. , digits = 2)) %>%
+  rename("Year" = 1,
+         "Place of Birth" = 2,
+         "Place of Residence" = 3,
+         "IMS2017" = 4,
+         "IMS2019" = 5,
+         "Revision (Absolute)" = 6) %>%
+  datatable(options = list(
+  initComplete = JS(
+    "function(settings, json) {",
+    "$('body').css({'font-family': 'Calibri'});",
+    "}"
+  ))) %>% 
+  formatRound(columns=4:6, digits=0)
+
+```
+
+```{r, echo=FALSE}
+widgetframe::frameWidget(d3, height = "100%")
+```
+
+### Impact on validation exercise
+
+The impact of the revision in stock data on the validation exercise in the paper is slightly larger than the previous update, but still not very dramatic. Below is a animated version of [Figure 4](https://www.nature.com/articles/s41597-019-0089-3#Fig4) in the paper, showing the correlations between the flow estimates and reported data for various migration measures, for the original estimates and subsequent updates based on new WPP and IMS data.
+
+![ ](/img/sd-val_all.gif)
+
+As with the first update, the small changes in the correlations, despite some large revisions in the migrant stock data are due to the limited amount of reported migration flows statistics (at the global level) to carry out our validation exercise. 
