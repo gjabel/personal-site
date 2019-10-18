@@ -104,12 +104,12 @@
 
 &lt;p&gt;The first plot shows estimates and future assumptions of net migration for all countries, as published by the United Nations DESA in past and current WPP.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;../../img/abel-wpp-net1.png&#34; alt=&#34; &#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../img/dr-net-abel-wpp1.png&#34; alt=&#34; &#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;With this plot I was trying to illustrate the differences between the volatile past estimates and the more regular future assumptions. It also shows how the assumption making has evolved to cover a longer period (up to 2100 from WPP2010 on-wards) and the use of the long run zero net migration trajectory, an assumption that seems to me to be overly complex given we know nothing about migration in the long run.&lt;/p&gt;
 
 &lt;p&gt;The second plot slices the past data and future assumption a different way - looking at revisions in the WPP for each continent. These plots are similar to those that &lt;a href=&#34;http://webarchive.nationalarchives.gov.uk/20160108034027/http://www.ons.gov.uk/ons/rel/population-trends-rd/population-trends/no--128--summer-2007/fifty-years-of-united-kingdom-national-population-projections--how-accurate-have-they-been-.pdf&#34; target=&#34;_blank&#34;&gt;Shaw (2007)&lt;/a&gt; used to illustrate assumption drift in the ONS national population projections.
-&lt;img src=&#34;../../img/abel-wpp-net2.png&#34; alt=&#34; &#34; /&gt;
+&lt;img src=&#34;../../img/dr-net-abel-wpp2.gif&#34; alt=&#34; &#34; /&gt;
 The assumptions in the past WPP also exhibit some drift, with assumptions for future net migration commonly immediately turning towards lower levels - where later observed estimates go on to show that a persistence assumption (without the turning point) would have been more accurate - see for example Africa or Europe.&lt;/p&gt;
 </description>
     </item>
