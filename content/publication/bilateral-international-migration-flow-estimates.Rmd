@@ -90,7 +90,7 @@ The correlations change by few hundredths of a decimal. These small changes, des
 
 ## <a id="IMS2019"></a>Update for IMS2019
 
-Another month, another update in the input data - this time the UN [International Migrant Stock](https://www.un.org/en/development/desa/population/migration/data/estimates2/estimates19.asp) (IMS) data. I have added another set of flow estimates based on the IMS2019 and WPP2019 to the [Figshare collection](https://figshare.com/collections/Bilateral_international_migration_flow_estimates_for_200_countries/4470464) (the original flow estimates in the paper were based on IMS2017). I do not expect there will not be a need to update the estimates again until at least 2021. 
+Another update in the input data came out a few weeks back (October 2019) - this time the UN [International Migrant Stock](https://www.un.org/en/development/desa/population/migration/data/estimates2/estimates19.asp) (IMS) data. I have added another set of flow estimates based on the IMS2019 and WPP2019 to the [Figshare collection](https://figshare.com/collections/Bilateral_international_migration_flow_estimates_for_200_countries/4470464) (the original flow estimates in the paper were based on IMS2017). I do not expect there will not be a need to update the estimates again until at least 2021. 
 
 I have added a few more plots below to once again give some summaries of the changes in the updated estimates to those in the paper and from the last update.
 
@@ -106,11 +106,11 @@ The revisions to the overall totals of migration flows, shown in [Figure 2](http
 
 ![ ](/img/sd-est_tot2.gif)
 
-The 2010-2015 estimates are, on the whole, suggesting that the total global flows remained at similar levels to 2005-2010. Earlier versions of the estimates had suggested a decline. As a result the crude global migration rate falls by only a small margin for most estimation methods during 2010-2015, except for Pseudo-Bayesian estimation of flows where the rate increases a touch.
+The 2010-2015 estimates are, on the whole, suggesting that the total global flows remained at similar levels to 2005-2010. Earlier versions of the estimates had suggested a decline. As a result the crude global migration rate falls by only a small margin for most estimation methods during 2010-2015, except for Pseudo-Bayesian estimates of flows where the rate increases a touch.
 
 ### Which countries are most affected?
 
-The largest changes in the bilateral flow estimates can be partially detected by looking at the revisions in migrant stock data between IMS2017 and IMS2019. In the stock differencing methods these changes are directly related to the change in the estimated flow sizes between the bilateral country pair. In the demogrpahic accounting approaches the impact of the revision is less direct on the estimated flows, as the method allows for return and onwards migration to match changes in migrant stock data. Below is scatter plot of the changes in the IMS data by continent. 
+The largest changes in the bilateral flow estimates can be partially detected by looking at the revisions in migrant stock data between IMS2017 and IMS2019. In the stock differencing methods these changes are directly related to the change in the estimated flow sizes between the bilateral country pair. In the demogrpahic accounting approaches the impact of the revision is less direct on the estimated flows, as each method allows for return and onwards migration to match changes in migrant stock data. Below is scatter plot of the changes in the IMS data by continent. 
 
 ![ ](/img/sd-tims_change.png)
 
@@ -148,4 +148,4 @@ The impact of the revision in stock data on the validation exercise in the paper
 
 ![ ](/img/sd-val_all.gif)
 
-As with the first update, the small changes in the correlations, despite some large revisions in the migrant stock data are due to the limited amount of reported migration flows statistics (at the global level) to carry out our validation exercise. 
+As with the first update, the small changes in the correlations, despite some large revisions in the migrant stock data are due to the limited amount of reported migration flows statistics (at the global level) to carry out our validation exercise.
