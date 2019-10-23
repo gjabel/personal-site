@@ -44,7 +44,7 @@ From this plot it is easier to see the changes in the migration rates estimation
 
 ### Which countries are most affected?
 
-The countries where the largest changes in the bilateral estimates occured (from the closed demographic accounting methods) can be detected by looking at the revisions in net migration between WPP2017 and WPP2019. Net migration is the best measure to track their changes as it correlates perfectly with the net migration in the WPP and is the residual of the input data (births, deaths and population) for the estimates based on the demographic accounting methods. Below are the changes in the complete time series of net migration in nine countries where the largest absolute differences (in any period) between the two WPP versions occur. 
+The countries where the largest changes in the bilateral estimates occurred (from the closed demographic accounting methods) can be detected by looking at the revisions in net migration between WPP2017 and WPP2019. Net migration is the best measure to track their changes as it correlates perfectly with the net migration in the WPP and is the residual of the input data (births, deaths and population) for the estimates based on the demographic accounting methods. Below are the changes in the complete time series of net migration in nine countries where the largest absolute differences (in any period) between the two WPP versions occur. 
 
 ![ ](/img/sd-wpp_big_changes.gif)
 
@@ -110,11 +110,11 @@ The 2010-2015 estimates are, on the whole, suggesting that the total global flow
 
 ### Which countries are most affected?
 
-The largest changes in the bilateral flow estimates can be partially detected by looking at the revisions in migrant stock data between IMS2017 and IMS2019. In the stock differencing methods these changes are directly related to the change in the estimated flow sizes between the bilateral country pair. In the demogrpahic accounting approaches the impact of the revision is less direct on the estimated flows, as each method allows for return and onwards migration to match changes in migrant stock data. Below is scatter plot of the changes in the IMS data by continent. 
+The largest changes in the bilateral flow estimates can be partially detected by looking at the revisions in migrant stock data between IMS2017 and IMS2019. In the stock differencing methods these changes are directly related to the change in the estimated flow sizes between the bilateral country pair. In the demographic  accounting approaches the impact of the revision is less direct on the estimated flows, as each method allows for return and on-wards migration to match changes in migrant stock data. Below is scatter plot of the changes in the IMS data by continent. 
 
 ![ ](/img/sd-tims_change.png)
 
-There are a few features to note. First, and unsuprisingly, the largest revisions are occuring in the most recent data (2015). Second, the biggest changes are in North American data sources. Below is a table of the bilateral pairs where the absoulte revision to the migrant stocks are greater than 100,000. Third, in some areas there are noticable patterns to the changes - the diagonal lines parrallel to the $y=x$ line - which I guess is related to updates in the data used to imputation missing bilateral stocks. 
+There are a few features to note. First, and unsurprisingly, the largest revisions are occurring in the most recent data (2015). Second, the biggest changes are in North American data sources. Below is a table of the bilateral pairs where the  revision to the migrant stocks are greater than 100,000. Third, in some areas there are noticeable patterns to the changes - the diagonal lines parallel to the $y=x$ line - which I guess is related to updates in the data used to imputation missing bilateral stocks. 
 
 ```{r, message=FALSE, warning=FALSE, include=FALSE}
 # , message=FALSE, warning=FALSE, include=FALSE,  echo = FALSE}
