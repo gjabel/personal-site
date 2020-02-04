@@ -37,7 +37,7 @@ selected = false
 # Links (optional).
 url_pdf = "http://journals.sagepub.com/eprint/tp9NT8fX7QAfnm4NUcGM/full"
 url_preprint = ""
-url_code = "https://guyabel.com/post/chinese-chord-diagram/"
+url_code = "https://guyabel.com/post/chinese-migration-chord-diagram/"
 url_dataset = ""
 url_project = ""
 url_slides = ""

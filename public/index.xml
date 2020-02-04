@@ -83,10 +83,10 @@
     
     <item>
       <title>Chord Diagram of Chinese Internal Migration Flows</title>
-      <link>/post/chinese-chord-diagram/</link>
+      <link>/post/chinese-migration-chord-diagram/</link>
       <pubDate>Mon, 04 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/chinese-chord-diagram/</guid>
+      <guid>/post/chinese-migration-chord-diagram/</guid>
       <description>
 
 
@@ -193,7 +193,7 @@ image_write(image = p, path = &amp;quot;figure1.png&amp;quot;)&lt;/code&gt;&lt;/
 &lt;/div&gt;
 &lt;div id=&#34;chinese-labels&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Chinese Labels&lt;/h3&gt;
-&lt;p&gt;To replace the labels with their Chinese names, as in the plot above, replace the code for &lt;code&gt;s&lt;/code&gt; in the &lt;code&gt;circos.track()&lt;/code&gt; function to:&lt;/p&gt;
+&lt;p&gt;To replace the labels with their Chinese names, as in the plot above, replace the code for the &lt;code&gt;s&lt;/code&gt; object in the &lt;code&gt;circos.track()&lt;/code&gt; function to:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;    s = d2 %&amp;gt;% 
       filter(name == get.cell.meta.data(&amp;quot;sector.index&amp;quot;)) %&amp;gt;%
       select(name_zh) %&amp;gt;%

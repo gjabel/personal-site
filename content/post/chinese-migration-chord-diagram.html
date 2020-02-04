@@ -114,7 +114,7 @@ image_write(image = p, path = &quot;figure1.png&quot;)</code></pre>
 </div>
 <div id="chinese-labels" class="section level3">
 <h3>Chinese Labels</h3>
-<p>To replace the labels with their Chinese names, as in the plot above, replace the code for <code>s</code> in the <code>circos.track()</code> function to:</p>
+<p>To replace the labels with their Chinese names, as in the plot above, replace the code for the <code>s</code> object in the <code>circos.track()</code> function to:</p>
 <pre class="r"><code>    s = d2 %&gt;% 
       filter(name == get.cell.meta.data(&quot;sector.index&quot;)) %&gt;%
       select(name_zh) %&gt;%
