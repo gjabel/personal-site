@@ -82,6 +82,128 @@
     </item>
     
     <item>
+      <title>Chord Diagram of Chinese Internal Migration Flows</title>
+      <link>/post/chinese-chord-diagram/</link>
+      <pubDate>Mon, 04 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/chinese-chord-diagram/</guid>
+      <description>
+
+
+&lt;p&gt;We have had a number of requests for the R code to replicate the plots in our &lt;a href=&#34;https://guyabel.com/publication/china-internal-migration-2010-15/&#34;&gt;paper&lt;/a&gt; on internal migration in China. The code below will produce a similar looking plot, but I have taken out some of the arguments that were very specific to our plot that will not replicate well for other data.&lt;/p&gt;
+&lt;div id=&#34;data&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Data&lt;/h3&gt;
+&lt;p&gt;The code is based on two data sets:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Bilateral flow data with three columns only (origin, destination and flow), see &lt;a href=&#34;https://github.com/gjabel/china-chord/blob/master/flow.csv&#34;&gt;here&lt;/a&gt; for the file used below&lt;/li&gt;
+&lt;li&gt;Region details used for plotting, see &lt;a href=&#34;https://github.com/gjabel/china-chord/blob/master/region.csv&#34;&gt;here&lt;/a&gt; for the file used below&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Note, the names in the region data are the same as the ones used in the origin and destination data.&lt;/p&gt;
+&lt;p&gt;We can read in the data using &lt;code&gt;read_csv()&lt;/code&gt; in the readr package&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)
+
+d1 &amp;lt;- read_csv(&amp;quot;https://raw.githubusercontent.com/gjabel/china-chord/master/flow.csv&amp;quot;) 
+d1 &amp;lt;- mutate(d1, flow = flow/1e6)
+d1&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 961 x 3
+##    orig           dest      flow
+##    &amp;lt;chr&amp;gt;          &amp;lt;chr&amp;gt;    &amp;lt;dbl&amp;gt;
+##  1 Beijing        Beijing 0     
+##  2 Tianjin        Beijing 0.0674
+##  3 Hebei          Beijing 0.864 
+##  4 Shanxi         Beijing 0.225 
+##  5 Inner Mongolia Beijing 0.103 
+##  6 Liaoning       Beijing 0.155 
+##  7 Jilin          Beijing 0.105 
+##  8 Heilongjiang   Beijing 0.194 
+##  9 Shanghai       Beijing 0.0266
+## 10 Jiangsu        Beijing 0.111 
+## # ... with 951 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;d2 &amp;lt;- read_csv(&amp;quot;https://raw.githubusercontent.com/gjabel/china-chord/master/region.csv&amp;quot;)
+d2&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 31 x 6
+##    name      region order colour    gap name_zh
+##    &amp;lt;chr&amp;gt;     &amp;lt;chr&amp;gt;  &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;   &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;  
+##  1 Beijing   East       1 #B61416     2 &amp;lt;U+5317&amp;gt;&amp;lt;U+4EAC&amp;gt;   
+##  2 Tianjin   East       2 #C01517     2 &amp;lt;U+5929&amp;gt;&amp;lt;U+6D25&amp;gt;   
+##  3 Hebei     East       3 #CA1718     2 &amp;lt;U+6CB3&amp;gt;&amp;lt;U+5317&amp;gt;   
+##  4 Shandong  East       4 #D4181A     2 &amp;lt;U+5C71&amp;gt;&amp;lt;U+4E1C&amp;gt;   
+##  5 Jiangsu   East       5 #DE191B     2 &amp;lt;U+6C5F&amp;gt;&amp;lt;U+82CF&amp;gt;   
+##  6 Shanghai  East       6 #E91A1C     2 &amp;lt;U+4E0A&amp;gt;&amp;lt;U+6D77&amp;gt;   
+##  7 Zhejiang  East       7 #F31B1D     2 &amp;lt;U+6D59&amp;gt;&amp;lt;U+6C5F&amp;gt;   
+##  8 Fujian    East       8 #FD1C1F     2 &amp;lt;U+798F&amp;gt;&amp;lt;U+5EFA&amp;gt;   
+##  9 Guangdong East       9 #FF1E20     2 &amp;lt;U+5E7F&amp;gt;&amp;lt;U+4E1C&amp;gt;   
+## 10 Hainan    East      10 #FF1F21     6 &amp;lt;U+6D77&amp;gt;&amp;lt;U+5357&amp;gt;   
+## # ... with 21 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;plot&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Plot&lt;/h3&gt;
+&lt;p&gt;The code below plots the chord diagram without the default labels and axis for the &lt;code&gt;chordDiagram()&lt;/code&gt; function, that are added later in the &lt;code&gt;circos.track()&lt;/code&gt; function.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(circlize)
+
+circos.clear()
+circos.par(track.margin = c(0.01, -0.01), start.degree = 90, gap.degree = d2$gap)
+
+chordDiagram(x = d1, order = d2$name, 
+             grid.col = d2$colour, transparency = 0.25,
+             directional = 1, direction.type = c(&amp;quot;diffHeight&amp;quot;, &amp;quot;arrows&amp;quot;),
+             link.arr.type = &amp;quot;big.arrow&amp;quot;, diffHeight = -0.04, 
+             link.sort = TRUE, link.largest.ontop = TRUE, 
+             annotationTrack = &amp;quot;grid&amp;quot;,
+             preAllocateTracks = list(track.height = 0.25))
+
+circos.track(track.index = 1, bg.border = NA, panel.fun = function(x, y) {
+  s = get.cell.meta.data(&amp;quot;sector.index&amp;quot;)
+  xx = get.cell.meta.data(&amp;quot;xlim&amp;quot;)
+  circos.text(x = mean(xx), y = 0.2, 
+              labels = s, cex = 0.7, adj = c(0, 0.5),
+              facing = &amp;quot;clockwise&amp;quot;, niceFacing = TRUE)
+  circos.axis(h = &amp;quot;bottom&amp;quot;,
+              labels.cex = 0.5,
+              labels.pos.adjust = FALSE,
+              labels.niceFacing = FALSE)
+})&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The legend is added using the &lt;code&gt;legend()&lt;/code&gt; function using the &lt;a href=&#34;http://colorbrewer2.org/#type=qualitative&amp;amp;scheme=Set1&amp;amp;n=4%5D&#34;&gt;Set1&lt;/a&gt; colour palette, that we used as the basis of regional shades in the colour column of &lt;code&gt;d2&lt;/code&gt;; see the &lt;a href=&#34;%5Bhttps://cran.r-project.org/web/packages/shades/index.html%5D&#34;&gt;shades&lt;/a&gt; package for creating palettes of similar colours.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;legend&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Legend&lt;/h3&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(RColorBrewer)
+legend(x = 0.7, y = 1.1, 
+       legend = unique(d2$region), 
+       fill = brewer.pal(n = 4, name = &amp;quot;Set1&amp;quot;), 
+       bty = &amp;quot;n&amp;quot;, cex = 0.8,
+       x.intersp = 0.5, 
+       title = &amp;quot;   Region&amp;quot;, title.adj = 0) &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;saving&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Saving&lt;/h3&gt;
+&lt;p&gt;To save the image in a PDF plot surround the plotting code above between the &lt;code&gt;pdf()&lt;/code&gt; function and &lt;code&gt;dev.off()&lt;/code&gt; function.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;pdf(file = &amp;quot;figure1.pdf&amp;quot;, width = 6, height = 6)
+
+### insert code from above
+
+dev.off()&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;image-files&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Image Files&lt;/h3&gt;
+&lt;p&gt;To convert the PDF to a PNG file I recommend the use of the &lt;a href=&#34;https://cran.r-project.org/web/packages/magick/&#34;&gt;magick&lt;/a&gt; package:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(magick)
+p &amp;lt;- image_read_pdf(&amp;quot;figure1.pdf&amp;quot;)
+image_write(image = p, path = &amp;quot;figure1.png&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;chinese-labels&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Chinese Labels&lt;/h3&gt;
+&lt;p&gt;To replace the labels with their Chinese names, as in the plot above, replace the code for &lt;code&gt;s&lt;/code&gt; in the &lt;code&gt;circos.track()&lt;/code&gt; function to:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;    s = d2 %&amp;gt;% 
+      filter(name == get.cell.meta.data(&amp;quot;sector.index&amp;quot;)) %&amp;gt;%
+      select(name_zh) %&amp;gt;%
+      pull()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You might also need to add &lt;code&gt;family = &#34;GB1&#34;&lt;/code&gt; in the &lt;code&gt;pdf()&lt;/code&gt; function for Chinese characters to render them in the PDFs.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Climate, Conflict and Forced Migration</title>
       <link>/publication/climate-conflict-and-forced-migration/</link>
       <pubDate>Mon, 21 Jan 2019 00:00:00 +0000</pubDate>
@@ -127,7 +249,7 @@
 &lt;li&gt;Underlying migration flows might form different patterns as migrants might not be moving from their country of birth.&lt;/li&gt;
 &lt;li&gt;Migrant populations can decrease from deaths as well as outward migration.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;As in my previous post on &lt;a href=&#34;http://guyabel.com/post/animated-directional-chord-diagrams/&#34;&gt;animated chord diagrams&lt;/a&gt; I used the &lt;a href=&#34;https://cran.r-project.org/web/packages/circlize/index.html&#34;&gt;&lt;code&gt;circlize&lt;/code&gt;&lt;/a&gt; package in R to produce each chord diagrams for each frame of the animation and &lt;a href=&#34;https://cran.r-project.org/web/packages/tweenr/index.html&#34;&gt;&lt;code&gt;tweenr&lt;/code&gt;&lt;/a&gt; for the intermediate data. The country flags were added using the &lt;code&gt;circos.raster()&lt;/code&gt; function in circlize. I used &lt;a href=&#34;https://cran.r-project.org/web/packages/magick/index.html&#34;&gt;&lt;code&gt;magick&lt;/code&gt;&lt;/a&gt; to read in the multipage PDF file of plots over time and &lt;a href=&#34;https://cran.r-project.org/web/packages/animation/index.html&#34;&gt;&lt;code&gt;animation&lt;/code&gt;&lt;/a&gt; to produce the MP4 file. I am begining to prefer MP4 files to GIF as the file size is smaller - so quicker loading, and most browsers display MP4 videos with controls.&lt;/p&gt;
+&lt;p&gt;As in my previous post on &lt;a href=&#34;http://guyabel.com/post/animated-directional-chord-diagrams/&#34;&gt;animated chord diagrams&lt;/a&gt; I used the &lt;a href=&#34;https://cran.r-project.org/web/packages/circlize/index.html&#34;&gt;&lt;code&gt;circlize&lt;/code&gt;&lt;/a&gt; package in R to produce each chord diagrams for each frame of the animation and &lt;a href=&#34;https://cran.r-project.org/web/packages/tweenr/index.html&#34;&gt;&lt;code&gt;tweenr&lt;/code&gt;&lt;/a&gt; for the intermediate data. The country flags were added using the &lt;code&gt;circos.raster()&lt;/code&gt; function in circlize. I used &lt;a href=&#34;https://cran.r-project.org/web/packages/magick/index.html&#34;&gt;&lt;code&gt;magick&lt;/code&gt;&lt;/a&gt; to read in the multipage PDF file of plots over time and &lt;a href=&#34;https://cran.r-project.org/web/packages/animation/index.html&#34;&gt;&lt;code&gt;animation&lt;/code&gt;&lt;/a&gt; to produce the MP4 file. I am begining to prefer MP4 files to GIF as the file size are smaller - so quicker loading - and most browsers display MP4 videos with controls.&lt;/p&gt;
 </description>
     </item>
     
@@ -360,16 +482,16 @@ d0 &lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;d1 &amp;lt;- read_csv(system.file(&amp;quot;vidwp&amp;quot;, &amp;quot;reg_plot.csv&amp;quot;, package = &amp;quot;migest&amp;quot;))
 d1&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 9 x 5
-##   region                        order1 col1    reg1           reg2         
-##   &amp;lt;chr&amp;gt;                          &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;   &amp;lt;chr&amp;gt;          &amp;lt;chr&amp;gt;        
-## 1 Northern America                   1 #40A4D8 Northern       America      
-## 2 Africa                             2 #33BEB7 Africa         &amp;lt;NA&amp;gt;         
-## 3 Europe                             3 #B2C224 Europe         &amp;lt;NA&amp;gt;         
-## 4 Eastern Europe &amp;amp; Central Asia      4 #FECC2F Eastern Europe &amp;amp; Central As~
-## 5 Western Asia                       5 #FBA127 Western        Asia         
-## 6 Southern Asia                      6 #F66320 Southern       Asia         
-## 7 Eastern Asia                       7 #DB3937 Eastern        Asia         
-## 8 Oceania                            8 #A463D7 Oceania        &amp;lt;NA&amp;gt;         
+##   region                        order1 col1    reg1           reg2          
+##   &amp;lt;chr&amp;gt;                          &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;   &amp;lt;chr&amp;gt;          &amp;lt;chr&amp;gt;         
+## 1 Northern America                   1 #40A4D8 Northern       America       
+## 2 Africa                             2 #33BEB7 Africa         &amp;lt;NA&amp;gt;          
+## 3 Europe                             3 #B2C224 Europe         &amp;lt;NA&amp;gt;          
+## 4 Eastern Europe &amp;amp; Central Asia      4 #FECC2F Eastern Europe &amp;amp; Central Asia
+## 5 Western Asia                       5 #FBA127 Western        Asia          
+## 6 Southern Asia                      6 #F66320 Southern       Asia          
+## 7 Eastern Asia                       7 #DB3937 Eastern        Asia          
+## 8 Oceania                            8 #A463D7 Oceania        &amp;lt;NA&amp;gt;          
 ## 9 Latin America &amp;amp; Caribbean          9 #0C5BCE Latin America  &amp;amp; Caribbean&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;tween-data&#34; class=&#34;section level2&#34;&gt;
@@ -633,15 +755,6 @@ reg_max&lt;/code&gt;&lt;/pre&gt;
       <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
       
       <guid>/project/adri-pillar/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Combining Migration Data</title>
-      <link>/project/combining-migration-data/</link>
-      <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/project/combining-migration-data/</guid>
       <description></description>
     </item>
     

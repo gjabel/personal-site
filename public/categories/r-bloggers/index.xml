@@ -196,16 +196,16 @@ d0 &lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;d1 &amp;lt;- read_csv(system.file(&amp;quot;vidwp&amp;quot;, &amp;quot;reg_plot.csv&amp;quot;, package = &amp;quot;migest&amp;quot;))
 d1&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 9 x 5
-##   region                        order1 col1    reg1           reg2         
-##   &amp;lt;chr&amp;gt;                          &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;   &amp;lt;chr&amp;gt;          &amp;lt;chr&amp;gt;        
-## 1 Northern America                   1 #40A4D8 Northern       America      
-## 2 Africa                             2 #33BEB7 Africa         &amp;lt;NA&amp;gt;         
-## 3 Europe                             3 #B2C224 Europe         &amp;lt;NA&amp;gt;         
-## 4 Eastern Europe &amp;amp; Central Asia      4 #FECC2F Eastern Europe &amp;amp; Central As~
-## 5 Western Asia                       5 #FBA127 Western        Asia         
-## 6 Southern Asia                      6 #F66320 Southern       Asia         
-## 7 Eastern Asia                       7 #DB3937 Eastern        Asia         
-## 8 Oceania                            8 #A463D7 Oceania        &amp;lt;NA&amp;gt;         
+##   region                        order1 col1    reg1           reg2          
+##   &amp;lt;chr&amp;gt;                          &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;   &amp;lt;chr&amp;gt;          &amp;lt;chr&amp;gt;         
+## 1 Northern America                   1 #40A4D8 Northern       America       
+## 2 Africa                             2 #33BEB7 Africa         &amp;lt;NA&amp;gt;          
+## 3 Europe                             3 #B2C224 Europe         &amp;lt;NA&amp;gt;          
+## 4 Eastern Europe &amp;amp; Central Asia      4 #FECC2F Eastern Europe &amp;amp; Central Asia
+## 5 Western Asia                       5 #FBA127 Western        Asia          
+## 6 Southern Asia                      6 #F66320 Southern       Asia          
+## 7 Eastern Asia                       7 #DB3937 Eastern        Asia          
+## 8 Oceania                            8 #A463D7 Oceania        &amp;lt;NA&amp;gt;          
 ## 9 Latin America &amp;amp; Caribbean          9 #0C5BCE Latin America  &amp;amp; Caribbean&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;tween-data&#34; class=&#34;section level2&#34;&gt;

@@ -37,7 +37,7 @@ selected = false
 # Links (optional).
 url_pdf = "http://journals.sagepub.com/eprint/tp9NT8fX7QAfnm4NUcGM/full"
 url_preprint = ""
-url_code = ""
+url_code = "https://guyabel.com/post/chinese-chord-diagram/"
 url_dataset = ""
 url_project = ""
 url_slides = ""
@@ -64,7 +64,5 @@ caption = "2010-15 Migration Flows"
 +++
 
 ## Further Notes
-
-Please contact me if you would like the R code to produce the plot (both the English and Chinese version).
 
 Here is an additional WeChat [post](http://mp.weixin.qq.com/s/gmv5iiJ5L-uNyI6vlGOhQA) on the paper (in Chinese) written by Qi Wei.
