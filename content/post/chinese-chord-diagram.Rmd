@@ -105,7 +105,7 @@ image_write(image = p, path = "figure1.png")
 
 ### Chinese Labels
 
-To replace the labels with their Chinese names, as in the plot above, replace the code for `s` in the `circos.track()` function to:
+To replace the labels with their Chinese names, as in the plot above, replace the code for the `s` object in the `circos.track()` function to:
 
 ```{r, eval=FALSE}
     s = d2 %>% 
