@@ -114,4 +114,4 @@ To replace the labels with their Chinese names, as in the plot above, replace th
       pull()
 ```
 
-You might also need to add `family = "GB1"` in the `pdf()` function for Chinese characters to render them in the PDFs.
+You might also need to add `family = "GB1"` in the `pdf()` function for Chinese characters to render in a PDF viewer.
