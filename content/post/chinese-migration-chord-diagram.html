@@ -16,8 +16,8 @@ header:
 <h3>Data</h3>
 <p>The code is based on two data sets:</p>
 <ol style="list-style-type: decimal">
-<li>Bilateral flow data with three columns only (origin, destination and flow), see <a href="https://github.com/gjabel/china-chord/blob/master/flow.csv">here</a> for the file used below</li>
-<li>Region details used for plotting, see <a href="https://github.com/gjabel/china-chord/blob/master/region.csv">here</a> for the file used below</li>
+<li>Bilateral flow data with three columns only (origin, destination and flow), see <a href="https://github.com/guyabel/china-chord/blob/master/flow.csv">here</a> for the file used below</li>
+<li>Region details used for plotting, see <a href="https://github.com/guyabel/china-chord/blob/master/region.csv">here</a> for the file used below</li>
 </ol>
 <p>Note, the names in the region data are the same as the ones used in the origin and destination data.</p>
 <p>We can read in the data using <code>read_csv()</code> in the readr package</p>
@@ -119,5 +119,5 @@ image_write(image = p, path = &quot;figure1.png&quot;)</code></pre>
       filter(name == get.cell.meta.data(&quot;sector.index&quot;)) %&gt;%
       select(name_zh) %&gt;%
       pull()</code></pre>
-<p>You might also need to add <code>family = "GB1"</code> in the <code>pdf()</code> function for Chinese characters to render them in the PDFs.</p>
+<p>You might also need to add <code>family = "GB1"</code> in the <code>pdf()</code> function for Chinese characters to render in a PDF viewer.</p>
 </div>
