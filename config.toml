@@ -11,7 +11,7 @@ title = "Guy Abel"
 
 # Your copyright notice - appears in site footer.
 # To display a copyright symbol, type `&copy;`.
-copyright = "&copy; 2020 &middot; Selected posts also on <a href=\"https://r-bloggers.com/\">R-bloggers</a>"
+copyright = "&copy; 2018 &middot; Selected posts also on <a href=\"https://r-bloggers.com/\">R-bloggers</a>"
 
 theme = "hugo-academic"
 enableEmoji = true
