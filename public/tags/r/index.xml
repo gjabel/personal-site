@@ -258,7 +258,7 @@ d2&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;plots-for-each-frame&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Plots for Each Frame&lt;/h2&gt;
-&lt;p&gt;Now the data is in the correct format, chord diagrams can be produced for each frame of the eventual GIF. To do this, I used a &lt;code&gt;for&lt;/code&gt; loop to cycle through the tweend data. The arguments I used in the &lt;code&gt;circos.par&lt;/code&gt;, &lt;code&gt;chordDiagram&lt;/code&gt; and &lt;code&gt;circos.track&lt;/code&gt; functions to produce each plot are explained in more detail in the comments of the &lt;code&gt;migest&lt;/code&gt; &lt;a href=&#34;https://github.com/guyabel/migest/blob/master/demo/cfplot_reg2.R&#34;&gt;demo&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Now the data is in the correct format, chord diagrams can be produced for each frame of the eventual GIF. To do this, I used a &lt;code&gt;for&lt;/code&gt; loop to cycle through the tweend data. The arguments I used in the &lt;code&gt;circos.par&lt;/code&gt;, &lt;code&gt;chordDiagram&lt;/code&gt; and &lt;code&gt;circos.track&lt;/code&gt; functions to produce each plot are explained in more detail in the comments of the &lt;code&gt;migest&lt;/code&gt; &lt;a href=&#34;https://github.com/gjabel/migest/blob/master/demo/cfplot_reg2.R&#34;&gt;demo&lt;/a&gt;.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# create a directory to store the individual plots
 dir.create(&amp;quot;./plot-gif/&amp;quot;)
 
@@ -268,7 +268,7 @@ for(f in unique(d2$.frame)){
   png(file = paste0(&amp;quot;./plot-gif/globalchord&amp;quot;, f, &amp;quot;.png&amp;quot;), height = 7, width = 7, 
       units = &amp;quot;in&amp;quot;, res = 500)
   
-  # initialise the circos plot
+  # intialise the circos plot
   circos.clear()
   par(mar = rep(0, 4), cex=1)
   circos.par(start.degree = 90, track.margin=c(-0.1, 0.1), 

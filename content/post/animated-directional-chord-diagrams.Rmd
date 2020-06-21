@@ -73,7 +73,7 @@ d2
 
 ## Plots for Each Frame
 
-Now the data is in the correct format, chord diagrams can be produced for each frame of the eventual GIF. To do this, I used a `for` loop to cycle through the tweend data. The arguments I used in the `circos.par`, `chordDiagram` and `circos.track` functions to produce each plot are explained in more detail in the comments of the `migest` [demo](https://github.com/guyabel/migest/blob/master/demo/cfplot_reg2.R).
+Now the data is in the correct format, chord diagrams can be produced for each frame of the eventual GIF. To do this, I used a `for` loop to cycle through the tweend data. The arguments I used in the `circos.par`, `chordDiagram` and `circos.track` functions to produce each plot are explained in more detail in the comments of the `migest` [demo](https://github.com/gjabel/migest/blob/master/demo/cfplot_reg2.R).
 
 ```{r, message=FALSE, eval=FALSE}
 # create a directory to store the individual plots
@@ -85,7 +85,7 @@ for(f in unique(d2$.frame)){
   png(file = paste0("./plot-gif/globalchord", f, ".png"), height = 7, width = 7, 
       units = "in", res = 500)
   
-  # initialise the circos plot
+  # intialise the circos plot
   circos.clear()
   par(mar = rep(0, 4), cex=1)
   circos.par(start.degree = 90, track.margin=c(-0.1, 0.1), 

@@ -70,8 +70,8 @@
 &lt;h3&gt;Data&lt;/h3&gt;
 &lt;p&gt;The code is based on two data sets:&lt;/p&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;Bilateral flow data with three columns only (origin, destination and flow), see &lt;a href=&#34;https://github.com/guyabel/china-chord/blob/master/flow.csv&#34;&gt;here&lt;/a&gt; for the file used below&lt;/li&gt;
-&lt;li&gt;Region details used for plotting, see &lt;a href=&#34;https://github.com/guyabel/china-chord/blob/master/region.csv&#34;&gt;here&lt;/a&gt; for the file used below&lt;/li&gt;
+&lt;li&gt;Bilateral flow data with three columns only (origin, destination and flow), see &lt;a href=&#34;https://github.com/gjabel/china-chord/blob/master/flow.csv&#34;&gt;here&lt;/a&gt; for the file used below&lt;/li&gt;
+&lt;li&gt;Region details used for plotting, see &lt;a href=&#34;https://github.com/gjabel/china-chord/blob/master/region.csv&#34;&gt;here&lt;/a&gt; for the file used below&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Note, the names in the region data are the same as the ones used in the origin and destination data.&lt;/p&gt;
 &lt;p&gt;We can read in the data using &lt;code&gt;read_csv()&lt;/code&gt; in the readr package&lt;/p&gt;
@@ -173,7 +173,7 @@ image_write(image = p, path = &amp;quot;figure1.png&amp;quot;)&lt;/code&gt;&lt;/
       filter(name == get.cell.meta.data(&amp;quot;sector.index&amp;quot;)) %&amp;gt;%
       select(name_zh) %&amp;gt;%
       pull()&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;You might also need to add &lt;code&gt;family = &#34;GB1&#34;&lt;/code&gt; in the &lt;code&gt;pdf()&lt;/code&gt; function for Chinese characters to render in a PDF viewer.&lt;/p&gt;
+&lt;p&gt;You might also need to add &lt;code&gt;family = &#34;GB1&#34;&lt;/code&gt; in the &lt;code&gt;pdf()&lt;/code&gt; function for Chinese characters to render them in the PDFs.&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -325,7 +325,7 @@ d2&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;plots-for-each-frame&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Plots for Each Frame&lt;/h2&gt;
-&lt;p&gt;Now the data is in the correct format, chord diagrams can be produced for each frame of the eventual GIF. To do this, I used a &lt;code&gt;for&lt;/code&gt; loop to cycle through the tweend data. The arguments I used in the &lt;code&gt;circos.par&lt;/code&gt;, &lt;code&gt;chordDiagram&lt;/code&gt; and &lt;code&gt;circos.track&lt;/code&gt; functions to produce each plot are explained in more detail in the comments of the &lt;code&gt;migest&lt;/code&gt; &lt;a href=&#34;https://github.com/guyabel/migest/blob/master/demo/cfplot_reg2.R&#34;&gt;demo&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Now the data is in the correct format, chord diagrams can be produced for each frame of the eventual GIF. To do this, I used a &lt;code&gt;for&lt;/code&gt; loop to cycle through the tweend data. The arguments I used in the &lt;code&gt;circos.par&lt;/code&gt;, &lt;code&gt;chordDiagram&lt;/code&gt; and &lt;code&gt;circos.track&lt;/code&gt; functions to produce each plot are explained in more detail in the comments of the &lt;code&gt;migest&lt;/code&gt; &lt;a href=&#34;https://github.com/gjabel/migest/blob/master/demo/cfplot_reg2.R&#34;&gt;demo&lt;/a&gt;.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# create a directory to store the individual plots
 dir.create(&amp;quot;./plot-gif/&amp;quot;)
 
@@ -335,7 +335,7 @@ for(f in unique(d2$.frame)){
   png(file = paste0(&amp;quot;./plot-gif/globalchord&amp;quot;, f, &amp;quot;.png&amp;quot;), height = 7, width = 7, 
       units = &amp;quot;in&amp;quot;, res = 500)
   
-  # initialise the circos plot
+  # intialise the circos plot
   circos.clear()
   par(mar = rep(0, 4), cex=1)
   circos.par(start.degree = 90, track.margin=c(-0.1, 0.1), 
