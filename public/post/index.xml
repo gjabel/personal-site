@@ -6,55 +6,8 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
     <copyright>&amp;copy; 2018 &amp;middot; Selected posts also on &lt;a href=&#34;https://r-bloggers.com/&#34;&gt;R-bloggers&lt;/a&gt;</copyright>
-    <lastBuildDate>Sat, 20 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 04 Feb 2019 00:00:00 +0000</lastBuildDate>
     <atom:link href="/post/" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Global Migrant Stock Chord Diagrams</title>
-      <link>/post/global-migrant-stocks/</link>
-      <pubDate>Sat, 20 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/post/global-migrant-stocks/</guid>
-      <description>
-
-
-&lt;p&gt;Over the last few months I have been playing around with different ways of showing changing global bilateral migrant stocks, adapting the the code from the plots for region to region flows in a recent estimation &lt;a href=&#34;https://www.nature.com/articles/s41597-019-0089-3&#34;&gt;paper&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;The first plot below shows the change over time in the pattern of global migrant stocks. As with the &lt;a href=&#34;http://guyabel.com/post/migrant-stock-chord-digrams&#34;&gt;regional plots&lt;/a&gt; in my previous post, the chords in the diagrams represent the connection between the places of birth (at the base of the chord) and places of residence (at the arrow head of the chord). The width of based of the chords correspond to the size of the migrant population in millions. Chords are ordered relative to their size, with the largest migrant stocks plotted at the beginning of the region segments. The ordering of chords jumps around over time as the relative rankings of the largest foreign-born populations change in each region. Values for the migrant population sizes are from the 2019 revision of the United Nations DESA &lt;a href=&#34;https://www.un.org/en/development/desa/population/migration/data/estimates2/estimates19.asp&#34;&gt;International Migrant Stock Data&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Note: you might have to right click, select show controls and hit play to start the animations depending on your browsers - right clicking can also allow you to access controls on the play back speed.&lt;/p&gt;
-&lt;video loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34; poster=&#34;/img/ims-abel-global.png&#34; controls&gt;
-&lt;source src=&#34;../img/ims-abel-global.mp4&#34; type=&#34;video/mp4&#34; /&gt;
-&lt;/video&gt;
-&lt;div id=&#34;sex-differences-in-global-migrant-distribution-patterns&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Sex differences in global migrant distribution patterns&lt;/h2&gt;
-&lt;p&gt;The next two plot below shows the differences between male and female global migrant distributions in 2019. In the first plot I keep the sector axis fixed at their maximums (over both sexes) making it easier to detect changes in the relative volume of a particular migrant corridor; for example the greater number of male migrants in West Asia and slightly more female migrants in North America.&lt;/p&gt;
-&lt;video loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34; poster=&#34;/img/ims-abel-sex1.png&#34; controls&gt;
-&lt;source src=&#34;../img/ims-abel-sex1.mp4&#34; type=&#34;video/mp4&#34; /&gt;
-&lt;/video&gt;
-&lt;p&gt;In the second plot, I allow the sector axis to be specific to the regional totals. This (perhaps?) makes it easier to detect relative changes in the overall global patterns by sex.&lt;/p&gt;
-&lt;video loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34; poster=&#34;/img/ims-abel-sex2.png&#34; controls&gt;
-&lt;source src=&#34;../img/ims-abel-sex2.mp4&#34; type=&#34;video/mp4&#34; /&gt;
-&lt;/video&gt;
-&lt;/div&gt;
-&lt;div id=&#34;migrant-totals-relative-to-their-population-totals.&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Migrant totals relative to their population totals.&lt;/h2&gt;
-&lt;p&gt;One important feature of international migrants are their relative rarity. Professor Hein de Haas makes this point neatly using a &lt;a href=&#34;http://heindehaas.blogspot.com/2016/08/refugees-small-and-relatively-stable.html&#34;&gt;pie chart&lt;/a&gt;, where his focus is predominantly on refugees, but also shows the small share of the global population that are living outside their country of birth (under 4%). This feature is completely missed in chord diagrams of migrants like the ones above, where there is no way to gauge the share of the migrant populations relative to the total population.&lt;/p&gt;
-&lt;p&gt;In the plot below I tried to illustrate the relative sizes of migrant populations using the lengths of the sector axis in the to transitions between&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;The number of migrants (which is a combination of migrant living in the region and migrants born in the region living elsewhere) as in the plots above, and&lt;br /&gt;
-&lt;/li&gt;
-&lt;li&gt;The total population of the region.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The chord widths remain constant, fixed at the size of the bilateral migrant populations.&lt;/p&gt;
-&lt;video loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34; poster=&#34;/img/ims-abel-pop.png&#34; controls&gt;
-&lt;source src=&#34;../img/ims-abel-pop.mp4&#34; type=&#34;video/mp4&#34; /&gt;
-&lt;/video&gt;
-&lt;/div&gt;
-&lt;div id=&#34;r-code&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;R Code&lt;/h2&gt;
-&lt;p&gt;These plots were all produced in R, primarily using the &lt;code&gt;chordDiagram()&lt;/code&gt; function in the &lt;a href=&#34;https://jokergoo.github.io/circlize_book/book/the-chorddiagram-function.html&#34;&gt;circlize&lt;/a&gt; package. A while ago I wrote a &lt;a href=&#34;http://guyabel.com/post/animated-directional-chord-diagrams&#34;&gt;post&lt;/a&gt; with more details on animated chord diagrams if you would like more details. The specific code for the charts gets a bit overwhelming (and is poorly commented) so I am hesitant to put them on Github, especially becuase the more complicated parts for defining the regions and sectors can now be done much more easily using the new &lt;code&gt;group&lt;/code&gt; argument in the &lt;code&gt;chordDiagram()&lt;/code&gt; function, as descirbed in a recent &lt;a href=&#34;https://jokergoo.github.io/2020/06/08/multiple-group-chord-diagram/&#34;&gt;post&lt;/a&gt; by Zuguang Gu.&lt;/p&gt;
-&lt;/div&gt;
-</description>
-    </item>
     
     <item>
       <title>Chord Diagram of Chinese Internal Migration Flows</title>
@@ -70,8 +23,8 @@
 &lt;h3&gt;Data&lt;/h3&gt;
 &lt;p&gt;The code is based on two data sets:&lt;/p&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;Bilateral flow data with three columns only (origin, destination and flow), see &lt;a href=&#34;https://github.com/gjabel/china-chord/blob/master/flow.csv&#34;&gt;here&lt;/a&gt; for the file used below&lt;/li&gt;
-&lt;li&gt;Region details used for plotting, see &lt;a href=&#34;https://github.com/gjabel/china-chord/blob/master/region.csv&#34;&gt;here&lt;/a&gt; for the file used below&lt;/li&gt;
+&lt;li&gt;Bilateral flow data with three columns only (origin, destination and flow), see &lt;a href=&#34;https://github.com/guyabel/china-chord/blob/master/flow.csv&#34;&gt;here&lt;/a&gt; for the file used below&lt;/li&gt;
+&lt;li&gt;Region details used for plotting, see &lt;a href=&#34;https://github.com/guyabel/china-chord/blob/master/region.csv&#34;&gt;here&lt;/a&gt; for the file used below&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Note, the names in the region data are the same as the ones used in the origin and destination data.&lt;/p&gt;
 &lt;p&gt;We can read in the data using &lt;code&gt;read_csv()&lt;/code&gt; in the readr package&lt;/p&gt;
@@ -173,7 +126,7 @@ image_write(image = p, path = &amp;quot;figure1.png&amp;quot;)&lt;/code&gt;&lt;/
       filter(name == get.cell.meta.data(&amp;quot;sector.index&amp;quot;)) %&amp;gt;%
       select(name_zh) %&amp;gt;%
       pull()&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;You might also need to add &lt;code&gt;family = &#34;GB1&#34;&lt;/code&gt; in the &lt;code&gt;pdf()&lt;/code&gt; function for Chinese characters to render them in the PDFs.&lt;/p&gt;
+&lt;p&gt;You might also need to add &lt;code&gt;family = &#34;GB1&#34;&lt;/code&gt; in the &lt;code&gt;pdf()&lt;/code&gt; function for Chinese characters to render in a PDF viewer.&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -215,7 +168,7 @@ image_write(image = p, path = &amp;quot;figure1.png&amp;quot;)&lt;/code&gt;&lt;/
 &lt;li&gt;Underlying migration flows might form different patterns as migrants might not be moving from their country of birth.&lt;/li&gt;
 &lt;li&gt;Migrant populations can decrease from deaths as well as outward migration.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;As in my previous post on &lt;a href=&#34;http://guyabel.com/post/animated-directional-chord-diagrams/&#34;&gt;animated chord diagrams&lt;/a&gt; I used the &lt;a href=&#34;https://cran.r-project.org/web/packages/circlize/index.html&#34;&gt;&lt;code&gt;circlize&lt;/code&gt;&lt;/a&gt; package in R to produce each chord diagrams for each frame of the animation and &lt;a href=&#34;https://cran.r-project.org/web/packages/tweenr/index.html&#34;&gt;&lt;code&gt;tweenr&lt;/code&gt;&lt;/a&gt; for the intermediate data. The country flags were added using the &lt;code&gt;circos.raster()&lt;/code&gt; function in circlize. I used &lt;a href=&#34;https://cran.r-project.org/web/packages/magick/index.html&#34;&gt;&lt;code&gt;magick&lt;/code&gt;&lt;/a&gt; to read in the multipage PDF file of plots over time and &lt;a href=&#34;https://cran.r-project.org/web/packages/animation/index.html&#34;&gt;&lt;code&gt;animation&lt;/code&gt;&lt;/a&gt; to produce the MP4 file. I am beginning to prefer MP4 files to GIF as the file size are smaller - so quicker loading - and most browsers display MP4 videos with controls.&lt;/p&gt;
+&lt;p&gt;As in my previous post on &lt;a href=&#34;http://guyabel.com/post/animated-directional-chord-diagrams/&#34;&gt;animated chord diagrams&lt;/a&gt; I used the &lt;a href=&#34;https://cran.r-project.org/web/packages/circlize/index.html&#34;&gt;&lt;code&gt;circlize&lt;/code&gt;&lt;/a&gt; package in R to produce each chord diagrams for each frame of the animation and &lt;a href=&#34;https://cran.r-project.org/web/packages/tweenr/index.html&#34;&gt;&lt;code&gt;tweenr&lt;/code&gt;&lt;/a&gt; for the intermediate data. The country flags were added using the &lt;code&gt;circos.raster()&lt;/code&gt; function in circlize. I used &lt;a href=&#34;https://cran.r-project.org/web/packages/magick/index.html&#34;&gt;&lt;code&gt;magick&lt;/code&gt;&lt;/a&gt; to read in the multipage PDF file of plots over time and &lt;a href=&#34;https://cran.r-project.org/web/packages/animation/index.html&#34;&gt;&lt;code&gt;animation&lt;/code&gt;&lt;/a&gt; to produce the MP4 file. I am begining to prefer MP4 files to GIF as the file size are smaller - so quicker loading - and most browsers display MP4 videos with controls.&lt;/p&gt;
 </description>
     </item>
     
@@ -468,7 +421,7 @@ d2&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;plots-for-each-frame&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Plots for Each Frame&lt;/h2&gt;
-&lt;p&gt;Now the data is in the correct format, chord diagrams can be produced for each frame of the eventual GIF. To do this, I used a &lt;code&gt;for&lt;/code&gt; loop to cycle through the tweend data. The arguments I used in the &lt;code&gt;circos.par&lt;/code&gt;, &lt;code&gt;chordDiagram&lt;/code&gt; and &lt;code&gt;circos.track&lt;/code&gt; functions to produce each plot are explained in more detail in the comments of the &lt;code&gt;migest&lt;/code&gt; &lt;a href=&#34;https://github.com/gjabel/migest/blob/master/demo/cfplot_reg2.R&#34;&gt;demo&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Now the data is in the correct format, chord diagrams can be produced for each frame of the eventual GIF. To do this, I used a &lt;code&gt;for&lt;/code&gt; loop to cycle through the tweend data. The arguments I used in the &lt;code&gt;circos.par&lt;/code&gt;, &lt;code&gt;chordDiagram&lt;/code&gt; and &lt;code&gt;circos.track&lt;/code&gt; functions to produce each plot are explained in more detail in the comments of the &lt;code&gt;migest&lt;/code&gt; &lt;a href=&#34;https://github.com/guyabel/migest/blob/master/demo/cfplot_reg2.R&#34;&gt;demo&lt;/a&gt;.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# create a directory to store the individual plots
 dir.create(&amp;quot;./plot-gif/&amp;quot;)
 
@@ -478,7 +431,7 @@ for(f in unique(d2$.frame)){
   png(file = paste0(&amp;quot;./plot-gif/globalchord&amp;quot;, f, &amp;quot;.png&amp;quot;), height = 7, width = 7, 
       units = &amp;quot;in&amp;quot;, res = 500)
   
-  # intialise the circos plot
+  # initialise the circos plot
   circos.clear()
   par(mar = rep(0, 4), cex=1)
   circos.par(start.degree = 90, track.margin=c(-0.1, 0.1), 

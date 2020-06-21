@@ -439,7 +439,7 @@ d2</code></pre>
 </div>
 <div id="plots-for-each-frame" class="section level2">
 <h2>Plots for Each Frame</h2>
-<p>Now the data is in the correct format, chord diagrams can be produced for each frame of the eventual GIF. To do this, I used a <code>for</code> loop to cycle through the tweend data. The arguments I used in the <code>circos.par</code>, <code>chordDiagram</code> and <code>circos.track</code> functions to produce each plot are explained in more detail in the comments of the <code>migest</code> <a href="https://github.com/gjabel/migest/blob/master/demo/cfplot_reg2.R">demo</a>.</p>
+<p>Now the data is in the correct format, chord diagrams can be produced for each frame of the eventual GIF. To do this, I used a <code>for</code> loop to cycle through the tweend data. The arguments I used in the <code>circos.par</code>, <code>chordDiagram</code> and <code>circos.track</code> functions to produce each plot are explained in more detail in the comments of the <code>migest</code> <a href="https://github.com/guyabel/migest/blob/master/demo/cfplot_reg2.R">demo</a>.</p>
 <pre class="r"><code># create a directory to store the individual plots
 dir.create(&quot;./plot-gif/&quot;)
 
@@ -449,7 +449,7 @@ for(f in unique(d2$.frame)){
   png(file = paste0(&quot;./plot-gif/globalchord&quot;, f, &quot;.png&quot;), height = 7, width = 7, 
       units = &quot;in&quot;, res = 500)
   
-  # intialise the circos plot
+  # initialise the circos plot
   circos.clear()
   par(mar = rep(0, 4), cex=1)
   circos.par(start.degree = 90, track.margin=c(-0.1, 0.1), 
