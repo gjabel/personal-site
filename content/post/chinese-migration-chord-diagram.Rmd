@@ -10,7 +10,7 @@ header:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, cache = TRUE)
+knitr::opts_chunk$set(echo = TRUE)
 ```
 
 We have had a number of requests for the R code to replicate the plots in our [paper](https://guyabel.com/publication/china-internal-migration-2010-15/) on internal migration in China. The code below will produce a similar looking plot, but I have taken out some of the arguments that were very specific to our plot that will not replicate well for other data. 
