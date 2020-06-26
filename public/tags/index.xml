@@ -1,7 +1,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Guy Abel</title>
-    <link>/tags/</link>
+    <link>https://guyabel.com/tags/</link>
     <description>Recent content in Tags on Guy Abel</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
@@ -11,64 +11,64 @@
     
     <item>
       <title>chord diagram</title>
-      <link>/tags/chord-diagram/</link>
+      <link>https://guyabel.com/tags/chord-diagram/</link>
       <pubDate>Sat, 20 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>/tags/chord-diagram/</guid>
+      <guid>https://guyabel.com/tags/chord-diagram/</guid>
       <description></description>
     </item>
     
     <item>
       <title>migration</title>
-      <link>/tags/migration/</link>
+      <link>https://guyabel.com/tags/migration/</link>
       <pubDate>Sat, 20 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>/tags/migration/</guid>
+      <guid>https://guyabel.com/tags/migration/</guid>
       <description></description>
     </item>
     
     <item>
       <title>R</title>
-      <link>/tags/r/</link>
+      <link>https://guyabel.com/tags/r/</link>
       <pubDate>Tue, 05 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/r/</guid>
+      <guid>https://guyabel.com/tags/r/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Bayesian</title>
-      <link>/tags/bayesian/</link>
+      <link>https://guyabel.com/tags/bayesian/</link>
       <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/bayesian/</guid>
+      <guid>https://guyabel.com/tags/bayesian/</guid>
       <description></description>
     </item>
     
     <item>
       <title>estimation</title>
-      <link>/tags/estimation/</link>
+      <link>https://guyabel.com/tags/estimation/</link>
       <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/estimation/</guid>
+      <guid>https://guyabel.com/tags/estimation/</guid>
       <description></description>
     </item>
     
     <item>
       <title>prediction</title>
-      <link>/tags/prediction/</link>
+      <link>https://guyabel.com/tags/prediction/</link>
       <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/prediction/</guid>
+      <guid>https://guyabel.com/tags/prediction/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Content tagged as &#39;Academic&#39;</title>
-      <link>/tags/academic/</link>
+      <link>https://guyabel.com/tags/academic/</link>
       <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>/tags/academic/</guid>
+      <guid>https://guyabel.com/tags/academic/</guid>
       <description>&lt;p&gt;Here is a list of all the content that has been tagged as &lt;em&gt;academic&lt;/em&gt;.&lt;/p&gt;
 </description>
     </item>

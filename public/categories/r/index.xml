@@ -1,0 +1,112 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>R on Guy Abel</title>
+    <link>/categories/r/</link>
+    <description>Recent content in R on Guy Abel</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-uk</language>
+    <copyright>&amp;copy; 2018 &amp;middot; Selected posts also on &lt;a href=&#34;https://r-bloggers.com/&#34;&gt;R-bloggers&lt;/a&gt;</copyright>
+    <lastBuildDate>Wed, 01 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/categories/r/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Expand broom::tidy() output for categorical parameter estimates</title>
+      <link>/post/tidycat/</link>
+      <pubDate>Wed, 01 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/tidycat/</guid>
+      <description>
+
+
+&lt;div&gt;
+&lt;img src=&#34;../../img/tidycat.png&#34; width=&#34;200px&#34; align=&#34;right&#34;&gt;
+&lt;/div&gt;
+&lt;div id=&#34;introduction&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;The &lt;code&gt;tidycat&lt;/code&gt; package includes the &lt;code&gt;tidy_categorical()&lt;/code&gt; function to expand &lt;code&gt;broom::tidy()&lt;/code&gt; outputs for categorical parameter estimates.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;documentation&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Documentation&lt;/h2&gt;
+&lt;p&gt;For full documentation, see the package vignette: &lt;a href=&#34;https://cran.r-project.org/web/packages/tidycat/vignettes/intro.html&#34;&gt;The tidycat package: expand broom::tidy() output for categorical parameter estimates&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;hello-world&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Hello World&lt;/h2&gt;
+&lt;p&gt;The &lt;code&gt;tidy()&lt;/code&gt; function in the broom package takes the messy output of built-in functions in R, such as &lt;code&gt;lm()&lt;/code&gt;, and turns them into tidy data frames.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(dplyr)
+library(broom)
+
+m1 &amp;lt;- mtcars %&amp;gt;%
+  mutate(transmission = recode_factor(am, `0` = &amp;quot;automatic&amp;quot;, `1` = &amp;quot;manual&amp;quot;)) %&amp;gt;%
+  lm(mpg ~ qsec + as.factor(cyl) + wt * transmission , data = .)
+
+tidy(m1)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 7 x 5
+##   term                  estimate std.error statistic p.value
+##   &amp;lt;chr&amp;gt;                    &amp;lt;dbl&amp;gt;     &amp;lt;dbl&amp;gt;     &amp;lt;dbl&amp;gt;   &amp;lt;dbl&amp;gt;
+## 1 (Intercept)             10.8       9.24      1.17  0.254  
+## 2 qsec                     0.973     0.454     2.14  0.0419 
+## 3 as.factor(cyl)6         -0.545     1.62     -0.335 0.740  
+## 4 as.factor(cyl)8         -0.364     2.52     -0.144 0.886  
+## 5 wt                      -2.91      0.827    -3.53  0.00166
+## 6 transmissionmanual      13.5       3.94      3.43  0.00210
+## 7 wt:transmissionmanual   -3.97      1.31     -3.03  0.00558&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The &lt;code&gt;tidy_categorical()&lt;/code&gt; function adds&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;further columns (&lt;code&gt;variable&lt;/code&gt;, &lt;code&gt;level&lt;/code&gt; and &lt;code&gt;effect&lt;/code&gt;) to the &lt;code&gt;broom::tidy()&lt;/code&gt; output to help manage categorical variables&lt;/li&gt;
+&lt;li&gt;further rows for reference category terms and a column to indicate their location (&lt;code&gt;reference&lt;/code&gt;) when setting &lt;code&gt;include_reference = TRUE&lt;/code&gt; (default)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;It requires two inputs&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;a data frame &lt;code&gt;d&lt;/code&gt; of parameter estimates from a model from &lt;code&gt;broom::tidy()&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;the corresponding model object &lt;code&gt;m&lt;/code&gt; passed to &lt;code&gt;broom::tidy()&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For example:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidycat)
+d1 &amp;lt;- m1 %&amp;gt;%
+  tidy(conf.int = TRUE) %&amp;gt;%
+  tidy_categorical(m = m1)
+d1 %&amp;gt;%
+  select(-(3:5))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 10 x 8
+##    term       estimate conf.low conf.high variable   level  effect  reference   
+##    &amp;lt;chr&amp;gt;         &amp;lt;dbl&amp;gt;    &amp;lt;dbl&amp;gt;     &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;      &amp;lt;fct&amp;gt;  &amp;lt;chr&amp;gt;   &amp;lt;chr&amp;gt;       
+##  1 (Intercep~   10.8    -8.25       29.8  (Intercep~ (Inte~ main    Non-Baselin~
+##  2 qsec          0.973   0.0386      1.91 qsec       qsec   main    Non-Baselin~
+##  3 &amp;lt;NA&amp;gt;          0       0           0    as.factor~ 4      main    Baseline Ca~
+##  4 as.factor~   -0.545  -3.89        2.80 as.factor~ 6      main    Non-Baselin~
+##  5 as.factor~   -0.364  -5.56        4.83 as.factor~ 8      main    Non-Baselin~
+##  6 wt           -2.91   -4.62       -1.21 wt         wt     main    Non-Baselin~
+##  7 &amp;lt;NA&amp;gt;          0       0           0    transmiss~ autom~ main    Baseline Ca~
+##  8 transmiss~   13.5     5.40       21.6  transmiss~ manual main    Non-Baselin~
+##  9 &amp;lt;NA&amp;gt;          0       0           0    wt:transm~ autom~ intera~ Baseline Ca~
+## 10 wt:transm~   -3.97   -6.67       -1.28 wt:transm~ manual intera~ Non-Baselin~&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The expanded data frame from &lt;code&gt;tidy_categorical()&lt;/code&gt; of parameter estimates can be particularly useful for creating coefficient plots, allowing:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;grouping terms from the same categorical variable from the additional columns.&lt;/li&gt;
+&lt;li&gt;inclusion of reference categories in a coefficient plot from the additional rows, allowing the reader to better grasp the meaning of the parameter estimates in each categorical variable.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For example:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(ggplot2)
+library(ggforce)
+d1 %&amp;gt;%
+  slice(-1) %&amp;gt;%
+  ggplot(mapping = aes(x = level, y = estimate, colour = reference,
+                       ymin = conf.low, ymax = conf.high)) +
+  facet_row(facets = &amp;quot;variable&amp;quot;, scales = &amp;quot;free_x&amp;quot;, space = &amp;quot;free&amp;quot;) +
+  geom_hline(yintercept = 0, linetype = &amp;quot;dashed&amp;quot;) +
+  geom_pointrange()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;../../post/tidycat_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;installation&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Installation&lt;/h2&gt;
+&lt;p&gt;You can install the released version of tidycat from &lt;a href=&#34;https://CRAN.R-project.org&#34;&gt;CRAN&lt;/a&gt; with:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;install.packages(&amp;quot;tidycat&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;And the development version from &lt;a href=&#34;https://github.com/&#34;&gt;GitHub&lt;/a&gt; with:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# install.packages(&amp;quot;devtools&amp;quot;)
+devtools::install_github(&amp;quot;guyabel/tidycat&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

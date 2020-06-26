@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en-uk">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.55.6" />
+  <meta name="author" content="Guy Abel">
+  <meta name="description" content="Professor">
+
+  
+  <link rel="alternate" hreflang="en-uk" href="../../post/tidycat/">
+
+  
+  
+
+
+  
+
+  
+  
+  <meta name="theme-color" content="#4caf50">
+  
+  
+  
+  
+    
+  
+  
+    
+    
+      
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+      
+    
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.1/css/academicons.min.css" integrity="sha512-NThgw3XKQ1absAahW6to7Ey42uycrVvfNfyjqcFNgCmOCQ5AR4AO0SiXrN+8ZtYeappp56lk1WtvjVmEa+VR6A==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin="anonymous">
+  
+  
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700%7cRoboto:400,400italic,700%7cRoboto&#43;Mono">
+  
+  <link rel="stylesheet" href="../../styles.css">
+  
+
+  
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-5118819-14', 'auto');
+      ga('require', 'eventTracker');
+      ga('require', 'outboundLinkTracker');
+      ga('require', 'urlChangeTracker');
+      ga('send', 'pageview');
+    </script>
+    <script async src="//www.google-analytics.com/analytics.js"></script>
+    
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
+    
+  
+
+  
+  <link rel="alternate" href="../../index.xml" type="application/rss+xml" title="Guy Abel">
+  <link rel="feed" href="../../index.xml" type="application/rss+xml" title="Guy Abel">
+  
+
+  <link rel="manifest" href="../../site.webmanifest">
+  <link rel="icon" type="image/png" href="../../img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="../../img/icon-192.png">
+
+  <link rel="canonical" href="../../post/tidycat/">
+
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@guyabelguyabel">
+  <meta property="twitter:creator" content="@guyabelguyabel">
+  
+  <meta property="og:site_name" content="Guy Abel">
+  <meta property="og:url" content="/post/tidycat/">
+  <meta property="og:title" content="Expand broom::tidy() output for categorical parameter estimates | Guy Abel">
+  <meta property="og:description" content="">
+  <meta property="og:locale" content="en-uk">
+  
+  <meta property="article:published_time" content="2020-07-01T00:00:00&#43;00:00">
+  
+  <meta property="article:modified_time" content="2020-07-01T00:00:00&#43;00:00">
+  
+
+  
+
+  <title>Expand broom::tidy() output for categorical parameter estimates | Guy Abel</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#toc" data-offset="71" >
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+      <a class="navbar-brand" href="../../">Guy Abel</a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="../../#about">
+            
+            <span>Home</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="../../#publications">
+            
+            <span>Publications</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="../../#posts">
+            
+            <span>Posts</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="../../#projects">
+            
+            <span>Projects</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="../../#teaching">
+            
+            <span>Teaching</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="../../#contact">
+            
+            <span>Contact</span>
+            
+          </a>
+        </li>
+
+        
+        
+      
+
+      
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+  <div class="article-container">
+    <div class="article-inner">
+      <h1 itemprop="name">Expand broom::tidy() output for categorical parameter estimates</h1>
+
+      
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    
+    <time datetime="2020-07-01 00:00:00 &#43;0000 UTC" itemprop="datePublished dateModified">
+      01 July 2020
+    </time>
+  </span>
+  <span itemscope itemprop="author publisher" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Guy Abel">
+  </span>
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    3 min read
+  </span>
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <a href="../../post/tidycat/#disqus_thread"></a>
+  
+
+  
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fa fa-folder"></i>
+    
+    <a href="../../categories/r">R</a
+    >
+    
+  </span>
+  
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=Expand%20broom%3a%3atidy%28%29%20output%20for%20categorical%20parameter%20estimates&amp;url=%2fpost%2ftidycat%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=%2fpost%2ftidycat%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fpost%2ftidycat%2f&amp;title=Expand%20broom%3a%3atidy%28%29%20output%20for%20categorical%20parameter%20estimates"
+         target="_blank" rel="noopener">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=%2fpost%2ftidycat%2f&amp;title=Expand%20broom%3a%3atidy%28%29%20output%20for%20categorical%20parameter%20estimates"
+         target="_blank" rel="noopener">
+        <i class="fa fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=Expand%20broom%3a%3atidy%28%29%20output%20for%20categorical%20parameter%20estimates&amp;body=%2fpost%2ftidycat%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+
+      <div class="article-style" itemprop="articleBody">
+        
+
+
+<div>
+<img src="../../img/tidycat.png" width="200px" align="right">
+</div>
+<div id="introduction" class="section level2">
+<h2>Introduction</h2>
+<p>The <code>tidycat</code> package includes the <code>tidy_categorical()</code> function to expand <code>broom::tidy()</code> outputs for categorical parameter estimates.</p>
+</div>
+<div id="documentation" class="section level2">
+<h2>Documentation</h2>
+<p>For full documentation, see the package vignette: <a href="https://cran.r-project.org/web/packages/tidycat/vignettes/intro.html">The tidycat package: expand broom::tidy() output for categorical parameter estimates</a></p>
+</div>
+<div id="hello-world" class="section level2">
+<h2>Hello World</h2>
+<p>The <code>tidy()</code> function in the broom package takes the messy output of built-in functions in R, such as <code>lm()</code>, and turns them into tidy data frames.</p>
+<pre class="r"><code>library(dplyr)
+library(broom)
+
+m1 &lt;- mtcars %&gt;%
+  mutate(transmission = recode_factor(am, `0` = &quot;automatic&quot;, `1` = &quot;manual&quot;)) %&gt;%
+  lm(mpg ~ qsec + as.factor(cyl) + wt * transmission , data = .)
+
+tidy(m1)</code></pre>
+<pre><code>## # A tibble: 7 x 5
+##   term                  estimate std.error statistic p.value
+##   &lt;chr&gt;                    &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;
+## 1 (Intercept)             10.8       9.24      1.17  0.254  
+## 2 qsec                     0.973     0.454     2.14  0.0419 
+## 3 as.factor(cyl)6         -0.545     1.62     -0.335 0.740  
+## 4 as.factor(cyl)8         -0.364     2.52     -0.144 0.886  
+## 5 wt                      -2.91      0.827    -3.53  0.00166
+## 6 transmissionmanual      13.5       3.94      3.43  0.00210
+## 7 wt:transmissionmanual   -3.97      1.31     -3.03  0.00558</code></pre>
+<p>The <code>tidy_categorical()</code> function adds</p>
+<ul>
+<li>further columns (<code>variable</code>, <code>level</code> and <code>effect</code>) to the <code>broom::tidy()</code> output to help manage categorical variables</li>
+<li>further rows for reference category terms and a column to indicate their location (<code>reference</code>) when setting <code>include_reference = TRUE</code> (default)</li>
+</ul>
+<p>It requires two inputs</p>
+<ul>
+<li>a data frame <code>d</code> of parameter estimates from a model from <code>broom::tidy()</code></li>
+<li>the corresponding model object <code>m</code> passed to <code>broom::tidy()</code></li>
+</ul>
+<p>For example:</p>
+<pre class="r"><code>library(tidycat)
+d1 &lt;- m1 %&gt;%
+  tidy(conf.int = TRUE) %&gt;%
+  tidy_categorical(m = m1)
+d1 %&gt;%
+  select(-(3:5))</code></pre>
+<pre><code>## # A tibble: 10 x 8
+##    term       estimate conf.low conf.high variable   level  effect  reference   
+##    &lt;chr&gt;         &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;      &lt;fct&gt;  &lt;chr&gt;   &lt;chr&gt;       
+##  1 (Intercep~   10.8    -8.25       29.8  (Intercep~ (Inte~ main    Non-Baselin~
+##  2 qsec          0.973   0.0386      1.91 qsec       qsec   main    Non-Baselin~
+##  3 &lt;NA&gt;          0       0           0    as.factor~ 4      main    Baseline Ca~
+##  4 as.factor~   -0.545  -3.89        2.80 as.factor~ 6      main    Non-Baselin~
+##  5 as.factor~   -0.364  -5.56        4.83 as.factor~ 8      main    Non-Baselin~
+##  6 wt           -2.91   -4.62       -1.21 wt         wt     main    Non-Baselin~
+##  7 &lt;NA&gt;          0       0           0    transmiss~ autom~ main    Baseline Ca~
+##  8 transmiss~   13.5     5.40       21.6  transmiss~ manual main    Non-Baselin~
+##  9 &lt;NA&gt;          0       0           0    wt:transm~ autom~ intera~ Baseline Ca~
+## 10 wt:transm~   -3.97   -6.67       -1.28 wt:transm~ manual intera~ Non-Baselin~</code></pre>
+<p>The expanded data frame from <code>tidy_categorical()</code> of parameter estimates can be particularly useful for creating coefficient plots, allowing:</p>
+<ul>
+<li>grouping terms from the same categorical variable from the additional columns.</li>
+<li>inclusion of reference categories in a coefficient plot from the additional rows, allowing the reader to better grasp the meaning of the parameter estimates in each categorical variable.</li>
+</ul>
+<p>For example:</p>
+<pre class="r"><code>library(ggplot2)
+library(ggforce)
+d1 %&gt;%
+  slice(-1) %&gt;%
+  ggplot(mapping = aes(x = level, y = estimate, colour = reference,
+                       ymin = conf.low, ymax = conf.high)) +
+  facet_row(facets = &quot;variable&quot;, scales = &quot;free_x&quot;, space = &quot;free&quot;) +
+  geom_hline(yintercept = 0, linetype = &quot;dashed&quot;) +
+  geom_pointrange()</code></pre>
+<p><img src="../../post/tidycat_files/figure-html/unnamed-chunk-3-1.png" width="768" /></p>
+</div>
+<div id="installation" class="section level2">
+<h2>Installation</h2>
+<p>You can install the released version of tidycat from <a href="https://CRAN.R-project.org">CRAN</a> with:</p>
+<pre class="r"><code>install.packages(&quot;tidycat&quot;)</code></pre>
+<p>And the development version from <a href="https://github.com/">GitHub</a> with:</p>
+<pre class="r"><code># install.packages(&quot;devtools&quot;)
+devtools::install_github(&quot;guyabel/tidycat&quot;)</code></pre>
+</div>
+
+      </div>
+
+      
+
+
+<div class="article-tags">
+  
+  <a class="btn btn-primary btn-outline" href="../../tags/r">R</a>
+  
+</div>
+
+
+
+    </div>
+  </div>
+
+</article>
+
+
+
+<div class="article-container article-widget">
+  <div class="hr-light"></div>
+  <h3>Related</h3>
+  <ul>
+    
+    <li><a href="../../post/football-kits/">Animating Changes in Football Kits using R</a></li>
+    
+    <li><a href="../../post/animated-directional-chord-diagrams/">Animated Directional Chord Diagrams</a></li>
+    
+  </ul>
+</div>
+
+
+
+
+<div class="article-container">
+  
+<section id="comments">
+  <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "guyabel" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      &copy; 2018 &middot; Selected posts also on <a href="https://r-bloggers.com/">R-bloggers</a> &middot; 
+
+      Powered by the
+      <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+      <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close btn-large" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Cite</h4>
+      </div>
+      <div>
+        <pre><code class="modal-body tex"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-primary btn-outline js-copy-cite" href="#" target="_blank">
+          <i class="fa fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-primary btn-outline js-download-cite" href="#" target="_blank">
+          <i class="fa fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+    <script id="dsq-count-scr" src="//guyabel.disqus.com/count.js" async></script>
+    
+
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin="anonymous"></script>
+    
+    
+    <script src="../../js/hugo-academic.js"></script>
+    
+
+    
+    
+      
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+      
+
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+
+  </body>
+</html>
+

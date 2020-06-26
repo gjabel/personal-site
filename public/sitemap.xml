@@ -4,7 +4,7 @@
     
     <url>
     
-      <loc>/post/global-migrant-stocks/</loc>
+      <loc>https://guyabel.com/post/global-migrant-stocks/</loc>
       <lastmod>2020-06-20T00:00:00+00:00</lastmod>
     </url>
     
@@ -13,17 +13,7 @@
     
     <url>
     
-      <loc>/</loc>
-      <lastmod>2020-06-20T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/post/</loc>
+      <loc>https://guyabel.com/</loc>
       <lastmod>2020-06-20T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -33,7 +23,7 @@
     
     <url>
     
-      <loc>/tags/</loc>
+      <loc>https://guyabel.com/post/</loc>
       <lastmod>2020-06-20T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -43,7 +33,7 @@
     
     <url>
     
-      <loc>/tags/chord-diagram/</loc>
+      <loc>https://guyabel.com/tags/</loc>
       <lastmod>2020-06-20T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -53,7 +43,7 @@
     
     <url>
     
-      <loc>/tags/migration/</loc>
+      <loc>https://guyabel.com/tags/chord-diagram/</loc>
       <lastmod>2020-06-20T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -63,7 +53,17 @@
     
     <url>
     
-      <loc>/publication_types/2/</loc>
+      <loc>https://guyabel.com/tags/migration/</loc>
+      <lastmod>2020-06-20T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://guyabel.com/publication_types/2/</loc>
       <lastmod>2019-06-17T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -73,7 +73,7 @@
     
     <url>
     
-      <loc>/publication/bilateral-international-migration-flow-estimates/</loc>
+      <loc>https://guyabel.com/publication/bilateral-international-migration-flow-estimates/</loc>
       <lastmod>2019-06-17T00:00:00+00:00</lastmod>
     </url>
     
@@ -82,7 +82,7 @@
     
     <url>
     
-      <loc>/publication_types/</loc>
+      <loc>https://guyabel.com/publication_types/</loc>
       <lastmod>2019-06-17T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -92,7 +92,7 @@
     
     <url>
     
-      <loc>/post/chinese-migration-chord-diagram/</loc>
+      <loc>https://guyabel.com/post/chinese-migration-chord-diagram/</loc>
       <lastmod>2019-02-04T00:00:00+00:00</lastmod>
     </url>
     
@@ -101,7 +101,7 @@
     
     <url>
     
-      <loc>/publication/climate-conflict-and-forced-migration/</loc>
+      <loc>https://guyabel.com/publication/climate-conflict-and-forced-migration/</loc>
       <lastmod>2019-01-21T00:00:00+00:00</lastmod>
     </url>
     
@@ -110,7 +110,7 @@
     
     <url>
     
-      <loc>/post/migrant-stock-chord-digrams/</loc>
+      <loc>https://guyabel.com/post/migrant-stock-chord-digrams/</loc>
       <lastmod>2018-11-14T00:00:00+00:00</lastmod>
     </url>
     
@@ -119,7 +119,7 @@
     
     <url>
     
-      <loc>/talk/apac1-2018/</loc>
+      <loc>https://guyabel.com/talk/apac1-2018/</loc>
       <lastmod>2018-07-01T00:00:00+08:00</lastmod>
     </url>
     
@@ -128,7 +128,7 @@
     
     <url>
     
-      <loc>/talk/apac2-2018/</loc>
+      <loc>https://guyabel.com/talk/apac2-2018/</loc>
       <lastmod>2018-07-01T00:00:00+08:00</lastmod>
     </url>
     
@@ -137,7 +137,7 @@
     
     <url>
     
-      <loc>/post/football-kits/</loc>
+      <loc>https://guyabel.com/post/football-kits/</loc>
       <lastmod>2018-06-05T00:00:00+00:00</lastmod>
     </url>
     
@@ -146,17 +146,7 @@
     
     <url>
     
-      <loc>/categories/</loc>
-      <lastmod>2018-06-05T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/tags/r/</loc>
+      <loc>https://guyabel.com/categories/</loc>
       <lastmod>2018-06-05T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -166,7 +156,7 @@
     
     <url>
     
-      <loc>/categories/r-bloggers/</loc>
+      <loc>https://guyabel.com/tags/r/</loc>
       <lastmod>2018-06-05T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -176,7 +166,17 @@
     
     <url>
     
-      <loc>/publication/non-zero-ssp-net-migration-projections/</loc>
+      <loc>https://guyabel.com/categories/r-bloggers/</loc>
+      <lastmod>2018-06-05T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://guyabel.com/publication/non-zero-ssp-net-migration-projections/</loc>
       <lastmod>2018-05-16T00:00:00+00:00</lastmod>
     </url>
     
@@ -185,7 +185,7 @@
     
     <url>
     
-      <loc>/post/animated-directional-chord-diagrams/</loc>
+      <loc>https://guyabel.com/post/animated-directional-chord-diagrams/</loc>
       <lastmod>2018-04-18T00:00:00+00:00</lastmod>
     </url>
     
@@ -194,7 +194,7 @@
     
     <url>
     
-      <loc>/talk/paa-2018/</loc>
+      <loc>https://guyabel.com/talk/paa-2018/</loc>
       <lastmod>2018-04-18T00:00:00+08:00</lastmod>
     </url>
     
@@ -203,7 +203,7 @@
     
     <url>
     
-      <loc>/talk/epc-2018/</loc>
+      <loc>https://guyabel.com/talk/epc-2018/</loc>
       <lastmod>2018-04-18T00:00:00+08:00</lastmod>
     </url>
     
@@ -212,7 +212,7 @@
     
     <url>
     
-      <loc>/talk/uw2-2018/</loc>
+      <loc>https://guyabel.com/talk/uw2-2018/</loc>
       <lastmod>2018-04-18T00:00:00+08:00</lastmod>
     </url>
     
@@ -221,7 +221,7 @@
     
     <url>
     
-      <loc>/talk/uw1-2018/</loc>
+      <loc>https://guyabel.com/talk/uw1-2018/</loc>
       <lastmod>2018-04-18T00:00:00+08:00</lastmod>
     </url>
     
@@ -230,7 +230,7 @@
     
     <url>
     
-      <loc>/publication/korea-gender-balance/</loc>
+      <loc>https://guyabel.com/publication/korea-gender-balance/</loc>
       <lastmod>2018-02-06T00:00:00+00:00</lastmod>
     </url>
     
@@ -239,7 +239,7 @@
     
     <url>
     
-      <loc>/project/adri-pillar/</loc>
+      <loc>https://guyabel.com/project/adri-pillar/</loc>
       <lastmod>2018-02-01T00:00:00+00:00</lastmod>
     </url>
     
@@ -248,35 +248,7 @@
     
     <url>
     
-      <loc>/tags/bayesian/</loc>
-      <lastmod>2018-02-01T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/project/combining-migration-data/</loc>
-      <lastmod>2018-02-01T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/project/global-migration-prediction/</loc>
-      <lastmod>2018-02-01T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/project/</loc>
+      <loc>https://guyabel.com/tags/bayesian/</loc>
       <lastmod>2018-02-01T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -286,7 +258,25 @@
     
     <url>
     
-      <loc>/tags/estimation/</loc>
+      <loc>https://guyabel.com/project/combining-migration-data/</loc>
+      <lastmod>2018-02-01T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://guyabel.com/project/global-migration-prediction/</loc>
+      <lastmod>2018-02-01T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://guyabel.com/project/</loc>
       <lastmod>2018-02-01T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -296,7 +286,7 @@
     
     <url>
     
-      <loc>/tags/prediction/</loc>
+      <loc>https://guyabel.com/tags/estimation/</loc>
       <lastmod>2018-02-01T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -306,7 +296,17 @@
     
     <url>
     
-      <loc>/talk/hanyang-2019/</loc>
+      <loc>https://guyabel.com/tags/prediction/</loc>
+      <lastmod>2018-02-01T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://guyabel.com/talk/hanyang-2019/</loc>
       <lastmod>2018-02-01T00:00:00+08:00</lastmod>
     </url>
     
@@ -315,7 +315,7 @@
     
     <url>
     
-      <loc>/talk/ifms-2020/</loc>
+      <loc>https://guyabel.com/talk/ifms-2020/</loc>
       <lastmod>2018-02-01T00:00:00+08:00</lastmod>
     </url>
     
@@ -324,7 +324,7 @@
     
     <url>
     
-      <loc>/talk/anu-2018/</loc>
+      <loc>https://guyabel.com/talk/anu-2018/</loc>
       <lastmod>2018-02-01T00:00:00+08:00</lastmod>
     </url>
     
@@ -333,7 +333,7 @@
     
     <url>
     
-      <loc>/talk/uq-2018/</loc>
+      <loc>https://guyabel.com/talk/uq-2018/</loc>
       <lastmod>2018-02-01T00:00:00+08:00</lastmod>
     </url>
     
@@ -342,7 +342,7 @@
     
     <url>
     
-      <loc>/publication/korea-internal-migration-1970-2016/</loc>
+      <loc>https://guyabel.com/publication/korea-internal-migration-1970-2016/</loc>
       <lastmod>2018-01-18T00:00:00+00:00</lastmod>
     </url>
     
@@ -351,7 +351,7 @@
     
     <url>
     
-      <loc>/publication/</loc>
+      <loc>https://guyabel.com/publication/</loc>
       <lastmod>2018-01-01T00:00:00+00:00</lastmod>
     </url>
     
@@ -360,7 +360,7 @@
     
     <url>
     
-      <loc>/publication/global-migration-estimates-by-gender/</loc>
+      <loc>https://guyabel.com/publication/global-migration-estimates-by-gender/</loc>
       <lastmod>2017-11-24T00:00:00+00:00</lastmod>
     </url>
     
@@ -369,7 +369,7 @@
     
     <url>
     
-      <loc>/publication/china-internal-migration-2010-15/</loc>
+      <loc>https://guyabel.com/publication/china-internal-migration-2010-15/</loc>
       <lastmod>2017-07-07T00:00:00+00:00</lastmod>
     </url>
     
@@ -378,7 +378,7 @@
     
     <url>
     
-      <loc>/publication/global-climate-vulnerability-and-migration/</loc>
+      <loc>https://guyabel.com/publication/global-climate-vulnerability-and-migration/</loc>
       <lastmod>2017-04-30T00:00:00+00:00</lastmod>
     </url>
     
@@ -387,7 +387,7 @@
     
     <url>
     
-      <loc>/tags/academic/</loc>
+      <loc>https://guyabel.com/tags/academic/</loc>
       <lastmod>2017-01-01T00:00:00+00:00</lastmod>
     </url>
     
@@ -396,7 +396,7 @@
     
     <url>
     
-      <loc>/talk/</loc>
+      <loc>https://guyabel.com/talk/</loc>
       <lastmod>2017-01-01T00:00:00+00:00</lastmod>
     </url>
     

@@ -1,0 +1,100 @@
+---
+title: "Expand broom::tidy() output for categorical parameter estimates"
+author: "Guy Abel"
+date: '2020-07-01'
+tags: ["R"]
+categories: 
+  - R
+  # - "r-bloggers"
+draft: true
+---
+
+
+
+<div>
+<img src="/img/tidycat.png" width="200px" align="right">
+</div>
+<div id="introduction" class="section level2">
+<h2>Introduction</h2>
+<p>The <code>tidycat</code> package includes the <code>tidy_categorical()</code> function to expand <code>broom::tidy()</code> outputs for categorical parameter estimates.</p>
+</div>
+<div id="documentation" class="section level2">
+<h2>Documentation</h2>
+<p>For full documentation, see the package vignette: <a href="https://cran.r-project.org/web/packages/tidycat/vignettes/intro.html">The tidycat package: expand broom::tidy() output for categorical parameter estimates</a></p>
+</div>
+<div id="hello-world" class="section level2">
+<h2>Hello World</h2>
+<p>The <code>tidy()</code> function in the broom package takes the messy output of built-in functions in R, such as <code>lm()</code>, and turns them into tidy data frames.</p>
+<pre class="r"><code>library(dplyr)
+library(broom)
+
+m1 &lt;- mtcars %&gt;%
+  mutate(transmission = recode_factor(am, `0` = &quot;automatic&quot;, `1` = &quot;manual&quot;)) %&gt;%
+  lm(mpg ~ qsec + as.factor(cyl) + wt * transmission , data = .)
+
+tidy(m1)</code></pre>
+<pre><code>## # A tibble: 7 x 5
+##   term                  estimate std.error statistic p.value
+##   &lt;chr&gt;                    &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;
+## 1 (Intercept)             10.8       9.24      1.17  0.254  
+## 2 qsec                     0.973     0.454     2.14  0.0419 
+## 3 as.factor(cyl)6         -0.545     1.62     -0.335 0.740  
+## 4 as.factor(cyl)8         -0.364     2.52     -0.144 0.886  
+## 5 wt                      -2.91      0.827    -3.53  0.00166
+## 6 transmissionmanual      13.5       3.94      3.43  0.00210
+## 7 wt:transmissionmanual   -3.97      1.31     -3.03  0.00558</code></pre>
+<p>The <code>tidy_categorical()</code> function adds</p>
+<ul>
+<li>further columns (<code>variable</code>, <code>level</code> and <code>effect</code>) to the <code>broom::tidy()</code> output to help manage categorical variables</li>
+<li>further rows for reference category terms and a column to indicate their location (<code>reference</code>) when setting <code>include_reference = TRUE</code> (default)</li>
+</ul>
+<p>It requires two inputs</p>
+<ul>
+<li>a data frame <code>d</code> of parameter estimates from a model from <code>broom::tidy()</code></li>
+<li>the corresponding model object <code>m</code> passed to <code>broom::tidy()</code></li>
+</ul>
+<p>For example:</p>
+<pre class="r"><code>library(tidycat)
+d1 &lt;- m1 %&gt;%
+  tidy(conf.int = TRUE) %&gt;%
+  tidy_categorical(m = m1)
+d1 %&gt;%
+  select(-(3:5))</code></pre>
+<pre><code>## # A tibble: 10 x 8
+##    term       estimate conf.low conf.high variable   level  effect  reference   
+##    &lt;chr&gt;         &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;      &lt;fct&gt;  &lt;chr&gt;   &lt;chr&gt;       
+##  1 (Intercep~   10.8    -8.25       29.8  (Intercep~ (Inte~ main    Non-Baselin~
+##  2 qsec          0.973   0.0386      1.91 qsec       qsec   main    Non-Baselin~
+##  3 &lt;NA&gt;          0       0           0    as.factor~ 4      main    Baseline Ca~
+##  4 as.factor~   -0.545  -3.89        2.80 as.factor~ 6      main    Non-Baselin~
+##  5 as.factor~   -0.364  -5.56        4.83 as.factor~ 8      main    Non-Baselin~
+##  6 wt           -2.91   -4.62       -1.21 wt         wt     main    Non-Baselin~
+##  7 &lt;NA&gt;          0       0           0    transmiss~ autom~ main    Baseline Ca~
+##  8 transmiss~   13.5     5.40       21.6  transmiss~ manual main    Non-Baselin~
+##  9 &lt;NA&gt;          0       0           0    wt:transm~ autom~ intera~ Baseline Ca~
+## 10 wt:transm~   -3.97   -6.67       -1.28 wt:transm~ manual intera~ Non-Baselin~</code></pre>
+<p>The expanded data frame from <code>tidy_categorical()</code> of parameter estimates can be particularly useful for creating coefficient plots, allowing:</p>
+<ul>
+<li>grouping terms from the same categorical variable from the additional columns.</li>
+<li>inclusion of reference categories in a coefficient plot from the additional rows, allowing the reader to better grasp the meaning of the parameter estimates in each categorical variable.</li>
+</ul>
+<p>For example:</p>
+<pre class="r"><code>library(ggplot2)
+library(ggforce)
+d1 %&gt;%
+  slice(-1) %&gt;%
+  ggplot(mapping = aes(x = level, y = estimate, colour = reference,
+                       ymin = conf.low, ymax = conf.high)) +
+  facet_row(facets = &quot;variable&quot;, scales = &quot;free_x&quot;, space = &quot;free&quot;) +
+  geom_hline(yintercept = 0, linetype = &quot;dashed&quot;) +
+  geom_pointrange()</code></pre>
+<p><img src="/post/tidycat_files/figure-html/unnamed-chunk-3-1.png" width="768" /></p>
+</div>
+<div id="installation" class="section level2">
+<h2>Installation</h2>
+<p>You can install the released version of tidycat from <a href="https://CRAN.R-project.org">CRAN</a> with:</p>
+<pre class="r"><code>install.packages(&quot;tidycat&quot;)</code></pre>
+<p>And the development version from <a href="https://github.com/">GitHub</a> with:</p>
+<pre class="r"><code># install.packages(&quot;devtools&quot;)
+devtools::install_github(&quot;guyabel/tidycat&quot;)</code></pre>
+</div>

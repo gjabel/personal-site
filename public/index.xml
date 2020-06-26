@@ -1,7 +1,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Guy Abel on Guy Abel</title>
-    <link>/</link>
+    <link>https://guyabel.com/</link>
     <description>Recent content in Guy Abel on Guy Abel</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
@@ -11,13 +11,13 @@
     
     <item>
       <title>Global Migrant Stock Chord Diagrams</title>
-      <link>/post/global-migrant-stocks/</link>
+      <link>https://guyabel.com/post/global-migrant-stocks/</link>
       <pubDate>Sat, 20 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/global-migrant-stocks/</guid>
+      <guid>https://guyabel.com/post/global-migrant-stocks/</guid>
       <description>
 
-&lt;p&gt;Over the last few months I have been playing around with different ways of showing changing global bilateral migrant stocks, adapting the the code from the plots for region to region flows in a recent estimation &lt;a href=&#34;https://www.nature.com/articles/s41597-019-0089-3&#34; target=&#34;_blank&#34;&gt;paper&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Over the last year or so I had been playing around with different ways of showing changing global bilateral migrant stocks, adapting the the code from the plots for region to region flows in a recent estimation &lt;a href=&#34;https://www.nature.com/articles/s41597-019-0089-3&#34; target=&#34;_blank&#34;&gt;paper&lt;/a&gt;. Rather than leave the plots sitting on my hard drive, I thought best to put them online, in case anyone else might find them interesting.&lt;/p&gt;
 
 &lt;p&gt;The first plot below shows the change over time in the pattern of global migrant stocks. As with the &lt;a href=&#34;http://guyabel.com/post/migrant-stock-chord-digrams&#34; target=&#34;_blank&#34;&gt;regional plots&lt;/a&gt; in my previous post, the chords in the diagrams represent the connection between the places of birth (at the base of the chord) and places of residence (at the arrow head of the chord). The width of based of the chords correspond to the size of the migrant population in millions. Chords are ordered relative to their size, with the largest migrant stocks plotted at the beginning of the region segments. The ordering of chords jumps around over time as the relative rankings of the largest foreign-born populations change in each region. Values for the migrant population sizes are from the 2019 revision of the United Nations DESA &lt;a href=&#34;https://www.un.org/en/development/desa/population/migration/data/estimates2/estimates19.asp&#34; target=&#34;_blank&#34;&gt;International Migrant Stock Data&lt;/a&gt;.&lt;/p&gt;
 
@@ -61,16 +61,16 @@
 
 &lt;h2 id=&#34;r-code&#34;&gt;R Code&lt;/h2&gt;
 
-&lt;p&gt;These plots were all produced in R, primarily using the &lt;code&gt;chordDiagram()&lt;/code&gt; function in the  &lt;a href=&#34;https://jokergoo.github.io/circlize_book/book/the-chorddiagram-function.html&#34; target=&#34;_blank&#34;&gt;circlize&lt;/a&gt; package. A while ago I wrote a &lt;a href=&#34;http://guyabel.com/post/animated-directional-chord-diagrams&#34; target=&#34;_blank&#34;&gt;post&lt;/a&gt; with more details on animated chord diagrams if you would like more details. The specific code for the charts gets a bit overwhelming (and is poorly commented) so I am hesitant to put them on Github, especially becuase the more complicated parts for defining the regions and sectors can now be done much more easily using the new &lt;code&gt;group&lt;/code&gt; argument in the &lt;code&gt;chordDiagram()&lt;/code&gt; function, as descirbed in a recent &lt;a href=&#34;https://jokergoo.github.io/2020/06/08/multiple-group-chord-diagram/&#34; target=&#34;_blank&#34;&gt;post&lt;/a&gt; by Zuguang Gu.&lt;/p&gt;
+&lt;p&gt;These plots were all produced in R, primarily using the &lt;code&gt;chordDiagram()&lt;/code&gt; function in the  &lt;a href=&#34;https://jokergoo.github.io/circlize_book/book/the-chorddiagram-function.html&#34; target=&#34;_blank&#34;&gt;circlize&lt;/a&gt; package. A while ago I wrote a &lt;a href=&#34;http://guyabel.com/post/animated-directional-chord-diagrams&#34; target=&#34;_blank&#34;&gt;post&lt;/a&gt; with more details on creating animated chord diagrams. The specific code for the plots above gets a bit overwhelming (and is poorly commented) so I am hesitant to put it on Github, especially becuase the more complicated parts for defining the lines for the global regions can now be done much more easily using the new &lt;code&gt;group&lt;/code&gt; argument in the &lt;code&gt;chordDiagram()&lt;/code&gt; function, as descirbed in a recent &lt;a href=&#34;https://jokergoo.github.io/2020/06/08/multiple-group-chord-diagram/&#34; target=&#34;_blank&#34;&gt;post&lt;/a&gt; by Zuguang Gu.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Bilateral international migration flow estimates for 200 countries</title>
-      <link>/publication/bilateral-international-migration-flow-estimates/</link>
+      <link>https://guyabel.com/publication/bilateral-international-migration-flow-estimates/</link>
       <pubDate>Mon, 17 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>/publication/bilateral-international-migration-flow-estimates/</guid>
+      <guid>https://guyabel.com/publication/bilateral-international-migration-flow-estimates/</guid>
       <description>
 &lt;script src=&#34;./rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;./rmarkdown-libs/pymjs/pym.v1.js&#34;&gt;&lt;/script&gt;
@@ -139,10 +139,10 @@
     
     <item>
       <title>Chord Diagram of Chinese Internal Migration Flows</title>
-      <link>/post/chinese-migration-chord-diagram/</link>
+      <link>https://guyabel.com/post/chinese-migration-chord-diagram/</link>
       <pubDate>Mon, 04 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/chinese-migration-chord-diagram/</guid>
+      <guid>https://guyabel.com/post/chinese-migration-chord-diagram/</guid>
       <description>
 
 
@@ -261,19 +261,19 @@ image_write(image = p, path = &amp;quot;figure1.png&amp;quot;)&lt;/code&gt;&lt;/
     
     <item>
       <title>Climate, Conflict and Forced Migration</title>
-      <link>/publication/climate-conflict-and-forced-migration/</link>
+      <link>https://guyabel.com/publication/climate-conflict-and-forced-migration/</link>
       <pubDate>Mon, 21 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>/publication/climate-conflict-and-forced-migration/</guid>
+      <guid>https://guyabel.com/publication/climate-conflict-and-forced-migration/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Migrant Stock Chord Diagrams</title>
-      <link>/post/migrant-stock-chord-digrams/</link>
+      <link>https://guyabel.com/post/migrant-stock-chord-digrams/</link>
       <pubDate>Wed, 14 Nov 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/migrant-stock-chord-digrams/</guid>
+      <guid>https://guyabel.com/post/migrant-stock-chord-digrams/</guid>
       <description>&lt;p&gt;During the last few months I have given some introductory talks on international migration in Asia and Europe. I had a couple of requests to share the animated chord diagrams that I created for others to use in their teaching materials. These are below, along with some extra plots for Africa, the Americas (Northern, Central and Southern America as well as the Caribbean) and Oceania.&lt;/p&gt;
 
 &lt;p&gt;The chords in the diagrams represent the connection between the places of birth (at the base of the chord) and places of residence (at the arrow head of the chord). The width of based of the chords correspond to the size of the migrant population in millions. Chords are ordered relative to their size, with the largest migrant stocks plotted at the beginning of the country segments. The ordering of chords jumps around over time as the relative rankings of the largest foreign-born populations change in each country. Values for the migrant population sizes are from the &lt;del&gt;2017&lt;/del&gt; 2019 revision of the United Nations DESA &lt;a href=&#34;https://www.un.org/en/development/desa/population/migration/data/estimates2/estimates19.asp&#34; target=&#34;_blank&#34;&gt;International Migrant Stock Data&lt;/a&gt;.&lt;/p&gt;
@@ -325,28 +325,28 @@ image_write(image = p, path = &amp;quot;figure1.png&amp;quot;)&lt;/code&gt;&lt;/
     
     <item>
       <title>Driving Factors of Asian International Migration Flows</title>
-      <link>/talk/apac1-2018/</link>
+      <link>https://guyabel.com/talk/apac1-2018/</link>
       <pubDate>Sun, 01 Jul 2018 00:00:00 +0800</pubDate>
       
-      <guid>/talk/apac1-2018/</guid>
+      <guid>https://guyabel.com/talk/apac1-2018/</guid>
       <description></description>
     </item>
     
     <item>
       <title>European International Migration Patterns</title>
-      <link>/talk/apac2-2018/</link>
+      <link>https://guyabel.com/talk/apac2-2018/</link>
       <pubDate>Sun, 01 Jul 2018 00:00:00 +0800</pubDate>
       
-      <guid>/talk/apac2-2018/</guid>
+      <guid>https://guyabel.com/talk/apac2-2018/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Animating Changes in Football Kits using R</title>
-      <link>/post/football-kits/</link>
+      <link>https://guyabel.com/post/football-kits/</link>
       <pubDate>Tue, 05 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/football-kits/</guid>
+      <guid>https://guyabel.com/post/football-kits/</guid>
       <description>
 
 
@@ -486,10 +486,10 @@ for(i in 2:length(kits$img)){
     
     <item>
       <title>Non-zero trajectories for long-run net migration assumptions in global population projection models</title>
-      <link>/publication/non-zero-ssp-net-migration-projections/</link>
+      <link>https://guyabel.com/publication/non-zero-ssp-net-migration-projections/</link>
       <pubDate>Wed, 16 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>/publication/non-zero-ssp-net-migration-projections/</guid>
+      <guid>https://guyabel.com/publication/non-zero-ssp-net-migration-projections/</guid>
       <description>
 
 &lt;h2 id=&#34;further-notes&#34;&gt;Further Notes&lt;/h2&gt;
@@ -510,10 +510,10 @@ The assumptions in the past WPP also exhibit some drift, with assumptions for fu
     
     <item>
       <title>Animated Directional Chord Diagrams</title>
-      <link>/post/animated-directional-chord-diagrams/</link>
+      <link>https://guyabel.com/post/animated-directional-chord-diagrams/</link>
       <pubDate>Wed, 18 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/animated-directional-chord-diagrams/</guid>
+      <guid>https://guyabel.com/post/animated-directional-chord-diagrams/</guid>
       <description>
 
 
@@ -769,46 +769,46 @@ reg_max&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Driving Factors of Asian International Migration Flows</title>
-      <link>/talk/paa-2018/</link>
+      <link>https://guyabel.com/talk/paa-2018/</link>
       <pubDate>Wed, 18 Apr 2018 00:00:00 +0800</pubDate>
       
-      <guid>/talk/paa-2018/</guid>
+      <guid>https://guyabel.com/talk/paa-2018/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Probabilistic Method for Combining Internal Migration Data</title>
-      <link>/talk/epc-2018/</link>
+      <link>https://guyabel.com/talk/epc-2018/</link>
       <pubDate>Wed, 18 Apr 2018 00:00:00 +0800</pubDate>
       
-      <guid>/talk/epc-2018/</guid>
+      <guid>https://guyabel.com/talk/epc-2018/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Probabilistic Method for Combining Internal Migration Data</title>
-      <link>/talk/uw2-2018/</link>
+      <link>https://guyabel.com/talk/uw2-2018/</link>
       <pubDate>Wed, 18 Apr 2018 00:00:00 +0800</pubDate>
       
-      <guid>/talk/uw2-2018/</guid>
+      <guid>https://guyabel.com/talk/uw2-2018/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Visualizing Migration Flows: How to Design and Produce Animated Directional Chord Diagrams in R</title>
-      <link>/talk/uw1-2018/</link>
+      <link>https://guyabel.com/talk/uw1-2018/</link>
       <pubDate>Wed, 18 Apr 2018 00:00:00 +0800</pubDate>
       
-      <guid>/talk/uw1-2018/</guid>
+      <guid>https://guyabel.com/talk/uw1-2018/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Subnational gender balances in South Korea</title>
-      <link>/publication/korea-gender-balance/</link>
+      <link>https://guyabel.com/publication/korea-gender-balance/</link>
       <pubDate>Tue, 06 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>/publication/korea-gender-balance/</guid>
+      <guid>https://guyabel.com/publication/korea-gender-balance/</guid>
       <description>
 
 &lt;h2 id=&#34;further-notes&#34;&gt;Further Notes&lt;/h2&gt;
