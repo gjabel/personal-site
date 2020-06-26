@@ -13,7 +13,7 @@
   <meta name="description" content="Professor">
 
   
-  <link rel="alternate" hreflang="en-uk" href="https://guyabel.com/tags/r/">
+  <link rel="alternate" hreflang="en-uk" href="../../tags/r/">
 
   
   
@@ -69,15 +69,15 @@
   
 
   
-  <link rel="alternate" href="https://guyabel.com/tags/r/index.xml" type="application/rss+xml" title="Guy Abel">
-  <link rel="feed" href="https://guyabel.com/tags/r/index.xml" type="application/rss+xml" title="Guy Abel">
+  <link rel="alternate" href="../../tags/r/index.xml" type="application/rss+xml" title="Guy Abel">
+  <link rel="feed" href="../../tags/r/index.xml" type="application/rss+xml" title="Guy Abel">
   
 
   <link rel="manifest" href="../../site.webmanifest">
   <link rel="icon" type="image/png" href="../../img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="../../img/icon-192.png">
 
-  <link rel="canonical" href="https://guyabel.com/tags/r/">
+  <link rel="canonical" href="../../tags/r/">
 
   <meta property="twitter:card" content="summary_large_image">
   
@@ -85,12 +85,12 @@
   <meta property="twitter:creator" content="@guyabelguyabel">
   
   <meta property="og:site_name" content="Guy Abel">
-  <meta property="og:url" content="https://guyabel.com/tags/r/">
+  <meta property="og:url" content="/tags/r/">
   <meta property="og:title" content="R | Guy Abel">
   <meta property="og:description" content="Professor">
   <meta property="og:locale" content="en-uk">
   
-  <meta property="og:updated_time" content="2018-06-05T00:00:00&#43;00:00">
+  <meta property="og:updated_time" content="2020-07-01T00:00:00&#43;00:00">
   
 
   
@@ -248,7 +248,29 @@
   
   
   <div>
-    <h2><a href="https://guyabel.com/post/football-kits/">Animating Changes in Football Kits using R</a></h2>
+    <h2><a href="../../post/tidycat/">Expand broom::tidy() output for categorical parameter estimates</a></h2>
+    <div class="article-style">
+      
+      <p>Introduction
+The tidycat package includes the tidy_categorical() function to expand broom::tidy() outputs for categorical parameter estimates.</p>
+
+<p>Documentation
+For full documentation, see the package vignette: The tidycat package: expand broom::tidy() output for categorical parameter estimates</p>
+
+<p>Hello World
+The tidy() function in the broom package takes the messy output of built-in functions in R, such as lm(), and turns them into tidy data frames.
+library(dplyr)
+library(broom)
+m1 &lt;- mtcars %&gt;%
+mutate(transmission = recode_factor(am, <code>0</code> = &quot;automatic&quot;, <code>1</code> = &quot;manual&quot;)) %&gt;%
+lm(mpg ~ qsec + as.</p>
+
+      
+    </div>
+  </div>
+  
+  <div>
+    <h2><a href="../../post/football-kits/">Animating Changes in Football Kits using R</a></h2>
     <div class="article-style">
       
       <p>Background
@@ -262,7 +284,7 @@ The Historical Football Kits website has a detailed section on England kits spre
   </div>
   
   <div>
-    <h2><a href="https://guyabel.com/post/animated-directional-chord-diagrams/">Animated Directional Chord Diagrams</a></h2>
+    <h2><a href="../../post/animated-directional-chord-diagrams/">Animated Directional Chord Diagrams</a></h2>
     <div class="article-style">
       
       Background
