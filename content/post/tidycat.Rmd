@@ -35,7 +35,7 @@ library(broom)
 
 m1 <- mtcars %>%
   mutate(transmission = recode_factor(am, `0` = "automatic", `1` = "manual")) %>%
-  lm(mpg ~ as.factor(cyl) + transmission + wt *  as.factor(cyl), data = .)
+  lm(mpg ~ transmission + wt *  as.factor(cyl), data = .)
 
 tidy(m1)
 ```

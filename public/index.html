@@ -1098,7 +1098,7 @@
     IntroductionThe tidycat package includes the tidy_categorical() function to expand broom::tidy() outputs for categorical parameter estimates.
 DocumentationFor full documentation, see the package vignette: The tidycat package: expand broom::tidy() output for categorical parameter estimates
 Hello WorldThe tidy() function in the broom package takes the messy output of built-in functions in R, such as lm(), and turns them into tidy data frames.
-library(dplyr)library(broom)m1 &lt;- mtcars %&gt;%mutate(transmission = recode_factor(am, `0` = &quot;automatic&quot;, `1` = &quot;manual&quot;)) %&gt;%lm(mpg ~ as.
+library(dplyr)library(broom)m1 &lt;- mtcars %&gt;%mutate(transmission = recode_factor(am, `0` = &quot;automatic&quot;, `1` = &quot;manual&quot;)) %&gt;%lm(mpg ~ transmission + wt * as.
     
   </div>
   <p class="read-more" itemprop="mainEntityOfPage">
@@ -1995,7 +1995,7 @@ The chords in the diagrams represent the connection between the places of birth 
   <div class="container">
     <p class="powered-by">
 
-      &copy; 2018 &middot; Selected posts also on <a href="https://r-bloggers.com/">R-bloggers</a> &middot; 
+      &copy; 2020 &middot; Selected posts also on <a href="https://r-bloggers.com/">R-bloggers</a> &middot; 
 
       Powered by the
       <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
