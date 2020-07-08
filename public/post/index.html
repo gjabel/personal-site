@@ -88,7 +88,7 @@
   <meta property="og:description" content="Professor">
   <meta property="og:locale" content="en-uk">
   
-  <meta property="og:updated_time" content="2020-07-01T00:00:00&#43;00:00">
+  <meta property="og:updated_time" content="2020-07-08T00:00:00&#43;00:00">
   
 
   
@@ -251,6 +251,10 @@
 <div class="article-list-item" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
   
   
+  <a href="../post/tidycat/">
+    <img src="../img/headers/tidycat0.png" class="article-banner" itemprop="image">
+  </a>
+  
   <h3 class="article-title" itemprop="headline">
     <a href="../post/tidycat/" itemprop="url">Expand broom::tidy() output for categorical parameter estimates</a>
   </h3>
@@ -260,8 +264,8 @@
 
   <span class="article-date">
     
-    <time datetime="2020-07-01 00:00:00 &#43;0000 UTC" itemprop="datePublished dateModified">
-      01 July 2020
+    <time datetime="2020-07-08 00:00:00 &#43;0000 UTC" itemprop="datePublished dateModified">
+      08 July 2020
     </time>
   </span>
   <span itemscope itemprop="author publisher" itemtype="http://schema.org/Person">
@@ -289,6 +293,9 @@
     <i class="fa fa-folder"></i>
     
     <a href="../categories/r">R</a
+    >, 
+    
+    <a href="../categories/r-bloggers">r-bloggers</a
     >
     
   </span>
@@ -304,7 +311,7 @@
     IntroductionThe tidycat package includes the tidy_categorical() function to expand broom::tidy() outputs for categorical parameter estimates.
 DocumentationFor full documentation, see the package vignette: The tidycat package: expand broom::tidy() output for categorical parameter estimates
 Hello WorldThe tidy() function in the broom package takes the messy output of built-in functions in R, such as lm(), and turns them into tidy data frames.
-library(dplyr)library(broom)m1 &lt;- mtcars %&gt;%mutate(transmission = recode_factor(am, `0` = &quot;automatic&quot;, `1` = &quot;manual&quot;)) %&gt;%lm(mpg ~ qsec + as.
+library(dplyr)library(broom)m1 &lt;- mtcars %&gt;%mutate(transmission = recode_factor(am, `0` = &quot;automatic&quot;, `1` = &quot;manual&quot;)) %&gt;%lm(mpg ~ as.
     
   </div>
   <p class="read-more" itemprop="mainEntityOfPage">

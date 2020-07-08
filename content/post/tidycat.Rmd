@@ -1,12 +1,14 @@
 ---
 title: "Expand broom::tidy() output for categorical parameter estimates"
 author: "Guy Abel"
-date: '2020-07-01'
+date: '2020-07-08'
 tags: ["R"]
 categories: 
   - R
-  # - "r-bloggers"
-draft: true
+  - "r-bloggers"
+draft: false
+header:
+  image: "headers/tidycat0.png"
 ---
 
 ```{r setup, include=FALSE}
@@ -33,7 +35,7 @@ library(broom)
 
 m1 <- mtcars %>%
   mutate(transmission = recode_factor(am, `0` = "automatic", `1` = "manual")) %>%
-  lm(mpg ~ qsec + as.factor(cyl) + wt * transmission , data = .)
+  lm(mpg ~ as.factor(cyl) + transmission + wt *  as.factor(cyl), data = .)
 
 tidy(m1)
 ```
@@ -66,10 +68,13 @@ The expanded data frame from `tidy_categorical()` of parameter estimates can be 
 For example:
 
 ```{r, fig.width=8, fig.height=4}
+library(forcats)
 library(ggplot2)
 library(ggforce)
+
 d1 %>%
   slice(-1) %>%
+  mutate(variable = fct_inorder(variable)) %>%
   ggplot(mapping = aes(x = level, y = estimate, colour = reference,
                        ymin = conf.low, ymax = conf.high)) +
   facet_row(facets = "variable", scales = "free_x", space = "free") +
