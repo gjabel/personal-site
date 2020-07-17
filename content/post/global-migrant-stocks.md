@@ -19,7 +19,7 @@ Note: you might have to right click, select show controls and hit play to start 
   <source src="/img/ims-abel-global.mp4" type="video/mp4" />
 </video>
 
-## <a id="Sex"></a> Sex differences in global migrant distribution patterns
+## <a id="sex"></a> Sex differences in global migrant distribution patterns
 
 The next two plots below show the differences between male and female global migrant distributions in 2019. In the first plot I keep the sector axis fixed at their maximums (over both sexes) making it easier to detect changes in the relative volume of a particular migrant corridor; for example the greater number of male migrants in West Asia and slightly more female migrants in North America.
 
