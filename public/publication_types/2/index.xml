@@ -42,13 +42,13 @@
 
 &lt;div id=&#34;updates&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Updates&lt;/h3&gt;
-&lt;p&gt;Since the paper has published I have produced three update thus far to;&lt;/p&gt;
+&lt;p&gt;Since the paper has published I have produced three update thus far that&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Include the latest United Nations demographic data released in WPP2019 (July 19, 2019)&lt;/li&gt;
 &lt;li&gt;Include the latest United Nations migrant stock data (October 23, 2019)&lt;/li&gt;
 &lt;li&gt;Correct for Serbia, Montenegro, Sudan and South Sudan before 2005 (August 3, 2020)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;See the table of contents above to jump to a relative short discussion on these updates. The different versions of estimates are all available on &lt;a href=&#34;https://figshare.com/articles/dataset/Bilateral_international_migration_flow_estimates_for_200_countries_1990-1995_to_2010-2015_/7731233/1&#34;&gt;Figshare&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;See the table of contents above to jump to a relative short discussion on these updates. The different versions of estimates are all available on &lt;a href=&#34;https://figshare.com/articles/dataset/Bilateral_international_migration_flow_estimates_for_200_countries_1990-1995_to_2010-2015_/7731233&#34;&gt;Figshare&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;version-2-update-for-wpp2019&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;&lt;a id=&#34;WPP2019&#34;&gt;&lt;/a&gt;Version 2: Update for WPP2019&lt;/h2&gt;
@@ -110,7 +110,7 @@
 &lt;h2&gt;&lt;a id=&#34;SCGSUD&#34;&gt;&lt;/a&gt;Version 4: Correct for Serbia, Montenegro, Sudan and South Sudan before 2005&lt;/h2&gt;
 &lt;p&gt;In the original paper, and updates described above, both Serbia and Montenegro, and Sudan and South Sudan are treated as separate countries through the entire 1990 to 2015 period. This was not a great choice. Although the UN provide separate demographic and migrant stock data for each of the four countries back to 1990, the notes in the migrant stock speadsheet (number 4 and 24) point out that the foreign born data for Sudan and Serbia before 2005 cover South Sudan and Montenegro respectively. In both South Sudan and Montenegro before 2005 there is no data provided for the foreign born populations.&lt;/p&gt;
 &lt;p&gt;The differences in geographic coverge of Sudan and Serbia in the migrant stock data has an impact on the flow estimates that are based on the differences in stocks. For example, the demographic accounting based methods were trying to calibrate changes in foreign born stocks (from zero in 1990 to zero in 1995 for example) in South Sudan and Montenegro with a non-zero net migration over the period. This was resolved in the background by some parts of the IPF code running until their default iteration limit rather than until convergence, where convergence was not feasible. I picked up on this when adding some new warning messages in the &lt;code&gt;ffs_demo()&lt;/code&gt; function of the &lt;a href=&#34;https://cran.r-project.org/web/packages/migest/index.html&#34;&gt;migest&lt;/a&gt; package which should now alert users for non-convergence.&lt;/p&gt;
-&lt;p&gt;To rectify this problem I have created a new version of the estimates that treat Serbia and Montenegro, and Sudan and South Sudan, as single countries before 2005. This reduces the number of countries in the earlier periods of the data to 198, whilst in the last two periods (2005-2010 and 2010-2015) there are still 200 countries, and the estimates are the same as in the previous update. I use the SCG and SUD codes for Serbia and Montenegro and Sudan before 2005. After 2005 I use the four seperate country codes (SRB, MNE, SDN, SSD).&lt;/p&gt;
+&lt;p&gt;To rectify this problem I have created a new version of the estimates that treat Serbia and Montenegro, and Sudan and South Sudan, as single countries before 2005. This reduces the number of countries in the earlier periods of the data to 198, whilst in the last two periods (2005-2010 and 2010-2015) there are still 200 countries, and the estimates are the same as in the previous update. I use the SCG and SUD country codes for Serbia and Montenegro and Sudan before 2005, and the four separate country codes after 2005 (SRB, MNE, SDN, SSD as in previous versions).&lt;/p&gt;
 &lt;p&gt;I have added a few plots below to once again give some summaries of the changes in the updated estimates to those in the paper and from the last update.&lt;/p&gt;
 &lt;div id=&#34;comparison-of-estimates-1&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Comparison of estimates&lt;/h3&gt;
