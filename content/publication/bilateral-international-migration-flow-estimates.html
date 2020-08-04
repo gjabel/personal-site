@@ -13,18 +13,49 @@ image_preview: "headers/val_all.png"
 header: 
   image: "headers/val_all.png"
   caption: "Bilateral international migration flow estimates for 200 countries"
+output:
+  blogdown::html_page:
+      toc: TRUE
 ---
 
 <script src="/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
 <script src="/rmarkdown-libs/pymjs/pym.v1.js"></script>
 <script src="/rmarkdown-libs/widgetframe-binding/widgetframe.js"></script>
 
+<div id="TOC">
+<ul>
+<li><a href="#updates">Updates</a></li>
+<li><a href="#version-2-update-for-wpp2019"><a id="WPP2019"></a>Version 2: Update for WPP2019</a><ul>
+<li><a href="#comparison-of-estimates-based-on-wpp2017-and-wpp2019">Comparison of estimates based on WPP2017 and WPP2019</a></li>
+<li><a href="#which-countries-are-most-affected">Which countries are most affected?</a></li>
+<li><a href="#impact-on-validation-exercise">Impact on validation exercise</a></li>
+</ul></li>
+<li><a href="#version-3-update-for-ims2019"><a id="IMS2019"></a>Version 3: Update for IMS2019</a><ul>
+<li><a href="#comparison-of-estimates">Comparison of estimates</a></li>
+<li><a href="#which-countries-are-most-affected-1">Which countries are most affected?</a></li>
+<li><a href="#impact-on-validation-exercise-1">Impact on validation exercise</a></li>
+</ul></li>
+<li><a href="#version-4-correct-for-serbia-montenegro-sudan-and-south-sudan-before-2005"><a id="SCGSUD"></a>Version 4: Correct for Serbia, Montenegro, Sudan and South Sudan before 2005</a><ul>
+<li><a href="#comparison-of-estimates-1">Comparison of estimates</a></li>
+<li><a href="#impact-on-validation-exercise-2">Impact on validation exercise</a></li>
+</ul></li>
+</ul>
+</div>
 
-<p>Since the paper has published I have produced two updates; one for new <a href="./#WPP2019">UN demographic data</a> and one for new <a href="./#IMS2019">UN migrant stock data</a>.</p>
-<div id="update-for-wpp2019" class="section level2">
-<h2><a id="WPP2019"></a>Update for WPP2019</h2>
+<div id="updates" class="section level3">
+<h3>Updates</h3>
+<p>Since the paper has published I have produced three update thus far to;</p>
+<ul>
+<li>Include the latest United Nations demographic data released in WPP2019 (July 19, 2019)</li>
+<li>Include the latest United Nations migrant stock data (October 23, 2019)</li>
+<li>Correct for Serbia, Montenegro, Sudan and South Sudan before 2005 (August 3, 2020)</li>
+</ul>
+<p>See the table of contents above to jump to a relative short discussion on these updates. The different versions of estimates are all available on <a href="https://figshare.com/articles/dataset/Bilateral_international_migration_flow_estimates_for_200_countries_1990-1995_to_2010-2015_/7731233/1">Figshare</a></p>
+</div>
+<div id="version-2-update-for-wpp2019" class="section level2">
+<h2><a id="WPP2019"></a>Version 2: Update for WPP2019</h2>
 <p>This paper came out a day before the United Nations Population Division updated their <a href="https://population.un.org/wpp/">World Population Prospects</a> (WPP). As all the estimates were based on WPP2017 our claim for the estimates being based on the most up to date input data was only true for around 24 hours.</p>
-<p>In order to keep the estimates a bit more current I have added new set based on the WPP2019 to the <a href="https://figshare.com/collections/Bilateral_international_migration_flow_estimates_for_200_countries/4470464">Figshare collection</a>. Below is a quick summary of the changes in the updated estimates to those in the paper.</p>
+<p>In order to keep the estimates a bit more current I have added new version based on the WPP2019 to the <a href="https://figshare.com/collections/Bilateral_international_migration_flow_estimates_for_200_countries/4470464">Figshare collection</a>. Below is a quick summary of the changes in the updated estimates to those in the paper.</p>
 <div id="comparison-of-estimates-based-on-wpp2017-and-wpp2019" class="section level3">
 <h3>Comparison of estimates based on WPP2017 and WPP2019</h3>
 <p>The plot below shows the relationship between the bilateral flow estimates based on WPP2017 and WPP2019 from each period and estimation method.</p>
@@ -49,10 +80,10 @@ header:
 <p>The correlations change by few hundredths of a decimal. These small changes, despite what is shown in the first plot above, are due to the limited amount of reported migration flows statistics (at the global level) to carry out our validation exercise. In the 45 countries that we used (based on the United Nations Population Division <a href="https://www.un.org/en/development/desa/population/migration/data/empirical2/migrationflows.asp">collection</a>) the revisions in the WPP data were relatively minor, hence only small changes in their estimates and the correlations with the reported data.</p>
 </div>
 </div>
-<div id="update-for-ims2019" class="section level2">
-<h2><a id="IMS2019"></a>Update for IMS2019</h2>
+<div id="version-3-update-for-ims2019" class="section level2">
+<h2><a id="IMS2019"></a>Version 3: Update for IMS2019</h2>
 <p>Another update in the input data came out a few weeks back - this time the UN <a href="https://www.un.org/en/development/desa/population/migration/data/estimates2/estimates19.asp">International Migrant Stock</a> (IMS) data. I have added another set of flow estimates based on the IMS2019 and WPP2019 to the <a href="https://figshare.com/collections/Bilateral_international_migration_flow_estimates_for_200_countries/4470464">Figshare collection</a> (the original flow estimates in the paper were based on IMS2017). I do not expect there will not be a need to update the estimates again until at least 2021.</p>
-<p>I have added a few more plots below to once again give some summaries of the changes in the updated estimates to those in the paper and from the last update.</p>
+<p>I have added a few plots below to once again give some summaries of the changes in the updated estimates to those in the paper and from the last update.</p>
 <div id="comparison-of-estimates" class="section level3">
 <h3>Comparison of estimates</h3>
 <p>The plot below shows the relationship between the bilateral flow estimates based on IMS2017 and WPP2017 (as in the paper) and IMS2019 - WPP2019 (this update) from each period and estimation method.</p>
@@ -72,8 +103,26 @@ header:
 </div>
 <div id="impact-on-validation-exercise-1" class="section level3">
 <h3>Impact on validation exercise</h3>
-<p>The impact of the revision in stock data on the validation exercise in the paper is slightly larger than the previous update, but still not very dramatic. Below is a animated version of <a href="https://www.nature.com/articles/s41597-019-0089-3#Fig4">Figure 4</a> in the paper, showing the correlations between the flow estimates and reported data for various migration measures, for the original estimates and subsequent updates based on new WPP and IMS data.</p>
+<p>The impact of the revision in stock data on the validation exercise in the paper is slightly larger than the previous update, but still not very dramatic. Below is an animated version of <a href="https://www.nature.com/articles/s41597-019-0089-3#Fig4">Figure 4</a> in the paper, showing the correlations between the flow estimates and reported data for various migration measures, for the original estimates and subsequent updates based on new WPP and IMS data.</p>
 <p><img src="/img/sd-val_all.gif" /></p>
 <p>As with the first update, the small changes in the correlations, despite some large revisions in the migrant stock data are due to the limited amount of reported migration flows statistics (at the global level) to carry out our validation exercise.</p>
+</div>
+</div>
+<div id="version-4-correct-for-serbia-montenegro-sudan-and-south-sudan-before-2005" class="section level2">
+<h2><a id="SCGSUD"></a>Version 4: Correct for Serbia, Montenegro, Sudan and South Sudan before 2005</h2>
+<p>In the original paper, and updates described above, both Serbia and Montenegro, and Sudan and South Sudan are treated as separate countries through the entire 1990 to 2015 period. This was not a great choice. Although the UN provide separate demographic and migrant stock data for each of the four countries back to 1990, the notes in the migrant stock speadsheet (number 4 and 24) point out that the foreign born data for Sudan and Serbia before 2005 cover South Sudan and Montenegro respectively. In both South Sudan and Montenegro before 2005 there is no data provided for the foreign born populations.</p>
+<p>The differences in geographic coverge of Sudan and Serbia in the migrant stock data has an impact on the flow estimates that are based on the differences in stocks. For example, the demographic accounting based methods were trying to calibrate changes in foreign born stocks (from zero in 1990 to zero in 1995 for example) in South Sudan and Montenegro with a non-zero net migration over the period. This was resolved in the background by some parts of the IPF code running until their default iteration limit rather than until convergence, where convergence was not feasible. I picked up on this when adding some new warning messages in the <code>ffs_demo()</code> function of the <a href="https://cran.r-project.org/web/packages/migest/index.html">migest</a> package which should now alert users for non-convergence.</p>
+<p>To rectify this problem I have created a new version of the estimates that treat Serbia and Montenegro, and Sudan and South Sudan, as single countries before 2005. This reduces the number of countries in the earlier periods of the data to 198, whilst in the last two periods (2005-2010 and 2010-2015) there are still 200 countries, and the estimates are the same as in the previous update. I use the SCG and SUD codes for Serbia and Montenegro and Sudan before 2005. After 2005 I use the four seperate country codes (SRB, MNE, SDN, SSD).</p>
+<p>I have added a few plots below to once again give some summaries of the changes in the updated estimates to those in the paper and from the last update.</p>
+<div id="comparison-of-estimates-1" class="section level3">
+<h3>Comparison of estimates</h3>
+<p>The plot below shows the relationship between the bilateral flow estimates based on the last update based on IMS2019 and WPP2019 and the newer estimates with the correction for the four countries.</p>
+<p>In all periods the estimates for 2005-2010 and 2010-2015 remain unchanged, hence all points are on the diagonal line. In earlier periods there are a small number of bilateral estimates from the rates and demographic accounting methods. For the demographic accounting methods this is due to the combining of data for the four countries allowing the IPF routines to fully converge. The biggest changes occur in estimates between African countries from the correction to Sudanese and South Sudanese born populations. For the rates method all estimates are revised from the change in the global migration flow total, obtained from the sum of net migration flows.</p>
+<p><img src="/img/sd-cor_change.png" /></p>
+</div>
+<div id="impact-on-validation-exercise-2" class="section level3">
+<h3>Impact on validation exercise</h3>
+<p>The impact of the correction for the four countries on the validation exercise is very minor. Below is an animated version of <a href="https://www.nature.com/articles/s41597-019-0089-3#Fig4">Figure 4</a> in the paper, showing the correlations between the flow estimates and reported data for various migration measures, for the original estimates, the previous updates based on new WPP and IMS data and the new estimates with a correction for the four countries prior to 2005.</p>
+<p><img src="/img/sd-val_cor.gif" /></p>
 </div>
 </div>

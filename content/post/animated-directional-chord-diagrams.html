@@ -72,8 +72,12 @@ d2 &lt;- d0 %&gt;%
   select(corridor, year0, flow) %&gt;%
   mutate(ease = &quot;linear&quot;) %&gt;%
   tween_elements(time = &quot;year0&quot;, group = &quot;corridor&quot;, ease = &quot;ease&quot;, nframes = 100) %&gt;%
-  tbl_df()
-d2</code></pre>
+  tbl_df()</code></pre>
+<pre><code>## Warning: `tbl_df()` is deprecated as of dplyr 1.0.0.
+## Please use `tibble::as_tibble()` instead.
+## This warning is displayed once every 8 hours.
+## Call `lifecycle::last_warnings()` to see where this warning was generated.</code></pre>
+<pre class="r"><code>d2</code></pre>
 <pre><code>## # A tibble: 8,181 x 4
 ##    year0    flow .frame .group                                 
 ##    &lt;dbl&gt;   &lt;dbl&gt;  &lt;int&gt; &lt;chr&gt;                                  
@@ -202,9 +206,9 @@ image_write(image = ani0, path = &quot;./plot-gif/globalchord.gif&quot;)</code><
   group_by(.frame) %&gt;%
   summarise(flow = sum(flow)) %&gt;%
   mutate(gaps = scale_gap(flow_m = flow, flow_max = max(.$flow), 
-                          gap_at_max = 4, gaps = 9))
-
-d3</code></pre>
+                          gap_at_max = 4, gaps = 9))</code></pre>
+<pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
+<pre class="r"><code>d3</code></pre>
 <pre><code>## # A tibble: 101 x 3
 ##    .frame  flow  gaps
 ##     &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt;

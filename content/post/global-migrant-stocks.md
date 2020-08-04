@@ -36,9 +36,9 @@ In the second plot, I allow the sector axis to be specific to the regional total
 
 ## <a id="population"></a> Migrant totals relative to their population totals.
  
-One important feature of international migrants are their relative rarity. Professor Hein de Haas visaully illustrates this point neatly using a [pie chart](http://heindehaas.blogspot.com/2016/08/refugees-small-and-relatively-stable.html), where his focus is predominantly on refugees, but also clearly shows the small share of the global population that are living outside their country of birth (under 4%). This feature is completely missed in chord diagrams of migrants like the ones above, where there is no way to gauge the share of the migrant populations relative to the total population. 
+One important feature of international migrants are their relative rarity. Professor Hein de Haas visually illustrates this point neatly using a [pie chart](http://heindehaas.blogspot.com/2016/08/refugees-small-and-relatively-stable.html), where his focus is predominantly on refugees, but also clearly shows the small share of the global population that are living outside their country of birth (under 4%). This feature is completely missed in chord diagrams of migrants like the ones above, where there is no way to gauge the share of the migrant populations relative to the total population. 
 
-In the plot below I tried to illustrate the relative sizes of migrant populations using the lengths of the sector axis in the to transitions between 
+In the plot below I tried to illustrate the relative sizes of migrant populations using the lengths of the sector axis in the to transitions between
 
   - The number of migrants (which is a combination of migrant living in the region and migrants born in the region living elsewhere) as in the plots above, and  
   - The total population of the region.
@@ -52,4 +52,4 @@ The chord widths remain constant, fixed at the size of the bilateral migrant pop
 
 ## R Code
 
-These plots were all produced in R, primarily using the `chordDiagram()` function in the  [circlize](https://jokergoo.github.io/circlize_book/book/the-chorddiagram-function.html) package. A while ago I wrote a [post](http://guyabel.com/post/animated-directional-chord-diagrams) with more details on creating animated chord diagrams. The specific code for the plots above gets a bit overwhelming (and is poorly commented) so I am hesitant to put it on Github, especially becuase the more complicated parts for defining the lines for the global regions can now be done much more easily using the new `group` argument in the `chordDiagram()` function, as descirbed in a recent [post](https://jokergoo.github.io/2020/06/08/multiple-group-chord-diagram/) by Zuguang Gu.
+These plots were all produced in R, primarily using the `chordDiagram()` function in the  [circlize](https://jokergoo.github.io/circlize_book/book/the-chorddiagram-function.html) package. A while ago I wrote a [post](http://guyabel.com/post/animated-directional-chord-diagrams) with more details on creating animated chord diagrams. The specific code for the plots above gets a bit overwhelming (and is poorly commented) so I am hesitant to put it on Github, especially because the more complicated parts for defining the lines for the global regions can now be done much more easily using the new `group` argument in the `chordDiagram()` function, as described in a recent [post](https://jokergoo.github.io/2020/06/08/multiple-group-chord-diagram/) by Zuguang Gu.

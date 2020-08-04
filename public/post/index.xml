@@ -145,7 +145,7 @@ devtools::install_github(&amp;quot;guyabel/tidycat&amp;quot;)&lt;/code&gt;&lt;/p
 
 &lt;h2 id=&#34;a-id-population-a-migrant-totals-relative-to-their-population-totals&#34;&gt;&lt;a id=&#34;population&#34;&gt;&lt;/a&gt; Migrant totals relative to their population totals.&lt;/h2&gt;
 
-&lt;p&gt;One important feature of international migrants are their relative rarity. Professor Hein de Haas visaully illustrates this point neatly using a &lt;a href=&#34;http://heindehaas.blogspot.com/2016/08/refugees-small-and-relatively-stable.html&#34; target=&#34;_blank&#34;&gt;pie chart&lt;/a&gt;, where his focus is predominantly on refugees, but also clearly shows the small share of the global population that are living outside their country of birth (under 4%). This feature is completely missed in chord diagrams of migrants like the ones above, where there is no way to gauge the share of the migrant populations relative to the total population.&lt;/p&gt;
+&lt;p&gt;One important feature of international migrants are their relative rarity. Professor Hein de Haas visually illustrates this point neatly using a &lt;a href=&#34;http://heindehaas.blogspot.com/2016/08/refugees-small-and-relatively-stable.html&#34; target=&#34;_blank&#34;&gt;pie chart&lt;/a&gt;, where his focus is predominantly on refugees, but also clearly shows the small share of the global population that are living outside their country of birth (under 4%). This feature is completely missed in chord diagrams of migrants like the ones above, where there is no way to gauge the share of the migrant populations relative to the total population.&lt;/p&gt;
 
 &lt;p&gt;In the plot below I tried to illustrate the relative sizes of migrant populations using the lengths of the sector axis in the to transitions between&lt;/p&gt;
 
@@ -163,7 +163,7 @@ devtools::install_github(&amp;quot;guyabel/tidycat&amp;quot;)&lt;/code&gt;&lt;/p
 
 &lt;h2 id=&#34;r-code&#34;&gt;R Code&lt;/h2&gt;
 
-&lt;p&gt;These plots were all produced in R, primarily using the &lt;code&gt;chordDiagram()&lt;/code&gt; function in the  &lt;a href=&#34;https://jokergoo.github.io/circlize_book/book/the-chorddiagram-function.html&#34; target=&#34;_blank&#34;&gt;circlize&lt;/a&gt; package. A while ago I wrote a &lt;a href=&#34;http://guyabel.com/post/animated-directional-chord-diagrams&#34; target=&#34;_blank&#34;&gt;post&lt;/a&gt; with more details on creating animated chord diagrams. The specific code for the plots above gets a bit overwhelming (and is poorly commented) so I am hesitant to put it on Github, especially becuase the more complicated parts for defining the lines for the global regions can now be done much more easily using the new &lt;code&gt;group&lt;/code&gt; argument in the &lt;code&gt;chordDiagram()&lt;/code&gt; function, as descirbed in a recent &lt;a href=&#34;https://jokergoo.github.io/2020/06/08/multiple-group-chord-diagram/&#34; target=&#34;_blank&#34;&gt;post&lt;/a&gt; by Zuguang Gu.&lt;/p&gt;
+&lt;p&gt;These plots were all produced in R, primarily using the &lt;code&gt;chordDiagram()&lt;/code&gt; function in the  &lt;a href=&#34;https://jokergoo.github.io/circlize_book/book/the-chorddiagram-function.html&#34; target=&#34;_blank&#34;&gt;circlize&lt;/a&gt; package. A while ago I wrote a &lt;a href=&#34;http://guyabel.com/post/animated-directional-chord-diagrams&#34; target=&#34;_blank&#34;&gt;post&lt;/a&gt; with more details on creating animated chord diagrams. The specific code for the plots above gets a bit overwhelming (and is poorly commented) so I am hesitant to put it on Github, especially because the more complicated parts for defining the lines for the global regions can now be done much more easily using the new &lt;code&gt;group&lt;/code&gt; argument in the &lt;code&gt;chordDiagram()&lt;/code&gt; function, as described in a recent &lt;a href=&#34;https://jokergoo.github.io/2020/06/08/multiple-group-chord-diagram/&#34; target=&#34;_blank&#34;&gt;post&lt;/a&gt; by Zuguang Gu.&lt;/p&gt;
 </description>
     </item>
     
@@ -553,8 +553,12 @@ d2 &amp;lt;- d0 %&amp;gt;%
   select(corridor, year0, flow) %&amp;gt;%
   mutate(ease = &amp;quot;linear&amp;quot;) %&amp;gt;%
   tween_elements(time = &amp;quot;year0&amp;quot;, group = &amp;quot;corridor&amp;quot;, ease = &amp;quot;ease&amp;quot;, nframes = 100) %&amp;gt;%
-  tbl_df()
-d2&lt;/code&gt;&lt;/pre&gt;
+  tbl_df()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning: `tbl_df()` is deprecated as of dplyr 1.0.0.
+## Please use `tibble::as_tibble()` instead.
+## This warning is displayed once every 8 hours.
+## Call `lifecycle::last_warnings()` to see where this warning was generated.&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;d2&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 8,181 x 4
 ##    year0    flow .frame .group                                 
 ##    &amp;lt;dbl&amp;gt;   &amp;lt;dbl&amp;gt;  &amp;lt;int&amp;gt; &amp;lt;chr&amp;gt;                                  
@@ -683,9 +687,9 @@ image_write(image = ani0, path = &amp;quot;./plot-gif/globalchord.gif&amp;quot;)
   group_by(.frame) %&amp;gt;%
   summarise(flow = sum(flow)) %&amp;gt;%
   mutate(gaps = scale_gap(flow_m = flow, flow_max = max(.$flow), 
-                          gap_at_max = 4, gaps = 9))
-
-d3&lt;/code&gt;&lt;/pre&gt;
+                          gap_at_max = 4, gaps = 9))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## `summarise()` ungrouping output (override with `.groups` argument)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;d3&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 101 x 3
 ##    .frame  flow  gaps
 ##     &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;
