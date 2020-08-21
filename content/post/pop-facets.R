@@ -61,6 +61,7 @@ g <- ggplot(data = d,
   facet_col(facets = "reg_name", scales = "free", space = "free", strip.position = "right") +
             # labeller = label_wrap_gen(width = 10)) +
   scale_fill_viridis_c() +
+  labs(fill = "Proportion of\nPopulation") + 
   # theme_bw(base_size = 3) + 
   theme(strip.text.y = element_text(angle = 0), 
         axis.text.x = element_text(angle = 45, hjust = 1), 
@@ -73,6 +74,7 @@ file.show("temp.pdf")
 
 library(rayshader)
 library(rayrender)
-plot_gg(ggobj = g, multicore=TRUE, width=8, height=40, zoom = 0.5)
-render_
+plot_gg(ggobj = g, multicore=TRUE, width=8, height=40, zoom = 0.25)
+render_camera(theta = 0, phi = -45, zoom = 0.25)
+render_movie("temp")
 
