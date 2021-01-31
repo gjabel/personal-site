@@ -10,7 +10,7 @@ categories:
   - "r-bloggers"
 draft: false
 header:
-  image: "flow-ani-cd100.png"
+  image: "headers/flow-ani-cd100.png"
 ---
 
 ```{r setup, include=FALSE}

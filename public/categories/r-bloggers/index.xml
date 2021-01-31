@@ -1,7 +1,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>r-bloggers on Guy Abel</title>
-    <link>/categories/r-bloggers/</link>
+    <link>https://guyabel.com/categories/r-bloggers/</link>
     <description>Recent content in r-bloggers on Guy Abel</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
@@ -11,10 +11,10 @@
     
     <item>
       <title>Expand broom::tidy() output for categorical parameter estimates</title>
-      <link>/post/tidycat/</link>
+      <link>https://guyabel.com/post/tidycat/</link>
       <pubDate>Wed, 08 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/tidycat/</guid>
+      <guid>https://guyabel.com/post/tidycat/</guid>
       <description>
 
 
@@ -113,11 +113,13 @@ devtools::install_github(&amp;quot;guyabel/tidycat&amp;quot;)&lt;/code&gt;&lt;/p
     
     <item>
       <title>Animating Changes in Football Kits using R</title>
-      <link>/post/football-kits/</link>
+      <link>https://guyabel.com/post/football-kits/</link>
       <pubDate>Tue, 05 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/football-kits/</guid>
+      <guid>https://guyabel.com/post/football-kits/</guid>
       <description>
+&lt;link href=&#34;../../rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;../../rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;background&#34; class=&#34;section level2&#34;&gt;
@@ -256,11 +258,13 @@ for(i in 2:length(kits$img)){
     
     <item>
       <title>Animated Directional Chord Diagrams</title>
-      <link>/post/animated-directional-chord-diagrams/</link>
+      <link>https://guyabel.com/post/animated-directional-chord-diagrams/</link>
       <pubDate>Wed, 18 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/animated-directional-chord-diagrams/</guid>
+      <guid>https://guyabel.com/post/animated-directional-chord-diagrams/</guid>
       <description>
+&lt;link href=&#34;../../rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;../../rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;background&#34; class=&#34;section level2&#34;&gt;

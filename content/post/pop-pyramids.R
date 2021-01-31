@@ -32,7 +32,6 @@ d %>%
   labs(x = "Populaton", y = "Age", fill = "Sex")
 
 
-
 # ifelse allows display of timme series in facet / every other age label
 d %>%
   filter(name == "World", 
@@ -48,7 +47,7 @@ d %>%
 # add an outline of historical structure
 d %>%
   filter(name == "World",
-         year %in% c(1950, 1985, 2020)) %>%
+         year %in% c(1950, 2020)) %>%
   arrange(rev(year)) %>%
   mutate(year = as.character(year)) %>%
   ggplot(mapping = aes(x = ifelse(test = sex == "Male", yes = -pop, no = pop),
@@ -57,7 +56,16 @@ d %>%
   scale_x_continuous(labels = abs) +
   labs(x = "Populaton", y = "Age", fill = "Year")
 
-
+d %>%
+  filter(name == "World",
+         year %in% c(1950, 2020)) %>%
+  arrange(rev(year)) %>%
+  mutate(year = as.character(year)) %>%
+  ggplot(mapping = aes(x = ifelse(test = sex == "Male", yes = -pop, no = pop),
+                       y = age, fill = year)) +
+  geom_col(position = "dodge") +
+  scale_x_continuous(labels = abs) +
+  labs(x = "Populaton", y = "Age", fill = "Year")
 
 # d %>%
 #   filter(name == "World", 
@@ -86,20 +94,24 @@ d %>%
   scale_x_continuous(labels = abs) +
   labs(x = "Populaton", y = "Age", fill = "Year")
 
+# cant figure out how to do an outline
 pyr_fill <- c("transparent", "grey")
 pyr_col <- c("black", "transparent")
 
 d %>%
   filter(name == "China",
          year %in% c(1950, 2020)) %>%
-  mutate(year = as.character(year)) %>%
+  mutate(year = as.character(year),
+         year = fct_rev(year)) %>%
   ggplot(mapping = aes(x = ifelse(test = sex == "Male", yes = -pop, no = pop),
-                       y = age, fill = year)) +
-  geom_col(position = "identity") +
+                       y = age, fill = year, colour = year)) +
+  geom_col(position = "identity", alpha = 0.5) +
   scale_x_continuous(labels = abs) +
   labs(x = "Populaton", y = "Age", fill = "Year") +
-  scale_fill_manual(values = pyr_fill) +
-  scale_colour_manual(values = pyr_col)
+  scale_color_manual(values = c("1950" = "black", "2020" = "red")) +
+  scale_fill_manual(values = c("1950" = NA, "2020" = "red")) 
+  # scale_fill_manual(values = pyr_fill) +
+  # scale_colour_manual(values = pyr_col)
 
 
 
@@ -184,47 +196,68 @@ d %>%
   theme(axis.text.y = element_text(hjust = 0.5))
 
 # labels just on the right, but use strip text for labels??
+# d %>%
+#   filter(name == "World",
+#          year == 1950) %>%
+#   mutate(sex = fct_rev(sex)) %>%
+#   ggplot(mapping = aes(x = ifelse(test = sex == "Male", yes = -pop, no = pop),
+#                        y = age)) +
+#   geom_col() +
+#   facet_share(facets = "sex", scales = "free_x") +
+#   scale_x_continuous(labels = abs) +
+#   labs(x = "", y = "") +
+#   theme(axis.text.y = element_blank(),
+#         # axis.ticks = element_blank(),
+#         panel.spacing = unit(0, "lines"))
+
+# # labels just on the right, but use strip text for labels??
+# g1 <- d %>%
+#   filter(name == "World",
+#          year == 1950, 
+#          sex == "Male") %>%
+#   ggplot(mapping = aes(x = ifelse(test = sex == "Male", yes = -pop, no = pop),
+#                        y = age)) +
+#   geom_col() +
+#   scale_x_continuous(labels = abs, 
+#                      expand = expansion(mult = c(0.05, 0))) +
+#   labs(x = "Male", y = "") +
+#   theme(plot.margin = unit(c(1, -1, 0.5, 1), "lines"))
+# 
+# g2 <- d %>%
+#   filter(name == "World",
+#          year == 1950, 
+#          sex != "Male") %>%
+#   ggplot(mapping = aes(x = ifelse(test = sex == "Male", yes = -pop, no = pop),
+#                        y = age)) +
+#   geom_col() +
+#   scale_x_continuous(labels = abs, expand = expansion(mult = c(0, 0.05))) +
+#   labs(x = "Female", y = "") +
+#   theme(axis.text.y = element_blank(), 
+#         axis.ticks.y = element_blank(),
+#         plot.margin = unit(c(1, 1, 0.5, -1), "lines"))
+# library(patchwork)
+# g1 + g2
+
 d %>%
   filter(name == "World",
          year == 1950) %>%
-  mutate(sex = fct_rev(sex)) %>%
-  ggplot(mapping = aes(x = ifelse(test = sex == "Male", yes = -pop, no = pop),
-                       y = age)) +
+  mutate(sex = fct_rev(sex), 
+         pop = ifelse(test = sex == "Male", yes = -pop, no = pop)) %>%
+  ggplot(mapping = aes(x = pop, y = age)) +
   geom_col() +
-  facet_share(facets = "sex", scales = "free_x") +
-  scale_x_continuous(labels = abs) +
-  labs(x = "", y = "") +
-  theme(axis.text.y = element_blank(),
-        # axis.ticks = element_blank(),
-        panel.spacing = unit(0, "lines"))
+  scale_x_symmetric(labels = abs) +
+  theme_bw() +
+  coord_cartesian(clip = 'off', ylim = c(1, length(unique(d$age)))) +
+  annotate(geom = "text", x = -Inf, y = -1, label = "Male", hjust = 0) + 
+  annotate(geom = "text", x = Inf, y = -1, label = "Female", hjust = 1) +
+  labs(x = "")
+  
 
-# labels just on the right, but use strip text for labels??
-g1 <- d %>%
-  filter(name == "World",
-         year == 1950, 
-         sex == "Male") %>%
-  ggplot(mapping = aes(x = ifelse(test = sex == "Male", yes = -pop, no = pop),
-                       y = age)) +
-  geom_col() +
-  scale_x_continuous(labels = abs, 
-                     expand = expansion(mult = c(0.05, 0))) +
-  labs(x = "Male", y = "") +
-  theme(plot.margin = unit(c(1, -1, 0.5, 1), "lines"))
-
-g2 <- d %>%
-  filter(name == "World",
-         year == 1950, 
-         sex != "Male") %>%
-  ggplot(mapping = aes(x = ifelse(test = sex == "Male", yes = -pop, no = pop),
-                       y = age)) +
-  geom_col() +
-  scale_x_continuous(labels = abs, expand = expansion(mult = c(0, 0.05))) +
-  labs(x = "Female", y = "") +
-  theme(axis.text.y = element_blank(), 
-        axis.ticks.y = element_blank(),
-        plot.margin = unit(c(1, 1, 0.5, -1), "lines"))
-library(patchwork)
-g1 + g2
+g +
+  coord_cartesian(clip = 'off', ylim = c(1, length(unique(d$age)))) +
+  annotate(geom = "text", x = -Inf, y = -1, label = "Male", hjust = 0) + 
+  annotate(geom = "text", x = Inf, y = -1, label = "Female", hjust = 1) +
+  labs(x = "")
 
 
 # equal male and femal axis
@@ -238,6 +271,7 @@ d %>%
   scale_x_symmetric(labels = abs) +
   labs(x = "Populaton", y = "Age", fill = "Sex")
 
+# line outline rather than bars?
 
 # adding labels
 

@@ -1,7 +1,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>migration on Guy Abel</title>
-    <link>/tags/migration/</link>
+    <link>https://guyabel.com/tags/migration/</link>
     <description>Recent content in migration on Guy Abel</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
@@ -11,15 +11,15 @@
     
     <item>
       <title>Global Migrant Stock Chord Diagrams</title>
-      <link>/post/global-migrant-stocks/</link>
+      <link>https://guyabel.com/post/global-migrant-stocks/</link>
       <pubDate>Sat, 20 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/global-migrant-stocks/</guid>
+      <guid>https://guyabel.com/post/global-migrant-stocks/</guid>
       <description>
 
 &lt;p&gt;Over the last year or so I have been playing around with different ways of showing changing global bilateral migrant stocks, adapting the animation code I created for the plots for region to region flows in this estimation &lt;a href=&#34;https://www.nature.com/articles/s41597-019-0089-3&#34; target=&#34;_blank&#34;&gt;paper&lt;/a&gt;. I am putting them online here in case they are of interest to anyone else.&lt;/p&gt;
 
-&lt;p&gt;The first plot below shows the change over time in the pattern of global migrant stocks. As with the &lt;a href=&#34;http://guyabel.com/post/migrant-stock-chord-digrams&#34; target=&#34;_blank&#34;&gt;regional plots&lt;/a&gt; in my previous post, the chords in the diagrams represent the connection between the places of birth (at the base of the chord) and places of residence (at the arrow head of the chord). The width of based of the chords correspond to the size of the migrant population in millions. Chords are ordered relative to their size, with the largest migrant stocks plotted at the beginning of the region segments. The ordering of chords jumps around over time as the relative rankings of the largest foreign-born populations change in each region. Values for the migrant population sizes are from the 2019 revision of the United Nations DESA &lt;a href=&#34;https://www.un.org/en/development/desa/population/migration/data/estimates2/estimates19.asp&#34; target=&#34;_blank&#34;&gt;International Migrant Stock Data&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The first plot below shows the change over time in the pattern of global migrant stocks. As with the &lt;a href=&#34;http://guyabel.com/post/migrant-stock-chord-digrams&#34; target=&#34;_blank&#34;&gt;regional plots&lt;/a&gt; in my previous post, the chords in the diagrams represent the connection between the places of birth (at the base of the chord) and places of residence (at the arrow head of the chord). The width of based of the chords correspond to the size of the migrant population in millions. Chords are ordered relative to their size, with the largest migrant stocks plotted at the beginning of the region segments. The ordering of chords jumps around over time as the relative rankings of the largest foreign-born populations change in each region. Values for the migrant population sizes are from the &lt;del&gt;2019&lt;/del&gt; 2020 revision of the United Nations DESA &lt;a href=&#34;https://www.un.org/development/desa/pd/content/international-migrant-stock&#34; target=&#34;_blank&#34;&gt;International Migrant Stock Data&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Note: you might have to right click, select show controls and hit play to start the animations depending on your browsers - right clicking can also allow you to access controls on the play back speed.&lt;/p&gt;
 
@@ -29,7 +29,7 @@
 
 &lt;h2 id=&#34;a-id-sex-a-sex-differences-in-global-migrant-distribution-patterns&#34;&gt;&lt;a id=&#34;sex&#34;&gt;&lt;/a&gt; Sex differences in global migrant distribution patterns&lt;/h2&gt;
 
-&lt;p&gt;The next two plots below show the differences between male and female global migrant distributions in 2019. In the first plot I keep the sector axis fixed at their maximums (over both sexes) making it easier to detect changes in the relative volume of a particular migrant corridor; for example the greater number of male migrants in West Asia and slightly more female migrants in North America.&lt;/p&gt;
+&lt;p&gt;The next two plots below show the differences between male and female global migrant distributions in 2020. In the first plot I keep the sector axis fixed at their maximums (over both sexes) making it easier to detect changes in the relative volume of a particular migrant corridor; for example the greater number of male migrants in West Asia and slightly more female migrants in North America.&lt;/p&gt;
 
 &lt;video loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34; poster=&#34;/img/ims-abel-sex1.png&#34; controls&gt;
   &lt;source src=&#34;../../img/ims-abel-sex1.mp4&#34; type=&#34;video/mp4&#34; /&gt;
@@ -67,10 +67,10 @@
     
     <item>
       <title>Chord Diagram of Chinese Internal Migration Flows</title>
-      <link>/post/chinese-migration-chord-diagram/</link>
+      <link>https://guyabel.com/post/chinese-migration-chord-diagram/</link>
       <pubDate>Mon, 04 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/chinese-migration-chord-diagram/</guid>
+      <guid>https://guyabel.com/post/chinese-migration-chord-diagram/</guid>
       <description>
 
 
@@ -188,14 +188,14 @@ image_write(image = p, path = &amp;quot;figure1.png&amp;quot;)&lt;/code&gt;&lt;/
     </item>
     
     <item>
-      <title>Migrant Stock Chord Diagrams</title>
-      <link>/post/migrant-stock-chord-digrams/</link>
+      <title>Regional Migrant Stock Chord Diagrams</title>
+      <link>https://guyabel.com/post/migrant-stock-chord-digrams/</link>
       <pubDate>Wed, 14 Nov 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/migrant-stock-chord-digrams/</guid>
+      <guid>https://guyabel.com/post/migrant-stock-chord-digrams/</guid>
       <description>&lt;p&gt;During the last few months I have given some introductory talks on international migration in Asia and Europe. I had a couple of requests to share the animated chord diagrams that I created for others to use in their teaching materials. These are below, along with some extra plots for Africa, the Americas (Northern, Central and Southern America as well as the Caribbean) and Oceania.&lt;/p&gt;
 
-&lt;p&gt;The chords in the diagrams represent the connection between the places of birth (at the base of the chord) and places of residence (at the arrow head of the chord). The width of based of the chords correspond to the size of the migrant population in millions. Chords are ordered relative to their size, with the largest migrant stocks plotted at the beginning of the country segments. The ordering of chords jumps around over time as the relative rankings of the largest foreign-born populations change in each country. Values for the migrant population sizes are from the &lt;del&gt;2017&lt;/del&gt; 2019 revision of the United Nations DESA &lt;a href=&#34;https://www.un.org/en/development/desa/population/migration/data/estimates2/estimates19.asp&#34; target=&#34;_blank&#34;&gt;International Migrant Stock Data&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The chords in the diagrams represent the connection between the places of birth (at the base of the chord) and places of residence (at the arrow head of the chord). The width of based of the chords correspond to the size of the migrant population in millions. Chords are ordered relative to their size, with the largest migrant stocks plotted at the beginning of the country segments. The ordering of chords jumps around over time as the relative rankings of the largest foreign-born populations change in each country. Values for the migrant population sizes are from the &lt;del&gt;2017&lt;/del&gt; &lt;del&gt;2019&lt;/del&gt; 2020 revision of the United Nations DESA &lt;a href=&#34;https://www.un.org/development/desa/pd/content/international-migrant-stock&#34; target=&#34;_blank&#34;&gt;International Migrant Stock Data&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Note: you might have to right click, select show controls and hit play to start the animations depending on your browsers - right clicking can also allow you to access controls on the play back speed.&lt;/p&gt;
 
@@ -244,11 +244,13 @@ image_write(image = p, path = &amp;quot;figure1.png&amp;quot;)&lt;/code&gt;&lt;/
     
     <item>
       <title>Animated Directional Chord Diagrams</title>
-      <link>/post/animated-directional-chord-diagrams/</link>
+      <link>https://guyabel.com/post/animated-directional-chord-diagrams/</link>
       <pubDate>Wed, 18 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/animated-directional-chord-diagrams/</guid>
+      <guid>https://guyabel.com/post/animated-directional-chord-diagrams/</guid>
       <description>
+&lt;link href=&#34;../../rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;../../rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;background&#34; class=&#34;section level2&#34;&gt;
@@ -507,28 +509,28 @@ reg_max&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>ARDI International Migration Pillar</title>
-      <link>/project/adri-pillar/</link>
+      <link>https://guyabel.com/project/adri-pillar/</link>
       <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>/project/adri-pillar/</guid>
+      <guid>https://guyabel.com/project/adri-pillar/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Combining Migration Data</title>
-      <link>/project/combining-migration-data/</link>
+      <link>https://guyabel.com/project/combining-migration-data/</link>
       <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>/project/combining-migration-data/</guid>
+      <guid>https://guyabel.com/project/combining-migration-data/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Global Migration Predictions</title>
-      <link>/project/global-migration-prediction/</link>
+      <link>https://guyabel.com/project/global-migration-prediction/</link>
       <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>/project/global-migration-prediction/</guid>
+      <guid>https://guyabel.com/project/global-migration-prediction/</guid>
       <description></description>
     </item>
     

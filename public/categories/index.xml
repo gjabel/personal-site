@@ -1,7 +1,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Guy Abel</title>
-    <link>/categories/</link>
+    <link>https://guyabel.com/categories/</link>
     <description>Recent content in Categories on Guy Abel</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
@@ -11,19 +11,19 @@
     
     <item>
       <title>R</title>
-      <link>/categories/r/</link>
+      <link>https://guyabel.com/categories/r/</link>
       <pubDate>Wed, 08 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>/categories/r/</guid>
+      <guid>https://guyabel.com/categories/r/</guid>
       <description></description>
     </item>
     
     <item>
       <title>r-bloggers</title>
-      <link>/categories/r-bloggers/</link>
+      <link>https://guyabel.com/categories/r-bloggers/</link>
       <pubDate>Wed, 08 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>/categories/r-bloggers/</guid>
+      <guid>https://guyabel.com/categories/r-bloggers/</guid>
       <description></description>
     </item>
     
