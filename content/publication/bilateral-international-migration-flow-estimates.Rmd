@@ -24,10 +24,10 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### Updates
 
-Since the paper has published I have produced three update thus far that
+Since the paper has published I have produced four updates to reflect
 
-  - Include the latest United Nations demographic data released in WPP2019 (July 19, 2019)
-  - Include the latest United Nations migrant stock data  (October 23, 2019 and February 1, 2021)
+  - The latest United Nations demographic data released in WPP2019 (July 19, 2019)
+  - The latest United Nations migrant stock data  (October 23, 2019 and February 1, 2021)
   - Correct for Serbia, Montenegro, Sudan and South Sudan before 2005 (August 3, 2020)
 
 See the table of contents above to jump to a relative short discussion on these updates. The different versions of estimates are all available on [Figshare](https://figshare.com/articles/dataset/Bilateral_international_migration_flow_estimates_for_200_countries_1990-1995_to_2010-2015_/7731233)
