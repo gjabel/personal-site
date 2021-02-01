@@ -17,24 +17,24 @@ Note: you might have to right click, select show controls and hit play to start 
 
 <!-- ![ ](/img/anigif_original-14120-1449691023-4-2.mp4) -->
 
-<video loop="loop" width="720" height="720" poster="/img/ims-abel-asia.png" controls>
-  <source src="/img/ims-abel-asia.mp4" type="video/mp4" />
+<video loop="loop" width="720" height="720" poster="/img/cd-stock-region/ims-abel-asia.png" controls>
+  <source src="/img/cd-stock-region/ims-abel-asia.mp4" type="video/mp4" />
 </video>
 
-<video loop="loop" width="720" height="720" poster="/img/ims-abel-europe.png" controls>
-  <source src="/img/ims-abel-europe.mp4" type="video/mp4" />
+<video loop="loop" width="720" height="720" poster="/img/cd-stock-region/ims-abel-europe.png" controls>
+  <source src="/img/cd-stock-region/ims-abel-europe.mp4" type="video/mp4" />
 </video>
 
-<video loop="loop" width="720" height="720" poster="/img/ims-abel-africa.png" controls>
-  <source src="/img/ims-abel-africa.mp4" type="video/mp4" />
+<video loop="loop" width="720" height="720" poster="/img/cd-stock-region/ims-abel-africa.png" controls>
+  <source src="/img/cd-stock-region/ims-abel-africa.mp4" type="video/mp4" />
 </video>
 
-<video loop="loop" width="720" height="720" poster="/img/ims-abel-america.png" controls>
-  <source src="/img/ims-abel-america.mp4" type="video/mp4" />
+<video loop="loop" width="720" height="720" poster="/img/cd-stock-region/ims-abel-america.png" controls>
+  <source src="/img/cd-stock-region/ims-abel-america.mp4" type="video/mp4" />
 </video>
   
-<video loop="loop" width="720" height="720" poster="/img/ims-abel-oceania.png" controls>
-  <source src="/img/ims-abel-oceania.mp4" type="video/mp4" />
+<video loop="loop" width="720" height="720" poster="/img/cd-stock-region/ims-abel-oceania.png" controls>
+  <source src="/img/cd-stock-region/ims-abel-oceania.mp4" type="video/mp4" />
 </video>
   
 <!-- ![ ](/img/abel-asia-ani10.gif) -->

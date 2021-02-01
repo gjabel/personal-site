@@ -23,22 +23,22 @@
 
 &lt;p&gt;Note: you might have to right click, select show controls and hit play to start the animations depending on your browsers - right clicking can also allow you to access controls on the play back speed.&lt;/p&gt;
 
-&lt;video loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34; poster=&#34;/img/ims-abel-global.png&#34; controls&gt;
-  &lt;source src=&#34;../../img/ims-abel-global.mp4&#34; type=&#34;video/mp4&#34; /&gt;
+&lt;video loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34; poster=&#34;/img/cd-stock-global/ims-abel-global.png&#34; controls&gt;
+  &lt;source src=&#34;../../img/cd-stock-global/ims-abel-global.mp4&#34; type=&#34;video/mp4&#34; /&gt;
 &lt;/video&gt;
 
 &lt;h2 id=&#34;a-id-sex-a-sex-differences-in-global-migrant-distribution-patterns&#34;&gt;&lt;a id=&#34;sex&#34;&gt;&lt;/a&gt; Sex differences in global migrant distribution patterns&lt;/h2&gt;
 
 &lt;p&gt;The next two plots below show the differences between male and female global migrant distributions in 2020. In the first plot I keep the sector axis fixed at their maximums (over both sexes) making it easier to detect changes in the relative volume of a particular migrant corridor; for example the greater number of male migrants in West Asia and slightly more female migrants in North America.&lt;/p&gt;
 
-&lt;video loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34; poster=&#34;/img/ims-abel-sex1.png&#34; controls&gt;
-  &lt;source src=&#34;../../img/ims-abel-sex1.mp4&#34; type=&#34;video/mp4&#34; /&gt;
+&lt;video loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34; poster=&#34;/img/cd-stock-global/ims-abel-sex1.png&#34; controls&gt;
+  &lt;source src=&#34;../../img/cd-stock-global/ims-abel-sex1.mp4&#34; type=&#34;video/mp4&#34; /&gt;
 &lt;/video&gt;
 
 &lt;p&gt;In the second plot, I allow the sector axis to be specific to the regional totals. This (perhaps?) makes it easier to detect relative changes in the overall global patterns by sex.&lt;/p&gt;
 
-&lt;video loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34; poster=&#34;/img/ims-abel-sex2.png&#34; controls&gt;
-  &lt;source src=&#34;../../img/ims-abel-sex2.mp4&#34; type=&#34;video/mp4&#34; /&gt;
+&lt;video loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34; poster=&#34;/img/cd-stock-global/ims-abel-sex2.png&#34; controls&gt;
+  &lt;source src=&#34;../../img/cd-stock-global/ims-abel-sex2.mp4&#34; type=&#34;video/mp4&#34; /&gt;
 &lt;/video&gt;
 
 &lt;h2 id=&#34;a-id-population-a-migrant-totals-relative-to-their-population-totals&#34;&gt;&lt;a id=&#34;population&#34;&gt;&lt;/a&gt; Migrant totals relative to their population totals.&lt;/h2&gt;
@@ -55,8 +55,8 @@
 
 &lt;p&gt;The chord widths remain constant, fixed at the size of the bilateral migrant populations.&lt;/p&gt;
 
-&lt;video loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34; poster=&#34;/img/ims-abel-pop.png&#34; controls&gt;
-  &lt;source src=&#34;../../img/ims-abel-pop.mp4&#34; type=&#34;video/mp4&#34; /&gt;
+&lt;video loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34; poster=&#34;/img/cd-stock-global/ims-abel-pop.png&#34; controls&gt;
+  &lt;source src=&#34;../../img/cd-stock-global/ims-abel-pop.mp4&#34; type=&#34;video/mp4&#34; /&gt;
 &lt;/video&gt;
 
 &lt;h2 id=&#34;r-code&#34;&gt;R Code&lt;/h2&gt;
@@ -201,25 +201,25 @@ image_write(image = p, path = &amp;quot;figure1.png&amp;quot;)&lt;/code&gt;&lt;/
 
 &lt;!-- ![ ](/img/anigif_original-14120-1449691023-4-2.mp4) --&gt;
 
-&lt;video loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34; poster=&#34;/img/ims-abel-asia.png&#34; controls&gt;
-  &lt;source src=&#34;../../img/ims-abel-asia.mp4&#34; type=&#34;video/mp4&#34; /&gt;
+&lt;video loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34; poster=&#34;/img/cd-stock-region/ims-abel-asia.png&#34; controls&gt;
+  &lt;source src=&#34;../../img/cd-stock-region/ims-abel-asia.mp4&#34; type=&#34;video/mp4&#34; /&gt;
 &lt;/video&gt;
 
-&lt;video loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34; poster=&#34;/img/ims-abel-europe.png&#34; controls&gt;
-  &lt;source src=&#34;../../img/ims-abel-europe.mp4&#34; type=&#34;video/mp4&#34; /&gt;
+&lt;video loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34; poster=&#34;/img/cd-stock-region/ims-abel-europe.png&#34; controls&gt;
+  &lt;source src=&#34;../../img/cd-stock-region/ims-abel-europe.mp4&#34; type=&#34;video/mp4&#34; /&gt;
 &lt;/video&gt;
 
-&lt;video loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34; poster=&#34;/img/ims-abel-africa.png&#34; controls&gt;
-  &lt;source src=&#34;../../img/ims-abel-africa.mp4&#34; type=&#34;video/mp4&#34; /&gt;
+&lt;video loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34; poster=&#34;/img/cd-stock-region/ims-abel-africa.png&#34; controls&gt;
+  &lt;source src=&#34;../../img/cd-stock-region/ims-abel-africa.mp4&#34; type=&#34;video/mp4&#34; /&gt;
 &lt;/video&gt;
 
-&lt;video loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34; poster=&#34;/img/ims-abel-america.png&#34; controls&gt;
-  &lt;source src=&#34;../../img/ims-abel-america.mp4&#34; type=&#34;video/mp4&#34; /&gt;
+&lt;video loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34; poster=&#34;/img/cd-stock-region/ims-abel-america.png&#34; controls&gt;
+  &lt;source src=&#34;../../img/cd-stock-region/ims-abel-america.mp4&#34; type=&#34;video/mp4&#34; /&gt;
 &lt;/video&gt;
   
 
-&lt;video loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34; poster=&#34;/img/ims-abel-oceania.png&#34; controls&gt;
-  &lt;source src=&#34;../../img/ims-abel-oceania.mp4&#34; type=&#34;video/mp4&#34; /&gt;
+&lt;video loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34; poster=&#34;/img/cd-stock-region/ims-abel-oceania.png&#34; controls&gt;
+  &lt;source src=&#34;../../img/cd-stock-region/ims-abel-oceania.mp4&#34; type=&#34;video/mp4&#34; /&gt;
 &lt;/video&gt;
   
 

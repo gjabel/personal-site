@@ -15,22 +15,22 @@ The first plot below shows the change over time in the pattern of global migrant
 
 Note: you might have to right click, select show controls and hit play to start the animations depending on your browsers - right clicking can also allow you to access controls on the play back speed.
 
-<video loop="loop" width="720" height="720" poster="/img/ims-abel-global.png" controls>
-  <source src="/img/ims-abel-global.mp4" type="video/mp4" />
+<video loop="loop" width="720" height="720" poster="/img/cd-stock-global/ims-abel-global.png" controls>
+  <source src="/img/cd-stock-global/ims-abel-global.mp4" type="video/mp4" />
 </video>
 
 ## <a id="sex"></a> Sex differences in global migrant distribution patterns
 
 The next two plots below show the differences between male and female global migrant distributions in 2020. In the first plot I keep the sector axis fixed at their maximums (over both sexes) making it easier to detect changes in the relative volume of a particular migrant corridor; for example the greater number of male migrants in West Asia and slightly more female migrants in North America.
 
-<video loop="loop" width="720" height="720" poster="/img/ims-abel-sex1.png" controls>
-  <source src="/img/ims-abel-sex1.mp4" type="video/mp4" />
+<video loop="loop" width="720" height="720" poster="/img/cd-stock-global/ims-abel-sex1.png" controls>
+  <source src="/img/cd-stock-global/ims-abel-sex1.mp4" type="video/mp4" />
 </video>
 
 In the second plot, I allow the sector axis to be specific to the regional totals. This (perhaps?) makes it easier to detect relative changes in the overall global patterns by sex. 
 
-<video loop="loop" width="720" height="720" poster="/img/ims-abel-sex2.png" controls>
-  <source src="/img/ims-abel-sex2.mp4" type="video/mp4" />
+<video loop="loop" width="720" height="720" poster="/img/cd-stock-global/ims-abel-sex2.png" controls>
+  <source src="/img/cd-stock-global/ims-abel-sex2.mp4" type="video/mp4" />
 </video>
 
 
@@ -45,8 +45,8 @@ In the plot below I tried to illustrate the relative sizes of migrant population
     
 The chord widths remain constant, fixed at the size of the bilateral migrant populations.
 
-<video loop="loop" width="720" height="720" poster="/img/ims-abel-pop.png" controls>
-  <source src="/img/ims-abel-pop.mp4" type="video/mp4" />
+<video loop="loop" width="720" height="720" poster="/img/cd-stock-global/ims-abel-pop.png" controls>
+  <source src="/img/cd-stock-global/ims-abel-pop.mp4" type="video/mp4" />
 </video>
 
 
