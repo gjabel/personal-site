@@ -187,9 +187,14 @@ The impact of the correction for the four countries on the validation exercise i
 
 ## <a id="IMS2020"></a>Version 5: Update for IMS2020
 
-The new UN [International Migrant Stock](https://www.un.org/development/desa/pd/content/international-migrant-stock) (IMS) data came out a few weeks back. I have added another set of flow estimates based on the IMS2020 and WPP2019 to the [Figshare collection](https://figshare.com/collections/Bilateral_international_migration_flow_estimates_for_200_countries/4470464) (the original flow estimates in the paper were based on IMS2017). As the IMS2020 contain bilateral stocks for 2020, it was possible to generate a first set of flow estimates for the 2015-2020 period.
+The new UN [International Migrant Stock](https://www.un.org/development/desa/pd/content/international-migrant-stock) (IMS) data came out a few weeks back. I have added another set of flow estimates based on the IMS2020 and WPP2019 to the [Figshare collection](https://figshare.com/collections/Bilateral_international_migration_flow_estimates_for_200_countries/4470464) (the original flow estimates in the paper were based on IMS2017). As the IMS2020 contain bilateral stocks for 2020, it was possible to generate a first set of flow estimates for the 2015-2020 period, seen the animation below for one of the methods covered in the paper:
 
-Below are a few plots to give some visual summaries of the changes.
+<video loop="loop" width="720" height="720" poster="/img/sd2019/v5-flow.png" controls>
+  <source src="/img/sd2019/v5-flow.mp4" type="video/mp4" />
+</video>
+
+
+Below are a few plots to give some visual summaries of the changes in the estimates compared to previous versions.
 
 ### Comparison of estimates
 

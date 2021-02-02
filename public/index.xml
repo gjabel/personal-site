@@ -290,8 +290,9 @@ devtools::install_github(&amp;quot;guyabel/tidycat&amp;quot;)&lt;/code&gt;&lt;/p
 &lt;/div&gt;
 &lt;div id=&#34;version-5-update-for-ims2020&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;&lt;a id=&#34;IMS2020&#34;&gt;&lt;/a&gt;Version 5: Update for IMS2020&lt;/h2&gt;
-&lt;p&gt;The new UN &lt;a href=&#34;https://www.un.org/development/desa/pd/content/international-migrant-stock&#34;&gt;International Migrant Stock&lt;/a&gt; (IMS) data came out a few weeks back. I have added another set of flow estimates based on the IMS2020 and WPP2019 to the &lt;a href=&#34;https://figshare.com/collections/Bilateral_international_migration_flow_estimates_for_200_countries/4470464&#34;&gt;Figshare collection&lt;/a&gt; (the original flow estimates in the paper were based on IMS2017). As the IMS2020 contain bilateral stocks for 2020, it was possible to generate a first set of flow estimates for the 2015-2020 period.&lt;/p&gt;
-&lt;p&gt;Below are a few plots to give some visual summaries of the changes.&lt;/p&gt;
+&lt;p&gt;The new UN &lt;a href=&#34;https://www.un.org/development/desa/pd/content/international-migrant-stock&#34;&gt;International Migrant Stock&lt;/a&gt; (IMS) data came out a few weeks back. I have added another set of flow estimates based on the IMS2020 and WPP2019 to the &lt;a href=&#34;https://figshare.com/collections/Bilateral_international_migration_flow_estimates_for_200_countries/4470464&#34;&gt;Figshare collection&lt;/a&gt; (the original flow estimates in the paper were based on IMS2017). As the IMS2020 contain bilateral stocks for 2020, it was possible to generate a first set of flow estimates for the 2015-2020 period, seen the animation below:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./img/sd2019/v5-flow.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Below are a few plots to give some visual summaries of the changes in the estimates compared to previous versions.&lt;/p&gt;
 &lt;div id=&#34;comparison-of-estimates-2&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Comparison of estimates&lt;/h3&gt;
 &lt;!-- The plot below shows the relationship between the bilateral flow estimates based on IMS2019 and WPP2019 (previous update) and IMS2019 - WPP2019 (this update) from each period and estimation method. --&gt;
