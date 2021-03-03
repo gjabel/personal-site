@@ -271,6 +271,9 @@ d %>%
   scale_x_symmetric(labels = abs) +
   labs(x = "Populaton", y = "Age", fill = "Sex")
 
+# surpless in different shade...
+# https://www.reddit.com/r/dataisbeautiful/comments/lmgy4t/oc_animated_demographic_pyramid_of_sweden_18602019/
+
 # line outline rather than bars?
 
 # adding labels

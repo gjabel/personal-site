@@ -174,6 +174,7 @@ devtools::install_github(&amp;quot;guyabel/tidycat&amp;quot;)&lt;/code&gt;&lt;/p
       
       <guid>https://guyabel.com/publication/bilateral-international-migration-flow-estimates/</guid>
       <description>
+&lt;script src=&#34;./rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 &lt;link href=&#34;./rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
 &lt;script src=&#34;./rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;./rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
@@ -183,21 +184,25 @@ devtools::install_github(&amp;quot;guyabel/tidycat&amp;quot;)&lt;/code&gt;&lt;/p
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#updates&#34;&gt;Updates&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#version-2-update-for-wpp2019&#34;&gt;&lt;a id=&#34;WPP2019&#34;&gt;&lt;/a&gt;Version 2: Update for WPP2019&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#version-2-update-for-wpp2019&#34;&gt;&lt;a id=&#34;WPP2019&#34;&gt;&lt;/a&gt;Version 2: Update for WPP2019&lt;/a&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#comparison-of-estimates-based-on-wpp2017-and-wpp2019&#34;&gt;Comparison of estimates based on WPP2017 and WPP2019&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#which-countries-are-most-affected&#34;&gt;Which countries are most affected?&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#impact-on-validation-exercise&#34;&gt;Impact on validation exercise&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#version-3-update-for-ims2019&#34;&gt;&lt;a id=&#34;IMS2019&#34;&gt;&lt;/a&gt;Version 3: Update for IMS2019&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#version-3-update-for-ims2019&#34;&gt;&lt;a id=&#34;IMS2019&#34;&gt;&lt;/a&gt;Version 3: Update for IMS2019&lt;/a&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#comparison-of-estimates&#34;&gt;Comparison of estimates&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#which-countries-are-most-affected-1&#34;&gt;Which countries are most affected?&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#impact-on-validation-exercise-1&#34;&gt;Impact on validation exercise&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#version-4-correct-for-serbia-montenegro-sudan-and-south-sudan-before-2005&#34;&gt;&lt;a id=&#34;SCGSUD&#34;&gt;&lt;/a&gt;Version 4: Correct for Serbia, Montenegro, Sudan and South Sudan before 2005&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#version-4-correct-for-serbia-montenegro-sudan-and-south-sudan-before-2005&#34;&gt;&lt;a id=&#34;SCGSUD&#34;&gt;&lt;/a&gt;Version 4: Correct for Serbia, Montenegro, Sudan and South Sudan before 2005&lt;/a&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#comparison-of-estimates-1&#34;&gt;Comparison of estimates&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#impact-on-validation-exercise-2&#34;&gt;Impact on validation exercise&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#version-5-update-for-ims2020&#34;&gt;&lt;a id=&#34;IMS2020&#34;&gt;&lt;/a&gt;Version 5: Update for IMS2020&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#version-5-update-for-ims2020&#34;&gt;&lt;a id=&#34;IMS2020&#34;&gt;&lt;/a&gt;Version 5: Update for IMS2020&lt;/a&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#comparison-of-estimates-2&#34;&gt;Comparison of estimates&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#impact-on-validation-exercise-3&#34;&gt;Impact on validation exercise&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
@@ -206,7 +211,7 @@ devtools::install_github(&amp;quot;guyabel/tidycat&amp;quot;)&lt;/code&gt;&lt;/p
 
 &lt;div id=&#34;updates&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Updates&lt;/h3&gt;
-&lt;p&gt;Since the paper has published I have produced four updates to reflect&lt;/p&gt;
+&lt;p&gt;Since the paper was published I have produced four updates to reflect&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;The latest United Nations demographic data released in WPP2019 (July 19, 2019)&lt;/li&gt;
 &lt;li&gt;The latest United Nations migrant stock data released in IMS2019 and IMS2020 (October 23, 2019 and February 1, 2021)&lt;/li&gt;

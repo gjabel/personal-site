@@ -24,7 +24,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### Updates
 
-Since the paper has published I have produced four updates to reflect
+Since the paper was published I have produced four updates to reflect
 
   - The latest United Nations demographic data released in WPP2019 (July 19, 2019)
   - The latest United Nations migrant stock data released in IMS2019 and IMS2020  (October 23, 2019 and February 1, 2021)
