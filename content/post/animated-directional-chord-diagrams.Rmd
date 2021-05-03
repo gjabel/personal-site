@@ -1,7 +1,7 @@
 ---
 title: "Animated Directional Chord Diagrams"
 author: "Guy Abel"
-date: "2018-04-18"
+date: '2018-04-18'
 tags:
 - R
 - migration
@@ -10,7 +10,7 @@ categories:
   - "r-bloggers"
 draft: false
 header:
-  image: "headers/flow-ani-cd100.png"
+  image: "headers/stocks-global-cd0.png"
 ---
 
 ```{r setup, include=FALSE}

@@ -38,7 +38,7 @@ In the second plot, I allow the sector axis to be specific to the regional total
  
 One important feature of international migrants are their relative rarity. Professor Hein de Haas visually illustrates this point neatly using a [pie chart](http://heindehaas.blogspot.com/2016/08/refugees-small-and-relatively-stable.html), where his focus is predominantly on refugees, but also clearly shows the small share of the global population that are living outside their country of birth (under 4%). This feature is completely missed in chord diagrams of migrants like the ones above, where there is no way to gauge the share of the migrant populations relative to the total population. 
 
-In the plot below I tried to illustrate the relative sizes of migrant populations using the lengths of the sector axis in the transitions between
+In the plot below I tried to illustrate the relative sizes of migrant populations using the lengths of the sector axis, transitioning between
 
   - The number of migrants (which is a combination of migrant living in the region and migrants born in the region living elsewhere) as in the plots above, and  
   - The total population of the region.

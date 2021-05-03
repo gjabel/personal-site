@@ -167,7 +167,7 @@ In the original paper, and updates described above, both Serbia and Montenegro, 
 
 The differences in geographic coverge of Sudan and Serbia in the migrant stock data has an impact on the flow estimates that are based on the differences in stocks. For example, the demographic accounting based methods were trying to calibrate changes in foreign born stocks (from zero in 1990 to zero in 1995 for example) in South Sudan and Montenegro with a non-zero net migration over the period. This was resolved in the background by some parts of the IPF code running until their default iteration limit rather than until convergence, where convergence was not feasible. I picked up on this when adding some new warning messages in the `ffs_demo()` function of the [migest](https://cran.r-project.org/web/packages/migest/index.html) package which should now alert users for non-convergence.
 
-To rectify this problem I have created a new version of the estimates that treat Serbia and Montenegro, and Sudan and South Sudan, as single countries before 2005. This reduces the number of countries in the earlier periods of the data to 198, whilst in the last two periods (2005-2010 and 2010-2015) there are still 200 countries, and the estimates are the same as in the previous update. I use the SCG and SUD country codes for Serbia and Montenegro and Sudan before 2005, and the four separate country codes after 2005 (SRB, MNE, SDN, SSD as in previous versions).
+To rectify this problem I have created a new version of the estimates that treat Serbia and Montenegro, and Sudan and South Sudan, as single countries before 2010-2015. This reduces the number of countries in the earlier periods of the data to 198, there is still 200 countries, and the estimates are the same as in the previous update. I use the SCG and SUD country codes for Serbia and Montenegro and Sudan before 2010-2015, and the four separate country codes during 2010-2015 and after (SRB, MNE, SDN, SSD as in previous versions).
 
 I have added a few plots below to once again give some summaries of the changes in the updated estimates to those in the paper and from the last update.
 
@@ -175,13 +175,13 @@ I have added a few plots below to once again give some summaries of the changes 
 
 The plot below shows the relationship between the bilateral flow estimates based on the last update based on IMS2019 and WPP2019 and the newer estimates with the correction for the four countries. 
 
-In all periods the estimates for 2005-2010 and 2010-2015 remain unchanged, hence all points are on the diagonal line. In earlier periods there are a small number of bilateral estimates from the rates and demographic accounting methods. For the demographic accounting methods this is due to the combining of data for the four countries allowing the IPF routines to fully converge. The biggest changes occur in estimates between African countries from the correction to Sudanese and South Sudanese born populations. For the rates method all estimates are revised from the change in the global migration flow total, obtained from the sum of net migration flows. 
+<!-- In all periods the estimates for 2005-2010 and 2010-2015 remain unchanged, hence all points are on the diagonal line. In earlier periods there are a small number of bilateral estimates from the rates and demographic accounting methods. For the demographic accounting methods this is due to the combining of data for the four countries allowing the IPF routines to fully converge. The biggest changes occur in estimates between African countries from the correction to Sudanese and South Sudanese born populations. For the rates method all estimates are revised from the change in the global migration flow total, obtained from the sum of net migration flows.  -->
 
-![ ](/img/sd2019/v4-compare.png)
+<!-- ![ ](/img/sd2019/v4-compare.png) -->
 
 ### Impact on validation exercise
 
-The impact of the correction for the four countries on the validation exercise is very minor. Below is an animated version of [Figure 4](https://www.nature.com/articles/s41597-019-0089-3#Fig4) in the paper, showing the correlations between the flow estimates and reported data for various migration measures, for the original estimates, the previous updates based on new WPP and IMS data and the new estimates with a correction for the four countries prior to 2005.
+The impact of the correction for the four countries on the validation exercise is very minor. Below is an animated version of [Figure 4](https://www.nature.com/articles/s41597-019-0089-3#Fig4) in the paper, showing the correlations between the flow estimates and reported data for various migration measures, for the original estimates, the previous updates based on new WPP and IMS data and the new estimates with a correction for the four countries prior to 2010-2015.
 
 ![ ](/img/sd2019/v4-val_all.gif)
 
