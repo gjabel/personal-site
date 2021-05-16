@@ -267,7 +267,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    3 min read
+    4 min read
   </span>
   
 
@@ -335,29 +335,105 @@
 
 <p>Note: you might have to right click, select show controls and hit play to start the animations depending on your browsers - right clicking can also allow you to access controls on the play back speed.</p>
 
-<video loop="loop" width="720" height="720" poster="/img/cd-stock-global/ims-abel-global.png" controls>
-  <source src="../../img/cd-stock-global/ims-abel-global.mp4" type="video/mp4" />
-</video>
+<style>
+.carousel-indicators {
+  bottom:-10px
+}
+
+.carousel {
+   margin-top:-40px;
+}
+
+.carousel-indicators > li,
+.carousel-indicators > li.active{
+    width: 200px;
+    height: 35px;
+    border-radius: 0;
+    border: solid 1px grey;
+    background: white;
+    text-indent: 0;
+}
+.carousel-indicators > li.active {
+    background: #4caf50;
+}
+</style>
+
+<p><div id="carousel_time" class="carousel slide">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel_time" data-slide-to="0" class="active">Areas</li>
+    <li data-target="#carousel_time" data-slide-to="1">Regions</li>
+  </ol>
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <video loop="loop" width="720" height="720" poster="/img/cd-stock-global/area-time-abel.png" controls>
+        <source src="../../img/cd-stock-global/area-time-abel.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <div class="item">
+      <video loop="loop" width="720" height="720" poster="/img/cd-stock-global/region-time-abel.png" controls>
+        <source src="../../img/cd-stock-global/region-time-abel.mp4" type="video/mp4" />
+      </video>
+    </div>
+  </div>
+</div>
+<br></p>
 
 <h2 id="a-id-sex-a-sex-differences-in-global-migrant-distribution-patterns"><a id="sex"></a> Sex differences in global migrant distribution patterns</h2>
 
 <p>The next two plots below show the differences between male and female global migrant distributions in 2020. In the first plot I keep the sector axis fixed at their maximums (over both sexes) making it easier to detect changes in the relative volume of a particular migrant corridor; for example the greater number of male migrants in West Asia and slightly more female migrants in North America.</p>
 
-<video loop="loop" width="720" height="720" poster="/img/cd-stock-global/ims-abel-sex1.png" controls>
-  <source src="../../img/cd-stock-global/ims-abel-sex1.mp4" type="video/mp4" />
-</video>
+<p><div id="carousel_sex1" class="carousel slide">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel_sex1" data-slide-to="0" class="active">Areas</li>
+    <li data-target="#carousel_sex1" data-slide-to="1">Regions</li>
+  </ol>
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <video loop="loop" width="720" height="720" controls>
+        <source src="../../img/cd-stock-global/area-sex1-abel.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <div class="item">
+      <video loop="loop" width="720" height="720" controls>
+        <source src="../../img/cd-stock-global/region-sex1-abel.mp4" type="video/mp4" />
+      </video>
+    </div>
+  </div>
+</div>
+<br></p>
 
 <p>In the second plot, I allow the sector axis to be specific to the regional totals. This (perhaps?) makes it easier to detect relative changes in the overall global patterns by sex.</p>
 
-<video loop="loop" width="720" height="720" poster="/img/cd-stock-global/ims-abel-sex2.png" controls>
-  <source src="../../img/cd-stock-global/ims-abel-sex2.mp4" type="video/mp4" />
-</video>
+<p><div id="carousel_sex2" class="carousel slide">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel_sex2" data-slide-to="0" class="active">Areas</li>
+    <li data-target="#carousel_sex2" data-slide-to="1">Regions</li>
+  </ol>
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <video loop="loop" width="720" height="720" controls>
+        <source src="../../img/cd-stock-global/area-sex2-abel.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <div class="item">
+      <video loop="loop" width="720" height="720" controls>
+        <source src="../../img/cd-stock-global/region-sex2-abel.mp4" type="video/mp4" />
+      </video>
+    </div>
+  </div>
+</div>
+<br></p>
 
 <h2 id="a-id-population-a-migrant-totals-relative-to-their-population-totals"><a id="population"></a> Migrant totals relative to their population totals.</h2>
 
-<p>One important feature of international migrants are their relative rarity. Professor Hein de Haas visually illustrates this point neatly using a <a href="http://heindehaas.blogspot.com/2016/08/refugees-small-and-relatively-stable.html" target="_blank">pie chart</a>, where his focus is predominantly on refugees, but also clearly shows the small share of the global population that are living outside their country of birth (under 4%). This feature is completely missed in chord diagrams of migrants like the ones above, where there is no way to gauge the share of the migrant populations relative to the total population.</p>
-
-<p>In the plot below I tried to illustrate the relative sizes of migrant populations using the lengths of the sector axis in the transitions between</p>
+<p>One important feature of international migrants are their relative rarity. Professor Hein de Haas visually illustrates this point neatly using a <a href="http://heindehaas.blogspot.com/2016/08/refugees-small-and-relatively-stable.html" target="_blank">pie chart</a>, where his focus is predominantly on refugees, but also clearly shows the small share of the global population that are living outside their country of birth (under 4%). This feature is completely missed in the migrant chord diagrams above, where there is no way to gauge the share of the migrant populations relative to the total population.
+In the plot below I tried to illustrate the relative sizes of migrant populations using the lengths of the sector axis, transitioning between</p>
 
 <ul>
 <li>The number of migrants (which is a combination of migrant living in the region and migrants born in the region living elsewhere) as in the plots above, and<br /></li>
@@ -367,9 +443,85 @@
 
 <p>The chord widths remain constant, fixed at the size of the bilateral migrant populations.</p>
 
-<video loop="loop" width="720" height="720" poster="/img/cd-stock-global/ims-abel-pop.png" controls>
-  <source src="../../img/cd-stock-global/ims-abel-pop.mp4" type="video/mp4" />
-</video>
+<p><div id="carousel_pop" class="carousel slide">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel_pop" data-slide-to="0" class="active">Areas</li>
+    <li data-target="#carousel_pop" data-slide-to="1">Regions</li>
+  </ol>
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <video loop="loop" width="720" height="720" controls>
+        <source src="../../img/cd-stock-global/area-pop-abel.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <div class="item">
+      <video loop="loop" width="720" height="720" controls>
+        <source src="../../img/cd-stock-global/region-pop-abel.mp4" type="video/mp4" />
+      </video>
+    </div>
+  </div>
+</div>
+<br></p>
+
+<h2 id="a-id-forced-a-migrant-populations-relative-to-refugee-populations"><a id="forced"></a> Migrant populations relative to refugee populations.</h2>
+
+<p>In the final plots I illustrate the relative sizes of forced migrant populations compared to the total migrant populations, transitioning the chords between</p>
+
+<ul>
+<li>The number of migrants from each origin and destination based on the UN IMS2020 stock data</li>
+<li>The number of forced migrants from each origin and destination based on data from <a href="https://www.unhcr.org/refugee-statistics/" target="_blank">UNHCR</a>
+<br /></li>
+</ul>
+
+<p>In the first version the sector axis remain constant, fixed at the size of the bilateral migrant populations in each region.</p>
+
+<p><div id="carousel_forced1" class="carousel slide">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel_forced1" data-slide-to="0" class="active">Areas</li>
+    <li data-target="#carousel_forced1" data-slide-to="1">Regions</li>
+  </ol>
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <video loop="loop" width="720" height="720" controls>
+        <source src="../../img/cd-stock-global/area-forced1-abel.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <div class="item">
+      <video loop="loop" width="720" height="720" controls>
+        <source src="../../img/cd-stock-global/region-forced1-abel.mp4" type="video/mp4" />
+      </video>
+    </div>
+  </div>
+</div>
+<br></p>
+
+<p>In the second plot the sector axis vary to match the type of migrants (all or forced) so show the relative differences in patterns.</p>
+
+<p><div id="carousel_forced2" class="carousel slide">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel_forced2" data-slide-to="0" class="active">Areas</li>
+    <li data-target="#carousel_forced2" data-slide-to="1">Regions</li>
+  </ol>
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <video loop="loop" width="720" height="720" controls>
+        <source src="../../img/cd-stock-global/area-forced2-abel.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <div class="item">
+      <video loop="loop" width="720" height="720" controls>
+        <source src="../../img/cd-stock-global/region-forced2-abel.mp4" type="video/mp4" />
+      </video>
+    </div>
+  </div>
+</div>
+<br></p>
 
 <h2 id="r-code">R Code</h2>
 

@@ -1,0 +1,53 @@
+---
+title: "Animated Sankey Plots of Global Migrant Populations"
+author: "Guy Abel"
+date: '2021-05-23'
+slug: [sankey-income]
+categories: []
+tags: []
+draft: true
+header:
+  caption: 'Global migrant populations by World Bank income groups'
+  image: 'headers/sankey-income.png'
+  preview: yes
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+<link href="/rmarkdown-libs/anchor-sections/anchor-sections.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/anchor-sections/anchor-sections.js"></script>
+
+
+<div id="background" class="section level2">
+<h2>Background</h2>
+<p>Sankey plots have been used to visualize bilateral migration many times. My favorite examples of Sankey plots for migration data tend to be when there are only few regions or countries. As the number of regions or countries increases the plot become more cumbersome, where labels for the smaller areas get too small and the plotting area becomes a very long rectangle making it awkward to fit on paper or view on the screen. In such cases I prefer <a href="https://guyabel.com/post/global-migrant-stocks/">chord diagrams</a></p>
+<p>The recent highlights <a href="https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2020_international_migration_highlights.pdf">document</a> for the UN international migration stock data contained a couple of sankey plots for the data in 2020. In this post I have created animated versions of one of the plots in the report to show changes in migrant distributions between 1990 and 2020 by World Bank income groups. I am using the destination and origin migrant stock data of the UN that can found online <a href="https://www.un.org/development/desa/pd/content/international-migrant-stock">here</a> - see the data links on the right hand side.</p>
+</div>
+<div id="r-code" class="section level2">
+<h2>R Code</h2>
+<p>Commented code to create the animated plots below are in a Gist <a href="https://gist.github.com/guyabel/f7c844f18c4d11916a6ee000532d0e8e">here</a>, which you can run in R using the following…</p>
+<pre class="r"><code>library(devtools)
+source_gist(&quot;https://gist.github.com/guyabel/f7c844f18c4d11916a6ee000532d0e8e&quot;)</code></pre>
+<p>… so long as you have installed all packages used in the script.</p>
+<p>The first part of the code imports the data into R, extracts the rows for the stock data by the World Bank income groups and creates a tweened data set for each frame of the animation.</p>
+<p>The second part of the code creates the animated plot file using ggplot and <code>geom_parallel_sets()</code> in <a href="https://ggforce.data-imaginist.com/reference/geom_parallel_sets.html">ggforce</a>. There are a few packages in R that have functions for sankey plots, for example <a href="https://github.com/gaborcsardi/sankey#readme">sankey</a>, <a href="https://cran.r-project.org/web/packages/PantaRhei/vignettes/panta-rhei.html">PantaRhei</a>, <a href="http://christophergandrud.github.io/networkD3/#sankey">networkD3</a>, <a href="https://cran.rstudio.com/web/packages/sankeywheel/vignettes/sankeywheel.html">sankeywheel</a>, <a href="https://plotly.com/r/sankey-diagram/">plotly</a> and <a href="https://github.com/davidsjoberg/ggsankey">ggsankey</a>. The <a href="https://corybrunson.github.io/ggalluvial/">ggalluvial</a> packages also produces sankey type plots, but without spaces between each sector. I used ggforce because it is pretty easy to tweak the non-sankey parts of the plot using ggplot functions, and I had hoped that it would play well with gganimate - which it didn’t, hence the use of tweenr - but perhaps <a href="https://github.com/thomasp85/ggforce/issues/235">one day</a> it will given Thomas Lin Pedersen developed both the gganimate and ggforce packages.</p>
+</div>
+<div id="plots" class="section level2">
+<h2>Plots</h2>
+<p>The first animated plot shows the changes over time where the y-axis increases as the migrant populations grow larger. It shows the evolution in the relative distributions of the origin, destination and the linking migrant corridors, in particular the relative growth of migrants in high income countries.</p>
+<video loop="loop" width="720" height="720" poster="/img/sankey-income/abel-free.png" controls>
+<source src="/img/sankey-income/abel-free.mp4" type="video/mp4" />
+</video>
+<p>Note: you might have to right click, select show controls and hit play to start the animations depending on your browsers - right clicking can also allow you to access controls on the play back speed and save the video if you want to use it elsewhere.</p>
+<p>The second animated plot shows the changes over time where the y-axis is fixed to its maximum level. The adjustment allows the sankey to grow into the plot space to see more clearly the changes in the overall levels of migrant populations.</p>
+<video loop="loop" width="720" height="720" poster="/img/sankey-income/abel-fixed.png" controls>
+<source src="/img/sankey-income/abel-fixed.mp4" type="video/mp4" />
+</video>
+<p>The final two plots are the same as the first and second, but with an additional origin category for unknown place of birth. The values for the stock of migrants with unknown origins living in each World Bank income group are not in the main data frame in the UN excel sheet, but are in the regional aggregate sheets for each period. As a result the data importing and manipulation takes a bit of extra work (it is commented out in the Gist R script), but the plots are more complete, where the totals of the sectors sum to the global estimate of the UN at each time point.</p>
+<video loop="loop" width="720" height="720" poster="/img/sankey-income/abel-free-unknown.png" controls>
+<source src="/img/sankey-income/abel-free-unknown.mp4" type="video/mp4" />
+</video>
+<p>… and with a fixed y-axis …
+<video loop="loop" width="720" height="720" poster="/img/sankey-income/abel-fixed-unknown.png" controls>
+<source src="/img/sankey-income/abel-fixed-unknown.mp4" type="video/mp4" />
+</video></p>
+</div>
