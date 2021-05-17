@@ -12,14 +12,14 @@ subtitle = ""
 weight = 20
 
 # Number of publications to list.
-count = 10
+count = 5
 
 # List format.
 #   0 = Simple
 #   1 = Detailed
 #   2 = APA
 #   3 = MLA
-list_format = 1
+list_format = 2
 
 # Filter by publication type.
 # -1: Any

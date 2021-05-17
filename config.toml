@@ -11,7 +11,7 @@ title = "Guy Abel"
 
 # Your copyright notice - appears in site footer.
 # To display a copyright symbol, type `&copy;`.
-copyright = "&copy; 2020 &middot; Selected posts also on <a href=\"https://r-bloggers.com/\">R-bloggers</a>"
+copyright = "&copy; 2021 &middot; Selected posts also on <a href=\"https://r-bloggers.com/\">R-bloggers</a>"
 
 theme = "hugo-academic"
 enableEmoji = true
@@ -280,21 +280,21 @@ defaultContentLanguageInSubdir = false
   url = "#posts"
   weight = 3
 
-[[menu.main]]
-  name = "Projects"
-  url = "#projects"
-  weight = 4
+# [[menu.main]]
+#  name = "Projects"
+#  url = "#projects"
+#  weight = 4
 
 [[menu.main]]
   name = "Teaching"
   url = "#teaching"
-  weight = 5
+  weight = 4
 
 [[menu.main]]
   name = "Contact"
   url = "#contact"
-  weight = 6
-
+  weight = 5
+  
 # Taxonomies.
 [taxonomies]
   tag = "tags"

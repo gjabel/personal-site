@@ -5,9 +5,45 @@
     <description>Recent content in 2 on Guy Abel</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
-    <copyright>&amp;copy; 2020 &amp;middot; Selected posts also on &lt;a href=&#34;https://r-bloggers.com/&#34;&gt;R-bloggers&lt;/a&gt;</copyright>
-    <lastBuildDate>Mon, 17 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <copyright>&amp;copy; 2021 &amp;middot; Selected posts also on &lt;a href=&#34;https://r-bloggers.com/&#34;&gt;R-bloggers&lt;/a&gt;</copyright>
+    <lastBuildDate>Tue, 16 Feb 2021 00:00:00 +0000</lastBuildDate>
     <atom:link href="/publication_types/2/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>The form and evolution of international migration networks</title>
+      <link>https://guyabel.com/publication/global-flow-networks/</link>
+      <pubDate>Tue, 16 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://guyabel.com/publication/global-flow-networks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Analyzing the Effect of Time in Migration Measurement Using Geo-referenced Digital Trace Data</title>
+      <link>https://guyabel.com/publication/digital-migration-measures/</link>
+      <pubDate>Mon, 01 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://guyabel.com/publication/digital-migration-measures/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>International remittance flows and the economic and social consequences of COVID-19</title>
+      <link>https://guyabel.com/publication/covid-remittance/</link>
+      <pubDate>Thu, 28 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://guyabel.com/publication/covid-remittance/</guid>
+      <description>
+
+&lt;h3 id=&#34;animated-version&#34;&gt;Animated Version&lt;/h3&gt;
+
+&lt;p&gt;Below is an animated version of the plot in the paper for remittance since 2010 based on the World Bank &lt;a href=&#34;https://www.worldbank.org/en/topic/migrationremittancesdiasporaissues/brief/migration-remittances-data&#34; target=&#34;_blank&#34;&gt;data&lt;/a&gt;&lt;/p&gt;
+
+&lt;video loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34; controls&gt;
+  &lt;source src=&#34;../../img/abel-region-remit.mp4&#34; type=&#34;video/mp4&#34; /&gt;
+&lt;/video&gt;
+</description>
+    </item>
     
     <item>
       <title>Bilateral international migration flow estimates for 200 countries</title>
@@ -184,6 +220,15 @@
 
 &lt;p&gt;Please contact me if cannot access the full paper and would like a copy.&lt;/p&gt;
 </description>
+    </item>
+    
+    <item>
+      <title>Bowling together: scientific collaboration networks of demographers at European Population Conferences</title>
+      <link>https://guyabel.com/publication/epc-collabs/</link>
+      <pubDate>Mon, 18 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://guyabel.com/publication/epc-collabs/</guid>
+      <description></description>
     </item>
     
     <item>

@@ -5,7 +5,7 @@
     <description>Recent content in Posts on Guy Abel</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
-    <copyright>&amp;copy; 2020 &amp;middot; Selected posts also on &lt;a href=&#34;https://r-bloggers.com/&#34;&gt;R-bloggers&lt;/a&gt;</copyright>
+    <copyright>&amp;copy; 2021 &amp;middot; Selected posts also on &lt;a href=&#34;https://r-bloggers.com/&#34;&gt;R-bloggers&lt;/a&gt;</copyright>
     <lastBuildDate>Wed, 08 Jul 2020 00:00:00 +0000</lastBuildDate>
     <atom:link href="/post/" rel="self" type="application/rss+xml" />
     
@@ -157,12 +157,12 @@ devtools::install_github(&amp;quot;guyabel/tidycat&amp;quot;)&lt;/code&gt;&lt;/p
   &lt;!-- Wrapper for slides --&gt;
   &lt;div class=&#34;carousel-inner&#34;&gt;
     &lt;div class=&#34;item active&#34;&gt;
-      &lt;video loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34; poster=&#34;/img/cd-stock-global/area-time-abel.png&#34; controls&gt;
+      &lt;video loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34; controls&gt;
         &lt;source src=&#34;../img/cd-stock-global/area-time-abel.mp4&#34; type=&#34;video/mp4&#34; /&gt;
       &lt;/video&gt;
     &lt;/div&gt;
     &lt;div class=&#34;item&#34;&gt;
-      &lt;video loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34; poster=&#34;/img/cd-stock-global/region-time-abel.png&#34; controls&gt;
+      &lt;video loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34; controls&gt;
         &lt;source src=&#34;../img/cd-stock-global/region-time-abel.mp4&#34; type=&#34;video/mp4&#34; /&gt;
       &lt;/video&gt;
     &lt;/div&gt;

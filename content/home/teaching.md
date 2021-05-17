@@ -17,5 +17,6 @@ weight = 60
 
 Currently Teaching at Shanghai University:
 
-* **3XS371026 Data Science with R**, Semester 1, 2019-20
-* **3XS371022 Statistical Modelling with R**, Semester 3, 2019-20
+* **2800Y014 International Migration**, Semester 1 & Semester 2
+* **3XS371026 Data Science with R**, Semester 1
+* **3XS371022 Statistical Modelling with R**, Semester 2

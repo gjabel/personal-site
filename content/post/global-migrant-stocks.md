@@ -49,12 +49,12 @@ Note: you might have to right click, select show controls and hit play to start 
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
     <div class="item active">
-      <video loop="loop" width="720" height="720" poster="/img/cd-stock-global/area-time-abel.png" controls>
+      <video loop="loop" width="720" height="720" controls>
         <source src="/img/cd-stock-global/area-time-abel.mp4" type="video/mp4" />
       </video>
     </div>
     <div class="item">
-      <video loop="loop" width="720" height="720" poster="/img/cd-stock-global/region-time-abel.png" controls>
+      <video loop="loop" width="720" height="720" controls>
         <source src="/img/cd-stock-global/region-time-abel.mp4" type="video/mp4" />
       </video>
     </div>
