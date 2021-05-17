@@ -90,7 +90,7 @@
     
     <url>
     
-      <loc>https://guyabel.com/categories/r/</loc>
+      <loc>https://guyabel.com/tags/r/</loc>
       <lastmod>2020-07-08T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -100,7 +100,7 @@
     
     <url>
     
-      <loc>https://guyabel.com/tags/r/</loc>
+      <loc>https://guyabel.com/categories/r/</loc>
       <lastmod>2020-07-08T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -161,6 +161,15 @@
     
       <loc>https://guyabel.com/publication/covid-remittance/</loc>
       <lastmod>2020-05-28T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://guyabel.com/publication/asian-migration-drivers/</loc>
+      <lastmod>2019-09-25T00:00:00+00:00</lastmod>
     </url>
     
   
