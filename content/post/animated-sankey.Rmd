@@ -44,13 +44,13 @@ The first animated plot shows the changes over time where the y-axis increases a
 }
 
 .carousel {
-   margin-top:-40px;
+   margin-top:-1%;
 }
 
 .carousel-indicators > li,
 .carousel-indicators > li.active{
-    width: 200px;
-    height: 35px;
+    width: 40%;
+    height: 2%;
     border-radius: 0;
     border: solid 1px grey;
     background: white;
@@ -60,6 +60,7 @@ The first animated plot shows the changes over time where the y-axis increases a
     background: #4caf50;
 }
 </style>
+
 <div id="carousel_free" class="carousel slide">
   <!-- Indicators -->
   <ol class="carousel-indicators">

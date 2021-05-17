@@ -29,13 +29,13 @@
 }
 
 .carousel {
-   margin-top:-40px;
+   margin-top:-1%;
 }
 
 .carousel-indicators &gt; li,
 .carousel-indicators &gt; li.active{
-    width: 200px;
-    height: 35px;
+    width: 40%;
+    height: 2%;
     border-radius: 0;
     border: solid 1px grey;
     background: white;

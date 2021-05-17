@@ -22,13 +22,13 @@ Note: you might have to right click, select show controls and hit play to start 
 }
 
 .carousel {
-   margin-top:-40px;
+   margin-top:-1%;
 }
 
 .carousel-indicators > li,
 .carousel-indicators > li.active{
-    width: 200px;
-    height: 35px;
+    width: 40%;
+    height: 2%;
     border-radius: 0;
     border: solid 1px grey;
     background: white;
@@ -38,7 +38,6 @@ Note: you might have to right click, select show controls and hit play to start 
     background: #4caf50;
 }
 </style>
-
 
 <div id="carousel_time" class="carousel slide">
   <!-- Indicators -->
