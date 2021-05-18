@@ -15,7 +15,7 @@ weight = 60
 
 +++
 
-Currently Teaching at Shanghai University:
+Currently teaching at Shanghai University:
 
 * **2800Y014 International Migration**, Semester 1 & Semester 2
 * **3XS371026 Data Science with R**, Semester 1
