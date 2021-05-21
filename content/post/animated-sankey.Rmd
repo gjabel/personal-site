@@ -7,7 +7,6 @@ tags: ["R"]
 categories: 
   - R
   - "r-bloggers"
-draft: false
 header:
   caption: 'Global migrant populations by World Bank income groups'
   image: 'headers/sankey-income.png'
