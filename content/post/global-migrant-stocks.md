@@ -176,7 +176,7 @@ In the first version the sector axis remain constant, fixed at the size of the b
 </div>
 <br>
 
-In the second plot the sector axis vary to match the type of migrants (all or forced) so show the relative differences in patterns.
+In the second plot the sector axis vary to match the type of migrants (all migrants or forced migrants) so show the relative differences in patterns.
 
 <div id="carousel_forced2" class="carousel slide">
   <!-- Indicators -->
