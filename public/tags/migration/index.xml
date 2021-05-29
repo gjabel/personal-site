@@ -1,7 +1,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>migration on Guy Abel</title>
-    <link>https://guyabel.com/tags/migration/</link>
+    <link>/tags/migration/</link>
     <description>Recent content in migration on Guy Abel</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
@@ -11,10 +11,10 @@
     
     <item>
       <title>Global Migrant Stock Chord Diagrams</title>
-      <link>https://guyabel.com/post/global-migrant-stocks/</link>
+      <link>/post/global-migrant-stocks/</link>
       <pubDate>Sat, 20 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://guyabel.com/post/global-migrant-stocks/</guid>
+      <guid>/post/global-migrant-stocks/</guid>
       <description>
 
 &lt;p&gt;Over the last year or so I have been playing around with different ways of showing changing global bilateral migrant stocks, adapting the animation code I created for the plots for region to region flows in this estimation &lt;a href=&#34;https://www.nature.com/articles/s41597-019-0089-3&#34; target=&#34;_blank&#34;&gt;paper&lt;/a&gt;. I am putting them online here in case they are of interest to anyone else. Feel free to download the plots using right click over the animation and then &lt;code&gt;Save Video as&lt;/code&gt; or from &lt;a href=&#34;https://github.com/guyabel/personal-site/tree/master/static/img/cd-stock-global&#34; target=&#34;_blank&#34;&gt;Github&lt;/a&gt;.&lt;/p&gt;
@@ -219,11 +219,12 @@ In the plot below I tried to illustrate the relative sizes of migrant population
     
     <item>
       <title>Chord Diagram of Chinese Internal Migration Flows</title>
-      <link>https://guyabel.com/post/chinese-migration-chord-diagram/</link>
+      <link>/post/chinese-migration-chord-diagram/</link>
       <pubDate>Mon, 04 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://guyabel.com/post/chinese-migration-chord-diagram/</guid>
+      <guid>/post/chinese-migration-chord-diagram/</guid>
       <description>
+&lt;script src=&#34;../../rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;We have had a number of requests for the R code to replicate the plots in our &lt;a href=&#34;https://guyabel.com/publication/china-internal-migration-2010-15/&#34;&gt;paper&lt;/a&gt; on internal migration in China. The code below will produce a similar looking plot, but I have taken out some of the arguments that were very specific to our plot that will not replicate well for other data.&lt;/p&gt;
@@ -231,14 +232,15 @@ In the plot below I tried to illustrate the relative sizes of migrant population
 &lt;h3&gt;Data&lt;/h3&gt;
 &lt;p&gt;The code is based on two data sets:&lt;/p&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;Bilateral flow data with three columns only (origin, destination and flow), see &lt;a href=&#34;https://github.com/guyabel/china-chord/blob/master/flow.csv&#34;&gt;here&lt;/a&gt; for the file used below&lt;/li&gt;
-&lt;li&gt;Region details used for plotting, see &lt;a href=&#34;https://github.com/guyabel/china-chord/blob/master/region.csv&#34;&gt;here&lt;/a&gt; for the file used below&lt;/li&gt;
+&lt;li&gt;Bilateral flow data with three columns only (origin, destination and flow), see &lt;a href=&#34;https://gist.github.com/guyabel/c24d990abc2c692f2b63747ee42909eb&#34;&gt;here&lt;/a&gt; for the file used below&lt;/li&gt;
+&lt;li&gt;Region details used for plotting, see &lt;a href=&#34;https://gist.github.com/guyabel/2f52e1593ad951800d83530a58ce0079&#34;&gt;here&lt;/a&gt; for the file used below&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Note, the names in the region data are the same as the ones used in the origin and destination data.&lt;/p&gt;
 &lt;p&gt;We can read in the data using &lt;code&gt;read_csv()&lt;/code&gt; in the readr package&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)
 
-d1 &amp;lt;- read_csv(&amp;quot;https://raw.githubusercontent.com/gjabel/china-chord/master/flow.csv&amp;quot;) 
+d1 &amp;lt;- read_csv(&amp;quot;https://gist.githubusercontent.com/guyabel/c24d990abc2c692f2b63747ee42909eb/raw/6b255edee7e01ca31b856152d18ae10ad50badd5/china_flow_2010_2015.csv&amp;quot;)
+
 d1 &amp;lt;- mutate(d1, flow = flow/1e6)
 d1&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 961 x 3
@@ -255,7 +257,7 @@ d1&lt;/code&gt;&lt;/pre&gt;
 ##  9 Shanghai       Beijing 0.0266
 ## 10 Jiangsu        Beijing 0.111 
 ## # ... with 951 more rows&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;d2 &amp;lt;- read_csv(&amp;quot;https://raw.githubusercontent.com/gjabel/china-chord/master/region.csv&amp;quot;)
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;d2 &amp;lt;- read_csv(&amp;quot;https://gist.githubusercontent.com/guyabel/2f52e1593ad951800d83530a58ce0079/raw/165843fdd4afc61e17cd7658563e573c1e74fb57/china_region_details.csv&amp;quot;)
 d2&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 31 x 6
 ##    name      region order colour    gap name_zh
@@ -341,10 +343,10 @@ image_write(image = p, path = &amp;quot;figure1.png&amp;quot;)&lt;/code&gt;&lt;/
     
     <item>
       <title>Regional Migrant Stock Chord Diagrams</title>
-      <link>https://guyabel.com/post/migrant-stock-chord-digrams/</link>
+      <link>/post/migrant-stock-chord-digrams/</link>
       <pubDate>Wed, 14 Nov 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://guyabel.com/post/migrant-stock-chord-digrams/</guid>
+      <guid>/post/migrant-stock-chord-digrams/</guid>
       <description>&lt;p&gt;During the last few months I have given some introductory talks on international migration in Asia and Europe. I had a couple of requests to share the animated chord diagrams that I created for others to use in their teaching materials.  These are below, along with some extra plots for Africa, the Americas (Northern, Central and Southern America as well as the Caribbean) and Oceania. Feel free to download the plots using right click over the animation and then &lt;code&gt;Save Video as&lt;/code&gt; or from &lt;a href=&#34;https://github.com/guyabel/personal-site/tree/master/static/img/cd-stock-region&#34; target=&#34;_blank&#34;&gt;Github&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;The chords in the diagrams represent the connection between the places of birth (at the base of the chord) and places of residence (at the arrow head of the chord). The width of based of the chords correspond to the size of the migrant population in millions. Chords are ordered relative to their size, with the largest migrant stocks plotted at the beginning of the country segments. The ordering of chords jumps around over time as the relative rankings of the largest foreign-born populations change in each country. Values for the migrant population sizes are from the &lt;del&gt;2017&lt;/del&gt; &lt;del&gt;2019&lt;/del&gt; 2020 revision of the United Nations DESA &lt;a href=&#34;https://www.un.org/development/desa/pd/content/international-migrant-stock&#34; target=&#34;_blank&#34;&gt;International Migrant Stock Data&lt;/a&gt;.&lt;/p&gt;
@@ -396,10 +398,10 @@ image_write(image = p, path = &amp;quot;figure1.png&amp;quot;)&lt;/code&gt;&lt;/
     
     <item>
       <title>Animated Directional Chord Diagrams</title>
-      <link>https://guyabel.com/post/animated-directional-chord-diagrams/</link>
+      <link>/post/animated-directional-chord-diagrams/</link>
       <pubDate>Wed, 18 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://guyabel.com/post/animated-directional-chord-diagrams/</guid>
+      <guid>/post/animated-directional-chord-diagrams/</guid>
       <description>
 &lt;link href=&#34;../../rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
 &lt;script src=&#34;../../rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
@@ -661,28 +663,28 @@ reg_max&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>ARDI International Migration Pillar</title>
-      <link>https://guyabel.com/project/adri-pillar/</link>
+      <link>/project/adri-pillar/</link>
       <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://guyabel.com/project/adri-pillar/</guid>
+      <guid>/project/adri-pillar/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Combining Migration Data</title>
-      <link>https://guyabel.com/project/combining-migration-data/</link>
+      <link>/project/combining-migration-data/</link>
       <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://guyabel.com/project/combining-migration-data/</guid>
+      <guid>/project/combining-migration-data/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Global Migration Predictions</title>
-      <link>https://guyabel.com/project/global-migration-prediction/</link>
+      <link>/project/global-migration-prediction/</link>
       <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://guyabel.com/project/global-migration-prediction/</guid>
+      <guid>/project/global-migration-prediction/</guid>
       <description></description>
     </item>
     

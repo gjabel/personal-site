@@ -1,7 +1,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Content tagged as &#39;Academic&#39; on Guy Abel</title>
-    <link>https://guyabel.com/tags/academic/</link>
+    <link>/tags/academic/</link>
     <description>Recent content in Content tagged as &#39;Academic&#39; on Guy Abel</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>

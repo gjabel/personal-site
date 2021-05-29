@@ -19,8 +19,8 @@ We have had a number of requests for the R code to replicate the plots in our [p
 
 The code is based on two data sets:
 
-1. Bilateral flow data with three columns only (origin, destination and flow), see [here](https://github.com/guyabel/china-chord/blob/master/flow.csv) for the file used below
-2. Region details used for plotting, see [here](https://github.com/guyabel/china-chord/blob/master/region.csv) for the file used below
+1. Bilateral flow data with three columns only (origin, destination and flow), see [here](https://gist.github.com/guyabel/c24d990abc2c692f2b63747ee42909eb) for the file used below
+2. Region details used for plotting, see [here](https://gist.github.com/guyabel/2f52e1593ad951800d83530a58ce0079) for the file used below
 
 Note, the names in the region data are the same as the ones used in the origin and destination data. 
 
@@ -28,11 +28,12 @@ We can read in the data using `read_csv()` in the readr package
 ```{r, message = FALSE, warning = FALSE}
 library(tidyverse)
 
-d1 <- read_csv("https://raw.githubusercontent.com/gjabel/china-chord/master/flow.csv") 
+d1 <- read_csv("https://gist.githubusercontent.com/guyabel/c24d990abc2c692f2b63747ee42909eb/raw/6b255edee7e01ca31b856152d18ae10ad50badd5/china_flow_2010_2015.csv")
+
 d1 <- mutate(d1, flow = flow/1e6)
 d1
 
-d2 <- read_csv("https://raw.githubusercontent.com/gjabel/china-chord/master/region.csv")
+d2 <- read_csv("https://gist.githubusercontent.com/guyabel/2f52e1593ad951800d83530a58ce0079/raw/165843fdd4afc61e17cd7658563e573c1e74fb57/china_region_details.csv")
 d2
 ```
 

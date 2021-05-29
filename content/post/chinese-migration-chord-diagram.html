@@ -9,6 +9,7 @@ header:
   image: "headers/chinamigvis1.png"
 ---
 
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
 
 
 <p>We have had a number of requests for the R code to replicate the plots in our <a href="https://guyabel.com/publication/china-internal-migration-2010-15/">paper</a> on internal migration in China. The code below will produce a similar looking plot, but I have taken out some of the arguments that were very specific to our plot that will not replicate well for other data.</p>
@@ -16,14 +17,15 @@ header:
 <h3>Data</h3>
 <p>The code is based on two data sets:</p>
 <ol style="list-style-type: decimal">
-<li>Bilateral flow data with three columns only (origin, destination and flow), see <a href="https://github.com/guyabel/china-chord/blob/master/flow.csv">here</a> for the file used below</li>
-<li>Region details used for plotting, see <a href="https://github.com/guyabel/china-chord/blob/master/region.csv">here</a> for the file used below</li>
+<li>Bilateral flow data with three columns only (origin, destination and flow), see <a href="https://gist.github.com/guyabel/c24d990abc2c692f2b63747ee42909eb">here</a> for the file used below</li>
+<li>Region details used for plotting, see <a href="https://gist.github.com/guyabel/2f52e1593ad951800d83530a58ce0079">here</a> for the file used below</li>
 </ol>
 <p>Note, the names in the region data are the same as the ones used in the origin and destination data.</p>
 <p>We can read in the data using <code>read_csv()</code> in the readr package</p>
 <pre class="r"><code>library(tidyverse)
 
-d1 &lt;- read_csv(&quot;https://raw.githubusercontent.com/gjabel/china-chord/master/flow.csv&quot;) 
+d1 &lt;- read_csv(&quot;https://gist.githubusercontent.com/guyabel/c24d990abc2c692f2b63747ee42909eb/raw/6b255edee7e01ca31b856152d18ae10ad50badd5/china_flow_2010_2015.csv&quot;)
+
 d1 &lt;- mutate(d1, flow = flow/1e6)
 d1</code></pre>
 <pre><code>## # A tibble: 961 x 3
@@ -40,7 +42,7 @@ d1</code></pre>
 ##  9 Shanghai       Beijing 0.0266
 ## 10 Jiangsu        Beijing 0.111 
 ## # ... with 951 more rows</code></pre>
-<pre class="r"><code>d2 &lt;- read_csv(&quot;https://raw.githubusercontent.com/gjabel/china-chord/master/region.csv&quot;)
+<pre class="r"><code>d2 &lt;- read_csv(&quot;https://gist.githubusercontent.com/guyabel/2f52e1593ad951800d83530a58ce0079/raw/165843fdd4afc61e17cd7658563e573c1e74fb57/china_region_details.csv&quot;)
 d2</code></pre>
 <pre><code>## # A tibble: 31 x 6
 ##    name      region order colour    gap name_zh
