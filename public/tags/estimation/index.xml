@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>estimation on Guy Abel</title>
@@ -6,16 +7,14 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
     <copyright>&amp;copy; 2021 &amp;middot; Selected posts also on &lt;a href=&#34;https://r-bloggers.com/&#34;&gt;R-bloggers&lt;/a&gt;</copyright>
-    <lastBuildDate>Thu, 01 Feb 2018 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/tags/estimation/" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Thu, 01 Feb 2018 00:00:00 +0000</lastBuildDate><atom:link href="/tags/estimation/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ARDI International Migration Pillar</title>
       <link>/project/adri-pillar/</link>
       <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
       
       <guid>/project/adri-pillar/</guid>
-      <description></description>
+      <description>Exploring international migration patterns for the Globe, Asia and Shanghai.</description>
     </item>
     
     <item>
@@ -24,7 +23,7 @@
       <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
       
       <guid>/project/combining-migration-data/</guid>
-      <description></description>
+      <description>Combining traditional and emerging big data sources to model population. Funded by Der Jubiläumsfonds der Stadt Wien für die Österreichische Akademie der Wissenschaften.</description>
     </item>
     
   </channel>

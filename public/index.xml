@@ -1,13 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Guy Abel on Guy Abel</title>
+    <title>Guy Abel</title>
     <link>/</link>
-    <description>Recent content in Guy Abel on Guy Abel</description>
+    <description>Recent content on Guy Abel</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
     <copyright>&amp;copy; 2021 &amp;middot; Selected posts also on &lt;a href=&#34;https://r-bloggers.com/&#34;&gt;R-bloggers&lt;/a&gt;</copyright>
-    <lastBuildDate>Fri, 21 May 2021 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 21 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>/home/about/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/home/about/</guid>
+      <description>Biography I am an applied statistician based at the Asian Demographic Research Institute and IIASA. I am also a Professor in the School of Sociology and Political Science at Shanghai University.
+Previously I worked at the Vienna Institute of Demography, the ESRC Centre for Population Change and S3RI at the University of Southampton.
+My day-to-day research covers estimating migration and applying statistical methods to better forecast components of population change. This website contains posts mainly related to my research, including some information on my publications and use of R.</description>
+    </item>
+    
+    <item>
+      <title>Academic</title>
+      <link>/home/hero/</link>
+      <pubDate>Sun, 15 Oct 2017 00:00:00 +0800</pubDate>
+      
+      <guid>/home/hero/</guid>
+      <description>The highly flexible website framework for Hugo with an extensible plugin mechanism. Create a beautifully simple site in under 10 minutes 🚀 Latest release</description>
+    </item>
+    
+    <item>
+      <title>Selected Publications</title>
+      <link>/home/publications_selected/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0800</pubDate>
+      
+      <guid>/home/publications_selected/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Recent Publications</title>
+      <link>/home/publications/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0800</pubDate>
+      
+      <guid>/home/publications/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Recent Posts</title>
+      <link>/home/posts/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/home/posts/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Recent &amp; Upcoming Talks</title>
+      <link>/home/talks/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/home/talks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Projects</title>
+      <link>/home/projects/</link>
+      <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/home/projects/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Teaching</title>
+      <link>/home/teaching/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/home/teaching/</guid>
+      <description>Currently teaching at Shanghai University:
+ 2800Y014 International Migration, Semester 2 3XS371026 Data Science with R, Semester 1 3XS371022 Statistical Modelling with R, Semester 2  </description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>/home/contact/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/home/contact/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Animated Sankey Plots of Global Migrant Populations</title>
@@ -15,106 +98,7 @@
       <pubDate>Fri, 21 May 2021 00:00:00 +0000</pubDate>
       
       <guid>/post/animated-sankey/</guid>
-      <description>
-&lt;script src=&#34;./rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;./rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;./rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
-
-
-&lt;div id=&#34;background&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Background&lt;/h2&gt;
-&lt;p&gt;Sankey plots have been used to visualize bilateral migration many times. My favorite examples of Sankey plots for migration data tend to be when there are only few regions or countries. As the number of regions or countries increases the plot become more cumbersome, where labels for the smaller areas get too small and the plotting area becomes a very long rectangle making it awkward to fit on paper or view on the screen. In such cases I prefer &lt;a href=&#34;https://guyabel.com/post/global-migrant-stocks/&#34;&gt;chord diagrams&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;The recent highlights &lt;a href=&#34;https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2020_international_migration_highlights.pdf&#34;&gt;document&lt;/a&gt; for the UN international migration stock data contained a couple of Sankey plots for the data in 2020. In this post I have created animated versions of one of the plots in the report to show changes in migrant distributions between 1990 and 2020 by World Bank income groups. I am using the destination and origin migrant stock data of the UN that can found online &lt;a href=&#34;https://www.un.org/development/desa/pd/content/international-migrant-stock&#34;&gt;here&lt;/a&gt; - see the data links on the right hand side.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;r-code&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;R Code&lt;/h2&gt;
-&lt;p&gt;Commented code to create the animated plots below are in a Gist &lt;a href=&#34;https://gist.github.com/guyabel/f7c844f18c4d11916a6ee000532d0e8e&#34;&gt;here&lt;/a&gt;, which you can run in R using the following…&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(devtools)
-source_gist(&amp;quot;https://gist.github.com/guyabel/f7c844f18c4d11916a6ee000532d0e8e&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;…so long as you have installed all packages used in the script. You might also need to edit the &lt;code&gt;saveVideo()&lt;/code&gt; function for the location of &lt;code&gt;ffmpeg.exe&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;The first part of the code imports the data into R, extracts the rows for the stock data by the World Bank income groups and creates a tweened data set for each frame of the animation.&lt;/p&gt;
-&lt;p&gt;The second part of the code creates the animated plot file using ggplot and &lt;code&gt;geom_parallel_sets()&lt;/code&gt; in &lt;a href=&#34;https://ggforce.data-imaginist.com/reference/geom_parallel_sets.html&#34;&gt;ggforce&lt;/a&gt;. There are a few packages in R that have functions for Sankey plots, for example &lt;a href=&#34;https://github.com/gaborcsardi/sankey#readme&#34;&gt;sankey&lt;/a&gt;, &lt;a href=&#34;https://cran.r-project.org/web/packages/PantaRhei/vignettes/panta-rhei.html&#34;&gt;PantaRhei&lt;/a&gt;, &lt;a href=&#34;http://christophergandrud.github.io/networkD3/#sankey&#34;&gt;networkD3&lt;/a&gt;, &lt;a href=&#34;https://cran.rstudio.com/web/packages/sankeywheel/vignettes/sankeywheel.html&#34;&gt;sankeywheel&lt;/a&gt;, &lt;a href=&#34;https://plotly.com/r/sankey-diagram/&#34;&gt;plotly&lt;/a&gt; and &lt;a href=&#34;https://github.com/davidsjoberg/ggsankey&#34;&gt;ggsankey&lt;/a&gt;. The &lt;a href=&#34;https://corybrunson.github.io/ggalluvial/&#34;&gt;ggalluvial&lt;/a&gt; packages also produces Sankey-type plots, but without spaces between each sector. I used ggforce because it is pretty easy to tweak the non-Sankey parts of the plot using ggplot functions, and I had hoped that it would play well with gganimate - which it didn’t, hence the use of tweenr - but perhaps &lt;a href=&#34;https://github.com/thomasp85/ggforce/issues/235&#34;&gt;one day&lt;/a&gt; it will given Thomas Lin Pedersen developed both the gganimate and ggforce packages.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;plots&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Plots&lt;/h2&gt;
-&lt;p&gt;The first animated plot shows the changes over time where the y-axis increases as the migrant populations grow larger. It shows the evolution in the relative distributions of the origin, destination and the linking migrant corridors, in particular the relative growth of migrants in high income countries.&lt;/p&gt;
-&lt;style&gt;
-.carousel-indicators {
-  bottom:-10px
-}
-
-.carousel {
-   margin-top:-1%;
-}
-
-.carousel-indicators &gt; li,
-.carousel-indicators &gt; li.active{
-    width: 40%;
-    height: 2%;
-    border-radius: 0;
-    border: solid 1px grey;
-    background: white;
-    text-indent: 0;
-}
-.carousel-indicators &gt; li.active {
-    background: #4caf50;
-}
-&lt;/style&gt;
-&lt;div id=&#34;carousel_free&#34; class=&#34;carousel slide&#34;&gt;
-&lt;!-- Indicators --&gt;
-&lt;ol class=&#34;carousel-indicators&#34;&gt;
-&lt;li data-target=&#34;#carousel_free&#34; data-slide-to=&#34;0&#34; class=&#34;active&#34;&gt;
-Known Origins
-&lt;/li&gt;
-&lt;li data-target=&#34;#carousel_free&#34; data-slide-to=&#34;1&#34;&gt;
-All Origins
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;!-- Wrapper for slides --&gt;
-&lt;div class=&#34;carousel-inner&#34;&gt;
-&lt;div class=&#34;item active&#34;&gt;
-&lt;video loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34; controls&gt;
-&lt;source src=&#34;./img/sankey-income/abel-free.mp4&#34; type=&#34;video/mp4&#34; /&gt;
-&lt;/video&gt;
-&lt;/div&gt;
-&lt;div class=&#34;item&#34;&gt;
-&lt;video loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34; controls&gt;
-&lt;source src=&#34;./img/sankey-income/abel-free-unknown.mp4&#34; type=&#34;video/mp4&#34; /&gt;
-&lt;/video&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-&lt;p&gt;Note: you might have to right click, select show controls and hit play to start the animations depending on your browsers - right clicking can also allow you to access controls on the play back speed and save the video if you want to use it elsewhere.&lt;/p&gt;
-&lt;p&gt;The second animated plot shows the changes over time where the y-axis is fixed to its maximum level. The adjustment allows the Sankey to grow into the plot space to see more clearly the changes in the overall levels of migrant populations.&lt;/p&gt;
-&lt;div id=&#34;carousel_fixed&#34; class=&#34;carousel slide&#34;&gt;
-&lt;!-- Indicators --&gt;
-&lt;ol class=&#34;carousel-indicators&#34;&gt;
-&lt;li data-target=&#34;#carousel_fixed&#34; data-slide-to=&#34;0&#34; class=&#34;active&#34;&gt;
-Known Origins
-&lt;/li&gt;
-&lt;li data-target=&#34;#carousel_fixed&#34; data-slide-to=&#34;1&#34;&gt;
-All Origins
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;!-- Wrapper for slides --&gt;
-&lt;div class=&#34;carousel-inner&#34;&gt;
-&lt;div class=&#34;item active&#34;&gt;
-&lt;video loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34; controls&gt;
-&lt;source src=&#34;./img/sankey-income/abel-fixed.mp4&#34; type=&#34;video/mp4&#34; /&gt;
-&lt;/video&gt;
-&lt;/div&gt;
-&lt;div class=&#34;item&#34;&gt;
-&lt;video loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34; controls&gt;
-&lt;source src=&#34;./img/sankey-income/abel-fixed-unknown.mp4&#34; type=&#34;video/mp4&#34; /&gt;
-&lt;/video&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-&lt;p&gt;For both plots above there are alternative versions, that include an additional origin category for unknown place of birth. The values for the stock of migrants with unknown origins living in each World Bank income group are not in the main data frame in the UN excel sheet, but are in the regional aggregate sheets for each period. As a result the data importing and manipulation takes a bit of extra work (it is commented out in the Gist R script), but the plots are more ‘complete’, where the totals of the sectors sum to the global estimate of the UN at each time point.&lt;/p&gt;
-&lt;/div&gt;
-</description>
+      <description>BackgroundSankey plots have been used to visualize bilateral migration many times. My favorite examples of Sankey plots for migration data tend to be when there are only few regions or countries. As the number of regions or countries increases the plot become more cumbersome, where labels for the smaller areas get too small and the plotting area becomes a very long rectangle making it awkward to fit on paper or view on the screen.</description>
     </item>
     
     <item>
@@ -150,100 +134,10 @@ All Origins
       <pubDate>Wed, 08 Jul 2020 00:00:00 +0000</pubDate>
       
       <guid>/post/tidycat/</guid>
-      <description>
-
-
-&lt;div&gt;
-&lt;img src=&#34;./img/tidycat.png&#34; width=&#34;200px&#34; align=&#34;right&#34;&gt;
-&lt;/div&gt;
-&lt;div id=&#34;introduction&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;The &lt;code&gt;tidycat&lt;/code&gt; package includes the &lt;code&gt;tidy_categorical()&lt;/code&gt; function to expand &lt;code&gt;broom::tidy()&lt;/code&gt; outputs for categorical parameter estimates.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;documentation&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Documentation&lt;/h2&gt;
-&lt;p&gt;For full documentation, see the package vignette: &lt;a href=&#34;https://cran.r-project.org/web/packages/tidycat/vignettes/intro.html&#34;&gt;The tidycat package: expand broom::tidy() output for categorical parameter estimates&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;hello-world&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Hello World&lt;/h2&gt;
-&lt;p&gt;The &lt;code&gt;tidy()&lt;/code&gt; function in the broom package takes the messy output of built-in functions in R, such as &lt;code&gt;lm()&lt;/code&gt;, and turns them into tidy data frames.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(dplyr)
-library(broom)
-
-m1 &amp;lt;- mtcars %&amp;gt;%
-  mutate(transmission = recode_factor(am, `0` = &amp;quot;automatic&amp;quot;, `1` = &amp;quot;manual&amp;quot;)) %&amp;gt;%
-  lm(mpg ~ transmission + wt *  as.factor(cyl), data = .)
-
-tidy(m1)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## # A tibble: 7 x 5
-##   term               estimate std.error statistic       p.value
-##   &amp;lt;chr&amp;gt;                 &amp;lt;dbl&amp;gt;     &amp;lt;dbl&amp;gt;     &amp;lt;dbl&amp;gt;         &amp;lt;dbl&amp;gt;
-## 1 (Intercept)          41.5        4.54     9.14  0.00000000190
-## 2 transmissionmanual   -0.902      1.51    -0.595 0.557        
-## 3 wt                   -6.19       1.65    -3.75  0.000937     
-## 4 as.factor(cyl)6      -8.66      10.4     -0.836 0.411        
-## 5 as.factor(cyl)8     -16.9        5.27    -3.20  0.00374      
-## 6 wt:as.factor(cyl)6    2.12       3.40     0.625 0.538        
-## 7 wt:as.factor(cyl)8    3.84       1.77     2.17  0.0399&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;The &lt;code&gt;tidy_categorical()&lt;/code&gt; function adds&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;further columns (&lt;code&gt;variable&lt;/code&gt;, &lt;code&gt;level&lt;/code&gt; and &lt;code&gt;effect&lt;/code&gt;) to the &lt;code&gt;broom::tidy()&lt;/code&gt; output to help manage categorical variables&lt;/li&gt;
-&lt;li&gt;further rows for reference category terms and a column to indicate their location (&lt;code&gt;reference&lt;/code&gt;) when setting &lt;code&gt;include_reference = TRUE&lt;/code&gt; (default)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;It requires two inputs&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;a data frame &lt;code&gt;d&lt;/code&gt; of parameter estimates from a model from &lt;code&gt;broom::tidy()&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;the corresponding model object &lt;code&gt;m&lt;/code&gt; passed to &lt;code&gt;broom::tidy()&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;For example:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidycat)
-d1 &amp;lt;- m1 %&amp;gt;%
-  tidy(conf.int = TRUE) %&amp;gt;%
-  tidy_categorical(m = m1)
-d1 %&amp;gt;%
-  select(-(3:5))&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## # A tibble: 10 x 8
-##    term      estimate conf.low conf.high variable    level  effect  reference   
-##    &amp;lt;chr&amp;gt;        &amp;lt;dbl&amp;gt;    &amp;lt;dbl&amp;gt;     &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;       &amp;lt;fct&amp;gt;  &amp;lt;chr&amp;gt;   &amp;lt;chr&amp;gt;       
-##  1 (Interce~   41.5     32.1       50.8  (Intercept) (Inte~ main    Non-Baselin~
-##  2 &amp;lt;NA&amp;gt;         0        0          0    transmissi~ autom~ main    Baseline Ca~
-##  3 transmis~   -0.902   -4.02       2.22 transmissi~ manual main    Non-Baselin~
-##  4 wt          -6.19    -9.59      -2.79 wt          wt     main    Non-Baselin~
-##  5 &amp;lt;NA&amp;gt;         0        0          0    as.factor(~ 4      main    Baseline Ca~
-##  6 as.facto~   -8.66   -30.0       12.7  as.factor(~ 6      main    Non-Baselin~
-##  7 as.facto~  -16.9    -27.7       -6.00 as.factor(~ 8      main    Non-Baselin~
-##  8 &amp;lt;NA&amp;gt;         0        0          0    wt:as.fact~ 4      intera~ Baseline Ca~
-##  9 wt:as.fa~    2.12    -4.87       9.12 wt:as.fact~ 6      intera~ Non-Baselin~
-## 10 wt:as.fa~    3.84     0.192      7.50 wt:as.fact~ 8      intera~ Non-Baselin~&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;The expanded data frame from &lt;code&gt;tidy_categorical()&lt;/code&gt; of parameter estimates can be particularly useful for creating coefficient plots, allowing:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;grouping terms from the same categorical variable from the additional columns.&lt;/li&gt;
-&lt;li&gt;inclusion of reference categories in a coefficient plot from the additional rows, allowing the reader to better grasp the meaning of the parameter estimates in each categorical variable.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;For example:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(forcats)
-library(ggplot2)
-library(ggforce)
-
-d1 %&amp;gt;%
-  slice(-1) %&amp;gt;%
-  mutate(variable = fct_inorder(variable)) %&amp;gt;%
-  ggplot(mapping = aes(x = level, y = estimate, colour = reference,
-                       ymin = conf.low, ymax = conf.high)) +
-  facet_row(facets = &amp;quot;variable&amp;quot;, scales = &amp;quot;free_x&amp;quot;, space = &amp;quot;free&amp;quot;) +
-  geom_hline(yintercept = 0, linetype = &amp;quot;dashed&amp;quot;) +
-  geom_pointrange()&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;./post/tidycat_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;installation&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Installation&lt;/h2&gt;
-&lt;p&gt;You can install the released version of tidycat from &lt;a href=&#34;https://CRAN.R-project.org&#34;&gt;CRAN&lt;/a&gt; with:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;install.packages(&amp;quot;tidycat&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;And the development version from &lt;a href=&#34;https://github.com/&#34;&gt;GitHub&lt;/a&gt; with:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# install.packages(&amp;quot;devtools&amp;quot;)
-devtools::install_github(&amp;quot;guyabel/tidycat&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-</description>
+      <description>IntroductionThe tidycat package includes the tidy_categorical() function to expand broom::tidy() outputs for categorical parameter estimates.
+DocumentationFor full documentation, see the package vignette: The tidycat package: expand broom::tidy() output for categorical parameter estimates
+Hello WorldThe tidy() function in the broom package takes the messy output of built-in functions in R, such as lm(), and turns them into tidy data frames.
+library(dplyr)library(broom)m1 &amp;lt;- mtcars %&amp;gt;%mutate(transmission = recode_factor(am, `0` = &amp;quot;automatic&amp;quot;, `1` = &amp;quot;manual&amp;quot;)) %&amp;gt;%lm(mpg ~ transmission + wt * as.</description>
     </item>
     
     <item>
@@ -252,206 +146,7 @@ devtools::install_github(&amp;quot;guyabel/tidycat&amp;quot;)&lt;/code&gt;&lt;/p
       <pubDate>Sat, 20 Jun 2020 00:00:00 +0000</pubDate>
       
       <guid>/post/global-migrant-stocks/</guid>
-      <description>
-
-&lt;p&gt;Over the last year or so I have been playing around with different ways of showing changing global bilateral migrant stocks, adapting the animation code I created for the plots for region to region flows in this estimation &lt;a href=&#34;https://www.nature.com/articles/s41597-019-0089-3&#34; target=&#34;_blank&#34;&gt;paper&lt;/a&gt;. I am putting them online here in case they are of interest to anyone else. Feel free to download the plots using right click over the animation and then &lt;code&gt;Save Video as&lt;/code&gt; or from &lt;a href=&#34;https://github.com/guyabel/personal-site/tree/master/static/img/cd-stock-global&#34; target=&#34;_blank&#34;&gt;Github&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;The first plot below shows the change over time in the pattern of global migrant stocks. As with the &lt;a href=&#34;http://guyabel.com/post/migrant-stock-chord-digrams&#34; target=&#34;_blank&#34;&gt;regional plots&lt;/a&gt; in my previous post, the chords in the diagrams represent the connection between the places of birth (at the base of the chord) and places of residence (at the arrow head of the chord). The width of based of the chords correspond to the size of the migrant population in millions. Chords are ordered relative to their size, with the largest migrant stocks plotted at the beginning of the region segments. The ordering of chords jumps around over time as the relative rankings of the largest foreign-born populations change in each region. Values for the migrant population sizes are from the &lt;del&gt;2019&lt;/del&gt; 2020 revision of the United Nations DESA &lt;a href=&#34;https://www.un.org/development/desa/pd/content/international-migrant-stock&#34; target=&#34;_blank&#34;&gt;International Migrant Stock Data&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Note: you might have to right click, select show controls and hit play to start the animations depending on your browsers - right clicking can also allow you to access controls on the play back speed.&lt;/p&gt;
-
-&lt;style&gt;
-.carousel-indicators {
-  bottom:-10px
-}
-
-.carousel {
-   margin-top:-1%;
-}
-
-.carousel-indicators &gt; li,
-.carousel-indicators &gt; li.active{
-    width: 40%;
-    height: 2%;
-    border-radius: 0;
-    border: solid 1px grey;
-    background: white;
-    text-indent: 0;
-}
-.carousel-indicators &gt; li.active {
-    background: #4caf50;
-}
-&lt;/style&gt;
-
-&lt;p&gt;&lt;div id=&#34;carousel_time&#34; class=&#34;carousel slide&#34;&gt;
-  &lt;!-- Indicators --&gt;
-  &lt;ol class=&#34;carousel-indicators&#34;&gt;
-    &lt;li data-target=&#34;#carousel_time&#34; data-slide-to=&#34;0&#34; class=&#34;active&#34;&gt;Areas&lt;/li&gt;
-    &lt;li data-target=&#34;#carousel_time&#34; data-slide-to=&#34;1&#34;&gt;Regions&lt;/li&gt;
-  &lt;/ol&gt;
-  &lt;!-- Wrapper for slides --&gt;
-  &lt;div class=&#34;carousel-inner&#34;&gt;
-    &lt;div class=&#34;item active&#34;&gt;
-      &lt;video loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34; controls&gt;
-        &lt;source src=&#34;./img/cd-stock-global/area-time-abel.mp4&#34; type=&#34;video/mp4&#34; /&gt;
-      &lt;/video&gt;
-    &lt;/div&gt;
-    &lt;div class=&#34;item&#34;&gt;
-      &lt;video loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34; controls&gt;
-        &lt;source src=&#34;./img/cd-stock-global/region-time-abel.mp4&#34; type=&#34;video/mp4&#34; /&gt;
-      &lt;/video&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;br&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;a-id-sex-a-sex-differences-in-global-migrant-distribution-patterns&#34;&gt;&lt;a id=&#34;sex&#34;&gt;&lt;/a&gt; Sex differences in global migrant distribution patterns&lt;/h2&gt;
-
-&lt;p&gt;The next two plots below show the differences between male and female global migrant distributions in 2020. In the first plot I keep the sector axis fixed at their maximums (over both sexes) making it easier to detect changes in the relative volume of a particular migrant corridor; for example the greater number of male migrants in West Asia and slightly more female migrants in North America.&lt;/p&gt;
-
-&lt;p&gt;&lt;div id=&#34;carousel_sex1&#34; class=&#34;carousel slide&#34;&gt;
-  &lt;!-- Indicators --&gt;
-  &lt;ol class=&#34;carousel-indicators&#34;&gt;
-    &lt;li data-target=&#34;#carousel_sex1&#34; data-slide-to=&#34;0&#34; class=&#34;active&#34;&gt;Areas&lt;/li&gt;
-    &lt;li data-target=&#34;#carousel_sex1&#34; data-slide-to=&#34;1&#34;&gt;Regions&lt;/li&gt;
-  &lt;/ol&gt;
-  &lt;!-- Wrapper for slides --&gt;
-  &lt;div class=&#34;carousel-inner&#34;&gt;
-    &lt;div class=&#34;item active&#34;&gt;
-      &lt;video loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34; controls&gt;
-        &lt;source src=&#34;./img/cd-stock-global/area-sex1-abel.mp4&#34; type=&#34;video/mp4&#34; /&gt;
-      &lt;/video&gt;
-    &lt;/div&gt;
-    &lt;div class=&#34;item&#34;&gt;
-      &lt;video loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34; controls&gt;
-        &lt;source src=&#34;./img/cd-stock-global/region-sex1-abel.mp4&#34; type=&#34;video/mp4&#34; /&gt;
-      &lt;/video&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;br&gt;&lt;/p&gt;
-
-&lt;p&gt;In the second plot, I allow the sector axis to be specific to the regional totals. This (perhaps?) makes it easier to detect relative changes in the overall global patterns by sex.&lt;/p&gt;
-
-&lt;p&gt;&lt;div id=&#34;carousel_sex2&#34; class=&#34;carousel slide&#34;&gt;
-  &lt;!-- Indicators --&gt;
-  &lt;ol class=&#34;carousel-indicators&#34;&gt;
-    &lt;li data-target=&#34;#carousel_sex2&#34; data-slide-to=&#34;0&#34; class=&#34;active&#34;&gt;Areas&lt;/li&gt;
-    &lt;li data-target=&#34;#carousel_sex2&#34; data-slide-to=&#34;1&#34;&gt;Regions&lt;/li&gt;
-  &lt;/ol&gt;
-  &lt;!-- Wrapper for slides --&gt;
-  &lt;div class=&#34;carousel-inner&#34;&gt;
-    &lt;div class=&#34;item active&#34;&gt;
-      &lt;video loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34; controls&gt;
-        &lt;source src=&#34;./img/cd-stock-global/area-sex2-abel.mp4&#34; type=&#34;video/mp4&#34; /&gt;
-      &lt;/video&gt;
-    &lt;/div&gt;
-    &lt;div class=&#34;item&#34;&gt;
-      &lt;video loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34; controls&gt;
-        &lt;source src=&#34;./img/cd-stock-global/region-sex2-abel.mp4&#34; type=&#34;video/mp4&#34; /&gt;
-      &lt;/video&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;br&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;a-id-population-a-migrant-totals-relative-to-their-population-totals&#34;&gt;&lt;a id=&#34;population&#34;&gt;&lt;/a&gt; Migrant totals relative to their population totals.&lt;/h2&gt;
-
-&lt;p&gt;One important feature of international migrants are their relative rarity. Professor Hein de Haas visually illustrates this point neatly using a &lt;a href=&#34;http://heindehaas.blogspot.com/2016/08/refugees-small-and-relatively-stable.html&#34; target=&#34;_blank&#34;&gt;pie chart&lt;/a&gt;, where his focus is predominantly on refugees, but also clearly shows the small share of the global population that are living outside their country of birth (under 4%). This feature is completely missed in the migrant chord diagrams above, where there is no way to gauge the share of the migrant populations relative to the total population.
-In the plot below I tried to illustrate the relative sizes of migrant populations using the lengths of the sector axis, transitioning between&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;The number of migrants (which is a combination of migrant living in the region and migrants born in the region living elsewhere) as in the plots above, and&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;The total population of the region.
-&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The chord widths remain constant, fixed at the size of the bilateral migrant populations.&lt;/p&gt;
-
-&lt;p&gt;&lt;div id=&#34;carousel_pop&#34; class=&#34;carousel slide&#34;&gt;
-  &lt;!-- Indicators --&gt;
-  &lt;ol class=&#34;carousel-indicators&#34;&gt;
-    &lt;li data-target=&#34;#carousel_pop&#34; data-slide-to=&#34;0&#34; class=&#34;active&#34;&gt;Areas&lt;/li&gt;
-    &lt;li data-target=&#34;#carousel_pop&#34; data-slide-to=&#34;1&#34;&gt;Regions&lt;/li&gt;
-  &lt;/ol&gt;
-  &lt;!-- Wrapper for slides --&gt;
-  &lt;div class=&#34;carousel-inner&#34;&gt;
-    &lt;div class=&#34;item active&#34;&gt;
-      &lt;video loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34; controls&gt;
-        &lt;source src=&#34;./img/cd-stock-global/area-pop-abel.mp4&#34; type=&#34;video/mp4&#34; /&gt;
-      &lt;/video&gt;
-    &lt;/div&gt;
-    &lt;div class=&#34;item&#34;&gt;
-      &lt;video loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34; controls&gt;
-        &lt;source src=&#34;./img/cd-stock-global/region-pop-abel.mp4&#34; type=&#34;video/mp4&#34; /&gt;
-      &lt;/video&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;br&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;a-id-forced-a-migrant-populations-relative-to-refugee-populations&#34;&gt;&lt;a id=&#34;forced&#34;&gt;&lt;/a&gt; Migrant populations relative to refugee populations.&lt;/h2&gt;
-
-&lt;p&gt;In the final plots I illustrate the relative sizes of forced migrant populations compared to the total migrant populations, transitioning the chords between&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;The number of migrants from each origin and destination based on the UN IMS2020 stock data&lt;/li&gt;
-&lt;li&gt;The number of forced migrants from each origin and destination based on data from &lt;a href=&#34;https://www.unhcr.org/refugee-statistics/&#34; target=&#34;_blank&#34;&gt;UNHCR&lt;/a&gt;
-&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;In the first version the sector axis remain constant, fixed at the size of the bilateral migrant populations in each region.&lt;/p&gt;
-
-&lt;p&gt;&lt;div id=&#34;carousel_forced1&#34; class=&#34;carousel slide&#34;&gt;
-  &lt;!-- Indicators --&gt;
-  &lt;ol class=&#34;carousel-indicators&#34;&gt;
-    &lt;li data-target=&#34;#carousel_forced1&#34; data-slide-to=&#34;0&#34; class=&#34;active&#34;&gt;Areas&lt;/li&gt;
-    &lt;li data-target=&#34;#carousel_forced1&#34; data-slide-to=&#34;1&#34;&gt;Regions&lt;/li&gt;
-  &lt;/ol&gt;
-  &lt;!-- Wrapper for slides --&gt;
-  &lt;div class=&#34;carousel-inner&#34;&gt;
-    &lt;div class=&#34;item active&#34;&gt;
-      &lt;video loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34; controls&gt;
-        &lt;source src=&#34;./img/cd-stock-global/area-forced1-abel.mp4&#34; type=&#34;video/mp4&#34; /&gt;
-      &lt;/video&gt;
-    &lt;/div&gt;
-    &lt;div class=&#34;item&#34;&gt;
-      &lt;video loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34; controls&gt;
-        &lt;source src=&#34;./img/cd-stock-global/region-forced1-abel.mp4&#34; type=&#34;video/mp4&#34; /&gt;
-      &lt;/video&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;br&gt;&lt;/p&gt;
-
-&lt;p&gt;In the second plot the sector axis vary to match the type of migrants (all migrants or forced migrants) so show the relative differences in patterns.&lt;/p&gt;
-
-&lt;p&gt;&lt;div id=&#34;carousel_forced2&#34; class=&#34;carousel slide&#34;&gt;
-  &lt;!-- Indicators --&gt;
-  &lt;ol class=&#34;carousel-indicators&#34;&gt;
-    &lt;li data-target=&#34;#carousel_forced2&#34; data-slide-to=&#34;0&#34; class=&#34;active&#34;&gt;Areas&lt;/li&gt;
-    &lt;li data-target=&#34;#carousel_forced2&#34; data-slide-to=&#34;1&#34;&gt;Regions&lt;/li&gt;
-  &lt;/ol&gt;
-  &lt;!-- Wrapper for slides --&gt;
-  &lt;div class=&#34;carousel-inner&#34;&gt;
-    &lt;div class=&#34;item active&#34;&gt;
-      &lt;video loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34; controls&gt;
-        &lt;source src=&#34;./img/cd-stock-global/area-forced2-abel.mp4&#34; type=&#34;video/mp4&#34; /&gt;
-      &lt;/video&gt;
-    &lt;/div&gt;
-    &lt;div class=&#34;item&#34;&gt;
-      &lt;video loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34; controls&gt;
-        &lt;source src=&#34;./img/cd-stock-global/region-forced2-abel.mp4&#34; type=&#34;video/mp4&#34; /&gt;
-      &lt;/video&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;br&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;r-code&#34;&gt;R Code&lt;/h2&gt;
-
-&lt;p&gt;These plots were all produced in R, primarily using the &lt;code&gt;chordDiagram()&lt;/code&gt; function in the  &lt;a href=&#34;https://jokergoo.github.io/circlize_book/book/the-chorddiagram-function.html&#34; target=&#34;_blank&#34;&gt;circlize&lt;/a&gt; package. A while ago I wrote a &lt;a href=&#34;http://guyabel.com/post/animated-directional-chord-diagrams&#34; target=&#34;_blank&#34;&gt;post&lt;/a&gt; with details on creating animated chord diagrams. The specific code for the plots above gets a bit overwhelming (and is poorly commented) so I am hesitant to put it online, especially because the more complicated parts for defining the lines for the global regions can now be done much more easily using the new &lt;code&gt;group&lt;/code&gt; argument in the &lt;code&gt;chordDiagram()&lt;/code&gt; function, as described in a recent &lt;a href=&#34;https://jokergoo.github.io/2020/06/08/multiple-group-chord-diagram/&#34; target=&#34;_blank&#34;&gt;post&lt;/a&gt; by the circlize package creator Zuguang Gu.&lt;/p&gt;
-</description>
+      <description>Over the last year or so I have been playing around with different ways of showing changing global bilateral migrant stocks, adapting the animation code I created for the plots for region to region flows in this estimation paper. I am putting them online here in case they are of interest to anyone else. Feel free to download the plots using right click over the animation and then Save Video as or from Github.</description>
     </item>
     
     <item>
@@ -460,17 +155,7 @@ In the plot below I tried to illustrate the relative sizes of migrant population
       <pubDate>Thu, 28 May 2020 00:00:00 +0000</pubDate>
       
       <guid>/publication/covid-remittance/</guid>
-      <description>
-
-&lt;h3 id=&#34;animated-version&#34;&gt;Animated Version&lt;/h3&gt;
-
-&lt;p&gt;Below is an animated version of the plot in the paper for remittance since 2010 based on the World Bank &lt;a href=&#34;https://www.worldbank.org/en/topic/migrationremittancesdiasporaissues/brief/migration-remittances-data&#34; target=&#34;_blank&#34;&gt;data&lt;/a&gt;&lt;/p&gt;
-
-&lt;video loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34; controls&gt;
-  &lt;source src=&#34;./img/abel-region-remit.mp4&#34;
-  type=&#34;video/mp4&#34; /&gt;
-&lt;/video&gt;
-</description>
+      <description>Animated Version Below is an animated version of the plot in the paper for remittance since 2010 based on the World Bank data</description>
     </item>
     
     <item>
@@ -488,152 +173,7 @@ In the plot below I tried to illustrate the relative sizes of migrant population
       <pubDate>Mon, 17 Jun 2019 00:00:00 +0000</pubDate>
       
       <guid>/publication/bilateral-international-migration-flow-estimates/</guid>
-      <description>
-&lt;script src=&#34;./rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;./rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;./rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;./rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;./rmarkdown-libs/pymjs/pym.v1.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;./rmarkdown-libs/widgetframe-binding/widgetframe.js&#34;&gt;&lt;/script&gt;
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#updates&#34;&gt;Updates&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#version-2-update-for-wpp2019&#34;&gt;&lt;a id=&#34;WPP2019&#34;&gt;&lt;/a&gt;Version 2: Update for WPP2019&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#comparison-of-estimates-based-on-wpp2017-and-wpp2019&#34;&gt;Comparison of estimates based on WPP2017 and WPP2019&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#which-countries-are-most-affected&#34;&gt;Which countries are most affected?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#impact-on-validation-exercise&#34;&gt;Impact on validation exercise&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#version-3-update-for-ims2019&#34;&gt;&lt;a id=&#34;IMS2019&#34;&gt;&lt;/a&gt;Version 3: Update for IMS2019&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#comparison-of-estimates&#34;&gt;Comparison of estimates&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#which-countries-are-most-affected-1&#34;&gt;Which countries are most affected?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#impact-on-validation-exercise-1&#34;&gt;Impact on validation exercise&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#version-4-correct-for-serbia-montenegro-sudan-and-south-sudan-before-2005&#34;&gt;&lt;a id=&#34;SCGSUD&#34;&gt;&lt;/a&gt;Version 4: Correct for Serbia, Montenegro, Sudan and South Sudan before 2005&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#comparison-of-estimates-1&#34;&gt;Comparison of estimates&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#impact-on-validation-exercise-2&#34;&gt;Impact on validation exercise&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#version-5-update-for-ims2020&#34;&gt;&lt;a id=&#34;IMS2020&#34;&gt;&lt;/a&gt;Version 5: Update for IMS2020&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#comparison-of-estimates-2&#34;&gt;Comparison of estimates&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#impact-on-validation-exercise-3&#34;&gt;Impact on validation exercise&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;updates&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Updates&lt;/h3&gt;
-&lt;p&gt;Since the paper was published I have produced four updates to reflect&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;The latest United Nations demographic data released in WPP2019 (July 19, 2019)&lt;/li&gt;
-&lt;li&gt;The latest United Nations migrant stock data released in IMS2019 and IMS2020 (October 23, 2019 and February 1, 2021)&lt;/li&gt;
-&lt;li&gt;Corrections for Serbia, Montenegro, Sudan and South Sudan in earlier periods (August 3, 2020)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;See the table of contents above to jump to a short discussion on each update. The different versions of estimates are all available on &lt;a href=&#34;https://figshare.com/articles/dataset/Bilateral_international_migration_flow_estimates_for_200_countries_1990-1995_to_2010-2015_/7731233&#34;&gt;Figshare&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;version-2-update-for-wpp2019&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;&lt;a id=&#34;WPP2019&#34;&gt;&lt;/a&gt;Version 2: Update for WPP2019&lt;/h2&gt;
-&lt;p&gt;This paper came out a day before the United Nations Population Division updated their &lt;a href=&#34;https://population.un.org/wpp/&#34;&gt;World Population Prospects&lt;/a&gt; (WPP). As all the estimates were based on WPP2017 our claim for the estimates being based on the most up to date input data was only true for around 24 hours.&lt;/p&gt;
-&lt;p&gt;In order to keep the estimates a bit more current I have added new version based on the WPP2019 to the &lt;a href=&#34;https://figshare.com/collections/Bilateral_international_migration_flow_estimates_for_200_countries/4470464&#34;&gt;Figshare collection&lt;/a&gt;. Below is a quick summary of the changes in the updated estimates to those in the paper.&lt;/p&gt;
-&lt;div id=&#34;comparison-of-estimates-based-on-wpp2017-and-wpp2019&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Comparison of estimates based on WPP2017 and WPP2019&lt;/h3&gt;
-&lt;p&gt;The plot below shows the relationship between the bilateral flow estimates based on WPP2017 and WPP2019 from each period and estimation method.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;./img/sd2019/v2-compare.png&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;For the stock differencing methods there are no changes in the estimates. They do not rely on WPP data. The migration rates approach uses the total absolute net migration data from WPP. All bilateral flows from WPP2019 are slightly higher than their WPP2017 counterparts, though it is barely noticeable in the plot above. The demographic accounting methods use the birth, death and population estimates from the WPP. In each method there are some sizable differences for the flows generated by updated revisions to the WPP demographic data, in particular for those based on the closed demographic accounting approach.&lt;/p&gt;
-&lt;p&gt;These difference results in revisions to the overall totals of migration flows. Below is an animation of the changes to &lt;a href=&#34;https://www.nature.com/articles/s41597-019-0089-3#Fig2&#34;&gt;Figure 2&lt;/a&gt; in the paper&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;./img/sd2019/v2-est_tot.gif&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;From this plot it is easier to see the changes in the migration rates estimation method. I was surprised that the changes in the estimates were occurring in all periods, not just the most recent period (2010-2015). To investigate I took a look at the changes in the WPP data.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;which-countries-are-most-affected&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Which countries are most affected?&lt;/h3&gt;
-&lt;p&gt;The countries where the largest changes in the bilateral estimates occurred (from the closed demographic accounting methods) can be detected by looking at the revisions in net migration between WPP2017 and WPP2019. Net migration is the best measure to track their changes as it correlates perfectly with the net migration in the WPP and is the residual of the input data (births, deaths and population) for the estimates based on the demographic accounting methods. Below are the changes in the complete time series of net migration in nine countries where the largest absolute differences (in any period) between the two WPP versions occur.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;./img/sd2019/v2-wpp_big_changes.gif&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;At first I was a bit surprised by the scale of the changes. In some periods the revisions to net migration are greater than a million. I dug a little deeper into net migration in previous WPP revisions to find that similar revisions are not unusual. Below are the revisions of absolute net migration between past WPP versions that exceed one million (back to WPP2000, the earliest WPP data I can get my hands on).&lt;/p&gt;
-&lt;div id=&#34;htmlwidget-1&#34; style=&#34;width:100%;height:100%;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
-&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-1&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/publication/bilateral-international-migration-flow-estimates_files/figure-html//widgets/widget_unnamed-chunk-2.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
-&lt;/div&gt;
-&lt;div id=&#34;impact-on-validation-exercise&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Impact on validation exercise&lt;/h3&gt;
-&lt;p&gt;The impact of the revision in WPP data on the validation exercise in the paper is minimal. Below is an update of &lt;a href=&#34;https://www.nature.com/articles/s41597-019-0089-3#Fig4&#34;&gt;Figure 4&lt;/a&gt; in the paper.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;./img/sd2019/v2-val_all.png&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;The correlations change by few hundredths of a decimal. These small changes, despite what is shown in the first plot above, are due to the limited amount of reported migration flows statistics (at the global level) to carry out our validation exercise. In the 45 countries that we used (based on the United Nations Population Division &lt;a href=&#34;https://www.un.org/en/development/desa/population/migration/data/empirical2/migrationflows.asp&#34;&gt;collection&lt;/a&gt;) the revisions in the WPP data were relatively minor, hence only small changes in their estimates and the correlations with the reported data.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;version-3-update-for-ims2019&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;&lt;a id=&#34;IMS2019&#34;&gt;&lt;/a&gt;Version 3: Update for IMS2019&lt;/h2&gt;
-&lt;p&gt;Another update in the input data came out a few weeks back - this time the UN &lt;a href=&#34;https://www.un.org/en/development/desa/population/migration/data/estimates2/estimates19.asp&#34;&gt;International Migrant Stock&lt;/a&gt; (IMS) data. I have added another set of flow estimates based on the IMS2019 and WPP2019 to the &lt;a href=&#34;https://figshare.com/collections/Bilateral_international_migration_flow_estimates_for_200_countries/4470464&#34;&gt;Figshare collection&lt;/a&gt; (the original flow estimates in the paper were based on IMS2017). I do not expect there will not be a need to update the estimates again until at least 2021.&lt;/p&gt;
-&lt;p&gt;Below are a few plots to give some visual summaries of the changes in the updated estimates to those in the paper and from the last update.&lt;/p&gt;
-&lt;div id=&#34;comparison-of-estimates&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Comparison of estimates&lt;/h3&gt;
-&lt;p&gt;The plot below shows the relationship between the bilateral flow estimates based on IMS2017 and WPP2017 (as in the paper) and IMS2019 - WPP2019 (this update) from each period and estimation method.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;./img/sd2019/v3-compare.png&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;In all methods (columns) there are changes some the estimates, which tend to be larger in more recent periods (lower rows) and estimation methods based on demographic accounting (columns to the right). These patterns are likely due to larger revisions in the most recent stock data and the use of updated demographic data in the demographic accounting methods - not required in the stock differencing approaches.&lt;/p&gt;
-&lt;p&gt;The revisions to the overall totals of migration flows, shown in &lt;a href=&#34;https://www.nature.com/articles/s41597-019-0089-3#Fig2&#34;&gt;Figure 2&lt;/a&gt; in the paper, are animated below, transitioning from 1) the estimates in the paper to 2) the first update of the estimates from changes in the demographic data to 3) the most recent update for changes in the stock data.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;./img/sd2019/v3-est_tot.gif&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;The 2010-2015 estimates are, on the whole, suggesting that the total global flows remained at similar levels to 2005-2010. Earlier versions of the estimates had suggested a decline. As a result the crude global migration rate falls by only a small margin for most estimation methods during 2010-2015, except for Pseudo-Bayesian estimates of flows where the rate increases a touch.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;which-countries-are-most-affected-1&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Which countries are most affected?&lt;/h3&gt;
-&lt;p&gt;The largest changes in the bilateral flow estimates can be partially detected by looking at the revisions in migrant stock data between IMS2017 and IMS2019. In the stock differencing methods these changes are directly related to the change in the estimated flow sizes between the bilateral country pair. In the demographic accounting approaches the impact of the revision is less direct on the estimated flows, as each method allows for return and on-wards migration to match changes in migrant stock data. Below is scatter plot of the changes in the IMS data by continent.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;./img/sd2019/v3-tims_change.png&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;There are a few features to note. First, and unsurprisingly, the largest revisions are occurring in the most recent data (2015). Second, the biggest changes are in North American data sources. Below is a table of the bilateral pairs where the revision to the migrant stocks are greater than 100,000. Third, in some areas there are noticeable patterns to the changes - the diagonal lines parallel to the &lt;span class=&#34;math inline&#34;&gt;\(y=x\)&lt;/span&gt; line - which I guess is related to updates in the data used to imputation missing bilateral stocks.&lt;/p&gt;
-&lt;div id=&#34;htmlwidget-2&#34; style=&#34;width:100%;height:100%;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
-&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-2&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/publication/bilateral-international-migration-flow-estimates_files/figure-html//widgets/widget_unnamed-chunk-4.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
-&lt;/div&gt;
-&lt;div id=&#34;impact-on-validation-exercise-1&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Impact on validation exercise&lt;/h3&gt;
-&lt;p&gt;The impact of the revision in stock data on the validation exercise in the paper is slightly larger than the previous update, but still not very dramatic. Below is an animated version of &lt;a href=&#34;https://www.nature.com/articles/s41597-019-0089-3#Fig4&#34;&gt;Figure 4&lt;/a&gt; in the paper, showing the correlations between the flow estimates and reported data for various migration measures, for the original estimates and subsequent updates based on new WPP and IMS data.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;./img/sd2019/v3-val_all.gif&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;As with the first update, the small changes in the correlations, despite some large revisions in the migrant stock data are due to the limited amount of reported migration flows statistics (at the global level) to carry out our validation exercise.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;version-4-correct-for-serbia-montenegro-sudan-and-south-sudan-before-2005&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;&lt;a id=&#34;SCGSUD&#34;&gt;&lt;/a&gt;Version 4: Correct for Serbia, Montenegro, Sudan and South Sudan before 2005&lt;/h2&gt;
-&lt;p&gt;In the original paper, and updates described above, both Serbia and Montenegro, and Sudan and South Sudan are treated as separate countries through the entire 1990 to 2015 period. This was not a great choice. Although the UN provide separate demographic and migrant stock data for each of the four countries back to 1990, the notes in the migrant stock speadsheet (number 4 and 24) point out that the foreign born data for Sudan and Serbia before 2005 cover South Sudan and Montenegro respectively. In both South Sudan and Montenegro before 2005 there is no data provided for the foreign born populations.&lt;/p&gt;
-&lt;p&gt;The differences in geographic coverge of Sudan and Serbia in the migrant stock data has an impact on the flow estimates that are based on the differences in stocks. For example, the demographic accounting based methods were trying to calibrate changes in foreign born stocks (from zero in 1990 to zero in 1995 for example) in South Sudan and Montenegro with a non-zero net migration over the period. This was resolved in the background by some parts of the IPF code running until their default iteration limit rather than until convergence, where convergence was not feasible. I picked up on this when adding some new warning messages in the &lt;code&gt;ffs_demo()&lt;/code&gt; function of the &lt;a href=&#34;https://cran.r-project.org/web/packages/migest/index.html&#34;&gt;migest&lt;/a&gt; package which should now alert users for non-convergence.&lt;/p&gt;
-&lt;p&gt;To rectify this problem I have created a new version of the estimates that treat Serbia and Montenegro, and Sudan and South Sudan, as single countries before 2005. This reduces the number of countries in the earlier periods of the data to 198, whilst in the last two periods (2005-2010 and 2010-2015) there are still 200 countries, and the estimates are the same as in the previous update. I use the SCG and SUD country codes for Serbia and Montenegro and Sudan before 2005, and the four separate country codes after 2005 (SRB, MNE, SDN, SSD as in previous versions).&lt;/p&gt;
-&lt;p&gt;I have added a few plots below to once again give some summaries of the changes in the updated estimates to those in the paper and from the last update.&lt;/p&gt;
-&lt;div id=&#34;comparison-of-estimates-1&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Comparison of estimates&lt;/h3&gt;
-&lt;p&gt;The plot below shows the relationship between the bilateral flow estimates based on the last update based on IMS2019 and WPP2019 and the newer estimates with the correction for the four countries.&lt;/p&gt;
-&lt;p&gt;In all periods the estimates for 2005-2010 and 2010-2015 remain unchanged, hence all points are on the diagonal line. In earlier periods there are a small number of bilateral estimates from the rates and demographic accounting methods. For the demographic accounting methods this is due to the combining of data for the four countries allowing the IPF routines to fully converge. The biggest changes occur in estimates between African countries from the correction to Sudanese and South Sudanese born populations. For the rates method all estimates are revised from the change in the global migration flow total, obtained from the sum of net migration flows.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;./img/sd2019/v4-compare.png&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;impact-on-validation-exercise-2&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Impact on validation exercise&lt;/h3&gt;
-&lt;p&gt;The impact of the correction for the four countries on the validation exercise is very minor. Below is an animated version of &lt;a href=&#34;https://www.nature.com/articles/s41597-019-0089-3#Fig4&#34;&gt;Figure 4&lt;/a&gt; in the paper, showing the correlations between the flow estimates and reported data for various migration measures, for the original estimates, the previous updates based on new WPP and IMS data and the new estimates with a correction for the four countries prior to 2005.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;./img/sd2019/v4-val_all.gif&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;version-5-update-for-ims2020&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;&lt;a id=&#34;IMS2020&#34;&gt;&lt;/a&gt;Version 5: Update for IMS2020&lt;/h2&gt;
-&lt;p&gt;The new UN &lt;a href=&#34;https://www.un.org/development/desa/pd/content/international-migrant-stock&#34;&gt;International Migrant Stock&lt;/a&gt; (IMS) data came out a few weeks back. I have added another set of flow estimates based on the IMS2020 and WPP2019 to the &lt;a href=&#34;https://figshare.com/collections/Bilateral_international_migration_flow_estimates_for_200_countries/4470464&#34;&gt;Figshare collection&lt;/a&gt; (the original flow estimates in the paper were based on IMS2017). As the IMS2020 contain bilateral stocks for 2020, it was possible to generate a first set of flow estimates for the 2015-2020 period, seen the animation below for one of the methods covered in the paper:&lt;/p&gt;
-&lt;video loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34; poster=&#34;/img/sd2019/v5-flow.png&#34; controls&gt;
-&lt;source src=&#34;./img/sd2019/v5-flow.mp4&#34; type=&#34;video/mp4&#34; /&gt;
-&lt;/video&gt;
-&lt;p&gt;Below are a few plots to give some visual summaries of the changes in the estimates compared to previous versions.&lt;/p&gt;
-&lt;div id=&#34;comparison-of-estimates-2&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Comparison of estimates&lt;/h3&gt;
-&lt;!-- The plot below shows the relationship between the bilateral flow estimates based on IMS2019 and WPP2019 (previous update) and IMS2019 - WPP2019 (this update) from each period and estimation method. --&gt;
-&lt;!-- ![ ](/img/sd2019/v5-compare.png) --&gt;
-&lt;!-- As with the previous updates, all methods (columns) see some changes in the flows estimates, which tend to be larger in more recent periods (lower rows) and estimation methods based on demographic accounting (columns to the right).  --&gt;
-&lt;p&gt;The plot of the totals migration flows, shown in &lt;a href=&#34;https://www.nature.com/articles/s41597-019-0089-3#Fig2&#34;&gt;Figure 2&lt;/a&gt; in the paper, is updated below with the new estimates, including the new values for the 2015-2020.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;./img/sd2019/v5-est_tot4.png&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;The estimates in the new 2015-2020 period see a continued slow in the growth of total flows based on estimates using the Pseudo-Bayesian method. The other demographic accounting methods also see a small increase in the estimated total flows during 2015-2020 from 2010-2015. There is a noticeable decline in the total flows during 2015-2020 estimated using the rates approach and incline from the stock differencing methods. I suspect all the estimates for 2015-2020 will see some major changes from future revisions of the IMS data, as data drips in from the 2020 round of censuses that will alter the stocks and demographic used as input data to estimate flows in the most recent periods.&lt;/p&gt;
-&lt;p&gt;The evolution of the changes in the estimates from different revisions in the input data can be seen below; transitioning from 1) the estimates in the paper to 2) the first update (version 2) of the estimates from changes in the demographic data to 3) the second update for changes in the stock data (version 4) to the most recent update (version 5, the same as the plot above).&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;./img/sd2019/v5-est_tot.gif&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;impact-on-validation-exercise-3&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Impact on validation exercise&lt;/h3&gt;
-&lt;p&gt;The impact of the revision in stock data on the validation exercise in the paper is still relatively minor. Below is an update of the animated version of &lt;a href=&#34;https://www.nature.com/articles/s41597-019-0089-3#Fig4&#34;&gt;Figure 4&lt;/a&gt; in the paper, showing the correlations between the flow estimates and reported data for various migration measures, for the original estimates and subsequent updates based on new WPP and IMS data.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;./img/sd2019/v5-val_all.gif&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;As with the other updates, the small changes in the correlations, despite some large revisions in the migrant stock data are due to the limited amount of reported migration flows statistics (at the global level) to carry out our validation exercise. The estimates during 2015-2020 have no influence due to the lack of corresponding reported flow data in the UN collection.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</description>
+      <description>UpdatesVersion 2: Update for WPP2019Comparison of estimates based on WPP2017 and WPP2019Which countries are most affected?Impact on validation exerciseVersion 3: Update for IMS2019Comparison of estimatesWhich countries are most affected?Impact on validation exerciseVersion 4: Correct for Serbia, Montenegro, Sudan and South Sudan before 2005Comparison of estimatesImpact on validation exerciseVersion 5: Update for IMS2020Comparison of estimatesImpact on validation exerciseUpdatesSince the paper was published I have produced four updates to reflect</description>
     </item>
     
     <item>
@@ -642,122 +182,9 @@ In the plot below I tried to illustrate the relative sizes of migrant population
       <pubDate>Mon, 04 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>/post/chinese-migration-chord-diagram/</guid>
-      <description>
-&lt;script src=&#34;./rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
-
-
-&lt;p&gt;We have had a number of requests for the R code to replicate the plots in our &lt;a href=&#34;https://guyabel.com/publication/china-internal-migration-2010-15/&#34;&gt;paper&lt;/a&gt; on internal migration in China. The code below will produce a similar looking plot, but I have taken out some of the arguments that were very specific to our plot that will not replicate well for other data.&lt;/p&gt;
-&lt;div id=&#34;data&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Data&lt;/h3&gt;
-&lt;p&gt;The code is based on two data sets:&lt;/p&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;Bilateral flow data with three columns only (origin, destination and flow), see &lt;a href=&#34;https://gist.github.com/guyabel/c24d990abc2c692f2b63747ee42909eb&#34;&gt;here&lt;/a&gt; for the file used below&lt;/li&gt;
-&lt;li&gt;Region details used for plotting, see &lt;a href=&#34;https://gist.github.com/guyabel/2f52e1593ad951800d83530a58ce0079&#34;&gt;here&lt;/a&gt; for the file used below&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Note, the names in the region data are the same as the ones used in the origin and destination data.&lt;/p&gt;
-&lt;p&gt;We can read in the data using &lt;code&gt;read_csv()&lt;/code&gt; in the readr package&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)
-
-d1 &amp;lt;- read_csv(&amp;quot;https://gist.githubusercontent.com/guyabel/c24d990abc2c692f2b63747ee42909eb/raw/6b255edee7e01ca31b856152d18ae10ad50badd5/china_flow_2010_2015.csv&amp;quot;)
-
-d1 &amp;lt;- mutate(d1, flow = flow/1e6)
-d1&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## # A tibble: 961 x 3
-##    orig           dest      flow
-##    &amp;lt;chr&amp;gt;          &amp;lt;chr&amp;gt;    &amp;lt;dbl&amp;gt;
-##  1 Beijing        Beijing 0     
-##  2 Tianjin        Beijing 0.0674
-##  3 Hebei          Beijing 0.864 
-##  4 Shanxi         Beijing 0.225 
-##  5 Inner Mongolia Beijing 0.103 
-##  6 Liaoning       Beijing 0.155 
-##  7 Jilin          Beijing 0.105 
-##  8 Heilongjiang   Beijing 0.194 
-##  9 Shanghai       Beijing 0.0266
-## 10 Jiangsu        Beijing 0.111 
-## # ... with 951 more rows&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;d2 &amp;lt;- read_csv(&amp;quot;https://gist.githubusercontent.com/guyabel/2f52e1593ad951800d83530a58ce0079/raw/165843fdd4afc61e17cd7658563e573c1e74fb57/china_region_details.csv&amp;quot;)
-d2&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## # A tibble: 31 x 6
-##    name      region order colour    gap name_zh
-##    &amp;lt;chr&amp;gt;     &amp;lt;chr&amp;gt;  &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;   &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;  
-##  1 Beijing   East       1 #B61416     2 &amp;lt;U+5317&amp;gt;&amp;lt;U+4EAC&amp;gt;   
-##  2 Tianjin   East       2 #C01517     2 &amp;lt;U+5929&amp;gt;&amp;lt;U+6D25&amp;gt;   
-##  3 Hebei     East       3 #CA1718     2 &amp;lt;U+6CB3&amp;gt;&amp;lt;U+5317&amp;gt;   
-##  4 Shandong  East       4 #D4181A     2 &amp;lt;U+5C71&amp;gt;&amp;lt;U+4E1C&amp;gt;   
-##  5 Jiangsu   East       5 #DE191B     2 &amp;lt;U+6C5F&amp;gt;&amp;lt;U+82CF&amp;gt;   
-##  6 Shanghai  East       6 #E91A1C     2 &amp;lt;U+4E0A&amp;gt;&amp;lt;U+6D77&amp;gt;   
-##  7 Zhejiang  East       7 #F31B1D     2 &amp;lt;U+6D59&amp;gt;&amp;lt;U+6C5F&amp;gt;   
-##  8 Fujian    East       8 #FD1C1F     2 &amp;lt;U+798F&amp;gt;&amp;lt;U+5EFA&amp;gt;   
-##  9 Guangdong East       9 #FF1E20     2 &amp;lt;U+5E7F&amp;gt;&amp;lt;U+4E1C&amp;gt;   
-## 10 Hainan    East      10 #FF1F21     6 &amp;lt;U+6D77&amp;gt;&amp;lt;U+5357&amp;gt;   
-## # ... with 21 more rows&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;plot&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Plot&lt;/h3&gt;
-&lt;p&gt;The code below plots the chord diagram without the default labels and axis for the &lt;code&gt;chordDiagram()&lt;/code&gt; function, that are added later in the &lt;code&gt;circos.track()&lt;/code&gt; function.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(circlize)
-
-circos.clear()
-circos.par(track.margin = c(0.01, -0.01), start.degree = 90, gap.degree = d2$gap)
-
-chordDiagram(x = d1, order = d2$name, 
-             grid.col = d2$colour, transparency = 0.25,
-             directional = 1, direction.type = c(&amp;quot;diffHeight&amp;quot;, &amp;quot;arrows&amp;quot;),
-             link.arr.type = &amp;quot;big.arrow&amp;quot;, diffHeight = -0.04, 
-             link.sort = TRUE, link.largest.ontop = TRUE, 
-             annotationTrack = &amp;quot;grid&amp;quot;,
-             preAllocateTracks = list(track.height = 0.25))
-
-circos.track(track.index = 1, bg.border = NA, panel.fun = function(x, y) {
-  s = get.cell.meta.data(&amp;quot;sector.index&amp;quot;)
-  xx = get.cell.meta.data(&amp;quot;xlim&amp;quot;)
-  circos.text(x = mean(xx), y = 0.2, 
-              labels = s, cex = 0.7, adj = c(0, 0.5),
-              facing = &amp;quot;clockwise&amp;quot;, niceFacing = TRUE)
-  circos.axis(h = &amp;quot;bottom&amp;quot;,
-              labels.cex = 0.5,
-              labels.pos.adjust = FALSE,
-              labels.niceFacing = FALSE)
-})&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;The legend is added using the &lt;code&gt;legend()&lt;/code&gt; function using the &lt;a href=&#34;http://colorbrewer2.org/#type=qualitative&amp;amp;scheme=Set1&amp;amp;n=4%5D&#34;&gt;Set1&lt;/a&gt; colour palette, that we used as the basis of regional shades in the colour column of &lt;code&gt;d2&lt;/code&gt;; see the &lt;a href=&#34;%5Bhttps://cran.r-project.org/web/packages/shades/index.html%5D&#34;&gt;shades&lt;/a&gt; package for creating palettes of similar colours.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;legend&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Legend&lt;/h3&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(RColorBrewer)
-legend(x = 0.7, y = 1.1, 
-       legend = unique(d2$region), 
-       fill = brewer.pal(n = 4, name = &amp;quot;Set1&amp;quot;), 
-       bty = &amp;quot;n&amp;quot;, cex = 0.8,
-       x.intersp = 0.5, 
-       title = &amp;quot;   Region&amp;quot;, title.adj = 0) &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;saving&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Saving&lt;/h3&gt;
-&lt;p&gt;To save the image in a PDF plot surround the plotting code above between the &lt;code&gt;pdf()&lt;/code&gt; function and &lt;code&gt;dev.off()&lt;/code&gt; function.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;pdf(file = &amp;quot;figure1.pdf&amp;quot;, width = 6, height = 6)
-
-### insert code from above
-
-dev.off()&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;image-files&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Image Files&lt;/h3&gt;
-&lt;p&gt;To convert the PDF to a PNG file I recommend the use of the &lt;a href=&#34;https://cran.r-project.org/web/packages/magick/&#34;&gt;magick&lt;/a&gt; package:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(magick)
-p &amp;lt;- image_read_pdf(&amp;quot;figure1.pdf&amp;quot;)
-image_write(image = p, path = &amp;quot;figure1.png&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;chinese-labels&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Chinese Labels&lt;/h3&gt;
-&lt;p&gt;To replace the labels with their Chinese names, as in the plot above, replace the code for the &lt;code&gt;s&lt;/code&gt; object in the &lt;code&gt;circos.track()&lt;/code&gt; function to:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;    s = d2 %&amp;gt;% 
-      filter(name == get.cell.meta.data(&amp;quot;sector.index&amp;quot;)) %&amp;gt;%
-      select(name_zh) %&amp;gt;%
-      pull()&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;You might also need to add &lt;code&gt;family = &#34;GB1&#34;&lt;/code&gt; in the &lt;code&gt;pdf()&lt;/code&gt; function for Chinese characters to render in a PDF viewer.&lt;/p&gt;
-&lt;/div&gt;
-</description>
+      <description>We have had a number of requests for the R code to replicate the plots in our paper on internal migration in China. The code below will produce a similar looking plot, but I have taken out some of the arguments that were very specific to our plot that will not replicate well for other data.
+DataThe code is based on two data sets:
+Bilateral flow data with three columns only (origin, destination and flow), see here for the file used belowRegion details used for plotting, see here for the file used belowNote, the names in the region data are the same as the ones used in the origin and destination data.</description>
     </item>
     
     <item>
@@ -775,53 +202,7 @@ image_write(image = p, path = &amp;quot;figure1.png&amp;quot;)&lt;/code&gt;&lt;/
       <pubDate>Wed, 14 Nov 2018 00:00:00 +0000</pubDate>
       
       <guid>/post/migrant-stock-chord-digrams/</guid>
-      <description>&lt;p&gt;During the last few months I have given some introductory talks on international migration in Asia and Europe. I had a couple of requests to share the animated chord diagrams that I created for others to use in their teaching materials.  These are below, along with some extra plots for Africa, the Americas (Northern, Central and Southern America as well as the Caribbean) and Oceania. Feel free to download the plots using right click over the animation and then &lt;code&gt;Save Video as&lt;/code&gt; or from &lt;a href=&#34;https://github.com/guyabel/personal-site/tree/master/static/img/cd-stock-region&#34; target=&#34;_blank&#34;&gt;Github&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;The chords in the diagrams represent the connection between the places of birth (at the base of the chord) and places of residence (at the arrow head of the chord). The width of based of the chords correspond to the size of the migrant population in millions. Chords are ordered relative to their size, with the largest migrant stocks plotted at the beginning of the country segments. The ordering of chords jumps around over time as the relative rankings of the largest foreign-born populations change in each country. Values for the migrant population sizes are from the &lt;del&gt;2017&lt;/del&gt; &lt;del&gt;2019&lt;/del&gt; 2020 revision of the United Nations DESA &lt;a href=&#34;https://www.un.org/development/desa/pd/content/international-migrant-stock&#34; target=&#34;_blank&#34;&gt;International Migrant Stock Data&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Note: you might have to right click, select show controls and hit play to start the animations depending on your browsers - right clicking can also allow you to access controls on the play back speed.&lt;/p&gt;
-
-&lt;!-- ![ ](/img/anigif_original-14120-1449691023-4-2.mp4) --&gt;
-
-&lt;video loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34; poster=&#34;/img/cd-stock-region/ims-abel-asia.png&#34; controls&gt;
-  &lt;source src=&#34;./img/cd-stock-region/ims-abel-asia.mp4&#34; type=&#34;video/mp4&#34; /&gt;
-&lt;/video&gt;
-
-&lt;video loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34; poster=&#34;/img/cd-stock-region/ims-abel-europe.png&#34; controls&gt;
-  &lt;source src=&#34;./img/cd-stock-region/ims-abel-europe.mp4&#34; type=&#34;video/mp4&#34; /&gt;
-&lt;/video&gt;
-
-&lt;video loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34; poster=&#34;/img/cd-stock-region/ims-abel-africa.png&#34; controls&gt;
-  &lt;source src=&#34;./img/cd-stock-region/ims-abel-africa.mp4&#34; type=&#34;video/mp4&#34; /&gt;
-&lt;/video&gt;
-
-&lt;video loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34; poster=&#34;/img/cd-stock-region/ims-abel-america.png&#34; controls&gt;
-  &lt;source src=&#34;./img/cd-stock-region/ims-abel-america.mp4&#34; type=&#34;video/mp4&#34; /&gt;
-&lt;/video&gt;
-  
-
-&lt;video loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34; poster=&#34;/img/cd-stock-region/ims-abel-oceania.png&#34; controls&gt;
-  &lt;source src=&#34;./img/cd-stock-region/ims-abel-oceania.mp4&#34; type=&#34;video/mp4&#34; /&gt;
-&lt;/video&gt;
-  
-
-&lt;!-- ![ ](/img/abel-asia-ani10.gif) --&gt;
-
-&lt;!-- ![ ](/img/abel-europe-ani10.gif) --&gt;
-
-&lt;!-- ![ ](/img/abel-africa-ani10.gif) --&gt;
-
-&lt;!-- ![ ](/img/abel-americas-ani10.gif) --&gt;
-
-&lt;p&gt;The data in these plots represent migrant population totals, not period migration flows, hence the usual caveats associated with migrant stock data apply:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Underlying migration flows might form different patterns as migrants might not be moving from their country of birth.&lt;/li&gt;
-&lt;li&gt;Migrant populations can decrease from deaths as well as outward migration.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;As in my previous post on &lt;a href=&#34;http://guyabel.com/post/animated-directional-chord-diagrams/&#34; target=&#34;_blank&#34;&gt;animated chord diagrams&lt;/a&gt; I used the &lt;a href=&#34;https://cran.r-project.org/web/packages/circlize/index.html&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;circlize&lt;/code&gt;&lt;/a&gt; package in R to produce each chord diagrams for each frame of the animation and &lt;a href=&#34;https://cran.r-project.org/web/packages/tweenr/index.html&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;tweenr&lt;/code&gt;&lt;/a&gt; for the intermediate data. The country flags were added using the &lt;code&gt;circos.raster()&lt;/code&gt; function in circlize. I used &lt;a href=&#34;https://cran.r-project.org/web/packages/magick/index.html&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;magick&lt;/code&gt;&lt;/a&gt; to read in the multipage PDF file of plots over time and &lt;a href=&#34;https://cran.r-project.org/web/packages/animation/index.html&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;animation&lt;/code&gt;&lt;/a&gt; to produce the MP4 file. I am beginning to prefer MP4 files to GIF as the file size are smaller - so quicker loading - and most browsers display MP4 videos with controls.&lt;/p&gt;
-</description>
+      <description>During the last few months I have given some introductory talks on international migration in Asia and Europe. I had a couple of requests to share the animated chord diagrams that I created for others to use in their teaching materials. These are below, along with some extra plots for Africa, the Americas (Northern, Central and Southern America as well as the Caribbean) and Oceania. Feel free to download the plots using right click over the animation and then Save Video as or from Github.</description>
     </item>
     
     <item>
@@ -830,12 +211,7 @@ image_write(image = p, path = &amp;quot;figure1.png&amp;quot;)&lt;/code&gt;&lt;/
       <pubDate>Mon, 13 Aug 2018 00:00:00 +0000</pubDate>
       
       <guid>/publication/global-migration-estimates-by-gender/</guid>
-      <description>
-
-&lt;h2 id=&#34;further-notes&#34;&gt;Further Notes&lt;/h2&gt;
-
-&lt;p&gt;Please contact me if cannot access the full paper and would like a copy.&lt;/p&gt;
-</description>
+      <description>Further Notes Please contact me if cannot access the full paper and would like a copy.</description>
     </item>
     
     <item>
@@ -853,6 +229,188 @@ image_write(image = p, path = &amp;quot;figure1.png&amp;quot;)&lt;/code&gt;&lt;/
       <pubDate>Sun, 01 Jul 2018 00:00:00 +0800</pubDate>
       
       <guid>/talk/apac2-2018/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bowling together: scientific collaboration networks of demographers at European Population Conferences</title>
+      <link>/publication/epc-collabs/</link>
+      <pubDate>Mon, 18 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/epc-collabs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Animating Changes in Football Kits using R</title>
+      <link>/post/football-kits/</link>
+      <pubDate>Tue, 05 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/football-kits/</guid>
+      <description>BackgroundI’m loving the magick package at the moment. Reading through the vignette I spotted the image_morph() function. In this post I experiment with the function to build the GIF below that shows the changes in the England football first kit over time, using images from the excellent Historical Football Kits website.
+ScrapingThe Historical Football Kits website has a detailed section on England kits spread over six pages, starting from the first outfits used in 1872.</description>
+    </item>
+    
+    <item>
+      <title>Non-zero trajectories for long-run net migration assumptions in global population projection models</title>
+      <link>/publication/non-zero-ssp-net-migration-projections/</link>
+      <pubDate>Wed, 16 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/non-zero-ssp-net-migration-projections/</guid>
+      <description>Further Notes Below are some plots that I had to drop from the paper. Some reviewers liked them, reviewer three didn’t. The editor sided with the later, making a good point; they distracted from the main narrative of the paper. I have put them here as 1) I think they still might be of interest to some and 2) it took some effort to gather the net migration data from as many past versions of the World Population Prospects (WPP) as I could get my hands on.</description>
+    </item>
+    
+    <item>
+      <title>Animated Directional Chord Diagrams</title>
+      <link>/post/animated-directional-chord-diagrams/</link>
+      <pubDate>Wed, 18 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/animated-directional-chord-diagrams/</guid>
+      <description>BackgroundA little while ago my paper in International Migration Review on global migration flow estimates came out online. The paper includes a number of directional chord diagrams to visualize the estimates.
+Recently I have been playing around tweenr and the magick packages for animated population pyramids. In this post I attempt to show how to use these packages to produce animated directional chord diagrams of global migration flow estimates</description>
+    </item>
+    
+    <item>
+      <title>Driving Factors of Asian International Migration Flows</title>
+      <link>/talk/paa-2018/</link>
+      <pubDate>Wed, 18 Apr 2018 00:00:00 +0800</pubDate>
+      
+      <guid>/talk/paa-2018/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Probabilistic Method for Combining Internal Migration Data</title>
+      <link>/talk/epc-2018/</link>
+      <pubDate>Wed, 18 Apr 2018 00:00:00 +0800</pubDate>
+      
+      <guid>/talk/epc-2018/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Probabilistic Method for Combining Internal Migration Data</title>
+      <link>/talk/uw2-2018/</link>
+      <pubDate>Wed, 18 Apr 2018 00:00:00 +0800</pubDate>
+      
+      <guid>/talk/uw2-2018/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Visualizing Migration Flows: How to Design and Produce Animated Directional Chord Diagrams in R</title>
+      <link>/talk/uw1-2018/</link>
+      <pubDate>Wed, 18 Apr 2018 00:00:00 +0800</pubDate>
+      
+      <guid>/talk/uw1-2018/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Subnational gender balances in South Korea</title>
+      <link>/publication/korea-gender-balance/</link>
+      <pubDate>Tue, 06 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/korea-gender-balance/</guid>
+      <description>Further Notes An animated version of the plot in the paper I made when playing around with gganimate</description>
+    </item>
+    
+    <item>
+      <title>ARDI International Migration Pillar</title>
+      <link>/project/adri-pillar/</link>
+      <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/project/adri-pillar/</guid>
+      <description>Exploring international migration patterns for the Globe, Asia and Shanghai.</description>
+    </item>
+    
+    <item>
+      <title>Combining Migration Data</title>
+      <link>/project/combining-migration-data/</link>
+      <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/project/combining-migration-data/</guid>
+      <description>Combining traditional and emerging big data sources to model population. Funded by Der Jubiläumsfonds der Stadt Wien für die Österreichische Akademie der Wissenschaften.</description>
+    </item>
+    
+    <item>
+      <title>Global Migration Predictions</title>
+      <link>/project/global-migration-prediction/</link>
+      <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/project/global-migration-prediction/</guid>
+      <description>The Prediction of Future Migration Patterns for Improved Global Population Projections. Funded by National Science Foundation of China Research Fund for International Young Scientists.</description>
+    </item>
+    
+    <item>
+      <title>Bilateral International Migration Flow Estimates for 200 Countries</title>
+      <link>/talk/hanyang-2019/</link>
+      <pubDate>Thu, 01 Feb 2018 00:00:00 +0800</pubDate>
+      
+      <guid>/talk/hanyang-2019/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bilateral International Migration Flow Estimates for 200 Countries</title>
+      <link>/talk/ifms-2020/</link>
+      <pubDate>Thu, 01 Feb 2018 00:00:00 +0800</pubDate>
+      
+      <guid>/talk/ifms-2020/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gender, Education and Marital Status Differentials in Migration</title>
+      <link>/talk/anu-2018/</link>
+      <pubDate>Thu, 01 Feb 2018 00:00:00 +0800</pubDate>
+      
+      <guid>/talk/anu-2018/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gender, Education and Marital Status Differentials in Migration</title>
+      <link>/talk/uq-2018/</link>
+      <pubDate>Thu, 01 Feb 2018 00:00:00 +0800</pubDate>
+      
+      <guid>/talk/uq-2018/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Changing internal migration flows patterns in South Korea</title>
+      <link>/publication/korea-internal-migration-1970-2016/</link>
+      <pubDate>Thu, 18 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/korea-internal-migration-1970-2016/</guid>
+      <description>Further Notes Please contact me if you would like the R code to produce the plot.</description>
+    </item>
+    
+    <item>
+      <title>Tags</title>
+      <link>/home/tags/</link>
+      <pubDate>Wed, 20 Sep 2017 00:00:00 +0800</pubDate>
+      
+      <guid>/home/tags/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Chinese Internal Migration Flows 2010–2015 </title>
+      <link>/publication/china-internal-migration-2010-15/</link>
+      <pubDate>Fri, 07 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/china-internal-migration-2010-15/</guid>
+      <description>Further Notes Here is an additional WeChat post on the paper (in Chinese) written by Qi Wei.</description>
+    </item>
+    
+    <item>
+      <title>Climate Vulnerability and Human Migration in Global Perspective</title>
+      <link>/publication/global-climate-vulnerability-and-migration/</link>
+      <pubDate>Sun, 30 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/global-climate-vulnerability-and-migration/</guid>
       <description></description>
     </item>
     
