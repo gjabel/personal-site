@@ -11,7 +11,7 @@ title = "Guy Abel"
 
 # Your copyright notice - appears in site footer.
 # To display a copyright symbol, type `&copy;`.
-copyright = "&copy; 2021 &middot; Selected posts also on <a href=\"https://r-bloggers.com/\">R-bloggers</a>"
+copyright = "&copy; 2021 &middot; Selected posts also on <a href=\"https://r-bloggers.com/\">R-bloggers</a> and <a href=\"https://rweekly.org/\">R Weekly</a>"
 
 theme = "starter-hugo-academic"
 enableEmoji = true
@@ -34,7 +34,7 @@ defaultContentLanguageInSubdir = false
   home = [ "HTML", "CSS", "RSS" ]
   section = [ "HTML", "RSS" ]
   tags = [ "HTML", "RSS" ]
-  taxonomy = [ "HTML", "RSS" ]
+  taxonomy = [ "HTML", "RSS"]
   taxonomyTerm = [ "HTML", "RSS" ]
   
 # Configure BlackFriday Markdown rendering.
