@@ -5,12 +5,40 @@
     <link>https://guyabel.com/categories/chord-diagram/</link>
       <atom:link href="https://guyabel.com/categories/chord-diagram/index.xml" rel="self" type="application/rss+xml" />
     <description>chord diagram</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-uk</language><copyright>© 2021 Guy Abel</copyright><lastBuildDate>Sat, 20 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-uk</language><copyright>© 2021 Guy Abel</copyright><lastBuildDate>Thu, 03 Jun 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://guyabel.com/media/icon_hua235b20c26de23a006d4e436991121ab_642_512x512_fill_lanczos_center_2.png</url>
       <title>chord diagram</title>
       <link>https://guyabel.com/categories/chord-diagram/</link>
     </image>
+    
+    <item>
+      <title>The evolution of squad compositions at the UEFA European Championship</title>
+      <link>https://guyabel.com/post/uefa-ec-chord-diagram/</link>
+      <pubDate>Thu, 03 Jun 2021 00:00:00 +0000</pubDate>
+      <guid>https://guyabel.com/post/uefa-ec-chord-diagram/</guid>
+      <description>&lt;p&gt;I have been playing around with &lt;a href=&#34;https://rvest.tidyverse.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;rvest&lt;/a&gt; once again, and decided to extend some old &lt;a href=&#34;https://gjabel.wordpress.com/2016/06/15/euro-2016-squads/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;code&lt;/a&gt; to put together a data base on the squads at past European Championships from &lt;a href=&#34;https://en.wikipedia.org/wiki/UEFA_Euro_2020_squads&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Wikipedia&lt;/a&gt;. I wanted to use the chordDiagram() function in the &lt;a href=&#34;https://jokergoo.github.io/circlize_book/book/the-chorddiagram-function.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;circlize&lt;/a&gt; package in R to illustrate the links between the league of the clubs where each national team player is represented.&lt;/p&gt;
+&lt;p&gt;A few days ago, the squads were confirmed for Euro2020. The chords between the leagues and national teams form one big hair ball:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;featured.png&#34; alt=&#34; &#34;&gt;&lt;/p&gt;
+&lt;p&gt;The chords represent connections between the country of a player&amp;rsquo;s club (at the chord base) and their national team (at the arrow head). The colours of each chord in the plot are based on the shirt of each national team. Chord thickness represents the number of players per club country-national team combination. The countries are ordered by the groups that they will play in during the first round (in the animation below I order the teams by their first appearance at a tournament). The countries at the top of the diagram with no flags are leagues where the national team are not represented at the tournament, but some of clubs have players representing other national teams.&lt;/p&gt;
+&lt;p&gt;The chords coming out of each sector are ordered by size - its interesting to see more Austrian than German players playing in German leagues, and more Welsh than English players playing in English leagues.&lt;/p&gt;
+&lt;p&gt;I adapted some code from animated migration &lt;a href=&#34;https://guyabel.com/categories/chord-diagram/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;chord diagrams&lt;/a&gt; to provide a history of the relationships between the club leagues of the players and the national team squads at each European Championship.&lt;/p&gt;
+&lt;style&gt;
+video {
+  /* override other styles to make responsive */
+  width: 100%    !important;
+  height: auto   !important;
+  max-height: 720px
+}
+&lt;/style&gt;
+&lt;video loop=&#34;loop&#34; controls&gt;
+  &lt;source src=&#34;abel-euro.mp4&#34; type=&#34;video/mp4&#34; /&gt;
+&lt;/video&gt;
+&lt;p&gt;Note: you might have to right click, select show controls and hit play to start the animations depending on your browsers - right clicking can also allow you to access controls on the play back speed.&lt;/p&gt;
+&lt;h2 id=&#34;r-code&#34;&gt;R Code&lt;/h2&gt;
+&lt;p&gt;I put the data and all the R code to scrape the squads, flags, kit colours and tournament logos in a Github &lt;a href=&#34;https://github.com/guyabel/uefa-ec&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;repository&lt;/a&gt;. The R code to produce the plot and animation are also in the repository.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Global Migrant Stock Chord Diagrams</title>

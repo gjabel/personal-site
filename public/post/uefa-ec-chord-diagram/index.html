@@ -30,7 +30,7 @@
   
     
   
-  <meta name="description" content="Background Sankey plots have been used to visualize bilateral migration many times. My favorite examples of Sankey plots for migration data tend to be when there are only few regions or countries." />
+  <meta name="description" content="I have been playing around with rvest once again, and decided to extend some old code to put together a data base on the squads at past European Championships from Wikipedia." />
 
   
   <link rel="alternate" hreflang="en-uk" href="https://guyabel.com/post/uefa-ec-chord-diagram/" />
@@ -330,24 +330,23 @@
   
   
     
-    
   
   
-  <meta property="twitter:card" content="summary" />
+  <meta property="twitter:card" content="summary_large_image" />
   
   <meta property="og:site_name" content="Guy Abel" />
   <meta property="og:url" content="https://guyabel.com/post/uefa-ec-chord-diagram/" />
-  <meta property="og:title" content="Animated Sankey Plots of Global Migrant Populations | Guy Abel" />
-  <meta property="og:description" content="Background Sankey plots have been used to visualize bilateral migration many times. My favorite examples of Sankey plots for migration data tend to be when there are only few regions or countries." /><meta property="og:image" content="https://guyabel.com/media/icon_hua235b20c26de23a006d4e436991121ab_642_512x512_fill_lanczos_center_2.png" />
-    <meta property="twitter:image" content="https://guyabel.com/media/icon_hua235b20c26de23a006d4e436991121ab_642_512x512_fill_lanczos_center_2.png" /><meta property="og:locale" content="en-uk" />
+  <meta property="og:title" content="The evolution of squad compositions at the UEFA European Championship | Guy Abel" />
+  <meta property="og:description" content="I have been playing around with rvest once again, and decided to extend some old code to put together a data base on the squads at past European Championships from Wikipedia." /><meta property="og:image" content="https://guyabel.com/post/uefa-ec-chord-diagram/featured.png" />
+    <meta property="twitter:image" content="https://guyabel.com/post/uefa-ec-chord-diagram/featured.png" /><meta property="og:locale" content="en-uk" />
   
     
       <meta
         property="article:published_time"
-        content="2021-05-21T00:00:00&#43;00:00"
+        content="2021-06-03T00:00:00&#43;00:00"
       />
     
-    <meta property="article:modified_time" content="2021-05-21T00:00:00&#43;00:00">
+    <meta property="article:modified_time" content="2021-06-03T00:00:00&#43;00:00">
   
 
   
@@ -373,10 +372,14 @@
     "@type": "WebPage",
     "@id": "https://guyabel.com/post/uefa-ec-chord-diagram/"
   },
-  "headline": "Animated Sankey Plots of Global Migrant Populations",
+  "headline": "The evolution of squad compositions at the UEFA European Championship",
   
-  "datePublished": "2021-05-21T00:00:00Z",
-  "dateModified": "2021-05-21T00:00:00Z",
+  "image": [
+    "https://guyabel.com/post/uefa-ec-chord-diagram/featured.png"
+  ],
+  
+  "datePublished": "2021-06-03T00:00:00Z",
+  "dateModified": "2021-06-03T00:00:00Z",
   
   "author": {
     "@type": "Person",
@@ -391,7 +394,7 @@
       "url": "https://guyabel.com/media/icon_hua235b20c26de23a006d4e436991121ab_642_192x192_fill_lanczos_center_2.png"
     }
   },
-  "description": "Background Sankey plots have been used to visualize bilateral migration many times. My favorite examples of Sankey plots for migration data tend to be when there are only few regions or countries."
+  "description": "I have been playing around with rvest once again, and decided to extend some old code to put together a data base on the squads at past European Championships from Wikipedia."
 }
 </script>
 
@@ -407,7 +410,7 @@
 
 
 
-  <title>Animated Sankey Plots of Global Migrant Populations | Guy Abel</title>
+  <title>The evolution of squad compositions at the UEFA European Championship | Guy Abel</title>
 </head>
 
 
@@ -766,15 +769,6 @@
 
 
 
-<div class="article-header">
-  
-  
-    <img src="/media/headers/animated-sankey.png" class="article-banner" alt="Global migrant populations by World Bank income groups">
-  
-
-  <span class="article-header-caption">Global migrant populations by World Bank income groups</span>
-</div>
-
 
 
 
@@ -784,8 +778,10 @@
   
   
 <div class="article-container pt-3">
-  <h1>Animated Sankey Plots of Global Migrant Populations</h1>
+  <h1>The evolution of squad compositions at the UEFA European Championship</h1>
 
+  
+  <p class="page-subtitle">More players at the Euros are playing their club football abroad than ever before.</p>
   
 
   
@@ -813,7 +809,7 @@
     
       
     
-    May 21, 2021
+    Jun 3, 2021
   </span>
   
 
@@ -822,7 +818,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    4 min read
+    2 min read
   </span>
   
 
@@ -832,12 +828,15 @@
   
   
   
+    <span class="middot-divider"></span>
+    <a href="/post/uefa-ec-chord-diagram/#disqus_thread"></a>
+  
 
   
   
   <span class="middot-divider"></span>
   <span class="article-categories">
-    <i class="fas fa-folder mr-1"></i><a href="/categories/r/">R</a>, <a href="/categories/migration/">migration</a>, <a href="/categories/sankey/">sankey</a>, <a href="/categories/r-bloggers/">r-bloggers</a>, <a href="/categories/r-weekly/">r-weekly</a></span>
+    <i class="fas fa-folder mr-1"></i><a href="/categories/r/">R</a>, <a href="/categories/football/">football</a>, <a href="/categories/chord-diagram/">chord diagram</a>, <a href="/categories/r-weekly/">r-weekly</a></span>
   
 
 </div>
@@ -856,36 +855,13 @@
   <div class="article-container">
 
     <div class="article-style">
-      <h2 id="background">Background</h2>
-<p>Sankey plots have been used to visualize bilateral migration many times. My favorite examples of Sankey plots for migration data tend to be when there are only few regions or countries. As the number of regions or countries increases the plot become more cumbersome, where labels for the smaller areas get too small and the plotting area becomes a very long rectangle making it awkward to fit on paper or view on the screen. In such cases I prefer <a href="https://guyabel.com/post/global-migrant-stocks/" target="_blank" rel="noopener">chord diagrams</a></p>
-<p>The recent highlights <a href="https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2020_international_migration_highlights.pdf" target="_blank" rel="noopener">document</a> for the UN international migration stock data contained a couple of Sankey plots for the data in 2020. In this post I have created animated versions of one of the plots in the report to show changes in migrant distributions between 1990 and 2020 by World Bank income groups. I am using the destination and origin migrant stock data of the UN that can found online <a href="https://www.un.org/development/desa/pd/content/international-migrant-stock" target="_blank" rel="noopener">here</a> - see the data links on the right hand side.</p>
-<h2 id="r-code">R Code</h2>
-<p>Commented code to create the animated plots below are in a Gist <a href="https://gist.github.com/guyabel/f7c844f18c4d11916a6ee000532d0e8e" target="_blank" rel="noopener">here</a>, which you can run in R using the following&hellip;</p>
-<pre class="r"><code>library(devtools)
-source_gist("https://gist.github.com/guyabel/f7c844f18c4d11916a6ee000532d0e8e")
-</code></pre>
-<p>&hellip;so long as you have installed all packages used in the script. You might also need to edit the <code>saveVideo()</code> function for the location of <code>ffmpeg.exe</code>.</p>
-<p>The first part of the code imports the data into R, extracts the rows for the stock data by the World Bank income groups and creates a tweened data set for each frame of the animation.</p>
-<p>The second part of the code creates the animated plot file using ggplot and <code>geom_parallel_sets()</code> in <a href="https://ggforce.data-imaginist.com/reference/geom_parallel_sets.html" target="_blank" rel="noopener">ggforce</a>. There are a few packages in R that have functions for Sankey plots, for example <a href="https://github.com/gaborcsardi/sankey#readme" target="_blank" rel="noopener">sankey</a>, <a href="https://cran.r-project.org/web/packages/PantaRhei/vignettes/panta-rhei.html" target="_blank" rel="noopener">PantaRhei</a>, <a href="http://christophergandrud.github.io/networkD3/#sankey" target="_blank" rel="noopener">networkD3</a>, <a href="https://cran.rstudio.com/web/packages/sankeywheel/vignettes/sankeywheel.html" target="_blank" rel="noopener">sankeywheel</a>, <a href="https://plotly.com/r/sankey-diagram/" target="_blank" rel="noopener">plotly</a> and <a href="https://github.com/davidsjoberg/ggsankey" target="_blank" rel="noopener">ggsankey</a>. The <a href="https://corybrunson.github.io/ggalluvial/" target="_blank" rel="noopener">ggalluvial</a> packages also produces Sankey-type plots, but without spaces between each sector. I used ggforce because it is pretty easy to tweak the non-Sankey parts of the plot using ggplot functions, and  I had hoped that it would play well with gganimate - which it didn&rsquo;t, hence the use of tweenr - but perhaps <a href="https://github.com/thomasp85/ggforce/issues/235" target="_blank" rel="noopener">one day</a> it will given Thomas Lin Pedersen developed both the gganimate and ggforce packages.</p>
-<h2 id="plots">Plots</h2>
-<p>The first animated plot shows the changes over time where the y-axis increases as the migrant populations grow larger. It shows the evolution in the relative distributions of the origin, destination and the linking migrant corridors, in particular the relative growth of migrants in high income countries.</p>
+      <p>I have been playing around with <a href="https://rvest.tidyverse.org/" target="_blank" rel="noopener">rvest</a> once again, and decided to extend some old <a href="https://gjabel.wordpress.com/2016/06/15/euro-2016-squads/" target="_blank" rel="noopener">code</a> to put together a data base on the squads at past European Championships from <a href="https://en.wikipedia.org/wiki/UEFA_Euro_2020_squads" target="_blank" rel="noopener">Wikipedia</a>. I wanted to use the chordDiagram() function in the <a href="https://jokergoo.github.io/circlize_book/book/the-chorddiagram-function.html" target="_blank" rel="noopener">circlize</a> package in R to illustrate the links between the league of the clubs where each national team player is represented.</p>
+<p>A few days ago, the squads were confirmed for Euro2020. The chords between the leagues and national teams form one big hair ball:</p>
+<p><img src="featured.png" alt=" "></p>
+<p>The chords represent connections between the country of a player&rsquo;s club (at the chord base) and their national team (at the arrow head). The colours of each chord in the plot are based on the shirt of each national team. Chord thickness represents the number of players per club country-national team combination. The countries are ordered by the groups that they will play in during the first round (in the animation below I order the teams by their first appearance at a tournament). The countries at the top of the diagram with no flags are leagues where the national team are not represented at the tournament, but some of clubs have players representing other national teams.</p>
+<p>The chords coming out of each sector are ordered by size - its interesting to see more Austrian than German players playing in German leagues, and more Welsh than English players playing in English leagues.</p>
+<p>I adapted some code from animated migration <a href="https://guyabel.com/categories/chord-diagram/" target="_blank" rel="noopener">chord diagrams</a> to provide a history of the relationships between the club leagues of the players and the national team squads at each European Championship.</p>
 <style>
-.carousel-indicators {
-  bottom:-3%
-}
-.carousel-indicators > li,
-.carousel-indicators > li.active{
-    width: 40%;
-    height: 2%;
-    border-radius: 0;
-    border: solid 1px grey;
-    background: transparent;
-    text-indent: 0;
-    text-align: center;
-}
-.carousel-indicators > li.active {
-    background: #4caf50;
-}
 video {
   /* override other styles to make responsive */
   width: 100%    !important;
@@ -893,47 +869,12 @@ video {
   max-height: 720px
 }
 </style>
-<div id="carousel_free" class="carousel slide">
-  <ol class="carousel-indicators">
-    <li data-target="#carousel_free" data-slide-to="0" class="active">Areas</li>
-    <li data-target="#carousel_free" data-slide-to="1">Regions</li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <video loop="loop" controls>
-        <source src="abel_free.mp4" type="video/mp4" />
-      </video>
-    </div>
-    <div class="carousel-item">
-      <video loop="loop" controls>
-        <source src="abel_free_unknown.mp4" type="video/mp4" />
-      </video>
-    </div>
-  </div>
-</div>
-<br>
-<p>Note: you might have to right click, select show controls and hit play to start the animations depending on your browsers - right clicking can also allow you to access controls on the play back speed and save the video if you want to use it elsewhere.</p>
-<p>The second animated plot shows the changes over time where the y-axis is fixed to its maximum level. The adjustment allows the Sankey to grow into the plot space to see more clearly the changes in the overall levels of migrant populations.</p>
-<div id="carousel_forced2" class="carousel slide">
-  <ol class="carousel-indicators">
-    <li data-target="#carousel_forced2" data-slide-to="0" class="active">Areas</li>
-    <li data-target="#carousel_forced2" data-slide-to="1">Regions</li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <video loop="loop" controls>
-        <source src="abel_fixed.mp4" type="video/mp4" />
-      </video>
-    </div>
-    <div class="carousel-item">
-      <video loop="loop" controls>
-        <source src="abel_fixed_unknown.mp4" type="video/mp4" />
-      </video>
-    </div>
-  </div>
-</div>
-<br>
-<p>For both plots above there are alternative versions, that include an additional origin category for unknown place of birth. The values for the stock of migrants with unknown origins living in each World Bank income group are not in the main data frame in the UN excel sheet, but are in the regional aggregate sheets for each period. As a result the data importing and manipulation takes a bit of extra work (it is commented out in the Gist R script), but the plots are more &lsquo;complete&rsquo;, where the totals of the sectors sum to the global estimate of the UN at each time point.</p>
+<video loop="loop" controls>
+  <source src="abel-euro.mp4" type="video/mp4" />
+</video>
+<p>Note: you might have to right click, select show controls and hit play to start the animations depending on your browsers - right clicking can also allow you to access controls on the play back speed.</p>
+<h2 id="r-code">R Code</h2>
+<p>I put the data and all the R code to scrape the squads, flags, kit colours and tournament logos in a Github <a href="https://github.com/guyabel/uefa-ec" target="_blank" rel="noopener">repository</a>. The R code to produce the plot and animation are also in the repository.</p>
 
     </div>
 
@@ -943,12 +884,6 @@ video {
 
 
 
-
-<div class="article-tags">
-  
-  <a class="badge badge-light" href="/tag/academic/">Academic</a>
-  
-</div>
 
 
 
@@ -963,7 +898,7 @@ video {
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=https://guyabel.com/post/uefa-ec-chord-diagram/&amp;text=Animated%20Sankey%20Plots%20of%20Global%20Migrant%20Populations" target="_blank" rel="noopener" class="share-btn-twitter">
+        <a href="https://twitter.com/intent/tweet?url=https://guyabel.com/post/uefa-ec-chord-diagram/&amp;text=The%20evolution%20of%20squad%20compositions%20at%20the%20UEFA%20European%20Championship" target="_blank" rel="noopener" class="share-btn-twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -976,7 +911,7 @@ video {
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=https://guyabel.com/post/uefa-ec-chord-diagram/&amp;t=Animated%20Sankey%20Plots%20of%20Global%20Migrant%20Populations" target="_blank" rel="noopener" class="share-btn-facebook">
+        <a href="https://www.facebook.com/sharer.php?u=https://guyabel.com/post/uefa-ec-chord-diagram/&amp;t=The%20evolution%20of%20squad%20compositions%20at%20the%20UEFA%20European%20Championship" target="_blank" rel="noopener" class="share-btn-facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -989,7 +924,7 @@ video {
       
       
       <li>
-        <a href="mailto:?subject=Animated%20Sankey%20Plots%20of%20Global%20Migrant%20Populations&amp;body=https://guyabel.com/post/uefa-ec-chord-diagram/" target="_blank" rel="noopener" class="share-btn-email">
+        <a href="mailto:?subject=The%20evolution%20of%20squad%20compositions%20at%20the%20UEFA%20European%20Championship&amp;body=https://guyabel.com/post/uefa-ec-chord-diagram/" target="_blank" rel="noopener" class="share-btn-email">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -1002,7 +937,7 @@ video {
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https://guyabel.com/post/uefa-ec-chord-diagram/&amp;title=Animated%20Sankey%20Plots%20of%20Global%20Migrant%20Populations" target="_blank" rel="noopener" class="share-btn-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?url=https://guyabel.com/post/uefa-ec-chord-diagram/&amp;title=The%20evolution%20of%20squad%20compositions%20at%20the%20UEFA%20European%20Championship" target="_blank" rel="noopener" class="share-btn-linkedin">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -1015,7 +950,7 @@ video {
       
       
       <li>
-        <a href="whatsapp://send?text=Animated%20Sankey%20Plots%20of%20Global%20Migrant%20Populations%20https://guyabel.com/post/uefa-ec-chord-diagram/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="whatsapp://send?text=The%20evolution%20of%20squad%20compositions%20at%20the%20UEFA%20European%20Championship%20https://guyabel.com/post/uefa-ec-chord-diagram/" target="_blank" rel="noopener" class="share-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -1028,7 +963,7 @@ video {
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=https://guyabel.com/post/uefa-ec-chord-diagram/&amp;title=Animated%20Sankey%20Plots%20of%20Global%20Migrant%20Populations" target="_blank" rel="noopener" class="share-btn-weibo">
+        <a href="https://service.weibo.com/share/share.php?url=https://guyabel.com/post/uefa-ec-chord-diagram/&amp;title=The%20evolution%20of%20squad%20compositions%20at%20the%20UEFA%20European%20Championship" target="_blank" rel="noopener" class="share-btn-weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
@@ -1150,6 +1085,42 @@ video {
 
 
 
+  
+  
+  
+
+  
+  
+  
+
+  
+  <section id="comments">
+    
+<div id="disqus_thread"></div>
+<script>
+  var disqus_config = function () {
+    
+    
+    
+  };
+  (function() {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+      return;
+    }
+    var d = document, s = d.createElement('script'); s.async = true;
+    s.src = 'https://' + "guyabel" + '.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+  </section>
+  
+
 
 
 
@@ -1165,13 +1136,9 @@ video {
       
       <li><a href="/post/animated-sankey/">Animated Sankey Plots of Global Migrant Populations</a></li>
       
+      <li><a href="/post/football-kits/">Animating Changes in Football Kits using R</a></li>
+      
       <li><a href="/post/animated-directional-chord-diagrams/">Animated Directional Chord Diagrams</a></li>
-      
-      <li><a href="/post/tidycat/">Expand broom::tidy() output for categorical parameter estimates</a></li>
-      
-      <li><a href="/post/chinese-migration-chord-diagram/">R Code for Chinese Internal Migration Flows Chord Diagram</a></li>
-      
-      <li><a href="/post/global-migrant-stocks/">Global Migrant Stock Chord Diagrams</a></li>
       
     </ul>
   </div>
@@ -1323,6 +1290,8 @@ video {
     
     
     
+    
+      <script id="dsq-count-scr" src="https://guyabel.disqus.com/count.js" async></script>
     
 
     
