@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nayoung Heo | Guy Abel</title>
+    <link>https://guyabel.com/author/nayoung-heo/</link>
+      <atom:link href="https://guyabel.com/author/nayoung-heo/index.xml" rel="self" type="application/rss+xml" />
+    <description>Nayoung Heo</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-uk</language><copyright>© 2021 Guy Abel</copyright><lastBuildDate>Tue, 06 Feb 2018 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://guyabel.com/media/icon_hua235b20c26de23a006d4e436991121ab_642_512x512_fill_lanczos_center_2.png</url>
+      <title>Nayoung Heo</title>
+      <link>https://guyabel.com/author/nayoung-heo/</link>
+    </image>
+    
+    <item>
+      <title>Subnational gender balances in South Korea</title>
+      <link>https://guyabel.com/publication/korea-gender-balance/</link>
+      <pubDate>Tue, 06 Feb 2018 00:00:00 +0000</pubDate>
+      <guid>https://guyabel.com/publication/korea-gender-balance/</guid>
+      <description>&lt;h2 id=&#34;further-notes&#34;&gt;Further Notes&lt;/h2&gt;
+&lt;p&gt;An animated version of the plot in the paper I made when playing around with &lt;a href=&#34;https://github.com/thomasp85/gganimate&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;gganimate&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;korea_srb.gif&#34; alt=&#34; &#34;&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Changing internal migration flows patterns in South Korea</title>
+      <link>https://guyabel.com/publication/korea-internal-migration-1970-2016/</link>
+      <pubDate>Thu, 18 Jan 2018 00:00:00 +0000</pubDate>
+      <guid>https://guyabel.com/publication/korea-internal-migration-1970-2016/</guid>
+      <description>&lt;h2 id=&#34;further-notes&#34;&gt;Further Notes&lt;/h2&gt;
+&lt;p&gt;Please contact me if you would like the R code to produce the plot.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

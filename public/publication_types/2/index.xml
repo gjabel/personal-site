@@ -1,129 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>2 on Guy Abel</title>
-    <link>/publication_types/2/</link>
-    <description>Recent content in 2 on Guy Abel</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-uk</language>
-    <copyright>&amp;copy; 2021 &amp;middot; Selected posts also on &lt;a href=&#34;https://r-bloggers.com/&#34;&gt;R-bloggers&lt;/a&gt; and &lt;a href=&#34;https://rweekly.org/&#34;&gt;R Weekly&lt;/a&gt;</copyright>
-    <lastBuildDate>Tue, 16 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="/publication_types/2/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>The form and evolution of international migration networks</title>
-      <link>/publication/global-flow-networks/</link>
-      <pubDate>Tue, 16 Feb 2021 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/global-flow-networks/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Analyzing the Effect of Time in Migration Measurement Using Geo-referenced Digital Trace Data</title>
-      <link>/publication/digital-migration-measures/</link>
-      <pubDate>Mon, 01 Feb 2021 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/digital-migration-measures/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>International remittance flows and the economic and social consequences of COVID-19</title>
-      <link>/publication/covid-remittance/</link>
-      <pubDate>Thu, 28 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/covid-remittance/</guid>
-      <description>Animated Version Below is an animated version of the plot in the paper for remittance since 2010 based on the World Bank data</description>
-    </item>
-    
-    <item>
-      <title>Driving Factors of Asian International Migration Flows</title>
-      <link>/publication/asian-migration-drivers/</link>
-      <pubDate>Wed, 25 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/asian-migration-drivers/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Bilateral international migration flow estimates for 200 countries</title>
-      <link>/publication/bilateral-international-migration-flow-estimates/</link>
-      <pubDate>Mon, 17 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/bilateral-international-migration-flow-estimates/</guid>
-      <description>UpdatesVersion 2: Update for WPP2019Comparison of estimates based on WPP2017 and WPP2019Which countries are most affected?Impact on validation exerciseVersion 3: Update for IMS2019Comparison of estimatesWhich countries are most affected?Impact on validation exerciseVersion 4: Correct for Serbia, Montenegro, Sudan and South Sudan before 2005Comparison of estimatesImpact on validation exerciseVersion 5: Update for IMS2020Comparison of estimatesImpact on validation exerciseUpdatesSince the paper was published I have produced four updates to reflect</description>
-    </item>
-    
-    <item>
-      <title>Climate, Conflict and Forced Migration</title>
-      <link>/publication/climate-conflict-and-forced-migration/</link>
-      <pubDate>Mon, 21 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/climate-conflict-and-forced-migration/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Estimates of Global Bilateral Migration Flows by Gender between 1960 and 2015</title>
-      <link>/publication/global-migration-estimates-by-gender/</link>
-      <pubDate>Mon, 13 Aug 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/global-migration-estimates-by-gender/</guid>
-      <description>Further Notes Please contact me if cannot access the full paper and would like a copy.</description>
-    </item>
-    
-    <item>
-      <title>Bowling together: scientific collaboration networks of demographers at European Population Conferences</title>
-      <link>/publication/epc-collabs/</link>
-      <pubDate>Mon, 18 Jun 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/epc-collabs/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Non-zero trajectories for long-run net migration assumptions in global population projection models</title>
-      <link>/publication/non-zero-ssp-net-migration-projections/</link>
-      <pubDate>Wed, 16 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/non-zero-ssp-net-migration-projections/</guid>
-      <description>Further Notes Below are some plots that I had to drop from the paper. Some reviewers liked them, reviewer three didn’t. The editor sided with the later, making a good point; they distracted from the main narrative of the paper. I have put them here as 1) I think they still might be of interest to some and 2) it took some effort to gather the net migration data from as many past versions of the World Population Prospects (WPP) as I could get my hands on.</description>
-    </item>
-    
-    <item>
-      <title>Subnational gender balances in South Korea</title>
-      <link>/publication/korea-gender-balance/</link>
-      <pubDate>Tue, 06 Feb 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/korea-gender-balance/</guid>
-      <description>Further Notes An animated version of the plot in the paper I made when playing around with gganimate</description>
-    </item>
-    
-    <item>
-      <title>Changing internal migration flows patterns in South Korea</title>
-      <link>/publication/korea-internal-migration-1970-2016/</link>
-      <pubDate>Thu, 18 Jan 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/korea-internal-migration-1970-2016/</guid>
-      <description>Further Notes Please contact me if you would like the R code to produce the plot.</description>
-    </item>
-    
-    <item>
-      <title>Chinese Internal Migration Flows 2010–2015 </title>
-      <link>/publication/china-internal-migration-2010-15/</link>
-      <pubDate>Fri, 07 Jul 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/china-internal-migration-2010-15/</guid>
-      <description>Further Notes Here is an additional WeChat post on the paper (in Chinese) written by Qi Wei.</description>
-    </item>
-    
-    <item>
-      <title>Climate Vulnerability and Human Migration in Global Perspective</title>
-      <link>/publication/global-climate-vulnerability-and-migration/</link>
-      <pubDate>Sun, 30 Apr 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/global-climate-vulnerability-and-migration/</guid>
-      <description></description>
-    </item>
-    
-  </channel>
-</rss>

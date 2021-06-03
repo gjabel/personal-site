@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Joel E. Cohen | Guy Abel</title>
+    <link>https://guyabel.com/author/joel-e.-cohen/</link>
+      <atom:link href="https://guyabel.com/author/joel-e.-cohen/index.xml" rel="self" type="application/rss+xml" />
+    <description>Joel E. Cohen</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-uk</language><copyright>© 2021 Guy Abel</copyright><lastBuildDate>Mon, 17 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://guyabel.com/media/icon_hua235b20c26de23a006d4e436991121ab_642_512x512_fill_lanczos_center_2.png</url>
+      <title>Joel E. Cohen</title>
+      <link>https://guyabel.com/author/joel-e.-cohen/</link>
+    </image>
+    
+    <item>
+      <title>Bilateral international migration flow estimates for 200 countries</title>
+      <link>https://guyabel.com/publication/bilateral-international-migration-flow-estimates/</link>
+      <pubDate>Mon, 17 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>https://guyabel.com/publication/bilateral-international-migration-flow-estimates/</guid>
+      <description>
+&lt;script src=&#34;https://guyabel.com/publication/bilateral-international-migration-flow-estimates/index_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://guyabel.com/publication/bilateral-international-migration-flow-estimates/index_files/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://guyabel.com/publication/bilateral-international-migration-flow-estimates/index_files/pymjs/pym.v1.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://guyabel.com/publication/bilateral-international-migration-flow-estimates/index_files/widgetframe-binding/widgetframe.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#updates&#34;&gt;Updates&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#version-2-update-for-wpp2019&#34;&gt;&lt;a id=&#34;WPP2019&#34;&gt;&lt;/a&gt;Version 2: Update for WPP2019&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#comparison-of-estimates-based-on-wpp2017-and-wpp2019&#34;&gt;Comparison of estimates based on WPP2017 and WPP2019&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#which-countries-are-most-affected&#34;&gt;Which countries are most affected?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#impact-on-validation-exercise&#34;&gt;Impact on validation exercise&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#version-3-update-for-ims2019&#34;&gt;&lt;a id=&#34;IMS2019&#34;&gt;&lt;/a&gt;Version 3: Update for IMS2019&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#comparison-of-estimates&#34;&gt;Comparison of estimates&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#which-countries-are-most-affected-1&#34;&gt;Which countries are most affected?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#impact-on-validation-exercise-1&#34;&gt;Impact on validation exercise&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#version-4-correct-for-serbia-montenegro-sudan-and-south-sudan-before-2005&#34;&gt;&lt;a id=&#34;SCGSUD&#34;&gt;&lt;/a&gt;Version 4: Correct for Serbia, Montenegro, Sudan and South Sudan before 2005&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#comparison-of-estimates-1&#34;&gt;Comparison of estimates&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#impact-on-validation-exercise-2&#34;&gt;Impact on validation exercise&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#version-5-update-for-ims2020&#34;&gt;&lt;a id=&#34;IMS2020&#34;&gt;&lt;/a&gt;Version 5: Update for IMS2020&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#comparison-of-estimates-2&#34;&gt;Comparison of estimates&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#impact-on-validation-exercise-3&#34;&gt;Impact on validation exercise&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;updates&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Updates&lt;/h2&gt;
+&lt;p&gt;Since the paper was published I have produced four updates to reflect&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The latest United Nations demographic data released in WPP2019 (July 19, 2019)&lt;/li&gt;
+&lt;li&gt;The latest United Nations migrant stock data released in IMS2019 and IMS2020 (October 23, 2019 and February 1, 2021)&lt;/li&gt;
+&lt;li&gt;Corrections for Serbia, Montenegro, Sudan and South Sudan in earlier periods (August 3, 2020)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;See the table of contents above to jump to a short discussion on each update. The different versions of estimates are all available on &lt;a href=&#34;https://figshare.com/articles/dataset/Bilateral_international_migration_flow_estimates_for_200_countries_1990-1995_to_2010-2015_/7731233&#34;&gt;Figshare&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;version-2-update-for-wpp2019&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;&lt;a id=&#34;WPP2019&#34;&gt;&lt;/a&gt;Version 2: Update for WPP2019&lt;/h2&gt;
+&lt;p&gt;This paper came out a day before the United Nations Population Division updated their &lt;a href=&#34;https://population.un.org/wpp/&#34;&gt;World Population Prospects&lt;/a&gt; (WPP). As all the estimates were based on WPP2017 our claim for the estimates being based on the most up to date input data was only true for around 24 hours.&lt;/p&gt;
+&lt;p&gt;In order to keep the estimates a bit more current I have added new version based on the WPP2019 to the &lt;a href=&#34;https://figshare.com/collections/Bilateral_international_migration_flow_estimates_for_200_countries/4470464&#34;&gt;Figshare collection&lt;/a&gt;. Below is a quick summary of the changes in the updated estimates to those in the paper.&lt;/p&gt;
+&lt;div id=&#34;comparison-of-estimates-based-on-wpp2017-and-wpp2019&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Comparison of estimates based on WPP2017 and WPP2019&lt;/h3&gt;
+&lt;p&gt;The plot below shows the relationship between the bilateral flow estimates based on WPP2017 and WPP2019 from each period and estimation method.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;v2-compare.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;For the stock differencing methods there are no changes in the estimates. They do not rely on WPP data. The migration rates approach uses the total absolute net migration data from WPP. All bilateral flows from WPP2019 are slightly higher than their WPP2017 counterparts, though it is barely noticeable in the plot above. The demographic accounting methods use the birth, death and population estimates from the WPP. In each method there are some sizable differences for the flows generated by updated revisions to the WPP demographic data, in particular for those based on the closed demographic accounting approach.&lt;/p&gt;
+&lt;p&gt;These difference results in revisions to the overall totals of migration flows. Below is an animation of the changes to &lt;a href=&#34;https://www.nature.com/articles/s41597-019-0089-3#Fig2&#34;&gt;Figure 2&lt;/a&gt; in the paper&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;v2-est_tot.gif&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;From this plot it is easier to see the changes in the migration rates estimation method. I was surprised that the changes in the estimates were occurring in all periods, not just the most recent period (2010-2015). To investigate I took a look at the changes in the WPP data.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;which-countries-are-most-affected&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Which countries are most affected?&lt;/h3&gt;
+&lt;p&gt;The countries where the largest changes in the bilateral estimates occurred (from the closed demographic accounting methods) can be detected by looking at the revisions in net migration between WPP2017 and WPP2019. Net migration is the best measure to track their changes as it correlates perfectly with the net migration in the WPP and is the residual of the input data (births, deaths and population) for the estimates based on the demographic accounting methods. Below are the changes in the complete time series of net migration in nine countries where the largest absolute differences (in any period) between the two WPP versions occur.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;v2-wpp_big_changes.gif&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;At first I was a bit surprised by the scale of the changes. In some periods the revisions to net migration are greater than a million. I dug a little deeper into net migration in previous WPP revisions to find that similar revisions are not unusual. Below are the revisions of absolute net migration between past WPP versions that exceed one million (back to WPP2000, the earliest WPP data I can get my hands on).&lt;/p&gt;
+&lt;div id=&#34;htmlwidget-1&#34; style=&#34;width:100%;height:100%;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-1&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;index_files/figure-html//widgets/widget_unnamed-chunk-2.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
+&lt;/div&gt;
+&lt;div id=&#34;impact-on-validation-exercise&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Impact on validation exercise&lt;/h3&gt;
+&lt;p&gt;The impact of the revision in WPP data on the validation exercise in the paper is minimal. Below is an update of &lt;a href=&#34;https://www.nature.com/articles/s41597-019-0089-3#Fig4&#34;&gt;Figure 4&lt;/a&gt; in the paper.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;v2-val_all.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;The correlations change by few hundredths of a decimal. These small changes, despite what is shown in the first plot above, are due to the limited amount of reported migration flows statistics (at the global level) to carry out our validation exercise. In the 45 countries that we used (based on the United Nations Population Division &lt;a href=&#34;https://www.un.org/en/development/desa/population/migration/data/empirical2/migrationflows.asp&#34;&gt;collection&lt;/a&gt;) the revisions in the WPP data were relatively minor, hence only small changes in their estimates and the correlations with the reported data.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;version-3-update-for-ims2019&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;&lt;a id=&#34;IMS2019&#34;&gt;&lt;/a&gt;Version 3: Update for IMS2019&lt;/h2&gt;
+&lt;p&gt;Another update in the input data came out a few weeks back - this time the UN &lt;a href=&#34;https://www.un.org/en/development/desa/population/migration/data/estimates2/estimates19.asp&#34;&gt;International Migrant Stock&lt;/a&gt; (IMS) data. I have added another set of flow estimates based on the IMS2019 and WPP2019 to the &lt;a href=&#34;https://figshare.com/collections/Bilateral_international_migration_flow_estimates_for_200_countries/4470464&#34;&gt;Figshare collection&lt;/a&gt; (the original flow estimates in the paper were based on IMS2017). I do not expect there will not be a need to update the estimates again until at least 2021.&lt;/p&gt;
+&lt;p&gt;Below are a few plots to give some visual summaries of the changes in the updated estimates to those in the paper and from the last update.&lt;/p&gt;
+&lt;div id=&#34;comparison-of-estimates&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Comparison of estimates&lt;/h3&gt;
+&lt;p&gt;The plot below shows the relationship between the bilateral flow estimates based on IMS2017 and WPP2017 (as in the paper) and IMS2019 - WPP2019 (this update) from each period and estimation method.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;v3-compare.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;In all methods (columns) there are changes some the estimates, which tend to be larger in more recent periods (lower rows) and estimation methods based on demographic accounting (columns to the right). These patterns are likely due to larger revisions in the most recent stock data and the use of updated demographic data in the demographic accounting methods - not required in the stock differencing approaches.&lt;/p&gt;
+&lt;p&gt;The revisions to the overall totals of migration flows, shown in &lt;a href=&#34;https://www.nature.com/articles/s41597-019-0089-3#Fig2&#34;&gt;Figure 2&lt;/a&gt; in the paper, are animated below, transitioning from 1) the estimates in the paper to 2) the first update of the estimates from changes in the demographic data to 3) the most recent update for changes in the stock data.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;v3-est_tot.gif&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;The 2010-2015 estimates are, on the whole, suggesting that the total global flows remained at similar levels to 2005-2010. Earlier versions of the estimates had suggested a decline. As a result the crude global migration rate falls by only a small margin for most estimation methods during 2010-2015, except for Pseudo-Bayesian estimates of flows where the rate increases a touch.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;which-countries-are-most-affected-1&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Which countries are most affected?&lt;/h3&gt;
+&lt;p&gt;The largest changes in the bilateral flow estimates can be partially detected by looking at the revisions in migrant stock data between IMS2017 and IMS2019. In the stock differencing methods these changes are directly related to the change in the estimated flow sizes between the bilateral country pair. In the demographic accounting approaches the impact of the revision is less direct on the estimated flows, as each method allows for return and on-wards migration to match changes in migrant stock data. Below is scatter plot of the changes in the IMS data by continent.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;v3-tims_change.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;There are a few features to note. First, and unsurprisingly, the largest revisions are occurring in the most recent data (2015). Second, the biggest changes are in North American data sources. Below is a table of the bilateral pairs where the revision to the migrant stocks are greater than 100,000. Third, in some areas there are noticeable patterns to the changes - the diagonal lines parallel to the &lt;span class=&#34;math inline&#34;&gt;\(y=x\)&lt;/span&gt; line - which I guess is related to updates in the data used to imputation missing bilateral stocks.&lt;/p&gt;
+&lt;div id=&#34;htmlwidget-2&#34; style=&#34;width:100%;height:100%;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-2&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;index_files/figure-html//widgets/widget_unnamed-chunk-4.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
+&lt;/div&gt;
+&lt;div id=&#34;impact-on-validation-exercise-1&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Impact on validation exercise&lt;/h3&gt;
+&lt;p&gt;The impact of the revision in stock data on the validation exercise in the paper is slightly larger than the previous update, but still not very dramatic. Below is an animated version of &lt;a href=&#34;https://www.nature.com/articles/s41597-019-0089-3#Fig4&#34;&gt;Figure 4&lt;/a&gt; in the paper, showing the correlations between the flow estimates and reported data for various migration measures, for the original estimates and subsequent updates based on new WPP and IMS data.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;v3-val_all.gif&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;As with the first update, the small changes in the correlations, despite some large revisions in the migrant stock data are due to the limited amount of reported migration flows statistics (at the global level) to carry out our validation exercise.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;version-4-correct-for-serbia-montenegro-sudan-and-south-sudan-before-2005&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;&lt;a id=&#34;SCGSUD&#34;&gt;&lt;/a&gt;Version 4: Correct for Serbia, Montenegro, Sudan and South Sudan before 2005&lt;/h2&gt;
+&lt;p&gt;In the original paper, and updates described above, both Serbia and Montenegro, and Sudan and South Sudan are treated as separate countries through the entire 1990 to 2015 period. This was not a great choice. Although the UN provide separate demographic and migrant stock data for each of the four countries back to 1990, the notes in the migrant stock speadsheet (number 4 and 24) point out that the foreign born data for Sudan and Serbia before 2005 cover South Sudan and Montenegro respectively. In both South Sudan and Montenegro before 2005 there is no data provided for the foreign born populations.&lt;/p&gt;
+&lt;p&gt;The differences in geographic coverge of Sudan and Serbia in the migrant stock data has an impact on the flow estimates that are based on the differences in stocks. For example, the demographic accounting based methods were trying to calibrate changes in foreign born stocks (from zero in 1990 to zero in 1995 for example) in South Sudan and Montenegro with a non-zero net migration over the period. This was resolved in the background by some parts of the IPF code running until their default iteration limit rather than until convergence, where convergence was not feasible. I picked up on this when adding some new warning messages in the &lt;code&gt;ffs_demo()&lt;/code&gt; function of the &lt;a href=&#34;https://cran.r-project.org/web/packages/migest/index.html&#34;&gt;migest&lt;/a&gt; package which should now alert users for non-convergence.&lt;/p&gt;
+&lt;p&gt;To rectify this problem I have created a new version of the estimates that treat Serbia and Montenegro, and Sudan and South Sudan, as single countries before 2010-2015. This reduces the number of countries in the earlier periods of the data to 198, there is still 200 countries, and the estimates are the same as in the previous update. I use the SCG and SUD country codes for Serbia and Montenegro and Sudan before 2010-2015, and the four separate country codes during 2010-2015 and after (SRB, MNE, SDN, SSD as in previous versions).&lt;/p&gt;
+&lt;p&gt;I have added a few plots below to once again give some summaries of the changes in the updated estimates to those in the paper and from the last update.&lt;/p&gt;
+&lt;div id=&#34;comparison-of-estimates-1&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Comparison of estimates&lt;/h3&gt;
+&lt;p&gt;The plot below shows the relationship between the bilateral flow estimates based on the last update based on IMS2019 and WPP2019 and the newer estimates with the correction for the four countries.&lt;/p&gt;
+&lt;!-- In all periods the estimates for 2005-2010 and 2010-2015 remain unchanged, hence all points are on the diagonal line. In earlier periods there are a small number of bilateral estimates from the rates and demographic accounting methods. For the demographic accounting methods this is due to the combining of data for the four countries allowing the IPF routines to fully converge. The biggest changes occur in estimates between African countries from the correction to Sudanese and South Sudanese born populations. For the rates method all estimates are revised from the change in the global migration flow total, obtained from the sum of net migration flows.  --&gt;
+&lt;!-- ![ ](v4-compare.png) --&gt;
+&lt;/div&gt;
+&lt;div id=&#34;impact-on-validation-exercise-2&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Impact on validation exercise&lt;/h3&gt;
+&lt;p&gt;The impact of the correction for the four countries on the validation exercise is very minor. Below is an animated version of &lt;a href=&#34;https://www.nature.com/articles/s41597-019-0089-3#Fig4&#34;&gt;Figure 4&lt;/a&gt; in the paper, showing the correlations between the flow estimates and reported data for various migration measures, for the original estimates, the previous updates based on new WPP and IMS data and the new estimates with a correction for the four countries prior to 2010-2015.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;v4-val_all.gif&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;version-5-update-for-ims2020&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;&lt;a id=&#34;IMS2020&#34;&gt;&lt;/a&gt;Version 5: Update for IMS2020&lt;/h2&gt;
+&lt;p&gt;The new UN &lt;a href=&#34;https://www.un.org/development/desa/pd/content/international-migrant-stock&#34;&gt;International Migrant Stock&lt;/a&gt; (IMS) data came out a few weeks back. I have added another set of flow estimates based on the IMS2020 and WPP2019 to the &lt;a href=&#34;https://figshare.com/collections/Bilateral_international_migration_flow_estimates_for_200_countries/4470464&#34;&gt;Figshare collection&lt;/a&gt; (the original flow estimates in the paper were based on IMS2017). As the IMS2020 contain bilateral stocks for 2020, it was possible to generate a first set of flow estimates for the 2015-2020 period, seen the animation below for one of the methods covered in the paper:&lt;/p&gt;
+&lt;style&gt;
+video {
+  /* override other styles to make responsive */
+  width: 100%    !important;
+  height: auto   !important;
+  max-height: 720px
+}
+&lt;/style&gt;
+&lt;video loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34; poster=&#34;v5-flow.png&#34; controls&gt;
+&lt;source src=&#34;v5-flow.mp4&#34; type=&#34;video/mp4&#34; /&gt;
+&lt;/video&gt;
+&lt;p&gt;Below are a few plots to give some visual summaries of the changes in the estimates compared to previous versions.&lt;/p&gt;
+&lt;div id=&#34;comparison-of-estimates-2&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Comparison of estimates&lt;/h3&gt;
+&lt;!-- The plot below shows the relationship between the bilateral flow estimates based on IMS2019 and WPP2019 (previous update) and IMS2019 - WPP2019 (this update) from each period and estimation method. --&gt;
+&lt;!-- ![ ](v5-compare.png) --&gt;
+&lt;!-- As with the previous updates, all methods (columns) see some changes in the flows estimates, which tend to be larger in more recent periods (lower rows) and estimation methods based on demographic accounting (columns to the right).  --&gt;
+&lt;p&gt;The plot of the totals migration flows, shown in &lt;a href=&#34;https://www.nature.com/articles/s41597-019-0089-3#Fig2&#34;&gt;Figure 2&lt;/a&gt; in the paper, is updated below with the new estimates, including the new values for the 2015-2020.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;v5-est_tot4.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;The estimates in the new 2015-2020 period see a continued slow in the growth of total flows based on estimates using the Pseudo-Bayesian method. The other demographic accounting methods also see a small increase in the estimated total flows during 2015-2020 from 2010-2015. There is a noticeable decline in the total flows during 2015-2020 estimated using the rates approach and incline from the stock differencing methods. I suspect all the estimates for 2015-2020 will see some major changes from future revisions of the IMS data, as data drips in from the 2020 round of censuses that will alter the stocks and demographic used as input data to estimate flows in the most recent periods.&lt;/p&gt;
+&lt;p&gt;The evolution of the changes in the estimates from different revisions in the input data can be seen below; transitioning from 1) the estimates in the paper to 2) the first update (version 2) of the estimates from changes in the demographic data to 3) the second update for changes in the stock data (version 4) to the most recent update (version 5, the same as the plot above).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;v5-est_tot.gif&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;impact-on-validation-exercise-3&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Impact on validation exercise&lt;/h3&gt;
+&lt;p&gt;The impact of the revision in stock data on the validation exercise in the paper is still relatively minor. Below is an update of the animated version of &lt;a href=&#34;https://www.nature.com/articles/s41597-019-0089-3#Fig4&#34;&gt;Figure 4&lt;/a&gt; in the paper, showing the correlations between the flow estimates and reported data for various migration measures, for the original estimates and subsequent updates based on new WPP and IMS data.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;v5-val_all.gif&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;As with the other updates, the small changes in the correlations, despite some large revisions in the migrant stock data are due to the limited amount of reported migration flows statistics (at the global level) to carry out our validation exercise. The estimates during 2015-2020 have no influence due to the lack of corresponding reported flow data in the UN collection.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Guy J. Abel | Guy Abel</title>
+    <link>https://guyabel.com/author/guy-j.-abel/</link>
+      <atom:link href="https://guyabel.com/author/guy-j.-abel/index.xml" rel="self" type="application/rss+xml" />
+    <description>Guy J. Abel</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-uk</language><copyright>© 2021 Guy Abel</copyright><lastBuildDate>Tue, 16 Feb 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://guyabel.com/media/icon_hua235b20c26de23a006d4e436991121ab_642_512x512_fill_lanczos_center_2.png</url>
+      <title>Guy J. Abel</title>
+      <link>https://guyabel.com/author/guy-j.-abel/</link>
+    </image>
+    
+    <item>
+      <title>The form and evolution of international migration networks</title>
+      <link>https://guyabel.com/publication/global-flow-networks/</link>
+      <pubDate>Tue, 16 Feb 2021 00:00:00 +0000</pubDate>
+      <guid>https://guyabel.com/publication/global-flow-networks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Analyzing the Effect of Time in Migration Measurement Using Geo-referenced Digital Trace Data</title>
+      <link>https://guyabel.com/publication/digital-migration-measures/</link>
+      <pubDate>Mon, 01 Feb 2021 00:00:00 +0000</pubDate>
+      <guid>https://guyabel.com/publication/digital-migration-measures/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>International remittance flows and the economic and social consequences of COVID-19</title>
+      <link>https://guyabel.com/publication/covid-remittance/</link>
+      <pubDate>Thu, 28 May 2020 00:00:00 +0000</pubDate>
+      <guid>https://guyabel.com/publication/covid-remittance/</guid>
+      <description>&lt;h3 id=&#34;animated-version&#34;&gt;Animated Version&lt;/h3&gt;
+&lt;p&gt;Below is an animated version of the plot in the paper for remittance since 2010 based on the World Bank &lt;a href=&#34;https://www.worldbank.org/en/topic/migrationremittancesdiasporaissues/brief/migration-remittances-data&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;data&lt;/a&gt;&lt;/p&gt;
+&lt;style&gt;
+video {
+  /* override other styles to make responsive */
+  width: 100%    !important;
+  height: auto   !important;
+  max-height: 720px
+}
+&lt;/style&gt;
+&lt;video loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34; controls&gt;
+  &lt;source src=&#34;abel-region-remit.mp4&#34;
+  type=&#34;video/mp4&#34; /&gt;
+&lt;/video&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Driving Factors of Asian International Migration Flows</title>
+      <link>https://guyabel.com/publication/asian-migration-drivers/</link>
+      <pubDate>Wed, 25 Sep 2019 00:00:00 +0000</pubDate>
+      <guid>https://guyabel.com/publication/asian-migration-drivers/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Climate, Conflict and Forced Migration</title>
+      <link>https://guyabel.com/publication/climate-conflict-and-forced-migration/</link>
+      <pubDate>Mon, 21 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>https://guyabel.com/publication/climate-conflict-and-forced-migration/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Estimates of Global Bilateral Migration Flows by Gender between 1960 and 2015</title>
+      <link>https://guyabel.com/publication/global-migration-estimates-by-gender/</link>
+      <pubDate>Mon, 13 Aug 2018 00:00:00 +0000</pubDate>
+      <guid>https://guyabel.com/publication/global-migration-estimates-by-gender/</guid>
+      <description>&lt;h2 id=&#34;further-notes&#34;&gt;Further Notes&lt;/h2&gt;
+&lt;p&gt;Please contact me if cannot access the full paper and would like a copy.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Bowling together: scientific collaboration networks of demographers at European Population Conferences</title>
+      <link>https://guyabel.com/publication/epc-collabs/</link>
+      <pubDate>Mon, 18 Jun 2018 00:00:00 +0000</pubDate>
+      <guid>https://guyabel.com/publication/epc-collabs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Non-zero trajectories for long-run net migration assumptions in global population projection models</title>
+      <link>https://guyabel.com/publication/non-zero-ssp-net-migration-projections/</link>
+      <pubDate>Wed, 16 May 2018 00:00:00 +0000</pubDate>
+      <guid>https://guyabel.com/publication/non-zero-ssp-net-migration-projections/</guid>
+      <description>&lt;h2 id=&#34;further-notes&#34;&gt;Further Notes&lt;/h2&gt;
+&lt;p&gt;Below are some plots that I had to drop from the paper. Some reviewers liked them, reviewer three didn’t. The editor sided with the later, making a good point; they distracted from the main narrative of the paper. I have put them here as 1) I think they still might be of interest to some and 2) it took some effort to gather the net migration data from as many past versions of the World Population Prospects (WPP) as I could get my hands on.&lt;/p&gt;
+&lt;p&gt;The first plot shows estimates and future assumptions of net migration for all countries, as published by the United Nations DESA in past and current WPP.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;dr-net-abel-wpp1.png&#34; alt=&#34; &#34;&gt;&lt;/p&gt;
+&lt;p&gt;With this plot I was trying to illustrate the differences between the volatile past estimates and the more regular future assumptions. It also shows how the assumption making has evolved to cover a longer period (up to 2100 from WPP2010 on-wards) and the use of the long run zero net migration trajectory, an assumption that seems to me to be overly complex given we know nothing about migration in the long run.&lt;/p&gt;
+&lt;p&gt;The second plot slices the past data and future assumption a different way - looking at revisions in the WPP for each continent. These plots are similar to those that &lt;a href=&#34;http://webarchive.nationalarchives.gov.uk/20160108034027/http://www.ons.gov.uk/ons/rel/population-trends-rd/population-trends/no--128--summer-2007/fifty-years-of-united-kingdom-national-population-projections--how-accurate-have-they-been-.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Shaw (2007)&lt;/a&gt; used to illustrate assumption drift in the ONS national population projections.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;dr-net-abel-wpp2.gif&#34; alt=&#34; &#34;&gt;&lt;/p&gt;
+&lt;p&gt;The assumptions in the past WPP also exhibit some drift, with assumptions for future net migration commonly immediately turning towards lower levels - where later observed estimates go on to show that a persistence assumption (without the turning point) would have been more accurate - see for example Africa or Europe.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Subnational gender balances in South Korea</title>
+      <link>https://guyabel.com/publication/korea-gender-balance/</link>
+      <pubDate>Tue, 06 Feb 2018 00:00:00 +0000</pubDate>
+      <guid>https://guyabel.com/publication/korea-gender-balance/</guid>
+      <description>&lt;h2 id=&#34;further-notes&#34;&gt;Further Notes&lt;/h2&gt;
+&lt;p&gt;An animated version of the plot in the paper I made when playing around with &lt;a href=&#34;https://github.com/thomasp85/gganimate&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;gganimate&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;korea_srb.gif&#34; alt=&#34; &#34;&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Changing internal migration flows patterns in South Korea</title>
+      <link>https://guyabel.com/publication/korea-internal-migration-1970-2016/</link>
+      <pubDate>Thu, 18 Jan 2018 00:00:00 +0000</pubDate>
+      <guid>https://guyabel.com/publication/korea-internal-migration-1970-2016/</guid>
+      <description>&lt;h2 id=&#34;further-notes&#34;&gt;Further Notes&lt;/h2&gt;
+&lt;p&gt;Please contact me if you would like the R code to produce the plot.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Chinese Internal Migration Flows 2010–2015 </title>
+      <link>https://guyabel.com/publication/china-internal-migration-2010-15/</link>
+      <pubDate>Fri, 07 Jul 2017 00:00:00 +0000</pubDate>
+      <guid>https://guyabel.com/publication/china-internal-migration-2010-15/</guid>
+      <description>&lt;h2 id=&#34;further-notes&#34;&gt;Further Notes&lt;/h2&gt;
+&lt;p&gt;Here is an additional WeChat &lt;a href=&#34;http://mp.weixin.qq.com/s/gmv5iiJ5L-uNyI6vlGOhQA&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;post&lt;/a&gt; on the paper (in Chinese) written by Qi Wei.&lt;/p&gt;
+&lt;p&gt;The code for the plot is available in a blog &lt;a href=&#34;https://guyabel.com/publication/china-internal-migration-2010-15/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;post&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Climate Vulnerability and Human Migration in Global Perspective</title>
+      <link>https://guyabel.com/publication/global-climate-vulnerability-and-migration/</link>
+      <pubDate>Sun, 30 Apr 2017 00:00:00 +0000</pubDate>
+      <guid>https://guyabel.com/publication/global-climate-vulnerability-and-migration/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

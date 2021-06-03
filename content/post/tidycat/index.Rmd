@@ -1,0 +1,103 @@
+---
+title: "Expand broom::tidy() output for categorical parameter estimates"
+# subtitle: Learn how to build animated chord diagrams in R
+# summary: 👋 We know that first impressions are important
+date: '2020-07-08'
+draft: false
+featured: false
+authors:
+- admin
+tags:
+- Academic
+image:
+  preview_only: true
+categories: 
+  - R
+  - "r-bloggers"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+<div><img src="featured.png" width="200px" align="right"></div>
+
+## Introduction
+
+The `tidycat` package includes the `tidy_categorical()` function to expand `broom::tidy()` outputs for categorical parameter estimates.
+
+## Documentation
+
+For full documentation, see the package vignette: [The tidycat package: expand broom::tidy() output for categorical parameter estimates](https://cran.r-project.org/web/packages/tidycat/vignettes/intro.html)
+    
+## Hello World
+
+The `tidy()` function in the broom package takes the messy output of built-in functions in R, such as `lm()`, and turns them into tidy data frames.
+
+```{r, message=FALSE, warning=FALSE}
+library(dplyr)
+library(broom)
+
+m1 <- mtcars %>%
+  mutate(transmission = recode_factor(am, `0` = "automatic", `1` = "manual")) %>%
+  lm(mpg ~ transmission + wt *  as.factor(cyl), data = .)
+
+tidy(m1)
+```
+
+The `tidy_categorical()` function adds 
+
+  - further columns (`variable`, `level` and `effect`) to the `broom::tidy()` output to help manage categorical variables
+  - further rows for reference category terms and a column to indicate their location (`reference`) when setting `include_reference = TRUE` (default)
+
+It requires two inputs
+
+  - a data frame `d` of parameter estimates from a model from `broom::tidy()`
+  - the corresponding model object `m` passed to `broom::tidy()`
+
+For example:    
+```{r}
+library(tidycat)
+d1 <- m1 %>%
+  tidy(conf.int = TRUE) %>%
+  tidy_categorical(m = m1)
+d1 %>%
+  select(-(3:5))
+```
+
+The expanded data frame from `tidy_categorical()` of parameter estimates can be particularly useful for creating coefficient plots, allowing:
+
+  - grouping terms from the same categorical variable from the additional columns.
+  - inclusion of reference categories in a coefficient plot from the additional rows, allowing the reader to better grasp the meaning of the parameter estimates in each categorical variable.
+
+For example:
+
+```{r, fig.width=8, fig.height=4}
+library(forcats)
+library(ggplot2)
+library(ggforce)
+
+d1 %>%
+  slice(-1) %>%
+  mutate(variable = fct_inorder(variable)) %>%
+  ggplot(mapping = aes(x = level, y = estimate, colour = reference,
+                       ymin = conf.low, ymax = conf.high)) +
+  facet_row(facets = "variable", scales = "free_x", space = "free") +
+  geom_hline(yintercept = 0, linetype = "dashed") +
+  geom_pointrange()
+```
+
+## Installation
+
+You can install the released version of tidycat from [CRAN](https://CRAN.R-project.org) with:
+
+``` r
+install.packages("tidycat")
+```
+
+And the development version from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("guyabel/tidycat")
+```

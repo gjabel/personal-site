@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Valeria Bordone | Guy Abel</title>
+    <link>https://guyabel.com/author/valeria-bordone/</link>
+      <atom:link href="https://guyabel.com/author/valeria-bordone/index.xml" rel="self" type="application/rss+xml" />
+    <description>Valeria Bordone</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-uk</language><copyright>© 2021 Guy Abel</copyright><lastBuildDate>Mon, 18 Jun 2018 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://guyabel.com/media/icon_hua235b20c26de23a006d4e436991121ab_642_512x512_fill_lanczos_center_2.png</url>
+      <title>Valeria Bordone</title>
+      <link>https://guyabel.com/author/valeria-bordone/</link>
+    </image>
+    
+    <item>
+      <title>Bowling together: scientific collaboration networks of demographers at European Population Conferences</title>
+      <link>https://guyabel.com/publication/epc-collabs/</link>
+      <pubDate>Mon, 18 Jun 2018 00:00:00 +0000</pubDate>
+      <guid>https://guyabel.com/publication/epc-collabs/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

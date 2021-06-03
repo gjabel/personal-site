@@ -1,40 +1,48 @@
-+++
-# Projects widget.
-# This widget displays all projects from `content/project/`.
-widget = "projects"
-active = false
-date = "2018-02-01T00:00:00"
+---
+# An instance of the Portfolio widget.
+# Documentation: https://wowchemy.com/docs/page-builder/
+widget: portfolio
+active: false
+# This file represents a page section.
+headless: true
 
-title = "Projects"
-subtitle = ""
+# Order that this section appears on the page.
+weight: 65
 
-# Order that this section will appear in.
-weight = 50
+title: Projects
+subtitle: ''
 
-# View.
-# Customize how projects are displayed.
-# Legend: 0 = list, 1 = cards.
-view = 0
+content:
+  # Page type to display. E.g. project.
+  page_type: project
 
-# Filter toolbar.
+  # Default filter index (e.g. 0 corresponds to the first `filter_button` instance below).
+  filter_default: 0
 
-# Default filter index (e.g. 0 corresponds to the first `[[filter]]` instance below).
-filter_default = 0
+  # Filter toolbar (optional).
+  # Add or remove as many filters (`filter_button` instances) as you like.
+  # To show all items, set `tag` to "*".
+  # To filter by a specific tag, set `tag` to an existing tag name.
+  # To remove the toolbar, delete the entire `filter_button` block.
+  filter_button:
+  - name: All
+    tag: '*'
+  - name: Deep Learning
+    tag: Deep Learning
+  - name: Other
+    tag: Demo
 
-# Add or remove as many filters (`[[filter]]` instances) as you like.
-# Use "*" tag to show all projects or an existing tag prefixed with "." to filter by specific tag.
-# To remove toolbar, delete/comment all instances of `[[filter]]` below.
-[[filter]]
-  name = "All"
-  tag = "*"
-  
-[[filter]]
-  name = "Estimation"
-  tag = ".estimation"
+design:
+  # Choose how many columns the section has. Valid values: '1' or '2'.
+  columns: '2'
 
-[[filter]]
-  name = "Prediction"
-  tag = ".prediction"
+  # Toggle between the various page layout types.
+  #   1 = List
+  #   2 = Compact
+  #   3 = Card
+  #   5 = Showcase
+  view: 3
 
-+++
-
+  # For Showcase view, flip alternate rows?
+  flip_alt_rows: false
+---

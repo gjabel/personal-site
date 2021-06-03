@@ -1,39 +1,16 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on Guy Abel</title>
-    <link>/categories/</link>
-    <description>Recent content in Categories on Guy Abel</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-uk</language>
-    <copyright>&amp;copy; 2021 &amp;middot; Selected posts also on &lt;a href=&#34;https://r-bloggers.com/&#34;&gt;R-bloggers&lt;/a&gt; and &lt;a href=&#34;https://rweekly.org/&#34;&gt;R Weekly&lt;/a&gt;</copyright>
-    <lastBuildDate>Fri, 21 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>R</title>
-      <link>/categories/r/</link>
-      <pubDate>Fri, 21 May 2021 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/r/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>r-bloggers</title>
-      <link>/categories/r-bloggers/</link>
-      <pubDate>Fri, 21 May 2021 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/r-bloggers/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>r-weekly</title>
-      <link>/categories/r-weekly/</link>
-      <pubDate>Fri, 21 May 2021 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/r-weekly/</guid>
-      <description></description>
-    </item>
+    <title>Categories | Guy Abel</title>
+    <link>https://guyabel.com/categories/</link>
+      <atom:link href="https://guyabel.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <description>Categories</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-uk</language><copyright>© 2021 Guy Abel</copyright><lastBuildDate>Fri, 21 May 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://guyabel.com/media/icon_hua235b20c26de23a006d4e436991121ab_642_512x512_fill_lanczos_center_2.png</url>
+      <title>Categories</title>
+      <link>https://guyabel.com/categories/</link>
+    </image>
     
   </channel>
 </rss>

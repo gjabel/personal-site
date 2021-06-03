@@ -65,4 +65,6 @@ caption = "2010-15 Migration Flows"
 
 ## Further Notes
 
-Here is an additional WeChat [post](http://mp.weixin.qq.com/s/gmv5iiJ5L-uNyI6vlGOhQA) on the paper (in Chinese) written by Qi Wei.
+Here is an additional WeChat [post](http://mp.weixin.qq.com/s/gmv5iiJ5L-uNyI6vlGOhQA) on the paper (in Chinese) written by Qi Wei. 
+
+The code for the plot is available in a blog [post](https://guyabel.com/publication/china-internal-migration-2010-15/)

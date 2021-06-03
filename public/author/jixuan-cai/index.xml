@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jixuan Cai | Guy Abel</title>
+    <link>https://guyabel.com/author/jixuan-cai/</link>
+      <atom:link href="https://guyabel.com/author/jixuan-cai/index.xml" rel="self" type="application/rss+xml" />
+    <description>Jixuan Cai</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-uk</language><copyright>© 2021 Guy Abel</copyright><lastBuildDate>Mon, 01 Feb 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://guyabel.com/media/icon_hua235b20c26de23a006d4e436991121ab_642_512x512_fill_lanczos_center_2.png</url>
+      <title>Jixuan Cai</title>
+      <link>https://guyabel.com/author/jixuan-cai/</link>
+    </image>
+    
+    <item>
+      <title>Analyzing the Effect of Time in Migration Measurement Using Geo-referenced Digital Trace Data</title>
+      <link>https://guyabel.com/publication/digital-migration-measures/</link>
+      <pubDate>Mon, 01 Feb 2021 00:00:00 +0000</pubDate>
+      <guid>https://guyabel.com/publication/digital-migration-measures/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

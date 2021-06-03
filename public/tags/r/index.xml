@@ -1,53 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>R on Guy Abel</title>
-    <link>/tags/r/</link>
-    <description>Recent content in R on Guy Abel</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-uk</language>
-    <copyright>&amp;copy; 2021 &amp;middot; Selected posts also on &lt;a href=&#34;https://r-bloggers.com/&#34;&gt;R-bloggers&lt;/a&gt; and &lt;a href=&#34;https://rweekly.org/&#34;&gt;R Weekly&lt;/a&gt;</copyright>
-    <lastBuildDate>Fri, 21 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/r/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Animated Sankey Plots of Global Migrant Populations</title>
-      <link>/post/animated-sankey/</link>
-      <pubDate>Fri, 21 May 2021 00:00:00 +0000</pubDate>
-      
-      <guid>/post/animated-sankey/</guid>
-      <description>BackgroundSankey plots have been used to visualize bilateral migration many times. My favorite examples of Sankey plots for migration data tend to be when there are only few regions or countries. As the number of regions or countries increases the plot become more cumbersome, where labels for the smaller areas get too small and the plotting area becomes a very long rectangle making it awkward to fit on paper or view on the screen.</description>
-    </item>
-    
-    <item>
-      <title>Expand broom::tidy() output for categorical parameter estimates</title>
-      <link>/post/tidycat/</link>
-      <pubDate>Wed, 08 Jul 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/post/tidycat/</guid>
-      <description>IntroductionThe tidycat package includes the tidy_categorical() function to expand broom::tidy() outputs for categorical parameter estimates.
-DocumentationFor full documentation, see the package vignette: The tidycat package: expand broom::tidy() output for categorical parameter estimates
-Hello WorldThe tidy() function in the broom package takes the messy output of built-in functions in R, such as lm(), and turns them into tidy data frames.
-library(dplyr)library(broom)m1 &amp;lt;- mtcars %&amp;gt;%mutate(transmission = recode_factor(am, `0` = &amp;quot;automatic&amp;quot;, `1` = &amp;quot;manual&amp;quot;)) %&amp;gt;%lm(mpg ~ transmission + wt * as.</description>
-    </item>
-    
-    <item>
-      <title>Animating Changes in Football Kits using R</title>
-      <link>/post/football-kits/</link>
-      <pubDate>Tue, 05 Jun 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/football-kits/</guid>
-      <description>BackgroundI’m loving the magick package at the moment. Reading through the vignette I spotted the image_morph() function. In this post I experiment with the function to build the GIF below that shows the changes in the England football first kit over time, using images from the excellent Historical Football Kits website.
-ScrapingThe Historical Football Kits website has a detailed section on England kits spread over six pages, starting from the first outfits used in 1872.</description>
-    </item>
-    
-    <item>
-      <title>Animated Directional Chord Diagrams</title>
-      <link>/post/animated-directional-chord-diagrams/</link>
-      <pubDate>Wed, 18 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/animated-directional-chord-diagrams/</guid>
-      <description>BackgroundA little while ago my paper in International Migration Review on global migration flow estimates came out online. The paper includes a number of directional chord diagrams to visualize the estimates.
-Recently I have been playing around tweenr and the magick packages for animated population pyramids. In this post I attempt to show how to use these packages to produce animated directional chord diagrams of global migration flow estimates</description>
-    </item>
-    
-  </channel>
-</rss>

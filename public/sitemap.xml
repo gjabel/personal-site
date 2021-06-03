@@ -2,202 +2,266 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/home/about/</loc>
-    <lastmod>2018-01-01T00:00:00+00:00</lastmod>
+    <loc>https://guyabel.com/courses/example/python/</loc>
+    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/home/hero/</loc>
-    <lastmod>2017-10-15T00:00:00+08:00</lastmod>
+    <loc>https://guyabel.com/courses/example/visualization/</loc>
+    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/home/publications_selected/</loc>
-    <lastmod>2018-01-01T00:00:00+08:00</lastmod>
+    <loc>https://guyabel.com/courses/example/stats/</loc>
+    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/home/publications/</loc>
-    <lastmod>2018-01-01T00:00:00+08:00</lastmod>
-  </url><url>
-    <loc>/home/posts/</loc>
-    <lastmod>2016-04-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/home/talks/</loc>
-    <lastmod>2016-04-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/home/projects/</loc>
-    <lastmod>2018-02-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/home/teaching/</loc>
-    <lastmod>2018-01-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/home/contact/</loc>
-    <lastmod>2016-04-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/post/animated-sankey/</loc>
+    <loc>https://guyabel.com/tag/academic/</loc>
     <lastmod>2021-05-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/categories/</loc>
+    <loc>https://guyabel.com/post/animated-sankey/</loc>
     <lastmod>2021-05-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/</loc>
+    <loc>https://guyabel.com/authors/</loc>
     <lastmod>2021-05-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/post/</loc>
+    <loc>https://guyabel.com/categories/</loc>
     <lastmod>2021-05-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/r/</loc>
+    <loc>https://guyabel.com/</loc>
     <lastmod>2021-05-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/categories/r/</loc>
+    <loc>https://guyabel.com/author/guy-abel/</loc>
     <lastmod>2021-05-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/r-bloggers/</loc>
+    <loc>https://guyabel.com/categories/migration/</loc>
     <lastmod>2021-05-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/categories/r-bloggers/</loc>
+    <loc>https://guyabel.com/post/</loc>
     <lastmod>2021-05-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/r-weekly/</loc>
+    <loc>https://guyabel.com/categories/r/</loc>
     <lastmod>2021-05-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/categories/r-weekly/</loc>
+    <loc>https://guyabel.com/categories/r-bloggers/</loc>
     <lastmod>2021-05-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/</loc>
+    <loc>https://guyabel.com/categories/r-weekly/</loc>
     <lastmod>2021-05-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/talk/colmex-2021/</loc>
-    <lastmod>2021-05-11T00:00:00+08:00</lastmod>
+    <loc>https://guyabel.com/categories/sankey/</loc>
+    <lastmod>2021-05-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/publication_types/2/</loc>
+    <loc>https://guyabel.com/tags/</loc>
+    <lastmod>2021-05-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://guyabel.com/talk/bilateral-international-migration-flow-estimates-for-200-countries/</loc>
+    <lastmod>2021-05-11T10:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://guyabel.com/event/</loc>
+    <lastmod>2021-05-11T10:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://guyabel.com/publication-type/2/</loc>
     <lastmod>2021-02-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/publication_types/</loc>
+    <loc>https://guyabel.com/author/guy-j.-abel/</loc>
     <lastmod>2021-02-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/publication/global-flow-networks/</loc>
+    <loc>https://guyabel.com/author/jack-dewaard/</loc>
     <lastmod>2021-02-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/publication/digital-migration-measures/</loc>
+    <loc>https://guyabel.com/author/jasmine-trang-ha/</loc>
+    <lastmod>2021-02-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://guyabel.com/publication_types/</loc>
+    <lastmod>2021-02-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://guyabel.com/publication/</loc>
+    <lastmod>2021-02-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://guyabel.com/publication/global-flow-networks/</loc>
+    <lastmod>2021-02-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://guyabel.com/author/zack-w.-almquist/</loc>
+    <lastmod>2021-02-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://guyabel.com/publication/digital-migration-measures/</loc>
     <lastmod>2021-02-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/post/tidycat/</loc>
+    <loc>https://guyabel.com/author/emilio-zagheni/</loc>
+    <lastmod>2021-02-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://guyabel.com/author/emmanuel-letouze/</loc>
+    <lastmod>2021-02-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://guyabel.com/author/gabriel-pestre/</loc>
+    <lastmod>2021-02-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://guyabel.com/author/jixuan-cai/</loc>
+    <lastmod>2021-02-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://guyabel.com/author/jonathan-hill/</loc>
+    <lastmod>2021-02-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://guyabel.com/author/lee-fiorio/</loc>
+    <lastmod>2021-02-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://guyabel.com/courses/</loc>
+    <lastmod>2021-01-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://guyabel.com/courses/example/</loc>
+    <lastmod>2021-01-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://guyabel.com/courses/international-migration/</loc>
+    <lastmod>2021-01-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://guyabel.com/courses/migration-estimation/</loc>
+    <lastmod>2021-01-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://guyabel.com/courses/statisitcal-modelling/</loc>
+    <lastmod>2021-01-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://guyabel.com/post/tidycat/</loc>
     <lastmod>2020-07-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/chord-diagram/</loc>
+    <loc>https://guyabel.com/categories/chord-diagram/</loc>
     <lastmod>2020-06-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/post/global-migrant-stocks/</loc>
+    <loc>https://guyabel.com/post/global-migrant-stocks/</loc>
     <lastmod>2020-06-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/migration/</loc>
-    <lastmod>2020-06-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/publication/covid-remittance/</loc>
+    <loc>https://guyabel.com/publication/covid-remittance/</loc>
     <lastmod>2020-05-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/publication/asian-migration-drivers/</loc>
+    <loc>https://guyabel.com/author/stuart-gietel-basten/</loc>
+    <lastmod>2020-05-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://guyabel.com/talk/bilateral-international-migration-flow-estimates-for-200-countries/</loc>
+    <lastmod>2020-01-21T14:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://guyabel.com/publication/asian-migration-drivers/</loc>
     <lastmod>2019-09-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/publication/bilateral-international-migration-flow-estimates/</loc>
+    <loc>https://guyabel.com/author/james-raymer/</loc>
+    <lastmod>2019-09-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://guyabel.com/author/qing-guan/</loc>
+    <lastmod>2019-09-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://guyabel.com/talk/bilateral-international-migration-flow-estimates-for-200-countries/</loc>
+    <lastmod>2019-07-27T15:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://guyabel.com/publication/bilateral-international-migration-flow-estimates/</loc>
     <lastmod>2019-06-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/post/chinese-migration-chord-diagram/</loc>
+    <loc>https://guyabel.com/author/joel-e.-cohen/</loc>
+    <lastmod>2019-06-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://guyabel.com/slides/</loc>
+    <lastmod>2019-02-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://guyabel.com/slides/example/</loc>
+    <lastmod>2019-02-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://guyabel.com/post/chinese-migration-chord-diagram/</loc>
     <lastmod>2019-02-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/publication/climate-conflict-and-forced-migration/</loc>
+    <loc>https://guyabel.com/publication/climate-conflict-and-forced-migration/</loc>
     <lastmod>2019-01-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/post/migrant-stock-chord-digrams/</loc>
+    <loc>https://guyabel.com/author/jesus-crespo-cuaresma/</loc>
+    <lastmod>2019-01-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://guyabel.com/author/michael-brottrager/</loc>
+    <lastmod>2019-01-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://guyabel.com/author/raya-muttarak/</loc>
+    <lastmod>2019-01-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://guyabel.com/post/migrant-stock-chord-digrams/</loc>
     <lastmod>2018-11-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/publication/global-migration-estimates-by-gender/</loc>
+    <loc>https://guyabel.com/publication/global-migration-estimates-by-gender/</loc>
     <lastmod>2018-08-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/talk/apac1-2018/</loc>
-    <lastmod>2018-07-01T00:00:00+08:00</lastmod>
+    <loc>https://guyabel.com/talk/european-international-migration-patterns/</loc>
+    <lastmod>2018-07-13T14:00:00+08:00</lastmod>
   </url><url>
-    <loc>/talk/apac2-2018/</loc>
-    <lastmod>2018-07-01T00:00:00+08:00</lastmod>
+    <loc>https://guyabel.com/talk/driving-factors-of-asian-international-migration-flows/</loc>
+    <lastmod>2018-07-13T11:15:00+08:00</lastmod>
   </url><url>
-    <loc>/publication/epc-collabs/</loc>
+    <loc>https://guyabel.com/publication/epc-collabs/</loc>
     <lastmod>2018-06-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/post/football-kits/</loc>
+    <loc>https://guyabel.com/author/valeria-bordone/</loc>
+    <lastmod>2018-06-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://guyabel.com/talk/probabilistic-method-for-combining-internal-migration-data/</loc>
+    <lastmod>2018-06-07T09:20:00+08:00</lastmod>
+  </url><url>
+    <loc>https://guyabel.com/post/football-kits/</loc>
     <lastmod>2018-06-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/publication/non-zero-ssp-net-migration-projections/</loc>
+    <loc>https://guyabel.com/publication/non-zero-ssp-net-migration-projections/</loc>
     <lastmod>2018-05-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/post/animated-directional-chord-diagrams/</loc>
+    <loc>https://guyabel.com/talk/probabilistic-method-for-combining-internal-migration-data/</loc>
+    <lastmod>2018-05-04T12:30:00+08:00</lastmod>
+  </url><url>
+    <loc>https://guyabel.com/talk/visualizing-migration-flows-how-to-design-and-produce-animated-directional-chord-diagrams-in-r/</loc>
+    <lastmod>2018-05-01T12:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://guyabel.com/talk/driving-factors-of-asian-international-migration-flows/</loc>
+    <lastmod>2018-04-26T08:30:00+08:00</lastmod>
+  </url><url>
+    <loc>https://guyabel.com/post/animated-directional-chord-diagrams/</loc>
     <lastmod>2018-04-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/talk/paa-2018/</loc>
-    <lastmod>2018-04-18T00:00:00+08:00</lastmod>
+    <loc>https://guyabel.com/talk/gender-education-and-marital-status-differentials-in-migration/</loc>
+    <lastmod>2018-02-22T12:00:00+08:00</lastmod>
   </url><url>
-    <loc>/talk/epc-2018/</loc>
-    <lastmod>2018-04-18T00:00:00+08:00</lastmod>
+    <loc>https://guyabel.com/talk/gender-education-and-marital-status-differentials-in-migration/</loc>
+    <lastmod>2018-02-09T15:00:00+08:00</lastmod>
   </url><url>
-    <loc>/talk/uw2-2018/</loc>
-    <lastmod>2018-04-18T00:00:00+08:00</lastmod>
-  </url><url>
-    <loc>/talk/uw1-2018/</loc>
-    <lastmod>2018-04-18T00:00:00+08:00</lastmod>
-  </url><url>
-    <loc>/publication/korea-gender-balance/</loc>
+    <loc>https://guyabel.com/author/nayoung-heo/</loc>
     <lastmod>2018-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/project/adri-pillar/</loc>
-    <lastmod>2018-02-01T00:00:00+00:00</lastmod>
+    <loc>https://guyabel.com/publication/korea-gender-balance/</loc>
+    <lastmod>2018-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/bayesian/</loc>
-    <lastmod>2018-02-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/project/combining-migration-data/</loc>
-    <lastmod>2018-02-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/estimation/</loc>
-    <lastmod>2018-02-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/project/global-migration-prediction/</loc>
-    <lastmod>2018-02-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/home/</loc>
-    <lastmod>2018-02-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/prediction/</loc>
-    <lastmod>2018-02-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/project/</loc>
-    <lastmod>2018-02-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/talk/hanyang-2019/</loc>
-    <lastmod>2018-02-01T00:00:00+08:00</lastmod>
-  </url><url>
-    <loc>/talk/ifms-2020/</loc>
-    <lastmod>2018-02-01T00:00:00+08:00</lastmod>
-  </url><url>
-    <loc>/talk/anu-2018/</loc>
-    <lastmod>2018-02-01T00:00:00+08:00</lastmod>
-  </url><url>
-    <loc>/talk/uq-2018/</loc>
-    <lastmod>2018-02-01T00:00:00+08:00</lastmod>
-  </url><url>
-    <loc>/publication/korea-internal-migration-1970-2016/</loc>
+    <loc>https://guyabel.com/publication/korea-internal-migration-1970-2016/</loc>
     <lastmod>2018-01-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/publication/</loc>
-    <lastmod>2018-01-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/home/tags/</loc>
-    <lastmod>2017-09-20T00:00:00+08:00</lastmod>
-  </url><url>
-    <loc>/publication/china-internal-migration-2010-15/</loc>
+    <loc>https://guyabel.com/publication/china-internal-migration-2010-15/</loc>
     <lastmod>2017-07-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/publication/global-climate-vulnerability-and-migration/</loc>
+    <loc>https://guyabel.com/author/qi-wei/</loc>
+    <lastmod>2017-07-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://guyabel.com/author/shenghe-liu/</loc>
+    <lastmod>2017-07-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://guyabel.com/publication/global-climate-vulnerability-and-migration/</loc>
     <lastmod>2017-04-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/academic/</loc>
-    <lastmod>2017-01-01T00:00:00+00:00</lastmod>
+    <loc>https://guyabel.com/author/jessica-j.-hellmann/</loc>
+    <lastmod>2017-04-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/talk/</loc>
-    <lastmod>2017-01-01T00:00:00+00:00</lastmod>
+    <loc>https://guyabel.com/author/martina-grecequet/</loc>
+    <lastmod>2017-04-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://guyabel.com/tag/deep-learning/</loc>
+    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://guyabel.com/tag/demo/</loc>
+    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://guyabel.com/project/external-project/</loc>
+    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://guyabel.com/project/internal-project/</loc>
+    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://guyabel.com/project/</loc>
+    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://guyabel.com/admin/</loc>
+  </url><url>
+    <loc>https://guyabel.com/courses/data-science/</loc>
   </url>
 </urlset>

@@ -1,18 +1,8 @@
-+++
-title = "Publications"
-date = "2018-01-01T00:00:00Z"
-math = false
-highlight = false
-
-# List format.
-#   0 = Simple
-#   1 = Detailed
-#   2 = APA
-#   3 = MLA
-list_format = 0
-
-# Optional featured image (relative to `static/img/` folder).
-[header]
-image = ""
-caption = ""
-+++
+---
+cms_exclude: true
+header:
+  caption: ""
+  image: ""
+title: Publications
+view: 4
+---

@@ -1,44 +1,21 @@
-+++
-# About/Biography widget.
-widget = "about"
-active = true
-date = "2018-01-01T00:00:00"
+---
+# An instance of the About widget.
+# Documentation: https://wowchemy.com/docs/page-builder/
+widget: about
 
-# Order that this section will appear in.
-weight = 1
+# Activate this widget? true/false
+active: true
 
-# List your academic interests.
-[interests]
-  interests = [
-    "Statistical Demography",
-    "Migration",
-    "Population",
-    "Demography",
-    "Statistics"
-  ]
+# This file represents a page section.
+headless: true
 
-# List your qualifications (such as academic degrees).
-[[education.courses]]
-  course = "PhD"
-  institution = "Division of Social Statistics and Demography, University of Southampton"
-  year = 2009
+# Order that this section appears on the page.
+weight: 20
 
-[[education.courses]]
-  course = "MSc Social Statistics - Statistics Pathway (with Distinction)"
-  institution = "Division of Division of Social Statistics and Demography, University of Southampton"
-  year =  2005
+title: Biography
 
-[[education.courses]]
-  course = "MSc Statistics (with Distinction)"
-  institution = "School of Mathematics, Statistics & Actuarial Science, University of Kent"
-  year = 2003
- 
-+++
-
-# Biography
-
-I am an applied statistician based at the [Asian Demographic Research Institute](http://adri-shanghai.github.io/) and [IIASA](http://www.iiasa.ac.at/web/home/research/researchPrograms/WorldPopulation/Introduction.html). I am also a Professor in the [School of Sociology and Political Science](http://en.shu.edu.cn/Default.aspx?tabid=26181) at Shanghai University. 
-
-Previously I worked at the [Vienna Institute of Demography](http://www.oeaw.ac.at/vid/), the [ESRC Centre for Population Change](http://www.cpc.ac.uk/) and [S3RI](http://www.southampton.ac.uk/s3ri/) at the University of Southampton.
-
-My day-to-day research covers estimating migration and applying statistical methods to better forecast components of population change. This website contains posts mainly related to my research, including some information on my [publications](./publication) and use of [R](./tags/r/). It is a successor to my [WordPress](http://gjabel.wordpress.com/) site which I had trouble accessing when in China. 
+# Choose the user profile to display
+# This should be the username (folder name) of a profile in your `content/authors/` folder.
+# See https://wowchemy.com/docs/get-started/#introduce-yourself
+author: admin
+---

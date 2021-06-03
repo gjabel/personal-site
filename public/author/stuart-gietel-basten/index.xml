@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Stuart Gietel-Basten | Guy Abel</title>
+    <link>https://guyabel.com/author/stuart-gietel-basten/</link>
+      <atom:link href="https://guyabel.com/author/stuart-gietel-basten/index.xml" rel="self" type="application/rss+xml" />
+    <description>Stuart Gietel-Basten</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-uk</language><copyright>© 2021 Guy Abel</copyright><lastBuildDate>Thu, 28 May 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://guyabel.com/media/icon_hua235b20c26de23a006d4e436991121ab_642_512x512_fill_lanczos_center_2.png</url>
+      <title>Stuart Gietel-Basten</title>
+      <link>https://guyabel.com/author/stuart-gietel-basten/</link>
+    </image>
+    
+    <item>
+      <title>International remittance flows and the economic and social consequences of COVID-19</title>
+      <link>https://guyabel.com/publication/covid-remittance/</link>
+      <pubDate>Thu, 28 May 2020 00:00:00 +0000</pubDate>
+      <guid>https://guyabel.com/publication/covid-remittance/</guid>
+      <description>&lt;h3 id=&#34;animated-version&#34;&gt;Animated Version&lt;/h3&gt;
+&lt;p&gt;Below is an animated version of the plot in the paper for remittance since 2010 based on the World Bank &lt;a href=&#34;https://www.worldbank.org/en/topic/migrationremittancesdiasporaissues/brief/migration-remittances-data&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;data&lt;/a&gt;&lt;/p&gt;
+&lt;style&gt;
+video {
+  /* override other styles to make responsive */
+  width: 100%    !important;
+  height: auto   !important;
+  max-height: 720px
+}
+&lt;/style&gt;
+&lt;video loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34; controls&gt;
+  &lt;source src=&#34;abel-region-remit.mp4&#34;
+  type=&#34;video/mp4&#34; /&gt;
+&lt;/video&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

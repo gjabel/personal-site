@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Michael Brottrager | Guy Abel</title>
+    <link>https://guyabel.com/author/michael-brottrager/</link>
+      <atom:link href="https://guyabel.com/author/michael-brottrager/index.xml" rel="self" type="application/rss+xml" />
+    <description>Michael Brottrager</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-uk</language><copyright>© 2021 Guy Abel</copyright><lastBuildDate>Mon, 21 Jan 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://guyabel.com/media/icon_hua235b20c26de23a006d4e436991121ab_642_512x512_fill_lanczos_center_2.png</url>
+      <title>Michael Brottrager</title>
+      <link>https://guyabel.com/author/michael-brottrager/</link>
+    </image>
+    
+    <item>
+      <title>Climate, Conflict and Forced Migration</title>
+      <link>https://guyabel.com/publication/climate-conflict-and-forced-migration/</link>
+      <pubDate>Mon, 21 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>https://guyabel.com/publication/climate-conflict-and-forced-migration/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
