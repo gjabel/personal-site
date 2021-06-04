@@ -1,5 +1,5 @@
 ---
-title: Animating Changes in Football Kits using R
+title: Animating the evoloution of football kits using R
 # subtitle: Learn how to build animated chord diagrams in R
 
 # Summary for listings and search engines

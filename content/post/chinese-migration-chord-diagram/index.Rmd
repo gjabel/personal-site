@@ -1,5 +1,5 @@
 ---
-title: R Code for Chinese Internal Migration Flows Chord Diagram
+title: R code for chord diagrams of Chinese internal migration
 # subtitle: Learn how to build animated chord diagrams in R
 # summary: 👋 We know that first impressions are important
 date: '2019-02-04'

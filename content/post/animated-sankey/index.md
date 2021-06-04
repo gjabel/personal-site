@@ -1,5 +1,5 @@
 ---
-title: "Animated Sankey Plots of Global Migrant Populations"
+title: "Animated Sankey plots of global migrant populations"
 # subtitle: Learn how to build animated chord diagrams in R
 # summary: 👋 We know that first impressions are important
 date: '2021-05-21'

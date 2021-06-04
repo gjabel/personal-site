@@ -1,5 +1,5 @@
 ---
-title: Regional Migrant Stock Chord Diagrams
+title: "Animated chord diagrams for changes in regional migrant populations over time"
 # subtitle: Learn how to build animated chord diagrams in R
 # summary: 👋 We know that first impressions are important
 date: '2018-11-14'

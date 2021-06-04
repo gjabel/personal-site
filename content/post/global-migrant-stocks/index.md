@@ -1,5 +1,5 @@
 ---
-title: "Global Migrant Stock Chord Diagrams"
+title: "Animated chord diagrams for global migrant populations"
 # subtitle: Learn how to build animated chord diagrams in R
 # summary: 👋 We know that first impressions are important
 date: '2020-06-20'

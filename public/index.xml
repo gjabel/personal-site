@@ -136,7 +136,7 @@ video {
     </item>
     
     <item>
-      <title>Animated Sankey Plots of Global Migrant Populations</title>
+      <title>Animated Sankey plots of global migrant populations</title>
       <link>https://guyabel.com/post/animated-sankey/</link>
       <pubDate>Fri, 21 May 2021 00:00:00 +0000</pubDate>
       <guid>https://guyabel.com/post/animated-sankey/</guid>
@@ -348,7 +348,7 @@ devtools::install_github(&amp;quot;guyabel/tidycat&amp;quot;)&lt;/code&gt;&lt;/p
     </item>
     
     <item>
-      <title>Global Migrant Stock Chord Diagrams</title>
+      <title>Animated chord diagrams for global migrant populations</title>
       <link>https://guyabel.com/post/global-migrant-stocks/</link>
       <pubDate>Sat, 20 Jun 2020 00:00:00 +0000</pubDate>
       <guid>https://guyabel.com/post/global-migrant-stocks/</guid>
@@ -858,7 +858,7 @@ Three
     </item>
     
     <item>
-      <title>R Code for Chinese Internal Migration Flows Chord Diagram</title>
+      <title>R code for chord diagrams of Chinese internal migration</title>
       <link>https://guyabel.com/post/chinese-migration-chord-diagram/</link>
       <pubDate>Mon, 04 Feb 2019 00:00:00 +0000</pubDate>
       <guid>https://guyabel.com/post/chinese-migration-chord-diagram/</guid>
@@ -989,7 +989,7 @@ image_write(image = p, path = &amp;quot;figure1.png&amp;quot;)&lt;/code&gt;&lt;/
     </item>
     
     <item>
-      <title>Regional Migrant Stock Chord Diagrams</title>
+      <title>Animated chord diagrams for changes in regional migrant populations over time</title>
       <link>https://guyabel.com/post/migrant-stock-chord-digrams/</link>
       <pubDate>Wed, 14 Nov 2018 00:00:00 +0000</pubDate>
       <guid>https://guyabel.com/post/migrant-stock-chord-digrams/</guid>
@@ -1075,7 +1075,7 @@ video {
     </item>
     
     <item>
-      <title>Animating Changes in Football Kits using R</title>
+      <title>Animating the evoloution of football kits using R</title>
       <link>https://guyabel.com/post/football-kits/</link>
       <pubDate>Tue, 05 Jun 2018 00:00:00 +0000</pubDate>
       <guid>https://guyabel.com/post/football-kits/</guid>
@@ -1256,7 +1256,7 @@ for(i in 2:length(kits$img)){
     </item>
     
     <item>
-      <title>Animated Directional Chord Diagrams</title>
+      <title>R code for animated directional chord diagrams</title>
       <link>https://guyabel.com/post/animated-directional-chord-diagrams/</link>
       <pubDate>Wed, 18 Apr 2018 00:00:00 +0000</pubDate>
       <guid>https://guyabel.com/post/animated-directional-chord-diagrams/</guid>
