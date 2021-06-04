@@ -213,12 +213,12 @@ d %>%
 # # labels just on the right, but use strip text for labels??
 # g1 <- d %>%
 #   filter(name == "World",
-#          year == 1950, 
+#          year == 1950,
 #          sex == "Male") %>%
 #   ggplot(mapping = aes(x = ifelse(test = sex == "Male", yes = -pop, no = pop),
 #                        y = age)) +
 #   geom_col() +
-#   scale_x_continuous(labels = abs, 
+#   scale_x_continuous(labels = abs,
 #                      expand = expansion(mult = c(0.05, 0))) +
 #   labs(x = "Male", y = "") +
 #   theme(plot.margin = unit(c(1, -1, 0.5, 1), "lines"))
@@ -237,10 +237,10 @@ d %>%
 #         plot.margin = unit(c(1, 1, 0.5, -1), "lines"))
 # library(patchwork)
 # g1 + g2
-
+library(lemon)
 d %>%
-  filter(name == "World",
-         year == 1950) %>%
+  filter(name == "Qatar",
+         year == 2020) %>%
   mutate(sex = fct_rev(sex), 
          pop = ifelse(test = sex == "Male", yes = -pop, no = pop)) %>%
   ggplot(mapping = aes(x = pop, y = age)) +
@@ -248,10 +248,26 @@ d %>%
   scale_x_symmetric(labels = abs) +
   theme_bw() +
   coord_cartesian(clip = 'off', ylim = c(1, length(unique(d$age)))) +
-  annotate(geom = "text", x = -Inf, y = -1, label = "Male", hjust = 0) + 
-  annotate(geom = "text", x = Inf, y = -1, label = "Female", hjust = 1) +
+  annotate(geom = "text", x = -Inf, y = 20, label = "Male", hjust = 0) + 
+  annotate(geom = "text", x = Inf, y = 20, label = "Female", hjust = 1) +
   labs(x = "")
   
+
+
+qat2020 <- d %>%
+  filter(name == "Qatar",
+         year == 2020) %>%
+  mutate(sex = fct_rev(sex), 
+         pop = ifelse(test = sex == "Male", yes = -pop, no = pop))
+
+ggplot(data = qat2020, 
+       mapping = aes(x = pop, y = age)) +
+  geom_col() +
+  scale_x_symmetric(labels = abs) +
+  theme_bw() +
+  annotate(geom = "text", x = -max(qat2020$pop), y = max(as.numeric(d$age)), label = "Male", hjust = 0) + 
+  annotate(geom = "text", x = max(qat2020$pop), y = max(as.numeric(d$age)), label = "Female", hjust = 1) 
+  labs(x = "")
 
 g +
   coord_cartesian(clip = 'off', ylim = c(1, length(unique(d$age)))) +

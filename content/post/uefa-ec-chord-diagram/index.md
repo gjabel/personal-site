@@ -32,9 +32,7 @@ The chords represent connections between the country of a player's club (at the 
 
 The chords coming out of each sector are ordered by size - it’s interesting to see more Austrian than German players playing in German leagues, and more Welsh than English players playing in English leagues. 
 
-I adapted some code from animated migration [chord diagrams](https://guyabel.com/categories/chord-diagram/) to provide a history of the relationships between the club leagues of the players and the national team squads at each European Championship. 
-
-
+I adapted some code from animated migration [chord diagrams](https://guyabel.com/categories/chord-diagram/) to provide a history of the relationships between the club leagues of the players and the national team squads at each European Championship. In most of the early tournaments almost all the players came from clubs in their home country. Slowly you can see the increasing amount of national team players coming from clubs abroad and the expansion of the number of teams in the tournament. 
 <style>
 video {
   /* override other styles to make responsive */
