@@ -179,8 +179,8 @@ video {
 &lt;/style&gt;
 &lt;div id=&#34;carousel_free&#34; class=&#34;carousel slide&#34;&gt;
   &lt;ol class=&#34;carousel-indicators&#34;&gt;
-    &lt;li data-target=&#34;#carousel_free&#34; data-slide-to=&#34;0&#34; class=&#34;active&#34;&gt;Areas&lt;/li&gt;
-    &lt;li data-target=&#34;#carousel_free&#34; data-slide-to=&#34;1&#34;&gt;Regions&lt;/li&gt;
+    &lt;li data-target=&#34;#carousel_free&#34; data-slide-to=&#34;0&#34; class=&#34;active&#34;&gt;Known Origins&lt;/li&gt;
+    &lt;li data-target=&#34;#carousel_free&#34; data-slide-to=&#34;1&#34;&gt;All Origins&lt;/li&gt;
   &lt;/ol&gt;
   &lt;div class=&#34;carousel-inner&#34;&gt;
     &lt;div class=&#34;carousel-item active&#34;&gt;
@@ -200,8 +200,8 @@ video {
 &lt;p&gt;The second animated plot shows the changes over time where the y-axis is fixed to its maximum level. The adjustment allows the Sankey to grow into the plot space to see more clearly the changes in the overall levels of migrant populations.&lt;/p&gt;
 &lt;div id=&#34;carousel_forced2&#34; class=&#34;carousel slide&#34;&gt;
   &lt;ol class=&#34;carousel-indicators&#34;&gt;
-    &lt;li data-target=&#34;#carousel_forced2&#34; data-slide-to=&#34;0&#34; class=&#34;active&#34;&gt;Areas&lt;/li&gt;
-    &lt;li data-target=&#34;#carousel_forced2&#34; data-slide-to=&#34;1&#34;&gt;Regions&lt;/li&gt;
+    &lt;li data-target=&#34;#carousel_forced2&#34; data-slide-to=&#34;0&#34; class=&#34;active&#34;&gt;Known Origins&lt;/li&gt;
+    &lt;li data-target=&#34;#carousel_forced2&#34; data-slide-to=&#34;1&#34;&gt;All Origins&lt;/li&gt;
   &lt;/ol&gt;
   &lt;div class=&#34;carousel-inner&#34;&gt;
     &lt;div class=&#34;carousel-item active&#34;&gt;

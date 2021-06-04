@@ -73,8 +73,8 @@ video {
 
 <div id="carousel_free" class="carousel slide">
   <ol class="carousel-indicators">
-    <li data-target="#carousel_free" data-slide-to="0" class="active">Areas</li>
-    <li data-target="#carousel_free" data-slide-to="1">Regions</li>
+    <li data-target="#carousel_free" data-slide-to="0" class="active">Known Origins</li>
+    <li data-target="#carousel_free" data-slide-to="1">All Origins</li>
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -97,8 +97,8 @@ The second animated plot shows the changes over time where the y-axis is fixed t
 
 <div id="carousel_forced2" class="carousel slide">
   <ol class="carousel-indicators">
-    <li data-target="#carousel_forced2" data-slide-to="0" class="active">Areas</li>
-    <li data-target="#carousel_forced2" data-slide-to="1">Regions</li>
+    <li data-target="#carousel_forced2" data-slide-to="0" class="active">Known Origins</li>
+    <li data-target="#carousel_forced2" data-slide-to="1">All Origins</li>
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
