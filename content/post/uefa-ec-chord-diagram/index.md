@@ -2,7 +2,7 @@
 title: "The evolution of squad compositions at UEFA European Championships"
 subtitle: More players at the Euros are playing their club football abroad than ever before.
 # summary: 👋 We know that first impressions are important
-date: '2021-06-03'
+date: '2021-06-06'
 draft: false
 featured: false
 authors:
@@ -15,7 +15,7 @@ categories:
   - "R"
   - "football"
   - "chord diagram"
-  # - "r-bloggers"
+  - "r-bloggers"
   - "r-weekly"
 # header:
 #   image: "headers/euro.png"
