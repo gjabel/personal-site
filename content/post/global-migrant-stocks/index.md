@@ -23,6 +23,8 @@ toc: true
 
 Over the last year or so I have been playing around with different ways of showing changing global bilateral migrant stocks, adapting the animation code I created for the plots for region to region flows in this estimation [paper](https://www.nature.com/articles/s41597-019-0089-3). I am putting them online here in case they are of interest to anyone else. Feel free to download the plots using right click over the animation and then `Save Video as` or from [Github](https://github.com/guyabel/personal-site/tree/master/static/img/cd-stock-global).
 
+## Global migrant populations from 1990 to 2020
+
 The first plot below shows the change over time in the pattern of global migrant stocks. As with the [regional plots](http://guyabel.com/post/migrant-stock-chord-digrams) in my previous post, the chords in the diagrams represent the connection between the places of birth (at the base of the chord) and places of residence (at the arrow head of the chord). The width of based of the chords correspond to the size of the migrant population in millions. Chords are ordered relative to their size, with the largest migrant stocks plotted at the beginning of the region segments. The ordering of chords jumps around over time as the relative rankings of the largest foreign-born populations change in each region. Values for the migrant population sizes are from the ~~2019~~ 2020 revision of the United Nations DESA [International Migrant Stock Data](https://www.un.org/development/desa/pd/content/international-migrant-stock). 
 
 Note: you might have to right click, select show controls and hit play to start the animations depending on your browsers - right clicking can also allow you to access controls on the play back speed.
@@ -79,7 +81,7 @@ video {
 <br>
 
 <a id="sex"> </a>
-## Sex differences in global migrant distribution patterns
+## Male and female migrant populations in 2020
 
 The next two plots below show the differences between male and female global migrant distributions in 2020. In the first plot I keep the sector axis fixed at their maximums (over both sexes) making it easier to detect changes in the relative volume of a particular migrant corridor; for example the greater number of male migrants in West Asia and slightly more female migrants in North America.
 
@@ -126,7 +128,7 @@ In the second plot, I allow the sector axis to be specific to the regional total
 <br>
 
 <a id="population"> </a> 
-## Migrant totals relative to their population totals.
+## Migrant populations in 2020 relative to total populations.
 
 One important feature of international migrants are their relative rarity. Professor Hein de Haas visually illustrates this point neatly using a [pie chart](http://heindehaas.blogspot.com/2016/08/refugees-small-and-relatively-stable.html), where his focus is predominantly on refugees, but also clearly shows the small share of the global population that are living outside their country of birth (under 4%). This feature is completely missed in the migrant chord diagrams above, where there is no way to gauge the share of the migrant populations relative to the total population.
 In the plot below I tried to illustrate the relative sizes of migrant populations using the lengths of the sector axis, transitioning between
@@ -158,7 +160,7 @@ The chord widths remain constant, fixed at the size of the bilateral migrant pop
 
 
 <a id="forced"> </a>
-## Migrant populations relative to refugee populations.
+## Refugee populations relative to migrant populations in 2020.
 
 In the final plots I illustrate the relative sizes of forced migrant populations compared to the total migrant populations, transitioning the chords between
 
