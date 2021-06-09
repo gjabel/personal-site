@@ -45,20 +45,13 @@ video {
       <link>https://guyabel.com/post/football-kits/</link>
       <pubDate>Tue, 05 Jun 2018 00:00:00 +0000</pubDate>
       <guid>https://guyabel.com/post/football-kits/</guid>
-      <description>
-&lt;script src=&#34;https://guyabel.com/post/football-kits/index_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
-
-
-&lt;div id=&#34;background&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Background&lt;/h2&gt;
-&lt;p&gt;I’m loving the &lt;a href=&#34;https://cran.r-project.org/web/packages/magick/&#34;&gt;magick&lt;/a&gt; package at the moment. Reading through the &lt;a href=&#34;https://cran.r-project.org/web/packages/magick/vignettes/intro.html&#34;&gt;vignette&lt;/a&gt; I spotted the &lt;code&gt;image_morph()&lt;/code&gt; function. In this post I experiment with the function to build the GIF below that shows the changes in the England football first kit over time, using images from the excellent &lt;a href=&#34;http://www.historicalkits.co.uk/&#34;&gt;Historical Football Kits&lt;/a&gt; website.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;abel-england.gif&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;scraping&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Scraping&lt;/h2&gt;
-&lt;p&gt;The Historical Football Kits website has a detailed section on England kits spread over six pages, starting from the first outfits used in &lt;a href=&#34;http://www.historicalkits.co.uk/international/england/england-1872-1939.html&#34;&gt;1872&lt;/a&gt;. Each pages includes some interesting discussion - and importantly for this post - images of the kits.&lt;/p&gt;
-&lt;p&gt;We can use the &lt;code&gt;read_html()&lt;/code&gt; from the &lt;a href=&#34;https://cran.r-project.org/web/packages/xml2/&#34;&gt;xml2&lt;/a&gt; package and &lt;code&gt;map()&lt;/code&gt; from &lt;a href=&#34;https://cran.r-project.org/web/packages/purrr&#34;&gt;purrr&lt;/a&gt; to read and save the source code of each page.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(rvest)
+      <description>&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;
+&lt;p&gt;I&amp;rsquo;m loving the &lt;a href=&#34;https://cran.r-project.org/web/packages/magick/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;magick&lt;/a&gt; package at the moment. Reading through the &lt;a href=&#34;https://cran.r-project.org/web/packages/magick/vignettes/intro.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;vignette&lt;/a&gt; I spotted the &lt;code&gt;image_morph()&lt;/code&gt; function. In this post I experiment with the function to build the GIF below that shows the changes in the England football first kit over time, using images from the excellent &lt;a href=&#34;http://www.historicalkits.co.uk/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Historical Football Kits&lt;/a&gt; website.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;abel-england.gif&#34; alt=&#34; &#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;scraping&#34;&gt;Scraping&lt;/h2&gt;
+&lt;p&gt;The Historical Football Kits website has a detailed section on England kits spread over six pages, starting from the first outfits used in &lt;a href=&#34;http://www.historicalkits.co.uk/international/england/england-1872-1939.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;1872&lt;/a&gt;. Each pages includes some interesting discussion - and importantly for this post - images of the kits.&lt;/p&gt;
+&lt;p&gt;We can use the &lt;code&gt;read_html()&lt;/code&gt; from the &lt;a href=&#34;https://cran.r-project.org/web/packages/xml2/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;xml2&lt;/a&gt; package and &lt;code&gt;map()&lt;/code&gt; from &lt;a href=&#34;https://cran.r-project.org/web/packages/purrr&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;purrr&lt;/a&gt; to read and save the source code of each page.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(rvest)
 library(tidyverse)
 
 htmls &amp;lt;- c( 
@@ -69,9 +62,10 @@ htmls &amp;lt;- c(
   &amp;quot;http://www.historicalkits.co.uk/international/england/england-1997-2010.html&amp;quot;,
   &amp;quot;http://www.historicalkits.co.uk/international/england/england-2010-2019.html&amp;quot;
 ) %&amp;gt;%
-  map(read_html)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;From the source code we can then find the URLs of each kit image files using &lt;code&gt;html_nodes()&lt;/code&gt; and &lt;code&gt;html_attr()&lt;/code&gt; from &lt;a href=&#34;https://cran.r-project.org/web/packages/rvest/&#34;&gt;rvest&lt;/a&gt;. I used purrr’s &lt;code&gt;map_dfr()&lt;/code&gt; to store the links in a tibble and then dropped rows that do not contain kit image links or are images of away kits, kits used in single game or links to shops to buy replicas. This filtering was based on the image label or image URL and performed with the aid of the &lt;code&gt;str_detect()&lt;/code&gt; function from &lt;a href=&#34;https://cran.r-project.org/web/packages/stringr/&#34;&gt;stringr&lt;/a&gt;.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;scrape_img_url &amp;lt;- function(html){
+  map(read_html)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;From the source code we can then find the URLs of each kit image files using &lt;code&gt;html_nodes()&lt;/code&gt; and &lt;code&gt;html_attr()&lt;/code&gt; from &lt;a href=&#34;https://cran.r-project.org/web/packages/rvest/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;rvest&lt;/a&gt;. I used purrr&amp;rsquo;s &lt;code&gt;map_dfr()&lt;/code&gt; to store the links in a tibble and then dropped rows that do not contain kit image links or are images of away kits, kits used in single game or links to shops to buy replicas. This filtering was based on the image label or image URL and performed with the aid of the &lt;code&gt;str_detect()&lt;/code&gt; function from &lt;a href=&#34;https://cran.r-project.org/web/packages/stringr/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;stringr&lt;/a&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;scrape_img_url &amp;lt;- function(html){
   html %&amp;gt;%
     html_nodes(&amp;quot;.float p , .float img&amp;quot;) %&amp;gt;%
     html_attr(&amp;quot;src&amp;quot;) %&amp;gt;%
@@ -89,26 +83,30 @@ d1 &amp;lt;- htmls %&amp;gt;%
   filter(str_detect(string = img_url, pattern = &amp;quot;/international/england&amp;quot;),
          !str_detect(string = label, pattern = &amp;quot;change|alternate|Alternate|Change&amp;quot;),
          !str_detect(string = label, pattern = &amp;quot; v |Third&amp;quot;),
-         !str_detect(string = img_url, pattern = &amp;quot;lithuania|italy|yellow|red&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;head(d1)&lt;/code&gt;&lt;/pre&gt;
+         !str_detect(string = img_url, pattern = &amp;quot;lithuania|italy|yellow|red&amp;quot;))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;head(d1)
+&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##                                               img_url     label
 ## 1      /international/england/images/england-1872.gif      1872
 ## 2      /international/england/images/england-1882.gif 1879-1900
 ## 3      /international/england/images/england-1900.gif 1900-1914
 ## 4 /international/england/images/england-1920-1932.gif 1920-1930
 ## 5      /international/england/images/england-1921.gif 1930-1934
-## 6      /international/england/images/england-1934.gif      1934&lt;/code&gt;&lt;/pre&gt;
+## 6      /international/england/images/england-1934.gif      1934
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Given these URLs I then downloaded each of the images which are stored in a single R object &lt;code&gt;kits&lt;/code&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(magick)
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(magick)
 
 kits &amp;lt;- d1 %&amp;gt;%
   mutate(img_url = paste0(&amp;quot;http://www.historicalkits.co.uk&amp;quot;, img_url),
          img_url = str_replace(string =img_url, pattern =&amp;quot; &amp;quot;, replacement = &amp;quot;%20&amp;quot;)) %&amp;gt;%
   select(img_url) %&amp;gt;%
   map(image_read) %&amp;gt;%
-  set_names(&amp;quot;img&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+  set_names(&amp;quot;img&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Typing &lt;code&gt;kits&lt;/code&gt; into R will display each kit in the RStudio viewer (it will quickly run through each image). The console displays summary information for each image in the &lt;code&gt;kits&lt;/code&gt; object.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;&amp;gt; kits
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;&amp;gt; kits
 $img
    format width height colorspace filesize
 1     GIF   170    338       sRGB        0
@@ -120,12 +118,11 @@ $img
 7     GIF   170    338       sRGB        0
 8     GIF   170    338       sRGB        0
 9     GIF   170    338       sRGB        0
-10    GIF   170    338       sRGB        0&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;annotating-images&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Annotating Images&lt;/h2&gt;
+10    GIF   170    338       sRGB        0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;annotating-images&#34;&gt;Annotating Images&lt;/h2&gt;
 &lt;p&gt;Before creating any GIF I wanted add annotations for the year and the copyright information. To do this I first created a border using &lt;code&gt;image_border()&lt;/code&gt; in magick and then &lt;code&gt;image_annotate()&lt;/code&gt; to add the text. I wrapped these edits into an &lt;code&gt;add_text()&lt;/code&gt; function and then applied each to the kit images.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;add_text &amp;lt;- function(img, label){
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;add_text &amp;lt;- function(img, label){
   img %&amp;gt;%
     image_border(geometry = &amp;quot;10x60&amp;quot;, color = &amp;quot;white&amp;quot;) %&amp;gt;%
     image_chop(&amp;quot;0x45&amp;quot;) %&amp;gt;%
@@ -143,28 +140,27 @@ for(i in 1:length(kits$img)){
   kits$img[i] &amp;lt;- add_text(img = kits$img[i], label = d1$label[i])
   # add extra border to make final images square
   kits$img[i] &amp;lt;- image_border(image = kits$img[i], geometry = &amp;quot;85x1&amp;quot;, color = &amp;quot;white&amp;quot;)
-}&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;creating-a-gif&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Creating a GIF&lt;/h2&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;creating-a-gif&#34;&gt;Creating a GIF&lt;/h2&gt;
 &lt;p&gt;The final step was to bind together the set of images in an animated GIF with smooth transition images between each frame. To do this I used the &lt;code&gt;image_morph()&lt;/code&gt; twice. First to repeat the same image so that the GIF would remain stable for a few frames (&lt;code&gt;kits_morph1&lt;/code&gt; below). Then again to create a set of morphing images between successive kits (&lt;code&gt;kits_morph0&lt;/code&gt; below). The full set of frames were stored in &lt;code&gt;kits_ani&lt;/code&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;kits_ani &amp;lt;- image_morph(c(kits$img[1], kits$img[1]), frames = 4)
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;kits_ani &amp;lt;- image_morph(c(kits$img[1], kits$img[1]), frames = 4)
 for(i in 2:length(kits$img)){
   kits_morph0 &amp;lt;- image_morph(c(kits$img[i-1], kits$img[i]), frames = 4)
   kits_morph1 &amp;lt;- image_morph(c(kits$img[i], kits$img[i]), frames = 4)
   kits_ani &amp;lt;- c(kits_ani, kits_morph0)
   kits_ani &amp;lt;- c(kits_ani, kits_morph1)
-}&lt;/code&gt;&lt;/pre&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;To create an animation I passed the set of frames in the &lt;code&gt;kits_morph&lt;/code&gt; object to the &lt;code&gt;image_animate()&lt;/code&gt; and &lt;code&gt;image_write()&lt;/code&gt; functions to give the image above.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;kits_ani %&amp;gt;%
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;kits_ani %&amp;gt;%
   image_animate(fps = 10) %&amp;gt;%
-  image_write(path = &amp;quot;england.gif&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+  image_write(path = &amp;quot;england.gif&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;This bit of code can take a while to execute if the are many frames (see my comments towards the end of the post).&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;club-teams&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Club Teams&lt;/h2&gt;
-&lt;p&gt;Similar code as above can be used to create images for club teams. I tried this out for the mighty Reading. As the Reading kits on &lt;a href=&#34;http://www.historicalkits.co.uk/Reading/Reading.htm&#34;&gt;Historical Football Kits&lt;/a&gt; are on only one page and includes only home kits, finding the image URLs was much easier…&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;d1 &amp;lt;- read_html(&amp;quot;http://www.historicalkits.co.uk/Reading/Reading.htm&amp;quot;) %&amp;gt;%
+&lt;h2 id=&#34;club-teams&#34;&gt;Club Teams&lt;/h2&gt;
+&lt;p&gt;Similar code as above can be used to create images for club teams. I tried this out for the mighty Reading. As the Reading kits on &lt;a href=&#34;http://www.historicalkits.co.uk/Reading/Reading.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Historical Football Kits&lt;/a&gt; are on only one page and includes only home kits, finding the image URLs was much easier&amp;hellip;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;d1 &amp;lt;- read_html(&amp;quot;http://www.historicalkits.co.uk/Reading/Reading.htm&amp;quot;) %&amp;gt;%
   scrape_img_url() %&amp;gt;%
   filter(str_detect(string = img_url, pattern = &amp;quot;/Reading&amp;quot;),
          !str_detect(string = img_url, pattern = &amp;quot;unknown&amp;quot;)) %&amp;gt;%
@@ -172,12 +168,12 @@ for(i in 2:length(kits$img)){
     label = str_replace_all(string = label,
                             pattern = &amp;quot;[:alpha:]|\\s&amp;quot;, 
                             replacement = &amp;quot;&amp;quot;)
-  )&lt;/code&gt;&lt;/pre&gt;
+  )
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;I could then run the same code as above to scrape the images, annotate the year and copyright information and build the GIF.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;abel-reading.gif&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;Ian Holloway - &lt;a href=&#34;https://www.getreading.co.uk/news/reading-berkshire-news/sky-sports-pundit-ian-holloway-12023342&#34;&gt;we had hoops first&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;I did have trouble creating a GIF’s when I used more frames to morph images between successive kits, for example when using &lt;code&gt;frames = 10&lt;/code&gt; in &lt;code&gt;image_morphi()&lt;/code&gt;. I could not consistently replicate the error, but I suspect it is something related to the memory size - my R session would freeze when passing &lt;code&gt;image_animate()&lt;/code&gt; or &lt;code&gt;image_write()&lt;/code&gt; on the &lt;code&gt;kits_ani&lt;/code&gt; R object when it contained a large number of images.&lt;/p&gt;
-&lt;/div&gt;
+&lt;p&gt;&lt;img src=&#34;abel-reading.gif&#34; alt=&#34; &#34;&gt;&lt;/p&gt;
+&lt;p&gt;Ian Holloway - &lt;a href=&#34;https://www.getreading.co.uk/news/reading-berkshire-news/sky-sports-pundit-ian-holloway-12023342&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;we had hoops first&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I did have trouble creating a GIF&amp;rsquo;s when I used more frames to morph images between successive kits, for example when using &lt;code&gt;frames = 10&lt;/code&gt; in &lt;code&gt;image_morphi()&lt;/code&gt;. I could not consistently replicate the error, but I suspect it is something related to the memory size - my R session would freeze when passing &lt;code&gt;image_animate()&lt;/code&gt; or &lt;code&gt;image_write()&lt;/code&gt; on the &lt;code&gt;kits_ani&lt;/code&gt; R object when it contained a large number of images.&lt;/p&gt;
 </description>
     </item>
     

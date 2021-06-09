@@ -103,32 +103,22 @@ video {
       <link>https://guyabel.com/post/tidycat/</link>
       <pubDate>Wed, 08 Jul 2020 00:00:00 +0000</pubDate>
       <guid>https://guyabel.com/post/tidycat/</guid>
-      <description>
-&lt;script src=&#34;https://guyabel.com/post/tidycat/index_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
-
-
-&lt;div&gt;
-&lt;img src=&#34;featured.png&#34; width=&#34;200px&#34; align=&#34;right&#34;&gt;
-&lt;/div&gt;
-&lt;div id=&#34;introduction&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Introduction&lt;/h2&gt;
+      <description>&lt;div&gt;&lt;img src=&#34;featured.png&#34; width=&#34;200px&#34; align=&#34;right&#34;&gt;&lt;/div&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;The &lt;code&gt;tidycat&lt;/code&gt; package includes the &lt;code&gt;tidy_categorical()&lt;/code&gt; function to expand &lt;code&gt;broom::tidy()&lt;/code&gt; outputs for categorical parameter estimates.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;documentation&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Documentation&lt;/h2&gt;
-&lt;p&gt;For full documentation, see the package vignette: &lt;a href=&#34;https://cran.r-project.org/web/packages/tidycat/vignettes/intro.html&#34;&gt;The tidycat package: expand broom::tidy() output for categorical parameter estimates&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;hello-world&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Hello World&lt;/h2&gt;
+&lt;h2 id=&#34;documentation&#34;&gt;Documentation&lt;/h2&gt;
+&lt;p&gt;For full documentation, see the package vignette: &lt;a href=&#34;https://cran.r-project.org/web/packages/tidycat/vignettes/intro.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;The tidycat package: expand broom::tidy() output for categorical parameter estimates&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;hello-world&#34;&gt;Hello World&lt;/h2&gt;
 &lt;p&gt;The &lt;code&gt;tidy()&lt;/code&gt; function in the broom package takes the messy output of built-in functions in R, such as &lt;code&gt;lm()&lt;/code&gt;, and turns them into tidy data frames.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(dplyr)
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(dplyr)
 library(broom)
 
 m1 &amp;lt;- mtcars %&amp;gt;%
   mutate(transmission = recode_factor(am, `0` = &amp;quot;automatic&amp;quot;, `1` = &amp;quot;manual&amp;quot;)) %&amp;gt;%
   lm(mpg ~ transmission + wt *  as.factor(cyl), data = .)
 
-tidy(m1)&lt;/code&gt;&lt;/pre&gt;
+tidy(m1)
+&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 7 x 5
 ##   term               estimate std.error statistic       p.value
 ##   &amp;lt;chr&amp;gt;                 &amp;lt;dbl&amp;gt;     &amp;lt;dbl&amp;gt;     &amp;lt;dbl&amp;gt;         &amp;lt;dbl&amp;gt;
@@ -138,7 +128,8 @@ tidy(m1)&lt;/code&gt;&lt;/pre&gt;
 ## 4 as.factor(cyl)6      -8.66      10.4     -0.836 0.411        
 ## 5 as.factor(cyl)8     -16.9        5.27    -3.20  0.00374      
 ## 6 wt:as.factor(cyl)6    2.12       3.40     0.625 0.538        
-## 7 wt:as.factor(cyl)8    3.84       1.77     2.17  0.0399&lt;/code&gt;&lt;/pre&gt;
+## 7 wt:as.factor(cyl)8    3.84       1.77     2.17  0.0399
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;The &lt;code&gt;tidy_categorical()&lt;/code&gt; function adds&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;further columns (&lt;code&gt;variable&lt;/code&gt;, &lt;code&gt;level&lt;/code&gt; and &lt;code&gt;effect&lt;/code&gt;) to the &lt;code&gt;broom::tidy()&lt;/code&gt; output to help manage categorical variables&lt;/li&gt;
@@ -150,12 +141,13 @@ tidy(m1)&lt;/code&gt;&lt;/pre&gt;
 &lt;li&gt;the corresponding model object &lt;code&gt;m&lt;/code&gt; passed to &lt;code&gt;broom::tidy()&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;For example:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidycat)
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(tidycat)
 d1 &amp;lt;- m1 %&amp;gt;%
   tidy(conf.int = TRUE) %&amp;gt;%
   tidy_categorical(m = m1)
 d1 %&amp;gt;%
-  select(-(3:5))&lt;/code&gt;&lt;/pre&gt;
+  select(-(3:5))
+&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 10 x 8
 ##    term      estimate conf.low conf.high variable    level  effect  reference   
 ##    &amp;lt;chr&amp;gt;        &amp;lt;dbl&amp;gt;    &amp;lt;dbl&amp;gt;     &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;       &amp;lt;fct&amp;gt;  &amp;lt;chr&amp;gt;   &amp;lt;chr&amp;gt;       
@@ -168,14 +160,15 @@ d1 %&amp;gt;%
 ##  7 as.facto~  -16.9    -27.7       -6.00 as.factor(~ 8      main    Non-Baselin~
 ##  8 &amp;lt;NA&amp;gt;         0        0          0    wt:as.fact~ 4      intera~ Baseline Ca~
 ##  9 wt:as.fa~    2.12    -4.87       9.12 wt:as.fact~ 6      intera~ Non-Baselin~
-## 10 wt:as.fa~    3.84     0.192      7.50 wt:as.fact~ 8      intera~ Non-Baselin~&lt;/code&gt;&lt;/pre&gt;
+## 10 wt:as.fa~    3.84     0.192      7.50 wt:as.fact~ 8      intera~ Non-Baselin~
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;The expanded data frame from &lt;code&gt;tidy_categorical()&lt;/code&gt; of parameter estimates can be particularly useful for creating coefficient plots, allowing:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;grouping terms from the same categorical variable from the additional columns.&lt;/li&gt;
 &lt;li&gt;inclusion of reference categories in a coefficient plot from the additional rows, allowing the reader to better grasp the meaning of the parameter estimates in each categorical variable.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;For example:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(forcats)
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(forcats)
 library(ggplot2)
 library(ggforce)
 
@@ -186,17 +179,17 @@ d1 %&amp;gt;%
                        ymin = conf.low, ymax = conf.high)) +
   facet_row(facets = &amp;quot;variable&amp;quot;, scales = &amp;quot;free_x&amp;quot;, space = &amp;quot;free&amp;quot;) +
   geom_hline(yintercept = 0, linetype = &amp;quot;dashed&amp;quot;) +
-  geom_pointrange()&lt;/code&gt;&lt;/pre&gt;
+  geom_pointrange()
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;https://guyabel.com/post/tidycat/index_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;installation&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Installation&lt;/h2&gt;
-&lt;p&gt;You can install the released version of tidycat from &lt;a href=&#34;https://CRAN.R-project.org&#34;&gt;CRAN&lt;/a&gt; with:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;install.packages(&amp;quot;tidycat&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;And the development version from &lt;a href=&#34;https://github.com/&#34;&gt;GitHub&lt;/a&gt; with:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# install.packages(&amp;quot;devtools&amp;quot;)
-devtools::install_github(&amp;quot;guyabel/tidycat&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+&lt;p&gt;You can install the released version of tidycat from &lt;a href=&#34;https://CRAN.R-project.org&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CRAN&lt;/a&gt; with:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;install.packages(&amp;quot;tidycat&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;And the development version from &lt;a href=&#34;https://github.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub&lt;/a&gt; with:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# install.packages(&amp;quot;devtools&amp;quot;)
+devtools::install_github(&amp;quot;guyabel/tidycat&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
@@ -205,26 +198,22 @@ devtools::install_github(&amp;quot;guyabel/tidycat&amp;quot;)&lt;/code&gt;&lt;/p
       <link>https://guyabel.com/post/chinese-migration-chord-diagram/</link>
       <pubDate>Mon, 04 Feb 2019 00:00:00 +0000</pubDate>
       <guid>https://guyabel.com/post/chinese-migration-chord-diagram/</guid>
-      <description>
-&lt;script src=&#34;https://guyabel.com/post/chinese-migration-chord-diagram/index_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
-
-
-&lt;p&gt;We have had a number of requests for the R code to replicate the plots in our &lt;a href=&#34;https://guyabel.com/publication/china-internal-migration-2010-15/&#34;&gt;paper&lt;/a&gt; on internal migration in China. The code below will produce a similar looking plot, but I have taken out some of the arguments that were very specific to our plot that will not replicate well for other data.&lt;/p&gt;
-&lt;div id=&#34;data&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Data&lt;/h3&gt;
+      <description>&lt;p&gt;We have had a number of requests for the R code to replicate the plots in our &lt;a href=&#34;https://guyabel.com/publication/china-internal-migration-2010-15/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;paper&lt;/a&gt; on internal migration in China. The code below will produce a similar looking plot, but I have taken out some of the arguments that were very specific to our plot that will not replicate well for other data.&lt;/p&gt;
+&lt;h2 id=&#34;data&#34;&gt;Data&lt;/h2&gt;
 &lt;p&gt;The code is based on two data sets:&lt;/p&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;Bilateral flow data with three columns only (origin, destination and flow), see &lt;a href=&#34;https://gist.github.com/guyabel/c24d990abc2c692f2b63747ee42909eb&#34;&gt;here&lt;/a&gt; for the file used below&lt;/li&gt;
-&lt;li&gt;Region details used for plotting, see &lt;a href=&#34;https://gist.github.com/guyabel/2f52e1593ad951800d83530a58ce0079&#34;&gt;here&lt;/a&gt; for the file used below&lt;/li&gt;
+&lt;ol&gt;
+&lt;li&gt;Bilateral flow data with three columns only (origin, destination and flow), see &lt;a href=&#34;https://gist.github.com/guyabel/c24d990abc2c692f2b63747ee42909eb&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt; for the file used below&lt;/li&gt;
+&lt;li&gt;Region details used for plotting, see &lt;a href=&#34;https://gist.github.com/guyabel/2f52e1593ad951800d83530a58ce0079&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt; for the file used below&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Note, the names in the region data are the same as the ones used in the origin and destination data.&lt;/p&gt;
 &lt;p&gt;We can read in the data using &lt;code&gt;read_csv()&lt;/code&gt; in the readr package&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(tidyverse)
 
 d1 &amp;lt;- read_csv(&amp;quot;https://gist.githubusercontent.com/guyabel/c24d990abc2c692f2b63747ee42909eb/raw/6b255edee7e01ca31b856152d18ae10ad50badd5/china_flow_2010_2015.csv&amp;quot;)
 
 d1 &amp;lt;- mutate(d1, flow = flow/1e6)
-d1&lt;/code&gt;&lt;/pre&gt;
+d1
+&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 961 x 3
 ##    orig           dest      flow
 ##    &amp;lt;chr&amp;gt;          &amp;lt;chr&amp;gt;    &amp;lt;dbl&amp;gt;
@@ -238,9 +227,11 @@ d1&lt;/code&gt;&lt;/pre&gt;
 ##  8 Heilongjiang   Beijing 0.194 
 ##  9 Shanghai       Beijing 0.0266
 ## 10 Jiangsu        Beijing 0.111 
-## # ... with 951 more rows&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;d2 &amp;lt;- read_csv(&amp;quot;https://gist.githubusercontent.com/guyabel/2f52e1593ad951800d83530a58ce0079/raw/165843fdd4afc61e17cd7658563e573c1e74fb57/china_region_details.csv&amp;quot;)
-d2&lt;/code&gt;&lt;/pre&gt;
+## # ... with 951 more rows
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;d2 &amp;lt;- read_csv(&amp;quot;https://gist.githubusercontent.com/guyabel/2f52e1593ad951800d83530a58ce0079/raw/165843fdd4afc61e17cd7658563e573c1e74fb57/china_region_details.csv&amp;quot;)
+d2
+&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 31 x 6
 ##    name      region order colour    gap name_zh
 ##    &amp;lt;chr&amp;gt;     &amp;lt;chr&amp;gt;  &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;   &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;  
@@ -254,12 +245,11 @@ d2&lt;/code&gt;&lt;/pre&gt;
 ##  8 Fujian    East       8 #FD1C1F     2 &amp;lt;U+798F&amp;gt;&amp;lt;U+5EFA&amp;gt;   
 ##  9 Guangdong East       9 #FF1E20     2 &amp;lt;U+5E7F&amp;gt;&amp;lt;U+4E1C&amp;gt;   
 ## 10 Hainan    East      10 #FF1F21     6 &amp;lt;U+6D77&amp;gt;&amp;lt;U+5357&amp;gt;   
-## # ... with 21 more rows&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;plot&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Plot&lt;/h3&gt;
+## # ... with 21 more rows
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;plot&#34;&gt;Plot&lt;/h2&gt;
 &lt;p&gt;The code below plots the chord diagram without the default labels and axis for the &lt;code&gt;chordDiagram()&lt;/code&gt; function, that are added later in the &lt;code&gt;circos.track()&lt;/code&gt; function.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(circlize)
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(circlize)
 
 circos.clear()
 circos.par(track.margin = c(0.01, -0.01), start.degree = 90, gap.degree = d2$gap)
@@ -282,44 +272,40 @@ circos.track(track.index = 1, bg.border = NA, panel.fun = function(x, y) {
               labels.cex = 0.5,
               labels.pos.adjust = FALSE,
               labels.niceFacing = FALSE)
-})&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;The legend is added using the &lt;code&gt;legend()&lt;/code&gt; function using the &lt;a href=&#34;http://colorbrewer2.org/#type=qualitative&amp;amp;scheme=Set1&amp;amp;n=4%5D&#34;&gt;Set1&lt;/a&gt; colour palette, that we used as the basis of regional shades in the colour column of &lt;code&gt;d2&lt;/code&gt;; see the &lt;a href=&#34;%5Bhttps://cran.r-project.org/web/packages/shades/index.html%5D&#34;&gt;shades&lt;/a&gt; package for creating palettes of similar colours.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;legend&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Legend&lt;/h3&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(RColorBrewer)
+})
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The legend is added using the &lt;code&gt;legend()&lt;/code&gt; function using the &lt;a href=&#34;http://colorbrewer2.org/#type=qualitative&amp;amp;scheme=Set1&amp;amp;n=4]&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Set1&lt;/a&gt; colour palette, that we used as the basis of regional shades in the colour column of &lt;code&gt;d2&lt;/code&gt;; see the &lt;a href=&#34;[https://cran.r-project.org/web/packages/shades/index.html]&#34;&gt;shades&lt;/a&gt; package for creating palettes of similar colours.&lt;/p&gt;
+&lt;h2 id=&#34;legend&#34;&gt;Legend&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(RColorBrewer)
 legend(x = 0.7, y = 1.1, 
        legend = unique(d2$region), 
        fill = brewer.pal(n = 4, name = &amp;quot;Set1&amp;quot;), 
        bty = &amp;quot;n&amp;quot;, cex = 0.8,
        x.intersp = 0.5, 
-       title = &amp;quot;   Region&amp;quot;, title.adj = 0) &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;saving&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Saving&lt;/h3&gt;
+       title = &amp;quot;   Region&amp;quot;, title.adj = 0) 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;saving&#34;&gt;Saving&lt;/h2&gt;
 &lt;p&gt;To save the image in a PDF plot surround the plotting code above between the &lt;code&gt;pdf()&lt;/code&gt; function and &lt;code&gt;dev.off()&lt;/code&gt; function.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;pdf(file = &amp;quot;figure1.pdf&amp;quot;, width = 6, height = 6)
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;pdf(file = &amp;quot;figure1.pdf&amp;quot;, width = 6, height = 6)
 
 ### insert code from above
 
-dev.off()&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;image-files&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Image Files&lt;/h3&gt;
-&lt;p&gt;To convert the PDF to a PNG file I recommend the &lt;a href=&#34;https://cran.r-project.org/web/packages/magick/&#34;&gt;magick&lt;/a&gt; package:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(magick)
+dev.off()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;image-files&#34;&gt;Image Files&lt;/h2&gt;
+&lt;p&gt;To convert the PDF to a PNG file I recommend the &lt;a href=&#34;https://cran.r-project.org/web/packages/magick/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;magick&lt;/a&gt; package:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(magick)
 p &amp;lt;- image_read_pdf(&amp;quot;figure1.pdf&amp;quot;)
-image_write(image = p, path = &amp;quot;figure1.png&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;chinese-labels&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Chinese Labels&lt;/h3&gt;
+image_write(image = p, path = &amp;quot;figure1.png&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;chinese-labels&#34;&gt;Chinese Labels&lt;/h2&gt;
 &lt;p&gt;To replace the labels with their Chinese names, as in the plot above, replace the code for the &lt;code&gt;s&lt;/code&gt; object in the &lt;code&gt;circos.track()&lt;/code&gt; function to:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;    s = d2 %&amp;gt;% 
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;    s = d2 %&amp;gt;% 
       filter(name == get.cell.meta.data(&amp;quot;sector.index&amp;quot;)) %&amp;gt;%
       select(name_zh) %&amp;gt;%
-      pull()&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;You might also need to add &lt;code&gt;family = &#34;GB1&#34;&lt;/code&gt; in the &lt;code&gt;pdf()&lt;/code&gt; function for Chinese characters to render in a PDF viewer.&lt;/p&gt;
-&lt;/div&gt;
+      pull()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You might also need to add &lt;code&gt;family = &amp;quot;GB1&amp;quot;&lt;/code&gt; in the &lt;code&gt;pdf()&lt;/code&gt; function for Chinese characters to render in a PDF viewer.&lt;/p&gt;
 </description>
     </item>
     
@@ -328,25 +314,19 @@ image_write(image = p, path = &amp;quot;figure1.png&amp;quot;)&lt;/code&gt;&lt;/
       <link>https://guyabel.com/post/animated-directional-chord-diagrams/</link>
       <pubDate>Wed, 18 Apr 2018 00:00:00 +0000</pubDate>
       <guid>https://guyabel.com/post/animated-directional-chord-diagrams/</guid>
-      <description>
-&lt;script src=&#34;https://guyabel.com/post/animated-directional-chord-diagrams/index_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
-
-
-&lt;div id=&#34;background&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Background&lt;/h2&gt;
-&lt;p&gt;A little while ago my paper in &lt;em&gt;International Migration Review&lt;/em&gt; on global migration flow estimates came out &lt;a href=&#34;http://guyabel.com/publication/global-migration-estimates-by-gender/&#34;&gt;online&lt;/a&gt;. The paper includes a number of directional chord diagrams to visualize the estimates.&lt;/p&gt;
+      <description>&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;
+&lt;p&gt;A little while ago my paper in &lt;em&gt;International Migration Review&lt;/em&gt; on global migration flow estimates came out &lt;a href=&#34;http://guyabel.com/publication/global-migration-estimates-by-gender/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;online&lt;/a&gt;. The paper includes a number of directional chord diagrams to visualize the estimates.&lt;/p&gt;
 &lt;p&gt;Recently I have been playing around &lt;code&gt;tweenr&lt;/code&gt; and the &lt;code&gt;magick&lt;/code&gt; packages for animated population pyramids. In this post I attempt to show how to use these packages to produce animated directional chord diagrams of global migration flow estimates&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;data-prep&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Data Prep&lt;/h2&gt;
+&lt;h2 id=&#34;data&#34;&gt;Data&lt;/h2&gt;
 &lt;p&gt;The first step is to read into R two data frames (these are in my &lt;code&gt;migest&lt;/code&gt; R package if you wish to replicate the code below).&lt;/p&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;ol&gt;
 &lt;li&gt;Time series of bilateral migration flow estimates:&lt;/li&gt;
 &lt;/ol&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# install.packages(&amp;quot;migest&amp;quot;)
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# install.packages(&amp;quot;migest&amp;quot;)
 library(tidyverse)
 d0 &amp;lt;- read_csv(system.file(&amp;quot;imr&amp;quot;, &amp;quot;reg_flow.csv&amp;quot;, package = &amp;quot;migest&amp;quot;))
-d0 &lt;/code&gt;&lt;/pre&gt;
+d0 
+&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 891 x 4
 ##    year0 orig_reg     dest_reg                         flow
 ##    &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;        &amp;lt;chr&amp;gt;                           &amp;lt;dbl&amp;gt;
@@ -360,12 +340,14 @@ d0 &lt;/code&gt;&lt;/pre&gt;
 ##  8  1960 Africa       Southern Asia                   35603
 ##  9  1960 Africa       Western Asia                   106580
 ## 10  1960 Eastern Asia Africa                          37301
-## # ... with 881 more rows&lt;/code&gt;&lt;/pre&gt;
-&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
+## # ... with 881 more rows
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;2&#34;&gt;
 &lt;li&gt;Some regional meta data for chord diagram plots:&lt;/li&gt;
 &lt;/ol&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;d1 &amp;lt;- read_csv(system.file(&amp;quot;vidwp&amp;quot;, &amp;quot;reg_plot.csv&amp;quot;, package = &amp;quot;migest&amp;quot;))
-d1&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;d1 &amp;lt;- read_csv(system.file(&amp;quot;vidwp&amp;quot;, &amp;quot;reg_plot.csv&amp;quot;, package = &amp;quot;migest&amp;quot;))
+d1
+&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 9 x 5
 ##   region                        order1 col1    reg1           reg2          
 ##   &amp;lt;chr&amp;gt;                          &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;   &amp;lt;chr&amp;gt;          &amp;lt;chr&amp;gt;         
@@ -377,22 +359,24 @@ d1&lt;/code&gt;&lt;/pre&gt;
 ## 6 Southern Asia                      6 #F66320 Southern       Asia          
 ## 7 Eastern Asia                       7 #DB3937 Eastern        Asia          
 ## 8 Oceania                            8 #A463D7 Oceania        &amp;lt;NA&amp;gt;          
-## 9 Latin America &amp;amp; Caribbean          9 #0C5BCE Latin America  &amp;amp; Caribbean&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;tween-data&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Tween Data&lt;/h2&gt;
+## 9 Latin America &amp;amp; Caribbean          9 #0C5BCE Latin America  &amp;amp; Caribbean
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;tween&#34;&gt;Tween&lt;/h2&gt;
 &lt;p&gt;The next step is to tween the data by migration corridor.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tweenr)
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(tweenr)
 
 d2 &amp;lt;- d0 %&amp;gt;%
   mutate(corridor = paste(orig_reg, dest_reg, sep = &amp;quot; -&amp;gt; &amp;quot;)) %&amp;gt;%
   select(corridor, year0, flow) %&amp;gt;%
   mutate(ease = &amp;quot;linear&amp;quot;) %&amp;gt;%
   tween_elements(time = &amp;quot;year0&amp;quot;, group = &amp;quot;corridor&amp;quot;, ease = &amp;quot;ease&amp;quot;, nframes = 100) %&amp;gt;%
-  tbl_df()&lt;/code&gt;&lt;/pre&gt;
+  tbl_df()
+&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## Warning: `tbl_df()` was deprecated in dplyr 1.0.0.
-## Please use `tibble::as_tibble()` instead.&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;d2&lt;/code&gt;&lt;/pre&gt;
+## Please use `tibble::as_tibble()` instead.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;d2
+&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 8,181 x 4
 ##    year0    flow .frame .group                                 
 ##    &amp;lt;dbl&amp;gt;   &amp;lt;dbl&amp;gt;  &amp;lt;int&amp;gt; &amp;lt;chr&amp;gt;                                  
@@ -406,14 +390,16 @@ d2 &amp;lt;- d0 %&amp;gt;%
 ##  8  1960   35603      0 Africa -&amp;gt; Southern Asia                
 ##  9  1960  106580      0 Africa -&amp;gt; Western Asia                 
 ## 10  1960   37301      0 Eastern Asia -&amp;gt; Africa                 
-## # ... with 8,171 more rows&lt;/code&gt;&lt;/pre&gt;
+## # ... with 8,171 more rows
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;This creates larger data frame &lt;code&gt;d2&lt;/code&gt;, with 100 observations for each corridor, one for each frame in the animation. In the original data &lt;code&gt;d0&lt;/code&gt; there are only 11 observations for each corridor, one for each five-year period.&lt;/p&gt;
 &lt;p&gt;Then some further minor data wrangling is required to ready the data for plotting using the &lt;code&gt;chordDiagram&lt;/code&gt; function; namely the first three columns in the data must correspond to the origin, destination and flow.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;d2 &amp;lt;- d2 %&amp;gt;%
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;d2 &amp;lt;- d2 %&amp;gt;%
   separate(col = .group, into = c(&amp;quot;orig_reg&amp;quot;, &amp;quot;dest_reg&amp;quot;), sep = &amp;quot; -&amp;gt; &amp;quot;) %&amp;gt;%
   select(orig_reg, dest_reg, flow, everything()) %&amp;gt;%
   mutate(flow = flow/1e06)
-d2&lt;/code&gt;&lt;/pre&gt;
+d2
+&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 8,181 x 5
 ##    orig_reg     dest_reg                         flow year0 .frame
 ##    &amp;lt;chr&amp;gt;        &amp;lt;chr&amp;gt;                           &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;  &amp;lt;int&amp;gt;
@@ -427,12 +413,11 @@ d2&lt;/code&gt;&lt;/pre&gt;
 ##  8 Africa       Southern Asia                 0.0356   1960      0
 ##  9 Africa       Western Asia                  0.107    1960      0
 ## 10 Eastern Asia Africa                        0.0373   1960      0
-## # ... with 8,171 more rows&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;plots-for-each-frame&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Plots for Each Frame&lt;/h2&gt;
-&lt;p&gt;Now the data is in the correct format, chord diagrams can be produced for each frame of the eventual GIF. To do this, I used a &lt;code&gt;for&lt;/code&gt; loop to cycle through the tweend data. The arguments I used in the &lt;code&gt;circos.par&lt;/code&gt;, &lt;code&gt;chordDiagram&lt;/code&gt; and &lt;code&gt;circos.track&lt;/code&gt; functions to produce each plot are explained in more detail in the comments of the &lt;code&gt;migest&lt;/code&gt; &lt;a href=&#34;https://github.com/guyabel/migest/blob/master/demo/cfplot_reg2.R&#34;&gt;demo&lt;/a&gt;.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# create a directory to store the individual plots
+## # ... with 8,171 more rows
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;plots-for-each-frame&#34;&gt;Plots for Each Frame&lt;/h2&gt;
+&lt;p&gt;Now the data is in the correct format, chord diagrams can be produced for each frame of the eventual GIF. To do this, I used a &lt;code&gt;for&lt;/code&gt; loop to cycle through the tweend data. The arguments I used in the &lt;code&gt;circos.par&lt;/code&gt;, &lt;code&gt;chordDiagram&lt;/code&gt; and &lt;code&gt;circos.track&lt;/code&gt; functions to produce each plot are explained in more detail in the comments of the &lt;code&gt;migest&lt;/code&gt; &lt;a href=&#34;https://github.com/guyabel/migest/blob/master/demo/cfplot_reg2.R&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;demo&lt;/a&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# create a directory to store the individual plots
 dir.create(&amp;quot;./plot-gif/&amp;quot;)
 
 library(circlize)
@@ -470,17 +455,16 @@ for(f in unique(d2$.frame)){
   
   # close plotting device
   dev.off()
-}&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;creating-a-gif&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Creating a GIF&lt;/h2&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;creating-a-gif&#34;&gt;Creating a GIF&lt;/h2&gt;
 &lt;p&gt;Using the &lt;code&gt;magick&lt;/code&gt; package a GIF can be created by using the code below to&lt;/p&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;ol&gt;
 &lt;li&gt;Read in an initial plot and then combine together all other images created above.&lt;/li&gt;
 &lt;li&gt;Scale the combined images.&lt;/li&gt;
 &lt;li&gt;Animate the combined images and save as a &lt;code&gt;.gif&lt;/code&gt;.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(magick)
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(magick)
 
 img &amp;lt;- image_read(path = &amp;quot;./plot-gif/globalchord0.png&amp;quot;)
 for(f in unique(d2$.frame)[-1]){
@@ -492,15 +476,14 @@ for(f in unique(d2$.frame)[-1]){
 img1 &amp;lt;- image_scale(image = img, geometry = &amp;quot;720x720&amp;quot;)
 
 ani0 &amp;lt;- image_animate(image = img1, fps = 10)
-image_write(image = ani0, path = &amp;quot;./plot-gif/globalchord.gif&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+image_write(image = ani0, path = &amp;quot;./plot-gif/globalchord.gif&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;This gives an output much like this minus the additional details in the corners:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;abel-ani10-gf-dist.gif&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;abel-ani10-gf-dist.gif&#34; alt=&#34; &#34;&gt;&lt;/p&gt;
 &lt;p&gt;(might take a few seconds to fully load)&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;fixing-scales-in-chord-diagrams&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Fixing Scales in Chord Diagrams&lt;/h2&gt;
-&lt;p&gt;Whilst the plot above allows comparisons of the distributions of flows overtime it is more difficult to compare volumes. For such comparisons, Zuguang Gu &lt;a href=&#34;http://zuguang.de/circlize_book/book/advanced-usage-of-chorddiagram.html#compare-two-chord-diagrams&#34;&gt;suggests&lt;/a&gt; scaling the gaps between the sectors on the outside of the chord diagram. I wrote a little function that can do this for flow data arranged in a tidy format;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;scale_gap &amp;lt;- function(flow_m, flow_max, gap_at_max = 1, gaps = NULL) {
+&lt;h2 id=&#34;fixing-scales-in-chord-diagrams&#34;&gt;Fixing Scales in Chord Diagrams&lt;/h2&gt;
+&lt;p&gt;Whilst the plot above allows comparisons of the distributions of flows overtime it is more difficult to compare volumes. For such comparisons, Zuguang Gu &lt;a href=&#34;http://zuguang.de/circlize_book/book/advanced-usage-of-chorddiagram.html#compare-two-chord-diagrams&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;suggests&lt;/a&gt; scaling the gaps between the sectors on the outside of the chord diagram. I wrote a little function that can do this for flow data arranged in a tidy format;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;scale_gap &amp;lt;- function(flow_m, flow_max, gap_at_max = 1, gaps = NULL) {
   p &amp;lt;- flow_m / flow_max
   if(length(gap_at_max) == 1 &amp;amp; !is.null(gaps)) {
     gap_at_max &amp;lt;- rep(gap_at_max, gaps)
@@ -508,22 +491,24 @@ image_write(image = ani0, path = &amp;quot;./plot-gif/globalchord.gif&amp;quot;)
   gap_degree &amp;lt;- (360 - sum(gap_at_max)) * (1 - p)
   gap_m &amp;lt;- (gap_degree + sum(gap_at_max))/gaps
   return(gap_m)
-}&lt;/code&gt;&lt;/pre&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;where&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;flow_m&lt;/code&gt; is the size of total flows in the matrix for the given year being re-scaled.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;flow_max&lt;/code&gt; is the maximum size of the flow matrix over all years&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;gap_at_max&lt;/code&gt; is the size in degrees of the gaps in the flow matrix in the year where the flows are at their all time maximum.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;gaps&lt;/code&gt; is the number of gaps in the chord diagram (i.e. the number of regions).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;gaps&lt;/code&gt; is the number of gaps in the chord diagram (i.e. the number of regions).&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;The function can be used to derive the size of gaps in each frame for a new animated GIF.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;d3 &amp;lt;- d2 %&amp;gt;%
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;d3 &amp;lt;- d2 %&amp;gt;%
   group_by(.frame) %&amp;gt;%
   summarise(flow = sum(flow)) %&amp;gt;%
   mutate(gaps = scale_gap(flow_m = flow, flow_max = max(.$flow), 
                           gap_at_max = 4, gaps = 9))
 
-d3&lt;/code&gt;&lt;/pre&gt;
+d3
+&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 101 x 3
 ##    .frame  flow  gaps
 ##     &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;
@@ -537,16 +522,18 @@ d3&lt;/code&gt;&lt;/pre&gt;
 ##  8      7  19.1  24.7
 ##  9      8  19.3  24.6
 ## 10      9  19.6  24.4
-## # ... with 91 more rows&lt;/code&gt;&lt;/pre&gt;
+## # ... with 91 more rows
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;The calculations in &lt;code&gt;d3&lt;/code&gt; can then be plugged into the &lt;code&gt;for&lt;/code&gt; loop above, where the &lt;code&gt;circos.par()&lt;/code&gt; function is replaced by&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;circos.par(start.degree = 90, track.margin = c(-0.1, 0.1),
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;circos.par(start.degree = 90, track.margin = c(-0.1, 0.1),
            gap.degree = filter(d3, .frame == f)$gaps, 
-           points.overflow.warning = FALSE)&lt;/code&gt;&lt;/pre&gt;
+           points.overflow.warning = FALSE)
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Once the for loop has produced a new set of images, the same code to produce the GIF file can be run to obtain the animated chord diagrams with changing gaps;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;abel-ani10-gf-gap.gif&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;abel-ani10-gf-gap.gif&#34; alt=&#34; &#34;&gt;&lt;/p&gt;
 &lt;p&gt;Whilst the sector axes are now fixed, I am not convinced that changing the relative gaps is the best way to compare volumes when using animated chord diagrams. The sectors of all regions - bar Northern America - are rotating making it hard follow their changes over time.&lt;/p&gt;
 &lt;p&gt;Fortunately there is new &lt;code&gt;xmax&lt;/code&gt; option in &lt;code&gt;chordDiagram&lt;/code&gt; that can be used to fix the lengths of the x-axis for each sector using a named vector. In the context of producing an animation, the historic maximum migration flows (of combined immigration and emigration flows) in each region can be used, calculated from the original data &lt;code&gt;d0&lt;/code&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(magrittr)
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(magrittr)
 
 reg_max &amp;lt;- d0 %&amp;gt;%
   group_by(year0, orig_reg) %&amp;gt;%
@@ -558,9 +545,10 @@ reg_max &amp;lt;- d0 %&amp;gt;%
   mutate(reg = orig_reg) %&amp;gt;%
   group_by(reg) %&amp;gt;%
   summarise(tot_max = max(tot)/1e06) %$%
-  &amp;#39;names&amp;lt;-&amp;#39;(tot_max, reg)
+  &#39;names&amp;lt;-&#39;(tot_max, reg)
 
-reg_max&lt;/code&gt;&lt;/pre&gt;
+reg_max
+&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##                        Africa                  Eastern Asia 
 ##                     17.429942                     14.805479 
 ## Eastern Europe &amp;amp; Central Asia                        Europe 
@@ -570,17 +558,18 @@ reg_max&lt;/code&gt;&lt;/pre&gt;
 ##                       Oceania                 Southern Asia 
 ##                      2.968412                     15.067631 
 ##                  Western Asia 
-##                     15.072561&lt;/code&gt;&lt;/pre&gt;
+##                     15.072561
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;The &lt;code&gt;reg_max&lt;/code&gt; object can then be used in the &lt;code&gt;chordDiagram&lt;/code&gt; function in the &lt;code&gt;for&lt;/code&gt; loop above, replacing the original call with&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;chordDiagram(x = filter(d2, .frame == f), directional = 1, order = d1$region,
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;chordDiagram(x = filter(d2, .frame == f), directional = 1, order = d1$region,
              grid.col = d1$col1, annotationTrack = &amp;quot;grid&amp;quot;,
              transparency = 0.25,  annotationTrackHeight = c(0.05, 0.1),
              direction.type = c(&amp;quot;diffHeight&amp;quot;, &amp;quot;arrows&amp;quot;), link.arr.type = &amp;quot;big.arrow&amp;quot;,
              diffHeight  = -0.04, link.sort = TRUE, link.largest.ontop = TRUE, 
-             xmax = reg_max)&lt;/code&gt;&lt;/pre&gt;
+             xmax = reg_max)
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Running the complete code - the adapted &lt;code&gt;for&lt;/code&gt; loop to produce the images and then the &lt;code&gt;magick&lt;/code&gt; functions to compile the GIF - results in the following animation:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;abel-ani10-gf-fix.gif&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
+&lt;p&gt;&lt;img src=&#34;abel-ani10-gf-fix.gif&#34; alt=&#34; &#34;&gt;&lt;/p&gt;
 </description>
     </item>
     

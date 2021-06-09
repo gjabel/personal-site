@@ -252,7 +252,7 @@
   
   
   
-  <link rel="stylesheet" href="/css/wowchemy.553f39179737f4e532e9b94832399492.css" />
+  <link rel="stylesheet" href="/css/wowchemy.ba8da8579ac44c98b451dcba49b90383.css" />
 
   
 
@@ -757,9 +757,31 @@
   </div>
 
   <div class="page-body">
-    <article class="article">
+    
+<div class="container-fluid docs">
+    <div class="row flex-xl-nowrap">
+      <div class="d-none d-xl-block col-xl-2 docs-toc">
+        <ul class="nav toc-top">
+          <li>
+            <a href="#" id="back_to_top" class="docs-toc-title">
+              Contents
+            </a>
+          </li>
+        </ul>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#sex-differences-in-global-migrant-distribution-patterns">Sex differences in global migrant distribution patterns</a></li>
+    <li><a href="#migrant-totals-relative-to-their-population-totals">Migrant totals relative to their population totals.</a></li>
+    <li><a href="#migrant-populations-relative-to-refugee-populations">Migrant populations relative to refugee populations.</a></li>
+    <li><a href="#r-code">R Code</a></li>
+  </ul>
+</nav>
 
-  
+      </div>
+      <main class="col-12 col-md-0 col-xl-10 py-md-3 pl-md-5 docs-content" role="main">
+
+        <article class="article">
+          
 
 
 
@@ -858,11 +880,9 @@
 </div>
 
 
-
-  <div class="article-container">
-
-    <div class="article-style">
-      <p>Over the last year or so I have been playing around with different ways of showing changing global bilateral migrant stocks, adapting the animation code I created for the plots for region to region flows in this estimation <a href="https://www.nature.com/articles/s41597-019-0089-3" target="_blank" rel="noopener">paper</a>. I am putting them online here in case they are of interest to anyone else. Feel free to download the plots using right click over the animation and then <code>Save Video as</code> or from <a href="https://github.com/guyabel/personal-site/tree/master/static/img/cd-stock-global" target="_blank" rel="noopener">Github</a>.</p>
+          <div class="article-container">
+            <div class="article-style">
+              <p>Over the last year or so I have been playing around with different ways of showing changing global bilateral migrant stocks, adapting the animation code I created for the plots for region to region flows in this estimation <a href="https://www.nature.com/articles/s41597-019-0089-3" target="_blank" rel="noopener">paper</a>. I am putting them online here in case they are of interest to anyone else. Feel free to download the plots using right click over the animation and then <code>Save Video as</code> or from <a href="https://github.com/guyabel/personal-site/tree/master/static/img/cd-stock-global" target="_blank" rel="noopener">Github</a>.</p>
 <p>The first plot below shows the change over time in the pattern of global migrant stocks. As with the <a href="http://guyabel.com/post/migrant-stock-chord-digrams" target="_blank" rel="noopener">regional plots</a> in my previous post, the chords in the diagrams represent the connection between the places of birth (at the base of the chord) and places of residence (at the arrow head of the chord). The width of based of the chords correspond to the size of the migrant population in millions. Chords are ordered relative to their size, with the largest migrant stocks plotted at the beginning of the region segments. The ordering of chords jumps around over time as the relative rankings of the largest foreign-born populations change in each region. Values for the migrant population sizes are from the <del>2019</del> 2020 revision of the United Nations DESA <a href="https://www.un.org/development/desa/pd/content/international-migrant-stock" target="_blank" rel="noopener">International Migrant Stock Data</a>.</p>
 <p>Note: you might have to right click, select show controls and hit play to start the animations depending on your browsers - right clicking can also allow you to access controls on the play back speed.</p>
 <style>
@@ -914,7 +934,8 @@ video {
   </div>
 </div>
 <br>
-<h2 id="a-idsexa-sex-differences-in-global-migrant-distribution-patterns"><a id="sex"></a> Sex differences in global migrant distribution patterns</h2>
+<p><a id="sex"> </a></p>
+<h2 id="sex-differences-in-global-migrant-distribution-patterns">Sex differences in global migrant distribution patterns</h2>
 <p>The next two plots below show the differences between male and female global migrant distributions in 2020. In the first plot I keep the sector axis fixed at their maximums (over both sexes) making it easier to detect changes in the relative volume of a particular migrant corridor; for example the greater number of male migrants in West Asia and slightly more female migrants in North America.</p>
 <div id="carousel_sex1" class="carousel slide">
   <ol class="carousel-indicators">
@@ -955,7 +976,8 @@ video {
   </div>
 </div>
 <br>
-<h2 id="a-idpopulationa-migrant-totals-relative-to-their-population-totals"><a id="population"></a> Migrant totals relative to their population totals.</h2>
+<p><a id="population"> </a></p>
+<h2 id="migrant-totals-relative-to-their-population-totals">Migrant totals relative to their population totals.</h2>
 <p>One important feature of international migrants are their relative rarity. Professor Hein de Haas visually illustrates this point neatly using a <a href="http://heindehaas.blogspot.com/2016/08/refugees-small-and-relatively-stable.html" target="_blank" rel="noopener">pie chart</a>, where his focus is predominantly on refugees, but also clearly shows the small share of the global population that are living outside their country of birth (under 4%). This feature is completely missed in the migrant chord diagrams above, where there is no way to gauge the share of the migrant populations relative to the total population.
 In the plot below I tried to illustrate the relative sizes of migrant populations using the lengths of the sector axis, transitioning between</p>
 <ul>
@@ -982,7 +1004,8 @@ In the plot below I tried to illustrate the relative sizes of migrant population
   </div>
 </div>
 <br>
-<h2 id="a-idforceda-migrant-populations-relative-to-refugee-populations"><a id="forced"></a> Migrant populations relative to refugee populations.</h2>
+<p><a id="forced"> </a></p>
+<h2 id="migrant-populations-relative-to-refugee-populations">Migrant populations relative to refugee populations.</h2>
 <p>In the final plots I illustrate the relative sizes of forced migrant populations compared to the total migrant populations, transitioning the chords between</p>
 <ul>
 <li>The number of migrants from each origin and destination based on the UN IMS2020 stock data</li>
@@ -1031,9 +1054,8 @@ In the plot below I tried to illustrate the relative sizes of migrant population
 <h2 id="r-code">R Code</h2>
 <p>These plots were all produced in R, primarily using the <code>chordDiagram()</code> function in the  <a href="https://jokergoo.github.io/circlize_book/book/the-chorddiagram-function.html" target="_blank" rel="noopener">circlize</a> package. A while ago I wrote a <a href="http://guyabel.com/post/animated-directional-chord-diagrams" target="_blank" rel="noopener">post</a> with details on creating animated chord diagrams. The specific code for the plots above gets a bit overwhelming (and is poorly commented) so I am hesitant to put it online, especially because the more complicated parts for defining the lines for the global regions can now be done much more easily using the new <code>group</code> argument in the <code>chordDiagram()</code> function, as described in a recent <a href="https://jokergoo.github.io/2020/06/08/multiple-group-chord-diagram/" target="_blank" rel="noopener">post</a> by the circlize package creator Zuguang Gu.</p>
 
-    </div>
-
-    
+            </div>
+            
 
 
 
@@ -1304,9 +1326,12 @@ In the plot below I tried to illustrate the relative sizes of migrant population
 
 
 
+          </div>
+        </article>
 
+    </main>
   </div>
-</article>
+</div>
   </div>
 
   <div class="page-footer">

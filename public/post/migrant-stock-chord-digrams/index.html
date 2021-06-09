@@ -252,7 +252,7 @@
   
   
   
-  <link rel="stylesheet" href="/css/wowchemy.553f39179737f4e532e9b94832399492.css" />
+  <link rel="stylesheet" href="/css/wowchemy.ba8da8579ac44c98b451dcba49b90383.css" />
 
   
 
@@ -757,9 +757,33 @@
   </div>
 
   <div class="page-body">
-    <article class="article">
+    
+<div class="container-fluid docs">
+    <div class="row flex-xl-nowrap">
+      <div class="d-none d-xl-block col-xl-2 docs-toc">
+        <ul class="nav toc-top">
+          <li>
+            <a href="#" id="back_to_top" class="docs-toc-title">
+              Contents
+            </a>
+          </li>
+        </ul>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#asia">Asia</a></li>
+    <li><a href="#europe">Europe</a></li>
+    <li><a href="#africa">Africa</a></li>
+    <li><a href="#americas">Americas</a></li>
+    <li><a href="#oceania">Oceania</a></li>
+    <li><a href="#r-code">R code</a></li>
+  </ul>
+</nav>
 
-  
+      </div>
+      <main class="col-12 col-md-0 col-xl-10 py-md-3 pl-md-5 docs-content" role="main">
+
+        <article class="article">
+          
 
 
 
@@ -858,11 +882,9 @@
 </div>
 
 
-
-  <div class="article-container">
-
-    <div class="article-style">
-      <p>During the last few months I have given some introductory talks on international migration in Asia and Europe. I had a couple of requests to share the animated chord diagrams that I created for others to use in their teaching materials.  These are below, along with some extra plots for Africa, the Americas (Northern, Central and Southern America as well as the Caribbean) and Oceania. Feel free to download the plots using right click over the animation and then <code>Save Video as</code> or from <a href="https://github.com/guyabel/personal-site/tree/master/static/img/cd-stock-region" target="_blank" rel="noopener">Github</a>.</p>
+          <div class="article-container">
+            <div class="article-style">
+              <p>During the last few months I have given some introductory talks on international migration in Asia and Europe. I had a couple of requests to share the animated chord diagrams that I created for others to use in their teaching materials.  These are below, along with some extra plots for Africa, the Americas (Northern, Central and Southern America as well as the Caribbean) and Oceania. Feel free to download the plots using right click over the animation and then <code>Save Video as</code> or from <a href="https://github.com/guyabel/personal-site/tree/master/content/post/migrant-stock-chord-digrams" target="_blank" rel="noopener">Github</a>.</p>
 <p>The chords in the diagrams represent the connection between the places of birth (at the base of the chord) and places of residence (at the arrow head of the chord). The width of based of the chords correspond to the size of the migrant population in millions. Chords are ordered relative to their size, with the largest migrant stocks plotted at the beginning of the country segments. The ordering of chords jumps around over time as the relative rankings of the largest foreign-born populations change in each country. Values for the migrant population sizes are from the <del>2017</del> <del>2019</del> 2020 revision of the United Nations DESA <a href="https://www.un.org/development/desa/pd/content/international-migrant-stock" target="_blank" rel="noopener">International Migrant Stock Data</a>.</p>
 <p>Note: you might have to right click, select show controls and hit play to start the animations depending on your browsers - right clicking can also allow you to access controls on the play back speed.</p>
 <style>
@@ -872,23 +894,32 @@ video {
   height: auto   !important;
   max-height: 720px
 }
+h2 {
+  color: #fff;
+  font-size: 0px;
+}
 </style>
+<h2 id="asia">Asia</h2>
 <video loop="loop" controls>
   <source src="ims-abel-asia.mp4" type="video/mp4" />
 </video>
 <hr>
+<h2 id="europe">Europe</h2>
 <video loop="loop" controls>
   <source src="ims-abel-europe.mp4" type="video/mp4" />
 </video>
 <hr>
+<h2 id="africa">Africa</h2>
 <video loop="loop"  controls>
   <source src="ims-abel-africa.mp4" type="video/mp4" />
 </video>
 <hr>
+<h2 id="americas">Americas</h2>
 <video loop="loop" controls>
   <source src="ims-abel-america.mp4" type="video/mp4" />
 </video>
 <hr>
+<h2 id="oceania">Oceania</h2>
 <video loop="loop" controls>
   <source src="ims-abel-oceania.mp4" type="video/mp4" />
 </video>
@@ -897,11 +928,11 @@ video {
 <li>Underlying migration flows might form different patterns as migrants might not be moving from their country of birth.</li>
 <li>Migrant populations can decrease from deaths as well as outward migration.</li>
 </ul>
+<h2 id="r-code">R code</h2>
 <p>As in my previous post on <a href="http://guyabel.com/post/animated-directional-chord-diagrams/" target="_blank" rel="noopener">animated chord diagrams</a> I used the <a href="https://cran.r-project.org/web/packages/circlize/index.html" target="_blank" rel="noopener"><code>circlize</code></a> package in R to produce each chord diagrams for each frame of the animation and <a href="https://cran.r-project.org/web/packages/tweenr/index.html" target="_blank" rel="noopener"><code>tweenr</code></a> for the intermediate data. The country flags were added using the <code>circos.raster()</code> function in circlize. I used <a href="https://cran.r-project.org/web/packages/magick/index.html" target="_blank" rel="noopener"><code>magick</code></a> to read in the multipage PDF file of plots over time and <a href="https://cran.r-project.org/web/packages/animation/index.html" target="_blank" rel="noopener"><code>animation</code></a> to produce the MP4 file. I am beginning to prefer MP4 files to GIF as the file size are smaller - so quicker loading - and most browsers display MP4 videos with controls.</p>
 
-    </div>
-
-    
+            </div>
+            
 
 
 
@@ -1172,9 +1203,12 @@ video {
 
 
 
+          </div>
+        </article>
 
+    </main>
   </div>
-</article>
+</div>
   </div>
 
   <div class="page-footer">

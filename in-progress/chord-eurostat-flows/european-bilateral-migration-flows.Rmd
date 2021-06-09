@@ -1,0 +1,149 @@
+---
+title: "European Bilateral Migration Flows"
+author: "Guy Abel"
+date: '2018-09-01'
+tags:
+- migration
+draft: TRUE
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Background
+
+
+<!-- https://twitter.com/jburnmurdoch/status/998971273773432833 -->
+<!-- <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Agreed. Generally I struggle with chord diagrams even when not animated.</p>&mdash; Mara Averick (@dataandme) <a href="https://twitter.com/dataandme/status/991545526909890561?ref_src=twsrc%5Etfw">May 2, 2018</a></blockquote> -->
+<!-- <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
+
+
+library(tidyverse)
+library(eurostat)
+library(scales)
+
+d0 <- get_eurostat(id = "migr_imm5prv")
+d1 <- get_eurostat(id = "migr_emi3nxt")
+
+d2 <- d0 %>%
+  filter(age == "TOTAL", agedef == "COMPLET", sex == "T") %>%
+  rename(orig = partner, dest = geo, recieve = values) %>%
+  filter(orig %in% eu_countries$code, 
+         dest %in% eu_countries$code) %>%
+  select(orig, dest, time, recieve)
+
+d3 <- d1 %>%
+  filter(age == "TOTAL", agedef == "COMPLET", sex == "T") %>%
+  rename(orig = geo, dest = partner, send = values) %>%
+  filter(orig %in% eu_countries$code, 
+         dest %in% eu_countries$code) %>%
+  select(orig, dest, time, send)
+
+d4 <- left_join(d2, d3)
+
+
+# summary stats
+# d5a <- d4 %>%
+#   group_by(time) %>%
+#   summarise(cor = cor(recieve, send, use = "complete.obs"),
+#             cor_log = cor(log1p(recieve), log1p(send), use = "complete.obs"),
+#             n_send = sum(!is.na(send)),
+#             n_recieve = sum(!is.na(recieve)),
+#             n_pairs = sum(!is.na(recieve + send)))
+#           
+# d5b <- d4 %>%
+#   group_by(time, orig) %>%
+#   summarise(n_data = sum(!is.na(send))) %>%
+#   group_by(time) %>%
+#   summarise(n = n_distinct(orig), 
+#             report_send = sum(n_data > 0))
+# 
+# d5c <- d4 %>%
+#   group_by(time, dest) %>%
+#   summarise(n_data = sum(!is.na(recieve))) %>%
+#   group_by(time) %>%
+#   summarise(report_recieve = sum(n_data > 0))
+# 
+# d5 <- d5a %>%
+#   left_join(d5b) %>%
+#   left_join(d5c)
+# d5
+
+
+
+ggplot(data = d4 %>%
+         mutate(post2008 = time > "2008-01-01"), 
+       mapping = aes(x = send, y = recieve, col = as.factor(time))) +
+  geom_point(alpha = 0.25) +
+  coord_trans(x = "log1p", y = "log1p") +
+  facet_wrap(facets = "post2008")
+
+
+library(circlize)
+library(tweenr)
+
+### do not tween data where not double reported... set colour to transparent and use image_morph. then 
+### in second stage of gif show differences in double reported using tweened data.
+d5 <- d4 %>%
+  filter(time == unique(d4$time)[2]) %>%
+  select(-time) %>%
+  gather(key = "type", value = "flow", recieve:send) %>%
+  mutate(
+    corridor = paste(orig, dest, sep = " -> "),
+    type = case_when(
+      type == "recieve" ~ 1,
+      type == "send" ~ 2
+    ), 
+    ease = "linear"
+  ) %>%
+  select(corridor, type, flow, ease) %>%
+  # replace_na(list(flow = 0)) %>%
+  tween_elements(time = "type", group = "corridor", ease = "ease", nframes = 50) %>%
+  tbl_df() %>%
+  separate(col = .group, into = c("orig", "dest"), sep = " -> ") %>%
+  select(orig, dest, flow, everything()) %>%
+  mutate(flow = flow/1e03)
+  
+
+library(circlize)
+library(magrittr)
+
+c_max <- d5 %>%
+  group_by(.frame) %>%
+  complete(orig = unique(c(orig, dest)), 
+           dest = unique(c(orig, dest))) %>%
+  # filter(orig == dest, .frame ==0) %>%
+  replace_na(list(flow = 0)) %>%
+  group_by(orig, .frame) %>%
+  mutate(tot_out = sum(flow)) %>%
+  group_by(dest, .frame) %>%
+  mutate(tot_in = sum(flow)) %>%
+  filter(orig == dest) %>%
+  mutate(tot = tot_in + tot_out) %>%
+  mutate(alpha2 = orig) %>%
+  group_by(alpha2) %>%
+  summarise(tot_max = max(tot)) %$%
+  'names<-'(tot_max, alpha2)
+
+c_max
+
+eu_countries
+
+f = 49
+circos.clear()
+par(mar = rep(0, 4), cex=1)
+circos.par(start.degree = 90, track.margin=c(-0.1, 0.1), 
+           gap.degree = 2, points.overflow.warning = FALSE)
+
+chordDiagram(x = filter(d5, .frame == f), directional = 1, 
+             # order = d1$region,
+             # grid.col = d1$col1, 
+             # annotationTrack = "grid",
+             transparency = 0.25,  annotationTrackHeight = c(0.05, 0.1),
+             direction.type = c("diffHeight", "arrows"), link.arr.type = "big.arrow",
+             diffHeight  = -0.04, link.sort = TRUE, link.largest.ontop = TRUE, 
+             xmax = c_max)
+
+chordDiagram(d5 %>% filter(.frame == 0))
+chordDiagram(d5 %>% filter(.frame == 50))

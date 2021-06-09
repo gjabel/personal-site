@@ -30,7 +30,7 @@
   
     
   
-  <meta name="description" content="BackgroundI’m loving the magick package at the moment. Reading through the vignette I spotted the image_morph() function. In this post I experiment with the function to build the GIF below that shows the changes in the England football first kit over time, using images from the excellent Historical Football Kits website." />
+  <meta name="description" content="Background I&rsquo;m loving the magick package at the moment. Reading through the vignette I spotted the image_morph() function. In this post I experiment with the function to build the GIF below that shows the changes in the England football first kit over time, using images from the excellent Historical Football Kits website." />
 
   
   <link rel="alternate" hreflang="en-uk" href="https://guyabel.com/post/football-kits/" />
@@ -252,7 +252,7 @@
   
   
   
-  <link rel="stylesheet" href="/css/wowchemy.553f39179737f4e532e9b94832399492.css" />
+  <link rel="stylesheet" href="/css/wowchemy.ba8da8579ac44c98b451dcba49b90383.css" />
 
   
 
@@ -337,7 +337,7 @@
   <meta property="og:site_name" content="Guy Abel" />
   <meta property="og:url" content="https://guyabel.com/post/football-kits/" />
   <meta property="og:title" content="Animating the evoloution of football kits using R | Guy Abel" />
-  <meta property="og:description" content="BackgroundI’m loving the magick package at the moment. Reading through the vignette I spotted the image_morph() function. In this post I experiment with the function to build the GIF below that shows the changes in the England football first kit over time, using images from the excellent Historical Football Kits website." /><meta property="og:image" content="https://guyabel.com/post/football-kits/featured.png" />
+  <meta property="og:description" content="Background I&rsquo;m loving the magick package at the moment. Reading through the vignette I spotted the image_morph() function. In this post I experiment with the function to build the GIF below that shows the changes in the England football first kit over time, using images from the excellent Historical Football Kits website." /><meta property="og:image" content="https://guyabel.com/post/football-kits/featured.png" />
     <meta property="twitter:image" content="https://guyabel.com/post/football-kits/featured.png" /><meta property="og:locale" content="en-uk" />
   
     
@@ -394,7 +394,7 @@
       "url": "https://guyabel.com/media/icon_hua235b20c26de23a006d4e436991121ab_642_192x192_fill_lanczos_center_2.png"
     }
   },
-  "description": "Background\rI’m loving the magick package at the moment. Reading through the vignette I spotted the image_morph() function. In this post I experiment with the function to build the GIF below that shows the changes in the England football first kit over time, using images from the excellent Historical Football Kits website."
+  "description": "Background I\u0026rsquo;m loving the magick package at the moment. Reading through the vignette I spotted the image_morph() function. In this post I experiment with the function to build the GIF below that shows the changes in the England football first kit over time, using images from the excellent Historical Football Kits website."
 }
 </script>
 
@@ -414,7 +414,7 @@
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="60a5ea6d5ea2056b7c77804ac1f99073" >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="0b7bfd0756160da348b07acf8c937293" >
 
   
   
@@ -757,9 +757,32 @@
   </div>
 
   <div class="page-body">
-    <article class="article">
+    
+<div class="container-fluid docs">
+    <div class="row flex-xl-nowrap">
+      <div class="d-none d-xl-block col-xl-2 docs-toc">
+        <ul class="nav toc-top">
+          <li>
+            <a href="#" id="back_to_top" class="docs-toc-title">
+              Contents
+            </a>
+          </li>
+        </ul>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#background">Background</a></li>
+    <li><a href="#scraping">Scraping</a></li>
+    <li><a href="#annotating-images">Annotating Images</a></li>
+    <li><a href="#creating-a-gif">Creating a GIF</a></li>
+    <li><a href="#club-teams">Club Teams</a></li>
+  </ul>
+</nav>
 
-  
+      </div>
+      <main class="col-12 col-md-0 col-xl-10 py-md-3 pl-md-5 docs-content" role="main">
+
+        <article class="article">
+          
 
 
 
@@ -849,24 +872,15 @@
 </div>
 
 
-
-  <div class="article-container">
-
-    <div class="article-style">
-      
-<script src="https://guyabel.com/post/football-kits/index_files/header-attrs/header-attrs.js"></script>
-
-
-<div id="background" class="section level2">
-<h2>Background</h2>
-<p>I’m loving the <a href="https://cran.r-project.org/web/packages/magick/">magick</a> package at the moment. Reading through the <a href="https://cran.r-project.org/web/packages/magick/vignettes/intro.html">vignette</a> I spotted the <code>image_morph()</code> function. In this post I experiment with the function to build the GIF below that shows the changes in the England football first kit over time, using images from the excellent <a href="http://www.historicalkits.co.uk/">Historical Football Kits</a> website.</p>
-<p><img src="abel-england.gif" /></p>
-</div>
-<div id="scraping" class="section level2">
-<h2>Scraping</h2>
-<p>The Historical Football Kits website has a detailed section on England kits spread over six pages, starting from the first outfits used in <a href="http://www.historicalkits.co.uk/international/england/england-1872-1939.html">1872</a>. Each pages includes some interesting discussion - and importantly for this post - images of the kits.</p>
-<p>We can use the <code>read_html()</code> from the <a href="https://cran.r-project.org/web/packages/xml2/">xml2</a> package and <code>map()</code> from <a href="https://cran.r-project.org/web/packages/purrr">purrr</a> to read and save the source code of each page.</p>
-<pre class="r"><code>library(rvest)
+          <div class="article-container">
+            <div class="article-style">
+              <h2 id="background">Background</h2>
+<p>I&rsquo;m loving the <a href="https://cran.r-project.org/web/packages/magick/" target="_blank" rel="noopener">magick</a> package at the moment. Reading through the <a href="https://cran.r-project.org/web/packages/magick/vignettes/intro.html" target="_blank" rel="noopener">vignette</a> I spotted the <code>image_morph()</code> function. In this post I experiment with the function to build the GIF below that shows the changes in the England football first kit over time, using images from the excellent <a href="http://www.historicalkits.co.uk/" target="_blank" rel="noopener">Historical Football Kits</a> website.</p>
+<p><img src="abel-england.gif" alt=" "></p>
+<h2 id="scraping">Scraping</h2>
+<p>The Historical Football Kits website has a detailed section on England kits spread over six pages, starting from the first outfits used in <a href="http://www.historicalkits.co.uk/international/england/england-1872-1939.html" target="_blank" rel="noopener">1872</a>. Each pages includes some interesting discussion - and importantly for this post - images of the kits.</p>
+<p>We can use the <code>read_html()</code> from the <a href="https://cran.r-project.org/web/packages/xml2/" target="_blank" rel="noopener">xml2</a> package and <code>map()</code> from <a href="https://cran.r-project.org/web/packages/purrr" target="_blank" rel="noopener">purrr</a> to read and save the source code of each page.</p>
+<pre><code class="language-r">library(rvest)
 library(tidyverse)
 
 htmls &lt;- c( 
@@ -877,9 +891,10 @@ htmls &lt;- c(
   &quot;http://www.historicalkits.co.uk/international/england/england-1997-2010.html&quot;,
   &quot;http://www.historicalkits.co.uk/international/england/england-2010-2019.html&quot;
 ) %&gt;%
-  map(read_html)</code></pre>
-<p>From the source code we can then find the URLs of each kit image files using <code>html_nodes()</code> and <code>html_attr()</code> from <a href="https://cran.r-project.org/web/packages/rvest/">rvest</a>. I used purrr’s <code>map_dfr()</code> to store the links in a tibble and then dropped rows that do not contain kit image links or are images of away kits, kits used in single game or links to shops to buy replicas. This filtering was based on the image label or image URL and performed with the aid of the <code>str_detect()</code> function from <a href="https://cran.r-project.org/web/packages/stringr/">stringr</a>.</p>
-<pre class="r"><code>scrape_img_url &lt;- function(html){
+  map(read_html)
+</code></pre>
+<p>From the source code we can then find the URLs of each kit image files using <code>html_nodes()</code> and <code>html_attr()</code> from <a href="https://cran.r-project.org/web/packages/rvest/" target="_blank" rel="noopener">rvest</a>. I used purrr&rsquo;s <code>map_dfr()</code> to store the links in a tibble and then dropped rows that do not contain kit image links or are images of away kits, kits used in single game or links to shops to buy replicas. This filtering was based on the image label or image URL and performed with the aid of the <code>str_detect()</code> function from <a href="https://cran.r-project.org/web/packages/stringr/" target="_blank" rel="noopener">stringr</a>.</p>
+<pre><code class="language-r">scrape_img_url &lt;- function(html){
   html %&gt;%
     html_nodes(&quot;.float p , .float img&quot;) %&gt;%
     html_attr(&quot;src&quot;) %&gt;%
@@ -897,26 +912,30 @@ d1 &lt;- htmls %&gt;%
   filter(str_detect(string = img_url, pattern = &quot;/international/england&quot;),
          !str_detect(string = label, pattern = &quot;change|alternate|Alternate|Change&quot;),
          !str_detect(string = label, pattern = &quot; v |Third&quot;),
-         !str_detect(string = img_url, pattern = &quot;lithuania|italy|yellow|red&quot;))</code></pre>
-<pre class="r"><code>head(d1)</code></pre>
+         !str_detect(string = img_url, pattern = &quot;lithuania|italy|yellow|red&quot;))
+</code></pre>
+<pre><code class="language-r">head(d1)
+</code></pre>
 <pre><code>##                                               img_url     label
 ## 1      /international/england/images/england-1872.gif      1872
 ## 2      /international/england/images/england-1882.gif 1879-1900
 ## 3      /international/england/images/england-1900.gif 1900-1914
 ## 4 /international/england/images/england-1920-1932.gif 1920-1930
 ## 5      /international/england/images/england-1921.gif 1930-1934
-## 6      /international/england/images/england-1934.gif      1934</code></pre>
+## 6      /international/england/images/england-1934.gif      1934
+</code></pre>
 <p>Given these URLs I then downloaded each of the images which are stored in a single R object <code>kits</code></p>
-<pre class="r"><code>library(magick)
+<pre><code class="language-r">library(magick)
 
 kits &lt;- d1 %&gt;%
   mutate(img_url = paste0(&quot;http://www.historicalkits.co.uk&quot;, img_url),
          img_url = str_replace(string =img_url, pattern =&quot; &quot;, replacement = &quot;%20&quot;)) %&gt;%
   select(img_url) %&gt;%
   map(image_read) %&gt;%
-  set_names(&quot;img&quot;)</code></pre>
+  set_names(&quot;img&quot;)
+</code></pre>
 <p>Typing <code>kits</code> into R will display each kit in the RStudio viewer (it will quickly run through each image). The console displays summary information for each image in the <code>kits</code> object.</p>
-<pre class="r"><code>&gt; kits
+<pre><code class="language-r">&gt; kits
 $img
    format width height colorspace filesize
 1     GIF   170    338       sRGB        0
@@ -928,12 +947,11 @@ $img
 7     GIF   170    338       sRGB        0
 8     GIF   170    338       sRGB        0
 9     GIF   170    338       sRGB        0
-10    GIF   170    338       sRGB        0</code></pre>
-</div>
-<div id="annotating-images" class="section level2">
-<h2>Annotating Images</h2>
+10    GIF   170    338       sRGB        0
+</code></pre>
+<h2 id="annotating-images">Annotating Images</h2>
 <p>Before creating any GIF I wanted add annotations for the year and the copyright information. To do this I first created a border using <code>image_border()</code> in magick and then <code>image_annotate()</code> to add the text. I wrapped these edits into an <code>add_text()</code> function and then applied each to the kit images.</p>
-<pre class="r"><code>add_text &lt;- function(img, label){
+<pre><code class="language-r">add_text &lt;- function(img, label){
   img %&gt;%
     image_border(geometry = &quot;10x60&quot;, color = &quot;white&quot;) %&gt;%
     image_chop(&quot;0x45&quot;) %&gt;%
@@ -951,28 +969,27 @@ for(i in 1:length(kits$img)){
   kits$img[i] &lt;- add_text(img = kits$img[i], label = d1$label[i])
   # add extra border to make final images square
   kits$img[i] &lt;- image_border(image = kits$img[i], geometry = &quot;85x1&quot;, color = &quot;white&quot;)
-}</code></pre>
-</div>
-<div id="creating-a-gif" class="section level2">
-<h2>Creating a GIF</h2>
+}
+</code></pre>
+<h2 id="creating-a-gif">Creating a GIF</h2>
 <p>The final step was to bind together the set of images in an animated GIF with smooth transition images between each frame. To do this I used the <code>image_morph()</code> twice. First to repeat the same image so that the GIF would remain stable for a few frames (<code>kits_morph1</code> below). Then again to create a set of morphing images between successive kits (<code>kits_morph0</code> below). The full set of frames were stored in <code>kits_ani</code></p>
-<pre class="r"><code>kits_ani &lt;- image_morph(c(kits$img[1], kits$img[1]), frames = 4)
+<pre><code class="language-r">kits_ani &lt;- image_morph(c(kits$img[1], kits$img[1]), frames = 4)
 for(i in 2:length(kits$img)){
   kits_morph0 &lt;- image_morph(c(kits$img[i-1], kits$img[i]), frames = 4)
   kits_morph1 &lt;- image_morph(c(kits$img[i], kits$img[i]), frames = 4)
   kits_ani &lt;- c(kits_ani, kits_morph0)
   kits_ani &lt;- c(kits_ani, kits_morph1)
-}</code></pre>
+}
+</code></pre>
 <p>To create an animation I passed the set of frames in the <code>kits_morph</code> object to the <code>image_animate()</code> and <code>image_write()</code> functions to give the image above.</p>
-<pre class="r"><code>kits_ani %&gt;%
+<pre><code class="language-r">kits_ani %&gt;%
   image_animate(fps = 10) %&gt;%
-  image_write(path = &quot;england.gif&quot;)</code></pre>
+  image_write(path = &quot;england.gif&quot;)
+</code></pre>
 <p>This bit of code can take a while to execute if the are many frames (see my comments towards the end of the post).</p>
-</div>
-<div id="club-teams" class="section level2">
-<h2>Club Teams</h2>
-<p>Similar code as above can be used to create images for club teams. I tried this out for the mighty Reading. As the Reading kits on <a href="http://www.historicalkits.co.uk/Reading/Reading.htm">Historical Football Kits</a> are on only one page and includes only home kits, finding the image URLs was much easier…</p>
-<pre class="r"><code>d1 &lt;- read_html(&quot;http://www.historicalkits.co.uk/Reading/Reading.htm&quot;) %&gt;%
+<h2 id="club-teams">Club Teams</h2>
+<p>Similar code as above can be used to create images for club teams. I tried this out for the mighty Reading. As the Reading kits on <a href="http://www.historicalkits.co.uk/Reading/Reading.htm" target="_blank" rel="noopener">Historical Football Kits</a> are on only one page and includes only home kits, finding the image URLs was much easier&hellip;</p>
+<pre><code class="language-r">d1 &lt;- read_html(&quot;http://www.historicalkits.co.uk/Reading/Reading.htm&quot;) %&gt;%
   scrape_img_url() %&gt;%
   filter(str_detect(string = img_url, pattern = &quot;/Reading&quot;),
          !str_detect(string = img_url, pattern = &quot;unknown&quot;)) %&gt;%
@@ -980,16 +997,15 @@ for(i in 2:length(kits$img)){
     label = str_replace_all(string = label,
                             pattern = &quot;[:alpha:]|\\s&quot;, 
                             replacement = &quot;&quot;)
-  )</code></pre>
+  )
+</code></pre>
 <p>I could then run the same code as above to scrape the images, annotate the year and copyright information and build the GIF.</p>
-<p><img src="abel-reading.gif" /></p>
-<p>Ian Holloway - <a href="https://www.getreading.co.uk/news/reading-berkshire-news/sky-sports-pundit-ian-holloway-12023342">we had hoops first</a>.</p>
-<p>I did have trouble creating a GIF’s when I used more frames to morph images between successive kits, for example when using <code>frames = 10</code> in <code>image_morphi()</code>. I could not consistently replicate the error, but I suspect it is something related to the memory size - my R session would freeze when passing <code>image_animate()</code> or <code>image_write()</code> on the <code>kits_ani</code> R object when it contained a large number of images.</p>
-</div>
+<p><img src="abel-reading.gif" alt=" "></p>
+<p>Ian Holloway - <a href="https://www.getreading.co.uk/news/reading-berkshire-news/sky-sports-pundit-ian-holloway-12023342" target="_blank" rel="noopener">we had hoops first</a>.</p>
+<p>I did have trouble creating a GIF&rsquo;s when I used more frames to morph images between successive kits, for example when using <code>frames = 10</code> in <code>image_morphi()</code>. I could not consistently replicate the error, but I suspect it is something related to the memory size - my R session would freeze when passing <code>image_animate()</code> or <code>image_write()</code> on the <code>kits_ani</code> R object when it contained a large number of images.</p>
 
-    </div>
-
-    
+            </div>
+            
 
 
 
@@ -1260,9 +1276,12 @@ for(i in 2:length(kits$img)){
 
 
 
+          </div>
+        </article>
 
+    </main>
   </div>
-</article>
+</div>
   </div>
 
   <div class="page-footer">

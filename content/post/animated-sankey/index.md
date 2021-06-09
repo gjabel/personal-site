@@ -20,6 +20,8 @@ categories:
 header:
   image: "headers/animated-sankey.png"
   caption: 'Global migrant populations by World Bank income groups'
+toc: false
+
 ---
 
 ## Background

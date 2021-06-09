@@ -19,6 +19,7 @@ categories:
 header:
   image: "headers/chinese-migration-chord-diagram.png"
   caption: 'Asian bilateral migrant stocks'
+toc: true
 ---
 
 
@@ -28,7 +29,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 We have had a number of requests for the R code to replicate the plots in our [paper](https://guyabel.com/publication/china-internal-migration-2010-15/) on internal migration in China. The code below will produce a similar looking plot, but I have taken out some of the arguments that were very specific to our plot that will not replicate well for other data. 
 
-### Data
+## Data
 
 The code is based on two data sets:
 
@@ -50,7 +51,7 @@ d2 <- read_csv("https://gist.githubusercontent.com/guyabel/2f52e1593ad951800d835
 d2
 ```
 
-### Plot
+## Plot
 
 The code below plots the chord diagram without the default labels and axis for the `chordDiagram()` function, that are added later in the `circos.track()` function.
 
@@ -83,7 +84,7 @@ circos.track(track.index = 1, bg.border = NA, panel.fun = function(x, y) {
 
 The legend is added using the `legend()` function using the [Set1](http://colorbrewer2.org/#type=qualitative&scheme=Set1&n=4]) colour palette, that we used as the basis of regional shades in the colour column of `d2`; see the [shades]([https://cran.r-project.org/web/packages/shades/index.html]) package for creating palettes of similar colours.
 
-### Legend
+## Legend
 
 ```{r, eval=FALSE}
 library(RColorBrewer)
@@ -95,7 +96,7 @@ legend(x = 0.7, y = 1.1,
        title = "   Region", title.adj = 0) 
 ```
 
-### Saving
+## Saving
 
 To save the image in a PDF plot surround the plotting code above between the `pdf()` function and `dev.off()` function. 
 
@@ -107,7 +108,7 @@ pdf(file = "figure1.pdf", width = 6, height = 6)
 dev.off()
 ```
 
-### Image Files
+## Image Files
 
 To convert the PDF to a PNG file I recommend the [magick](https://cran.r-project.org/web/packages/magick/) package:
 
@@ -117,7 +118,7 @@ p <- image_read_pdf("figure1.pdf")
 image_write(image = p, path = "figure1.png")
 ```
 
-### Chinese Labels
+## Chinese Labels
 
 To replace the labels with their Chinese names, as in the plot above, replace the code for the `s` object in the `circos.track()` function to:
 

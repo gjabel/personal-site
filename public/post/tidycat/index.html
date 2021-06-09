@@ -30,8 +30,8 @@
   
     
   
-  <meta name="description" content="IntroductionThe tidycat package includes the tidy_categorical() function to expand broom::tidy() outputs for categorical parameter estimates.
-DocumentationFor full documentation, see the package vignette: The tidycat package: expand broom::tidy() output for categorical parameter estimates" />
+  <meta name="description" content="Introduction The tidycat package includes the tidy_categorical() function to expand broom::tidy() outputs for categorical parameter estimates.
+Documentation For full documentation, see the package vignette: The tidycat package: expand broom::tidy() output for categorical parameter estimates" />
 
   
   <link rel="alternate" hreflang="en-uk" href="https://guyabel.com/post/tidycat/" />
@@ -253,7 +253,7 @@
   
   
   
-  <link rel="stylesheet" href="/css/wowchemy.553f39179737f4e532e9b94832399492.css" />
+  <link rel="stylesheet" href="/css/wowchemy.ba8da8579ac44c98b451dcba49b90383.css" />
 
   
 
@@ -338,8 +338,8 @@
   <meta property="og:site_name" content="Guy Abel" />
   <meta property="og:url" content="https://guyabel.com/post/tidycat/" />
   <meta property="og:title" content="Expand broom::tidy() output for categorical parameter estimates | Guy Abel" />
-  <meta property="og:description" content="IntroductionThe tidycat package includes the tidy_categorical() function to expand broom::tidy() outputs for categorical parameter estimates.
-DocumentationFor full documentation, see the package vignette: The tidycat package: expand broom::tidy() output for categorical parameter estimates" /><meta property="og:image" content="https://guyabel.com/post/tidycat/featured.png" />
+  <meta property="og:description" content="Introduction The tidycat package includes the tidy_categorical() function to expand broom::tidy() outputs for categorical parameter estimates.
+Documentation For full documentation, see the package vignette: The tidycat package: expand broom::tidy() output for categorical parameter estimates" /><meta property="og:image" content="https://guyabel.com/post/tidycat/featured.png" />
     <meta property="twitter:image" content="https://guyabel.com/post/tidycat/featured.png" /><meta property="og:locale" content="en-uk" />
   
     
@@ -396,7 +396,7 @@
       "url": "https://guyabel.com/media/icon_hua235b20c26de23a006d4e436991121ab_642_192x192_fill_lanczos_center_2.png"
     }
   },
-  "description": "Introduction\rThe tidycat package includes the tidy_categorical() function to expand broom::tidy() outputs for categorical parameter estimates.\n\rDocumentation\rFor full documentation, see the package vignette: The tidycat package: expand broom::tidy() output for categorical parameter estimates"
+  "description": "Introduction The tidycat package includes the tidy_categorical() function to expand broom::tidy() outputs for categorical parameter estimates.\nDocumentation For full documentation, see the package vignette: The tidycat package: expand broom::tidy() output for categorical parameter estimates"
 }
 </script>
 
@@ -416,7 +416,7 @@
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="ccac05aae985f80825c491f71502e69f" >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="180ce4208bc3b22af91fe63f877dcb22" >
 
   
   
@@ -759,9 +759,31 @@
   </div>
 
   <div class="page-body">
-    <article class="article">
+    
+<div class="container-fluid docs">
+    <div class="row flex-xl-nowrap">
+      <div class="d-none d-xl-block col-xl-2 docs-toc">
+        <ul class="nav toc-top">
+          <li>
+            <a href="#" id="back_to_top" class="docs-toc-title">
+              Contents
+            </a>
+          </li>
+        </ul>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#documentation">Documentation</a></li>
+    <li><a href="#hello-world">Hello World</a></li>
+    <li><a href="#installation">Installation</a></li>
+  </ul>
+</nav>
 
-  
+      </div>
+      <main class="col-12 col-md-0 col-xl-10 py-md-3 pl-md-5 docs-content" role="main">
+
+        <article class="article">
+          
 
 
 
@@ -851,36 +873,24 @@
 </div>
 
 
-
-  <div class="article-container">
-
-    <div class="article-style">
-      
-<script src="https://guyabel.com/post/tidycat/index_files/header-attrs/header-attrs.js"></script>
-
-
-<div>
-<img src="featured.png" width="200px" align="right">
-</div>
-<div id="introduction" class="section level2">
-<h2>Introduction</h2>
+          <div class="article-container">
+            <div class="article-style">
+              <div><img src="featured.png" width="200px" align="right"></div>
+<h2 id="introduction">Introduction</h2>
 <p>The <code>tidycat</code> package includes the <code>tidy_categorical()</code> function to expand <code>broom::tidy()</code> outputs for categorical parameter estimates.</p>
-</div>
-<div id="documentation" class="section level2">
-<h2>Documentation</h2>
-<p>For full documentation, see the package vignette: <a href="https://cran.r-project.org/web/packages/tidycat/vignettes/intro.html">The tidycat package: expand broom::tidy() output for categorical parameter estimates</a></p>
-</div>
-<div id="hello-world" class="section level2">
-<h2>Hello World</h2>
+<h2 id="documentation">Documentation</h2>
+<p>For full documentation, see the package vignette: <a href="https://cran.r-project.org/web/packages/tidycat/vignettes/intro.html" target="_blank" rel="noopener">The tidycat package: expand broom::tidy() output for categorical parameter estimates</a></p>
+<h2 id="hello-world">Hello World</h2>
 <p>The <code>tidy()</code> function in the broom package takes the messy output of built-in functions in R, such as <code>lm()</code>, and turns them into tidy data frames.</p>
-<pre class="r"><code>library(dplyr)
+<pre><code class="language-r">library(dplyr)
 library(broom)
 
 m1 &lt;- mtcars %&gt;%
   mutate(transmission = recode_factor(am, `0` = &quot;automatic&quot;, `1` = &quot;manual&quot;)) %&gt;%
   lm(mpg ~ transmission + wt *  as.factor(cyl), data = .)
 
-tidy(m1)</code></pre>
+tidy(m1)
+</code></pre>
 <pre><code>## # A tibble: 7 x 5
 ##   term               estimate std.error statistic       p.value
 ##   &lt;chr&gt;                 &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;         &lt;dbl&gt;
@@ -890,7 +900,8 @@ tidy(m1)</code></pre>
 ## 4 as.factor(cyl)6      -8.66      10.4     -0.836 0.411        
 ## 5 as.factor(cyl)8     -16.9        5.27    -3.20  0.00374      
 ## 6 wt:as.factor(cyl)6    2.12       3.40     0.625 0.538        
-## 7 wt:as.factor(cyl)8    3.84       1.77     2.17  0.0399</code></pre>
+## 7 wt:as.factor(cyl)8    3.84       1.77     2.17  0.0399
+</code></pre>
 <p>The <code>tidy_categorical()</code> function adds</p>
 <ul>
 <li>further columns (<code>variable</code>, <code>level</code> and <code>effect</code>) to the <code>broom::tidy()</code> output to help manage categorical variables</li>
@@ -902,12 +913,13 @@ tidy(m1)</code></pre>
 <li>the corresponding model object <code>m</code> passed to <code>broom::tidy()</code></li>
 </ul>
 <p>For example:</p>
-<pre class="r"><code>library(tidycat)
+<pre><code class="language-r">library(tidycat)
 d1 &lt;- m1 %&gt;%
   tidy(conf.int = TRUE) %&gt;%
   tidy_categorical(m = m1)
 d1 %&gt;%
-  select(-(3:5))</code></pre>
+  select(-(3:5))
+</code></pre>
 <pre><code>## # A tibble: 10 x 8
 ##    term      estimate conf.low conf.high variable    level  effect  reference   
 ##    &lt;chr&gt;        &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;       &lt;fct&gt;  &lt;chr&gt;   &lt;chr&gt;       
@@ -920,14 +932,15 @@ d1 %&gt;%
 ##  7 as.facto~  -16.9    -27.7       -6.00 as.factor(~ 8      main    Non-Baselin~
 ##  8 &lt;NA&gt;         0        0          0    wt:as.fact~ 4      intera~ Baseline Ca~
 ##  9 wt:as.fa~    2.12    -4.87       9.12 wt:as.fact~ 6      intera~ Non-Baselin~
-## 10 wt:as.fa~    3.84     0.192      7.50 wt:as.fact~ 8      intera~ Non-Baselin~</code></pre>
+## 10 wt:as.fa~    3.84     0.192      7.50 wt:as.fact~ 8      intera~ Non-Baselin~
+</code></pre>
 <p>The expanded data frame from <code>tidy_categorical()</code> of parameter estimates can be particularly useful for creating coefficient plots, allowing:</p>
 <ul>
 <li>grouping terms from the same categorical variable from the additional columns.</li>
 <li>inclusion of reference categories in a coefficient plot from the additional rows, allowing the reader to better grasp the meaning of the parameter estimates in each categorical variable.</li>
 </ul>
 <p>For example:</p>
-<pre class="r"><code>library(forcats)
+<pre><code class="language-r">library(forcats)
 library(ggplot2)
 library(ggforce)
 
@@ -938,21 +951,20 @@ d1 %&gt;%
                        ymin = conf.low, ymax = conf.high)) +
   facet_row(facets = &quot;variable&quot;, scales = &quot;free_x&quot;, space = &quot;free&quot;) +
   geom_hline(yintercept = 0, linetype = &quot;dashed&quot;) +
-  geom_pointrange()</code></pre>
+  geom_pointrange()
+</code></pre>
 <p><img src="https://guyabel.com/post/tidycat/index_files/figure-html/unnamed-chunk-3-1.png" width="768" /></p>
-</div>
-<div id="installation" class="section level2">
-<h2>Installation</h2>
-<p>You can install the released version of tidycat from <a href="https://CRAN.R-project.org">CRAN</a> with:</p>
-<pre class="r"><code>install.packages(&quot;tidycat&quot;)</code></pre>
-<p>And the development version from <a href="https://github.com/">GitHub</a> with:</p>
-<pre class="r"><code># install.packages(&quot;devtools&quot;)
-devtools::install_github(&quot;guyabel/tidycat&quot;)</code></pre>
-</div>
+<h2 id="installation">Installation</h2>
+<p>You can install the released version of tidycat from <a href="https://CRAN.R-project.org" target="_blank" rel="noopener">CRAN</a> with:</p>
+<pre><code class="language-r">install.packages(&quot;tidycat&quot;)
+</code></pre>
+<p>And the development version from <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a> with:</p>
+<pre><code class="language-r"># install.packages(&quot;devtools&quot;)
+devtools::install_github(&quot;guyabel/tidycat&quot;)
+</code></pre>
 
-    </div>
-
-    
+            </div>
+            
 
 
 
@@ -1231,9 +1243,12 @@ devtools::install_github(&quot;guyabel/tidycat&quot;)</code></pre>
 
 
 
+          </div>
+        </article>
 
+    </main>
   </div>
-</article>
+</div>
   </div>
 
   <div class="page-footer">

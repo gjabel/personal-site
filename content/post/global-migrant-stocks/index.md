@@ -17,6 +17,7 @@ categories:
 header:
   image: "headers/global-migrant-stocks.png"
   caption: 'Chord diagram for global bilateral migrant stocks'
+toc: true
 ---
 
 
@@ -77,7 +78,8 @@ video {
 </div>
 <br>
 
-## <a id="sex"></a> Sex differences in global migrant distribution patterns
+<a id="sex"> </a>
+## Sex differences in global migrant distribution patterns
 
 The next two plots below show the differences between male and female global migrant distributions in 2020. In the first plot I keep the sector axis fixed at their maximums (over both sexes) making it easier to detect changes in the relative volume of a particular migrant corridor; for example the greater number of male migrants in West Asia and slightly more female migrants in North America.
 
@@ -123,7 +125,8 @@ In the second plot, I allow the sector axis to be specific to the regional total
 </div>
 <br>
 
-## <a id="population"></a> Migrant totals relative to their population totals.
+<a id="population"> </a> 
+## Migrant totals relative to their population totals.
 
 One important feature of international migrants are their relative rarity. Professor Hein de Haas visually illustrates this point neatly using a [pie chart](http://heindehaas.blogspot.com/2016/08/refugees-small-and-relatively-stable.html), where his focus is predominantly on refugees, but also clearly shows the small share of the global population that are living outside their country of birth (under 4%). This feature is completely missed in the migrant chord diagrams above, where there is no way to gauge the share of the migrant populations relative to the total population.
 In the plot below I tried to illustrate the relative sizes of migrant populations using the lengths of the sector axis, transitioning between
@@ -154,8 +157,8 @@ The chord widths remain constant, fixed at the size of the bilateral migrant pop
 <br>
 
 
-## <a id="forced"></a> Migrant populations relative to refugee populations.
-
+<a id="forced"> </a>
+## Migrant populations relative to refugee populations.
 
 In the final plots I illustrate the relative sizes of forced migrant populations compared to the total migrant populations, transitioning the chords between
 

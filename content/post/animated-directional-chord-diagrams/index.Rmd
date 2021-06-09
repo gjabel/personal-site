@@ -49,6 +49,8 @@ categories:
 header:
   image: "headers/animated-directional-chord-diagrams.png"
   caption: '[Global Migration Flow Estimates](http://guyabel.com/publication/global-migration-estimates-by-gender/)'
+
+toc: true
 ---
 
 ```{r setup, include=FALSE}
@@ -62,7 +64,7 @@ A little while ago my paper in *International Migration Review* on global migrat
 Recently I have been playing around `tweenr` and the `magick` packages for animated population pyramids. In this post I attempt to show how to use these packages to produce animated directional chord diagrams of global migration flow estimates
 
 
-## Data Prep
+## Data
 
 The first step is to read into R two data frames (these are in my `migest` R package if you wish to replicate the code below). 
 
@@ -80,7 +82,7 @@ d1 <- read_csv(system.file("vidwp", "reg_plot.csv", package = "migest"))
 d1
 ```
 
-## Tween Data
+## Tween
 
 The next step is to tween the data by migration corridor. 
 
