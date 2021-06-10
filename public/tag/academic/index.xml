@@ -310,7 +310,7 @@ image_write(image = p, path = &amp;quot;figure1.png&amp;quot;)
     </item>
     
     <item>
-      <title>R code for animated directional chord diagrams</title>
+      <title>R code for animated chord diagrams</title>
       <link>https://guyabel.com/post/animated-directional-chord-diagrams/</link>
       <pubDate>Wed, 18 Apr 2018 00:00:00 +0000</pubDate>
       <guid>https://guyabel.com/post/animated-directional-chord-diagrams/</guid>

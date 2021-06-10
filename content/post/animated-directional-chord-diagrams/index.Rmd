@@ -1,5 +1,5 @@
 ---
-title: R code for animated directional chord diagrams
+title: R code for animated chord diagrams
 # subtitle: Learn how to build animated chord diagrams in R
 
 # Summary for listings and search engines

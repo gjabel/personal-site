@@ -1,3 +1,5 @@
 # Netlify redirects
 # Automatically generated
 # Documentation: http://bit.ly/netlify-deployment
+/posts/global-migrant-stocks/ /post/global-migrant-chord-diagrams/
+/post/migrant-stock-chord-digrams/ /post/regional-migrant-chord-diagrams/
