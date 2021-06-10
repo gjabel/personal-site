@@ -30,12 +30,6 @@ The first plot below shows the change over time in the pattern of global migrant
 Note: you might have to right click, select show controls and hit play to start the animations depending on your browsers - right clicking can also allow you to access controls on the play back speed.
 
 <style>
-video {
-  /* override other styles to make responsive */
-  width: 100%    !important;
-  height: auto   !important;
-  max-height: 720px
-}
 .carousel-indicators {
   bottom:-3%
 }
@@ -52,6 +46,9 @@ video {
 .carousel-indicators > li.active {
     background: #4caf50;
 }
+.carousel-item{
+    min-height: "720px";
+}
 video {
   /* override other styles to make responsive */
   width: 100%    !important;
@@ -59,6 +56,13 @@ video {
   max-height: 720px
 }
 </style>
+<script type="text/javascript">
+function PlayVideo(aid,vid){
+  document.getElementById(vid).style.display = "block";
+  document.getElementById(vid).play();
+  document.getElementById(aid).style.display = "none";
+}
+</script>
 
 <div id="carousel_time" class="carousel slide">
   <ol class="carousel-indicators">
@@ -67,154 +71,16 @@ video {
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <video loop="loop" width="720" height="720" controls muted playsinline preload="none">
-        <source src="area-time-abel.mp4" type="video/mp4" poster="area-time-abel-720.png"/>
-      </video>
-    </div>
+      <a id="carousel_time_a1" onclick="PlayVideo('carousel_time_a1','carousel_time_v1');"><img src="area-time-abel-720.png" alt="trail" /></a>
+      <video id="carousel_time_v1" loop="loop" width="720" height="720" controls muted playsinline preload="none" style="display:none" src="area-time-abel.mp4" type="video/mp4" />
+
+
+</div>
     <div class="carousel-item">
-      <video loop="loop" width="720" height="720" controls muted playsinline preload="none">
-        <source src="region-time-abel.mp4" type="video/mp4" poster="region-time-abel-720.png"/>
-      </video>
+      <a id="carousel_time_a2" onclick="PlayVideo('carousel_time_a2','carousel_time_v2');"><img src="region-time-abel-720.png" alt="trail" /></a>
+      <video id="carousel_time_v2" loop="loop" width="720" height="720" controls muted playsinline preload="none" style="display:none" src="region-time-abel.mp4" type="video/mp4" />
     </div>
   </div>
 </div>
 <br>
-
-<a id="sex"> </a>
-## Male and female migrant populations in 2020
-
-The next two plots below show the differences between male and female global migrant distributions in 2020. In the first plot I keep the sector axis fixed at their maximums (over both sexes) making it easier to detect changes in the relative volume of a particular migrant corridor; for example the greater number of male migrants in West Asia and slightly more female migrants in North America.
-
-<div id="carousel_sex1" class="carousel slide">
-  <ol class="carousel-indicators">
-    <li data-target="#carousel_sex1" data-slide-to="0" class="active">Areas</li>
-    <li data-target="#carousel_sex1" data-slide-to="1">Regions</li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <video loop="loop" width="720" height="720" controls muted playsinline preload="none">
-        <source src="area-sex1-abel.mp4" type="video/mp4" poster="area-sex1-abel-720.png"/>
-      </video>
-    </div>
-    <div class="carousel-item">
-      <video loop="loop" width="720" height="720" controls muted playsinline preload="none">
-        <source src="region-sex1-abel.mp4" type="video/mp4" poster="region-sex1-abel-720.png"/>
-      </video>
-    </div>
-  </div>
-</div>
-<br>
-
-In the second plot, I allow the sector axis to be specific to the regional totals. This (perhaps?) makes it easier to detect relative changes in the overall global patterns by sex.
-
-<div id="carousel_sex2" class="carousel slide">
-  <ol class="carousel-indicators">
-    <li data-target="#carousel_sex2" data-slide-to="0" class="active">Areas</li>
-    <li data-target="#carousel_sex2" data-slide-to="1">Regions</li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <video loop="loop" width="720" height="720" controls muted playsinline preload="none">
-        <source src="area-sex2-abel.mp4" type="video/mp4" poster="area-sex2-abel-720.png" />
-      </video>
-    </div>
-    <div class="carousel-item">
-      <video loop="loop" width="720" height="720" controls muted playsinline preload="none">
-        <source src="region-sex2-abel.mp4" type="video/mp4" poster="region-sex2-abel-720.png"/>
-      </video>
-    </div>
-  </div>
-</div>
-<br>
-
-<a id="population"> </a> 
-## Migrant populations in 2020 relative to total populations.
-
-One important feature of international migrants are their relative rarity. Professor Hein de Haas visually illustrates this point neatly using a [pie chart](http://heindehaas.blogspot.com/2016/08/refugees-small-and-relatively-stable.html), where his focus is predominantly on refugees, but also clearly shows the small share of the global population that are living outside their country of birth (under 4%). This feature is completely missed in the migrant chord diagrams above, where there is no way to gauge the share of the migrant populations relative to the total population.
-In the plot below I tried to illustrate the relative sizes of migrant populations using the lengths of the sector axis, transitioning between
-
-  - The number of migrants (which is a combination of migrant living in the region and migrants born in the region living elsewhere) as in the plots above, and
-  - The total population of the region.
-
-The chord widths remain constant, fixed at the size of the bilateral migrant populations.
-
-<div id="carousel_pop" class="carousel slide">
-  <ol class="carousel-indicators">
-    <li data-target="#carousel_pop" data-slide-to="0" class="active">Areas</li>
-    <li data-target="#carousel_pop" data-slide-to="1">Regions</li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <video loop="loop" width="720" height="720" controls muted playsinline preload="none">
-        <source src="area-pop-abel.mp4" type="video/mp4" poster="area-pop-abel-720.png"/>
-      </video>
-    </div>
-    <div class="carousel-item">
-      <video loop="loop" width="720" height="720" controls muted playsinline preload="none">
-        <source src="region-pop-abel.mp4" type="video/mp4" poster="region-pop-abel-720.png" />
-      </video>
-    </div>
-  </div>
-</div>
-<br>
-
-
-<a id="forced"> </a>
-## Refugee populations relative to migrant populations in 2020.
-
-In the final plots I illustrate the relative sizes of forced migrant populations compared to the total migrant populations, transitioning the chords between
-
-  - The number of migrants from each origin and destination based on the UN IMS2020 stock data
-  - The number of forced migrants from each origin and destination based on data from [UNHCR](https://www.unhcr.org/refugee-statistics/)
-
-In the first version the sector axis remain constant, fixed at the size of the bilateral migrant populations in each region.
-
-<div id="carousel_forced1" class="carousel slide">
-  <ol class="carousel-indicators">
-    <li data-target="#carousel_forced1" data-slide-to="0" class="active">Areas</li>
-    <li data-target="#carousel_forced1" data-slide-to="1">Regions</li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <video loop="loop" width="720" height="720" controls muted playsinline preload="none">
-        <source src="area-forced1-abel.mp4" type="video/mp4" poster="area-forced1-abel-720.png"/>
-      </video>
-    </div>
-    <div class="carousel-item">
-      <video loop="loop" width="720" height="720" controls muted playsinline preload="none">
-        <source src="region-forced1-abel.mp4" type="video/mp4" poster="region-forced1-abel-720.png"/>
-      </video>
-    </div>
-  </div>
-</div>
-<br>
-
-
-In the second plot the sector axis vary to match the type of migrants (all migrants or forced migrants) so show the relative differences in patterns.
-
-<div id="carousel_forced2" class="carousel slide">
-  <ol class="carousel-indicators">
-    <li data-target="#carousel_forced2" data-slide-to="0" class="active">Areas</li>
-    <li data-target="#carousel_forced2" data-slide-to="1">Regions</li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <video loop="loop" width="720" height="720" controls muted playsinline preload="none">
-        <source src="area-forced2-abel.mp4" type="video/mp4" poster="area-forced2-abel-720.png"/>
-      </video>
-    </div>
-    <div class="carousel-item">
-      <video loop="loop" width="720" height="720" controls muted playsinline preload="none">
-        <source src="region-forced2-abel.mp4" type="video/mp4" poster="region-forced2-abel-720.png"/>
-      </video>
-    </div>
-  </div>
-</div>
-<br>
-
-
-## R Code
-
-These plots were all produced in R, primarily using the `chordDiagram()` function in the  [circlize](https://jokergoo.github.io/circlize_book/book/the-chorddiagram-function.html) package. A while ago I wrote a [post](http://guyabel.com/post/animated-directional-chord-diagrams) with details on creating animated chord diagrams. The specific code for the plots above gets a bit overwhelming (and is poorly commented) so I am hesitant to put it online, especially because the more complicated parts for defining the lines for the global regions can now be done much more easily using the new `group` argument in the `chordDiagram()` function, as described in a recent [post](https://jokergoo.github.io/2020/06/08/multiple-group-chord-diagram/) by the circlize package creator Zuguang Gu.
-
 
