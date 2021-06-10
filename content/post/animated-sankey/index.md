@@ -80,12 +80,12 @@ video {
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <video loop="loop" controls>
+            <video loop="loop" width="720" height="720" controls muted playsinline preload="none" poster="abel_free.png">
         <source src="abel_free.mp4" type="video/mp4" />
       </video>
     </div>
     <div class="carousel-item">
-      <video loop="loop" controls>
+            <video loop="loop" width="720" height="720" controls muted playsinline preload="none" poster="abel_free_unkown.png">
         <source src="abel_free_unknown.mp4" type="video/mp4" />
       </video>
     </div>
@@ -104,14 +104,14 @@ The second animated plot shows the changes over time where the y-axis is fixed t
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <video loop="loop" controls>
+      <video loop width="720" height="720" controls muted playsinline preload="none" poster="abel_fixed.png">
         <source src="abel_fixed.mp4" type="video/mp4" />
       </video>
     </div>
     <div class="carousel-item">
-      <video loop="loop" controls>
-        <source src="abel_fixed_unknown.mp4" type="video/mp4" />
-      </video>
+      <video loop width="720" height="720" controls muted playsinline preload="none" poster="abel_fixed_unknown.png">
+        <source src="abel_fixed_unknown.mp4" type="video/mp4"/>
+      </video> 
     </div>
   </div>
 </div>

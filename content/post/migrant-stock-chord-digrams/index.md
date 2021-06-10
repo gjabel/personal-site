@@ -1,5 +1,5 @@
 ---
-title: "Animated chord diagrams for changes in regional migrant populations over time"
+title: "Regional migrant population changes visualized using animated chord diagrams"
 # subtitle: Learn how to build animated chord diagrams in R
 # summary: 👋 We know that first impressions are important
 date: '2018-11-14'
@@ -40,43 +40,43 @@ h2 {
 </style>
 
 ## Asia
-<video loop="loop" controls>
-  <source src="ims-abel-asia.mp4" type="video/mp4" />
+<video loop="loop" width="720" height="720" controls muted playsinline preload="none" poster="ims-abel-asia.png">
+  <source src="ims-abel-asia.mp4" type="video/mp4"/>
 </video>
 
 <hr>
 
 ## Europe
-<video loop="loop" controls>
-  <source src="ims-abel-europe.mp4" type="video/mp4" />
+<video loop="loop" width="720" height="720" controls muted playsinline preload="none" poster="ims-abel-europe.png">
+  <source src="ims-abel-europe.mp4" type="video/mp4"/>
 </video>
 
 <hr>
 
 ## Africa
-<video loop="loop"  controls>
-  <source src="ims-abel-africa.mp4" type="video/mp4" />
+<video loop="loop" width="720" height="720" controls muted playsinline preload="none" poster="ims-abel-africa.png">
+  <source src="ims-abel-africa.mp4" type="video/mp4"/>
 </video>
 
 <hr>
 
 ## Americas
-<video loop="loop" controls>
-  <source src="ims-abel-america.mp4" type="video/mp4" />
+<video loop="loop" width="720" height="720" controls muted playsinline preload="none" poster="ims-abel-america.png">
+  <source src="ims-abel-america.mp4" type="video/mp4"/>
 </video>
 
 <hr>
 
 ## Oceania
-<video loop="loop" controls>
-  <source src="ims-abel-oceania.mp4" type="video/mp4" />
+<video loop="loop" width="720" height="720" controls muted playsinline preload="none" poster="ims-abel-oceania.png">
+  <source src="ims-abel-oceania.mp4" type="video/mp4"/>
 </video>
-  
+
 The data in these plots represent migrant population totals, not period migration flows, hence the usual caveats associated with migrant stock data apply:
 
 - Underlying migration flows might form different patterns as migrants might not be moving from their country of birth.
 - Migrant populations can decrease from deaths as well as outward migration.
 
-## R code
+### R code
 
 As in my previous post on [animated chord diagrams](http://guyabel.com/post/animated-directional-chord-diagrams/) I used the [`circlize`](https://cran.r-project.org/web/packages/circlize/index.html) package in R to produce each chord diagrams for each frame of the animation and [`tweenr`](https://cran.r-project.org/web/packages/tweenr/index.html) for the intermediate data. The country flags were added using the `circos.raster()` function in circlize. I used [`magick`](https://cran.r-project.org/web/packages/magick/index.html) to read in the multipage PDF file of plots over time and [`animation`](https://cran.r-project.org/web/packages/animation/index.html) to produce the MP4 file. I am beginning to prefer MP4 files to GIF as the file size are smaller - so quicker loading - and most browsers display MP4 videos with controls.

@@ -184,12 +184,12 @@ video {
   &lt;/ol&gt;
   &lt;div class=&#34;carousel-inner&#34;&gt;
     &lt;div class=&#34;carousel-item active&#34;&gt;
-      &lt;video loop=&#34;loop&#34; controls&gt;
+            &lt;video loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34; controls muted playsinline preload=&#34;none&#34; poster=&#34;abel_free.png&#34;&gt;
         &lt;source src=&#34;abel_free.mp4&#34; type=&#34;video/mp4&#34; /&gt;
       &lt;/video&gt;
     &lt;/div&gt;
     &lt;div class=&#34;carousel-item&#34;&gt;
-      &lt;video loop=&#34;loop&#34; controls&gt;
+            &lt;video loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34; controls muted playsinline preload=&#34;none&#34; poster=&#34;abel_free_unkown.png&#34;&gt;
         &lt;source src=&#34;abel_free_unknown.mp4&#34; type=&#34;video/mp4&#34; /&gt;
       &lt;/video&gt;
     &lt;/div&gt;
@@ -205,14 +205,14 @@ video {
   &lt;/ol&gt;
   &lt;div class=&#34;carousel-inner&#34;&gt;
     &lt;div class=&#34;carousel-item active&#34;&gt;
-      &lt;video loop=&#34;loop&#34; controls&gt;
+      &lt;video loop width=&#34;720&#34; height=&#34;720&#34; controls muted playsinline preload=&#34;none&#34; poster=&#34;abel_fixed.png&#34;&gt;
         &lt;source src=&#34;abel_fixed.mp4&#34; type=&#34;video/mp4&#34; /&gt;
       &lt;/video&gt;
     &lt;/div&gt;
     &lt;div class=&#34;carousel-item&#34;&gt;
-      &lt;video loop=&#34;loop&#34; controls&gt;
-        &lt;source src=&#34;abel_fixed_unknown.mp4&#34; type=&#34;video/mp4&#34; /&gt;
-      &lt;/video&gt;
+      &lt;video loop width=&#34;720&#34; height=&#34;720&#34; controls muted playsinline preload=&#34;none&#34; poster=&#34;abel_fixed_unknown.png&#34;&gt;
+        &lt;source src=&#34;abel_fixed_unknown.mp4&#34; type=&#34;video/mp4&#34;/&gt;
+      &lt;/video&gt; 
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
@@ -341,7 +341,7 @@ devtools::install_github(&amp;quot;guyabel/tidycat&amp;quot;)
     </item>
     
     <item>
-      <title>Animated chord diagrams for global migrant populations</title>
+      <title>Global migrant population visualized using animated chord diagrams</title>
       <link>https://guyabel.com/post/global-migrant-stocks/</link>
       <pubDate>Sat, 20 Jun 2020 00:00:00 +0000</pubDate>
       <guid>https://guyabel.com/post/global-migrant-stocks/</guid>
@@ -350,6 +350,12 @@ devtools::install_github(&amp;quot;guyabel/tidycat&amp;quot;)
 &lt;p&gt;The first plot below shows the change over time in the pattern of global migrant stocks. As with the &lt;a href=&#34;http://guyabel.com/post/migrant-stock-chord-digrams&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;regional plots&lt;/a&gt; in my previous post, the chords in the diagrams represent the connection between the places of birth (at the base of the chord) and places of residence (at the arrow head of the chord). The width of based of the chords correspond to the size of the migrant population in millions. Chords are ordered relative to their size, with the largest migrant stocks plotted at the beginning of the region segments. The ordering of chords jumps around over time as the relative rankings of the largest foreign-born populations change in each region. Values for the migrant population sizes are from the &lt;del&gt;2019&lt;/del&gt; 2020 revision of the United Nations DESA &lt;a href=&#34;https://www.un.org/development/desa/pd/content/international-migrant-stock&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;International Migrant Stock Data&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Note: you might have to right click, select show controls and hit play to start the animations depending on your browsers - right clicking can also allow you to access controls on the play back speed.&lt;/p&gt;
 &lt;style&gt;
+video {
+  /* override other styles to make responsive */
+  width: 100%    !important;
+  height: auto   !important;
+  max-height: 720px
+}
 .carousel-indicators {
   bottom:-3%
 }
@@ -366,9 +372,6 @@ devtools::install_github(&amp;quot;guyabel/tidycat&amp;quot;)
 .carousel-indicators &gt; li.active {
     background: #4caf50;
 }
-.carousel-item{
-    min-height: &#34;720px&#34;;
-}
 video {
   /* override other styles to make responsive */
   width: 100%    !important;
@@ -376,13 +379,6 @@ video {
   max-height: 720px
 }
 &lt;/style&gt;
-&lt;script type=&#34;text/javascript&#34;&gt;
-function PlayVideo(aid,vid){
-  document.getElementById(vid).style.display = &#34;block&#34;;
-  document.getElementById(vid).play();
-  document.getElementById(aid).style.display = &#34;none&#34;;
-}
-&lt;/script&gt;
 &lt;div id=&#34;carousel_time&#34; class=&#34;carousel slide&#34;&gt;
   &lt;ol class=&#34;carousel-indicators&#34;&gt;
     &lt;li data-target=&#34;#carousel_time&#34; data-slide-to=&#34;0&#34; class=&#34;active&#34;&gt;Areas&lt;/li&gt;
@@ -390,16 +386,137 @@ function PlayVideo(aid,vid){
   &lt;/ol&gt;
   &lt;div class=&#34;carousel-inner&#34;&gt;
     &lt;div class=&#34;carousel-item active&#34;&gt;
-      &lt;a id=&#34;carousel_time_a1&#34; onclick=&#34;PlayVideo(&#39;carousel_time_a1&#39;,&#39;carousel_time_v1&#39;);&#34;&gt;&lt;img src=&#34;area-time-abel-720.png&#34; alt=&#34;trail&#34; /&gt;&lt;/a&gt;
-      &lt;video id=&#34;carousel_time_v1&#34; loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34; controls muted playsinline preload=&#34;none&#34; style=&#34;display:none&#34; src=&#34;area-time-abel.mp4&#34; type=&#34;video/mp4&#34; /&gt;
-&lt;/div&gt;
+      &lt;video loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34; controls muted playsinline preload=&#34;none&#34; poster=&#34;area-time-abel.png&#34;&gt;
+        &lt;source src=&#34;area-time-abel.mp4&#34; type=&#34;video/mp4&#34;/&gt;
+      &lt;/video&gt;
+    &lt;/div&gt;
     &lt;div class=&#34;carousel-item&#34;&gt;
-      &lt;a id=&#34;carousel_time_a2&#34; onclick=&#34;PlayVideo(&#39;carousel_time_a2&#39;,&#39;carousel_time_v2&#39;);&#34;&gt;&lt;img src=&#34;region-time-abel-720.png&#34; alt=&#34;trail&#34; /&gt;&lt;/a&gt;
-      &lt;video id=&#34;carousel_time_v2&#34; loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34; controls muted playsinline preload=&#34;none&#34; style=&#34;display:none&#34; src=&#34;region-time-abel.mp4&#34; type=&#34;video/mp4&#34; /&gt;
+      &lt;video loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34; controls muted playsinline preload=&#34;none&#34; poster=&#34;region-time-abel.png&#34;&gt;
+        &lt;source src=&#34;region-time-abel.mp4&#34; type=&#34;video/mp4&#34;/&gt;
+      &lt;/video&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 &lt;br&gt;
+&lt;p&gt;&lt;a id=&#34;sex&#34;&gt; &lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;male-and-female-migrant-populations-in-2020&#34;&gt;Male and female migrant populations in 2020&lt;/h2&gt;
+&lt;p&gt;The next two plots below show the differences between male and female global migrant distributions in 2020. In the first plot I keep the sector axis fixed at their maximums (over both sexes) making it easier to detect changes in the relative volume of a particular migrant corridor; for example the greater number of male migrants in West Asia and slightly more female migrants in North America.&lt;/p&gt;
+&lt;div id=&#34;carousel_sex1&#34; class=&#34;carousel slide&#34;&gt;
+  &lt;ol class=&#34;carousel-indicators&#34;&gt;
+    &lt;li data-target=&#34;#carousel_sex1&#34; data-slide-to=&#34;0&#34; class=&#34;active&#34;&gt;Areas&lt;/li&gt;
+    &lt;li data-target=&#34;#carousel_sex1&#34; data-slide-to=&#34;1&#34;&gt;Regions&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;div class=&#34;carousel-inner&#34;&gt;
+    &lt;div class=&#34;carousel-item active&#34;&gt;
+      &lt;video loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34; controls muted playsinline preload=&#34;none&#34; poster=&#34;area-sex1-abel.png&#34;&gt;
+        &lt;source src=&#34;area-sex1-abel.mp4&#34; type=&#34;video/mp4&#34;/&gt;
+      &lt;/video&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;carousel-item&#34;&gt;
+      &lt;video loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34; controls muted playsinline preload=&#34;none&#34; poster=&#34;region-sex1-abel.png&#34;&gt;
+        &lt;source src=&#34;region-sex1-abel.mp4&#34; type=&#34;video/mp4&#34;/&gt;
+      &lt;/video&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;p&gt;In the second plot, I allow the sector axis to be specific to the regional totals. This (perhaps?) makes it easier to detect relative changes in the overall global patterns by sex.&lt;/p&gt;
+&lt;div id=&#34;carousel_sex2&#34; class=&#34;carousel slide&#34;&gt;
+  &lt;ol class=&#34;carousel-indicators&#34;&gt;
+    &lt;li data-target=&#34;#carousel_sex2&#34; data-slide-to=&#34;0&#34; class=&#34;active&#34;&gt;Areas&lt;/li&gt;
+    &lt;li data-target=&#34;#carousel_sex2&#34; data-slide-to=&#34;1&#34;&gt;Regions&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;div class=&#34;carousel-inner&#34;&gt;
+    &lt;div class=&#34;carousel-item active&#34;&gt;
+      &lt;video loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34; controls muted playsinline preload=&#34;none&#34; poster=&#34;area-sex2-abel.png&#34;&gt;
+        &lt;source src=&#34;area-sex2-abel.mp4&#34; type=&#34;video/mp4&#34;/&gt;
+      &lt;/video&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;carousel-item&#34;&gt;
+      &lt;video loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34; controls muted playsinline preload=&#34;none&#34; poster=&#34;region-sex2-abel.png&#34;&gt;
+        &lt;source src=&#34;region-sex2-abel.mp4&#34; type=&#34;video/mp4&#34;/&gt;
+      &lt;/video&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;p&gt;&lt;a id=&#34;population&#34;&gt; &lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;migrant-populations-in-2020-relative-to-total-populations&#34;&gt;Migrant populations in 2020 relative to total populations.&lt;/h2&gt;
+&lt;p&gt;One important feature of international migrants are their relative rarity. Professor Hein de Haas visually illustrates this point neatly using a &lt;a href=&#34;http://heindehaas.blogspot.com/2016/08/refugees-small-and-relatively-stable.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;pie chart&lt;/a&gt;, where his focus is predominantly on refugees, but also clearly shows the small share of the global population that are living outside their country of birth (under 4%). This feature is completely missed in the migrant chord diagrams above, where there is no way to gauge the share of the migrant populations relative to the total population.
+In the plot below I tried to illustrate the relative sizes of migrant populations using the lengths of the sector axis, transitioning between&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The number of migrants (which is a combination of migrant living in the region and migrants born in the region living elsewhere) as in the plots above, and&lt;/li&gt;
+&lt;li&gt;The total population of the region.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The chord widths remain constant, fixed at the size of the bilateral migrant populations.&lt;/p&gt;
+&lt;div id=&#34;carousel_pop&#34; class=&#34;carousel slide&#34;&gt;
+  &lt;ol class=&#34;carousel-indicators&#34;&gt;
+    &lt;li data-target=&#34;#carousel_pop&#34; data-slide-to=&#34;0&#34; class=&#34;active&#34;&gt;Areas&lt;/li&gt;
+    &lt;li data-target=&#34;#carousel_pop&#34; data-slide-to=&#34;1&#34;&gt;Regions&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;div class=&#34;carousel-inner&#34;&gt;
+    &lt;div class=&#34;carousel-item active&#34;&gt;
+      &lt;video loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34; controls muted playsinline preload=&#34;none&#34; poster=&#34;area-pop-abel.png&#34;&gt;
+        &lt;source src=&#34;area-pop-abel.mp4&#34; type=&#34;video/mp4&#34;/&gt;
+      &lt;/video&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;carousel-item&#34;&gt;
+      &lt;video loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34; controls muted playsinline preload=&#34;none&#34; poster=&#34;region-pop-abel.png&#34;&gt;
+        &lt;source src=&#34;region-pop-abel.mp4&#34; type=&#34;video/mp4&#34;/&gt;
+      &lt;/video&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;p&gt;&lt;a id=&#34;forced&#34;&gt; &lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;refugee-populations-relative-to-migrant-populations-in-2020&#34;&gt;Refugee populations relative to migrant populations in 2020.&lt;/h2&gt;
+&lt;p&gt;In the final plots I illustrate the relative sizes of forced migrant populations compared to the total migrant populations, transitioning the chords between&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The number of migrants from each origin and destination based on the UN IMS2020 stock data&lt;/li&gt;
+&lt;li&gt;The number of forced migrants from each origin and destination based on data from &lt;a href=&#34;https://www.unhcr.org/refugee-statistics/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;UNHCR&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In the first version the sector axis remain constant, fixed at the size of the bilateral migrant populations in each region.&lt;/p&gt;
+&lt;div id=&#34;carousel_forced1&#34; class=&#34;carousel slide&#34;&gt;
+  &lt;ol class=&#34;carousel-indicators&#34;&gt;
+    &lt;li data-target=&#34;#carousel_forced1&#34; data-slide-to=&#34;0&#34; class=&#34;active&#34;&gt;Areas&lt;/li&gt;
+    &lt;li data-target=&#34;#carousel_forced1&#34; data-slide-to=&#34;1&#34;&gt;Regions&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;div class=&#34;carousel-inner&#34;&gt;
+    &lt;div class=&#34;carousel-item active&#34;&gt;
+      &lt;video loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34; controls muted playsinline preload=&#34;none&#34; poster=&#34;area-forced1-abel.png&#34;&gt;
+        &lt;source src=&#34;area-forced1-abel.mp4&#34; type=&#34;video/mp4&#34;/&gt;
+      &lt;/video&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;carousel-item&#34;&gt;
+      &lt;video loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34; controls muted playsinline preload=&#34;none&#34;  poster=&#34;region-forced1-abel.png&#34;&gt;
+        &lt;source src=&#34;region-forced1-abel.mp4&#34; type=&#34;video/mp4&#34;/&gt;
+      &lt;/video&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;p&gt;In the second plot the sector axis vary to match the type of migrants (all migrants or forced migrants) so show the relative differences in patterns.&lt;/p&gt;
+&lt;div id=&#34;carousel_forced2&#34; class=&#34;carousel slide&#34;&gt;
+  &lt;ol class=&#34;carousel-indicators&#34;&gt;
+    &lt;li data-target=&#34;#carousel_forced2&#34; data-slide-to=&#34;0&#34; class=&#34;active&#34;&gt;Areas&lt;/li&gt;
+    &lt;li data-target=&#34;#carousel_forced2&#34; data-slide-to=&#34;1&#34;&gt;Regions&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;div class=&#34;carousel-inner&#34;&gt;
+    &lt;div class=&#34;carousel-item active&#34;&gt;
+      &lt;video loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34; controls muted playsinline preload=&#34;none&#34; poster=&#34;area-forced2-abel.png&#34;&gt;
+        &lt;source src=&#34;area-forced2-abel.mp4&#34; type=&#34;video/mp4&#34;/&gt;
+      &lt;/video&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;carousel-item&#34;&gt;
+      &lt;video loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34; controls muted playsinline preload=&#34;none&#34; poster=&#34;region-forced2-abel.png&#34;&gt;
+        &lt;source src=&#34;region-forced2-abel.mp4&#34; type=&#34;video/mp4&#34;/&gt;
+      &lt;/video&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;h2 id=&#34;r-code&#34;&gt;R Code&lt;/h2&gt;
+&lt;p&gt;These plots were all produced in R, primarily using the &lt;code&gt;chordDiagram()&lt;/code&gt; function in the  &lt;a href=&#34;https://jokergoo.github.io/circlize_book/book/the-chorddiagram-function.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;circlize&lt;/a&gt; package. A while ago I wrote a &lt;a href=&#34;http://guyabel.com/post/animated-directional-chord-diagrams&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;post&lt;/a&gt; with details on creating animated chord diagrams. The specific code for the plots above gets a bit overwhelming (and is poorly commented) so I am hesitant to put it online, especially because the more complicated parts for defining the lines for the global regions can now be done much more easily using the new &lt;code&gt;group&lt;/code&gt; argument in the &lt;code&gt;chordDiagram()&lt;/code&gt; function, as described in a recent &lt;a href=&#34;https://jokergoo.github.io/2020/06/08/multiple-group-chord-diagram/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;post&lt;/a&gt; by the circlize package creator Zuguang Gu.&lt;/p&gt;
 </description>
     </item>
     
@@ -808,7 +925,7 @@ image_write(image = p, path = &amp;quot;figure1.png&amp;quot;)
     </item>
     
     <item>
-      <title>Animated chord diagrams for changes in regional migrant populations over time</title>
+      <title>Regional migrant population changes visualized using animated chord diagrams</title>
       <link>https://guyabel.com/post/migrant-stock-chord-digrams/</link>
       <pubDate>Wed, 14 Nov 2018 00:00:00 +0000</pubDate>
       <guid>https://guyabel.com/post/migrant-stock-chord-digrams/</guid>
@@ -828,35 +945,35 @@ h2 {
 }
 &lt;/style&gt;
 &lt;h2 id=&#34;asia&#34;&gt;Asia&lt;/h2&gt;
-&lt;video loop=&#34;loop&#34; controls&gt;
-  &lt;source src=&#34;ims-abel-asia.mp4&#34; type=&#34;video/mp4&#34; /&gt;
+&lt;video loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34; controls muted playsinline preload=&#34;none&#34; poster=&#34;ims-abel-asia.png&#34;&gt;
+  &lt;source src=&#34;ims-abel-asia.mp4&#34; type=&#34;video/mp4&#34;/&gt;
 &lt;/video&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;europe&#34;&gt;Europe&lt;/h2&gt;
-&lt;video loop=&#34;loop&#34; controls&gt;
-  &lt;source src=&#34;ims-abel-europe.mp4&#34; type=&#34;video/mp4&#34; /&gt;
+&lt;video loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34; controls muted playsinline preload=&#34;none&#34; poster=&#34;ims-abel-europe.png&#34;&gt;
+  &lt;source src=&#34;ims-abel-europe.mp4&#34; type=&#34;video/mp4&#34;/&gt;
 &lt;/video&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;africa&#34;&gt;Africa&lt;/h2&gt;
-&lt;video loop=&#34;loop&#34;  controls&gt;
-  &lt;source src=&#34;ims-abel-africa.mp4&#34; type=&#34;video/mp4&#34; /&gt;
+&lt;video loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34; controls muted playsinline preload=&#34;none&#34; poster=&#34;ims-abel-africa.png&#34;&gt;
+  &lt;source src=&#34;ims-abel-africa.mp4&#34; type=&#34;video/mp4&#34;/&gt;
 &lt;/video&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;americas&#34;&gt;Americas&lt;/h2&gt;
-&lt;video loop=&#34;loop&#34; controls&gt;
-  &lt;source src=&#34;ims-abel-america.mp4&#34; type=&#34;video/mp4&#34; /&gt;
+&lt;video loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34; controls muted playsinline preload=&#34;none&#34; poster=&#34;ims-abel-america.png&#34;&gt;
+  &lt;source src=&#34;ims-abel-america.mp4&#34; type=&#34;video/mp4&#34;/&gt;
 &lt;/video&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;oceania&#34;&gt;Oceania&lt;/h2&gt;
-&lt;video loop=&#34;loop&#34; controls&gt;
-  &lt;source src=&#34;ims-abel-oceania.mp4&#34; type=&#34;video/mp4&#34; /&gt;
+&lt;video loop=&#34;loop&#34; width=&#34;720&#34; height=&#34;720&#34; controls muted playsinline preload=&#34;none&#34; poster=&#34;ims-abel-oceania.png&#34;&gt;
+  &lt;source src=&#34;ims-abel-oceania.mp4&#34; type=&#34;video/mp4&#34;/&gt;
 &lt;/video&gt;
 &lt;p&gt;The data in these plots represent migrant population totals, not period migration flows, hence the usual caveats associated with migrant stock data apply:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Underlying migration flows might form different patterns as migrants might not be moving from their country of birth.&lt;/li&gt;
 &lt;li&gt;Migrant populations can decrease from deaths as well as outward migration.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;r-code&#34;&gt;R code&lt;/h2&gt;
+&lt;h3 id=&#34;r-code&#34;&gt;R code&lt;/h3&gt;
 &lt;p&gt;As in my previous post on &lt;a href=&#34;http://guyabel.com/post/animated-directional-chord-diagrams/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;animated chord diagrams&lt;/a&gt; I used the &lt;a href=&#34;https://cran.r-project.org/web/packages/circlize/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;circlize&lt;/code&gt;&lt;/a&gt; package in R to produce each chord diagrams for each frame of the animation and &lt;a href=&#34;https://cran.r-project.org/web/packages/tweenr/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;tweenr&lt;/code&gt;&lt;/a&gt; for the intermediate data. The country flags were added using the &lt;code&gt;circos.raster()&lt;/code&gt; function in circlize. I used &lt;a href=&#34;https://cran.r-project.org/web/packages/magick/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;magick&lt;/code&gt;&lt;/a&gt; to read in the multipage PDF file of plots over time and &lt;a href=&#34;https://cran.r-project.org/web/packages/animation/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;animation&lt;/code&gt;&lt;/a&gt; to produce the MP4 file. I am beginning to prefer MP4 files to GIF as the file size are smaller - so quicker loading - and most browsers display MP4 videos with controls.&lt;/p&gt;
 </description>
     </item>

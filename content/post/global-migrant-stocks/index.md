@@ -1,5 +1,5 @@
 ---
-title: "Animated chord diagrams for global migrant populations"
+title: "Global migrant population visualized using animated chord diagrams"
 # subtitle: Learn how to build animated chord diagrams in R
 # summary: 👋 We know that first impressions are important
 date: '2020-06-20'
@@ -67,12 +67,12 @@ video {
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <video loop="loop" width="720" height="720" controls muted playsinline preload="none" poster="area-time-abel-720.png">
+      <video loop="loop" width="720" height="720" controls muted playsinline preload="none" poster="area-time-abel.png">
         <source src="area-time-abel.mp4" type="video/mp4"/>
       </video>
     </div>
     <div class="carousel-item">
-      <video loop="loop" width="720" height="720" controls muted playsinline preload="none" poster="region-time-abel-720.png">
+      <video loop="loop" width="720" height="720" controls muted playsinline preload="none" poster="region-time-abel.png">
         <source src="region-time-abel.mp4" type="video/mp4"/>
       </video>
     </div>
@@ -92,12 +92,12 @@ The next two plots below show the differences between male and female global mig
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <video loop="loop" width="720" height="720" controls muted playsinline preload="none" poster="area-sex1-abel-720.png">
+      <video loop="loop" width="720" height="720" controls muted playsinline preload="none" poster="area-sex1-abel.png">
         <source src="area-sex1-abel.mp4" type="video/mp4"/>
       </video>
     </div>
     <div class="carousel-item">
-      <video loop="loop" width="720" height="720" controls muted playsinline preload="none" poster="region-sex1-abel-720.png">
+      <video loop="loop" width="720" height="720" controls muted playsinline preload="none" poster="region-sex1-abel.png">
         <source src="region-sex1-abel.mp4" type="video/mp4"/>
       </video>
     </div>
@@ -114,12 +114,12 @@ In the second plot, I allow the sector axis to be specific to the regional total
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <video loop="loop" width="720" height="720" controls muted playsinline preload="none" poster="area-sex2-abel-720.png">
+      <video loop="loop" width="720" height="720" controls muted playsinline preload="none" poster="area-sex2-abel.png">
         <source src="area-sex2-abel.mp4" type="video/mp4"/>
       </video>
     </div>
     <div class="carousel-item">
-      <video loop="loop" width="720" height="720" controls muted playsinline preload="none" poster="region-sex2-abel-720.png">
+      <video loop="loop" width="720" height="720" controls muted playsinline preload="none" poster="region-sex2-abel.png">
         <source src="region-sex2-abel.mp4" type="video/mp4"/>
       </video>
     </div>
@@ -145,12 +145,12 @@ The chord widths remain constant, fixed at the size of the bilateral migrant pop
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <video loop="loop" width="720" height="720" controls muted playsinline preload="none" poster="area-pop-abel-720.png">
+      <video loop="loop" width="720" height="720" controls muted playsinline preload="none" poster="area-pop-abel.png">
         <source src="area-pop-abel.mp4" type="video/mp4"/>
       </video>
     </div>
     <div class="carousel-item">
-      <video loop="loop" width="720" height="720" controls muted playsinline preload="none" poster="region-pop-abel-720.png">
+      <video loop="loop" width="720" height="720" controls muted playsinline preload="none" poster="region-pop-abel.png">
         <source src="region-pop-abel.mp4" type="video/mp4"/>
       </video>
     </div>
@@ -176,12 +176,12 @@ In the first version the sector axis remain constant, fixed at the size of the b
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <video loop="loop" width="720" height="720" controls muted playsinline preload="none" poster="area-forced1-abel-720.png">
+      <video loop="loop" width="720" height="720" controls muted playsinline preload="none" poster="area-forced1-abel.png">
         <source src="area-forced1-abel.mp4" type="video/mp4"/>
       </video>
     </div>
     <div class="carousel-item">
-      <video loop="loop" width="720" height="720" controls muted playsinline preload="none"  poster="region-forced1-abel-720.png">
+      <video loop="loop" width="720" height="720" controls muted playsinline preload="none"  poster="region-forced1-abel.png">
         <source src="region-forced1-abel.mp4" type="video/mp4"/>
       </video>
     </div>
@@ -199,12 +199,12 @@ In the second plot the sector axis vary to match the type of migrants (all migra
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <video loop="loop" width="720" height="720" controls muted playsinline preload="none" poster="area-forced2-abel-720.png">
+      <video loop="loop" width="720" height="720" controls muted playsinline preload="none" poster="area-forced2-abel.png">
         <source src="area-forced2-abel.mp4" type="video/mp4"/>
       </video>
     </div>
     <div class="carousel-item">
-      <video loop="loop" width="720" height="720" controls muted playsinline preload="none" poster="region-forced2-abel-720.png">
+      <video loop="loop" width="720" height="720" controls muted playsinline preload="none" poster="region-forced2-abel.png">
         <source src="region-forced2-abel.mp4" type="video/mp4"/>
       </video>
     </div>
