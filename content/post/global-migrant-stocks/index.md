@@ -67,13 +67,13 @@ video {
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <video loop="loop" controls>
-        <source src="area-time-abel.mp4" type="video/mp4" />
+      <video loop="loop" controls muted playsinline>
+        <source src="area-time-abel.mp4" type="video/mp4" poster="area-time-abel-720.png"/>
       </video>
     </div>
     <div class="carousel-item">
-      <video loop="loop" controls>
-        <source src="region-time-abel.mp4" type="video/mp4" />
+      <video loop="loop" controls muted playsinline>
+        <source src="region-time-abel.mp4" type="video/mp4" poster="region-time-abel-720.png"/>
       </video>
     </div>
   </div>
@@ -92,13 +92,13 @@ The next two plots below show the differences between male and female global mig
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <video loop="loop" controls>
-        <source src="area-sex1-abel.mp4" type="video/mp4" />
+      <video loop="loop" controls muted playsinline>
+        <source src="area-sex1-abel.mp4" type="video/mp4" poster="area-sex1-abel-720.png"/>
       </video>
     </div>
     <div class="carousel-item">
-      <video loop="loop" controls>
-        <source src="region-sex1-abel.mp4" type="video/mp4" />
+      <video loop="loop" controls muted playsinline>
+        <source src="region-sex1-abel.mp4" type="video/mp4" poster="region-sex1-abel-720.png"/>
       </video>
     </div>
   </div>
@@ -114,13 +114,13 @@ In the second plot, I allow the sector axis to be specific to the regional total
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <video loop="loop" controls>
-        <source src="area-sex2-abel.mp4" type="video/mp4" />
+      <video loop="loop" controls muted playsinline>
+        <source src="area-sex2-abel.mp4" type="video/mp4" poster="area-sex2-abel-720.png" />
       </video>
     </div>
     <div class="carousel-item">
-      <video loop="loop" controls>
-        <source src="region-sex2-abel.mp4" type="video/mp4" />
+      <video loop="loop" controls muted playsinline>
+        <source src="region-sex2-abel.mp4" type="video/mp4" poster="region-sex2-abel-720.png"/>
       </video>
     </div>
   </div>
@@ -145,13 +145,13 @@ The chord widths remain constant, fixed at the size of the bilateral migrant pop
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <video loop="loop" controls>
-        <source src="area-pop-abel.mp4" type="video/mp4" />
+      <video loop="loop" controls muted playsinline>
+        <source src="area-pop-abel.mp4" type="video/mp4" poster="area-pop-abel-720.png"/>
       </video>
     </div>
     <div class="carousel-item">
-      <video loop="loop" controls>
-        <source src="region-pop-abel.mp4" type="video/mp4" />
+      <video loop="loop" controls muted playsinline>
+        <source src="region-pop-abel.mp4" type="video/mp4" poster="region-pop-abel-720.png" />
       </video>
     </div>
   </div>
@@ -176,13 +176,13 @@ In the first version the sector axis remain constant, fixed at the size of the b
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <video loop="loop" controls>
-        <source src="area-forced1-abel.mp4" type="video/mp4" />
+      <video loop="loop" controls muted playsinline>
+        <source src="area-forced1-abel.mp4" type="video/mp4" poster="area-forced1-abel-720.png"/>
       </video>
     </div>
     <div class="carousel-item">
-      <video loop="loop" controls>
-        <source src="region-forced1-abel.mp4" type="video/mp4" />
+      <video loop="loop" controls muted playsinline>
+        <source src="region-forced1-abel.mp4" type="video/mp4" poster="region-forced1-abel-720.png"/>
       </video>
     </div>
   </div>
@@ -199,13 +199,13 @@ In the second plot the sector axis vary to match the type of migrants (all migra
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <video loop="loop" controls>
-        <source src="area-forced2-abel.mp4" type="video/mp4" />
+      <video loop="loop" controls muted playsinline>
+        <source src="area-forced2-abel.mp4" type="video/mp4" poster="area-forced2-abel-720.png"/>
       </video>
     </div>
     <div class="carousel-item">
-      <video loop="loop" controls>
-        <source src="region-forced2-abel.mp4" type="video/mp4" />
+      <video loop="loop" controls muted playsinline>
+        <source src="region-forced2-abel.mp4" type="video/mp4" poster="region-forced2-abel-720.png"/>
       </video>
     </div>
   </div>

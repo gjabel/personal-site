@@ -104,7 +104,7 @@ video {
       <pubDate>Sat, 20 Jun 2020 00:00:00 +0000</pubDate>
       <guid>https://guyabel.com/post/global-migrant-stocks/</guid>
       <description>&lt;p&gt;Over the last year or so I have been playing around with different ways of showing changing global bilateral migrant stocks, adapting the animation code I created for the plots for region to region flows in this estimation &lt;a href=&#34;https://www.nature.com/articles/s41597-019-0089-3&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;paper&lt;/a&gt;. I am putting them online here in case they are of interest to anyone else. Feel free to download the plots using right click over the animation and then &lt;code&gt;Save Video as&lt;/code&gt; or from &lt;a href=&#34;https://github.com/guyabel/personal-site/tree/master/static/img/cd-stock-global&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Github&lt;/a&gt;.&lt;/p&gt;
-&lt;h3 id=&#34;global-migrant-populations-from-1990-to-2020&#34;&gt;Global migrant populations from 1990 to 2020&lt;/h3&gt;
+&lt;h2 id=&#34;global-migrant-populations-from-1990-to-2020&#34;&gt;Global migrant populations from 1990 to 2020&lt;/h2&gt;
 &lt;p&gt;The first plot below shows the change over time in the pattern of global migrant stocks. As with the &lt;a href=&#34;http://guyabel.com/post/migrant-stock-chord-digrams&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;regional plots&lt;/a&gt; in my previous post, the chords in the diagrams represent the connection between the places of birth (at the base of the chord) and places of residence (at the arrow head of the chord). The width of based of the chords correspond to the size of the migrant population in millions. Chords are ordered relative to their size, with the largest migrant stocks plotted at the beginning of the region segments. The ordering of chords jumps around over time as the relative rankings of the largest foreign-born populations change in each region. Values for the migrant population sizes are from the &lt;del&gt;2019&lt;/del&gt; 2020 revision of the United Nations DESA &lt;a href=&#34;https://www.un.org/development/desa/pd/content/international-migrant-stock&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;International Migrant Stock Data&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Note: you might have to right click, select show controls and hit play to start the animations depending on your browsers - right clicking can also allow you to access controls on the play back speed.&lt;/p&gt;
 &lt;style&gt;
@@ -145,12 +145,12 @@ video {
   &lt;div class=&#34;carousel-inner&#34;&gt;
     &lt;div class=&#34;carousel-item active&#34;&gt;
       &lt;video loop=&#34;loop&#34; controls&gt;
-        &lt;source src=&#34;area-time-abel.mp4&#34; type=&#34;video/mp4&#34; /&gt;
+        &lt;source src=&#34;area-time-abel.mp4&#34; type=&#34;video/mp4&#34; poster=&#34;area-time-abel-720.png&#34; muted/&gt;
       &lt;/video&gt;
     &lt;/div&gt;
     &lt;div class=&#34;carousel-item&#34;&gt;
       &lt;video loop=&#34;loop&#34; controls&gt;
-        &lt;source src=&#34;region-time-abel.mp4&#34; type=&#34;video/mp4&#34; /&gt;
+        &lt;source src=&#34;region-time-abel.mp4&#34; type=&#34;video/mp4&#34; poster=&#34;region-time-abel-720.png&#34; muted /&gt;
       &lt;/video&gt;
     &lt;/div&gt;
   &lt;/div&gt;
