@@ -47,6 +47,6 @@ I am researcher based at the [Asian Demographic Research Institute](http://adri-
 
 Previously I worked at the [Vienna Institute of Demography](http://www.oeaw.ac.at/vid/), the [ESRC Centre for Population Change](http://www.cpc.ac.uk/) and [S3RI](http://www.southampton.ac.uk/s3ri/) at the University of Southampton.
 
-My day-to-day research covers estimating migration and applying statistical methods to better forecast components of population change. This website contains posts mainly related to my research, including some information on my [publications](./publication) and use of [R](./tags/r/). It is a successor to my [WordPress](http://gjabel.wordpress.com/) site which I had trouble accessing when in China.
+My day-to-day research covers estimating migration and applying statistical methods to better forecast components of population change. This website contains posts mainly related to my research, including some information on my [publications](./publication) and use of [R](./tags/r/). The site is the successor to my [WordPress](http://gjabel.wordpress.com/) blog which I had trouble accessing when in China.
 
 [comment]: <> ({{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/demo_resume.pdf" "newtab" >}}resumé{{< /staticref >}}.)

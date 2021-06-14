@@ -1,16 +1,3 @@
-# d %>%
-#   filter(name == "World",
-#          year %in% c(1950, 2020)) %>%
-#   arrange(rev(year)) %>%
-#   mutate(year = as.character(year)) %>%
-#   ggplot(mapping = aes(x = ifelse(test = sex == "Male", yes = -pop, no = pop),
-#                        y = age, fill = year)) +
-#   geom_col(position = "dodge") +
-#   scale_x_continuous(labels = abs) +
-#   labs(x = "Populaton", y = "Age", fill = "Year")
-
-
-
 
 # wic education breakdowns
 
@@ -29,15 +16,12 @@
 
 # plotly
 library(plotly)
-g <- d %>%
-  filter(name == "World", 
-         year == 1950) %>%
-  ggplot(mapping = aes(x = ifelse(test = sex == "Male", yes = -pop, no = pop), 
-                       y = age, fill = sex)) +
+g <- ggplot(data = chn2020,
+            mapping = aes(x = pop, y = age)) +
   geom_col() + 
-  scale_x_continuous(labels = abs) +
-  labs(x = "Populaton", y = "Age", fill = "Sex")
+  scale_x_continuous(labels = abs)
 
+g <- last_plot()
 ggplotly(g)
 
 
