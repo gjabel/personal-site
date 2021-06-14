@@ -22,37 +22,23 @@ categories:
 #   caption: 'Distribution of player at Euro2020'
 
 toc: true
+toc_float:
+  collapsed: true
+  smooth_scroll: true
+
 ---
 
 Over the last few years  I have been trying to take notes on different styles of population pyramids and reproducing them using ggplot. In this post I give an overview of my code in case anyone wishes to replicate similar plots.
 
 ## Data
 
-For the purpose of this blog I am going to the most up to data data from the UN on population age and sex structures provided in the wpp2019 R package. The data cover all countries, so it should be fairly simple to edit the code to replicate plots for different countries. The wpp2019 does not use a tidy data format, so a little data manipulation is required first to get a the population data in a single column, so that it will play nicely with ggplot.
+For the purpose of this blog I am going to primariliy use data from the UN on population age and sex structures provided in the [`wpp2019`](https://cran.r-project.org/web/packages/wpp2019/index.html) R package. The data cover all countries, so it should be fairly simple to edit the code to replicate plots for different countries. 
+
+The `wpp2019` does not use a tidy data format, so a little data manipulation is required first to get a the population data in a single column, so that it will play nicely with ggplot.
 
 
 ```r
 library(tidyverse)
-```
-
-```
-## -- Attaching packages --------------------------------------- tidyverse 1.3.1 --
-```
-
-```
-## v ggplot2 3.3.3     v purrr   0.3.4
-## v tibble  3.1.2     v dplyr   1.0.6
-## v tidyr   1.1.3     v stringr 1.4.0
-## v readr   1.4.0     v forcats 0.5.1
-```
-
-```
-## -- Conflicts ------------------------------------------ tidyverse_conflicts() --
-## x dplyr::filter() masks stats::filter()
-## x dplyr::lag()    masks stats::lag()
-```
-
-```r
 library(wpp2019)
 data(popF)
 data(popM)
@@ -61,68 +47,574 @@ d <- popM %>%
   mutate(sex = "Male") %>%
   bind_rows(popF) %>%
   replace_na(list(sex = "Female")) %>%
-  pivot_longer(cols = "1950":"2020", names_to = "year", values_to = "pop000")
+  pivot_longer(cols = "1950":"2020", names_to = "year",
+               values_to = "pop000", names_transform = list(year = as.integer))
 d
 ```
 
 ```
 ## # A tibble: 156,870 x 6
-##    country_code name  age   sex   year   pop000
-##           <int> <chr> <chr> <chr> <chr>   <dbl>
-##  1          900 World 0-4   Male  1950  172420.
-##  2          900 World 0-4   Male  1955  207941.
-##  3          900 World 0-4   Male  1960  221606.
-##  4          900 World 0-4   Male  1965  244985.
-##  5          900 World 0-4   Male  1970  267293.
-##  6          900 World 0-4   Male  1975  278289.
-##  7          900 World 0-4   Male  1980  280164.
-##  8          900 World 0-4   Male  1985  302397.
-##  9          900 World 0-4   Male  1990  330649.
-## 10          900 World 0-4   Male  1995  319726.
+##    country_code name  age   sex    year  pop000
+##           <int> <chr> <chr> <chr> <int>   <dbl>
+##  1          900 World 0-4   Male   1950 172420.
+##  2          900 World 0-4   Male   1955 207941.
+##  3          900 World 0-4   Male   1960 221606.
+##  4          900 World 0-4   Male   1965 244985.
+##  5          900 World 0-4   Male   1970 267293.
+##  6          900 World 0-4   Male   1975 278289.
+##  7          900 World 0-4   Male   1980 280164.
+##  8          900 World 0-4   Male   1985 302397.
+##  9          900 World 0-4   Male   1990 330649.
+## 10          900 World 0-4   Male   1995 319726.
 ## # ... with 156,860 more rows
 ```
 
 Before plotting I have made a number of additional columns to make plotting much easier, these include
 
-1. Creating `pop` variable that takes negative male values and positive female values. The new variable will enable the placement of male population figures on the left of the plot and females on the right. To my mind, this is the most important manipulation for creating population pyramids in ggplot, as it facilitates the use of a single geom making it far simpler to extend plotting code for facets or animations to compare populations over time or space.  
+1. Creating `pop` variable that takes negative male values and positive female values. The new variable will enable the placement of male population figures on the left of the plot and females on the right. To my mind, this is the most important manipulation for creating population pyramids in `ggplot`, as it facilitates the use of a single geom making it far simpler to extend plotting code for facets or animations to compare populations over time or space. I use this variable in all the plots below.
 
-2. 
+2. Convert the age categories to a factor with levels based on the youngest to the oldest age groups. This is used in almost all the plots below that are based on `geom_col()`
+
+3. Create a numeric column `age_mid` based on the mid point of the age group, useful when using `geom_step()` or `geom_path()`
+
+4. Set male to the first level of a `sex` factor to ensure it plots on the right when using facets to plot and label the male and female sections of the population distribution.
 
 
 ```r
 d <- d %>%
-  mutate(
-    pop_m = pop000/1e3,
-    pop = ifelse(test = sex == "Male", yes = -pop_m, no = pop_m),
-    age = fct_inorder(age), 
-    age_mid = as.numeric(age) * 5 - 2.5,
-    sex = fct_rev(sex),
-    year = as.integer(year)
-  ) %>%
+  mutate(pop_m = pop000/1e3,
+         pop = ifelse(test = sex == "Male", yes = -pop_m, no = pop_m),
+         age = fct_inorder(age), 
+         age_min = as.numeric(age) * 5 - 5,
+         sex = fct_rev(sex))
+```
+
+I have added two further variables that are more specific for particular population pyramids; 
+
+4. A `pop_min` variable that provides the lowest population for a given age group (in a given country and year). I use this for showing gender surpluses in population pyramids
+
+5. A `pop_max` variable that provides the largest population for a given country and year. I use this for setting x-axis limits when facet plots are used to join together plots for each sex.  
+
+
+```r
+d <- d %>%
   group_by(age, year, country_code) %>%
-  mutate(pop_min = ifelse(test = sex == "Male", 
-                          yes = -min(pop_m), no = min(pop_m))) %>%
+  mutate(pop_min = ifelse(test = sex == "Male", yes = -min(pop_m), no = min(pop_m))) %>%
   group_by(year, country_code) %>%
-  mutate(pop_max = ifelse(test = sex == "Male", 
-                          yes = -max(pop_m), no = max(pop_m))) %>%
+  mutate(pop_max = ifelse(test = sex == "Male", yes = -max(pop_m), no = max(pop_m))) %>%
   ungroup()
 d
 ```
 
 ```
 ## # A tibble: 156,870 x 11
-##    country_code name  age   sex    year  pop000 pop_m   pop age_mid pop_min
+##    country_code name  age   sex    year  pop000 pop_m   pop age_min pop_min
 ##           <int> <chr> <fct> <fct> <int>   <dbl> <dbl> <dbl>   <dbl>   <dbl>
-##  1          900 World 0-4   Male   1950 172420.  172. -172.     2.5   -166.
-##  2          900 World 0-4   Male   1955 207941.  208. -208.     2.5   -199.
-##  3          900 World 0-4   Male   1960 221606.  222. -222.     2.5   -212.
-##  4          900 World 0-4   Male   1965 244985.  245. -245.     2.5   -234.
-##  5          900 World 0-4   Male   1970 267293.  267. -267.     2.5   -257.
-##  6          900 World 0-4   Male   1975 278289.  278. -278.     2.5   -266.
-##  7          900 World 0-4   Male   1980 280164.  280. -280.     2.5   -267.
-##  8          900 World 0-4   Male   1985 302397.  302. -302.     2.5   -288.
-##  9          900 World 0-4   Male   1990 330649.  331. -331.     2.5   -313.
-## 10          900 World 0-4   Male   1995 319726.  320. -320.     2.5   -300.
+##  1          900 World 0-4   Male   1950 172420.  172. -172.       0   -166.
+##  2          900 World 0-4   Male   1955 207941.  208. -208.       0   -199.
+##  3          900 World 0-4   Male   1960 221606.  222. -222.       0   -212.
+##  4          900 World 0-4   Male   1965 244985.  245. -245.       0   -234.
+##  5          900 World 0-4   Male   1970 267293.  267. -267.       0   -257.
+##  6          900 World 0-4   Male   1975 278289.  278. -278.       0   -266.
+##  7          900 World 0-4   Male   1980 280164.  280. -280.       0   -267.
+##  8          900 World 0-4   Male   1985 302397.  302. -302.       0   -288.
+##  9          900 World 0-4   Male   1990 330649.  331. -331.       0   -313.
+## 10          900 World 0-4   Male   1995 319726.  320. -320.       0   -300.
 ## # ... with 156,860 more rows, and 1 more variable: pop_max <dbl>
 ```
+## Basic pyramid
+
+To begin with I will use data from China in 2020 to create a basis population pyramids;
+
+```r
+# initial
+chn2020 <- d %>%
+  filter(name == "China", 
+         year == 2020)
+chn2020
+```
+
+```
+## # A tibble: 42 x 11
+##    country_code name  age   sex    year pop000 pop_m   pop age_min pop_min
+##           <int> <chr> <fct> <fct> <int>  <dbl> <dbl> <dbl>   <dbl>   <dbl>
+##  1          156 China 0-4   Male   2020 44456.  44.5 -44.5       0   -39.5
+##  2          156 China 5-9   Male   2020 46320.  46.3 -46.3       5   -40.4
+##  3          156 China 10-14 Male   2020 45350.  45.3 -45.3      10   -38.9
+##  4          156 China 15-19 Male   2020 44103.  44.1 -44.1      15   -38.2
+##  5          156 China 20-24 Male   2020 46274.  46.3 -46.3      20   -40.9
+##  6          156 China 25-29 Male   2020 51523.  51.5 -51.5      25   -46.5
+##  7          156 China 30-34 Male   2020 66443.  66.4 -66.4      30   -62.3
+##  8          156 China 35-39 Male   2020 51346.  51.3 -51.3      35   -48.7
+##  9          156 China 40-44 Male   2020 49289.  49.3 -49.3      40   -47.0
+## 10          156 China 45-49 Male   2020 61173.  61.2 -61.2      45   -58.7
+## # ... with 32 more rows, and 1 more variable: pop_max <dbl>
+```
+
+The most basic population pyramid, without distinguishing sexes (discussed later) can be produced with a few lines of code:
+
+
+```r
+ggplot(data = chn2020,
+       mapping = aes(x = pop, y = age)) +
+  geom_col() + 
+  scale_x_continuous(labels = abs)
+```
+
+<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-5-1.png" width="672" />
+
+### Many ages
+
+The data above uses five-year age groups. When the number of age groups becomes excessive it is preferable to use a numeric variable for age. The `geom_col()` function can still be used with numeric variables, but the orientation of the columns must be explicitly set: 
+
+
+```r
+ggplot(data = chn2020, 
+       mapping = aes(x = pop, y = age_min)) +
+  geom_col(orientation = "y") + 
+  scale_x_continuous(labels = abs)
+```
+
+<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-6-1.png" width="672" />
+
+Not the lowest columns stretch below age zero, as the lowest part of the column is plotted at the mid point of the difference the `age_min` values. The whole pyramid can be shifted up, so that the lowest columns lie on the x-axis by adding 2.5 (half of the size of each age group) to `age_min`
+
+
+```r
+ggplot(data = chn2020, 
+       mapping = aes(x = pop, y = age_min + 2.5)) +
+  geom_col(orientation = "y") + 
+  scale_x_continuous(labels = abs)
+```
+
+<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-7-1.png" width="672" />
+
+### Line outlines
+
+Rather than plot a solid columns for each age group, `geom_path()` can be used to show the outline of pyramid. The `geom_path()` function uses the order of the observations in the data object, so care must be taken in preparing the data. The data used in the example below are already in age order. The `group` aesthetic must be used to ensure two lines (paths) are drawn separately for each sex, otherwise a trace line might appear that directly connects the observation from the highest age group with the lowest age group.
+
+
+```r
+ggplot(data = chn2020,
+       mapping = aes(x = pop, y = age_min, group = sex)) +
+  geom_path() +
+  scale_x_continuous(labels = abs)
+```
+
+<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-8-1.png" width="672" />
+
+### Step outline
+
+An alternative method to visualize a outline of the pyramid is to use the `geom_step()` function. The function can also be useful to overlay silhouettes of previous pyramids, as shown below.
+
+The `geom_step()` functions can be a little tricky to work with populuation pyramids. A couple of adjustments are required:
+
+1. The x-axis must be set to the numeric ages (`age_min`) and the y-axis to the population values. The axis are then flipped using the `coord_flip()` function.
+
+2. As with `geom_path()` the group aesthetic is required to distinguish different sets of steps for each sex
+
+3. The labels for population values on the x-axis are set to positive values using `scale_y_continuous()` rather than `scale_x_continuous()` given the `y` aesthetic from the `ggplot()` function.
+
+
+
+```r
+ggplot(data = chn2020,
+       mapping = aes(y = pop, x = age_min, group = sex)) +
+  geom_step() +
+  coord_flip() +
+  scale_y_continuous(labels = abs)
+```
+
+<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-9-1.png" width="672" />
+
+## Axes
+
+There are range of different axis styles that can be employed when creating population pyramids
+ 
+### Labels
+
+Axis labels can be added using the `labs()` function. Later on in this post I will go into more detail on how to label the male and female sections of the plot.
+
+
+```r
+ggplot(data = chn2020, 
+       mapping = aes(x = pop, y = age)) +
+  geom_col() + 
+  scale_x_continuous(labels = abs) +
+  labs(x = "Population", y = "Age")
+```
+
+<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-10-1.png" width="672" />
+
+### Breaks
+
+If label space is of a premium the `every_other()` function in the `wcde` function can be used to provide reduced breaks on the x-axis. 
+
+
+```r
+library(wcde)
+b <- every_other(levels(d$age))
+b
+```
+
+```
+##  [1] "0-4"   "10-14" "20-24" "30-34" "40-44" "50-54" "60-64" "70-74" "80-84"
+## [10] "90-94" "100+"
+```
+
+There is an `n` argument in the `every_other()` function, with default `n = 2`, that can be altered if larger intervals are required. 
+
+The labels in `b` can be passed to the plot code in the `scale_y_discrete()` function:
+
+
+```r
+ggplot(data = chn2020, 
+       mapping = aes(x = pop, y = age)) +
+  geom_col() + 
+  scale_x_continuous(labels = abs) +
+  scale_y_discrete(breaks = b)
+```
+
+<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-12-1.png" width="672" />
+
+When age is a continuous variable the `pretty_breaks()` function in the `scales` package can be used to control the number of labels:
+
+
+```r
+library(scales)
+ggplot(data = chn2020, 
+       mapping = aes(x = pop, y = age_min + 2.5)) +
+  geom_col(orientation = "y") + 
+  scale_x_continuous(labels = abs) +
+  scale_y_continuous(breaks = pretty_breaks(n = 10))
+```
+
+<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-13-1.png" width="672" />
+
+### Second y-axis
+
+Duplicate axis can be added with the `dup_axis()` function passed to the `sec.axis` argument in `scale_y_continuous()`. This necessitates the use of a continuous age variable: 
+
+
+```r
+ggplot(data = chn2020, 
+       mapping = aes(x = pop, y = age_min + 2.5)) +
+  geom_col(orientation = "y") + 
+  scale_x_continuous(labels = abs) +
+  scale_y_continuous(sec.axis = dup_axis())
+```
+
+<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-14-1.png" width="672" />
+
+I have not found an relatively simple way to add a secondary axis if discrete age groups are used rather than a continuous equivalent, as there is no `sec.axis` argument in `scale_y_discrete()`.
+
+A secondary axis can be used to pass additional details to the plot such as the year of birth using the `trans` argument within the `sec_axis()` function:
+
+
+```r
+ggplot(data = chn2020, 
+       mapping = aes(x = pop, y = age_min + 2.5)) +
+  geom_col(orientation = "y") + 
+  scale_x_continuous(labels = abs) +
+  scale_y_continuous(sec.axis = sec_axis(trans = ~(2020 - . ), 
+                     breaks = pretty_breaks(n = 5),
+                     name = "Year of Birth"))
+```
+
+<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-15-1.png" width="672" />
+
+
+### Middle x-axis
+
+The x-axis can be moved to the middle of the pyramids, splitting the sex-specific population distributions using the `facet_share()` in the `ggpol` package. Setting the `scales = free_x` ensures the x-axis limits in the male (and female) facet cover positive (negative) values. 
+ 
+
+```r
+library(ggpol)
+ggplot(data = chn2020, 
+       mapping = aes(x = pop, y = age)) +
+  geom_col() +
+  facet_share(facets = "sex", scales = "free_x") +
+  scale_x_continuous(labels = abs)
+```
+
+<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-16-1.png" width="672" />
+I am not sure what the fix is for moving the age-axis label closer to the facet boundary.
+
+## Highlighting Sex
+
+The `facet_share()` function labels each sex specific population. This can be carried out in a number of other ways. 
+
+### Fill
+
+The simplest method to identify the different sexes in ggplot is to use the `fill` aesthetic:
+
+```r
+ggplot(data = chn2020, 
+       mapping = aes(x = pop, y = age, fill = sex)) +
+  geom_col() + 
+  scale_x_continuous(labels = abs)
+```
+
+<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-17-1.png" width="672" />
+
+### Annotations
+
+A second approach is to directly add labels onto the plot area using the `annotate()` function where
+
+- The x coordinates can be set to `-Inf` for the male label and `Inf` for the female label,
+
+- The y coordinates can be set to an appropriate high age value. If `age` is discrete the value will be the level of the corresponding one of the oldest age groups. 
+
+- Justify the horizontal male and female labels with -1 and 1 respectively
+
+- Add a space at the start and end of the male and female labels respectively
+
+
+```r
+ggplot(data = chn2020, 
+       mapping = aes(x = pop, y = age)) +
+  geom_col() + 
+  scale_x_continuous(labels = abs) +
+  annotate(geom = "text", x = -Inf, y = 21, label = " Male", hjust = 0) +
+  annotate(geom = "text", x = Inf, y = 21, label = "Female ", hjust = 1) 
+```
+
+<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-18-1.png" width="672" />
+
+### Facets
+
+A third approach is to use the `facet_wrap()` function to plot each sex population distribution separately. As with `facet_share()` the `scales` argument needs to be set to ` "free_x"` 
+
+
+```r
+ggplot(data = chn2020, 
+       mapping = aes(x = pop, y = age)) +
+  geom_col() +
+  facet_wrap(facets = "sex", scales = "free_x") +
+  scale_x_continuous(labels = abs)
+```
+
+<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-19-1.png" width="672" />
+
+The facets can be joined together by 
+
+1. Setting expand in `scale_x_continuous` to `c(0, 0)` to remove space between facet window and data
+2. Setting `panel.spacing.x` in to zero in the `theme()` function to eleminate spaces between each facet window
+
+When removing the space between the facets it is also useful to 
+
+3. Add a `geom_blank()` to add back on the extra space on the outer edges of the plot taken away from using `expand` in `scale_x_continuous()`. The size of the `geom_blank()` is based on the biggest population group given in the `pop_max` column of the data
+
+4. Add `geom_vline()` to clearly show the split between male and female distributions
+
+
+```r
+ggplot(data = chn2020, 
+       mapping = aes(x = pop, y = age)) +
+  geom_col() +
+  facet_wrap(facets = "sex", scales = "free_x") +
+  geom_vline(xintercept = 0, colour = "black") +
+  geom_blank(mapping = aes(x = pop_max * 1.05)) +
+  scale_x_continuous(labels = abs, expand = c(0, 0)) +
+  theme(panel.spacing.x = unit(0, "pt"))
+```
+
+<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-20-1.png" width="672" />
+
+The facet labels can be moved below the plot by
+
+1. Setting `strip.position = "bottom"` in the `facet_wrap()` function
+2. Setting `strip.background = "transparent"` in `theme()`
+3. Set the margins of strip text to zero in `theme()`
+
+
+```r
+ggplot(data = chn2020, 
+       mapping = aes(x = pop, y = age)) +
+  geom_col() +
+  facet_wrap(facets = "sex", scales = "free_x",
+             strip.position = "bottom") +
+  geom_blank(mapping = aes(x = pop_max * 1.05)) +
+  scale_x_continuous(labels = abs, expand = c(0, 0)) +
+  theme(panel.spacing.x = unit(0, "pt"),
+        strip.placement = "outside",
+        strip.background = element_rect(fill = "transparent"),
+        strip.text.x = element_text(margin = margin( b = 0, t = 0)))
+```
+
+<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-21-1.png" width="672" />
+
+## Sex comparisons
+
+### Horizontal pyramid
+
+If intrest your intrest lies in see the differenes by sex then you might want to plot overlapping vertical columns as recommended by Bostock. In ggplot these plots can be created by setting `position = "identity"` in the `geom_col()` and using the `alpha` argument to make column fills semi-transparent.
+
+
+
+```r
+ggplot(data = chn2020, 
+       mapping = aes(x = age, y = pop_m, fill = sex)) +
+  geom_col(position = "identity", alpha = 0.5)
+```
+
+<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-22-1.png" width="672" />
+
+
+### Highlight surplus
+
+An alternative method to illustrate population sex surpluses by age group is to add extra shadings at the end of the column as used by [Kaj Tallungs](https://www.reddit.com/r/dataisbeautiful/comments/lmgy4t/oc_animated_demographic_pyramid_of_sweden_18602019/)
+
+This can be achieved by plotting two pyramids by calling `geom_col()` twice. The first instances uses the original data. The second overlays the `pop_min ` column created at the top of this guide with a semi-transparent fill. 
+
+
+```r
+ggplot(data = chn2020, 
+       mapping = aes(x = pop, y = age, fill = sex)) +
+  geom_col() +
+  geom_col(mapping = aes(x = pop_min), fill = "grey", alpha = 0.8) +
+  scale_x_continuous(labels = abs) +
+  labs(fill = "Surplus")
+```
+
+<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-23-1.png" width="672" />
+
+
+### Symmetric sex axes
+
+Creating male and female axis enables an easier comparison of the asymmetry between the sexes in the population structure. This can be achieved using either the `geom_blank()` and the `pop_max()` column as shown above or the `scale_x_symmetric()` from the `lemon` package.
+
+To illustrate I use data for Qatar 2020 where sex imbalance is very dramatic:
+
+
+```r
+library(lemon)
+d %>%
+  filter(name == "Qatar",
+         year == 2020) %>%
+  ggplot(mapping = aes(x = pop, y = age, fill = sex)) +
+  geom_col() +
+  scale_x_symmetric(labels = abs)
+```
+
+<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-24-1.png" width="672" />
+
+
+## Multiple pyramids
+
+Using a variable that takes negative values for male and positive for females allows the ggplot code above to easily be adapted to handle multiple periods. 
+
+
+```r
+chn <- d %>%
+  filter(name == "China",
+         year %in% c(1950, 1985, 2020)) %>%
+  arrange(rev(year)) %>%
+  mutate(year = as.character(year))
+```
+
+### Facets
+
+
+```r
+ggplot(data = chn, 
+       mapping = aes(x = pop, y = age)) +
+  facet_wrap(facets = "year") +
+  geom_col() +
+  scale_x_continuous(labels = abs)
+```
+
+<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-26-1.png" width="672" />
+
+It would be far more complicate to replicate a similar plot with geoms for each sex, as used in multilpe stackoverflow soloutions (here, here, here) 
+
+### Ovelay
+
+An alternative method to compare pyramids in different time periods is to overlay plots 
+
+```r
+ggplot(data = chn, 
+       mapping = aes(x = pop, y = age, fill = year)) +
+  geom_col(position = "identity", alpha = 0.6) +
+  scale_x_continuous(labels = abs)
+```
+
+<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-27-1.png" width="672" />
+
+### Outlines 
+
+
+```r
+ggplot(data = chn,
+       mapping = aes(y = pop, x = age_min, colour = year,
+                     group = interaction(sex, year))) +
+  geom_step() +
+  coord_flip()
+```
+
+<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-28-1.png" width="672" />
+
+### Mixing
+
+Economist mixes the two
+
+
+```r
+f <- c("1950" = "transparent", "1985" = "transparent", "2020" = "grey50") 
+
+ggplot(data = chn, 
+       mapping = aes(y = pop, x = age_min,
+                     fill = year, colour = year,
+                     group = interaction(sex, year))) +
+  geom_col(mapping = aes(x = age_min + 2.5), 
+           position = "identity", colour = "transparent", 
+           width = 5) +
+  geom_step() +
+  coord_flip() +
+  scale_fill_manual(values = f) +
+  scale_y_continuous(labels = abs)
+```
+
+<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-29-1.png" width="672" />
+
+### Dodge
+
+A third alternative is to use a dodge layout of the columns in each age group. 
+
+```r
+d %>%
+  filter(name %in% c("China", "India"), 
+         year == 2020) %>%
+  ggplot(mapping = aes(x = pop, y = age, fill = name)) +
+  geom_col(position = "dodge") +
+  scale_x_continuous(labels = abs)
+```
+
+<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-30-1.png" width="672" />
+
+
+
+## Many years
+
+Adding shading for more than a few years can be difficult to view when some population age groups shrink but can work well for countries where age groups are continuously growing... ourworldindata
+
+
+```r
+d %>%
+  filter(name == "Kenya",
+         year %% 10 == 0) %>%
+  arrange(rev(year)) %>%
+  ggplot(mapping = aes(x = pop, y = age, fill = year)) +
+  geom_col(position = "identity") +
+  scale_x_continuous(labels = abs) +
+  scale_fill_viridis_c(direction = -1) +
+  labs(x = "Populaton", y = "Age", fill = "Year")
+```
+
+<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-31-1.png" width="672" />
+
+
+
+
 

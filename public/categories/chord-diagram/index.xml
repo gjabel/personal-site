@@ -99,7 +99,7 @@ video {
 &lt;/div&gt;
 &lt;br&gt;
 &lt;p&gt;&lt;a id=&#34;sex&#34;&gt; &lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;male-and-female-migrant-populations-in-2020&#34;&gt;Male and female migrant populations in 2020&lt;/h2&gt;
+&lt;h2 id=&#34;male-and-female-migrant-populations&#34;&gt;Male and female migrant populations&lt;/h2&gt;
 &lt;p&gt;The next two plots below show the differences between male and female global migrant distributions in 2020. In the first plot I keep the sector axis fixed at their maximums (over both sexes) making it easier to detect changes in the relative volume of a particular migrant corridor; for example the greater number of male migrants in West Asia and slightly more female migrants in North America.&lt;/p&gt;
 &lt;div id=&#34;carousel_sex1&#34; class=&#34;carousel slide&#34;&gt;
   &lt;ol class=&#34;carousel-indicators&#34;&gt;
@@ -141,7 +141,7 @@ video {
 &lt;/div&gt;
 &lt;br&gt;
 &lt;p&gt;&lt;a id=&#34;population&#34;&gt; &lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;migrant-populations-in-2020-relative-to-total-populations&#34;&gt;Migrant populations in 2020 relative to total populations.&lt;/h2&gt;
+&lt;h2 id=&#34;migrant-populations-relative-to-total-populations&#34;&gt;Migrant populations relative to total populations&lt;/h2&gt;
 &lt;p&gt;One important feature of international migrants are their relative rarity. Professor Hein de Haas visually illustrates this point neatly using a &lt;a href=&#34;http://heindehaas.blogspot.com/2016/08/refugees-small-and-relatively-stable.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;pie chart&lt;/a&gt;, where his focus is predominantly on refugees, but also clearly shows the small share of the global population that are living outside their country of birth (under 4%). This feature is completely missed in the migrant chord diagrams above, where there is no way to gauge the share of the migrant populations relative to the total population.
 In the plot below I tried to illustrate the relative sizes of migrant populations using the lengths of the sector axis, transitioning between&lt;/p&gt;
 &lt;ul&gt;
@@ -169,7 +169,7 @@ In the plot below I tried to illustrate the relative sizes of migrant population
 &lt;/div&gt;
 &lt;br&gt;
 &lt;p&gt;&lt;a id=&#34;forced&#34;&gt; &lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;refugee-populations-relative-to-migrant-populations-in-2020&#34;&gt;Refugee populations relative to migrant populations in 2020.&lt;/h2&gt;
+&lt;h2 id=&#34;refugee-populations-relative-to-total-migrant-populations&#34;&gt;Refugee populations relative to total migrant populations.&lt;/h2&gt;
 &lt;p&gt;In the final plots I illustrate the relative sizes of forced migrant populations compared to the total migrant populations, transitioning the chords between&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;The number of migrants from each origin and destination based on the UN IMS2020 stock data&lt;/li&gt;
