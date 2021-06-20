@@ -162,7 +162,7 @@ The chord widths remain constant, fixed at the size of the bilateral migrant pop
 
 
 <a id="forced"> </a>
-## Refugee populations relative to total migrant populations.
+## Refugee populations relative to total migrant populations
 
 In the final plots I illustrate the relative sizes of forced migrant populations compared to the total migrant populations, transitioning the chords between
 
