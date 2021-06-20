@@ -36,7 +36,7 @@ paginate: 10
 enableEmoji: true
 enableRobotsTXT: true
 footnotereturnlinkcontents: <sup>^</sup>
-ignoreFiles: [\.ipynb$, .ipynb_checkpoints$, \.Rmd$, \.Rmarkdown$, _cache$, \\.knit\\.md$, \\.utf8\\.md$]
+ignoreFiles: [\.ipynb$, .ipynb_checkpoints$, \.Rmd$, \.Rmarkdown$, _cache$, \.knit\.md$, \.utf8\.md$]
 permalinks:
   event: '/talk/:slug/'
   authors: '/author/:slug/'
