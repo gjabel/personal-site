@@ -32,7 +32,7 @@ The recent highlights [document](https://www.un.org/development/desa/pd/sites/ww
 
 ## R Code
 
-Commented code to create the animated plots below are in a Gist [here](https://gist.github.com/guyabel/f7c844f18c4d11916a6ee000532d0e8e), which you can run in R using the following... 
+Commented code to create the animated plots below are in a Gist [here](https://gist.github.com/guyabel/f7c844f18c4d11916a6ee000532d0e8e). You can run the script directly in R using the following... 
 
 <pre class="r"><code>library(devtools)
 source_gist("https://gist.github.com/guyabel/f7c844f18c4d11916a6ee000532d0e8e")
@@ -42,7 +42,7 @@ source_gist("https://gist.github.com/guyabel/f7c844f18c4d11916a6ee000532d0e8e")
 
 The first part of the code imports the data into R, extracts the rows for the stock data by the World Bank income groups and creates a tweened data set for each frame of the animation. 
 
-The second part of the code creates the animated plot file using ggplot and `geom_parallel_sets()` in [ggforce](https://ggforce.data-imaginist.com/reference/geom_parallel_sets.html). There are a few packages in R that have functions for Sankey plots, for example [sankey](https://github.com/gaborcsardi/sankey#readme), [PantaRhei](https://cran.r-project.org/web/packages/PantaRhei/vignettes/panta-rhei.html), [networkD3](http://christophergandrud.github.io/networkD3/#sankey), [sankeywheel](https://cran.rstudio.com/web/packages/sankeywheel/vignettes/sankeywheel.html), [plotly](https://plotly.com/r/sankey-diagram/) and [ggsankey](https://github.com/davidsjoberg/ggsankey). The [ggalluvial](https://corybrunson.github.io/ggalluvial/) packages also produces Sankey-type plots, but without spaces between each sector. I used ggforce because it is pretty easy to tweak the non-Sankey parts of the plot using ggplot functions, and  I had hoped that it would play well with gganimate - which it didn't, hence the use of tweenr - but perhaps [one day](https://github.com/thomasp85/ggforce/issues/235) it will given Thomas Lin Pedersen developed both the gganimate and ggforce packages.
+The second part of the code creates the animated plot file using ggplot and `geom_parallel_sets()` in [ggforce](https://ggforce.data-imaginist.com/reference/geom_parallel_sets.html). There are a few packages in R that have functions for Sankey plots, for example [sankey](https://github.com/gaborcsardi/sankey#readme), [PantaRhei](https://cran.r-project.org/web/packages/PantaRhei/vignettes/panta-rhei.html), [networkD3](http://christophergandrud.github.io/networkD3/#sankey), [sankeywheel](https://cran.rstudio.com/web/packages/sankeywheel/vignettes/sankeywheel.html), [plotly](https://plotly.com/r/sankey-diagram/) and [ggsankey](https://github.com/davidsjoberg/ggsankey). The [ggalluvial](https://corybrunson.github.io/ggalluvial/) packages also produces Sankey-type plots, but without spaces between each sector. I used ggforce because it is pretty easy to tweak the non-Sankey parts of the plot using ggplot functions, and  I had hoped that it would play well with gganimate - which it didn't, hence the use of tweenr - but perhaps [one day](https://github.com/thomasp85/ggforce/issues/235) it will.
 
 ## Plots
 

@@ -24,7 +24,7 @@ categories:
 
 ## YouTube Channels
 
-The list of YouTube channels that are covered by the bot can be found []
+The list of YouTube channels that are covered by the bot can be found [] on github https://github.com/guyabel/demography-talks/blob/main/data/channels.csv
 
 ## Twitter Feed
 
